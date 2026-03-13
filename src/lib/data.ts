@@ -26,6 +26,16 @@ import evriRates from "../data/rates/evri-formerly-hermes.json";
 import colissimoRates from "../data/rates/colissimo-la-poste.json";
 import correosRates from "../data/rates/correos.json";
 import swissPostRates from "../data/rates/swiss-post.json";
+import cdekRates from "../data/rates/cdek.json";
+import correiosBrazilRates from "../data/rates/correios-brazil.json";
+import postnordRates from "../data/rates/postnord.json";
+import cainiaoRates from "../data/rates/cainiao.json";
+import fourpxRates from "../data/rates/4px-express.json";
+import thailandPostRates from "../data/rates/thailand-post.json";
+import posMalaysiaRates from "../data/rates/pos-malaysia.json";
+import novaPoshtaRates from "../data/rates/nova-poshta.json";
+import blueDartRates from "../data/rates/blue-dart-dhl-group.json";
+import delhiveryRates from "../data/rates/delhivery.json";
 import type {
   Country,
   Carrier,
@@ -65,6 +75,16 @@ const allRateData: CarrierRateData[] = [
   colissimoRates,
   correosRates,
   swissPostRates,
+  cdekRates,
+  correiosBrazilRates,
+  postnordRates,
+  cainiaoRates,
+  fourpxRates,
+  thailandPostRates,
+  posMalaysiaRates,
+  novaPoshtaRates,
+  blueDartRates,
+  delhiveryRates,
 ] as CarrierRateData[];
 
 // Lookup maps

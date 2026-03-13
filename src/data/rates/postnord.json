@@ -1,0 +1,132 @@
+{
+  "carrier_id": "postnord",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Scandinavia",
+      "countries_from": [
+        "SE",
+        "DK",
+        "NO",
+        "FI"
+      ],
+      "countries_to": [
+        "SE",
+        "DK",
+        "NO",
+        "FI"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "SE",
+        "DK",
+        "NO",
+        "FI"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "GB",
+        "NL",
+        "BE",
+        "PL",
+        "AT",
+        "CH",
+        "CZ",
+        "IT",
+        "ES",
+        "PT",
+        "IE",
+        "LT",
+        "LV",
+        "EE",
+        "HU",
+        "RO",
+        "BG"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "SE",
+        "DK",
+        "NO",
+        "FI"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "NZ",
+        "BR",
+        "IN",
+        "AE",
+        "SG",
+        "RU",
+        "TR",
+        "IL",
+        "ZA",
+        "MX"
+      ]
+    }
+  ],
+  "rates": {
+    "postnord-tracked": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          16,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14,
+          22,
+          32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          32,
+          48
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          35,
+          58,
+          85
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          55,
+          95,
+          145
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90,
+          165,
+          255
+        ]
+      }
+    ]
+  }
+}

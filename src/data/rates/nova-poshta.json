@@ -1,0 +1,130 @@
+{
+  "carrier_id": "nova-poshta",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Europe neighbors",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "MD",
+        "LT",
+        "LV",
+        "EE",
+        "BG",
+        "DE",
+        "AT"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe wide",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "GB",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "SE",
+        "NO",
+        "DK",
+        "FI",
+        "CH",
+        "PT",
+        "IE",
+        "GR",
+        "HR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "IL",
+        "AE",
+        "TR",
+        "IN",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "nova-poshta-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          14,
+          22
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          18,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14,
+          25,
+          38
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          24,
+          42,
+          65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          38,
+          70,
+          110
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          65,
+          120,
+          190
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          90,
+          165,
+          265
+        ]
+      }
+    ]
+  }
+}

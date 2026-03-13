@@ -1,0 +1,190 @@
+{
+  "carrier_id": "correios-brazil",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "South America",
+      "countries_from": [
+        "BR"
+      ],
+      "countries_to": [
+        "AR",
+        "CL",
+        "UY",
+        "PY",
+        "CO",
+        "PE",
+        "VE",
+        "EC",
+        "BO"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "North America & Europe",
+      "countries_from": [
+        "BR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "MX",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "PT",
+        "NL",
+        "BE",
+        "CH",
+        "AT",
+        "SE",
+        "NO",
+        "DK",
+        "IE",
+        "PL"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Asia & Rest of World",
+      "countries_from": [
+        "BR"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "NZ",
+        "IN",
+        "AE",
+        "SG",
+        "TH",
+        "RU",
+        "ZA",
+        "IL",
+        "TR"
+      ]
+    }
+  ],
+  "rates": {
+    "correios-sedex-mundi": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          25,
+          45,
+          55
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          35,
+          60,
+          72
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          50,
+          85,
+          100
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          90,
+          155,
+          185
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          155,
+          270,
+          320
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          270,
+          470,
+          560
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          380,
+          660,
+          790
+        ]
+      }
+    ],
+    "correios-internacional-premium": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          18,
+          32,
+          40
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          25,
+          45,
+          55
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          38,
+          65,
+          78
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          70,
+          120,
+          145
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          120,
+          210,
+          250
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          210,
+          370,
+          440
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          300,
+          520,
+          620
+        ]
+      }
+    ]
+  }
+}

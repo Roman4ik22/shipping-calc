@@ -1,0 +1,229 @@
+{
+  "carrier_id": "cdek",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "CIS Countries",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "KZ",
+        "BY",
+        "KG",
+        "AM",
+        "UZ",
+        "TJ",
+        "AZ",
+        "MD",
+        "GE"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "PL",
+        "NL",
+        "CZ",
+        "AT",
+        "SE",
+        "FI",
+        "NO",
+        "DK",
+        "BE",
+        "CH",
+        "GB",
+        "PT",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SK",
+        "SI",
+        "LT",
+        "LV",
+        "EE",
+        "IE",
+        "GR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Asia",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "TH",
+        "VN",
+        "MY",
+        "SG",
+        "ID",
+        "PH",
+        "IN",
+        "AE",
+        "TR",
+        "IL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Americas & Remote",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "MX",
+        "AU",
+        "NZ",
+        "ZA"
+      ]
+    }
+  ],
+  "rates": {
+    "cdek-international-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          28,
+          32,
+          45
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          15,
+          35,
+          40,
+          55
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          48,
+          55,
+          75
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          35,
+          85,
+          95,
+          130
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          55,
+          140,
+          160,
+          220
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90,
+          240,
+          280,
+          380
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          130,
+          340,
+          400,
+          540
+        ]
+      }
+    ],
+    "cdek-international-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          20,
+          24,
+          35
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          25,
+          30,
+          42
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          15,
+          36,
+          42,
+          58
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          65,
+          75,
+          100
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          45,
+          110,
+          125,
+          170
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          75,
+          190,
+          220,
+          300
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          105,
+          270,
+          315,
+          430
+        ]
+      }
+    ]
+  }
+}

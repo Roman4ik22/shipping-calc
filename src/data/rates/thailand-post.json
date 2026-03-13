@@ -1,0 +1,176 @@
+{
+  "carrier_id": "thailand-post",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "TH"
+      ],
+      "countries_to": [
+        "MY",
+        "SG",
+        "ID",
+        "PH",
+        "VN",
+        "LA",
+        "KH",
+        "MM",
+        "BN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Asia & Pacific",
+      "countries_from": [
+        "TH"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "IN",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas",
+      "countries_from": [
+        "TH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE",
+        "CH",
+        "RU",
+        "BR",
+        "MX",
+        "AE",
+        "TR",
+        "IL",
+        "ZA"
+      ]
+    }
+  ],
+  "rates": {
+    "thailand-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          18,
+          28
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16,
+          24,
+          36
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          24,
+          36,
+          52
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          44,
+          68,
+          98
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          72,
+          115,
+          170
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          128,
+          205,
+          305
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          184,
+          295,
+          440
+        ]
+      }
+    ],
+    "thailand-post-air": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          12,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          11,
+          16,
+          25
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          16,
+          24,
+          36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          30,
+          48,
+          70
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          52,
+          82,
+          122
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          92,
+          148,
+          220
+        ]
+      }
+    ]
+  }
+}

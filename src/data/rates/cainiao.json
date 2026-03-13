@@ -1,0 +1,137 @@
+{
+  "carrier_id": "cainiao",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe & Americas",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "PL",
+        "SE",
+        "AU",
+        "NZ",
+        "BR",
+        "MX",
+        "RU"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "ZA",
+        "EG",
+        "NG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "cainiao-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          12
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          14,
+          17
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          22,
+          26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          42,
+          50
+        ]
+      }
+    ],
+    "cainiao-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6,
+          11,
+          14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12,
+          22,
+          28
+        ]
+      }
+    ]
+  }
+}
