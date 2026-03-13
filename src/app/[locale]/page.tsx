@@ -30,9 +30,25 @@ export default async function HomePage({
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-lg sm:text-xl text-blue-100 text-center max-w-3xl mx-auto mb-10">
-            {t(loc, "hero_subtitle", { count: "30" })}
+          <p className="text-lg sm:text-xl text-blue-100 text-center max-w-3xl mx-auto mb-8">
+            {t(loc, "hero_subtitle", { count: "109" })}
           </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl font-bold">213</p>
+              <p className="text-sm text-blue-200">{t(loc, "all_countries")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl font-bold">109</p>
+              <p className="text-sm text-blue-200">{t(loc, "carriers_page")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl font-bold">45K+</p>
+              <p className="text-sm text-blue-200">{loc === "ru" ? "Маршрутов" : "Routes"}</p>
+            </div>
+          </div>
 
           {/* Shipping form */}
           <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-6">

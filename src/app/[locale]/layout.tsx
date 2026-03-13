@@ -90,6 +90,12 @@ export default async function LocaleLayout({
                   >
                     {t(loc, "carriers_page")}
                   </Link>
+                  <Link
+                    href={`/${locale}/guide`}
+                    className="text-sm text-gray-600 hover:text-gray-900"
+                  >
+                    {t(loc, "guides")}
+                  </Link>
                 </nav>
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
@@ -97,6 +103,7 @@ export default async function LocaleLayout({
                   labels={{
                     home: t(loc, "home"),
                     carriers: t(loc, "carriers_page"),
+                    guides: t(loc, "guides"),
                   }}
                 />
               </div>

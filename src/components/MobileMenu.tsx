@@ -8,7 +8,7 @@ export default function MobileMenu({
   labels,
 }: {
   locale: string;
-  labels: { home: string; carriers: string };
+  labels: { home: string; carriers: string; guides: string };
 }) {
   const [open, setOpen] = useState(false);
 
@@ -58,6 +58,13 @@ export default function MobileMenu({
               onClick={() => setOpen(false)}
             >
               {labels.carriers}
+            </Link>
+            <Link
+              href={`/${locale}/guide`}
+              className="text-gray-700 hover:text-blue-600 py-2"
+              onClick={() => setOpen(false)}
+            >
+              {labels.guides}
             </Link>
           </nav>
         </div>

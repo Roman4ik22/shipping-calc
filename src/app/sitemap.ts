@@ -54,6 +54,22 @@ function getStaticEntries(): MetadataRoute.Sitemap {
       });
     }
 
+    // Guide pages
+    entries.push({
+      url: `${BASE_URL}/${locale}/guide`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    });
+    for (const country of countries) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/guide/${country.slug_en}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+
     // Country hub pages
     for (const country of countries) {
       entries.push({
