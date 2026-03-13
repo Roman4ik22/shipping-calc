@@ -118,6 +118,12 @@ export default async function LocaleLayout({
                   >
                     {t(loc, "guides")}
                   </Link>
+                  <Link
+                    href={`/${locale}/about`}
+                    className="text-sm text-gray-600 hover:text-gray-900"
+                  >
+                    {t(loc, "about")}
+                  </Link>
                 </nav>
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
@@ -126,6 +132,7 @@ export default async function LocaleLayout({
                     home: t(loc, "home"),
                     carriers: t(loc, "carriers_page"),
                     guides: t(loc, "guides"),
+                    about: t(loc, "about"),
                   }}
                 />
               </div>
@@ -145,10 +152,11 @@ export default async function LocaleLayout({
                   {t(loc, "site_name")}
                 </h3>
                 <p className="text-sm mb-4">{t(loc, "site_description")}</p>
-                <div className="flex gap-3 text-sm">
+                <div className="flex flex-wrap gap-3 text-sm">
                   <Link href={`/${locale}`} className="hover:text-white">{t(loc, "home")}</Link>
                   <Link href={`/${locale}/carriers`} className="hover:text-white">{t(loc, "carriers_page")}</Link>
                   <Link href={`/${locale}/guide`} className="hover:text-white">{t(loc, "guides")}</Link>
+                  <Link href={`/${locale}/about`} className="hover:text-white">{t(loc, "about")}</Link>
                 </div>
               </div>
               <div>

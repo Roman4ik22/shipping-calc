@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import type { Locale } from "@/lib/types";
 
 interface Country {
@@ -10,6 +10,13 @@ interface Country {
   slug_en: string;
   slug_ru: string;
   continent: string;
+}
+
+function countryFlag(code: string): string {
+  const codePoints = [...code.toUpperCase()].map(
+    (c) => 0x1f1e6 + c.charCodeAt(0) - 65
+  );
+  return String.fromCodePoint(...codePoints);
 }
 
 export default function CountrySelector({
@@ -27,8 +34,35 @@ export default function CountrySelector({
 }) {
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   const getName = (c: Country) => (locale === "ru" ? c.name_ru : c.name_en);
+
+  // Close on click outside
+  useEffect(() => {
+    if (!isOpen) return;
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setIsOpen(false);
+        setSearch("");
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [isOpen]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!isOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        setSearch("");
+      }
+    };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [isOpen]);
 
   const filtered = useMemo(() => {
     if (!search) return countries;
@@ -44,7 +78,7 @@ export default function CountrySelector({
   const selected = countries.find((c) => c.code === value);
 
   return (
-    <div className="relative">
+    <div className="relative" ref={ref}>
       <label className="block text-sm font-medium text-gray-700 mb-1">
         {label}
       </label>
@@ -53,7 +87,13 @@ export default function CountrySelector({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-4 py-3 text-left bg-white border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
-        {selected ? getName(selected) : "—"}
+        {selected ? (
+          <span>
+            {countryFlag(selected.code)} {getName(selected)}
+          </span>
+        ) : (
+          <span className="text-gray-400">—</span>
+        )}
       </button>
 
       {isOpen && (
@@ -82,7 +122,7 @@ export default function CountrySelector({
                   c.code === value ? "bg-blue-50 font-medium" : ""
                 }`}
               >
-                {getName(c)}
+                {countryFlag(c.code)} {getName(c)}
               </button>
             ))}
             {filtered.length === 0 && (

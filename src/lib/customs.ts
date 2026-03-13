@@ -93,6 +93,27 @@ const customsData: Record<string, CustomsInfo> = {
   JO: { currency: "JOD", de_minimis_usd: 100, vat_rate: 16, avg_duty_rate: 15 },
   BH: { currency: "BHD", de_minimis_usd: 270, vat_rate: 10, avg_duty_rate: 5 },
   OM: { currency: "OMR", de_minimis_usd: 270, vat_rate: 5, avg_duty_rate: 5 },
+  // Batch 4 — 20 more countries
+  GH: { currency: "GHS", de_minimis_usd: 50, vat_rate: 15, avg_duty_rate: 20 },
+  TZ: { currency: "TZS", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 25 },
+  UG: { currency: "UGX", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 25 },
+  ET: { currency: "ETB", de_minimis_usd: 0, vat_rate: 15, avg_duty_rate: 25 },
+  SN: { currency: "XOF", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 20 },
+  CI: { currency: "XOF", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 20 },
+  CM: { currency: "XAF", de_minimis_usd: 0, vat_rate: 19.25, avg_duty_rate: 20 },
+  MU: { currency: "MUR", de_minimis_usd: 0, vat_rate: 15, avg_duty_rate: 8 },
+  TN: { currency: "TND", de_minimis_usd: 0, vat_rate: 19, avg_duty_rate: 20 },
+  LB: { currency: "LBP", de_minimis_usd: 0, vat_rate: 11, avg_duty_rate: 5 },
+  IQ: { currency: "IQD", de_minimis_usd: 0, vat_rate: 0, avg_duty_rate: 5, notes_en: "No VAT system; customs duties apply", notes_ru: "Нет системы НДС; применяются таможенные пошлины" },
+  MM: { currency: "MMK", de_minimis_usd: 0, vat_rate: 5, avg_duty_rate: 15 },
+  KH: { currency: "KHR", de_minimis_usd: 0, vat_rate: 10, avg_duty_rate: 15 },
+  NP: { currency: "NPR", de_minimis_usd: 0, vat_rate: 13, avg_duty_rate: 15 },
+  CR: { currency: "CRC", de_minimis_usd: 50, vat_rate: 13, avg_duty_rate: 10 },
+  PA: { currency: "USD", de_minimis_usd: 100, vat_rate: 7, avg_duty_rate: 10, notes_en: "Uses USD; Colon Free Zone for re-exports", notes_ru: "Используется USD; Свободная зона Колон для реэкспорта" },
+  DO: { currency: "DOP", de_minimis_usd: 200, vat_rate: 18, avg_duty_rate: 14 },
+  GT: { currency: "GTQ", de_minimis_usd: 0, vat_rate: 12, avg_duty_rate: 15 },
+  PY: { currency: "PYG", de_minimis_usd: 50, vat_rate: 10, avg_duty_rate: 10 },
+  BO: { currency: "BOB", de_minimis_usd: 0, vat_rate: 13, avg_duty_rate: 10 },
 };
 
 // Default for countries not in the list

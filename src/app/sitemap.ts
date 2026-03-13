@@ -36,6 +36,14 @@ function getStaticEntries(): MetadataRoute.Sitemap {
       priority: 1.0,
     });
 
+    // About page
+    entries.push({
+      url: `${BASE_URL}/${locale}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    });
+
     // Carriers index
     entries.push({
       url: `${BASE_URL}/${locale}/carriers`,
