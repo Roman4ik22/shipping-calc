@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import type { Locale } from "@/lib/types";
 
 interface Rate {
@@ -17,6 +17,19 @@ interface CorridorRateData {
   estimated_days_min: number;
   estimated_days_max: number;
   tracking: boolean;
+}
+
+function calcVolumetricWeight(l: number, w: number, h: number): number {
+  return (l * w * h) / 5000;
+}
+
+function findClosestWeight(weight: number, availableWeights: number[]): number {
+  // Find the smallest available weight that is >= the target
+  const sorted = [...availableWeights].sort((a, b) => a - b);
+  for (const w of sorted) {
+    if (w >= weight) return w;
+  }
+  return sorted[sorted.length - 1]; // fallback to max
 }
 
 export default function RateTable({
@@ -43,10 +56,50 @@ export default function RateTable({
     disclaimer: string;
   };
 }) {
-  const weightSteps = [0.5, 1, 2, 5, 10, 20, 30];
-  const [selectedWeight, setSelectedWeight] = useState(1);
+  const weightPresets = [0.5, 1, 2, 5, 10, 20, 30, 50, 70];
+  const [selectedPreset, setSelectedPreset] = useState<number | null>(1);
+  const [customWeight, setCustomWeight] = useState("");
+  const [dimensions, setDimensions] = useState({ l: "", w: "", h: "" });
+  const [showDimensions, setShowDimensions] = useState(false);
   const [sortBy, setSortBy] = useState<"price" | "speed">("price");
   const [filterType, setFilterType] = useState<"all" | "international" | "regional" | "postal">("all");
+  const [compareIds, setCompareIds] = useState<Set<string>>(new Set());
+  const [showCompare, setShowCompare] = useState(false);
+
+  // Calculate volumetric weight
+  const volumetricWeight = useMemo(() => {
+    const l = parseFloat(dimensions.l);
+    const w = parseFloat(dimensions.w);
+    const h = parseFloat(dimensions.h);
+    if (l > 0 && w > 0 && h > 0) {
+      return calcVolumetricWeight(l, w, h);
+    }
+    return 0;
+  }, [dimensions]);
+
+  // Determine effective weight (max of actual and volumetric)
+  const effectiveWeight = useMemo(() => {
+    const actual = (selectedPreset ?? parseFloat(customWeight)) || 0;
+    if (volumetricWeight > 0 && actual > 0) {
+      return Math.max(actual, volumetricWeight);
+    }
+    return actual;
+  }, [selectedPreset, customWeight, volumetricWeight]);
+
+  // Available weight steps from rate data
+  const availableWeights = useMemo(() => {
+    const weights = new Set<number>();
+    for (const cr of corridorRates) {
+      for (const r of cr.rates) {
+        weights.add(r.weight_kg);
+      }
+    }
+    return [...weights].sort((a, b) => a - b);
+  }, [corridorRates]);
+
+  const billingWeight = effectiveWeight > 0
+    ? findClosestWeight(effectiveWeight, availableWeights)
+    : findClosestWeight(1, availableWeights);
 
   if (corridorRates.length === 0) {
     return (
@@ -56,11 +109,11 @@ export default function RateTable({
     );
   }
 
-  // Get rates for selected weight
+  // Get rates for billing weight
   const ratesAtWeight = corridorRates
     .map((cr) => {
-      const rate = cr.rates.find((r) => r.weight_kg === selectedWeight);
-      return { ...cr, price: rate?.price_usd ?? null };
+      const rate = cr.rates.find((r) => r.weight_kg === billingWeight);
+      return { ...cr, price: rate?.price_usd ?? null, id: `${cr.carrier_name}-${cr.service_name}` };
     })
     .filter((r) => r.price !== null)
     .filter((r) => filterType === "all" || r.carrier_type === filterType)
@@ -83,32 +136,149 @@ export default function RateTable({
     { value: "postal" as const, label: locale === "ru" ? "Почтовые" : "Postal" },
   ];
 
+  const comparedRates = ratesAtWeight.filter((r) => compareIds.has(r.id));
+
+  const toggleCompare = (id: string) => {
+    setCompareIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
   return (
     <div>
-      {/* Weight selector */}
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {labels.select_weight}
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {weightSteps.map((w) => (
-            <button
-              key={w}
-              onClick={() => setSelectedWeight(w)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                selectedWeight === w
-                  ? "bg-blue-600 text-white"
-                  : "bg-white border border-gray-300 text-gray-700 hover:border-blue-400"
-              }`}
-            >
-              {w} {labels.kg}
-            </button>
-          ))}
+      {/* Weight input section */}
+      <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+        {/* Presets */}
+        <div className="mb-3">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {labels.select_weight}
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {weightPresets.map((w) => (
+              <button
+                key={w}
+                onClick={() => { setSelectedPreset(w); setCustomWeight(""); }}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  selectedPreset === w && !customWeight
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-50 border border-gray-300 text-gray-700 hover:border-blue-400"
+                }`}
+              >
+                {w} {labels.kg}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* Custom weight input */}
+        <div className="flex flex-wrap items-end gap-4">
+          <div>
+            <label className="block text-xs text-gray-500 mb-1">
+              {locale === "ru" ? "Или введите вес вручную" : "Or enter weight manually"}
+            </label>
+            <div className="flex items-center gap-1">
+              <input
+                type="number"
+                value={customWeight}
+                onChange={(e) => { setCustomWeight(e.target.value); setSelectedPreset(null); }}
+                placeholder="0.0"
+                min="0.1"
+                max="70"
+                step="0.1"
+                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <span className="text-sm text-gray-500">{labels.kg}</span>
+            </div>
+          </div>
+
+          {/* Dimensions toggle */}
+          <button
+            onClick={() => setShowDimensions(!showDimensions)}
+            className="px-3 py-2 text-sm text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
+          >
+            {showDimensions
+              ? (locale === "ru" ? "Скрыть габариты" : "Hide dimensions")
+              : (locale === "ru" ? "Указать габариты (Д×Ш×В)" : "Enter dimensions (L×W×H)")}
+          </button>
+        </div>
+
+        {/* Dimensions input */}
+        {showDimensions && (
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <label className="block text-xs text-gray-500 mb-2">
+              {locale === "ru" ? "Габариты посылки (см)" : "Package dimensions (cm)"}
+            </label>
+            <div className="flex items-center gap-2">
+              <input
+                type="number"
+                value={dimensions.l}
+                onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
+                placeholder={locale === "ru" ? "Длина" : "Length"}
+                min="1"
+                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <span className="text-gray-400">×</span>
+              <input
+                type="number"
+                value={dimensions.w}
+                onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
+                placeholder={locale === "ru" ? "Ширина" : "Width"}
+                min="1"
+                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <span className="text-gray-400">×</span>
+              <input
+                type="number"
+                value={dimensions.h}
+                onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
+                placeholder={locale === "ru" ? "Высота" : "Height"}
+                min="1"
+                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <span className="text-sm text-gray-500">{locale === "ru" ? "см" : "cm"}</span>
+            </div>
+            {volumetricWeight > 0 && (
+              <div className="mt-2 text-sm">
+                <span className="text-gray-500">
+                  {locale === "ru" ? "Объёмный вес:" : "Volumetric weight:"}{" "}
+                </span>
+                <span className="font-semibold text-gray-900">{volumetricWeight.toFixed(1)} {labels.kg}</span>
+                {effectiveWeight > ((selectedPreset ?? parseFloat(customWeight)) || 0) && (
+                  <span className="ml-2 text-orange-600 text-xs">
+                    {locale === "ru"
+                      ? "⚠ Объёмный вес больше фактического — расчёт по объёмному"
+                      : "⚠ Volumetric weight exceeds actual — charged by volumetric"}
+                  </span>
+                )}
+              </div>
+            )}
+            <p className="text-xs text-gray-400 mt-1">
+              {locale === "ru"
+                ? "Формула: Д × Ш × В / 5000 = объёмный вес (кг)"
+                : "Formula: L × W × H / 5000 = volumetric weight (kg)"}
+            </p>
+          </div>
+        )}
+
+        {/* Effective weight display */}
+        {effectiveWeight > 0 && (
+          <div className="mt-3 pt-3 border-t border-gray-100 text-sm">
+            <span className="text-gray-500">{locale === "ru" ? "Тарификация по:" : "Billed at:"} </span>
+            <span className="font-semibold text-gray-900">{billingWeight} {labels.kg}</span>
+            {billingWeight !== effectiveWeight && (
+              <span className="text-xs text-gray-400 ml-1">
+                ({locale === "ru" ? "ближайший тарифный вес" : "nearest rate bracket"})
+              </span>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Sort & filter controls */}
-      <div className="flex flex-wrap items-center gap-3 mb-6">
+      <div className="flex flex-wrap items-center gap-3 mb-4">
         <div className="flex items-center gap-2">
           <span className="text-sm text-gray-500">{locale === "ru" ? "Сортировка:" : "Sort:"}</span>
           <button
@@ -145,31 +315,89 @@ export default function RateTable({
         </div>
       </div>
 
-      {/* Results count */}
-      <p className="text-sm text-gray-500 mb-3">
-        {ratesAtWeight.length} {locale === "ru" ? "результатов" : "results"}
-      </p>
+      {/* Results count + compare button */}
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-sm text-gray-500">
+          {ratesAtWeight.length} {locale === "ru" ? "результатов" : "results"}
+        </p>
+        {compareIds.size >= 2 && (
+          <button
+            onClick={() => setShowCompare(!showCompare)}
+            className="px-4 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700"
+          >
+            {locale === "ru" ? `Сравнить (${compareIds.size})` : `Compare (${compareIds.size})`}
+          </button>
+        )}
+      </div>
+
+      {/* Comparison table */}
+      {showCompare && comparedRates.length >= 2 && (
+        <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4 overflow-x-auto">
+          <h3 className="font-semibold text-gray-900 mb-3">
+            {locale === "ru" ? "Сравнение" : "Comparison"}
+          </h3>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-gray-500">
+                <th className="pb-2">{labels.carrier}</th>
+                <th className="pb-2">{labels.service}</th>
+                <th className="pb-2">{labels.price}</th>
+                <th className="pb-2">{labels.delivery_time}</th>
+                <th className="pb-2">{labels.tracking}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparedRates.map((rate) => (
+                <tr key={rate.id} className="border-t border-blue-200">
+                  <td className="py-2 font-medium">{rate.carrier_name}</td>
+                  <td className="py-2">{rate.service_name}</td>
+                  <td className="py-2 font-bold">${rate.price}</td>
+                  <td className="py-2">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
+                  <td className="py-2">{rate.tracking ? labels.yes : labels.no}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <button
+            onClick={() => setShowCompare(false)}
+            className="mt-2 text-sm text-blue-600 hover:text-blue-800"
+          >
+            {locale === "ru" ? "Закрыть" : "Close"}
+          </button>
+        </div>
+      )}
 
       {/* Rate cards */}
       <div className="space-y-3">
         {ratesAtWeight.map((rate) => {
           const isCheapest = rate === cheapest;
           const isFastest = rate === fastest && !isCheapest;
+          const isCompared = compareIds.has(rate.id);
 
           return (
             <div
-              key={`${rate.carrier_name}-${rate.service_name}`}
+              key={rate.id}
               className={`bg-white rounded-lg border p-4 sm:p-5 ${
                 isCheapest
                   ? "border-green-300 ring-1 ring-green-200"
                   : isFastest
                   ? "border-blue-300 ring-1 ring-blue-200"
+                  : isCompared
+                  ? "border-purple-300 ring-1 ring-purple-200"
                   : "border-gray-200"
               }`}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    {/* Compare checkbox */}
+                    <input
+                      type="checkbox"
+                      checked={isCompared}
+                      onChange={() => toggleCompare(rate.id)}
+                      className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                      title={locale === "ru" ? "Сравнить" : "Compare"}
+                    />
                     <span className="font-semibold text-gray-900">
                       {rate.carrier_name}
                     </span>
@@ -195,7 +423,7 @@ export default function RateTable({
                       {rate.carrier_type}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-500">{rate.service_name}</p>
+                  <p className="text-sm text-gray-500 ml-6">{rate.service_name}</p>
                 </div>
 
                 <div className="flex items-center gap-4 sm:gap-6">
@@ -229,7 +457,7 @@ export default function RateTable({
                 </div>
               </div>
               {/* Mobile tracking info */}
-              <div className="sm:hidden mt-2 text-xs text-gray-500">
+              <div className="sm:hidden mt-2 text-xs text-gray-500 ml-6">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
               </div>
             </div>

@@ -11,7 +11,7 @@ interface CustomsInfo {
 }
 
 const customsData: Record<string, CustomsInfo> = {
-  US: { currency: "USD", de_minimis_usd: 800, vat_rate: 0, avg_duty_rate: 3.4, notes_en: "No federal sales tax; state taxes may apply", notes_ru: "Нет федерального налога; могут применяться налоги штата" },
+  US: { currency: "USD", de_minimis_usd: 800, vat_rate: 0, avg_duty_rate: 3.4, notes_en: "De minimis $800 threshold will be eliminated from Aug 1, 2026. No federal sales tax; state taxes may apply", notes_ru: "Порог де минимис $800 будет отменён с 1 августа 2026. Нет федерального налога; могут применяться налоги штата" },
   GB: { currency: "GBP", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2, notes_en: "VAT applies to all imports since Jan 2021", notes_ru: "НДС применяется ко всему импорту с января 2021" },
   DE: { currency: "EUR", de_minimis_usd: 0, vat_rate: 19, avg_duty_rate: 4.2, notes_en: "EU customs union; EORI number may be required", notes_ru: "Таможенный союз ЕС; может потребоваться номер EORI" },
   FR: { currency: "EUR", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2, notes_en: "EU customs union", notes_ru: "Таможенный союз ЕС" },
