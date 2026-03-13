@@ -1,0 +1,131 @@
+{
+  "carrier_id": "flash-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH",
+        "SG",
+        "KH",
+        "MM",
+        "LA",
+        "BN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "TW"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Global",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "AU",
+        "AE",
+        "IN",
+        "NL",
+        "IT",
+        "BR",
+        "RU"
+      ]
+    }
+  ],
+  "rates": {
+    "flash-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          8,
+          16
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          12,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9,
+          18,
+          34
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16,
+          34,
+          62
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28,
+          60,
+          108
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          50,
+          108,
+          195
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          72,
+          155,
+          278
+        ]
+      }
+    ]
+  }
+}

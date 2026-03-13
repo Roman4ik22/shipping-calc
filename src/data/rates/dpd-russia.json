@@ -1,0 +1,191 @@
+{
+  "carrier_id": "dpd-russia",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "CIS",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "KZ",
+        "BY",
+        "KG",
+        "AM",
+        "UZ",
+        "TJ",
+        "AZ",
+        "MD",
+        "GE"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "PL",
+        "NL",
+        "CZ",
+        "AT",
+        "GB",
+        "SE",
+        "FI",
+        "DK",
+        "BE",
+        "CH",
+        "HU",
+        "RO",
+        "BG",
+        "SK",
+        "LT",
+        "LV",
+        "EE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "AE",
+        "TR",
+        "IL",
+        "IN",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "dpd-russia-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          14,
+          30,
+          45
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          18,
+          38,
+          55
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          24,
+          52,
+          78
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          42,
+          92,
+          138
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          68,
+          155,
+          235
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          118,
+          270,
+          410
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          168,
+          385,
+          585
+        ]
+      }
+    ],
+    "dpd-russia-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          22,
+          32
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          28,
+          40
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          38,
+          56
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          68,
+          100
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          52,
+          115,
+          170
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90,
+          200,
+          298
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          128,
+          285,
+          425
+        ]
+      }
+    ]
+  }
+}

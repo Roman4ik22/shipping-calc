@@ -1,0 +1,241 @@
+{
+  "carrier_id": "cne-express-china-navigation-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe & Americas",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AU",
+        "NZ",
+        "BR",
+        "MX",
+        "RU",
+        "PL",
+        "SE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "ZA",
+        "EG",
+        "NG"
+      ]
+    }
+  ],
+  "rates": {
+    "cne-express-china-navigation-express-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          7,
+          12,
+          15
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          18,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          15,
+          28,
+          34
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          55,
+          65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          48,
+          95,
+          115
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          85,
+          170,
+          205
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          122,
+          245,
+          295
+        ]
+      }
+    ],
+    "cne-express-china-navigation-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          10,
+          13
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9,
+          16,
+          20
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18,
+          32,
+          40
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          30,
+          55,
+          68
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          55,
+          98,
+          122
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          78,
+          140,
+          175
+        ]
+      }
+    ],
+    "cne-express-china-navigation-express-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5,
+          9,
+          11
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10,
+          18,
+          22
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          18,
+          32,
+          40
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          32,
+          58,
+          72
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          45,
+          82,
+          102
+        ]
+      }
+    ]
+  }
+}

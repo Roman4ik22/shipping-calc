@@ -1,0 +1,124 @@
+{
+  "carrier_id": "zto-international",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK",
+        "KH",
+        "MM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Americas & Europe",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "NL",
+        "AU",
+        "RU",
+        "BR",
+        "ES",
+        "PL"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "ZA",
+        "NZ",
+        "MX"
+      ]
+    }
+  ],
+  "rates": {
+    "zto-international-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          9,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          14,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          15,
+          28,
+          35
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          26,
+          48,
+          60
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          46,
+          86,
+          108
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          66,
+          124,
+          155
+        ]
+      }
+    ]
+  }
+}

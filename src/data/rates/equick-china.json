@@ -1,0 +1,238 @@
+{
+  "carrier_id": "equick-china",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe & Americas",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AU",
+        "BR",
+        "RU",
+        "PL",
+        "SE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "ZA",
+        "NZ"
+      ]
+    }
+  ],
+  "rates": {
+    "equick-china-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          13
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9,
+          15,
+          19
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13,
+          24,
+          30
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          25,
+          48,
+          58
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          44,
+          82,
+          102
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          78,
+          148,
+          185
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          112,
+          215,
+          265
+        ]
+      }
+    ],
+    "equick-china-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          9,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          14,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16,
+          28,
+          36
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28,
+          50,
+          62
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          50,
+          90,
+          112
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          72,
+          130,
+          162
+        ]
+      }
+    ],
+    "equick-china-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10,
+          17,
+          22
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          17,
+          30,
+          38
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          30,
+          55,
+          68
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          44,
+          78,
+          98
+        ]
+      }
+    ]
+  }
+}

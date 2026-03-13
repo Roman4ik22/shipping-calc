@@ -46,6 +46,16 @@ import ponyExpressRates from "../data/rates/pony-express.json";
 import meestRates from "../data/rates/meest.json";
 import dtdcRates from "../data/rates/dtdc-express.json";
 import lbcRates from "../data/rates/lbc-express.json";
+import flashExpressRates from "../data/rates/flash-express.json";
+import cneRates from "../data/rates/cne-express-china-navigation-express.json";
+import sunyouRates from "../data/rates/sunyou-sunyou-post.json";
+import equickRates from "../data/rates/equick-china.json";
+import ztoRates from "../data/rates/zto-international.json";
+import stoRates from "../data/rates/sto-express-shentong-express.json";
+import ytoRates from "../data/rates/yto-express-yuantong-express.json";
+import bestIncRates from "../data/rates/best-inc-international.json";
+import dpdRussiaRates from "../data/rates/dpd-russia.json";
+import sicepatRates from "../data/rates/sicepat-ekspres.json";
 import type {
   Country,
   Carrier,
@@ -105,6 +115,16 @@ const allRateData: CarrierRateData[] = [
   meestRates,
   dtdcRates,
   lbcRates,
+  flashExpressRates,
+  cneRates,
+  sunyouRates,
+  equickRates,
+  ztoRates,
+  stoRates,
+  ytoRates,
+  bestIncRates,
+  dpdRussiaRates,
+  sicepatRates,
 ] as CarrierRateData[];
 
 // Lookup maps

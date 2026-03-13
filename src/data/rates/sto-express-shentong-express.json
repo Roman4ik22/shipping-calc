@@ -1,0 +1,119 @@
+{
+  "carrier_id": "sto-express-shentong-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Americas & Europe",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "NL",
+        "AU",
+        "RU",
+        "BR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "ZA",
+        "NZ"
+      ]
+    }
+  ],
+  "rates": {
+    "sto-express-shentong-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          10,
+          13
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          15,
+          19
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16,
+          30,
+          38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28,
+          52,
+          65
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          50,
+          94,
+          118
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          72,
+          136,
+          170
+        ]
+      }
+    ]
+  }
+}

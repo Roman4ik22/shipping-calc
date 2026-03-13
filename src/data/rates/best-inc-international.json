@@ -1,0 +1,118 @@
+{
+  "carrier_id": "best-inc-international",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH",
+        "SG",
+        "KH",
+        "MM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia & Pacific",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "TW",
+        "HK",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & Europe",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "NL",
+        "BR",
+        "RU",
+        "ES",
+        "IN",
+        "AE"
+      ]
+    }
+  ],
+  "rates": {
+    "best-inc-international-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          8,
+          11
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          13,
+          17
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          14,
+          25,
+          34
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          24,
+          44,
+          58
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          44,
+          80,
+          105
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          62,
+          115,
+          150
+        ]
+      }
+    ]
+  }
+}
