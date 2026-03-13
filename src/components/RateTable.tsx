@@ -19,6 +19,37 @@ interface CorridorRateData {
   tracking: boolean;
 }
 
+// Approximate exchange rates from USD (updated periodically)
+const EXCHANGE_RATES: Record<string, { rate: number; symbol: string; name: string }> = {
+  USD: { rate: 1, symbol: "$", name: "US Dollar" },
+  EUR: { rate: 0.92, symbol: "€", name: "Euro" },
+  GBP: { rate: 0.79, symbol: "£", name: "British Pound" },
+  CHF: { rate: 0.88, symbol: "Fr", name: "Swiss Franc" },
+  RUB: { rate: 92, symbol: "₽", name: "Russian Ruble" },
+  CNY: { rate: 7.25, symbol: "¥", name: "Chinese Yuan" },
+  JPY: { rate: 150, symbol: "¥", name: "Japanese Yen" },
+  KRW: { rate: 1350, symbol: "₩", name: "Korean Won" },
+  INR: { rate: 83, symbol: "₹", name: "Indian Rupee" },
+  AED: { rate: 3.67, symbol: "د.إ", name: "UAE Dirham" },
+  BRL: { rate: 4.95, symbol: "R$", name: "Brazilian Real" },
+  CAD: { rate: 1.36, symbol: "C$", name: "Canadian Dollar" },
+  AUD: { rate: 1.53, symbol: "A$", name: "Australian Dollar" },
+  TRY: { rate: 32, symbol: "₺", name: "Turkish Lira" },
+  PLN: { rate: 4.0, symbol: "zł", name: "Polish Zloty" },
+  UAH: { rate: 41, symbol: "₴", name: "Ukrainian Hryvnia" },
+  KZT: { rate: 460, symbol: "₸", name: "Kazakh Tenge" },
+};
+
+function convertPrice(usd: number, currency: string): string {
+  const info = EXCHANGE_RATES[currency];
+  if (!info || currency === "USD") return "";
+  const converted = usd * info.rate;
+  // Format based on magnitude
+  if (converted >= 1000) return `${info.symbol}${Math.round(converted).toLocaleString()}`;
+  if (converted >= 100) return `${info.symbol}${Math.round(converted)}`;
+  return `${info.symbol}${converted.toFixed(2)}`;
+}
+
 function calcVolumetricWeight(l: number, w: number, h: number): number {
   return (l * w * h) / 5000;
 }
@@ -65,6 +96,7 @@ export default function RateTable({
   const [filterType, setFilterType] = useState<"all" | "international" | "regional" | "postal">("all");
   const [compareIds, setCompareIds] = useState<Set<string>>(new Set());
   const [showCompare, setShowCompare] = useState(false);
+  const [currency, setCurrency] = useState("USD");
 
   // Calculate volumetric weight
   const volumetricWeight = useMemo(() => {
@@ -277,6 +309,27 @@ export default function RateTable({
         )}
       </div>
 
+      {/* Currency selector */}
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-sm text-gray-500">{locale === "ru" ? "Валюта:" : "Currency:"}</span>
+        <select
+          value={currency}
+          onChange={(e) => setCurrency(e.target.value)}
+          className="px-3 py-1.5 rounded border border-gray-300 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+        >
+          {Object.entries(EXCHANGE_RATES).map(([code, info]) => (
+            <option key={code} value={code}>
+              {info.symbol} {code}
+            </option>
+          ))}
+        </select>
+        {currency !== "USD" && (
+          <span className="text-xs text-gray-400">
+            (1 USD = {EXCHANGE_RATES[currency].rate} {currency})
+          </span>
+        )}
+      </div>
+
       {/* Sort & filter controls */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
         <div className="flex items-center gap-2">
@@ -351,7 +404,7 @@ export default function RateTable({
                 <tr key={rate.id} className="border-t border-blue-200">
                   <td className="py-2 font-medium">{rate.carrier_name}</td>
                   <td className="py-2">{rate.service_name}</td>
-                  <td className="py-2 font-bold">${rate.price}</td>
+                  <td className="py-2 font-bold">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
                   <td className="py-2">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
                   <td className="py-2">{rate.tracking ? labels.yes : labels.no}</td>
                 </tr>
@@ -453,6 +506,11 @@ export default function RateTable({
                     <p className="text-2xl font-bold text-gray-900">
                       ${rate.price}
                     </p>
+                    {currency !== "USD" && rate.price && (
+                      <p className="text-xs text-gray-400">
+                        {convertPrice(rate.price, currency)}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
