@@ -1,0 +1,21 @@
+{
+  "carrier_id": "spring-gds",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["NL", "GB", "DE"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 1", "countries_from": ["NL", "GB", "DE"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 2", "countries_from": ["NL", "GB", "DE"], "countries_to": ["INTERCONTINENTAL"] },
+    { "name": "Zone 3", "countries_from": ["NL", "GB", "DE"], "countries_to": ["REMOTE"] }
+  ],
+  "rates": {
+    "spring-gds-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [5.50, 8.50, 14.00, 22.00] },
+      { "weight_kg": 1, "prices_by_zone": [7.00, 11.00, 18.00, 28.00] },
+      { "weight_kg": 2, "prices_by_zone": [9.00, 14.00, 24.00, 38.00] },
+      { "weight_kg": 3, "prices_by_zone": [11.00, 17.50, 30.00, 48.00] },
+      { "weight_kg": 5, "prices_by_zone": [14.50, 23.00, 40.00, 65.00] },
+      { "weight_kg": 10, "prices_by_zone": [22.00, 36.00, 64.00, 105.00] },
+      { "weight_kg": 15, "prices_by_zone": [29.00, 48.00, 85.00, 140.00] },
+      { "weight_kg": 20, "prices_by_zone": [36.00, 58.00, 105.00, 172.00] }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "carrier_id": "inpost",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["PL"], "countries_to": ["PL"] },
+    { "name": "Zone 1", "countries_from": ["PL"], "countries_to": ["DE", "CZ", "SK", "LT", "GB", "FR", "IT", "ES"] },
+    { "name": "Zone 2", "countries_from": ["PL"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["PL"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "inpost-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2.80, 7.50, 14.00, 28.00] },
+      { "weight_kg": 1, "prices_by_zone": [3.50, 9.00, 17.00, 34.00] },
+      { "weight_kg": 2, "prices_by_zone": [4.50, 11.50, 22.00, 44.00] },
+      { "weight_kg": 3, "prices_by_zone": [5.50, 14.00, 26.00, 52.00] },
+      { "weight_kg": 5, "prices_by_zone": [7.00, 18.00, 34.00, 68.00] },
+      { "weight_kg": 10, "prices_by_zone": [10.50, 28.00, 54.00, 108.00] },
+      { "weight_kg": 15, "prices_by_zone": [14.00, 36.00, 70.00, 142.00] },
+      { "weight_kg": 20, "prices_by_zone": [17.00, 44.00, 86.00, 174.00] },
+      { "weight_kg": 25, "prices_by_zone": [20.00, 52.00, 102.00, 206.00] }
+    ]
+  }
+}

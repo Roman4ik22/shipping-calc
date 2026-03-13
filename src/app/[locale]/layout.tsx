@@ -47,7 +47,7 @@ export async function generateMetadata({
     },
     manifest: "/manifest.json",
     verification: {
-      google: process.env.NEXT_PUBLIC_GSC_ID || undefined,
+      google: process.env.NEXT_PUBLIC_GSC_ID || "google5ccb7b7d1567cd4b",
     },
   };
 }

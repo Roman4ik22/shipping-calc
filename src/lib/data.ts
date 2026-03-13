@@ -56,6 +56,39 @@ import ytoRates from "../data/rates/yto-express-yuantong-express.json";
 import bestIncRates from "../data/rates/best-inc-international.json";
 import dpdRussiaRates from "../data/rates/dpd-russia.json";
 import sicepatRates from "../data/rates/sicepat-ekspres.json";
+// Batch 7
+import bestExpressThaiRates from "../data/rates/best-express-thailand-sea.json";
+import tikiRates from "../data/rates/tiki-titipan-kilat.json";
+import twoGoRates from "../data/rates/2go-express.json";
+import xendRates from "../data/rates/xend-business-solutions.json";
+import kerryThaiRates from "../data/rates/kerry-express-thailand.json";
+import spsrRates from "../data/rates/spsr-express.json";
+import hermesRussiaRates from "../data/rates/hermes-russia.json";
+import ecomRates from "../data/rates/ecom-express.json";
+import xpressbeesRates from "../data/rates/xpressbees.json";
+import shadowfaxRates from "../data/rates/shadowfax.json";
+// Batch 8
+import fetchrRates from "../data/rates/fetchr.json";
+import naqelRates from "../data/rates/naqel-express.json";
+import smsaRates from "../data/rates/smsa-express.json";
+import skynetRates from "../data/rates/skynet-worldwide-express.json";
+import courierGuyRates from "../data/rates/the-courier-guy.json";
+import pargoRates from "../data/rates/pargo.json";
+import jumiaRates from "../data/rates/jumia-logistics.json";
+import imileRates from "../data/rates/imile.json";
+import ninetyNineRates from "../data/rates/99minutos.json";
+import envacomRates from "../data/rates/env-a-com.json";
+// Batch 9
+import andreaniRates from "../data/rates/andreani.json";
+import chilexpressRates from "../data/rates/chilexpress.json";
+import servientregaRates from "../data/rates/servientrega.json";
+import olvaRates from "../data/rates/olva-courier.json";
+import estafetaRates from "../data/rates/estafeta.json";
+import inpostRates from "../data/rates/inpost.json";
+import mondialRates from "../data/rates/mondial-relay.json";
+import springGdsRates from "../data/rates/spring-gds.json";
+import packlinkRates from "../data/rates/packlink.json";
+import bpostRates from "../data/rates/bpost.json";
 import type {
   Country,
   Carrier,
@@ -125,6 +158,39 @@ const allRateData: CarrierRateData[] = [
   bestIncRates,
   dpdRussiaRates,
   sicepatRates,
+  // Batch 7
+  bestExpressThaiRates,
+  tikiRates,
+  twoGoRates,
+  xendRates,
+  kerryThaiRates,
+  spsrRates,
+  hermesRussiaRates,
+  ecomRates,
+  xpressbeesRates,
+  shadowfaxRates,
+  // Batch 8
+  fetchrRates,
+  naqelRates,
+  smsaRates,
+  skynetRates,
+  courierGuyRates,
+  pargoRates,
+  jumiaRates,
+  imileRates,
+  ninetyNineRates,
+  envacomRates,
+  // Batch 9
+  andreaniRates,
+  chilexpressRates,
+  servientregaRates,
+  olvaRates,
+  estafetaRates,
+  inpostRates,
+  mondialRates,
+  springGdsRates,
+  packlinkRates,
+  bpostRates,
 ] as CarrierRateData[];
 
 // Lookup maps

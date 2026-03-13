@@ -1,0 +1,35 @@
+{
+  "carrier_id": "jumia-logistics",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["NG", "KE", "EG", "GH", "CI", "MA", "TN", "UG", "ZA", "SN", "DZ", "RW"], "countries_to": ["NG", "KE", "EG", "GH", "CI", "MA", "TN", "UG", "ZA", "SN", "DZ", "RW"] },
+    { "name": "Zone 1", "countries_from": ["NG", "KE", "EG", "GH", "CI", "MA", "TN", "UG", "ZA", "SN", "DZ", "RW"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["NG", "KE", "EG", "GH", "CI", "MA", "TN", "UG", "ZA", "SN", "DZ", "RW"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["NG", "KE", "EG", "GH", "CI", "MA", "TN", "UG", "ZA", "SN", "DZ", "RW"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "jumia-logistics-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [4, 10, 18, 32] },
+      { "weight_kg": 1, "prices_by_zone": [6, 14, 24, 42] },
+      { "weight_kg": 2, "prices_by_zone": [9, 20, 34, 58] },
+      { "weight_kg": 3, "prices_by_zone": [12, 26, 44, 74] },
+      { "weight_kg": 5, "prices_by_zone": [16, 35, 60, 100] },
+      { "weight_kg": 10, "prices_by_zone": [26, 58, 98, 165] },
+      { "weight_kg": 15, "prices_by_zone": [35, 78, 132, 222] },
+      { "weight_kg": 20, "prices_by_zone": [42, 95, 162, 272] },
+      { "weight_kg": 30, "prices_by_zone": [56, 128, 218, 368] },
+      { "weight_kg": 50, "prices_by_zone": [84, 192, 328, 555] }
+    ],
+    "jumia-logistics-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2.5, 7, 14, 25] },
+      { "weight_kg": 1, "prices_by_zone": [4, 10, 18, 32] },
+      { "weight_kg": 2, "prices_by_zone": [6, 14, 26, 44] },
+      { "weight_kg": 3, "prices_by_zone": [8, 18, 34, 56] },
+      { "weight_kg": 5, "prices_by_zone": [11, 25, 46, 76] },
+      { "weight_kg": 10, "prices_by_zone": [18, 42, 75, 126] },
+      { "weight_kg": 15, "prices_by_zone": [24, 56, 100, 168] },
+      { "weight_kg": 20, "prices_by_zone": [30, 68, 122, 206] },
+      { "weight_kg": 30, "prices_by_zone": [40, 92, 165, 278] },
+      { "weight_kg": 50, "prices_by_zone": [60, 138, 248, 420] }
+    ]
+  }
+}

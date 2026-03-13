@@ -96,6 +96,47 @@ export default async function CarriersPage({
         title={t(loc, "postal_services")}
         items={postal}
       />
+
+      {/* ItemList JSON-LD for all carriers */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: loc === "ru" ? "Все перевозчики" : "All Shipping Carriers",
+            numberOfItems: carriers.length,
+            itemListElement: carriers.map((carrier, idx) => ({
+              "@type": "ListItem",
+              position: idx + 1,
+              name: carrier.name,
+              url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/carriers/${carrier.id}`,
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: t(loc, "carriers_page"),
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

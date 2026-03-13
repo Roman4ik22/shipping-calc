@@ -1,0 +1,20 @@
+{
+  "carrier_id": "best-express-thailand-sea",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["TH","VN","MY","ID","PH","SG","MM","KH","LA","BN"] },
+    { "name": "Zone 1", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["CN","HK","TW","JP","KR","IN","BD","LK"] },
+    { "name": "Zone 2", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["AU","NZ","AE","SA","QA","KW","BH","OM"] },
+    { "name": "Zone 3", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["US","CA","GB","DE","FR","IT","ES","NL","SE"] }
+  ],
+  "rates": {
+    "best-express-thailand-sea-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22, 32] },
+      { "weight_kg": 1, "prices_by_zone": [8, 18, 32, 48] },
+      { "weight_kg": 2, "prices_by_zone": [12, 26, 48, 72] },
+      { "weight_kg": 5, "prices_by_zone": [22, 48, 88, 130] },
+      { "weight_kg": 10, "prices_by_zone": [38, 82, 155, 230] },
+      { "weight_kg": 20, "prices_by_zone": [65, 140, 270, 400] },
+      { "weight_kg": 30, "prices_by_zone": [90, 195, 375, 560] }
+    ]
+  }
+}

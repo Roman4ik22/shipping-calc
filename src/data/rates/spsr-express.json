@@ -1,0 +1,29 @@
+{
+  "carrier_id": "spsr-express",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["RU"], "countries_to": ["RU"] },
+    { "name": "Zone 1", "countries_from": ["RU"], "countries_to": ["BY","KZ","AM","KG","UZ","TJ","GE","AZ","MD"] },
+    { "name": "Zone 2", "countries_from": ["RU"], "countries_to": ["CN","TR","AE","IN","KR","JP","TH","VN"] },
+    { "name": "Zone 3", "countries_from": ["RU"], "countries_to": ["DE","FR","GB","US","CA","IT","ES","NL"] }
+  ],
+  "rates": {
+    "spsr-express-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 24, 36] },
+      { "weight_kg": 1, "prices_by_zone": [8, 18, 35, 52] },
+      { "weight_kg": 2, "prices_by_zone": [12, 26, 50, 76] },
+      { "weight_kg": 5, "prices_by_zone": [22, 48, 92, 140] },
+      { "weight_kg": 10, "prices_by_zone": [38, 82, 160, 245] },
+      { "weight_kg": 20, "prices_by_zone": [65, 142, 278, 425] },
+      { "weight_kg": 30, "prices_by_zone": [90, 198, 388, 595] }
+    ],
+    "spsr-express-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18, 28] },
+      { "weight_kg": 1, "prices_by_zone": [5, 12, 26, 40] },
+      { "weight_kg": 2, "prices_by_zone": [8, 18, 38, 58] },
+      { "weight_kg": 5, "prices_by_zone": [15, 34, 70, 108] },
+      { "weight_kg": 10, "prices_by_zone": [26, 60, 122, 188] },
+      { "weight_kg": 20, "prices_by_zone": [45, 105, 212, 325] },
+      { "weight_kg": 30, "prices_by_zone": [62, 145, 295, 452] }
+    ]
+  }
+}

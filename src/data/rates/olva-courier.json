@@ -1,0 +1,35 @@
+{
+  "carrier_id": "olva-courier",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["PE"], "countries_to": ["PE"] },
+    { "name": "Zone 1", "countries_from": ["PE"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["PE"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["PE"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "olva-courier-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [4.00, 15.00, 30.00, 55.00] },
+      { "weight_kg": 1, "prices_by_zone": [5.50, 19.00, 38.00, 68.00] },
+      { "weight_kg": 2, "prices_by_zone": [7.80, 25.00, 50.00, 88.00] },
+      { "weight_kg": 3, "prices_by_zone": [10.00, 31.00, 60.00, 106.00] },
+      { "weight_kg": 5, "prices_by_zone": [14.00, 40.00, 78.00, 140.00] },
+      { "weight_kg": 10, "prices_by_zone": [22.00, 64.00, 125.00, 222.00] },
+      { "weight_kg": 15, "prices_by_zone": [30.00, 86.00, 168.00, 298.00] },
+      { "weight_kg": 20, "prices_by_zone": [38.00, 106.00, 210.00, 372.00] },
+      { "weight_kg": 30, "prices_by_zone": [52.00, 148.00, 290.00, 515.00] },
+      { "weight_kg": 50, "prices_by_zone": [78.00, 224.00, 440.00, 782.00] }
+    ],
+    "olva-courier-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2.50, 10.00, 22.00, 42.00] },
+      { "weight_kg": 1, "prices_by_zone": [3.50, 14.00, 28.00, 52.00] },
+      { "weight_kg": 2, "prices_by_zone": [5.20, 18.00, 38.00, 68.00] },
+      { "weight_kg": 3, "prices_by_zone": [7.00, 23.00, 46.00, 82.00] },
+      { "weight_kg": 5, "prices_by_zone": [9.50, 30.00, 60.00, 108.00] },
+      { "weight_kg": 10, "prices_by_zone": [16.00, 48.00, 96.00, 172.00] },
+      { "weight_kg": 15, "prices_by_zone": [22.00, 65.00, 128.00, 230.00] },
+      { "weight_kg": 20, "prices_by_zone": [28.00, 80.00, 160.00, 286.00] },
+      { "weight_kg": 30, "prices_by_zone": [39.00, 112.00, 222.00, 396.00] },
+      { "weight_kg": 50, "prices_by_zone": [58.00, 170.00, 336.00, 600.00] }
+    ]
+  }
+}

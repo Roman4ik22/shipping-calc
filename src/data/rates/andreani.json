@@ -1,0 +1,35 @@
+{
+  "carrier_id": "andreani",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["AR"], "countries_to": ["AR"] },
+    { "name": "Zone 1", "countries_from": ["AR"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["AR"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["AR"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "andreani-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5.50, 18.00, 32.00, 55.00] },
+      { "weight_kg": 1, "prices_by_zone": [7.00, 22.00, 40.00, 68.00] },
+      { "weight_kg": 2, "prices_by_zone": [9.50, 28.00, 52.00, 88.00] },
+      { "weight_kg": 3, "prices_by_zone": [12.00, 34.00, 62.00, 105.00] },
+      { "weight_kg": 5, "prices_by_zone": [16.00, 44.00, 82.00, 140.00] },
+      { "weight_kg": 10, "prices_by_zone": [26.00, 68.00, 130.00, 220.00] },
+      { "weight_kg": 15, "prices_by_zone": [35.00, 90.00, 175.00, 295.00] },
+      { "weight_kg": 20, "prices_by_zone": [44.00, 112.00, 218.00, 370.00] },
+      { "weight_kg": 30, "prices_by_zone": [60.00, 155.00, 300.00, 510.00] },
+      { "weight_kg": 50, "prices_by_zone": [90.00, 235.00, 460.00, 780.00] }
+    ],
+    "andreani-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3.50, 12.00, 24.00, 42.00] },
+      { "weight_kg": 1, "prices_by_zone": [4.80, 16.00, 30.00, 52.00] },
+      { "weight_kg": 2, "prices_by_zone": [6.50, 20.00, 40.00, 68.00] },
+      { "weight_kg": 3, "prices_by_zone": [8.50, 25.00, 48.00, 82.00] },
+      { "weight_kg": 5, "prices_by_zone": [11.50, 34.00, 64.00, 110.00] },
+      { "weight_kg": 10, "prices_by_zone": [19.00, 52.00, 100.00, 172.00] },
+      { "weight_kg": 15, "prices_by_zone": [26.00, 70.00, 135.00, 232.00] },
+      { "weight_kg": 20, "prices_by_zone": [33.00, 86.00, 168.00, 290.00] },
+      { "weight_kg": 30, "prices_by_zone": [46.00, 120.00, 235.00, 400.00] },
+      { "weight_kg": 50, "prices_by_zone": [70.00, 182.00, 355.00, 610.00] }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "carrier_id": "the-courier-guy",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["ZA"], "countries_to": ["ZA"] },
+    { "name": "Zone 1", "countries_from": ["ZA"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["ZA"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["ZA"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "the-courier-guy-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22, 38] },
+      { "weight_kg": 1, "prices_by_zone": [7, 16, 28, 48] },
+      { "weight_kg": 2, "prices_by_zone": [10, 22, 38, 65] },
+      { "weight_kg": 3, "prices_by_zone": [13, 28, 48, 82] },
+      { "weight_kg": 5, "prices_by_zone": [18, 38, 65, 110] },
+      { "weight_kg": 10, "prices_by_zone": [30, 62, 108, 182] },
+      { "weight_kg": 15, "prices_by_zone": [40, 82, 145, 242] },
+      { "weight_kg": 20, "prices_by_zone": [48, 100, 178, 298] },
+      { "weight_kg": 30, "prices_by_zone": [65, 135, 240, 402] },
+      { "weight_kg": 40, "prices_by_zone": [80, 168, 298, 500] }
+    ],
+    "the-courier-guy-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [3.5, 9, 18, 30] },
+      { "weight_kg": 1, "prices_by_zone": [5, 12, 22, 38] },
+      { "weight_kg": 2, "prices_by_zone": [7, 17, 30, 52] },
+      { "weight_kg": 3, "prices_by_zone": [9, 22, 38, 65] },
+      { "weight_kg": 5, "prices_by_zone": [13, 30, 52, 88] },
+      { "weight_kg": 10, "prices_by_zone": [22, 48, 85, 145] },
+      { "weight_kg": 15, "prices_by_zone": [30, 65, 115, 195] },
+      { "weight_kg": 20, "prices_by_zone": [36, 80, 142, 238] },
+      { "weight_kg": 30, "prices_by_zone": [48, 105, 190, 320] },
+      { "weight_kg": 40, "prices_by_zone": [60, 130, 235, 398] }
+    ]
+  }
+}

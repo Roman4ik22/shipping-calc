@@ -72,6 +72,27 @@ const customsData: Record<string, CustomsInfo> = {
   MA: { currency: "MAD", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 25 },
   QA: { currency: "QAR", de_minimis_usd: 270, vat_rate: 0, avg_duty_rate: 5, notes_en: "No VAT; 5% customs duty on most goods", notes_ru: "Нет НДС; 5% таможенная пошлина на большинство товаров" },
   KW: { currency: "KWD", de_minimis_usd: 270, vat_rate: 0, avg_duty_rate: 5 },
+  // Batch 3 — 20 more countries
+  BG: { currency: "BGN", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2 },
+  HR: { currency: "EUR", de_minimis_usd: 0, vat_rate: 25, avg_duty_rate: 4.2 },
+  SK: { currency: "EUR", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2 },
+  SI: { currency: "EUR", de_minimis_usd: 0, vat_rate: 22, avg_duty_rate: 4.2 },
+  LT: { currency: "EUR", de_minimis_usd: 0, vat_rate: 21, avg_duty_rate: 4.2 },
+  LV: { currency: "EUR", de_minimis_usd: 0, vat_rate: 21, avg_duty_rate: 4.2 },
+  EE: { currency: "EUR", de_minimis_usd: 0, vat_rate: 22, avg_duty_rate: 4.2 },
+  CY: { currency: "EUR", de_minimis_usd: 0, vat_rate: 19, avg_duty_rate: 4.2 },
+  MT: { currency: "EUR", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 4.2 },
+  LU: { currency: "EUR", de_minimis_usd: 0, vat_rate: 17, avg_duty_rate: 4.2, notes_en: "Lowest VAT in EU at 17%", notes_ru: "Самый низкий НДС в ЕС — 17%" },
+  IS: { currency: "ISK", de_minimis_usd: 25, vat_rate: 24, avg_duty_rate: 5 },
+  RS: { currency: "RSD", de_minimis_usd: 50, vat_rate: 20, avg_duty_rate: 10 },
+  BA: { currency: "BAM", de_minimis_usd: 40, vat_rate: 17, avg_duty_rate: 10 },
+  AL: { currency: "ALL", de_minimis_usd: 22, vat_rate: 20, avg_duty_rate: 10 },
+  MK: { currency: "MKD", de_minimis_usd: 45, vat_rate: 18, avg_duty_rate: 10 },
+  UY: { currency: "UYU", de_minimis_usd: 200, vat_rate: 22, avg_duty_rate: 14 },
+  EC: { currency: "USD", de_minimis_usd: 400, vat_rate: 12, avg_duty_rate: 10, notes_en: "Uses USD; $400 duty-free for international mail", notes_ru: "Используется USD; $400 беспошлинно для международной почты" },
+  JO: { currency: "JOD", de_minimis_usd: 100, vat_rate: 16, avg_duty_rate: 15 },
+  BH: { currency: "BHD", de_minimis_usd: 270, vat_rate: 10, avg_duty_rate: 5 },
+  OM: { currency: "OMR", de_minimis_usd: 270, vat_rate: 5, avg_duty_rate: 5 },
 };
 
 // Default for countries not in the list

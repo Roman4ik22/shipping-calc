@@ -1,9 +1,32 @@
+import { Metadata } from "next";
 import { countries, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
-import { t } from "@/lib/i18n";
+import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import Link from "next/link";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const loc = locale as Locale;
+  return {
+    title: t(loc, "compare_shipping_rates") + " | ShipWorldwide",
+    description: t(loc, "hero_subtitle", { count: "109" }),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: "/en", ru: "/ru" },
+    },
+    openGraph: {
+      title: t(loc, "compare_shipping_rates"),
+      description: t(loc, "hero_subtitle", { count: "109" }),
+      type: "website",
+    },
+  };
+}
 
 export default async function HomePage({
   params,
@@ -139,6 +162,50 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            {t(loc, "how_it_works")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                {loc === "ru" ? "Выберите маршрут" : "Choose your route"}
+              </h3>
+              <p className="text-sm text-gray-600">
+                {loc === "ru"
+                  ? "Укажите страну отправления и назначения. Мы поддерживаем 213 стран и территорий."
+                  : "Select your origin and destination countries. We support 213 countries and territories."}
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                {loc === "ru" ? "Сравните тарифы" : "Compare rates"}
+              </h3>
+              <p className="text-sm text-gray-600">
+                {loc === "ru"
+                  ? "Увидьте цены от 109+ перевозчиков включая DHL, FedEx, UPS, EMS и почтовые службы."
+                  : "See prices from 109+ carriers including DHL, FedEx, UPS, EMS, and postal services."}
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                {loc === "ru" ? "Отправьте посылку" : "Ship your package"}
+              </h3>
+              <p className="text-sm text-gray-600">
+                {loc === "ru"
+                  ? "Выберите лучший вариант по цене и скорости, и оформите отправку через сайт перевозчика."
+                  : "Pick the best option by price and speed, then book directly through the carrier's website."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* All countries */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -156,6 +223,55 @@ export default async function HomePage({
           ))}
         </div>
       </section>
+
+      {/* Homepage FAQ */}
+      {(() => {
+        const faqs = loc === "ru" ? [
+          { q: "Как работает ShipWorldwide?", a: "ShipWorldwide сравнивает тарифы международной доставки от 109+ перевозчиков по всему миру. Выберите страну отправления и назначения, и мы покажем все доступные варианты с ценами, сроками и возможностью отслеживания." },
+          { q: "Это бесплатно?", a: "Да, сравнение тарифов на ShipWorldwide полностью бесплатно. Мы показываем ориентировочные цены на основе опубликованных тарифов перевозчиков." },
+          { q: "Какие перевозчики поддерживаются?", a: "Мы поддерживаем 109+ перевозчиков, включая DHL Express, FedEx, UPS, EMS, Почту России, CDEK, Aramex, SF Express, и десятки региональных и почтовых служб по всему миру." },
+          { q: "Насколько точны цены?", a: "Цены являются оценочными на основе опубликованных прайс-листов. Фактическая стоимость может отличаться в зависимости от габаритов посылки, топливных сборов, страховки и типа аккаунта у перевозчика." },
+          { q: "Нужно ли платить таможенные пошлины?", a: "Таможенные пошлины и налоги зависят от страны назначения, стоимости и типа товара. Мы показываем информацию о таможенных правилах для каждого направления, включая беспошлинные пороги и ставки НДС." },
+        ] : [
+          { q: "How does ShipWorldwide work?", a: "ShipWorldwide compares international shipping rates from 109+ carriers worldwide. Select your origin and destination countries, and we'll show all available options with prices, delivery times, and tracking availability." },
+          { q: "Is it free to use?", a: "Yes, comparing shipping rates on ShipWorldwide is completely free. We display estimated prices based on carriers' published tariffs." },
+          { q: "Which carriers are supported?", a: "We support 109+ carriers including DHL Express, FedEx, UPS, EMS, USPS, Royal Mail, Aramex, SF Express, and dozens of regional and postal services worldwide." },
+          { q: "How accurate are the prices?", a: "Prices are estimates based on published rate cards. Actual costs may vary depending on package dimensions, fuel surcharges, insurance, and your account type with the carrier." },
+          { q: "Do I need to pay customs duties?", a: "Customs duties and taxes depend on the destination country, declared value, and type of goods. We display customs information for each route, including duty-free thresholds and VAT rates." },
+        ];
+
+        return (
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              {loc === "ru" ? "Часто задаваемые вопросы" : "Frequently Asked Questions"}
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="bg-white border border-gray-200 rounded-lg">
+                  <summary className="p-4 font-medium text-gray-900 cursor-pointer hover:text-blue-600">
+                    {faq.q}
+                  </summary>
+                  <p className="px-4 pb-4 text-gray-600 text-sm">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: faqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.q,
+                    acceptedAnswer: { "@type": "Answer", text: faq.a },
+                  })),
+                }),
+              }}
+            />
+          </section>
+        );
+      })()}
     </div>
   );
 }

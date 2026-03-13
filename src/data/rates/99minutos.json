@@ -1,0 +1,22 @@
+{
+  "carrier_id": "99minutos",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["MX", "CO", "CL", "PE"], "countries_to": ["MX", "CO", "CL", "PE"] },
+    { "name": "Zone 1", "countries_from": ["MX", "CO", "CL", "PE"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["MX", "CO", "CL", "PE"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["MX", "CO", "CL", "PE"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "99minutos-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 15, 28] },
+      { "weight_kg": 1, "prices_by_zone": [4.5, 11, 20, 36] },
+      { "weight_kg": 2, "prices_by_zone": [6, 15, 28, 50] },
+      { "weight_kg": 3, "prices_by_zone": [8, 20, 36, 62] },
+      { "weight_kg": 5, "prices_by_zone": [11, 27, 48, 84] },
+      { "weight_kg": 10, "prices_by_zone": [18, 44, 78, 138] },
+      { "weight_kg": 15, "prices_by_zone": [24, 58, 105, 185] },
+      { "weight_kg": 20, "prices_by_zone": [30, 72, 130, 228] },
+      { "weight_kg": 25, "prices_by_zone": [36, 85, 155, 272] }
+    ]
+  }
+}

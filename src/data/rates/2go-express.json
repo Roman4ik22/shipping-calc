@@ -1,0 +1,29 @@
+{
+  "carrier_id": "2go-express",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["PH"], "countries_to": ["PH"] },
+    { "name": "Zone 1", "countries_from": ["PH"], "countries_to": ["SG","MY","ID","TH","VN","HK","TW"] },
+    { "name": "Zone 2", "countries_from": ["PH"], "countries_to": ["JP","KR","CN","AU","NZ","IN"] },
+    { "name": "Zone 3", "countries_from": ["PH"], "countries_to": ["US","CA","GB","DE","AE","SA","FR"] }
+  ],
+  "rates": {
+    "2go-express-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [4, 14, 26, 38] },
+      { "weight_kg": 1, "prices_by_zone": [7, 20, 38, 56] },
+      { "weight_kg": 2, "prices_by_zone": [11, 30, 56, 84] },
+      { "weight_kg": 5, "prices_by_zone": [20, 55, 105, 155] },
+      { "weight_kg": 10, "prices_by_zone": [35, 95, 185, 275] },
+      { "weight_kg": 20, "prices_by_zone": [60, 165, 320, 480] },
+      { "weight_kg": 30, "prices_by_zone": [82, 230, 445, 665] }
+    ],
+    "2go-express-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 10, 20, 30] },
+      { "weight_kg": 1, "prices_by_zone": [5, 15, 28, 42] },
+      { "weight_kg": 2, "prices_by_zone": [8, 22, 42, 62] },
+      { "weight_kg": 5, "prices_by_zone": [15, 40, 78, 115] },
+      { "weight_kg": 10, "prices_by_zone": [25, 70, 138, 205] },
+      { "weight_kg": 20, "prices_by_zone": [42, 120, 235, 355] },
+      { "weight_kg": 30, "prices_by_zone": [58, 168, 330, 495] }
+    ]
+  }
+}

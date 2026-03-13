@@ -1,0 +1,20 @@
+{
+  "carrier_id": "tiki-titipan-kilat",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["ID"], "countries_to": ["ID"] },
+    { "name": "Zone 1", "countries_from": ["ID"], "countries_to": ["MY","SG","TH","PH","VN","BN","TL"] },
+    { "name": "Zone 2", "countries_from": ["ID"], "countries_to": ["CN","JP","KR","HK","TW","IN","AU","NZ"] },
+    { "name": "Zone 3", "countries_from": ["ID"], "countries_to": ["US","CA","GB","DE","FR","AE","SA"] }
+  ],
+  "rates": {
+    "tiki-titipan-kilat-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 10, 20, 30] },
+      { "weight_kg": 1, "prices_by_zone": [5, 15, 30, 45] },
+      { "weight_kg": 2, "prices_by_zone": [8, 22, 44, 66] },
+      { "weight_kg": 5, "prices_by_zone": [15, 42, 82, 125] },
+      { "weight_kg": 10, "prices_by_zone": [25, 72, 145, 220] },
+      { "weight_kg": 20, "prices_by_zone": [42, 125, 250, 385] },
+      { "weight_kg": 30, "prices_by_zone": [58, 172, 350, 540] }
+    ]
+  }
+}

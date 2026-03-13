@@ -1,0 +1,35 @@
+{
+  "carrier_id": "chilexpress",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["CL"], "countries_to": ["CL"] },
+    { "name": "Zone 1", "countries_from": ["CL"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["CL"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["CL"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "chilexpress-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5.00, 16.00, 30.00, 52.00] },
+      { "weight_kg": 1, "prices_by_zone": [6.50, 20.00, 38.00, 65.00] },
+      { "weight_kg": 2, "prices_by_zone": [9.00, 26.00, 50.00, 85.00] },
+      { "weight_kg": 3, "prices_by_zone": [11.50, 32.00, 60.00, 102.00] },
+      { "weight_kg": 5, "prices_by_zone": [15.50, 42.00, 80.00, 136.00] },
+      { "weight_kg": 10, "prices_by_zone": [25.00, 66.00, 126.00, 215.00] },
+      { "weight_kg": 15, "prices_by_zone": [34.00, 88.00, 170.00, 290.00] },
+      { "weight_kg": 20, "prices_by_zone": [42.00, 108.00, 212.00, 360.00] },
+      { "weight_kg": 30, "prices_by_zone": [58.00, 150.00, 292.00, 498.00] },
+      { "weight_kg": 50, "prices_by_zone": [88.00, 228.00, 448.00, 762.00] }
+    ],
+    "chilexpress-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3.20, 11.00, 22.00, 40.00] },
+      { "weight_kg": 1, "prices_by_zone": [4.50, 14.50, 28.00, 50.00] },
+      { "weight_kg": 2, "prices_by_zone": [6.20, 19.00, 37.00, 65.00] },
+      { "weight_kg": 3, "prices_by_zone": [8.00, 23.00, 45.00, 78.00] },
+      { "weight_kg": 5, "prices_by_zone": [11.00, 32.00, 62.00, 106.00] },
+      { "weight_kg": 10, "prices_by_zone": [18.00, 50.00, 96.00, 166.00] },
+      { "weight_kg": 15, "prices_by_zone": [25.00, 66.00, 130.00, 224.00] },
+      { "weight_kg": 20, "prices_by_zone": [32.00, 82.00, 162.00, 278.00] },
+      { "weight_kg": 30, "prices_by_zone": [44.00, 115.00, 225.00, 386.00] },
+      { "weight_kg": 50, "prices_by_zone": [66.00, 175.00, 342.00, 588.00] }
+    ]
+  }
+}

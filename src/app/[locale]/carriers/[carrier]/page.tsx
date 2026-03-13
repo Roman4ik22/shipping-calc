@@ -24,15 +24,21 @@ export async function generateMetadata({
   const carrier = getCarrierById(carrierId);
   if (!carrier) return { title: "Not Found" };
 
+  const desc = getCarrierDescription(carrier, locale as Locale);
   return {
     title: `${carrier.name} — ${t(locale as Locale, "shipping")}`,
-    description: getCarrierDescription(carrier, locale as Locale),
+    description: desc,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
       languages: {
         en: `/en/carriers/${carrierId}`,
         ru: `/ru/carriers/${carrierId}`,
       },
+    },
+    openGraph: {
+      title: `${carrier.name} — International Shipping Rates`,
+      description: desc,
+      type: "website",
     },
   };
 }

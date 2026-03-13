@@ -1,0 +1,24 @@
+{
+  "carrier_id": "skynet-worldwide-express",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["AE", "ZA", "MY", "PK"], "countries_to": ["AE", "ZA", "MY", "PK"] },
+    { "name": "Zone 1", "countries_from": ["AE", "ZA", "MY", "PK"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["AE", "ZA", "MY", "PK"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["AE", "ZA", "MY", "PK"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "skynet-worldwide-express-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [9, 18, 30, 48] },
+      { "weight_kg": 1, "prices_by_zone": [12, 24, 40, 62] },
+      { "weight_kg": 2, "prices_by_zone": [17, 33, 54, 84] },
+      { "weight_kg": 3, "prices_by_zone": [22, 42, 68, 105] },
+      { "weight_kg": 5, "prices_by_zone": [30, 56, 92, 142] },
+      { "weight_kg": 10, "prices_by_zone": [48, 90, 150, 235] },
+      { "weight_kg": 15, "prices_by_zone": [64, 120, 200, 315] },
+      { "weight_kg": 20, "prices_by_zone": [78, 148, 245, 388] },
+      { "weight_kg": 30, "prices_by_zone": [105, 200, 335, 530] },
+      { "weight_kg": 50, "prices_by_zone": [158, 300, 500, 795] },
+      { "weight_kg": 70, "prices_by_zone": [208, 395, 660, 1050] }
+    ]
+  }
+}

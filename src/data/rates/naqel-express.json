@@ -1,0 +1,24 @@
+{
+  "carrier_id": "naqel-express",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["SA"], "countries_to": ["SA"] },
+    { "name": "Zone 1", "countries_from": ["SA"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["SA"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["SA"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "naqel-express-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [6, 12, 20, 32] },
+      { "weight_kg": 1, "prices_by_zone": [8, 16, 26, 42] },
+      { "weight_kg": 2, "prices_by_zone": [12, 22, 36, 56] },
+      { "weight_kg": 3, "prices_by_zone": [16, 28, 45, 70] },
+      { "weight_kg": 5, "prices_by_zone": [22, 38, 60, 95] },
+      { "weight_kg": 10, "prices_by_zone": [36, 62, 100, 158] },
+      { "weight_kg": 15, "prices_by_zone": [48, 82, 135, 210] },
+      { "weight_kg": 20, "prices_by_zone": [58, 100, 165, 260] },
+      { "weight_kg": 30, "prices_by_zone": [78, 135, 225, 355] },
+      { "weight_kg": 50, "prices_by_zone": [115, 200, 335, 530] },
+      { "weight_kg": 70, "prices_by_zone": [150, 265, 440, 700] }
+    ]
+  }
+}

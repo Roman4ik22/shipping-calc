@@ -1,0 +1,23 @@
+{
+  "carrier_id": "fetchr",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["AE", "SA"], "countries_to": ["AE", "SA"] },
+    { "name": "Zone 1", "countries_from": ["AE", "SA"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["AE", "SA"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["AE", "SA"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "fetchr-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [8, 14, 22, 35] },
+      { "weight_kg": 1, "prices_by_zone": [10, 18, 28, 45] },
+      { "weight_kg": 2, "prices_by_zone": [14, 24, 38, 60] },
+      { "weight_kg": 3, "prices_by_zone": [18, 30, 48, 75] },
+      { "weight_kg": 5, "prices_by_zone": [24, 40, 65, 100] },
+      { "weight_kg": 10, "prices_by_zone": [38, 65, 105, 165] },
+      { "weight_kg": 15, "prices_by_zone": [50, 85, 140, 220] },
+      { "weight_kg": 20, "prices_by_zone": [60, 105, 170, 270] },
+      { "weight_kg": 30, "prices_by_zone": [80, 140, 230, 365] },
+      { "weight_kg": 50, "prices_by_zone": [120, 210, 345, 550] }
+    ]
+  }
+}

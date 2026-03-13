@@ -1,0 +1,20 @@
+{
+  "carrier_id": "xend-business-solutions",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["PH"], "countries_to": ["PH"] },
+    { "name": "Zone 1", "countries_from": ["PH"], "countries_to": ["SG","MY","ID","TH","VN","HK","TW"] },
+    { "name": "Zone 2", "countries_from": ["PH"], "countries_to": ["JP","KR","CN","AU","IN","NZ"] },
+    { "name": "Zone 3", "countries_from": ["PH"], "countries_to": ["US","CA","GB","DE","FR","AE","SA"] }
+  ],
+  "rates": {
+    "xend-business-solutions-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 9, 18, 28] },
+      { "weight_kg": 1, "prices_by_zone": [4, 14, 26, 40] },
+      { "weight_kg": 2, "prices_by_zone": [6, 20, 38, 58] },
+      { "weight_kg": 5, "prices_by_zone": [12, 38, 72, 108] },
+      { "weight_kg": 10, "prices_by_zone": [20, 65, 125, 190] },
+      { "weight_kg": 20, "prices_by_zone": [35, 112, 218, 330] },
+      { "weight_kg": 30, "prices_by_zone": [48, 155, 305, 460] }
+    ]
+  }
+}

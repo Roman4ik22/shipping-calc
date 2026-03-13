@@ -1,0 +1,23 @@
+{
+  "carrier_id": "imile",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["AE", "SA", "KW", "BH", "OM", "QA"], "countries_to": ["AE", "SA", "KW", "BH", "OM", "QA"] },
+    { "name": "Zone 1", "countries_from": ["AE", "SA", "KW", "BH", "OM", "QA"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["AE", "SA", "KW", "BH", "OM", "QA"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["AE", "SA", "KW", "BH", "OM", "QA"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "imile-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 10, 18, 30] },
+      { "weight_kg": 1, "prices_by_zone": [7, 14, 24, 40] },
+      { "weight_kg": 2, "prices_by_zone": [10, 20, 34, 55] },
+      { "weight_kg": 3, "prices_by_zone": [13, 26, 44, 70] },
+      { "weight_kg": 5, "prices_by_zone": [18, 35, 58, 95] },
+      { "weight_kg": 10, "prices_by_zone": [30, 58, 96, 155] },
+      { "weight_kg": 15, "prices_by_zone": [40, 78, 128, 208] },
+      { "weight_kg": 20, "prices_by_zone": [48, 95, 158, 255] },
+      { "weight_kg": 30, "prices_by_zone": [65, 128, 212, 345] },
+      { "weight_kg": 50, "prices_by_zone": [98, 192, 318, 520] }
+    ]
+  }
+}

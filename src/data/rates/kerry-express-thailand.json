@@ -1,0 +1,20 @@
+{
+  "carrier_id": "kerry-express-thailand",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["TH"], "countries_to": ["TH"] },
+    { "name": "Zone 1", "countries_from": ["TH"], "countries_to": ["MY","SG","VN","KH","LA","MM","ID","PH","BN"] },
+    { "name": "Zone 2", "countries_from": ["TH"], "countries_to": ["CN","HK","TW","JP","KR","IN","AU","NZ"] },
+    { "name": "Zone 3", "countries_from": ["TH"], "countries_to": ["US","CA","GB","DE","FR","AE","SA","IT"] }
+  ],
+  "rates": {
+    "kerry-express-thailand-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 10, 20, 30] },
+      { "weight_kg": 1, "prices_by_zone": [5, 16, 30, 46] },
+      { "weight_kg": 2, "prices_by_zone": [8, 24, 45, 68] },
+      { "weight_kg": 5, "prices_by_zone": [14, 42, 82, 125] },
+      { "weight_kg": 10, "prices_by_zone": [24, 72, 142, 218] },
+      { "weight_kg": 20, "prices_by_zone": [40, 124, 248, 378] },
+      { "weight_kg": 30, "prices_by_zone": [55, 172, 345, 525] }
+    ]
+  }
+}

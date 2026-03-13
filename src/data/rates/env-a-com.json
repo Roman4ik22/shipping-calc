@@ -1,0 +1,37 @@
+{
+  "carrier_id": "env-a-com",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["MX", "CO", "CL", "PE", "AR", "BR", "EC"], "countries_to": ["MX", "CO", "CL", "PE", "AR", "BR", "EC"] },
+    { "name": "Zone 1", "countries_from": ["MX", "CO", "CL", "PE", "AR", "BR", "EC"], "countries_to": ["NEIGHBORS"] },
+    { "name": "Zone 2", "countries_from": ["MX", "CO", "CL", "PE", "AR", "BR", "EC"], "countries_to": ["REGIONAL"] },
+    { "name": "Zone 3", "countries_from": ["MX", "CO", "CL", "PE", "AR", "BR", "EC"], "countries_to": ["INTERCONTINENTAL"] }
+  ],
+  "rates": {
+    "env-a-com-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22, 38] },
+      { "weight_kg": 1, "prices_by_zone": [7, 16, 30, 50] },
+      { "weight_kg": 2, "prices_by_zone": [10, 22, 42, 68] },
+      { "weight_kg": 3, "prices_by_zone": [14, 30, 54, 88] },
+      { "weight_kg": 5, "prices_by_zone": [19, 40, 72, 118] },
+      { "weight_kg": 10, "prices_by_zone": [32, 66, 120, 195] },
+      { "weight_kg": 15, "prices_by_zone": [42, 88, 160, 262] },
+      { "weight_kg": 20, "prices_by_zone": [52, 108, 198, 322] },
+      { "weight_kg": 30, "prices_by_zone": [70, 148, 268, 438] },
+      { "weight_kg": 50, "prices_by_zone": [105, 222, 402, 658] },
+      { "weight_kg": 70, "prices_by_zone": [138, 292, 530, 870] }
+    ],
+    "env-a-com-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3.5, 9, 17, 30] },
+      { "weight_kg": 1, "prices_by_zone": [5, 12, 22, 38] },
+      { "weight_kg": 2, "prices_by_zone": [7, 16, 32, 52] },
+      { "weight_kg": 3, "prices_by_zone": [10, 22, 40, 66] },
+      { "weight_kg": 5, "prices_by_zone": [14, 30, 54, 90] },
+      { "weight_kg": 10, "prices_by_zone": [23, 50, 90, 150] },
+      { "weight_kg": 15, "prices_by_zone": [30, 66, 120, 200] },
+      { "weight_kg": 20, "prices_by_zone": [38, 82, 148, 248] },
+      { "weight_kg": 30, "prices_by_zone": [50, 110, 200, 335] },
+      { "weight_kg": 50, "prices_by_zone": [76, 168, 302, 505] },
+      { "weight_kg": 70, "prices_by_zone": [100, 220, 400, 668] }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "carrier_id": "hermes-russia",
+  "zones": [
+    { "name": "Zone 0", "countries_from": ["RU"], "countries_to": ["RU"] },
+    { "name": "Zone 1", "countries_from": ["RU"], "countries_to": ["BY","KZ","AM","KG","UZ","TJ","GE","AZ","MD"] },
+    { "name": "Zone 2", "countries_from": ["RU"], "countries_to": ["CN","TR","AE","IN","KR","JP","TH"] },
+    { "name": "Zone 3", "countries_from": ["RU"], "countries_to": ["DE","FR","GB","US","CA","IT","ES"] }
+  ],
+  "rates": {
+    "hermes-russia-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 7, 16, 26] },
+      { "weight_kg": 1, "prices_by_zone": [4, 10, 24, 38] },
+      { "weight_kg": 2, "prices_by_zone": [6, 15, 35, 55] },
+      { "weight_kg": 5, "prices_by_zone": [11, 28, 65, 100] },
+      { "weight_kg": 10, "prices_by_zone": [18, 48, 112, 175] },
+      { "weight_kg": 20, "prices_by_zone": [30, 82, 195, 305] },
+      { "weight_kg": 25, "prices_by_zone": [38, 100, 240, 375] }
+    ]
+  }
+}
