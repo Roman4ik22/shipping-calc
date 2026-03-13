@@ -1,0 +1,31 @@
+{
+  "carrier_id": "yanwen",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Yanwen rates from China. Budget e-commerce shipping specialist, very affordable for small parcels.",
+  "zones": [
+    {"zone": 1, "description": "Asia", "countries_from": ["CN"], "countries_to": ["KR", "JP", "SG", "TH", "MY", "VN", "PH", "ID", "HK", "TW"]},
+    {"zone": 2, "description": "Europe", "countries_from": ["CN"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "PL", "BE", "AT", "CH", "CZ", "DK", "FI"]},
+    {"zone": 3, "description": "Americas & Oceania", "countries_from": ["CN"], "countries_to": ["US", "CA", "MX", "BR", "AU", "NZ"]},
+    {"zone": 4, "description": "Middle East, Africa & Rest of World", "countries_from": ["CN"], "countries_to": ["AE", "SA", "TR", "IL", "IN", "RU", "ZA", "NG", "KE", "EG"]}
+  ],
+  "rates": {
+    "yanwen-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [3, 4, 5, 5]},
+      {"weight_kg": 1, "prices_by_zone": [5, 6, 7, 8]},
+      {"weight_kg": 2, "prices_by_zone": [7, 9, 11, 12]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null]}
+    ],
+    "yanwen-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [5, 7, 9, 10]},
+      {"weight_kg": 1, "prices_by_zone": [8, 11, 14, 15]},
+      {"weight_kg": 2, "prices_by_zone": [12, 16, 20, 22]},
+      {"weight_kg": 5, "prices_by_zone": [22, 30, 38, 42]},
+      {"weight_kg": 10, "prices_by_zone": [38, 52, 66, 74]},
+      {"weight_kg": 20, "prices_by_zone": [68, 95, 120, 135]},
+      {"weight_kg": 30, "prices_by_zone": [96, 135, 170, 192]}
+    ]
+  }
+}

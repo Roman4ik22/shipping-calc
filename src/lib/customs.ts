@@ -1,0 +1,71 @@
+// Customs duty / import tax data by country
+// De minimis = value threshold below which no duty is charged
+
+interface CustomsInfo {
+  currency: string;
+  de_minimis_usd: number;
+  vat_rate: number; // percent
+  avg_duty_rate: number; // percent, average for general goods
+  notes_en?: string;
+  notes_ru?: string;
+}
+
+const customsData: Record<string, CustomsInfo> = {
+  US: { currency: "USD", de_minimis_usd: 800, vat_rate: 0, avg_duty_rate: 3.4, notes_en: "No federal sales tax; state taxes may apply", notes_ru: "Нет федерального налога; могут применяться налоги штата" },
+  GB: { currency: "GBP", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2, notes_en: "VAT applies to all imports since Jan 2021", notes_ru: "НДС применяется ко всему импорту с января 2021" },
+  DE: { currency: "EUR", de_minimis_usd: 0, vat_rate: 19, avg_duty_rate: 4.2, notes_en: "EU customs union; EORI number may be required", notes_ru: "Таможенный союз ЕС; может потребоваться номер EORI" },
+  FR: { currency: "EUR", de_minimis_usd: 0, vat_rate: 20, avg_duty_rate: 4.2, notes_en: "EU customs union", notes_ru: "Таможенный союз ЕС" },
+  IT: { currency: "EUR", de_minimis_usd: 0, vat_rate: 22, avg_duty_rate: 4.2 },
+  ES: { currency: "EUR", de_minimis_usd: 0, vat_rate: 21, avg_duty_rate: 4.2 },
+  NL: { currency: "EUR", de_minimis_usd: 0, vat_rate: 21, avg_duty_rate: 4.2 },
+  CN: { currency: "CNY", de_minimis_usd: 7, vat_rate: 13, avg_duty_rate: 7.5, notes_en: "Strict customs; some items require permits", notes_ru: "Строгая таможня; на некоторые товары нужны разрешения" },
+  JP: { currency: "JPY", de_minimis_usd: 130, vat_rate: 10, avg_duty_rate: 4.5 },
+  KR: { currency: "KRW", de_minimis_usd: 150, vat_rate: 10, avg_duty_rate: 8 },
+  AU: { currency: "AUD", de_minimis_usd: 700, vat_rate: 10, avg_duty_rate: 5 },
+  CA: { currency: "CAD", de_minimis_usd: 20, vat_rate: 5, avg_duty_rate: 3.5, notes_en: "GST 5% + provincial taxes vary", notes_ru: "GST 5% + провинциальные налоги различаются" },
+  RU: { currency: "RUB", de_minimis_usd: 200, vat_rate: 20, avg_duty_rate: 15, notes_en: "Duty on value above €200 threshold", notes_ru: "Пошлина на стоимость свыше порога €200" },
+  IN: { currency: "INR", de_minimis_usd: 0, vat_rate: 18, avg_duty_rate: 10, notes_en: "GST applies; high duty on electronics", notes_ru: "Применяется GST; высокие пошлины на электронику" },
+  AE: { currency: "AED", de_minimis_usd: 70, vat_rate: 5, avg_duty_rate: 5 },
+  SG: { currency: "SGD", de_minimis_usd: 300, vat_rate: 9, avg_duty_rate: 0, notes_en: "Most goods duty-free; GST applies", notes_ru: "Большинство товаров без пошлины; GST применяется" },
+  TH: { currency: "THB", de_minimis_usd: 45, vat_rate: 7, avg_duty_rate: 8 },
+  MY: { currency: "MYR", de_minimis_usd: 120, vat_rate: 6, avg_duty_rate: 6 },
+  BR: { currency: "BRL", de_minimis_usd: 50, vat_rate: 17, avg_duty_rate: 60, notes_en: "Very high import duties; simplified tax of 60% for most goods", notes_ru: "Очень высокие пошлины; упрощённый налог 60% для большинства товаров" },
+  MX: { currency: "MXN", de_minimis_usd: 50, vat_rate: 16, avg_duty_rate: 15 },
+  TR: { currency: "TRY", de_minimis_usd: 22, vat_rate: 20, avg_duty_rate: 10 },
+  SA: { currency: "SAR", de_minimis_usd: 267, vat_rate: 15, avg_duty_rate: 5 },
+  PH: { currency: "PHP", de_minimis_usd: 200, vat_rate: 12, avg_duty_rate: 10 },
+  ID: { currency: "IDR", de_minimis_usd: 3, vat_rate: 11, avg_duty_rate: 7.5, notes_en: "Very low de minimis; duty applies to almost all imports", notes_ru: "Очень низкий порог; пошлина на почти весь импорт" },
+  VN: { currency: "VND", de_minimis_usd: 45, vat_rate: 10, avg_duty_rate: 10 },
+  PL: { currency: "PLN", de_minimis_usd: 0, vat_rate: 23, avg_duty_rate: 4.2 },
+  SE: { currency: "SEK", de_minimis_usd: 0, vat_rate: 25, avg_duty_rate: 4.2 },
+  NO: { currency: "NOK", de_minimis_usd: 0, vat_rate: 25, avg_duty_rate: 3, notes_en: "Not EU; separate customs rules", notes_ru: "Не ЕС; отдельные таможенные правила" },
+  CH: { currency: "CHF", de_minimis_usd: 5, vat_rate: 8.1, avg_duty_rate: 2 },
+  NZ: { currency: "NZD", de_minimis_usd: 700, vat_rate: 15, avg_duty_rate: 5 },
+  IL: { currency: "ILS", de_minimis_usd: 75, vat_rate: 17, avg_duty_rate: 8 },
+  ZA: { currency: "ZAR", de_minimis_usd: 30, vat_rate: 15, avg_duty_rate: 10 },
+  NG: { currency: "NGN", de_minimis_usd: 50, vat_rate: 7.5, avg_duty_rate: 20 },
+  EG: { currency: "EGP", de_minimis_usd: 0, vat_rate: 14, avg_duty_rate: 20 },
+  KE: { currency: "KES", de_minimis_usd: 50, vat_rate: 16, avg_duty_rate: 25 },
+  CL: { currency: "CLP", de_minimis_usd: 30, vat_rate: 19, avg_duty_rate: 6 },
+  CO: { currency: "COP", de_minimis_usd: 200, vat_rate: 19, avg_duty_rate: 10 },
+  AR: { currency: "ARS", de_minimis_usd: 50, vat_rate: 21, avg_duty_rate: 35, notes_en: "Very high import taxes and restrictions", notes_ru: "Очень высокие налоги на импорт и ограничения" },
+  PE: { currency: "PEN", de_minimis_usd: 200, vat_rate: 18, avg_duty_rate: 6 },
+  UA: { currency: "UAH", de_minimis_usd: 150, vat_rate: 20, avg_duty_rate: 10 },
+  KZ: { currency: "KZT", de_minimis_usd: 200, vat_rate: 12, avg_duty_rate: 15 },
+};
+
+// Default for countries not in the list
+const defaultCustoms: CustomsInfo = {
+  currency: "USD",
+  de_minimis_usd: 50,
+  vat_rate: 15,
+  avg_duty_rate: 10,
+};
+
+export function getCustomsInfo(countryCode: string): CustomsInfo {
+  return customsData[countryCode] || defaultCustoms;
+}
+
+export function hasCustomsData(countryCode: string): boolean {
+  return countryCode in customsData;
+}

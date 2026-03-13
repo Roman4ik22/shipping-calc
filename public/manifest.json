@@ -1,0 +1,16 @@
+{
+  "name": "ShipWorldwide — Compare Shipping Rates",
+  "short_name": "ShipWorldwide",
+  "description": "Compare international shipping rates from all major carriers worldwide",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

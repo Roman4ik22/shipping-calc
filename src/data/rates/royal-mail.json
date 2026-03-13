@@ -1,0 +1,32 @@
+{
+  "carrier_id": "royal-mail",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Royal Mail international rates from UK origin. Reliable postal service with tracked and economy options.",
+  "zones": [
+    {"zone": 1, "description": "Europe EU", "countries_from": ["GB"], "countries_to": ["DE", "FR", "IT", "ES", "NL", "BE", "AT", "PT", "IE", "DK", "SE", "FI", "PL", "CZ", "GR"]},
+    {"zone": 2, "description": "Europe Non-EU & Turkey", "countries_from": ["GB"], "countries_to": ["CH", "NO", "TR", "UA", "RS", "BA", "HR", "RO", "BG", "IS"]},
+    {"zone": 3, "description": "North America & Oceania", "countries_from": ["GB"], "countries_to": ["US", "CA", "AU", "NZ"]},
+    {"zone": 4, "description": "Asia & Middle East", "countries_from": ["GB"], "countries_to": ["JP", "KR", "CN", "HK", "SG", "TH", "MY", "IN", "AE", "SA", "IL"]},
+    {"zone": 5, "description": "Rest of World (S. America, Africa)", "countries_from": ["GB"], "countries_to": ["BR", "AR", "CL", "MX", "ZA", "NG", "KE", "EG", "GH"]}
+  ],
+  "rates": {
+    "royal-mail-international-tracked": [
+      {"weight_kg": 0.5, "prices_by_zone": [12, 14, 18, 20, 22]},
+      {"weight_kg": 1, "prices_by_zone": [16, 19, 24, 26, 30]},
+      {"weight_kg": 2, "prices_by_zone": [22, 26, 32, 36, 42]},
+      {"weight_kg": 5, "prices_by_zone": [35, 42, 52, 58, 68]},
+      {"weight_kg": 10, "prices_by_zone": [55, 68, 85, 95, 112]},
+      {"weight_kg": 20, "prices_by_zone": [92, 115, 148, 165, 195]},
+      {"weight_kg": 30, "prices_by_zone": [128, 160, 208, 232, 275]}
+    ],
+    "royal-mail-international-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [7, 9, 11, 12, 14]},
+      {"weight_kg": 1, "prices_by_zone": [9, 12, 15, 17, 19]},
+      {"weight_kg": 2, "prices_by_zone": [13, 17, 21, 24, 28]},
+      {"weight_kg": 5, "prices_by_zone": [22, 28, 36, 40, 48]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "carrier_id": "china-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated China Post rates from China. Very affordable, slower delivery. Registered Air Mail limited to 2kg.",
+  "zones": [
+    {"zone": 1, "description": "East & Southeast Asia", "countries_from": ["CN"], "countries_to": ["HK", "MO", "TW", "KR", "JP", "SG", "TH", "MY", "VN", "PH", "ID"]},
+    {"zone": 2, "description": "Europe & Oceania", "countries_from": ["CN"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "PL", "AU", "NZ", "CH", "AT", "BE"]},
+    {"zone": 3, "description": "Americas", "countries_from": ["CN"], "countries_to": ["US", "CA", "MX", "BR", "AR", "CL", "CO"]},
+    {"zone": 4, "description": "Middle East, Africa & Rest of World", "countries_from": ["CN"], "countries_to": ["AE", "SA", "TR", "IN", "PK", "ZA", "NG", "KE", "EG", "RU"]}
+  ],
+  "rates": {
+    "china-post-ems": [
+      {"weight_kg": 0.5, "prices_by_zone": [10, 14, 16, 18]},
+      {"weight_kg": 1, "prices_by_zone": [14, 19, 22, 25]},
+      {"weight_kg": 2, "prices_by_zone": [20, 28, 32, 36]},
+      {"weight_kg": 5, "prices_by_zone": [35, 48, 55, 62]},
+      {"weight_kg": 10, "prices_by_zone": [58, 82, 95, 108]},
+      {"weight_kg": 20, "prices_by_zone": [100, 145, 168, 192]},
+      {"weight_kg": 30, "prices_by_zone": [140, 205, 238, 272]}
+    ],
+    "china-post-registered": [
+      {"weight_kg": 0.5, "prices_by_zone": [3, 4, 5, 5]},
+      {"weight_kg": 1, "prices_by_zone": [5, 7, 8, 9]},
+      {"weight_kg": 2, "prices_by_zone": [8, 11, 13, 14]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null]}
+    ]
+  }
+}

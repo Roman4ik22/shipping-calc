@@ -1,0 +1,2822 @@
+[
+  {
+    "id": "dhl-express",
+    "name": "DHL Express",
+    "type": "international",
+    "logo": "/logos/dhl.svg",
+    "website": "https://www.dhl.com",
+    "tracking_url": "https://www.dhl.com/en/express/tracking.html?AWB={tracking}",
+    "description_en": "World's leading international express delivery company. Operates in 220+ countries.",
+    "description_ru": "Крупнейшая международная экспресс-служба доставки. Работает в 220+ странах.",
+    "services": [
+      {
+        "id": "dhl-express-worldwide",
+        "name": "Express Worldwide",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "dhl-express-1200",
+        "name": "Express 12:00",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "dhl-express-0900",
+        "name": "Express 9:00",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "dhl-economy-select",
+        "name": "Economy Select",
+        "speed_days_min": 4,
+        "speed_days_max": 8,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "fedex",
+    "name": "FedEx",
+    "type": "international",
+    "logo": "/logos/fedex.svg",
+    "website": "https://www.fedex.com",
+    "tracking_url": "https://www.fedex.com/fedextrack/?trknbr={tracking}",
+    "description_en": "Global courier delivery services. One of the largest express transportation companies.",
+    "description_ru": "Глобальная курьерская служба доставки. Одна из крупнейших экспресс-транспортных компаний.",
+    "services": [
+      {
+        "id": "fedex-international-priority",
+        "name": "International Priority",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 68,
+        "tracking": true
+      },
+      {
+        "id": "fedex-international-economy",
+        "name": "International Economy",
+        "speed_days_min": 4,
+        "speed_days_max": 6,
+        "max_weight_kg": 68,
+        "tracking": true
+      },
+      {
+        "id": "fedex-international-first",
+        "name": "International First",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 68,
+        "tracking": true
+      },
+      {
+        "id": "fedex-international-connect-plus",
+        "name": "International Connect Plus",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 68,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ups",
+    "name": "UPS",
+    "type": "international",
+    "logo": "/logos/ups.svg",
+    "website": "https://www.ups.com",
+    "tracking_url": "https://www.ups.com/track?tracknum={tracking}",
+    "description_en": "United Parcel Service — one of the world's largest package delivery companies.",
+    "description_ru": "United Parcel Service — одна из крупнейших в мире компаний по доставке посылок.",
+    "services": [
+      {
+        "id": "ups-express-saver",
+        "name": "Express Saver",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "ups-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "ups-express-plus",
+        "name": "Express Plus",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "ups-expedited",
+        "name": "Expedited",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "ups-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ems",
+    "name": "EMS",
+    "type": "postal",
+    "logo": "/logos/ems.svg",
+    "website": "https://www.ems.post",
+    "tracking_url": "https://www.ems.post/en/global-network/tracking?q={tracking}",
+    "description_en": "Express Mail Service — premium postal service available in 180+ countries through national postal operators.",
+    "description_ru": "Express Mail Service — премиальная почтовая служба, доступная в 180+ странах через национальные почтовые операторы.",
+    "services": [
+      {
+        "id": "ems-express",
+        "name": "EMS Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "usps",
+    "name": "USPS",
+    "type": "postal",
+    "logo": "/logos/usps.svg",
+    "website": "https://www.usps.com",
+    "tracking_url": "https://tools.usps.com/go/TrackConfirmAction?tLabels={tracking}",
+    "description_en": "United States Postal Service — the official postal service of the United States.",
+    "description_ru": "Почтовая служба США — официальная почтовая служба Соединённых Штатов.",
+    "services": [
+      {
+        "id": "usps-priority-international",
+        "name": "Priority Mail International",
+        "speed_days_min": 6,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "usps-priority-express-international",
+        "name": "Priority Mail Express International",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "usps-first-class-international",
+        "name": "First-Class Mail International",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "royal-mail",
+    "name": "Royal Mail",
+    "type": "postal",
+    "logo": "/logos/royal-mail.svg",
+    "website": "https://www.royalmail.com",
+    "tracking_url": "https://www.royalmail.com/track-your-item?trackNumber={tracking}",
+    "description_en": "UK's national postal service with international delivery to 200+ countries.",
+    "description_ru": "Национальная почтовая служба Великобритании с доставкой в 200+ стран.",
+    "services": [
+      {
+        "id": "royal-mail-international-tracked",
+        "name": "International Tracked",
+        "speed_days_min": 5,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "royal-mail-international-standard",
+        "name": "International Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 5,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "deutsche-post",
+    "name": "Deutsche Post / DHL Paket",
+    "type": "postal",
+    "logo": "/logos/deutsche-post.svg",
+    "website": "https://www.deutschepost.de",
+    "tracking_url": "https://www.deutschepost.de/sendung/simpleQuery.html?form.sendungsnummer={tracking}",
+    "description_en": "Germany's national postal service. Offers affordable international parcel shipping.",
+    "description_ru": "Национальная почтовая служба Германии. Предлагает доступную международную доставку посылок.",
+    "services": [
+      {
+        "id": "dp-international-packet",
+        "name": "DHL Packet International",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "dp-international-parcel",
+        "name": "DHL Parcel International",
+        "speed_days_min": 7,
+        "speed_days_max": 20,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "japan-post",
+    "name": "Japan Post",
+    "type": "postal",
+    "logo": "/logos/japan-post.svg",
+    "website": "https://www.post.japanpost.jp/english/",
+    "tracking_url": "https://trackings.post.japanpost.jp/services/srv/search/?requestNo1={tracking}",
+    "description_en": "Japan's national postal service with worldwide delivery options.",
+    "description_ru": "Национальная почтовая служба Японии с доставкой по всему миру.",
+    "services": [
+      {
+        "id": "jp-ems",
+        "name": "EMS",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "jp-airmail",
+        "name": "Airmail Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "jp-sal",
+        "name": "SAL Parcel",
+        "speed_days_min": 10,
+        "speed_days_max": 21,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "jp-surface",
+        "name": "Surface Mail",
+        "speed_days_min": 30,
+        "speed_days_max": 90,
+        "max_weight_kg": 30,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "china-post",
+    "name": "China Post",
+    "type": "postal",
+    "logo": "/logos/china-post.svg",
+    "website": "https://www.chinapost.com.cn",
+    "tracking_url": "https://www.chinapost.com.cn/en/trackmails/index?taskNo={tracking}",
+    "description_en": "China's national postal service. Offers economical international shipping.",
+    "description_ru": "Национальная почтовая служба Китая. Предлагает экономичную международную доставку.",
+    "services": [
+      {
+        "id": "china-post-ems",
+        "name": "China Post EMS",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "china-post-air",
+        "name": "China Post Air Mail",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "china-post-registered",
+        "name": "China Post Registered Air Mail",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sf-express",
+    "name": "SF Express",
+    "type": "regional",
+    "logo": "/logos/sf-express.svg",
+    "website": "https://www.sf-express.com",
+    "tracking_url": "https://www.sf-express.com/en/dynamic_function/waybill/#search/bill-number/{tracking}",
+    "description_en": "China's largest private express delivery company with strong Asian network.",
+    "description_ru": "Крупнейшая частная экспресс-служба Китая с развитой сетью в Азии.",
+    "services": [
+      {
+        "id": "sf-international-standard",
+        "name": "International Standard Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "sf-international-economy",
+        "name": "International Economy Express",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "aramex",
+    "name": "Aramex",
+    "type": "regional",
+    "logo": "/logos/aramex.svg",
+    "website": "https://www.aramex.com",
+    "tracking_url": "https://www.aramex.com/track/results?ShipmentNumber={tracking}",
+    "description_en": "Leading logistics company in the Middle East and Africa with global reach.",
+    "description_ru": "Ведущая логистическая компания Ближнего Востока и Африки с глобальным охватом.",
+    "services": [
+      {
+        "id": "aramex-priority-express",
+        "name": "Priority Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "aramex-express",
+        "name": "Express",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "aramex-value-express",
+        "name": "Value Express",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pochta-rossii",
+    "name": "Pochta Rossii",
+    "type": "postal",
+    "logo": "/logos/pochta-rossii.svg",
+    "website": "https://www.pochta.ru",
+    "tracking_url": "https://www.pochta.ru/tracking#{tracking}",
+    "description_en": "Russian national postal service with delivery to 190+ countries.",
+    "description_ru": "Почта России — национальная почтовая служба с доставкой в 190+ стран.",
+    "services": [
+      {
+        "id": "pochta-ems",
+        "name": "EMS Russian Post",
+        "speed_days_min": 4,
+        "speed_days_max": 10,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      },
+      {
+        "id": "pochta-parcel",
+        "name": "International Parcel",
+        "speed_days_min": 14,
+        "speed_days_max": 45,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "pochta-small-packet",
+        "name": "Small Packet",
+        "speed_days_min": 14,
+        "speed_days_max": 60,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cdek",
+    "name": "CDEK",
+    "type": "regional",
+    "logo": "/logos/cdek.svg",
+    "website": "https://www.cdek.ru",
+    "tracking_url": "https://www.cdek.ru/tracking?order_id={tracking}",
+    "description_en": "Major Russian private delivery service with coverage in CIS countries and China.",
+    "description_ru": "Крупная российская частная служба доставки с покрытием в странах СНГ и Китае.",
+    "services": [
+      {
+        "id": "cdek-international-express",
+        "name": "International Express",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cdek-international-economy",
+        "name": "International Economy",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "australia-post",
+    "name": "Australia Post",
+    "type": "postal",
+    "logo": "/logos/australia-post.svg",
+    "website": "https://auspost.com.au",
+    "tracking_url": "https://auspost.com.au/mypost/track/#/details/{tracking}",
+    "description_en": "Australia's national postal service with international delivery options.",
+    "description_ru": "Национальная почтовая служба Австралии с международными опциями доставки.",
+    "services": [
+      {
+        "id": "auspost-express",
+        "name": "Express International",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "auspost-standard",
+        "name": "Standard International",
+        "speed_days_min": 6,
+        "speed_days_max": 10,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "auspost-economy",
+        "name": "Economy Air",
+        "speed_days_min": 10,
+        "speed_days_max": 22,
+        "max_weight_kg": 20,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "canada-post",
+    "name": "Canada Post",
+    "type": "postal",
+    "logo": "/logos/canada-post.svg",
+    "website": "https://www.canadapost-postescanada.ca",
+    "tracking_url": "https://www.canadapost-postescanada.ca/track-reperage/en#/details/{tracking}",
+    "description_en": "Canada's national postal service with worldwide shipping.",
+    "description_ru": "Национальная почтовая служба Канады с доставкой по всему миру.",
+    "services": [
+      {
+        "id": "cp-xpresspost-international",
+        "name": "Xpresspost International",
+        "speed_days_min": 4,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cp-tracked-packet-international",
+        "name": "Tracked Packet International",
+        "speed_days_min": 6,
+        "speed_days_max": 10,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "cp-small-packet-air",
+        "name": "Small Packet Air International",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 2,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "dpd",
+    "name": "DPD",
+    "type": "regional",
+    "logo": "/logos/dpd.svg",
+    "website": "https://www.dpd.com",
+    "tracking_url": "https://tracking.dpd.de/status/en_US/parcel/{tracking}",
+    "description_en": "Europe's second-largest parcel delivery network with 230+ countries coverage.",
+    "description_ru": "Вторая по величине сеть доставки посылок в Европе с покрытием 230+ стран.",
+    "services": [
+      {
+        "id": "dpd-classic",
+        "name": "DPD Classic",
+        "speed_days_min": 3,
+        "speed_days_max": 6,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      },
+      {
+        "id": "dpd-express",
+        "name": "DPD Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "tnt",
+    "name": "TNT (FedEx)",
+    "type": "international",
+    "logo": "/logos/tnt.svg",
+    "website": "https://www.tnt.com",
+    "tracking_url": "https://www.tnt.com/express/en_gc/site/tracking.html?searchType=con&cons={tracking}",
+    "description_en": "International courier service, now part of FedEx. Strong European network.",
+    "description_ru": "Международная курьерская служба, теперь часть FedEx. Сильная европейская сеть.",
+    "services": [
+      {
+        "id": "tnt-express",
+        "name": "TNT Express",
+        "speed_days_min": 1,
+        "speed_days_max": 4,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "tnt-economy",
+        "name": "TNT Economy Express",
+        "speed_days_min": 4,
+        "speed_days_max": 8,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "j-and-t",
+    "name": "J&T Express",
+    "type": "regional",
+    "logo": "/logos/j-and-t.svg",
+    "website": "https://www.jtexpress.com",
+    "tracking_url": "https://www.jtexpress.com/tracking?billcode={tracking}",
+    "description_en": "Fast-growing Southeast Asian express delivery company operating in 13 countries.",
+    "description_ru": "Быстрорастущая экспресс-служба Юго-Восточной Азии, работающая в 13 странах.",
+    "services": [
+      {
+        "id": "jt-express",
+        "name": "J&T Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ninja-van",
+    "name": "Ninja Van",
+    "type": "regional",
+    "logo": "/logos/ninja-van.svg",
+    "website": "https://www.ninjavan.co",
+    "tracking_url": "https://www.ninjavan.co/en/track/{tracking}",
+    "description_en": "Southeast Asia's largest last-mile delivery platform covering 6 countries.",
+    "description_ru": "Крупнейшая платформа последней мили в ЮВА, покрывающая 6 стран.",
+    "services": [
+      {
+        "id": "ninja-standard",
+        "name": "Ninja Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "india-post",
+    "name": "India Post",
+    "type": "postal",
+    "logo": "/logos/india-post.svg",
+    "website": "https://www.indiapost.gov.in",
+    "tracking_url": "https://www.indiapost.gov.in/VAS/Pages/trackconsignment.aspx?Id={tracking}",
+    "description_en": "India's national postal service, one of the oldest and most widely distributed in the world.",
+    "description_ru": "Национальная почтовая служба Индии, одна из старейших и самых распространённых в мире.",
+    "services": [
+      {
+        "id": "india-post-ems",
+        "name": "EMS Speed Post International",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 35,
+        "tracking": true
+      },
+      {
+        "id": "india-post-air-parcel",
+        "name": "Air Parcel",
+        "speed_days_min": 10,
+        "speed_days_max": 21,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "correos",
+    "name": "Correos (Spain)",
+    "type": "postal",
+    "logo": "/logos/correos.svg",
+    "website": "https://www.correos.es",
+    "tracking_url": "https://www.correos.es/ss/Satellite/site/aplicacion-localizador/detalle_envio-sidioma=en_GB?numero={tracking}",
+    "description_en": "Spain's national postal service with connections to Latin America.",
+    "description_ru": "Национальная почтовая служба Испании с развитыми связями с Латинской Америкой.",
+    "services": [
+      {
+        "id": "correos-international-packet",
+        "name": "International Packet",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "correos-ems",
+        "name": "EMS Postal Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "correios-brazil",
+    "name": "Correios (Brazil)",
+    "type": "postal",
+    "logo": "/logos/correios.svg",
+    "website": "https://www.correios.com.br",
+    "tracking_url": "https://www.correios.com.br/encomendas/rastreamento?codigo={tracking}",
+    "description_en": "Brazil's national postal service with delivery to all countries.",
+    "description_ru": "Национальная почтовая служба Бразилии с доставкой во все страны.",
+    "services": [
+      {
+        "id": "correios-sedex-mundi",
+        "name": "SEDEX Mundi",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "correios-internacional-premium",
+        "name": "Internacional Premium",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "singpost",
+    "name": "SingPost",
+    "type": "postal",
+    "logo": "/logos/singpost.svg",
+    "website": "https://www.singpost.com",
+    "tracking_url": "https://www.singpost.com/track-items?trackingId={tracking}",
+    "description_en": "Singapore's national postal service with strong Asian connectivity.",
+    "description_ru": "Национальная почтовая служба Сингапура с развитой азиатской сетью.",
+    "services": [
+      {
+        "id": "singpost-speedpost-express",
+        "name": "Speedpost Express",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "singpost-speedpost-standard",
+        "name": "Speedpost Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "singpost-registered",
+        "name": "Registered Mail",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pos-malaysia",
+    "name": "Pos Malaysia",
+    "type": "postal",
+    "logo": "/logos/pos-malaysia.svg",
+    "website": "https://www.pos.com.my",
+    "tracking_url": "https://www.pos.com.my/track-n-trace?trackingNo={tracking}",
+    "description_en": "Malaysia's national postal service with international delivery.",
+    "description_ru": "Национальная почтовая служба Малайзии с международной доставкой.",
+    "services": [
+      {
+        "id": "pos-malaysia-ems",
+        "name": "EMS Pos Laju International",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "pos-malaysia-air-parcel",
+        "name": "Air Parcel",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "thailand-post",
+    "name": "Thailand Post",
+    "type": "postal",
+    "logo": "/logos/thailand-post.svg",
+    "website": "https://www.thailandpost.co.th",
+    "tracking_url": "https://track.thailandpost.co.th/?trackNumber={tracking}",
+    "description_en": "Thailand's national postal service with EMS and air mail options.",
+    "description_ru": "Национальная почтовая служба Таиланда с опциями EMS и авиапочты.",
+    "services": [
+      {
+        "id": "thailand-post-ems",
+        "name": "EMS World",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "thailand-post-air",
+        "name": "International Air Parcel",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "korea-post",
+    "name": "Korea Post",
+    "type": "postal",
+    "logo": "/logos/korea-post.svg",
+    "website": "https://www.koreapost.go.kr",
+    "tracking_url": "https://service.epost.go.kr/trace.RetrieveEmsRi498Tracing.postal?POST_CODE={tracking}",
+    "description_en": "South Korea's national postal service with EMS and K-Packet services.",
+    "description_ru": "Национальная почтовая служба Южной Кореи с услугами EMS и K-Packet.",
+    "services": [
+      {
+        "id": "korea-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "korea-post-k-packet",
+        "name": "K-Packet",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "korea-post-air",
+        "name": "International Air Parcel",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "postnord",
+    "name": "PostNord",
+    "type": "postal",
+    "logo": "/logos/postnord.svg",
+    "website": "https://www.postnord.com",
+    "tracking_url": "https://tracking.postnord.com/?id={tracking}",
+    "description_en": "Nordic region's leading postal service (Sweden, Denmark, Norway, Finland).",
+    "description_ru": "Ведущая почтовая служба Северных стран (Швеция, Дания, Норвегия, Финляндия).",
+    "services": [
+      {
+        "id": "postnord-tracked",
+        "name": "PostNord Tracked",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cainiao",
+    "name": "Cainiao (AliExpress)",
+    "type": "regional",
+    "logo": "/logos/cainiao.svg",
+    "website": "https://global.cainiao.com",
+    "tracking_url": "https://global.cainiao.com/detail.htm?mailNoList={tracking}",
+    "description_en": "Alibaba Group's logistics arm handling AliExpress and global e-commerce deliveries.",
+    "description_ru": "Логистическое подразделение Alibaba Group, обслуживающее AliExpress и глобальную e-commerce доставку.",
+    "services": [
+      {
+        "id": "cainiao-standard",
+        "name": "Cainiao Standard Shipping",
+        "speed_days_min": 15,
+        "speed_days_max": 45,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "cainiao-express",
+        "name": "Cainiao Express",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "yanwen",
+    "name": "Yanwen Express",
+    "type": "regional",
+    "logo": "/logos/yanwen.svg",
+    "website": "https://www.yw56.com.cn",
+    "tracking_url": "https://track.yw56.com.cn/en/querydel?nums={tracking}",
+    "description_en": "Chinese cross-border logistics company specializing in small parcels worldwide.",
+    "description_ru": "Китайская трансграничная логистическая компания, специализирующаяся на мелких посылках.",
+    "services": [
+      {
+        "id": "yanwen-standard",
+        "name": "Yanwen Standard",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "yanwen-express",
+        "name": "Yanwen Express",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "flash-express",
+    "name": "Flash Express",
+    "type": "regional",
+    "logo": "/logos/flash-express.svg",
+    "website": "https://www.flashexpress.com/",
+    "tracking_url": "https://flashexpress.com/fle/tracking?se={tracking}",
+    "description_en": "Thailand's #2 delivery company (after Thailand Post) and #1 private courier. Founded by a former Alibaba executive, Flash Express achieved profitability in 2024 with strong e-commerce integration across Southeast Asia.",
+    "description_ru": "Второй по величине курьерский сервис Таиланда (после Thailand Post) и крупнейший частный курьер. Основан бывшим руководителем Alibaba, специализируется на доставке для электронной коммерции в Юго-Восточной Азии.",
+    "services": [
+      {
+        "id": "flash-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "kerry-express-kex",
+    "name": "Kerry Express (KEX)",
+    "type": "regional",
+    "logo": "/logos/kerry-express-kex.svg",
+    "website": "https://www.kerryexpress.com/",
+    "tracking_url": "https://th.kerryexpress.com/en/track/?track={tracking}",
+    "description_en": "Part of SF Holding Group (China). Major express delivery network across Southeast Asia with extensive pickup/dropoff points. Underwent major restructuring in 2024-2025.",
+    "description_ru": "Часть холдинга SF Holding (Китай). Крупная сеть экспресс-доставки по Юго-Восточной Азии с обширной сетью пунктов приёма и выдачи. Прошла крупную реструктуризацию в 2024-2025 годах.",
+    "services": [
+      {
+        "id": "kerry-express-kex-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "best-express-thailand-sea",
+    "name": "Best Express (Thailand/SEA)",
+    "type": "regional",
+    "logo": "/logos/best-express-thailand-sea.svg",
+    "website": "https://www.best-inc.com/",
+    "tracking_url": "https://www.best-inc.com/track?billNo={tracking}",
+    "description_en": "Chinese-origin logistics company (Best Inc.) that expanded aggressively into Southeast Asia. Offers integrated express, freight, and supply chain services.",
+    "description_ru": "Китайская логистическая компания, активно расширяющаяся в Юго-Восточной Азии. Предлагает интегрированные услуги экспресс-доставки, грузоперевозки и управления цепочками поставок.",
+    "services": [
+      {
+        "id": "best-express-thailand-sea-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dpex-worldwide",
+    "name": "DPEX Worldwide",
+    "type": "regional",
+    "logo": "/logos/dpex-worldwide.svg",
+    "website": "https://www.dpex.com/",
+    "tracking_url": "https://www.dpex.com/track-trace?tracking_no={tracking}",
+    "description_en": "Singapore-based express delivery and logistics company serving Asia-Pacific. Strong B2B focus with door-to-door international express services.",
+    "description_ru": "Сингапурская компания экспресс-доставки и логистики, обслуживающая Азиатско-Тихоокеанский регион. Сильный фокус на B2B с международной экспресс-доставкой от двери до двери.",
+    "services": [
+      {
+        "id": "dpex-worldwide-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "jne-express",
+    "name": "JNE Express",
+    "type": "regional",
+    "logo": "/logos/jne-express.svg",
+    "website": "https://www.jne.co.id/en/home",
+    "tracking_url": "https://www.jne.co.id/en/tracking/trace?awb={tracking}",
+    "description_en": "One of Indonesia's largest and most trusted express delivery companies, founded in 1990. Door-to-door international service to 220+ countries. Known for reliability with valuable items.",
+    "description_ru": "Одна из крупнейших и наиболее надёжных курьерских компаний Индонезии, основана в 1990 году. Международная доставка от двери до двери в более чем 220 стран. Известна надёжностью при отправке ценных посылок.",
+    "services": [
+      {
+        "id": "jne-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 150,
+        "tracking": true
+      },
+      {
+        "id": "jne-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 150,
+        "tracking": true
+      },
+      {
+        "id": "jne-express-economy",
+        "name": "Economy",
+        "speed_days_min": 3,
+        "speed_days_max": 6,
+        "max_weight_kg": 150,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "tiki-titipan-kilat",
+    "name": "TIKI (Titipan Kilat)",
+    "type": "regional",
+    "logo": "/logos/tiki-titipan-kilat.svg",
+    "website": "https://www.tiki.id/",
+    "tracking_url": "https://www.tiki.id/en/tracking?resi={tracking}",
+    "description_en": "One of Indonesia's oldest courier companies, established in 1970. Pioneer of express delivery services in Indonesia with nationwide coverage.",
+    "description_ru": "Одна из старейших курьерских компаний Индонезии, основана в 1970 году. Пионер экспресс-доставки в Индонезии с покрытием по всей стране.",
+    "services": [
+      {
+        "id": "tiki-titipan-kilat-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sicepat-ekspres",
+    "name": "SiCepat Ekspres",
+    "type": "regional",
+    "logo": "/logos/sicepat-ekspres.svg",
+    "website": "https://www.sicepat.com/",
+    "tracking_url": "https://www.sicepat.com/checkAwb?awb={tracking}",
+    "description_en": "Fast-growing Indonesian express delivery company known for competitive rates. SiCepat GO! international service covers destinations across Asia, Australia, Europe, Africa, and Americas.",
+    "description_ru": "Быстрорастущая индонезийская служба экспресс-доставки, известная конкурентными тарифами. Международный сервис SiCepat GO! охватывает Азию, Австралию, Европу, Африку и Америку.",
+    "services": [
+      {
+        "id": "sicepat-ekspres-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "sicepat-ekspres-economy",
+        "name": "Economy",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "lbc-express",
+    "name": "LBC Express",
+    "type": "regional",
+    "logo": "/logos/lbc-express.svg",
+    "website": "https://www.lbcexpress.com/",
+    "tracking_url": "https://www.lbcexpress.com/track?tracking_no={tracking}",
+    "description_en": "The largest express courier, cargo, and money remittance company in the Philippines. Pioneer of Balikbayan box shipping services for overseas Filipino communities worldwide.",
+    "description_ru": "Крупнейшая компания экспресс-доставки, грузоперевозки и денежных переводов на Филиппинах. Пионер сервиса Balikbayan box для филиппинских общин за рубежом.",
+    "services": [
+      {
+        "id": "lbc-express-express",
+        "name": "Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "lbc-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "lbc-express-economy",
+        "name": "Economy",
+        "speed_days_min": 28,
+        "speed_days_max": 56,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "2go-express",
+    "name": "2GO Express",
+    "type": "regional",
+    "logo": "/logos/2go-express.svg",
+    "website": "https://www.2go.com.ph/",
+    "tracking_url": "https://supplychain.2go.com.ph/tracking?tracking_no={tracking}",
+    "description_en": "Major Philippine logistics company combining express delivery with inter-island sea freight. Strong in bulk shipments and island-to-island delivery across the Philippine archipelago.",
+    "description_ru": "Крупная филиппинская логистическая компания, сочетающая экспресс-доставку с морскими перевозками между островами. Сильна в массовых отправках по Филиппинскому архипелагу.",
+    "services": [
+      {
+        "id": "2go-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 100,
+        "tracking": true
+      },
+      {
+        "id": "2go-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 100,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "xend-business-solutions",
+    "name": "Xend Business Solutions",
+    "type": "regional",
+    "logo": "/logos/xend-business-solutions.svg",
+    "website": "https://www.xend.com.ph/",
+    "tracking_url": "https://app.xend.com.ph/tracking?waybillNo={tracking}",
+    "description_en": "Philippine logistics company focused on e-commerce fulfillment with API integration for online sellers. Offers flexible delivery options and COD services.",
+    "description_ru": "Филиппинская логистическая компания, ориентированная на фулфилмент электронной коммерции с API-интеграцией для онлайн-продавцов.",
+    "services": [
+      {
+        "id": "xend-business-solutions-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "kerry-express-thailand",
+    "name": "Kerry Express Thailand",
+    "type": "regional",
+    "logo": "/logos/kerry-express-thailand.svg",
+    "website": "https://th.kerryexpress.com/en/",
+    "tracking_url": "https://th.kerryexpress.com/en/track/?track={tracking}",
+    "description_en": "Thailand subsidiary of Kerry Logistics/SF Holding. Extensive network of drop-off parcel shops. Underwent restructuring in 2024-2025 after significant losses.",
+    "description_ru": "Тайское подразделение Kerry Logistics/SF Holding. Обширная сеть пунктов приёма посылок. Прошла реструктуризацию в 2024-2025 годах после значительных убытков.",
+    "services": [
+      {
+        "id": "kerry-express-thailand-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "4px-express",
+    "name": "4PX Express",
+    "type": "regional",
+    "logo": "/logos/4px-express.svg",
+    "website": "https://en.4px.com/",
+    "tracking_url": "https://track.4px.com/?locale=en#/result/0/{tracking}",
+    "description_en": "China's #1 cross-border e-commerce logistics provider, founded in 2004 in Shenzhen. Serves 20,000+ merchants. Integrates with AliExpress, eBay, Amazon, Wish. Offers fulfillment warehouses in US, UK, EU, Australia.",
+    "description_ru": "Крупнейший поставщик логистики для трансграничной электронной коммерции в Китае, основан в 2004 году в Шэньчжэне. Обслуживает 20 000+ продавцов. Интегрируется с AliExpress, eBay, Amazon, Wish.",
+    "services": [
+      {
+        "id": "4px-express-express",
+        "name": "Express",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "4px-express-standard",
+        "name": "Standard",
+        "speed_days_min": 10,
+        "speed_days_max": 20,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "4px-express-economy",
+        "name": "Economy",
+        "speed_days_min": 15,
+        "speed_days_max": 30,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cne-express-china-navigation-express",
+    "name": "CNE Express (China Navigation Express)",
+    "type": "regional",
+    "logo": "/logos/cne-express-china-navigation-express.svg",
+    "website": "https://www.cne.com/",
+    "tracking_url": "https://www.cne.com/English/Tracking?OrderNo={tracking}",
+    "description_en": "Chinese cross-border e-commerce logistics company specializing in small parcel delivery. Popular with AliExpress sellers. Offers country-specific special line services for optimized routing.",
+    "description_ru": "Китайская логистическая компания для трансграничной электронной коммерции, специализирующаяся на доставке мелких посылок. Популярна среди продавцов AliExpress.",
+    "services": [
+      {
+        "id": "cne-express-china-navigation-express-express",
+        "name": "Express",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cne-express-china-navigation-express-standard",
+        "name": "Standard",
+        "speed_days_min": 10,
+        "speed_days_max": 20,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cne-express-china-navigation-express-economy",
+        "name": "Economy",
+        "speed_days_min": 15,
+        "speed_days_max": 35,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sunyou-sunyou-post",
+    "name": "Sunyou (SunYou Post)",
+    "type": "regional",
+    "logo": "/logos/sunyou-sunyou-post.svg",
+    "website": "https://www.sypost.net/",
+    "tracking_url": "https://www.sypost.net/queryTrack.html?toTrackNos={tracking}",
+    "description_en": "Founded in 2008 in Shenzhen, SunYou is a major logistics carrier for AliExpress. Known for cost-effective standard shipping on low-priced e-commerce orders. Tracking may be limited in economy tier.",
+    "description_ru": "Основана в 2008 году в Шэньчжэне. Крупный перевозчик для AliExpress. Известна экономичной доставкой для недорогих товаров электронной коммерции.",
+    "services": [
+      {
+        "id": "sunyou-sunyou-post-express",
+        "name": "Express",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "sunyou-sunyou-post-standard",
+        "name": "Standard",
+        "speed_days_min": 15,
+        "speed_days_max": 25,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "sunyou-sunyou-post-economy",
+        "name": "Economy",
+        "speed_days_min": 20,
+        "speed_days_max": 45,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "equick-china",
+    "name": "Equick China",
+    "type": "regional",
+    "logo": "/logos/equick-china.svg",
+    "website": "https://www.equick.cn/",
+    "tracking_url": "https://www.equick.cn/en/SingleQuery?number={tracking}",
+    "description_en": "Chinese logistics company offering express delivery, air cargo, sea freight, and warehousing. Specializes in quick and cost-effective solutions for both domestic and international delivery.",
+    "description_ru": "Китайская логистическая компания, предлагающая экспресс-доставку, авиагрузы, морские перевозки и складские услуги. Специализируется на быстрых и экономичных решениях.",
+    "services": [
+      {
+        "id": "equick-china-express",
+        "name": "Express",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "equick-china-standard",
+        "name": "Standard",
+        "speed_days_min": 10,
+        "speed_days_max": 20,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "equick-china-economy",
+        "name": "Economy",
+        "speed_days_min": 25,
+        "speed_days_max": 45,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "zto-international",
+    "name": "ZTO International",
+    "type": "regional",
+    "logo": "/logos/zto-international.svg",
+    "website": "https://www.zto.com/",
+    "tracking_url": "https://www.zto.com/express/expressQuery.html?billCode={tracking}",
+    "description_en": "Founded in 2002, ZTO Express is one of China's largest delivery companies (Hong Kong-listed). Covers 90% of Chinese territory with growing international presence in Asia, US, and Australia.",
+    "description_ru": "Основана в 2002 году. Одна из крупнейших курьерских компаний Китая (листинг в Гонконге). Покрывает 90% территории Китая с растущим международным присутствием.",
+    "services": [
+      {
+        "id": "zto-international-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "best-inc-international",
+    "name": "Best Inc International",
+    "type": "regional",
+    "logo": "/logos/best-inc-international.svg",
+    "website": "https://www.best-inc.com/",
+    "tracking_url": "https://www.best-inc.com/track?billNo={tracking}",
+    "description_en": "NYC-listed Chinese logistics company with integrated express, freight, supply chain, and cross-border services. Strong presence in China and Southeast Asia.",
+    "description_ru": "Китайская логистическая компания с интегрированными услугами экспресс-доставки, грузоперевозки и трансграничной логистики. Сильное присутствие в Китае и ЮВА.",
+    "services": [
+      {
+        "id": "best-inc-international-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sto-express-shentong-express",
+    "name": "STO Express (Shentong Express)",
+    "type": "regional",
+    "logo": "/logos/sto-express-shentong-express.svg",
+    "website": "https://www.sto.cn/",
+    "tracking_url": "https://www.sto.cn/en/newTrackSearch?billNo={tracking}",
+    "description_en": "One of China's major private express delivery companies. Part of Alibaba's Cainiao logistics network. Growing international cross-border e-commerce delivery capabilities.",
+    "description_ru": "Одна из крупнейших частных курьерских компаний Китая. Часть логистической сети Cainiao (Alibaba). Развивает международную трансграничную доставку.",
+    "services": [
+      {
+        "id": "sto-express-shentong-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "yto-express-yuantong-express",
+    "name": "YTO Express (Yuantong Express)",
+    "type": "regional",
+    "logo": "/logos/yto-express-yuantong-express.svg",
+    "website": "https://www.yto.net.cn/",
+    "tracking_url": "https://www.yto.net.cn/en/orderSearch?billNo={tracking}",
+    "description_en": "Major Chinese express delivery company, part of Alibaba's logistics ecosystem. Has air cargo fleet and growing international network covering Asia, Europe, and Americas.",
+    "description_ru": "Крупная китайская компания экспресс-доставки, часть логистической экосистемы Alibaba. Имеет грузовой авиафлот и растущую международную сеть.",
+    "services": [
+      {
+        "id": "yto-express-yuantong-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "boxberry",
+    "name": "Boxberry",
+    "type": "regional",
+    "logo": "/logos/boxberry.svg",
+    "website": "https://boxberry.ru/",
+    "tracking_url": "https://boxberry.ru/tracking?id={tracking}",
+    "description_en": "Major Russian delivery service specializing in e-commerce fulfillment with extensive pickup point network across Russia and CIS. BXB service delivers from international online stores to Russia, Ukraine, and Kazakhstan.",
+    "description_ru": "Крупная российская служба доставки, специализирующаяся на фулфилменте электронной коммерции с обширной сетью пунктов выдачи по России и СНГ. Сервис BXB доставляет из зарубежных интернет-магазинов в Россию, Украину и Казахстан.",
+    "services": [
+      {
+        "id": "boxberry-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 7,
+        "max_weight_kg": 31,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pony-express",
+    "name": "Pony Express",
+    "type": "regional",
+    "logo": "/logos/pony-express.svg",
+    "website": "https://www.ponyexpress.ru/",
+    "tracking_url": "https://www.ponyexpress.ru/tracking/?number={tracking}",
+    "description_en": "One of Russia's major private express delivery and logistics companies. Provides express and freight delivery across Russia and internationally.",
+    "description_ru": "Одна из крупнейших российских частных компаний экспресс-доставки и логистики. Обеспечивает экспресс- и грузовую доставку по России и за рубеж.",
+    "services": [
+      {
+        "id": "pony-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "pony-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dpd-russia",
+    "name": "DPD Russia",
+    "type": "regional",
+    "logo": "/logos/dpd-russia.svg",
+    "website": "https://www.dpd.ru/",
+    "tracking_url": "https://www.dpd.ru/ols/trace2/parcel.do2?parcelNumber={tracking}",
+    "description_en": "Russian division of DPD Group (GeoPost/La Poste). One of the largest parcel delivery companies in Russia with express and economy services. Part of the European DPD network.",
+    "description_ru": "Российское подразделение DPD Group (GeoPost/La Poste). Одна из крупнейших компаний по доставке посылок в России с экспресс- и экономичными услугами.",
+    "services": [
+      {
+        "id": "dpd-russia-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "dpd-russia-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "spsr-express",
+    "name": "SPSR Express",
+    "type": "regional",
+    "logo": "/logos/spsr-express.svg",
+    "website": "https://www.spsr.ru/",
+    "tracking_url": "https://www.spsr.ru/tracking/?barcode={tracking}",
+    "description_en": "Russian express delivery company focused on domestic B2C and B2B deliveries. Acquired by DPD Russia. Provides express and standard delivery with courier and pickup options.",
+    "description_ru": "Российская компания экспресс-доставки, ориентированная на внутренние B2C и B2B доставки. Приобретена DPD Russia. Экспресс- и стандартная доставка курьером и в пункты выдачи.",
+    "services": [
+      {
+        "id": "spsr-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "spsr-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "hermes-russia",
+    "name": "Hermes Russia",
+    "type": "regional",
+    "logo": "/logos/hermes-russia.svg",
+    "website": "https://hermesrussia.ru/",
+    "tracking_url": "https://hermesrussia.ru/tracking?code={tracking}",
+    "description_en": "Russian arm of Hermes Group. Provides affordable parcel delivery across Russia with focus on e-commerce. Network of pickup points and parcel lockers.",
+    "description_ru": "Российское подразделение Hermes Group. Обеспечивает доступную доставку посылок по России с фокусом на электронную коммерцию. Сеть пунктов выдачи и постаматов.",
+    "services": [
+      {
+        "id": "hermes-russia-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "nova-poshta",
+    "name": "Nova Poshta (Нова Пошта)",
+    "type": "regional",
+    "logo": "/logos/nova-poshta.svg",
+    "website": "https://novaposhta.ua/en/",
+    "tracking_url": "https://novaposhta.ua/en/tracking/?cargo_number={tracking}",
+    "description_en": "Ukraine's largest private delivery company with 10,000+ branches. Expanded into Europe with physical branches in Poland, Germany, Czech Republic, and more. Nova Poshta Global handles 160+ countries.",
+    "description_ru": "Крупнейшая частная служба доставки Украины с 10 000+ отделениями. Расширилась в Европу с физическими отделениями в Польше, Германии, Чехии и других странах. Nova Poshta Global обслуживает 160+ стран.",
+    "services": [
+      {
+        "id": "nova-poshta-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "meest",
+    "name": "Meest",
+    "type": "regional",
+    "logo": "/logos/meest.svg",
+    "website": "https://www.meest.com/",
+    "tracking_url": "https://us.meest.com/parcel-track?tracking={tracking}",
+    "description_en": "Ukrainian international postal and transport company serving the Ukrainian diaspora worldwide. Specializes in US/Canada/EU to Ukraine delivery and vice versa. Air and sea cargo options.",
+    "description_ru": "Украинская международная почтово-транспортная компания, обслуживающая украинскую диаспору по всему миру. Специализируется на доставке между США/Канадой/ЕС и Украиной.",
+    "services": [
+      {
+        "id": "meest-express",
+        "name": "Express",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 65,
+        "tracking": true
+      },
+      {
+        "id": "meest-economy",
+        "name": "Economy",
+        "speed_days_min": 28,
+        "speed_days_max": 42,
+        "max_weight_kg": 65,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "delhivery",
+    "name": "Delhivery",
+    "type": "regional",
+    "logo": "/logos/delhivery.svg",
+    "website": "https://www.delhivery.com/",
+    "tracking_url": "https://www.delhivery.com/tracking?ref={tracking}",
+    "description_en": "India's largest fully-integrated logistics company founded in 2011. 18,600+ pin codes, 24 automated sort centers, 94 gateways. Cross-border services via Starfleet for B2C and B2B.",
+    "description_ru": "Крупнейшая полностью интегрированная логистическая компания Индии, основана в 2011 году. 18 600+ почтовых индексов, 24 автоматизированных сортировочных центра. Трансграничные услуги через Starfleet.",
+    "services": [
+      {
+        "id": "delhivery-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 1000,
+        "tracking": true
+      },
+      {
+        "id": "delhivery-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 1000,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "blue-dart-dhl-group",
+    "name": "Blue Dart (DHL Group)",
+    "type": "regional",
+    "logo": "/logos/blue-dart-dhl-group.svg",
+    "website": "https://www.bluedart.com/",
+    "tracking_url": "https://www.bluedart.com/tracking?handler=tnt&action=awbquery&awb=awb&numbers={tracking}",
+    "description_en": "India's leading express air and integrated transport company, part of DHL Group. 35,000+ locations across India. Cross-border delivery to 220+ countries via DHL network. Particularly efficient in urban areas.",
+    "description_ru": "Ведущая индийская компания авиаэкспресс-доставки, часть DHL Group. 35 000+ точек по всей Индии. Трансграничная доставка в 220+ стран через сеть DHL.",
+    "services": [
+      {
+        "id": "blue-dart-dhl-group-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 1000,
+        "tracking": true
+      },
+      {
+        "id": "blue-dart-dhl-group-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 1000,
+        "tracking": true
+      },
+      {
+        "id": "blue-dart-dhl-group-economy",
+        "name": "Economy",
+        "speed_days_min": 4,
+        "speed_days_max": 8,
+        "max_weight_kg": 1000,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dtdc-express",
+    "name": "DTDC Express",
+    "type": "regional",
+    "logo": "/logos/dtdc-express.svg",
+    "website": "https://www.dtdc.in/",
+    "tracking_url": "https://www.dtdc.in/tracking.asp?strCnno={tracking}",
+    "description_en": "One of India's largest courier and logistics companies with 12,000+ franchise outlets reaching 13,000+ pin codes. Strong in semi-urban and rural regions. International service to 240+ countries.",
+    "description_ru": "Одна из крупнейших курьерских и логистических компаний Индии с 12 000+ франшизных отделений, покрывающих 13 000+ почтовых индексов. Международная доставка в 240+ стран.",
+    "services": [
+      {
+        "id": "dtdc-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 100,
+        "tracking": true
+      },
+      {
+        "id": "dtdc-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 100,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ecom-express",
+    "name": "Ecom Express",
+    "type": "regional",
+    "logo": "/logos/ecom-express.svg",
+    "website": "https://ecomexpress.in/",
+    "tracking_url": "https://ecomexpress.in/tracking/?awb_field={tracking}",
+    "description_en": "E-commerce focused logistics company covering 27,000+ pin codes with 3,470+ facility centers. End-to-end logistics solutions including COD management and reverse logistics.",
+    "description_ru": "Логистическая компания, ориентированная на электронную коммерцию, покрывающая 27 000+ почтовых индексов с 3 470+ центрами. Включая управление наложенным платежом и обратную логистику.",
+    "services": [
+      {
+        "id": "ecom-express-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "ecom-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "xpressbees",
+    "name": "XpressBees",
+    "type": "regional",
+    "logo": "/logos/xpressbees.svg",
+    "website": "https://www.xpressbees.com/",
+    "tracking_url": "https://www.xpressbees.com/track?awb={tracking}",
+    "description_en": "Fast-growing Indian logistics company serving 20,000+ pin codes with capacity of 3 million shipments/day. Known as a low-cost, highly scalable option for e-commerce sellers.",
+    "description_ru": "Быстрорастущая индийская логистическая компания, обслуживающая 20 000+ почтовых индексов с пропускной способностью 3 млн отправлений в день. Экономичный вариант для электронной коммерции.",
+    "services": [
+      {
+        "id": "xpressbees-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "xpressbees-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "shadowfax",
+    "name": "Shadowfax",
+    "type": "regional",
+    "logo": "/logos/shadowfax.svg",
+    "website": "https://www.shadowfax.in/",
+    "tracking_url": "https://tracker.shadowfax.in/#/track?awb={tracking}",
+    "description_en": "Known as the fastest courier service in India. Covers 2,500+ cities and 18,000+ pin codes. Strong in hyperlocal and same-day delivery segments. Low-cost option for e-commerce.",
+    "description_ru": "Известна как самая быстрая курьерская служба Индии. Покрывает 2 500+ городов и 18 000+ почтовых индексов. Сильна в гиперлокальной доставке и доставке в тот же день.",
+    "services": [
+      {
+        "id": "shadowfax-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "fetchr",
+    "name": "Fetchr",
+    "type": "regional",
+    "logo": "/logos/fetchr.svg",
+    "website": "https://www.fetchr.us/",
+    "tracking_url": "https://www.fetchr.us/track/{tracking}",
+    "description_en": "Middle Eastern delivery company that uses GPS-based location for pickup and delivery, solving the challenge of missing formal street addresses in the region. Operates across GCC and MENA.",
+    "description_ru": "Ближневосточная служба доставки, использующая GPS для определения местоположения при приёме и доставке, решая проблему отсутствия формальных адресов в регионе.",
+    "services": [
+      {
+        "id": "fetchr-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "naqel-express",
+    "name": "Naqel Express",
+    "type": "regional",
+    "logo": "/logos/naqel-express.svg",
+    "website": "https://www.naqelexpress.com/",
+    "tracking_url": "https://www.naqelexpress.com/en/Tracking/TrackShipments?awbno={tracking}",
+    "description_en": "Leading logistics supply chain solutions provider in Saudi Arabia, founded in 1993 (formerly Hala Express). Largest operational network in KSA with 4,900+ delivery points across 14 MENA countries.",
+    "description_ru": "Ведущий поставщик логистических решений в Саудовской Аравии, основан в 1993 году. Крупнейшая операционная сеть в КСА с 4 900+ точками доставки в 14 странах БВСА.",
+    "services": [
+      {
+        "id": "naqel-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "smsa-express",
+    "name": "SMSA Express",
+    "type": "regional",
+    "logo": "/logos/smsa-express.svg",
+    "website": "https://www.smsaexpress.com/",
+    "tracking_url": "https://www.smsaexpress.com/en/trackingdetails?tracknumbers={tracking}",
+    "description_en": "Express transportation and logistics service provider in Saudi Arabia with 20+ years experience and 200+ retail centers across the kingdom. Strong in e-commerce last-mile delivery.",
+    "description_ru": "Компания экспресс-перевозок и логистики в Саудовской Аравии с 20+ годами опыта и 200+ центрами по всему королевству. Сильна в доставке последней мили.",
+    "services": [
+      {
+        "id": "smsa-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "skynet-worldwide-express",
+    "name": "Skynet Worldwide Express",
+    "type": "regional",
+    "logo": "/logos/skynet-worldwide-express.svg",
+    "website": "https://www.skynetwwe.com/",
+    "tracking_url": "https://www.skynetwwe.com/track?hawb={tracking}",
+    "description_en": "Global express delivery network with strong presence in Middle East and Africa. Operates in 209 countries with franchise-based model. Centers in Dubai Cargo Village and Jebel Ali Free Zone.",
+    "description_ru": "Глобальная сеть экспресс-доставки с сильным присутствием на Ближнем Востоке и в Африке. Работает в 209 странах по франшизной модели.",
+    "services": [
+      {
+        "id": "skynet-worldwide-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "the-courier-guy",
+    "name": "The Courier Guy",
+    "type": "regional",
+    "logo": "/logos/the-courier-guy.svg",
+    "website": "https://thecourierguy.co.za/",
+    "tracking_url": "https://thecourierguy.co.za/tracking/?waybill={tracking}",
+    "description_en": "Major South African courier company with 80 branches nationwide. National and international express services with door-to-door delivery, parcel lockers, and kiosk pickup options.",
+    "description_ru": "Крупная южноафриканская курьерская компания с 80 филиалами по стране. Национальная и международная экспресс-доставка от двери до двери, постаматы и пункты выдачи.",
+    "services": [
+      {
+        "id": "the-courier-guy-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 40,
+        "tracking": true
+      },
+      {
+        "id": "the-courier-guy-economy",
+        "name": "Economy",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 40,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pargo",
+    "name": "Pargo",
+    "type": "regional",
+    "logo": "/logos/pargo.svg",
+    "website": "https://pargo.co.za/",
+    "tracking_url": "https://pargo.co.za/track-trace/?code={tracking}",
+    "description_en": "South African smart logistics company addressing last-mile distribution challenges in sub-Saharan Africa. 4,000+ Pargo Points located in retail stores for convenient parcel pickup.",
+    "description_ru": "Южноафриканская компания умной логистики, решающая проблемы доставки последней мили в странах Африки к югу от Сахары. 4 000+ пунктов Pargo в розничных магазинах.",
+    "services": [
+      {
+        "id": "pargo-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "jumia-logistics",
+    "name": "Jumia Logistics",
+    "type": "regional",
+    "logo": "/logos/jumia-logistics.svg",
+    "website": "https://services.jumia.com/",
+    "tracking_url": "https://packagetracker-services.jumia.com/?tracking={tracking}",
+    "description_en": "Africa's leading e-commerce fulfillment and express delivery service. Integrated logistics network across 12 African countries. Jumia Global allows international sellers to reach African markets.",
+    "description_ru": "Ведущая служба фулфилмента и экспресс-доставки для электронной коммерции в Африке. Интегрированная логистическая сеть в 12 странах Африки.",
+    "services": [
+      {
+        "id": "jumia-logistics-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "jumia-logistics-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "imile",
+    "name": "iMile",
+    "type": "regional",
+    "logo": "/logos/imile.svg",
+    "website": "https://www.imile.com/",
+    "tracking_url": "https://www.imile.com/en/tracking?trackingNumber={tracking}",
+    "description_en": "Fast-growing Middle East and North Africa delivery company, Chinese-backed. Specializes in e-commerce last-mile delivery with COD support. Expanding into Latin America.",
+    "description_ru": "Быстрорастущая служба доставки на Ближнем Востоке и в Северной Африке с китайскими инвестициями. Специализируется на доставке последней мили для электронной коммерции.",
+    "services": [
+      {
+        "id": "imile-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "99minutos",
+    "name": "99Minutos",
+    "type": "regional",
+    "logo": "/logos/99minutos.svg",
+    "website": "https://www.99minutos.com/",
+    "tracking_url": "https://tracking.99minutos.com/{tracking}",
+    "description_en": "Y Combinator-backed e-commerce logistics company specializing in fast deliveries across Latin America. Same-day and next-day delivery with live tracking and e-commerce platform plugins.",
+    "description_ru": "Логистическая компания электронной коммерции (выпускник Y Combinator), специализирующаяся на быстрой доставке в Латинской Америке. Доставка в тот же/следующий день.",
+    "services": [
+      {
+        "id": "99minutos-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "env-a-com",
+    "name": "Envía.com",
+    "type": "regional",
+    "logo": "/logos/env-a-com.svg",
+    "website": "https://www.envia.com/",
+    "tracking_url": "https://rastreo.envia.com/{tracking}",
+    "description_en": "Latin American shipping aggregator platform connecting merchants to 200+ carriers across 15+ countries. Compares rates from multiple carriers including Estafeta, DHL, Fedex, and local options.",
+    "description_ru": "Латиноамериканская платформа-агрегатор доставки, соединяющая продавцов с 200+ перевозчиками в 15+ странах. Сравнивает тарифы множества перевозчиков.",
+    "services": [
+      {
+        "id": "env-a-com-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "env-a-com-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "andreani",
+    "name": "Andreani",
+    "type": "regional",
+    "logo": "/logos/andreani.svg",
+    "website": "https://www.andreani.com/",
+    "tracking_url": "https://www.andreani.com/#!/seguimiento/{tracking}",
+    "description_en": "Argentina's leading logistics and courier service provider. Comprehensive services including domestic/international shipping, freight forwarding, warehousing, and customs clearance.",
+    "description_ru": "Ведущий поставщик логистических и курьерских услуг в Аргентине. Комплексные услуги, включая доставку, грузоперевозки, складирование и таможенное оформление.",
+    "services": [
+      {
+        "id": "andreani-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "andreani-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "chilexpress",
+    "name": "Chilexpress",
+    "type": "regional",
+    "logo": "/logos/chilexpress.svg",
+    "website": "https://www.chilexpress.cl/",
+    "tracking_url": "https://www.chilexpress.cl/estado-envio?codigo={tracking}",
+    "description_en": "Chile's leading courier and delivery company, founded in 1982. 1,100+ branches and 75 operation centers across all 16 Chilean regions. International service via CXP subsidiary with Miami offices.",
+    "description_ru": "Ведущая курьерская компания Чили, основана в 1982 году. 1 100+ филиалов и 75 операционных центров во всех 16 регионах Чили. Международная доставка через дочернюю компанию CXP.",
+    "services": [
+      {
+        "id": "chilexpress-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "chilexpress-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "servientrega",
+    "name": "Servientrega",
+    "type": "regional",
+    "logo": "/logos/servientrega.svg",
+    "website": "https://www.servientrega.com/",
+    "tracking_url": "https://www.servientrega.com/wps/portal/rastreo-envio?guia={tracking}",
+    "description_en": "Colombia's largest courier and logistics company. Strong presence across Andean region (Colombia, Ecuador, Peru, Panama, Venezuela) with US and Spain offices. C2C and B2C specialist.",
+    "description_ru": "Крупнейшая курьерская и логистическая компания Колумбии. Сильное присутствие в Андском регионе с офисами в США и Испании.",
+    "services": [
+      {
+        "id": "servientrega-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "servientrega-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "olva-courier",
+    "name": "Olva Courier",
+    "type": "regional",
+    "logo": "/logos/olva-courier.svg",
+    "website": "https://www.olvacourier.com/",
+    "tracking_url": "https://www.olvacourier.com/tracking.php?codigo={tracking}",
+    "description_en": "Major Peruvian courier company offering domestic and limited international delivery. Extensive coverage across Peru including Lima metropolitan area and provinces.",
+    "description_ru": "Крупная перуанская курьерская компания, предлагающая внутреннюю и ограниченную международную доставку. Обширное покрытие по всему Перу.",
+    "services": [
+      {
+        "id": "olva-courier-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "olva-courier-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "estafeta",
+    "name": "Estafeta",
+    "type": "regional",
+    "logo": "/logos/estafeta.svg",
+    "website": "https://www.estafeta.com/",
+    "tracking_url": "https://www.estafeta.com/Rastreo/Rastreo?numero={tracking}",
+    "description_en": "Major Mexican shipping and logistics company. Global Express air delivery in 1-3 days to US/Canada, 2-5 days worldwide. Crossborder Merkalink service for importing US purchases to Mexico.",
+    "description_ru": "Крупная мексиканская компания доставки и логистики. Авиадоставка Global Express за 1-3 дня в США/Канаду, 2-5 дней по миру. Сервис Merkalink для импорта покупок из США в Мексику.",
+    "services": [
+      {
+        "id": "estafeta-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 68,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "evri-formerly-hermes",
+    "name": "Evri (formerly Hermes)",
+    "type": "regional",
+    "logo": "/logos/evri-formerly-hermes.svg",
+    "website": "https://www.evri.com/",
+    "tracking_url": "https://www.evri.com/track/parcel/{tracking}",
+    "description_en": "Rebranded from Hermes in 2022. One of the UK and Europe's largest budget parcel delivery companies. Headquarters in Hamburg, Germany. Attractive shipping costs for e-commerce.",
+    "description_ru": "Переименована из Hermes в 2022 году. Одна из крупнейших бюджетных служб доставки посылок в Великобритании и Европе. Штаб-квартира в Гамбурге. Привлекательные тарифы.",
+    "services": [
+      {
+        "id": "evri-formerly-hermes-standard",
+        "name": "Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 5,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "inpost",
+    "name": "InPost",
+    "type": "regional",
+    "logo": "/logos/inpost.svg",
+    "website": "https://inpost.eu/",
+    "tracking_url": "https://inpost.pl/sledzenie-przesylek?number={tracking}",
+    "description_en": "Europe's leading parcel locker operator with 40,000+ APMs (Automated Parcel Machines) and 33,000+ PUDOs across 9 European countries. 24/7 self-service collection. Founded in Poland.",
+    "description_ru": "Ведущий оператор постаматов в Европе с 40 000+ автоматизированными постаматами и 33 000+ пунктами выдачи в 9 европейских странах. Круглосуточный самообслуживание.",
+    "services": [
+      {
+        "id": "inpost-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "mondial-relay",
+    "name": "Mondial Relay",
+    "type": "regional",
+    "logo": "/logos/mondial-relay.svg",
+    "website": "https://www.mondialrelay.fr/",
+    "tracking_url": "https://www.mondialrelay.fr/suivi-de-colis?numeroExpedition={tracking}",
+    "description_en": "Major European relay point delivery network with 36,000+ Relais Points across 16 countries. Specializes in affordable parcel delivery to pickup points. 12,000+ points in France alone.",
+    "description_ru": "Крупная европейская сеть доставки в пункты выдачи с 36 000+ точками в 16 странах. Специализируется на доступной доставке посылок. 12 000+ точек только во Франции.",
+    "services": [
+      {
+        "id": "mondial-relay-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "colissimo-la-poste",
+    "name": "Colissimo (La Poste)",
+    "type": "regional",
+    "logo": "/logos/colissimo-la-poste.svg",
+    "website": "https://www.colissimo.fr/",
+    "tracking_url": "https://www.laposte.fr/outils/suivre-vos-envois?code={tracking}",
+    "description_en": "French postal parcel service by La Poste. Affordable tracked delivery across France, Europe, and internationally to 235 countries. Multiple delivery options including home, relay points, and offices.",
+    "description_ru": "Почтовый посылочный сервис La Poste (Франция). Доступная отслеживаемая доставка по Франции, Европе и в 235 стран. Различные варианты доставки: домой, в пункты выдачи, на почту.",
+    "services": [
+      {
+        "id": "colissimo-la-poste-standard",
+        "name": "Standard",
+        "speed_days_min": 2,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "gls-general-logistics-systems",
+    "name": "GLS (General Logistics Systems)",
+    "type": "regional",
+    "logo": "/logos/gls-general-logistics-systems.svg",
+    "website": "https://gls-group.com/",
+    "tracking_url": "https://gls-group.com/track/{tracking}",
+    "description_en": "Germany's third-largest courier, owned by Royal Mail Group. 5,500+ pickup points in Germany, ~8% domestic market share. 100% climate-neutral delivery since 2019. Pan-European network.",
+    "description_ru": "Третий по величине курьер Германии, принадлежит Royal Mail Group. 5 500+ пунктов выдачи в Германии. 100% климатически нейтральная доставка с 2019 года. Панъевропейская сеть.",
+    "services": [
+      {
+        "id": "gls-general-logistics-systems-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 40,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "spring-gds",
+    "name": "Spring GDS",
+    "type": "regional",
+    "logo": "/logos/spring-gds.svg",
+    "website": "https://www.spring-gds.com/",
+    "tracking_url": "https://www.spring-gds.com/track-and-trace/?barcode={tracking}",
+    "description_en": "International parcel delivery company operating since 2001. Uses 230+ local postal services for last-mile delivery. Popular with e-commerce for affordable cross-border shipping up to 20kg. Full end-to-end tracking on Tracked Delivery service.",
+    "description_ru": "Международная служба доставки посылок, работающая с 2001 года. Использует 230+ местных почтовых служб для доставки последней мили. Популярна для трансграничной электронной коммерции до 20 кг.",
+    "services": [
+      {
+        "id": "spring-gds-standard",
+        "name": "Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "packlink",
+    "name": "Packlink",
+    "type": "regional",
+    "logo": "/logos/packlink.svg",
+    "website": "https://www.packlink.com/",
+    "tracking_url": "https://www.packlink.com/en/tracking/?reference={tracking}",
+    "description_en": "European shipping comparison platform and aggregator (acquired by Auctane/Stamps.com). Compares rates from DHL, UPS, GLS, Hermes, and other carriers. Integrated with eBay, Amazon, Shopify.",
+    "description_ru": "Европейская платформа сравнения и агрегации тарифов доставки (приобретена Auctane). Сравнивает тарифы DHL, UPS, GLS, Hermes и других. Интегрирована с eBay, Amazon, Shopify.",
+    "services": [
+      {
+        "id": "packlink-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 10,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "postnl",
+    "name": "PostNL",
+    "type": "regional",
+    "logo": "/logos/postnl.svg",
+    "website": "https://www.postnl.nl/",
+    "tracking_url": "https://postnl.nl/tracktrace/?B={tracking}",
+    "description_en": "Netherlands' leading postal and parcel delivery company with 225+ years of history. Delivered 51 million parcels in 2 days during 2023 peak season. Evening and Sunday delivery options.",
+    "description_ru": "Ведущая почтовая и посылочная компания Нидерландов с 225+ годами истории. Вечерняя и воскресная доставка. Мощная сеть по Бенилюксу и всей Европе.",
+    "services": [
+      {
+        "id": "postnl-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "bpost",
+    "name": "bpost",
+    "type": "regional",
+    "logo": "/logos/bpost.svg",
+    "website": "https://www.bpost.be/",
+    "tracking_url": "https://track.bpost.cloud/btr/web/#/search?itemCode={tracking}",
+    "description_en": "Belgium's national postal and parcel service. Domestic next-day delivery, European and worldwide shipping. Home delivery and post office/parcel point pickup options.",
+    "description_ru": "Национальная почтовая и посылочная служба Бельгии. Доставка на следующий день внутри страны, европейская и мировая доставка.",
+    "services": [
+      {
+        "id": "bpost-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "austrian-post-sterreichische-post",
+    "name": "Austrian Post (Österreichische Post)",
+    "type": "regional",
+    "logo": "/logos/austrian-post-sterreichische-post.svg",
+    "website": "https://www.post.at/",
+    "tracking_url": "https://www.post.at/sv/sendungssuche?snr={tracking}",
+    "description_en": "Austria's national postal and parcel service. Offers range from economy to EMS express. Strong network for Central European deliveries.",
+    "description_ru": "Национальная почтовая служба Австрии. Диапазон услуг от эконом до EMS экспресс. Развитая сеть для доставки в Центральной Европе.",
+    "services": [
+      {
+        "id": "austrian-post-sterreichische-post-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "swiss-post",
+    "name": "Swiss Post",
+    "type": "regional",
+    "logo": "/logos/swiss-post.svg",
+    "website": "https://www.post.ch/",
+    "tracking_url": "https://service.post.ch/ekp-web/ui/entry/search/{tracking}",
+    "description_en": "Switzerland's national postal service. Reliable and punctual. Joint owner of Asendia (with La Poste) for international e-commerce delivery.",
+    "description_ru": "Национальная почтовая служба Швейцарии. Надёжная и пунктуальная. Совладелец Asendia (вместе с La Poste) для международной электронной коммерции.",
+    "services": [
+      {
+        "id": "swiss-post-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 1,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "la-poste-france",
+    "name": "La Poste (France)",
+    "type": "regional",
+    "logo": "/logos/la-poste-france.svg",
+    "website": "https://www.laposte.fr/",
+    "tracking_url": "https://www.laposte.fr/outils/suivre-vos-envois?code={tracking}",
+    "description_en": "French national postal service. Colissimo for parcels, Chronopost for express. Joint owner of Asendia (with Swiss Post) and parent of DPD Group. Extensive international reach.",
+    "description_ru": "Национальная почтовая служба Франции. Colissimo для посылок, Chronopost для экспресса. Совладелец Asendia и материнская компания DPD Group.",
+    "services": [
+      {
+        "id": "la-poste-france-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dpd-group-eu",
+    "name": "DPD Group (EU)",
+    "type": "regional",
+    "logo": "/logos/dpd-group-eu.svg",
+    "website": "https://www.dpd.com/",
+    "tracking_url": "https://tracking.dpd.de/parcelstatus?query={tracking}",
+    "description_en": "Major European parcel network (part of GeoPost/La Poste). 31 countries, 70,000+ pickup shops. Predict service offers 1-hour delivery time windows. Strong B2C e-commerce focus.",
+    "description_ru": "Крупная европейская посылочная сеть (часть GeoPost/La Poste). 31 страна, 70 000+ пунктов выдачи. Сервис Predict предлагает окна доставки в 1 час.",
+    "services": [
+      {
+        "id": "dpd-group-eu-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 31.5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "yamato-transport-kuroneko-yamato",
+    "name": "Yamato Transport (Kuroneko Yamato)",
+    "type": "regional",
+    "logo": "/logos/yamato-transport-kuroneko-yamato.svg",
+    "website": "https://www.kuronekoyamato.co.jp/en/",
+    "tracking_url": "https://toi.kuronekoyamato.co.jp/cgi-bin/tneko?number01={tracking}",
+    "description_en": "Japan's #1 door-to-door delivery company with 41% market share. Known for Kuroneko (Black Cat) brand. Haneda Chronogate terminal enables next-day delivery to Asia. Operates in 24 countries.",
+    "description_ru": "Крупнейшая служба доставки от двери до двери в Японии с 41% долей рынка. Известна брендом Kuroneko (Чёрный Кот). Терминал Haneda Chronogate обеспечивает доставку в Азию на следующий день.",
+    "services": [
+      {
+        "id": "yamato-transport-kuroneko-yamato-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sagawa-express",
+    "name": "Sagawa Express",
+    "type": "regional",
+    "logo": "/logos/sagawa-express.svg",
+    "website": "https://www.sagawa-exp.co.jp/english/",
+    "tracking_url": "https://k2k.sagawa-exp.co.jp/p/web/okurijosearch.do?okurijoNo={tracking}",
+    "description_en": "Japan's second-largest parcel delivery company after Yamato Transport. Generally cheaper than Yamato. Strong in B2B and corporate logistics. Part of SG Holdings group.",
+    "description_ru": "Вторая по величине компания доставки посылок в Японии после Yamato Transport. Обычно дешевле Yamato. Сильна в B2B и корпоративной логистике.",
+    "services": [
+      {
+        "id": "sagawa-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "japan-post-yu-pack-ems",
+    "name": "Japan Post (Yu-Pack / EMS)",
+    "type": "regional",
+    "logo": "/logos/japan-post-yu-pack-ems.svg",
+    "website": "https://www.post.japanpost.jp/english/",
+    "tracking_url": "https://trackings.post.japanpost.jp/services/srv/search/?requestNo1={tracking}",
+    "description_en": "Japan's national postal service. EMS is the premium international option. Yu-Pack for domestic parcels. Multiple speed/price tiers for international: EMS, Airmail, SAL, Surface.",
+    "description_ru": "Национальная почтовая служба Японии. EMS — премиальный международный вариант. Yu-Pack для внутренних посылок. Несколько уровней скорости/цены: EMS, Авиа, SAL, Морская.",
+    "services": [
+      {
+        "id": "japan-post-yu-pack-ems-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "japan-post-yu-pack-ems-economy",
+        "name": "Economy",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cj-logistics-cj-korea-express",
+    "name": "CJ Logistics (CJ Korea Express)",
+    "type": "regional",
+    "logo": "/logos/cj-logistics-cj-korea-express.svg",
+    "website": "https://www.cjlogistics.com/",
+    "tracking_url": "https://www.cjlogistics.com/en/tool/international/tracking?gnbInvcNo={tracking}",
+    "description_en": "South Korea's largest logistics company (part of CJ Group). Comprehensive international freight forwarding via air, sea, and land. E-commerce logistics solutions with customs clearance.",
+    "description_ru": "Крупнейшая логистическая компания Южной Кореи (часть CJ Group). Комплексные международные перевозки по воздуху, морю и суше. Логистика электронной коммерции с таможенным оформлением.",
+    "services": [
+      {
+        "id": "cj-logistics-cj-korea-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "hanjin-express",
+    "name": "Hanjin Express",
+    "type": "regional",
+    "logo": "/logos/hanjin-express.svg",
+    "website": "https://www.hanjin.com/",
+    "tracking_url": "https://www.hanjin.com/kor/CMS/DeliveryMgr/WaybillResult.do?mession-id=&wblnum={tracking}",
+    "description_en": "One of South Korea's top parcel delivery companies. Mainly focused on domestic Korean market with growing international capabilities through partnerships.",
+    "description_ru": "Одна из ведущих компаний по доставке посылок в Южной Корее. Преимущественно внутренний рынок с растущими международными возможностями через партнёрства.",
+    "services": [
+      {
+        "id": "hanjin-express-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "lotte-global-logistics",
+    "name": "Lotte Global Logistics",
+    "type": "regional",
+    "logo": "/logos/lotte-global-logistics.svg",
+    "website": "https://www.lotteglogis.com/",
+    "tracking_url": "https://www.lotteglogis.com/home/reservation/tracking/index?InvNo={tracking}",
+    "description_en": "Part of Lotte Group, one of South Korea's largest conglomerates. Full-service logistics including parcel delivery, freight, and warehousing. Growing international presence.",
+    "description_ru": "Часть Lotte Group, одного из крупнейших конгломератов Южной Кореи. Полный спектр логистических услуг, включая доставку, грузоперевозки и складирование.",
+    "services": [
+      {
+        "id": "lotte-global-logistics-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sendle",
+    "name": "Sendle",
+    "type": "regional",
+    "logo": "/logos/sendle.svg",
+    "website": "https://www.sendle.com/",
+    "tracking_url": "https://track.sendle.com/tracking/{tracking}",
+    "description_en": "WARNING: Sendle halted all Australian parcel pickups and deliveries in January 2026 after financial troubles following its US merger with ACI Logistix and FirstMile. Status uncertain.",
+    "description_ru": "ВНИМАНИЕ: Sendle прекратила все операции по приёму и доставке посылок в Австралии в январе 2026 года после финансовых проблем, связанных с слиянием с ACI Logistix и FirstMile.",
+    "services": [
+      {
+        "id": "sendle-standard",
+        "name": "Standard",
+        "speed_days_min": 2026,
+        "speed_days_max": 2026,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "couriersplease",
+    "name": "CouriersPlease",
+    "type": "regional",
+    "logo": "/logos/couriersplease.svg",
+    "website": "https://www.couriersplease.com.au/",
+    "tracking_url": "https://www.couriersplease.com.au/tools-track?q={tracking}",
+    "description_en": "Australian parcel delivery service operating since 1983 using independent courier franchises. Primarily domestic. Competitive rates starting from ~$8.10. Good for e-commerce and SMEs.",
+    "description_ru": "Австралийская служба доставки посылок, работающая с 1983 года через сеть франшизных курьеров. Преимущественно внутренние перевозки. Конкурентные тарифы от ~$8.10 AUD.",
+    "services": [
+      {
+        "id": "couriersplease-standard",
+        "name": "Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "startrack",
+    "name": "StarTrack",
+    "type": "regional",
+    "logo": "/logos/startrack.svg",
+    "website": "https://www.startrack.com.au/",
+    "tracking_url": "https://www.startrack.com.au/track?id={tracking}",
+    "description_en": "Australian parcel and freight carrier owned by Australia Post. Focused on business-to-business deliveries with national road and air network. Premium and express domestic services.",
+    "description_ru": "Австралийский перевозчик посылок и грузов, принадлежащий Australia Post. Ориентирован на B2B доставки с национальной дорожной и авиасетью.",
+    "services": [
+      {
+        "id": "startrack-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "aramex-australia-formerly-fastway",
+    "name": "Aramex Australia (formerly Fastway)",
+    "type": "regional",
+    "logo": "/logos/aramex-australia-formerly-fastway.svg",
+    "website": "https://www.aramex.com.au/",
+    "tracking_url": "https://www.aramex.com.au/tools/track?l={tracking}",
+    "description_en": "Aramex Australia (formerly Fastway Couriers) operates domestic and international delivery via franchise-based courier network. Competitive starting rate ~$7.61. Part of Aramex global network.",
+    "description_ru": "Aramex Australia (ранее Fastway Couriers) — внутренняя и международная доставка через франшизную курьерскую сеть. Конкурентный стартовый тариф от ~$7.61 AUD.",
+    "services": [
+      {
+        "id": "aramex-australia-formerly-fastway-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "nz-post",
+    "name": "NZ Post",
+    "type": "regional",
+    "logo": "/logos/nz-post.svg",
+    "website": "https://www.nzpost.co.nz/",
+    "tracking_url": "https://www.nzpost.co.nz/tools/tracking?trackid={tracking}",
+    "description_en": "New Zealand's national postal service. CourierPost for express domestic, ParcelPost for economy. International delivery to 220+ countries via air and economy tiers.",
+    "description_ru": "Национальная почтовая служба Новой Зеландии. CourierPost для экспресс-доставки, ParcelPost для эконом. Международная доставка в 220+ стран.",
+    "services": [
+      {
+        "id": "nz-post-express",
+        "name": "Express",
+        "speed_days_min": 3,
+        "speed_days_max": 10,
+        "max_weight_kg": 25,
+        "tracking": true
+      },
+      {
+        "id": "nz-post-standard",
+        "name": "Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 25,
+        "tracking": true
+      },
+      {
+        "id": "nz-post-economy",
+        "name": "Economy",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "epacket-china-post-usps",
+    "name": "ePacket (China Post / USPS)",
+    "type": "regional",
+    "logo": "/logos/epacket-china-post-usps.svg",
+    "website": "https://www.usps.com/business/international-shipping.htm",
+    "tracking_url": "https://track.4px.com/?locale=en#/result/0/{tracking}",
+    "description_en": "Joint service of China Post and destination postal services (originally USPS). Affordable tracked shipping for lightweight e-commerce parcels from China. End-to-end tracking to doorstep.",
+    "description_ru": "Совместная служба China Post и почтовых служб стран назначения. Доступная отслеживаемая доставка лёгких посылок электронной коммерции из Китая. Сквозное отслеживание.",
+    "services": [
+      {
+        "id": "epacket-china-post-usps-standard",
+        "name": "Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "zonos",
+    "name": "Zonos",
+    "type": "regional",
+    "logo": "/logos/zonos.svg",
+    "website": "https://zonos.com/",
+    "tracking_url": "N/A (platform, not carrier)",
+    "description_en": "Cross-border trade operating system. Not a carrier but a compliance and duty/tax calculation platform. Powers duty calculations, tariff classifications, and customs compliance for e-commerce globally.",
+    "description_ru": "Операционная система трансграничной торговли. Не перевозчик, а платформа расчёта пошлин, тарифов и таможенного соответствия для глобальной электронной коммерции.",
+    "services": [
+      {
+        "id": "zonos-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "passport-shipping-passport-global",
+    "name": "Passport Shipping (Passport Global)",
+    "type": "regional",
+    "logo": "/logos/passport-shipping-passport-global.svg",
+    "website": "https://passportglobal.com/",
+    "tracking_url": "https://passportglobal.com/track/{tracking}",
+    "description_en": "Cross-border e-commerce shipping platform with in-house carrier network delivering to 190+ countries. Offers branded tracking pages, landed duty/tax calculations, and Seller of Record services.",
+    "description_ru": "Платформа трансграничной доставки для электронной коммерции с собственной сетью перевозчиков, доставляющей в 190+ стран. Брендированные страницы отслеживания, расчёт пошлин.",
+    "services": [
+      {
+        "id": "passport-shipping-passport-global-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "passport-shipping-passport-global-economy",
+        "name": "Economy",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pitney-bowes",
+    "name": "Pitney Bowes",
+    "type": "regional",
+    "logo": "/logos/pitney-bowes.svg",
+    "website": "https://www.pitneybowes.com/",
+    "tracking_url": "https://tracking.pitneybowes.com/tracking?trackingNumber={tracking}",
+    "description_en": "Pioneer of cross-border e-commerce logistics. Helps thousands of retailers grow internationally with delivery to 220+ countries. Integrated customs clearance and compliance.",
+    "description_ru": "Пионер трансграничной электронной коммерции. Помогает тысячам ритейлеров расти на международном рынке с доставкой в 220+ стран. Интегрированное таможенное оформление.",
+    "services": [
+      {
+        "id": "pitney-bowes-express",
+        "name": "Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "pitney-bowes-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "asendia",
+    "name": "Asendia",
+    "type": "regional",
+    "logo": "/logos/asendia.svg",
+    "website": "https://www.asendia.com/",
+    "tracking_url": "https://tracking.asendia.com/tracking/{tracking}",
+    "description_en": "Alliance between La Poste (France) and Swiss Post. Largest international mail consolidation service for USPS. e-PAQ product line offers tiered delivery options worldwide with full tracking.",
+    "description_ru": "Альянс La Poste (Франция) и Swiss Post. Крупнейшая международная служба консолидации почты для USPS. Линейка e-PAQ предлагает многоуровневую доставку по всему миру.",
+    "services": [
+      {
+        "id": "asendia-standard",
+        "name": "Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ipostal1",
+    "name": "iPostal1",
+    "type": "regional",
+    "logo": "/logos/ipostal1.svg",
+    "website": "https://ipostal1.com/",
+    "tracking_url": "N/A (virtual mailbox service)",
+    "description_en": "Virtual mailbox and package forwarding service with 3,000+ real street addresses in USA and Canada. Receives packages, scans mail, and forwards internationally. Not a carrier per se.",
+    "description_ru": "Виртуальный почтовый ящик и сервис пересылки посылок с 3 000+ реальных адресов в США и Канаде. Принимает посылки, сканирует почту и пересылает по всему миру.",
+    "services": [
+      {
+        "id": "ipostal1-standard",
+        "name": "Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "postnl-international",
+    "name": "PostNL International",
+    "type": "regional",
+    "logo": "/logos/postnl-international.svg",
+    "website": "https://www.postnl.nl/en/",
+    "tracking_url": "https://postnl.nl/tracktrace/?B={tracking}",
+    "description_en": "International arm of PostNL, Netherlands' postal service. Affordable tracked international parcel service. Popular with European e-commerce merchants for worldwide shipping.",
+    "description_ru": "Международное подразделение PostNL, почтовой службы Нидерландов. Доступная отслеживаемая международная посылочная доставка. Популярна у европейских продавцов.",
+    "services": [
+      {
+        "id": "postnl-international-standard",
+        "name": "Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 20,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "globalpost-by-auctane",
+    "name": "GlobalPost (by Auctane)",
+    "type": "regional",
+    "logo": "/logos/globalpost-by-auctane.svg",
+    "website": "https://www.globalpost.com/",
+    "tracking_url": "https://track.globalpost.com/?trackingNumber={tracking}",
+    "description_en": "International shipping service by Auctane (Stamps.com/ShipStation parent). Offers discounted international shipping rates leveraging bulk postal discounts. Integrates with major e-commerce platforms.",
+    "description_ru": "Международная служба доставки от Auctane (материнская компания Stamps.com/ShipStation). Предлагает скидки на международную доставку. Интегрируется с платформами электронной коммерции.",
+    "services": [
+      {
+        "id": "globalpost-by-auctane-standard",
+        "name": "Standard",
+        "speed_days_min": 6,
+        "speed_days_max": 10,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "globalpost-by-auctane-economy",
+        "name": "Economy",
+        "speed_days_min": 10,
+        "speed_days_max": 20,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "landmark-global",
+    "name": "Landmark Global",
+    "type": "regional",
+    "logo": "/logos/landmark-global.svg",
+    "website": "https://www.landmarkglobal.com/",
+    "tracking_url": "https://tracking.landmarkglobal.com/?trackingNumber={tracking}",
+    "description_en": "Subsidiary of bpost (Belgian Post). Specializes in cross-border e-commerce delivery to 220+ countries. Customs clearance, returns management, and DDP solutions.",
+    "description_ru": "Дочерняя компания bpost (Бельгийская почта). Специализируется на трансграничной доставке электронной коммерции в 220+ стран. Таможенное оформление и управление возвратами.",
+    "services": [
+      {
+        "id": "landmark-global-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "landmark-global-economy",
+        "name": "Economy",
+        "speed_days_min": 10,
+        "speed_days_max": 20,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  }
+]

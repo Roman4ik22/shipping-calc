@@ -1,0 +1,33 @@
+{
+  "carrier_id": "aramex",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Aramex rates. Strongest coverage in Middle East, Africa, South Asia.",
+  "zones": [
+    {"zone": 1, "description": "GCC Countries", "countries_from": ["AE", "SA", "QA", "KW", "BH", "OM"], "countries_to": ["AE", "SA", "QA", "KW", "BH", "OM"]},
+    {"zone": 2, "description": "Middle East / North Africa", "countries_from": ["AE"], "countries_to": ["JO", "LB", "IQ", "EG", "MA", "TN", "DZ", "LY", "TR", "IL", "PS", "SY", "YE", "IR"]},
+    {"zone": 3, "description": "South Asia", "countries_from": ["AE"], "countries_to": ["IN", "PK", "BD", "LK", "NP"]},
+    {"zone": 4, "description": "Sub-Saharan Africa", "countries_from": ["AE"], "countries_to": ["KE", "NG", "ZA", "ET", "TZ", "GH", "UG", "SN", "CI", "CM"]},
+    {"zone": 5, "description": "Europe", "countries_from": ["AE"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL"]},
+    {"zone": 6, "description": "Americas / East Asia", "countries_from": ["AE"], "countries_to": ["US", "CA", "BR", "CN", "JP", "KR", "AU"]}
+  ],
+  "rates": {
+    "aramex-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [18, 25, 28, 35, 42, 55]},
+      {"weight_kg": 1, "prices_by_zone": [22, 32, 35, 45, 52, 68]},
+      {"weight_kg": 2, "prices_by_zone": [30, 42, 48, 58, 68, 88]},
+      {"weight_kg": 5, "prices_by_zone": [48, 68, 78, 95, 110, 145]},
+      {"weight_kg": 10, "prices_by_zone": [78, 112, 128, 158, 185, 242]},
+      {"weight_kg": 20, "prices_by_zone": [135, 198, 228, 278, 328, 432]},
+      {"weight_kg": 30, "prices_by_zone": [192, 282, 325, 398, 470, 622]}
+    ],
+    "aramex-value-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [12, 18, 20, 25, 32, 42]},
+      {"weight_kg": 1, "prices_by_zone": [15, 22, 25, 32, 40, 52]},
+      {"weight_kg": 2, "prices_by_zone": [20, 30, 35, 42, 52, 68]},
+      {"weight_kg": 5, "prices_by_zone": [35, 50, 58, 72, 85, 112]},
+      {"weight_kg": 10, "prices_by_zone": [58, 85, 98, 120, 145, 190]},
+      {"weight_kg": 20, "prices_by_zone": [102, 152, 178, 218, 258, 342]},
+      {"weight_kg": 30, "prices_by_zone": [145, 218, 252, 312, 370, 492]}
+    ]
+  }
+}

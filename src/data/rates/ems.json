@@ -1,0 +1,22 @@
+{
+  "carrier_id": "ems",
+  "effective_date": "2026-01-01",
+  "note": "Estimated EMS rates. EMS operates through national postal services; actual rates vary by origin country.",
+  "zones": [
+    {"zone": 1, "description": "Zone 1 - Neighboring", "countries_from": ["*"], "countries_to": ["NEIGHBORS"]},
+    {"zone": 2, "description": "Zone 2 - Regional", "countries_from": ["*"], "countries_to": ["REGIONAL"]},
+    {"zone": 3, "description": "Zone 3 - Intercontinental", "countries_from": ["*"], "countries_to": ["INTERCONTINENTAL"]},
+    {"zone": 4, "description": "Zone 4 - Remote", "countries_from": ["*"], "countries_to": ["REMOTE"]}
+  ],
+  "rates": {
+    "ems-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [22, 28, 35, 42]},
+      {"weight_kg": 1, "prices_by_zone": [28, 35, 45, 55]},
+      {"weight_kg": 2, "prices_by_zone": [35, 48, 62, 75]},
+      {"weight_kg": 5, "prices_by_zone": [55, 78, 105, 128]},
+      {"weight_kg": 10, "prices_by_zone": [88, 128, 175, 215]},
+      {"weight_kg": 20, "prices_by_zone": [148, 225, 315, 395]},
+      {"weight_kg": 30, "prices_by_zone": [208, 322, 455, 575]}
+    ]
+  }
+}

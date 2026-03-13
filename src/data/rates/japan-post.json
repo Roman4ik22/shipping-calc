@@ -1,0 +1,31 @@
+{
+  "carrier_id": "japan-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Japan Post international rates from Japan. EMS is premium express, SAL is economy surface-air.",
+  "zones": [
+    {"zone": 1, "description": "Asia Zone 1 (East Asia)", "countries_from": ["JP"], "countries_to": ["CN", "KR", "TW", "HK", "MO"]},
+    {"zone": 2, "description": "Asia Zone 2 & Oceania", "countries_from": ["JP"], "countries_to": ["SG", "TH", "MY", "ID", "PH", "VN", "IN", "AU", "NZ"]},
+    {"zone": 3, "description": "North America & Europe", "countries_from": ["JP"], "countries_to": ["US", "CA", "MX", "GB", "DE", "FR", "IT", "ES", "NL", "SE", "CH"]},
+    {"zone": 4, "description": "South America, Africa, Middle East", "countries_from": ["JP"], "countries_to": ["BR", "AR", "CL", "ZA", "NG", "KE", "AE", "SA", "EG", "TR"]}
+  ],
+  "rates": {
+    "jp-ems": [
+      {"weight_kg": 0.5, "prices_by_zone": [15, 18, 22, 25]},
+      {"weight_kg": 1, "prices_by_zone": [20, 25, 30, 35]},
+      {"weight_kg": 2, "prices_by_zone": [28, 35, 42, 48]},
+      {"weight_kg": 5, "prices_by_zone": [48, 60, 72, 82]},
+      {"weight_kg": 10, "prices_by_zone": [78, 98, 120, 138]},
+      {"weight_kg": 20, "prices_by_zone": [135, 172, 212, 245]},
+      {"weight_kg": 30, "prices_by_zone": [190, 242, 298, 348]}
+    ],
+    "jp-sal": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 10, 12, 14]},
+      {"weight_kg": 1, "prices_by_zone": [11, 14, 17, 20]},
+      {"weight_kg": 2, "prices_by_zone": [16, 20, 25, 28]},
+      {"weight_kg": 5, "prices_by_zone": [28, 36, 44, 50]},
+      {"weight_kg": 10, "prices_by_zone": [48, 62, 76, 88]},
+      {"weight_kg": 20, "prices_by_zone": [85, 110, 138, 158]},
+      {"weight_kg": 30, "prices_by_zone": [120, 155, 195, 225]}
+    ]
+  }
+}
