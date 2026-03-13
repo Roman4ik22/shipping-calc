@@ -45,6 +45,8 @@ export default function RateTable({
 }) {
   const weightSteps = [0.5, 1, 2, 5, 10, 20, 30];
   const [selectedWeight, setSelectedWeight] = useState(1);
+  const [sortBy, setSortBy] = useState<"price" | "speed">("price");
+  const [filterType, setFilterType] = useState<"all" | "international" | "regional" | "postal">("all");
 
   if (corridorRates.length === 0) {
     return (
@@ -54,24 +56,37 @@ export default function RateTable({
     );
   }
 
-  // Get rates for selected weight and sort
+  // Get rates for selected weight
   const ratesAtWeight = corridorRates
     .map((cr) => {
       const rate = cr.rates.find((r) => r.weight_kg === selectedWeight);
       return { ...cr, price: rate?.price_usd ?? null };
     })
     .filter((r) => r.price !== null)
-    .sort((a, b) => (a.price ?? 999) - (b.price ?? 999));
+    .filter((r) => filterType === "all" || r.carrier_type === filterType)
+    .sort((a, b) => {
+      if (sortBy === "speed") {
+        return a.estimated_days_min - b.estimated_days_min || (a.price ?? 999) - (b.price ?? 999);
+      }
+      return (a.price ?? 999) - (b.price ?? 999);
+    });
 
   const cheapest = ratesAtWeight[0];
   const fastest = [...ratesAtWeight].sort(
     (a, b) => a.estimated_days_min - b.estimated_days_min
   )[0];
 
+  const typeOptions = [
+    { value: "all" as const, label: locale === "ru" ? "Все" : "All" },
+    { value: "international" as const, label: locale === "ru" ? "Экспресс" : "Express" },
+    { value: "regional" as const, label: locale === "ru" ? "Региональные" : "Regional" },
+    { value: "postal" as const, label: locale === "ru" ? "Почтовые" : "Postal" },
+  ];
+
   return (
     <div>
       {/* Weight selector */}
-      <div className="mb-6">
+      <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-2">
           {labels.select_weight}
         </label>
@@ -92,9 +107,52 @@ export default function RateTable({
         </div>
       </div>
 
+      {/* Sort & filter controls */}
+      <div className="flex flex-wrap items-center gap-3 mb-6">
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-gray-500">{locale === "ru" ? "Сортировка:" : "Sort:"}</span>
+          <button
+            onClick={() => setSortBy("price")}
+            className={`px-3 py-1.5 rounded text-sm ${
+              sortBy === "price" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            {labels.price}
+          </button>
+          <button
+            onClick={() => setSortBy("speed")}
+            className={`px-3 py-1.5 rounded text-sm ${
+              sortBy === "speed" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            {labels.delivery_time}
+          </button>
+        </div>
+        <div className="h-4 w-px bg-gray-300 hidden sm:block" />
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-gray-500">{locale === "ru" ? "Тип:" : "Type:"}</span>
+          {typeOptions.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => setFilterType(opt.value)}
+              className={`px-3 py-1.5 rounded text-sm ${
+                filterType === opt.value ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Results count */}
+      <p className="text-sm text-gray-500 mb-3">
+        {ratesAtWeight.length} {locale === "ru" ? "результатов" : "results"}
+      </p>
+
       {/* Rate cards */}
       <div className="space-y-3">
-        {ratesAtWeight.map((rate, idx) => {
+        {ratesAtWeight.map((rate) => {
           const isCheapest = rate === cheapest;
           const isFastest = rate === fastest && !isCheapest;
 
@@ -111,7 +169,7 @@ export default function RateTable({
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <span className="font-semibold text-gray-900">
                       {rate.carrier_name}
                     </span>
@@ -140,7 +198,7 @@ export default function RateTable({
                   <p className="text-sm text-gray-500">{rate.service_name}</p>
                 </div>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-4 sm:gap-6">
                   <div className="text-center">
                     <p className="text-xs text-gray-500 uppercase">
                       {labels.delivery_time}
@@ -152,7 +210,7 @@ export default function RateTable({
                       </span>
                     </p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center hidden sm:block">
                     <p className="text-xs text-gray-500 uppercase">
                       {labels.tracking}
                     </p>
@@ -170,10 +228,20 @@ export default function RateTable({
                   </div>
                 </div>
               </div>
+              {/* Mobile tracking info */}
+              <div className="sm:hidden mt-2 text-xs text-gray-500">
+                {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
+              </div>
             </div>
           );
         })}
       </div>
+
+      {ratesAtWeight.length === 0 && (
+        <div className="text-center py-8 text-gray-500">
+          <p>{locale === "ru" ? "Нет результатов для выбранного фильтра" : "No results for selected filter"}</p>
+        </div>
+      )}
 
       {/* Disclaimer */}
       <p className="mt-6 text-xs text-gray-400 leading-relaxed">

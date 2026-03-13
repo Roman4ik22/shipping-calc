@@ -174,6 +174,22 @@ export default async function CarrierPage({
         })()}
       </div>
 
+      {/* Shipping guides */}
+      <h2 className="text-xl font-bold text-gray-900 mb-4">
+        {loc === "ru" ? "Гиды по доставке" : "Shipping Guides"}
+      </h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-8">
+        {getPopularCountries().slice(0, 8).map((c) => (
+          <Link
+            key={c.code}
+            href={`/${locale}/guide/${c.slug_en}`}
+            className="text-sm text-blue-600 hover:text-blue-800 py-1"
+          >
+            {countryFlag(c.code)} {getCountryName(c, loc)}
+          </Link>
+        ))}
+      </div>
+
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"

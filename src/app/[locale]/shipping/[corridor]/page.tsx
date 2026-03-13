@@ -417,6 +417,43 @@ export default async function CorridorPage({
         );
       })()}
 
+      {/* Shipping guide links */}
+      <section className="mt-12">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">
+          {loc === "ru" ? "Подробнее о доставке" : "Learn more about shipping"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link
+            href={`/${locale}/guide/${destination.slug_en}`}
+            className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+          >
+            <span className="text-2xl">{countryFlag(destination.code)}</span>
+            <div>
+              <p className="font-medium text-gray-900 text-sm">
+                {loc === "ru" ? `Гид по доставке в ${destName}` : `Shipping Guide to ${destName}`}
+              </p>
+              <p className="text-xs text-gray-500">
+                {loc === "ru" ? "Таможня, пошлины, советы" : "Customs, duties, tips"}
+              </p>
+            </div>
+          </Link>
+          <Link
+            href={`/${locale}/guide/${origin.slug_en}`}
+            className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+          >
+            <span className="text-2xl">{countryFlag(origin.code)}</span>
+            <div>
+              <p className="font-medium text-gray-900 text-sm">
+                {loc === "ru" ? `Гид по доставке в ${originName}` : `Shipping Guide to ${originName}`}
+              </p>
+              <p className="text-xs text-gray-500">
+                {loc === "ru" ? "Таможня, пошлины, советы" : "Customs, duties, tips"}
+              </p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Reverse corridor link */}
       <section className="mt-6">
         <Link
