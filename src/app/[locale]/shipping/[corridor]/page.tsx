@@ -80,6 +80,15 @@ export async function generateMetadata({
         ru: `/ru/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, "ru")}`,
       },
     },
+    openGraph: {
+      title: t(loc, "meta_corridor_title", { origin: originName, destination: destName }),
+      description: t(loc, "meta_corridor_description", {
+        origin: originName,
+        destination: destName,
+        count: String(corridorData?.carriers.length ?? 30),
+      }),
+      type: "website",
+    },
   };
 }
 
@@ -221,6 +230,27 @@ export default async function CorridorPage({
           disclaimer: t(loc, "disclaimer"),
         }}
       />
+
+      {/* SEO summary text */}
+      {corridorData && corridorData.carriers.length > 0 && (() => {
+        const cheapestRate = corridorData.carriers[0];
+        const cheapestPrice = cheapestRate.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0;
+        const fastestCarrier = [...corridorData.carriers].sort((a, b) => a.estimated_days_min - b.estimated_days_min)[0];
+        return (
+          <section className="mt-8 bg-gray-50 rounded-lg p-6">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">
+              {loc === "ru"
+                ? `Доставка из ${originName} в ${destName}: обзор`
+                : `Shipping from ${originName} to ${destName}: Overview`}
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              {loc === "ru"
+                ? `Мы нашли ${corridorData.carriers.length} вариантов доставки из ${originName} в ${destName}. Самый дешёвый вариант — ${cheapestRate.carrier.name} (${cheapestRate.service.name}) от $${cheapestPrice} за 1 кг. Самая быстрая доставка — ${fastestCarrier.carrier.name} за ${fastestCarrier.estimated_days_min}–${fastestCarrier.estimated_days_max} дней. Цены зависят от веса посылки, выбранного сервиса и дополнительных услуг. Экспресс-перевозчики (DHL, FedEx, UPS) предлагают быструю доставку с отслеживанием, почтовые сервисы — более доступные тарифы.`
+                : `We found ${corridorData.carriers.length} shipping options from ${originName} to ${destName}. The cheapest option is ${cheapestRate.carrier.name} (${cheapestRate.service.name}) starting from $${cheapestPrice} for 1 kg. The fastest delivery is ${fastestCarrier.carrier.name} in ${fastestCarrier.estimated_days_min}–${fastestCarrier.estimated_days_max} days. Prices depend on package weight, chosen service, and additional options. Express carriers (DHL, FedEx, UPS) offer fast delivery with tracking, while postal services provide more affordable rates.`}
+            </p>
+          </section>
+        );
+      })()}
 
       {/* Related corridors */}
       <section className="mt-12">
@@ -405,6 +435,34 @@ export default async function CorridorPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: t(loc, "ship_from", { country: originName }),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/shipping/from/${origin.slug_en}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: destName,
+              },
+            ],
+          }),
+        }}
       />
     </div>
   );

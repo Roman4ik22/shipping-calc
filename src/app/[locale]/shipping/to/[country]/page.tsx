@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { countries, getCountryBySlug, getCountryName, makeCorridorSlug, getPopularCountries } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -28,6 +29,17 @@ export async function generateMetadata({
     title: t(loc, "meta_country_to_title", {
       country: getCountryName(country, loc),
     }),
+    description:
+      loc === "ru"
+        ? `Сравните тарифы доставки в ${getCountryName(country, loc)} из любой страны мира. Цены от DHL, FedEx, UPS, EMS и 100+ перевозчиков.`
+        : `Compare shipping rates to ${getCountryName(country, loc)} from any country worldwide. Prices from DHL, FedEx, UPS, EMS and 100+ carriers.`,
+    alternates: {
+      canonical: `/${locale}/shipping/to/${slug}`,
+      languages: {
+        en: `/en/shipping/to/${slug}`,
+        ru: `/ru/shipping/to/${slug}`,
+      },
+    },
   };
 }
 
@@ -71,7 +83,7 @@ export default async function ToCountryPage({
       </nav>
 
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
-        {t(loc, "ship_to", { country: name })}
+        {countryFlag(country.code)} {t(loc, "ship_to", { country: name })}
       </h1>
       <p className="text-gray-600 mb-8">
         {loc === "ru"
@@ -94,7 +106,7 @@ export default async function ToCountryPage({
                 className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm"
               >
                 <p className="font-medium">
-                  {getCountryName(orig, loc)} → {name}
+                  {countryFlag(orig.code)} {getCountryName(orig, loc)} → {name} {countryFlag(country.code)}
                 </p>
               </Link>
             ))}
@@ -125,6 +137,29 @@ export default async function ToCountryPage({
             </div>
           </section>
         ))}
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: t(loc, "ship_to", { country: name }),
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }

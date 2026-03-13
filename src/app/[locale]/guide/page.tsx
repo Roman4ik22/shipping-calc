@@ -25,6 +25,10 @@ export async function generateMetadata({
       loc === "ru"
         ? "Подробные гиды по доставке для каждой страны. Таможенные правила, пошлины, лучшие перевозчики и советы."
         : "Detailed shipping guides for every country. Customs rules, duties, best carriers and tips.",
+    alternates: {
+      canonical: `/${locale}/guide`,
+      languages: { en: "/en/guide", ru: "/ru/guide" },
+    },
   };
 }
 

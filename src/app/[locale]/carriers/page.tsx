@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { carriers, getCarrierDescription } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
@@ -5,6 +6,26 @@ import Link from "next/link";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const loc = locale as Locale;
+  return {
+    title: loc === "ru" ? "Все перевозчики — Международная доставка" : "All Carriers — International Shipping",
+    description:
+      loc === "ru"
+        ? "Полный список международных перевозчиков: DHL, FedEx, UPS, EMS и 100+ других. Сравните услуги, сроки и тарифы."
+        : "Complete list of international shipping carriers: DHL, FedEx, UPS, EMS and 100+ more. Compare services, delivery times and rates.",
+    alternates: {
+      canonical: `/${locale}/carriers`,
+      languages: { en: "/en/carriers", ru: "/ru/carriers" },
+    },
+  };
 }
 
 export default async function CarriersPage({

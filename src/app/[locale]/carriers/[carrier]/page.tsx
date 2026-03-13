@@ -27,6 +27,13 @@ export async function generateMetadata({
   return {
     title: `${carrier.name} — ${t(locale as Locale, "shipping")}`,
     description: getCarrierDescription(carrier, locale as Locale),
+    alternates: {
+      canonical: `/${locale}/carriers/${carrierId}`,
+      languages: {
+        en: `/en/carriers/${carrierId}`,
+        ru: `/ru/carriers/${carrierId}`,
+      },
+    },
   };
 }
 
@@ -160,6 +167,36 @@ export default async function CarrierPage({
           ));
         })()}
       </div>
+
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: t(loc, "carriers_page"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/carriers`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: carrier.name,
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Back to carriers */}
       <Link

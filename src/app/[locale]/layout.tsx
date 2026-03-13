@@ -66,6 +66,28 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         <Analytics />
+        {/* Organization JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "ShipWorldwide",
+              url: process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com",
+              description: t(loc, "site_description"),
+              inLanguage: locale === "ru" ? "ru" : "en",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/shipping/{search_term}`,
+                },
+                "query-input": "required name=search_term",
+              },
+            }),
+          }}
+        />
         {/* Header */}
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,19 +139,24 @@ export default async function LocaleLayout({
         {/* Footer */}
         <footer className="bg-gray-800 text-gray-300 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-white font-bold text-lg mb-3">
                   {t(loc, "site_name")}
                 </h3>
-                <p className="text-sm">{t(loc, "site_description")}</p>
+                <p className="text-sm mb-4">{t(loc, "site_description")}</p>
+                <div className="flex gap-3 text-sm">
+                  <Link href={`/${locale}`} className="hover:text-white">{t(loc, "home")}</Link>
+                  <Link href={`/${locale}/carriers`} className="hover:text-white">{t(loc, "carriers_page")}</Link>
+                  <Link href={`/${locale}/guide`} className="hover:text-white">{t(loc, "guides")}</Link>
+                </div>
               </div>
               <div>
                 <h4 className="text-white font-semibold mb-3">
                   {t(loc, "popular_destinations")}
                 </h4>
-                <div className="grid grid-cols-2 gap-1 text-sm">
-                  {["US", "GB", "DE", "CN", "JP", "AU"].map((code) => {
+                <div className="grid grid-cols-1 gap-1 text-sm">
+                  {["US", "GB", "DE", "CN", "JP", "AU", "CA", "FR"].map((code) => {
                     const country = getCountryByCode(code);
                     if (!country) return null;
                     return (
@@ -148,14 +175,36 @@ export default async function LocaleLayout({
               </div>
               <div>
                 <h4 className="text-white font-semibold mb-3">
-                  {t(loc, "about")}
+                  {t(loc, "popular_origins")}
                 </h4>
-                <p className="text-sm">{t(loc, "disclaimer")}</p>
+                <div className="grid grid-cols-1 gap-1 text-sm">
+                  {["US", "CN", "GB", "DE", "JP", "KR", "IN", "RU"].map((code) => {
+                    const country = getCountryByCode(code);
+                    if (!country) return null;
+                    return (
+                      <Link
+                        key={code}
+                        href={`/${locale}/shipping/from/${country.slug_en}`}
+                        className="hover:text-white"
+                      >
+                        {t(loc, "ship_from", {
+                          country: getCountryName(country, loc),
+                        })}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-white font-semibold mb-3">
+                  {loc === "ru" ? "Информация" : "Information"}
+                </h4>
+                <p className="text-sm text-gray-400">{t(loc, "disclaimer")}</p>
               </div>
             </div>
-            <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center">
-              &copy; {new Date().getFullYear()} {t(loc, "site_name")}. All
-              rights reserved.
+            <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+              &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
+              {loc === "ru" ? "Все права защищены." : "All rights reserved."}
             </div>
           </div>
         </footer>

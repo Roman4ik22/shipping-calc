@@ -43,6 +43,13 @@ export async function generateMetadata({
       loc === "ru"
         ? `Полный гид по международной доставке в ${name}. Таможенные правила, лучшие перевозчики, сроки и стоимость доставки.`
         : `Complete guide to international shipping to ${name}. Customs rules, best carriers, delivery times and rates.`,
+    alternates: {
+      canonical: `/${locale}/guide/${slug}`,
+      languages: {
+        en: `/en/guide/${slug}`,
+        ru: `/ru/guide/${slug}`,
+      },
+    },
   };
 }
 
@@ -81,9 +88,11 @@ export default async function GuidePage({
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-900">
-          {loc === "ru" ? "Гид" : "Guide"}: {name}
-        </span>
+        <Link href={`/${locale}/guide`} className="hover:text-blue-600">
+          {loc === "ru" ? "Гиды" : "Guides"}
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900">{name}</span>
       </nav>
 
       {/* Title */}
@@ -270,6 +279,34 @@ export default async function GuidePage({
                 ? `Полный гид по международной доставке в ${name}`
                 : `Complete guide to international shipping to ${name}`,
             author: { "@type": "Organization", name: "ShipWorldwide" },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: loc === "ru" ? "Гиды" : "Guides",
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/guide`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: name,
+              },
+            ],
           }),
         }}
       />
