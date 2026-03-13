@@ -1,0 +1,132 @@
+{
+  "carrier_id": "ninja-van",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH",
+        "MM",
+        "KH"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia & Oceania",
+      "countries_from": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "TW",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Global",
+      "countries_from": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "AE",
+        "IN",
+        "NL",
+        "IT",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "ninja-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          9,
+          16
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          12,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9,
+          18,
+          32
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16,
+          34,
+          58
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28,
+          58,
+          102
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          50,
+          105,
+          185
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          72,
+          150,
+          265
+        ]
+      }
+    ]
+  }
+}

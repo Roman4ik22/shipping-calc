@@ -1,0 +1,234 @@
+{
+  "carrier_id": "lbc-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "VN",
+        "HK",
+        "TW",
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Americas & Oceania",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "AU",
+        "NZ",
+        "AE",
+        "SA"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Rest",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "NL",
+        "SE",
+        "CH",
+        "RU",
+        "BR",
+        "IN",
+        "ZA"
+      ]
+    }
+  ],
+  "rates": {
+    "lbc-express-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          14,
+          28,
+          35
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          18,
+          38,
+          48
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          28,
+          55,
+          70
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          52,
+          100,
+          128
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          90,
+          178,
+          225
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          162,
+          320,
+          405
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          232,
+          458,
+          580
+        ]
+      }
+    ],
+    "lbc-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          20,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          28,
+          35
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          40,
+          52
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          38,
+          75,
+          95
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          65,
+          132,
+          168
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          118,
+          240,
+          305
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          168,
+          342,
+          435
+        ]
+      }
+    ],
+    "lbc-express-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          10,
+          14
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          14,
+          20
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          11,
+          22,
+          30
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20,
+          42,
+          55
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          35,
+          72,
+          95
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          130,
+          172
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          185,
+          245
+        ]
+      }
+    ]
+  }
+}

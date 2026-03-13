@@ -1,0 +1,175 @@
+{
+  "carrier_id": "dtdc-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "South Asia",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "LK",
+        "NP",
+        "BD",
+        "PK",
+        "BT"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Asia & Middle East",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "AE",
+        "SA",
+        "HK",
+        "CN",
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & Europe",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "AU",
+        "NL",
+        "RU",
+        "BR",
+        "ZA"
+      ]
+    }
+  ],
+  "rates": {
+    "dtdc-express-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          22,
+          38
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16,
+          30,
+          50
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          24,
+          45,
+          75
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          46,
+          85,
+          140
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          78,
+          148,
+          245
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          140,
+          268,
+          440
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          200,
+          385,
+          635
+        ]
+      }
+    ],
+    "dtdc-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          16,
+          28
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          11,
+          22,
+          36
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          17,
+          32,
+          55
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          62,
+          102
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          55,
+          108,
+          178
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          100,
+          195,
+          322
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142,
+          280,
+          462
+        ]
+      }
+    ]
+  }
+}

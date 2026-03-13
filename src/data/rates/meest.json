@@ -1,0 +1,190 @@
+{
+  "carrier_id": "meest",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Europe neighbors",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "MD",
+        "LT",
+        "LV",
+        "EE",
+        "BG",
+        "DE",
+        "AT"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe & CIS",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "GB",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "SE",
+        "NO",
+        "DK",
+        "FI",
+        "CH",
+        "PT",
+        "IE",
+        "GR",
+        "HR",
+        "KZ",
+        "BY"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Worldwide",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "IL",
+        "AE",
+        "TR",
+        "IN",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "meest-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          16,
+          28
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14,
+          22,
+          38
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          32,
+          55
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          36,
+          58,
+          95
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          60,
+          98,
+          165
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          105,
+          175,
+          290
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          148,
+          248,
+          412
+        ]
+      }
+    ],
+    "meest-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          14,
+          24
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          20,
+          35
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          38,
+          62
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          38,
+          65,
+          108
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          68,
+          115,
+          192
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          96,
+          165,
+          275
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "carrier_id": "j-and-t",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG"
+      ],
+      "countries_to": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG",
+        "KH",
+        "MM",
+        "BN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia",
+      "countries_from": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG",
+        "CN"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "TW"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG",
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "AU",
+        "AE",
+        "IN",
+        "BR",
+        "NL",
+        "IT"
+      ]
+    }
+  ],
+  "rates": {
+    "jt-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          10,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          14,
+          24
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10,
+          20,
+          36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18,
+          38,
+          65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          30,
+          65,
+          115
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          55,
+          115,
+          205
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          78,
+          165,
+          290
+        ]
+      }
+    ]
+  }
+}

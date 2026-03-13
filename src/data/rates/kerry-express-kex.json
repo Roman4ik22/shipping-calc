@@ -1,0 +1,128 @@
+{
+  "carrier_id": "kerry-express-kex",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID"
+      ],
+      "countries_to": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "SG",
+        "PH",
+        "KH",
+        "MM",
+        "LA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Asia & Pacific",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "TW",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Global",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "AE",
+        "IT",
+        "RU",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "kerry-express-kex-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          12,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          16,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10,
+          24,
+          42
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20,
+          45,
+          75
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          35,
+          78,
+          132
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          140,
+          238
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          200,
+          340
+        ]
+      }
+    ]
+  }
+}

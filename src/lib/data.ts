@@ -36,6 +36,16 @@ import posMalaysiaRates from "../data/rates/pos-malaysia.json";
 import novaPoshtaRates from "../data/rates/nova-poshta.json";
 import blueDartRates from "../data/rates/blue-dart-dhl-group.json";
 import delhiveryRates from "../data/rates/delhivery.json";
+import jtRates from "../data/rates/j-and-t.json";
+import ninjaVanRates from "../data/rates/ninja-van.json";
+import jneRates from "../data/rates/jne-express.json";
+import dpexRates from "../data/rates/dpex-worldwide.json";
+import kerryRates from "../data/rates/kerry-express-kex.json";
+import boxberryRates from "../data/rates/boxberry.json";
+import ponyExpressRates from "../data/rates/pony-express.json";
+import meestRates from "../data/rates/meest.json";
+import dtdcRates from "../data/rates/dtdc-express.json";
+import lbcRates from "../data/rates/lbc-express.json";
 import type {
   Country,
   Carrier,
@@ -85,6 +95,16 @@ const allRateData: CarrierRateData[] = [
   novaPoshtaRates,
   blueDartRates,
   delhiveryRates,
+  jtRates,
+  ninjaVanRates,
+  jneRates,
+  dpexRates,
+  kerryRates,
+  boxberryRates,
+  ponyExpressRates,
+  meestRates,
+  dtdcRates,
+  lbcRates,
 ] as CarrierRateData[];
 
 // Lookup maps

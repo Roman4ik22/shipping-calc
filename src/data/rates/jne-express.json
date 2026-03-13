@@ -1,0 +1,235 @@
+{
+  "carrier_id": "jne-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN",
+      "countries_from": [
+        "ID"
+      ],
+      "countries_to": [
+        "MY",
+        "SG",
+        "TH",
+        "PH",
+        "VN",
+        "BN",
+        "KH",
+        "MM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Asia & Pacific",
+      "countries_from": [
+        "ID"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "TW",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Global",
+      "countries_from": [
+        "ID"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "IT",
+        "AE",
+        "SA",
+        "TR",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "jne-express-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          20,
+          32
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16,
+          28,
+          44
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          24,
+          42,
+          65
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          45,
+          78,
+          120
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          78,
+          135,
+          210
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          140,
+          245,
+          380
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          200,
+          350,
+          545
+        ]
+      }
+    ],
+    "jne-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          14,
+          22
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          11,
+          20,
+          32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          17,
+          30,
+          48
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          56,
+          88
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          56,
+          98,
+          155
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          100,
+          178,
+          280
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          144,
+          255,
+          400
+        ]
+      }
+    ],
+    "jne-express-economy": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          8,
+          14
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          12,
+          20
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10,
+          18,
+          30
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20,
+          35,
+          55
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          35,
+          60,
+          95
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          108,
+          170
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          155,
+          245
+        ]
+      }
+    ]
+  }
+}

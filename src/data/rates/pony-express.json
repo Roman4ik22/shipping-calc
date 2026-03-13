@@ -1,0 +1,187 @@
+{
+  "carrier_id": "pony-express",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "CIS",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "KZ",
+        "BY",
+        "KG",
+        "AM",
+        "UZ",
+        "TJ",
+        "AZ",
+        "MD",
+        "GE"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "PL",
+        "NL",
+        "CZ",
+        "AT",
+        "GB",
+        "SE",
+        "FI",
+        "DK",
+        "BE",
+        "CH",
+        "HU",
+        "RO",
+        "BG"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Global",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "AE",
+        "TR",
+        "IL",
+        "IN",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "pony-express-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          14,
+          32,
+          48
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          18,
+          40,
+          60
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          25,
+          55,
+          82
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          42,
+          95,
+          145
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          70,
+          165,
+          250
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          120,
+          285,
+          435
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          170,
+          405,
+          620
+        ]
+      }
+    ],
+    "pony-express-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          22,
+          35
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          28,
+          44
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          40,
+          62
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          72,
+          110
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          52,
+          125,
+          190
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90,
+          215,
+          330
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          128,
+          305,
+          470
+        ]
+      }
+    ]
+  }
+}

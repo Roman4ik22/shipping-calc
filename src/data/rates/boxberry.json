@@ -1,0 +1,133 @@
+{
+  "carrier_id": "boxberry",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "CIS",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "KZ",
+        "BY",
+        "KG",
+        "AM",
+        "UZ",
+        "TJ",
+        "AZ",
+        "MD",
+        "GE"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "PL",
+        "NL",
+        "CZ",
+        "AT",
+        "GB",
+        "SE",
+        "FI",
+        "DK",
+        "BE",
+        "CH",
+        "HU",
+        "RO",
+        "BG",
+        "SK",
+        "LT",
+        "LV",
+        "EE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "AE",
+        "TR",
+        "IL",
+        "IN",
+        "BR"
+      ]
+    }
+  ],
+  "rates": {
+    "boxberry-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          18,
+          30
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          24,
+          38
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          34,
+          52
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          60,
+          90
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36,
+          100,
+          155
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          175,
+          270
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          248,
+          385
+        ]
+      }
+    ]
+  }
+}
