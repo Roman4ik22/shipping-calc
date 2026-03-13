@@ -162,6 +162,27 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* Trusted carriers */}
+      <section className="bg-white py-10 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-gray-500 mb-6">
+            {loc === "ru" ? "Сравниваем тарифы 109+ перевозчиков, включая:" : "Comparing rates from 109+ carriers, including:"}
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
+            {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name) => (
+              <span key={name} className="text-gray-400 font-semibold text-sm sm:text-base whitespace-nowrap">
+                {name}
+              </span>
+            ))}
+          </div>
+          <div className="text-center mt-4">
+            <Link href={`/${locale}/carriers`} className="text-sm text-blue-600 hover:text-blue-800">
+              {loc === "ru" ? "Все перевозчики →" : "View all carriers →"}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,6 +242,30 @@ export default async function HomePage({
               {getCountryName(c, loc)}
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Popular shipping guides */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          {loc === "ru" ? "Популярные гиды по доставке" : "Popular Shipping Guides"}
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {popular.slice(0, 12).map((c) => (
+            <Link
+              key={c.code}
+              href={`/${locale}/guide/${c.slug_en}`}
+              className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
+            >
+              <span>{countryFlag(c.code)}</span>
+              <span className="text-gray-700">{getCountryName(c, loc)}</span>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-4">
+          <Link href={`/${locale}/guide`} className="text-sm text-blue-600 hover:text-blue-800">
+            {loc === "ru" ? "Все гиды →" : "All shipping guides →"}
+          </Link>
         </div>
       </section>
 
