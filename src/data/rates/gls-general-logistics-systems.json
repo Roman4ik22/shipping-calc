@@ -1,0 +1,23 @@
+{
+  "carrier_id": "gls-general-logistics-systems",
+  "effective_date": "2026-01-01",
+  "note": "Estimated GLS international rates from Germany. Pan-European parcel network owned by Royal Mail Group.",
+  "zones": [
+    {"zone": 1, "description": "DACH Region", "countries_from": ["DE"], "countries_to": ["AT", "CH"]},
+    {"zone": 2, "description": "Western Europe", "countries_from": ["DE"], "countries_to": ["NL", "BE", "LU", "FR", "DK"]},
+    {"zone": 3, "description": "Southern & Northern Europe", "countries_from": ["DE"], "countries_to": ["IT", "ES", "PT", "GB", "IE", "SE", "NO", "FI"]},
+    {"zone": 4, "description": "Eastern Europe", "countries_from": ["DE"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI"]},
+    {"zone": 5, "description": "Baltics, Balkans & Rest of Europe", "countries_from": ["DE"], "countries_to": ["LT", "LV", "EE", "GR", "RS", "BA", "ME", "AL", "MK"]}
+  ],
+  "rates": {
+    "gls-general-logistics-systems-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [6, 8, 10, 9, 12]},
+      {"weight_kg": 1, "prices_by_zone": [7, 9, 12, 11, 14]},
+      {"weight_kg": 2, "prices_by_zone": [8, 11, 14, 13, 17]},
+      {"weight_kg": 5, "prices_by_zone": [12, 16, 20, 18, 24]},
+      {"weight_kg": 10, "prices_by_zone": [18, 24, 30, 28, 35]},
+      {"weight_kg": 20, "prices_by_zone": [28, 38, 48, 44, 55]},
+      {"weight_kg": 30, "prices_by_zone": [38, 52, 65, 60, 75]}
+    ]
+  }
+}

@@ -6,6 +6,7 @@ import type { Locale } from "@/lib/types";
 import { getCountryByCode, getCountryName } from "@/lib/data";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import MobileMenu from "@/components/MobileMenu";
 import Analytics from "@/components/Analytics";
 
 export function generateStaticParams() {
@@ -45,6 +46,9 @@ export async function generateMetadata({
       icon: "/favicon.svg",
     },
     manifest: "/manifest.json",
+    verification: {
+      google: process.env.NEXT_PUBLIC_GSC_ID || undefined,
+    },
   };
 }
 
@@ -72,22 +76,30 @@ export default async function LocaleLayout({
               >
                 {t(loc, "site_name")}
               </Link>
-              <nav className="flex items-center gap-6">
-                <Link
-                  href={`/${locale}`}
-                  className="text-sm text-gray-600 hover:text-gray-900"
-                >
-                  {t(loc, "home")}
-                </Link>
-                <Link
-                  href={`/${locale}/carriers`}
-                  className="text-sm text-gray-600 hover:text-gray-900"
-                >
-                  {t(loc, "carriers_page")}
-                </Link>
-                {/* Language switcher */}
+              <div className="flex items-center gap-4">
+                <nav className="hidden sm:flex items-center gap-6">
+                  <Link
+                    href={`/${locale}`}
+                    className="text-sm text-gray-600 hover:text-gray-900"
+                  >
+                    {t(loc, "home")}
+                  </Link>
+                  <Link
+                    href={`/${locale}/carriers`}
+                    className="text-sm text-gray-600 hover:text-gray-900"
+                  >
+                    {t(loc, "carriers_page")}
+                  </Link>
+                </nav>
                 <LanguageSwitcher locale={locale} />
-              </nav>
+                <MobileMenu
+                  locale={locale}
+                  labels={{
+                    home: t(loc, "home"),
+                    carriers: t(loc, "carriers_page"),
+                  }}
+                />
+              </div>
             </div>
           </div>
         </header>

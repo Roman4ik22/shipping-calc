@@ -12,6 +12,7 @@ import { getCustomsInfo, hasCustomsData } from "@/lib/customs";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
+import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 
 // Generate all corridor pages at build time
@@ -157,10 +158,12 @@ export default async function CorridorPage({
 
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+        <span className="inline-block mr-2">{countryFlag(origin.code)}</span>
         {t(loc, "shipping_from_to", {
           origin: originName,
           destination: destName,
         })}
+        <span className="inline-block ml-2">{countryFlag(destination.code)}</span>
       </h1>
 
       {/* Quick stats */}

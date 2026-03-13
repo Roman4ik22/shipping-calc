@@ -1,0 +1,41 @@
+{
+  "carrier_id": "australia-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Australia Post international rates from Australia. National postal service with express, standard, and economy tiers.",
+  "zones": [
+    {"zone": 1, "description": "New Zealand & Pacific Islands", "countries_from": ["AU"], "countries_to": ["NZ", "FJ", "PG", "WS", "TO"]},
+    {"zone": 2, "description": "Southeast Asia", "countries_from": ["AU"], "countries_to": ["SG", "MY", "TH", "ID", "PH", "VN"]},
+    {"zone": 3, "description": "East Asia", "countries_from": ["AU"], "countries_to": ["JP", "KR", "CN", "HK", "TW"]},
+    {"zone": 4, "description": "Europe & North America", "countries_from": ["AU"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "US", "CA"]},
+    {"zone": 5, "description": "Middle East, South Asia, Africa & South America", "countries_from": ["AU"], "countries_to": ["IN", "AE", "SA", "IL", "ZA", "BR", "AR", "EG"]}
+  ],
+  "rates": {
+    "auspost-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [25, 30, 35, 42, 48]},
+      {"weight_kg": 1, "prices_by_zone": [32, 40, 48, 55, 62]},
+      {"weight_kg": 2, "prices_by_zone": [42, 52, 62, 72, 82]},
+      {"weight_kg": 5, "prices_by_zone": [68, 85, 100, 118, 135]},
+      {"weight_kg": 10, "prices_by_zone": [108, 138, 165, 195, 225]},
+      {"weight_kg": 20, "prices_by_zone": [178, 232, 280, 335, 388]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ],
+    "auspost-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [15, 18, 22, 26, 30]},
+      {"weight_kg": 1, "prices_by_zone": [20, 25, 30, 35, 42]},
+      {"weight_kg": 2, "prices_by_zone": [28, 35, 42, 50, 58]},
+      {"weight_kg": 5, "prices_by_zone": [45, 58, 70, 85, 98]},
+      {"weight_kg": 10, "prices_by_zone": [72, 95, 115, 140, 162]},
+      {"weight_kg": 20, "prices_by_zone": [120, 160, 198, 240, 280]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ],
+    "auspost-economy": [
+      {"weight_kg": 0.5, "prices_by_zone": [10, 12, 15, 18, 20]},
+      {"weight_kg": 1, "prices_by_zone": [14, 17, 20, 24, 28]},
+      {"weight_kg": 2, "prices_by_zone": [20, 24, 30, 35, 40]},
+      {"weight_kg": 5, "prices_by_zone": [32, 40, 50, 60, 70]},
+      {"weight_kg": 10, "prices_by_zone": [52, 68, 85, 102, 120]},
+      {"weight_kg": 20, "prices_by_zone": [88, 118, 148, 178, 210]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "carrier_id": "korea-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Korea Post international rates from South Korea. Offers EMS, K-Packet (small parcels), and air parcel services.",
+  "zones": [
+    {"zone": 1, "description": "East Asia (Neighbors)", "countries_from": ["KR"], "countries_to": ["JP", "CN", "TW", "HK", "MN"]},
+    {"zone": 2, "description": "Southeast Asia", "countries_from": ["KR"], "countries_to": ["SG", "MY", "TH", "VN", "ID", "PH"]},
+    {"zone": 3, "description": "Oceania & South Asia", "countries_from": ["KR"], "countries_to": ["AU", "NZ", "IN", "LK", "BD"]},
+    {"zone": 4, "description": "Europe & Middle East", "countries_from": ["KR"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "CH", "AE", "SA", "IL"]},
+    {"zone": 5, "description": "Americas & Africa", "countries_from": ["KR"], "countries_to": ["US", "CA", "MX", "BR", "AR", "ZA", "NG"]}
+  ],
+  "rates": {
+    "korea-post-ems": [
+      {"weight_kg": 0.5, "prices_by_zone": [18, 22, 28, 32, 35]},
+      {"weight_kg": 1, "prices_by_zone": [24, 30, 38, 42, 48]},
+      {"weight_kg": 2, "prices_by_zone": [32, 40, 50, 56, 64]},
+      {"weight_kg": 5, "prices_by_zone": [52, 68, 82, 95, 108]},
+      {"weight_kg": 10, "prices_by_zone": [82, 110, 135, 158, 180]},
+      {"weight_kg": 20, "prices_by_zone": [138, 188, 232, 272, 312]},
+      {"weight_kg": 30, "prices_by_zone": [192, 262, 325, 382, 438]}
+    ],
+    "korea-post-k-packet": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 10, 12, 14, 16]},
+      {"weight_kg": 1, "prices_by_zone": [11, 14, 16, 19, 22]},
+      {"weight_kg": 2, "prices_by_zone": [16, 20, 24, 28, 32]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ],
+    "korea-post-air": [
+      {"weight_kg": 0.5, "prices_by_zone": [10, 13, 16, 19, 22]},
+      {"weight_kg": 1, "prices_by_zone": [14, 18, 22, 26, 30]},
+      {"weight_kg": 2, "prices_by_zone": [20, 26, 32, 38, 44]},
+      {"weight_kg": 5, "prices_by_zone": [35, 45, 55, 66, 78]},
+      {"weight_kg": 10, "prices_by_zone": [58, 76, 95, 115, 135]},
+      {"weight_kg": 20, "prices_by_zone": [100, 135, 170, 208, 245]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ]
+  }
+}

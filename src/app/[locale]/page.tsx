@@ -1,6 +1,7 @@
 import { countries, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import Link from "next/link";
 
@@ -73,7 +74,7 @@ export default async function HomePage({
                 className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
               >
                 <p className="font-medium text-gray-900">
-                  {getCountryName(from, loc)} → {getCountryName(to, loc)}
+                  {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                 </p>
                 <p className="text-sm text-gray-500 mt-1">
                   {t(loc, "compare_rates")}

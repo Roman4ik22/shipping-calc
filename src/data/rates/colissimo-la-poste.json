@@ -1,0 +1,23 @@
+{
+  "carrier_id": "colissimo-la-poste",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Colissimo (La Poste France) international rates from France. Affordable tracked parcel delivery to 235 countries.",
+  "zones": [
+    {"zone": 1, "description": "EU Neighbors", "countries_from": ["FR"], "countries_to": ["BE", "LU", "DE", "NL", "ES", "IT"]},
+    {"zone": 2, "description": "Rest of EU & UK", "countries_from": ["FR"], "countries_to": ["GB", "IE", "PT", "AT", "CH", "DK", "SE", "PL", "CZ"]},
+    {"zone": 3, "description": "Eastern Europe & Mediterranean", "countries_from": ["FR"], "countries_to": ["RO", "BG", "HR", "GR", "HU", "SK", "SI", "NO", "FI"]},
+    {"zone": 4, "description": "Americas & Asia", "countries_from": ["FR"], "countries_to": ["US", "CA", "MX", "BR", "JP", "KR", "CN", "AU", "SG"]},
+    {"zone": 5, "description": "Africa, Middle East & Rest of World", "countries_from": ["FR"], "countries_to": ["MA", "TN", "DZ", "SN", "CI", "AE", "SA", "IN", "ZA"]}
+  ],
+  "rates": {
+    "colissimo-la-poste-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [9, 12, 14, 22, 25]},
+      {"weight_kg": 1, "prices_by_zone": [12, 15, 18, 28, 32]},
+      {"weight_kg": 2, "prices_by_zone": [15, 19, 24, 36, 42]},
+      {"weight_kg": 5, "prices_by_zone": [22, 30, 38, 58, 68]},
+      {"weight_kg": 10, "prices_by_zone": [35, 48, 60, 95, 112]},
+      {"weight_kg": 20, "prices_by_zone": [55, 78, 100, 165, 195]},
+      {"weight_kg": 30, "prices_by_zone": [75, 108, 138, 230, 275]}
+    ]
+  }
+}

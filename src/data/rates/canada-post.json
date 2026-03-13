@@ -1,0 +1,41 @@
+{
+  "carrier_id": "canada-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Canada Post international rates from Canada. Reliable postal service with tracked and economy options.",
+  "zones": [
+    {"zone": 1, "description": "United States", "countries_from": ["CA"], "countries_to": ["US"]},
+    {"zone": 2, "description": "Mexico & Caribbean", "countries_from": ["CA"], "countries_to": ["MX", "JM", "DO", "CU", "TT", "BS"]},
+    {"zone": 3, "description": "Europe", "countries_from": ["CA"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "NO", "DK", "CH", "AT", "BE", "PT", "IE"]},
+    {"zone": 4, "description": "Asia & Oceania", "countries_from": ["CA"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "TH", "MY", "AU", "NZ", "IN"]},
+    {"zone": 5, "description": "South America, Africa & Rest of World", "countries_from": ["CA"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "ZA", "NG", "KE", "EG", "AE", "SA"]}
+  ],
+  "rates": {
+    "cp-xpresspost-international": [
+      {"weight_kg": 0.5, "prices_by_zone": [30, 38, 42, 48, 55]},
+      {"weight_kg": 1, "prices_by_zone": [38, 48, 55, 62, 70]},
+      {"weight_kg": 2, "prices_by_zone": [48, 60, 70, 80, 90]},
+      {"weight_kg": 5, "prices_by_zone": [72, 92, 108, 125, 140]},
+      {"weight_kg": 10, "prices_by_zone": [110, 145, 172, 200, 225]},
+      {"weight_kg": 20, "prices_by_zone": [180, 240, 290, 338, 380]},
+      {"weight_kg": 30, "prices_by_zone": [245, 330, 400, 468, 528]}
+    ],
+    "cp-tracked-packet-international": [
+      {"weight_kg": 0.5, "prices_by_zone": [12, 16, 18, 20, 22]},
+      {"weight_kg": 1, "prices_by_zone": [16, 22, 25, 28, 32]},
+      {"weight_kg": 2, "prices_by_zone": [22, 30, 35, 40, 45]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ],
+    "cp-small-packet-air": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 10, 12, 13, 15]},
+      {"weight_kg": 1, "prices_by_zone": [11, 14, 16, 18, 20]},
+      {"weight_kg": 2, "prices_by_zone": [16, 20, 24, 26, 30]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ]
+  }
+}

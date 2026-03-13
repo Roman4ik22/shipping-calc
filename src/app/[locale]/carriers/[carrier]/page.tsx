@@ -1,7 +1,8 @@
 import { Metadata } from "next";
-import { carriers, getCarrierById, getCarrierDescription } from "@/lib/data";
+import { carriers, getCarrierById, getCarrierDescription, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -134,6 +135,39 @@ export default async function CarrierPage({
           </div>
         ))}
       </div>
+
+      {/* Popular corridors for this carrier */}
+      <h2 className="text-xl font-bold text-gray-900 mb-4">
+        {loc === "ru" ? `Популярные маршруты ${carrier.name}` : `Popular ${carrier.name} routes`}
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+        {(() => {
+          const popular = getPopularCountries().slice(0, 10);
+          const corridors: { from: typeof popular[0]; to: typeof popular[0] }[] = [];
+          for (let i = 0; i < popular.length && corridors.length < 9; i++) {
+            for (let j = 0; j < popular.length && corridors.length < 9; j++) {
+              if (i !== j) corridors.push({ from: popular[i], to: popular[j] });
+            }
+          }
+          return corridors.map(({ from, to }) => (
+            <Link
+              key={`${from.code}-${to.code}`}
+              href={`/${locale}/shipping/${makeCorridorSlug(from, to, loc)}`}
+              className="block bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
+            >
+              {countryFlag(from.code)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(to.code)}
+            </Link>
+          ));
+        })()}
+      </div>
+
+      {/* Back to carriers */}
+      <Link
+        href={`/${locale}/carriers`}
+        className="text-blue-600 hover:text-blue-800 text-sm"
+      >
+        ← {t(loc, "all_carriers")}
+      </Link>
     </div>
   );
 }

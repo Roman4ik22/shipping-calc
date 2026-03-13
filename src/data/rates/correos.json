@@ -1,0 +1,32 @@
+{
+  "carrier_id": "correos",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Correos (Spain) international rates. Strong connections to Latin America and affordable European delivery.",
+  "zones": [
+    {"zone": 1, "description": "Portugal & Andorra", "countries_from": ["ES"], "countries_to": ["PT", "AD"]},
+    {"zone": 2, "description": "EU Core", "countries_from": ["ES"], "countries_to": ["FR", "DE", "IT", "NL", "BE", "AT", "LU"]},
+    {"zone": 3, "description": "Rest of Europe & UK", "countries_from": ["ES"], "countries_to": ["GB", "IE", "SE", "DK", "NO", "FI", "PL", "CZ", "CH", "GR"]},
+    {"zone": 4, "description": "Latin America", "countries_from": ["ES"], "countries_to": ["MX", "AR", "CL", "CO", "PE", "EC", "UY", "CR", "CU", "DO"]},
+    {"zone": 5, "description": "North America, Asia, Africa & Rest of World", "countries_from": ["ES"], "countries_to": ["US", "CA", "JP", "CN", "KR", "AU", "MA", "ZA", "AE", "IN"]}
+  ],
+  "rates": {
+    "correos-international-packet": [
+      {"weight_kg": 0.5, "prices_by_zone": [6, 8, 10, 10, 12]},
+      {"weight_kg": 1, "prices_by_zone": [8, 11, 14, 14, 17]},
+      {"weight_kg": 2, "prices_by_zone": [12, 16, 20, 20, 25]},
+      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
+      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+    ],
+    "correos-ems": [
+      {"weight_kg": 0.5, "prices_by_zone": [18, 24, 28, 30, 35]},
+      {"weight_kg": 1, "prices_by_zone": [24, 32, 38, 40, 48]},
+      {"weight_kg": 2, "prices_by_zone": [32, 42, 50, 54, 62]},
+      {"weight_kg": 5, "prices_by_zone": [52, 70, 85, 90, 105]},
+      {"weight_kg": 10, "prices_by_zone": [85, 115, 140, 150, 175]},
+      {"weight_kg": 20, "prices_by_zone": [142, 195, 240, 258, 302]},
+      {"weight_kg": 30, "prices_by_zone": [198, 272, 335, 360, 422]}
+    ]
+  }
+}

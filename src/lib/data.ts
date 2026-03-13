@@ -16,6 +16,16 @@ import sfExpressRates from "../data/rates/sf-express.json";
 import yanwenRates from "../data/rates/yanwen.json";
 import postnlRates from "../data/rates/postnl.json";
 import deutschePostRates from "../data/rates/deutsche-post.json";
+import canadaPostRates from "../data/rates/canada-post.json";
+import australiaPostRates from "../data/rates/australia-post.json";
+import indiaPostRates from "../data/rates/india-post.json";
+import koreaPostRates from "../data/rates/korea-post.json";
+import singpostRates from "../data/rates/singpost.json";
+import glsRates from "../data/rates/gls-general-logistics-systems.json";
+import evriRates from "../data/rates/evri-formerly-hermes.json";
+import colissimoRates from "../data/rates/colissimo-la-poste.json";
+import correosRates from "../data/rates/correos.json";
+import swissPostRates from "../data/rates/swiss-post.json";
 import type {
   Country,
   Carrier,
@@ -45,6 +55,16 @@ const allRateData: CarrierRateData[] = [
   yanwenRates,
   postnlRates,
   deutschePostRates,
+  canadaPostRates,
+  australiaPostRates,
+  indiaPostRates,
+  koreaPostRates,
+  singpostRates,
+  glsRates,
+  evriRates,
+  colissimoRates,
+  correosRates,
+  swissPostRates,
 ] as CarrierRateData[];
 
 // Lookup maps
