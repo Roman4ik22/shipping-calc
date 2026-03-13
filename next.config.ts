@@ -23,6 +23,24 @@ const nextConfig: NextConfig = {
         { key: "Cache-Control", value: "public, max-age=86400, s-maxage=86400" },
       ],
     },
+    {
+      source: "/:locale/shipping/:path*",
+      headers: [
+        { key: "Cache-Control", value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400" },
+      ],
+    },
+    {
+      source: "/:locale/carriers/:path*",
+      headers: [
+        { key: "Cache-Control", value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400" },
+      ],
+    },
+    {
+      source: "/:locale/guide/:path*",
+      headers: [
+        { key: "Cache-Control", value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400" },
+      ],
+    },
   ],
 };
 

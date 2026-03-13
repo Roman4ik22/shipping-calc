@@ -64,6 +64,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         <Analytics />
         {/* Organization JSON-LD */}
