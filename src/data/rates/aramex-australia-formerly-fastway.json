@@ -1,0 +1,23 @@
+{
+  "carrier_id": "aramex-australia-formerly-fastway",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Aramex Australia (formerly Fastway Couriers) rates. Franchise-based courier network with domestic and international delivery. Part of Aramex global network.",
+  "zones": [
+    {"zone": 1, "description": "Domestic Australia", "countries_from": ["AU"], "countries_to": ["AU"]},
+    {"zone": 2, "description": "New Zealand & Pacific", "countries_from": ["AU"], "countries_to": ["NZ", "FJ", "PG", "NC"]},
+    {"zone": 3, "description": "Asia", "countries_from": ["AU"], "countries_to": ["SG", "MY", "TH", "ID", "PH", "VN", "JP", "KR", "CN", "HK", "TW"]},
+    {"zone": 4, "description": "North America & Europe", "countries_from": ["AU"], "countries_to": ["US", "CA", "GB", "DE", "FR", "NL", "IT", "ES", "SE", "DK"]},
+    {"zone": 5, "description": "Middle East, South Asia & Rest of World", "countries_from": ["AU"], "countries_to": ["AE", "SA", "JO", "IN", "PK", "ZA", "BR", "AR", "EG"]}
+  ],
+  "rates": {
+    "aramex-australia-formerly-fastway-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 18, 24, 32, 38]},
+      {"weight_kg": 1, "prices_by_zone": [10, 24, 32, 42, 50]},
+      {"weight_kg": 2, "prices_by_zone": [14, 32, 44, 58, 68]},
+      {"weight_kg": 5, "prices_by_zone": [22, 54, 72, 96, 112]},
+      {"weight_kg": 10, "prices_by_zone": [35, 88, 118, 158, 185]},
+      {"weight_kg": 20, "prices_by_zone": [58, 152, 205, 275, 320]},
+      {"weight_kg": 25, "prices_by_zone": [72, 188, 255, 342, 398]}
+    ]
+  }
+}

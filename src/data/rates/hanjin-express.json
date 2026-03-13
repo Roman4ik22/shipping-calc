@@ -1,0 +1,22 @@
+{
+  "carrier_id": "hanjin-express",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Hanjin Express international rates from South Korea. Mainly domestic Korean market with growing international capabilities.",
+  "zones": [
+    {"zone": 1, "description": "East Asia (JP, CN, TW, HK)", "countries_from": ["KR"], "countries_to": ["JP", "CN", "TW", "HK"]},
+    {"zone": 2, "description": "Southeast Asia & Oceania", "countries_from": ["KR"], "countries_to": ["SG", "MY", "TH", "ID", "VN", "PH", "AU", "NZ"]},
+    {"zone": 3, "description": "North America & Europe", "countries_from": ["KR"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL"]},
+    {"zone": 4, "description": "Rest of World", "countries_from": ["KR"], "countries_to": ["IN", "AE", "SA", "BR", "MX", "ZA", "TR", "RU"]}
+  ],
+  "rates": {
+    "hanjin-express-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [12, 16, 22, 28]},
+      {"weight_kg": 1, "prices_by_zone": [16, 22, 30, 38]},
+      {"weight_kg": 2, "prices_by_zone": [22, 30, 42, 54]},
+      {"weight_kg": 5, "prices_by_zone": [38, 52, 72, 92]},
+      {"weight_kg": 10, "prices_by_zone": [62, 86, 120, 155]},
+      {"weight_kg": 20, "prices_by_zone": [105, 148, 205, 268]},
+      {"weight_kg": 30, "prices_by_zone": [145, 205, 285, 370]}
+    ]
+  }
+}

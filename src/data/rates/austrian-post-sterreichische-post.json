@@ -1,0 +1,22 @@
+{
+  "carrier_id": "austrian-post-sterreichische-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Austrian Post international rates from Austria. Strong network for Central European deliveries.",
+  "zones": [
+    {"zone": 1, "description": "Neighboring (DE, CH, CZ, SK, HU, SI, IT, LI)", "countries_from": ["AT"], "countries_to": ["DE", "CH", "CZ", "SK", "HU", "SI", "IT", "LI"]},
+    {"zone": 2, "description": "Western & Northern Europe", "countries_from": ["AT"], "countries_to": ["FR", "GB", "NL", "BE", "LU", "DK", "SE", "NO", "FI", "IE", "ES", "PT"]},
+    {"zone": 3, "description": "Eastern & Southern Europe", "countries_from": ["AT"], "countries_to": ["PL", "RO", "BG", "HR", "RS", "BA", "GR", "TR", "UA", "LT", "LV", "EE"]},
+    {"zone": 4, "description": "Rest of World", "countries_from": ["AT"], "countries_to": ["US", "CA", "JP", "KR", "CN", "AU", "NZ", "BR", "IN", "AE", "ZA", "MX"]}
+  ],
+  "rates": {
+    "austrian-post-sterreichische-post-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 12, 14, 22]},
+      {"weight_kg": 1, "prices_by_zone": [10, 15, 18, 28]},
+      {"weight_kg": 2, "prices_by_zone": [14, 20, 24, 36]},
+      {"weight_kg": 5, "prices_by_zone": [22, 34, 40, 60]},
+      {"weight_kg": 10, "prices_by_zone": [36, 56, 66, 100]},
+      {"weight_kg": 20, "prices_by_zone": [58, 92, 110, 170]},
+      {"weight_kg": 30, "prices_by_zone": [78, 126, 150, 235]}
+    ]
+  }
+}

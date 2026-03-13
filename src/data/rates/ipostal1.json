@@ -1,0 +1,26 @@
+{
+  "carrier_id": "ipostal1",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for iPostal1 package forwarding service. Origin is always US/CA virtual mailbox addresses. Actual rates depend on forwarding method chosen.",
+  "zones": [
+    {"zone": 1, "description": "Domestic US / Canada", "countries_from": ["US", "CA"], "countries_to": ["US", "CA"]},
+    {"zone": 2, "description": "Mexico & Caribbean", "countries_from": ["US"], "countries_to": ["MX", "DO", "JM", "TT", "BB", "BS", "PR"]},
+    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI"]},
+    {"zone": 4, "description": "Eastern Europe & Asia", "countries_from": ["US"], "countries_to": ["PL", "CZ", "HU", "RO", "JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "IN", "TH"]},
+    {"zone": 5, "description": "South America & Middle East", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "AE", "SA", "IL", "TR"]},
+    {"zone": 6, "description": "Africa & Rest of World", "countries_from": ["US"], "countries_to": ["ZA", "NG", "KE", "EG", "MA", "GH", "PH", "VN", "ID", "PK", "BD"]}
+  ],
+  "rates": {
+    "ipostal1-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [10, 18, 22, 25, 28, 35]},
+      {"weight_kg": 1, "prices_by_zone": [14, 24, 30, 35, 38, 48]},
+      {"weight_kg": 2, "prices_by_zone": [19, 34, 42, 48, 54, 66]},
+      {"weight_kg": 3, "prices_by_zone": [25, 44, 55, 64, 72, 88]},
+      {"weight_kg": 5, "prices_by_zone": [35, 62, 78, 90, 102, 125]},
+      {"weight_kg": 10, "prices_by_zone": [58, 105, 135, 158, 178, 218]},
+      {"weight_kg": 15, "prices_by_zone": [80, 148, 190, 222, 252, 310]},
+      {"weight_kg": 20, "prices_by_zone": [102, 190, 245, 288, 328, 402]},
+      {"weight_kg": 30, "prices_by_zone": [148, 275, 355, 418, 478, 588]}
+    ]
+  }
+}

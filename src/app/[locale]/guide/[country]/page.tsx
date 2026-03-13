@@ -50,6 +50,13 @@ export async function generateMetadata({
         ru: `/ru/guide/${slug}`,
       },
     },
+    openGraph: {
+      title: loc === "ru" ? `Гид по доставке в ${name}` : `Shipping Guide to ${name}`,
+      description: loc === "ru"
+        ? `Таможенные правила, перевозчики и тарифы для ${name}`
+        : `Customs rules, carriers and rates for ${name}`,
+      type: "article",
+    },
   };
 }
 
@@ -262,6 +269,51 @@ export default async function GuidePage({
           ))}
         </div>
       </section>
+
+      {/* Guide FAQ */}
+      {(() => {
+        const faqs = loc === "ru" ? [
+          { q: `Сколько стоит доставка в ${name}?`, a: `Стоимость доставки в ${name} зависит от страны отправления, веса посылки и выбранного перевозчика. Экспресс-доставка (DHL, FedEx, UPS) начинается от $20-50 за 1 кг, почтовые сервисы — от $10-25.` },
+          { q: `Какой беспошлинный порог в ${name}?`, a: `Беспошлинный порог для импорта в ${name} составляет $${customs.de_minimis_usd}. Посылки стоимостью выше этого порога облагаются импортными пошлинами (в среднем ${customs.avg_duty_rate}%) и НДС (${customs.vat_rate}%).` },
+          { q: `Какие перевозчики доставляют в ${name}?`, a: `В ${name} доставляют все крупные международные перевозчики: DHL Express, FedEx, UPS, EMS, Aramex и десятки других. Всего доступно ${carrierCount}+ вариантов доставки.` },
+        ] : [
+          { q: `How much does shipping to ${name} cost?`, a: `Shipping costs to ${name} depend on the origin country, package weight, and carrier. Express delivery (DHL, FedEx, UPS) starts from $20-50 for 1 kg, while postal services start from $10-25.` },
+          { q: `What is the duty-free threshold for ${name}?`, a: `The duty-free threshold for imports to ${name} is $${customs.de_minimis_usd}. Packages valued above this threshold are subject to import duties (average ${customs.avg_duty_rate}%) and VAT (${customs.vat_rate}%).` },
+          { q: `Which carriers deliver to ${name}?`, a: `All major international carriers deliver to ${name}: DHL Express, FedEx, UPS, EMS, Aramex, and dozens more. In total, ${carrierCount}+ shipping options are available.` },
+        ];
+
+        return (
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              {loc === "ru" ? "Часто задаваемые вопросы" : "FAQ"}
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="bg-white border border-gray-200 rounded-lg">
+                  <summary className="p-4 font-medium text-gray-900 cursor-pointer hover:text-blue-600">
+                    {faq.q}
+                  </summary>
+                  <p className="px-4 pb-4 text-gray-600 text-sm">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: faqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.q,
+                    acceptedAnswer: { "@type": "Answer", text: faq.a },
+                  })),
+                }),
+              }}
+            />
+          </section>
+        );
+      })()}
 
       {/* JSON-LD */}
       <script

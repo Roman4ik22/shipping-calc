@@ -1,0 +1,38 @@
+{
+  "carrier_id": "passport-shipping-passport-global",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for Passport Global cross-border e-commerce shipping. Actual rates depend on account agreements, surcharges, and destination.",
+  "zones": [
+    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
+    {"zone": 2, "description": "Mexico & Caribbean", "countries_from": ["US"], "countries_to": ["MX", "BS", "JM", "TT", "BB", "DO", "PR", "HT", "CU", "BZ", "GT", "HN", "SV", "NI", "CR", "PA"]},
+    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU"]},
+    {"zone": 4, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "UA", "GR", "CY"]},
+    {"zone": 5, "description": "Asia Pacific", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
+    {"zone": 6, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "UY", "PY", "BO"]},
+    {"zone": 7, "description": "Middle East & Africa", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "IL", "JO", "TR", "ZA", "NG", "KE", "EG", "MA"]}
+  ],
+  "rates": {
+    "passport-shipping-passport-global-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [18, 25, 30, 35, 38, 40, 45]},
+      {"weight_kg": 1, "prices_by_zone": [22, 32, 38, 45, 48, 52, 58]},
+      {"weight_kg": 2, "prices_by_zone": [28, 42, 50, 58, 62, 68, 75]},
+      {"weight_kg": 3, "prices_by_zone": [34, 52, 62, 72, 78, 85, 95]},
+      {"weight_kg": 5, "prices_by_zone": [45, 70, 85, 98, 105, 115, 128]},
+      {"weight_kg": 10, "prices_by_zone": [72, 115, 140, 162, 175, 192, 215]},
+      {"weight_kg": 15, "prices_by_zone": [98, 158, 195, 225, 245, 268, 300]},
+      {"weight_kg": 20, "prices_by_zone": [125, 200, 248, 288, 312, 342, 385]},
+      {"weight_kg": 30, "prices_by_zone": [175, 285, 355, 412, 448, 492, 555]}
+    ],
+    "passport-shipping-passport-global-economy": [
+      {"weight_kg": 0.5, "prices_by_zone": [10, 15, 18, 22, 24, 26, 30]},
+      {"weight_kg": 1, "prices_by_zone": [13, 20, 25, 30, 32, 35, 40]},
+      {"weight_kg": 2, "prices_by_zone": [17, 28, 35, 42, 45, 50, 55]},
+      {"weight_kg": 3, "prices_by_zone": [22, 36, 45, 54, 58, 65, 72]},
+      {"weight_kg": 5, "prices_by_zone": [30, 50, 62, 75, 82, 90, 100]},
+      {"weight_kg": 10, "prices_by_zone": [50, 85, 105, 125, 138, 152, 170]},
+      {"weight_kg": 15, "prices_by_zone": [68, 118, 148, 175, 192, 212, 238]},
+      {"weight_kg": 20, "prices_by_zone": [88, 150, 188, 225, 245, 270, 305]},
+      {"weight_kg": 30, "prices_by_zone": [125, 215, 270, 322, 352, 388, 438]}
+    ]
+  }
+}

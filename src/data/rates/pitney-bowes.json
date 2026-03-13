@@ -1,0 +1,40 @@
+{
+  "carrier_id": "pitney-bowes",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for Pitney Bowes cross-border e-commerce logistics. Actual rates depend on volume discounts, account type, and surcharges.",
+  "zones": [
+    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
+    {"zone": 2, "description": "Mexico & Central America", "countries_from": ["US"], "countries_to": ["MX", "GT", "HN", "SV", "NI", "CR", "PA", "BZ"]},
+    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU", "IS"]},
+    {"zone": 4, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "BA", "EE", "LV", "LT", "UA", "GR", "CY", "AL", "MK", "ME"]},
+    {"zone": 5, "description": "East Asia & Oceania", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ"]},
+    {"zone": 6, "description": "Southeast Asia & India", "countries_from": ["US"], "countries_to": ["TH", "MY", "ID", "PH", "VN", "KH", "IN", "PK", "BD", "LK"]},
+    {"zone": 7, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "VE", "UY", "PY", "BO"]},
+    {"zone": 8, "description": "Middle East", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "BH", "OM", "JO", "IL", "LB", "TR"]},
+    {"zone": 9, "description": "Africa", "countries_from": ["US"], "countries_to": ["ZA", "NG", "KE", "EG", "MA", "TN", "GH", "ET", "TZ", "UG", "SN"]}
+  ],
+  "rates": {
+    "pitney-bowes-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [20, 28, 32, 38, 35, 40, 42, 45, 50]},
+      {"weight_kg": 1, "prices_by_zone": [25, 35, 42, 48, 45, 52, 55, 58, 65]},
+      {"weight_kg": 2, "prices_by_zone": [32, 45, 55, 62, 58, 68, 72, 75, 85]},
+      {"weight_kg": 3, "prices_by_zone": [40, 55, 68, 78, 72, 85, 90, 95, 108]},
+      {"weight_kg": 5, "prices_by_zone": [52, 75, 92, 105, 98, 115, 122, 130, 148]},
+      {"weight_kg": 10, "prices_by_zone": [85, 125, 155, 178, 168, 195, 208, 220, 252]},
+      {"weight_kg": 15, "prices_by_zone": [118, 172, 215, 248, 235, 272, 292, 308, 355]},
+      {"weight_kg": 20, "prices_by_zone": [150, 220, 275, 318, 302, 350, 375, 395, 455]},
+      {"weight_kg": 30, "prices_by_zone": [215, 315, 395, 458, 435, 505, 542, 572, 658]}
+    ],
+    "pitney-bowes-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [12, 18, 20, 24, 22, 26, 28, 30, 35]},
+      {"weight_kg": 1, "prices_by_zone": [15, 22, 28, 32, 30, 35, 38, 40, 46]},
+      {"weight_kg": 2, "prices_by_zone": [20, 30, 38, 44, 40, 48, 52, 55, 62]},
+      {"weight_kg": 3, "prices_by_zone": [25, 38, 48, 56, 52, 62, 66, 70, 80]},
+      {"weight_kg": 5, "prices_by_zone": [35, 55, 68, 78, 72, 86, 92, 98, 112]},
+      {"weight_kg": 10, "prices_by_zone": [58, 92, 115, 132, 125, 148, 158, 168, 192]},
+      {"weight_kg": 15, "prices_by_zone": [80, 128, 162, 188, 178, 208, 222, 235, 272]},
+      {"weight_kg": 20, "prices_by_zone": [102, 165, 208, 242, 228, 268, 288, 305, 352]},
+      {"weight_kg": 30, "prices_by_zone": [148, 238, 300, 348, 330, 388, 418, 442, 510]}
+    ]
+  }
+}

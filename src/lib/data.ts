@@ -89,6 +89,32 @@ import mondialRates from "../data/rates/mondial-relay.json";
 import springGdsRates from "../data/rates/spring-gds.json";
 import packlinkRates from "../data/rates/packlink.json";
 import bpostRates from "../data/rates/bpost.json";
+// Batch 10
+import austrianPostRates from "../data/rates/austrian-post-sterreichische-post.json";
+import laPosteRates from "../data/rates/la-poste-france.json";
+import dpdEuRates from "../data/rates/dpd-group-eu.json";
+import yamatoRates from "../data/rates/yamato-transport-kuroneko-yamato.json";
+import sagawaRates from "../data/rates/sagawa-express.json";
+import japanPostYuPackRates from "../data/rates/japan-post-yu-pack-ems.json";
+import cjLogisticsRates from "../data/rates/cj-logistics-cj-korea-express.json";
+import hanjinRates from "../data/rates/hanjin-express.json";
+// Batch 11
+import lotteRates from "../data/rates/lotte-global-logistics.json";
+import sendleRates from "../data/rates/sendle.json";
+import courierspleaseRates from "../data/rates/couriersplease.json";
+import startrackRates from "../data/rates/startrack.json";
+import aramexAuRates from "../data/rates/aramex-australia-formerly-fastway.json";
+import nzPostRates from "../data/rates/nz-post.json";
+import epacketRates from "../data/rates/epacket-china-post-usps.json";
+import zonosRates from "../data/rates/zonos.json";
+// Batch 12
+import passportRates from "../data/rates/passport-shipping-passport-global.json";
+import pitneyBowesRates from "../data/rates/pitney-bowes.json";
+import asendiaRates from "../data/rates/asendia.json";
+import ipostal1Rates from "../data/rates/ipostal1.json";
+import postnlIntlRates from "../data/rates/postnl-international.json";
+import globalpostRates from "../data/rates/globalpost-by-auctane.json";
+import landmarkRates from "../data/rates/landmark-global.json";
 import type {
   Country,
   Carrier,
@@ -191,6 +217,32 @@ const allRateData: CarrierRateData[] = [
   springGdsRates,
   packlinkRates,
   bpostRates,
+  // Batch 10
+  austrianPostRates,
+  laPosteRates,
+  dpdEuRates,
+  yamatoRates,
+  sagawaRates,
+  japanPostYuPackRates,
+  cjLogisticsRates,
+  hanjinRates,
+  // Batch 11
+  lotteRates,
+  sendleRates,
+  courierspleaseRates,
+  startrackRates,
+  aramexAuRates,
+  nzPostRates,
+  epacketRates,
+  zonosRates,
+  // Batch 12
+  passportRates,
+  pitneyBowesRates,
+  asendiaRates,
+  ipostal1Rates,
+  postnlIntlRates,
+  globalpostRates,
+  landmarkRates,
 ] as CarrierRateData[];
 
 // Lookup maps

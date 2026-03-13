@@ -1,0 +1,23 @@
+{
+  "carrier_id": "epacket-china-post-usps",
+  "effective_date": "2026-01-01",
+  "note": "Estimated ePacket (China Post / USPS) rates from China. Affordable tracked shipping for lightweight e-commerce parcels. Max weight 2 kg.",
+  "zones": [
+    {"zone": 1, "description": "East Asia & Southeast Asia", "countries_from": ["CN"], "countries_to": ["JP", "KR", "HK", "TW", "SG", "MY", "TH"]},
+    {"zone": 2, "description": "Oceania & South Asia", "countries_from": ["CN"], "countries_to": ["AU", "NZ", "IN", "PK", "BD"]},
+    {"zone": 3, "description": "North America", "countries_from": ["CN"], "countries_to": ["US", "CA", "MX"]},
+    {"zone": 4, "description": "Europe", "countries_from": ["CN"], "countries_to": ["GB", "DE", "FR", "NL", "IT", "ES", "SE", "PL", "BE", "AT"]},
+    {"zone": 5, "description": "Rest of World", "countries_from": ["CN"], "countries_to": ["BR", "AR", "ZA", "AE", "SA", "IL", "EG", "RU", "TR"]}
+  ],
+  "rates": {
+    "epacket-china-post-usps-standard": [
+      {"weight_kg": 0.1, "prices_by_zone": [3, 4, 4, 5, 6]},
+      {"weight_kg": 0.25, "prices_by_zone": [4, 5, 6, 7, 8]},
+      {"weight_kg": 0.5, "prices_by_zone": [5, 7, 8, 10, 12]},
+      {"weight_kg": 0.75, "prices_by_zone": [7, 9, 11, 13, 16]},
+      {"weight_kg": 1, "prices_by_zone": [8, 11, 14, 16, 20]},
+      {"weight_kg": 1.5, "prices_by_zone": [10, 14, 18, 22, 26]},
+      {"weight_kg": 2, "prices_by_zone": [12, 17, 22, 28, 32]}
+    ]
+  }
+}

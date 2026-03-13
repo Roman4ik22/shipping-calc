@@ -1,0 +1,22 @@
+{
+  "carrier_id": "dpd-group-eu",
+  "effective_date": "2026-01-01",
+  "note": "Estimated DPD Group EU parcel rates. Major European parcel network with 31 countries and 70,000+ pickup shops.",
+  "zones": [
+    {"zone": 1, "description": "Core EU (DE, FR, NL, BE, LU, AT)", "countries_from": ["DE", "FR", "NL", "BE", "AT"], "countries_to": ["DE", "FR", "NL", "BE", "LU", "AT", "CH"]},
+    {"zone": 2, "description": "Extended EU (ES, IT, PT, DK, SE, PL, CZ)", "countries_from": ["DE", "FR", "NL", "BE", "AT"], "countries_to": ["ES", "IT", "PT", "DK", "SE", "FI", "NO", "IE", "GB", "PL", "CZ", "SK"]},
+    {"zone": 3, "description": "Eastern & South-Eastern Europe", "countries_from": ["DE", "FR", "NL", "BE", "AT"], "countries_to": ["HU", "RO", "BG", "HR", "SI", "GR", "LT", "LV", "EE", "RS", "BA"]},
+    {"zone": 4, "description": "Rest of World", "countries_from": ["DE", "FR", "NL", "BE", "AT"], "countries_to": ["US", "CA", "JP", "KR", "CN", "AU", "NZ", "BR", "IN", "AE", "TR", "UA"]}
+  ],
+  "rates": {
+    "dpd-group-eu-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [7, 10, 13, 24]},
+      {"weight_kg": 1, "prices_by_zone": [8, 12, 16, 30]},
+      {"weight_kg": 2, "prices_by_zone": [10, 16, 21, 38]},
+      {"weight_kg": 5, "prices_by_zone": [15, 24, 32, 58]},
+      {"weight_kg": 10, "prices_by_zone": [22, 38, 50, 95]},
+      {"weight_kg": 20, "prices_by_zone": [35, 60, 82, 160]},
+      {"weight_kg": 30, "prices_by_zone": [48, 82, 112, 220]}
+    ]
+  }
+}

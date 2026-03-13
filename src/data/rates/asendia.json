@@ -1,0 +1,27 @@
+{
+  "carrier_id": "asendia",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for Asendia e-PAQ international mail and parcel service. Alliance between La Poste and Swiss Post. Actual rates vary by contract.",
+  "zones": [
+    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
+    {"zone": 2, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU"]},
+    {"zone": 3, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "GR", "CY"]},
+    {"zone": 4, "description": "Asia Pacific", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
+    {"zone": 5, "description": "Latin America", "countries_from": ["US"], "countries_to": ["MX", "BR", "AR", "CL", "CO", "PE", "EC", "CR", "PA", "GT", "DO"]},
+    {"zone": 6, "description": "Middle East & Africa", "countries_from": ["US"], "countries_to": ["AE", "SA", "IL", "TR", "ZA", "NG", "KE", "EG", "MA"]},
+    {"zone": 7, "description": "Rest of World", "countries_from": ["US"], "countries_to": ["RU", "KZ", "UZ", "GE", "AM", "FJ", "PG", "MN"]}
+  ],
+  "rates": {
+    "asendia-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 12, 15, 16, 14, 18, 22]},
+      {"weight_kg": 1, "prices_by_zone": [11, 16, 20, 22, 19, 25, 30]},
+      {"weight_kg": 2, "prices_by_zone": [15, 22, 28, 32, 28, 36, 42]},
+      {"weight_kg": 3, "prices_by_zone": [20, 30, 38, 42, 38, 48, 56]},
+      {"weight_kg": 5, "prices_by_zone": [28, 42, 55, 60, 54, 68, 80]},
+      {"weight_kg": 10, "prices_by_zone": [48, 72, 95, 105, 95, 120, 142]},
+      {"weight_kg": 15, "prices_by_zone": [66, 100, 132, 148, 135, 170, 202]},
+      {"weight_kg": 20, "prices_by_zone": [85, 130, 170, 192, 175, 222, 265]},
+      {"weight_kg": 30, "prices_by_zone": [122, 188, 248, 280, 255, 325, 390]}
+    ]
+  }
+}

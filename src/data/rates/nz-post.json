@@ -1,0 +1,42 @@
+{
+  "carrier_id": "nz-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated NZ Post international rates from New Zealand. National postal service with express, standard, and economy international tiers to 220+ countries.",
+  "zones": [
+    {"zone": 1, "description": "Domestic New Zealand", "countries_from": ["NZ"], "countries_to": ["NZ"]},
+    {"zone": 2, "description": "Australia & Pacific Islands", "countries_from": ["NZ"], "countries_to": ["AU", "FJ", "WS", "TO", "CK", "PG"]},
+    {"zone": 3, "description": "Asia", "countries_from": ["NZ"], "countries_to": ["SG", "MY", "TH", "JP", "KR", "CN", "HK", "TW", "ID", "PH", "VN"]},
+    {"zone": 4, "description": "North America & UK", "countries_from": ["NZ"], "countries_to": ["US", "CA", "GB", "IE"]},
+    {"zone": 5, "description": "Europe", "countries_from": ["NZ"], "countries_to": ["DE", "FR", "NL", "IT", "ES", "SE", "DK", "AT", "CH", "BE"]},
+    {"zone": 6, "description": "Rest of World", "countries_from": ["NZ"], "countries_to": ["AE", "SA", "IN", "BR", "ZA", "EG", "AR", "IL", "RU"]}
+  ],
+  "rates": {
+    "nz-post-express": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 22, 32, 38, 42, 48]},
+      {"weight_kg": 1, "prices_by_zone": [10, 30, 42, 50, 55, 64]},
+      {"weight_kg": 2, "prices_by_zone": [14, 42, 58, 68, 75, 88]},
+      {"weight_kg": 5, "prices_by_zone": [22, 72, 96, 115, 128, 148]},
+      {"weight_kg": 10, "prices_by_zone": [35, 118, 158, 192, 215, 248]},
+      {"weight_kg": 20, "prices_by_zone": [58, 202, 272, 332, 372, 428]},
+      {"weight_kg": 25, "prices_by_zone": [72, 250, 338, 412, 462, 532]}
+    ],
+    "nz-post-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [5, 15, 22, 26, 30, 34]},
+      {"weight_kg": 1, "prices_by_zone": [7, 20, 28, 35, 40, 46]},
+      {"weight_kg": 2, "prices_by_zone": [10, 28, 40, 48, 55, 62]},
+      {"weight_kg": 5, "prices_by_zone": [16, 48, 68, 82, 92, 108]},
+      {"weight_kg": 10, "prices_by_zone": [26, 80, 112, 138, 155, 180]},
+      {"weight_kg": 20, "prices_by_zone": [42, 138, 195, 240, 268, 312]},
+      {"weight_kg": 25, "prices_by_zone": [52, 172, 242, 298, 334, 388]}
+    ],
+    "nz-post-economy": [
+      {"weight_kg": 0.5, "prices_by_zone": [4, 10, 15, 18, 20, 24]},
+      {"weight_kg": 1, "prices_by_zone": [5, 14, 20, 25, 28, 32]},
+      {"weight_kg": 2, "prices_by_zone": [7, 20, 28, 34, 38, 44]},
+      {"weight_kg": 5, "prices_by_zone": [12, 34, 48, 58, 65, 76]},
+      {"weight_kg": 10, "prices_by_zone": [18, 56, 78, 98, 110, 128]},
+      {"weight_kg": 20, "prices_by_zone": [30, 98, 138, 170, 192, 222]},
+      {"weight_kg": 25, "prices_by_zone": [38, 122, 172, 212, 238, 276]}
+    ]
+  }
+}

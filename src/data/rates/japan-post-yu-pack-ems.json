@@ -1,0 +1,31 @@
+{
+  "carrier_id": "japan-post-yu-pack-ems",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Japan Post international rates from Japan. EMS premium express and Economy (SAL/Airmail) tiers.",
+  "zones": [
+    {"zone": 1, "description": "East Asia (KR, TW, HK, CN)", "countries_from": ["JP"], "countries_to": ["KR", "TW", "HK", "CN"]},
+    {"zone": 2, "description": "Southeast Asia & Oceania", "countries_from": ["JP"], "countries_to": ["SG", "MY", "TH", "ID", "VN", "PH", "AU", "NZ", "IN"]},
+    {"zone": 3, "description": "North America & Europe", "countries_from": ["JP"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL", "BE", "SE", "NO"]},
+    {"zone": 4, "description": "Rest of World", "countries_from": ["JP"], "countries_to": ["AE", "SA", "BR", "MX", "AR", "ZA", "NG", "KE", "TR", "RU"]}
+  ],
+  "rates": {
+    "japan-post-yu-pack-ems-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [14, 18, 24, 30]},
+      {"weight_kg": 1, "prices_by_zone": [18, 24, 32, 40]},
+      {"weight_kg": 2, "prices_by_zone": [24, 34, 46, 58]},
+      {"weight_kg": 5, "prices_by_zone": [42, 58, 78, 100]},
+      {"weight_kg": 10, "prices_by_zone": [68, 96, 132, 170]},
+      {"weight_kg": 20, "prices_by_zone": [115, 165, 228, 295]},
+      {"weight_kg": 30, "prices_by_zone": [160, 228, 318, 410]}
+    ],
+    "japan-post-yu-pack-ems-economy": [
+      {"weight_kg": 0.5, "prices_by_zone": [8, 11, 15, 19]},
+      {"weight_kg": 1, "prices_by_zone": [11, 15, 20, 26]},
+      {"weight_kg": 2, "prices_by_zone": [15, 21, 28, 36]},
+      {"weight_kg": 5, "prices_by_zone": [26, 36, 48, 62]},
+      {"weight_kg": 10, "prices_by_zone": [42, 60, 82, 105]},
+      {"weight_kg": 20, "prices_by_zone": [72, 102, 140, 182]},
+      {"weight_kg": 30, "prices_by_zone": [98, 140, 195, 252]}
+    ]
+  }
+}

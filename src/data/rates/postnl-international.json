@@ -1,0 +1,28 @@
+{
+  "carrier_id": "postnl-international",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for PostNL International parcel service. Origin from the Netherlands. Actual rates depend on business account discounts and surcharges.",
+  "zones": [
+    {"zone": 1, "description": "Benelux", "countries_from": ["NL"], "countries_to": ["BE", "LU"]},
+    {"zone": 2, "description": "Germany & France", "countries_from": ["NL"], "countries_to": ["DE", "FR"]},
+    {"zone": 3, "description": "Rest of Western Europe", "countries_from": ["NL"], "countries_to": ["GB", "IT", "ES", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "IS"]},
+    {"zone": 4, "description": "Eastern Europe", "countries_from": ["NL"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "GR", "CY"]},
+    {"zone": 5, "description": "North America", "countries_from": ["NL"], "countries_to": ["US", "CA", "MX"]},
+    {"zone": 6, "description": "Asia Pacific", "countries_from": ["NL"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
+    {"zone": 7, "description": "South America", "countries_from": ["NL"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "UY"]},
+    {"zone": 8, "description": "Middle East & Africa", "countries_from": ["NL"], "countries_to": ["AE", "SA", "IL", "TR", "ZA", "NG", "KE", "EG", "MA"]}
+  ],
+  "rates": {
+    "postnl-international-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [7, 9, 12, 14, 18, 20, 22, 25]},
+      {"weight_kg": 1, "prices_by_zone": [9, 12, 16, 19, 24, 28, 30, 35]},
+      {"weight_kg": 2, "prices_by_zone": [12, 16, 22, 26, 34, 38, 42, 48]},
+      {"weight_kg": 3, "prices_by_zone": [16, 22, 28, 34, 44, 50, 56, 64]},
+      {"weight_kg": 5, "prices_by_zone": [22, 30, 40, 48, 62, 72, 80, 92]},
+      {"weight_kg": 10, "prices_by_zone": [36, 52, 68, 82, 108, 125, 140, 162]},
+      {"weight_kg": 15, "prices_by_zone": [50, 72, 96, 116, 152, 178, 200, 232]},
+      {"weight_kg": 20, "prices_by_zone": [64, 92, 124, 150, 198, 232, 260, 302]},
+      {"weight_kg": 30, "prices_by_zone": [92, 132, 180, 218, 288, 340, 382, 445]}
+    ]
+  }
+}

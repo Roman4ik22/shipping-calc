@@ -1,0 +1,39 @@
+{
+  "carrier_id": "globalpost-by-auctane",
+  "effective_date": "2026-01-01",
+  "note": "Estimated rates for GlobalPost (Auctane) international shipping. Leverages bulk postal discounts. Actual rates depend on platform integration and volume.",
+  "zones": [
+    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
+    {"zone": 2, "description": "Mexico & Central America", "countries_from": ["US"], "countries_to": ["MX", "GT", "HN", "SV", "NI", "CR", "PA", "BZ"]},
+    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI"]},
+    {"zone": 4, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "GR", "CY"]},
+    {"zone": 5, "description": "East Asia & Oceania", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ"]},
+    {"zone": 6, "description": "Southeast Asia & India", "countries_from": ["US"], "countries_to": ["TH", "MY", "ID", "PH", "VN", "IN", "PK", "BD", "LK"]},
+    {"zone": 7, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "UY", "PY", "BO"]},
+    {"zone": 8, "description": "Middle East & Africa", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "IL", "TR", "ZA", "NG", "KE", "EG", "MA"]}
+  ],
+  "rates": {
+    "globalpost-by-auctane-standard": [
+      {"weight_kg": 0.5, "prices_by_zone": [9, 14, 16, 19, 18, 20, 22, 25]},
+      {"weight_kg": 1, "prices_by_zone": [12, 19, 22, 26, 25, 28, 30, 35]},
+      {"weight_kg": 2, "prices_by_zone": [16, 26, 32, 38, 35, 40, 44, 50]},
+      {"weight_kg": 3, "prices_by_zone": [22, 34, 42, 50, 46, 54, 58, 66]},
+      {"weight_kg": 5, "prices_by_zone": [30, 48, 60, 72, 66, 78, 84, 96]},
+      {"weight_kg": 10, "prices_by_zone": [50, 82, 105, 125, 115, 135, 148, 170]},
+      {"weight_kg": 15, "prices_by_zone": [70, 115, 148, 175, 162, 192, 210, 242]},
+      {"weight_kg": 20, "prices_by_zone": [90, 148, 192, 228, 212, 250, 275, 318]},
+      {"weight_kg": 30, "prices_by_zone": [128, 215, 278, 330, 308, 365, 400, 462]}
+    ],
+    "globalpost-by-auctane-economy": [
+      {"weight_kg": 0.5, "prices_by_zone": [6, 10, 12, 14, 13, 15, 16, 19]},
+      {"weight_kg": 1, "prices_by_zone": [8, 14, 16, 20, 18, 21, 23, 27]},
+      {"weight_kg": 2, "prices_by_zone": [12, 20, 24, 30, 27, 32, 35, 40]},
+      {"weight_kg": 3, "prices_by_zone": [16, 26, 34, 40, 36, 44, 48, 54]},
+      {"weight_kg": 5, "prices_by_zone": [22, 38, 48, 58, 52, 62, 68, 78]},
+      {"weight_kg": 10, "prices_by_zone": [38, 65, 85, 102, 92, 110, 122, 140]},
+      {"weight_kg": 15, "prices_by_zone": [52, 92, 120, 145, 132, 158, 175, 202]},
+      {"weight_kg": 20, "prices_by_zone": [68, 120, 158, 190, 175, 208, 230, 268]},
+      {"weight_kg": 30, "prices_by_zone": [98, 175, 230, 278, 255, 305, 338, 392]}
+    ]
+  }
+}
