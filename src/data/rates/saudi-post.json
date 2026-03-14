@@ -1,0 +1,204 @@
+{
+  "carrier_id": "saudi-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Saudi Post (SPL) rates from Saudi Arabia. EMS and international parcel services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "GCC Neighbors",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "AE",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Middle East & North Africa (Regional)",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "JO",
+        "LB",
+        "IQ",
+        "EG",
+        "MA",
+        "TN",
+        "TR",
+        "IR",
+        "YE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT",
+        "ES"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia, Africa & Oceania (Remote)",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "IN",
+        "PK",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "ZA",
+        "NG"
+      ]
+    }
+  ],
+  "rates": {
+    "saudi-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          18,
+          28,
+          32
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16,
+          25,
+          38,
+          42
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22,
+          34,
+          52,
+          58
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          38,
+          55,
+          85,
+          95
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          62,
+          92,
+          142,
+          158
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          108,
+          162,
+          250,
+          278
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          155,
+          232,
+          358,
+          398
+        ]
+      }
+    ],
+    "saudi-post-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          7,
+          11,
+          17,
+          19
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          16,
+          24,
+          27
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14,
+          22,
+          33,
+          37
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          24,
+          37,
+          55,
+          62
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          40,
+          62,
+          92,
+          105
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          70,
+          108,
+          162,
+          185
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          100,
+          155,
+          232,
+          265
+        ]
+      }
+    ]
+  }
+}

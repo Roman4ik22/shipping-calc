@@ -1,0 +1,206 @@
+{
+  "carrier_id": "pos-laju",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Pos Laju (Pos Malaysia) rates from Malaysia. EMS and registered airmail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN Neighbors",
+      "countries_from": [
+        "MY"
+      ],
+      "countries_to": [
+        "SG",
+        "ID",
+        "TH",
+        "PH",
+        "VN",
+        "BN",
+        "MM",
+        "KH",
+        "LA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia & Oceania (Regional)",
+      "countries_from": [
+        "MY"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "TW",
+        "HK",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "MY"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "NL",
+        "IT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East & Africa (Remote)",
+      "countries_from": [
+        "MY"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "TR",
+        "ZA",
+        "EG",
+        "NG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "pos-laju-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          7,
+          11,
+          17,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          15,
+          23,
+          26
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14,
+          20,
+          32,
+          36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          23,
+          34,
+          52,
+          60
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          38,
+          55,
+          88,
+          100
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          65,
+          98,
+          155,
+          178
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          92,
+          140,
+          222,
+          255
+        ]
+      }
+    ],
+    "pos-laju-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6,
+          8,
+          12,
+          14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

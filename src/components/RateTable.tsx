@@ -180,6 +180,28 @@ export default function RateTable({
     kg: string;
     no_rates: string;
     disclaimer: string;
+    or_enter_weight: string;
+    hide_dimensions: string;
+    enter_dimensions: string;
+    package_dimensions: string;
+    volumetric_weight: string;
+    volumetric_exceeds: string;
+    volumetric_formula: string;
+    billed_at: string;
+    nearest_bracket: string;
+    currency: string;
+    auto_detected: string;
+    sort: string;
+    type_label: string;
+    all: string;
+    express: string;
+    regional: string;
+    postal: string;
+    results: string;
+    compare: string;
+    comparison: string;
+    close: string;
+    no_filter_results: string;
   };
 }) {
   const weightPresets = [0.5, 1, 2, 5, 10, 20, 30, 50, 70];
@@ -267,10 +289,10 @@ export default function RateTable({
   )[0];
 
   const typeOptions = [
-    { value: "all" as const, label: locale === "ru" ? "Все" : "All" },
-    { value: "international" as const, label: locale === "ru" ? "Экспресс" : "Express" },
-    { value: "regional" as const, label: locale === "ru" ? "Региональные" : "Regional" },
-    { value: "postal" as const, label: locale === "ru" ? "Почтовые" : "Postal" },
+    { value: "all" as const, label: labels.all },
+    { value: "international" as const, label: labels.express },
+    { value: "regional" as const, label: labels.regional },
+    { value: "postal" as const, label: labels.postal },
   ];
 
   const comparedRates = ratesAtWeight.filter((r) => compareIds.has(r.id));
@@ -298,6 +320,8 @@ export default function RateTable({
               <button
                 key={w}
                 onClick={() => { setSelectedPreset(w); setCustomWeight(""); }}
+                aria-label={`${w} ${labels.kg}`}
+                aria-pressed={selectedPreset === w && !customWeight}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   selectedPreset === w && !customWeight
                     ? "bg-blue-600 text-white"
@@ -314,7 +338,7 @@ export default function RateTable({
         <div className="flex flex-wrap items-end gap-4">
           <div>
             <label className="block text-xs text-gray-500 mb-1">
-              {locale === "ru" ? "Или введите вес вручную" : "Or enter weight manually"}
+              {labels.or_enter_weight}
             </label>
             <div className="flex items-center gap-1">
               <input
@@ -336,9 +360,7 @@ export default function RateTable({
             onClick={() => setShowDimensions(!showDimensions)}
             className="px-3 py-2 text-sm text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
           >
-            {showDimensions
-              ? (locale === "ru" ? "Скрыть габариты" : "Hide dimensions")
-              : (locale === "ru" ? "Указать габариты (Д×Ш×В)" : "Enter dimensions (L×W×H)")}
+            {showDimensions ? labels.hide_dimensions : labels.enter_dimensions}
           </button>
         </div>
 
@@ -346,14 +368,14 @@ export default function RateTable({
         {showDimensions && (
           <div className="mt-3 pt-3 border-t border-gray-100">
             <label className="block text-xs text-gray-500 mb-2">
-              {locale === "ru" ? "Габариты посылки (см)" : "Package dimensions (cm)"}
+              {labels.package_dimensions}
             </label>
             <div className="flex items-center gap-2">
               <input
                 type="number"
                 value={dimensions.l}
                 onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
-                placeholder={locale === "ru" ? "Длина" : "Length"}
+                placeholder="L"
                 min="1"
                 className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
@@ -362,7 +384,7 @@ export default function RateTable({
                 type="number"
                 value={dimensions.w}
                 onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
-                placeholder={locale === "ru" ? "Ширина" : "Width"}
+                placeholder="W"
                 min="1"
                 className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
@@ -371,31 +393,27 @@ export default function RateTable({
                 type="number"
                 value={dimensions.h}
                 onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
-                placeholder={locale === "ru" ? "Высота" : "Height"}
+                placeholder="H"
                 min="1"
                 className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-500">{locale === "ru" ? "см" : "cm"}</span>
+              <span className="text-sm text-gray-500">cm</span>
             </div>
             {volumetricWeight > 0 && (
               <div className="mt-2 text-sm">
                 <span className="text-gray-500">
-                  {locale === "ru" ? "Объёмный вес:" : "Volumetric weight:"}{" "}
+                  {labels.volumetric_weight}:{" "}
                 </span>
                 <span className="font-semibold text-gray-900">{volumetricWeight.toFixed(1)} {labels.kg}</span>
                 {effectiveWeight > ((selectedPreset ?? parseFloat(customWeight)) || 0) && (
                   <span className="ml-2 text-orange-600 text-xs">
-                    {locale === "ru"
-                      ? "⚠ Объёмный вес больше фактического — расчёт по объёмному"
-                      : "⚠ Volumetric weight exceeds actual — charged by volumetric"}
+                    ⚠ {labels.volumetric_exceeds}
                   </span>
                 )}
               </div>
             )}
-            <p className="text-xs text-gray-400 mt-1">
-              {locale === "ru"
-                ? "Формула: Д × Ш × В / 5000 = объёмный вес (кг)"
-                : "Formula: L × W × H / 5000 = volumetric weight (kg)"}
+            <p className="text-xs text-gray-500 mt-1">
+              {labels.volumetric_formula}
             </p>
           </div>
         )}
@@ -403,11 +421,11 @@ export default function RateTable({
         {/* Effective weight display */}
         {effectiveWeight > 0 && (
           <div className="mt-3 pt-3 border-t border-gray-100 text-sm">
-            <span className="text-gray-500">{locale === "ru" ? "Тарификация по:" : "Billed at:"} </span>
+            <span className="text-gray-500">{labels.billed_at}: </span>
             <span className="font-semibold text-gray-900">{billingWeight} {labels.kg}</span>
             {billingWeight !== effectiveWeight && (
-              <span className="text-xs text-gray-400 ml-1">
-                ({locale === "ru" ? "ближайший тарифный вес" : "nearest rate bracket"})
+              <span className="text-xs text-gray-500 ml-1">
+                ({labels.nearest_bracket})
               </span>
             )}
           </div>
@@ -416,10 +434,11 @@ export default function RateTable({
 
       {/* Currency selector */}
       <div className="flex items-center gap-2 mb-4">
-        <span className="text-sm text-gray-500">{locale === "ru" ? "Валюта:" : "Currency:"}</span>
+        <span className="text-sm text-gray-500">{labels.currency}:</span>
         <select
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
+          aria-label={labels.currency}
           className="px-3 py-1.5 rounded border border-gray-300 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
         >
           {Object.entries(EXCHANGE_RATES).map(([code, info]) => (
@@ -429,11 +448,11 @@ export default function RateTable({
           ))}
         </select>
         {currency !== "USD" && (
-          <span className="text-xs text-gray-400">
+          <span className="text-xs text-gray-500">
             (1 USD = {EXCHANGE_RATES[currency].rate} {currency})
             {currencyAutoDetected && (
               <span className="ml-1">
-                — {locale === "ru" ? "определено автоматически" : "auto-detected"}
+                — {labels.auto_detected}
               </span>
             )}
           </span>
@@ -442,10 +461,12 @@ export default function RateTable({
 
       {/* Sort & filter controls */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-500">{locale === "ru" ? "Сортировка:" : "Sort:"}</span>
+        <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
+          <span className="text-sm text-gray-500">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
+            aria-pressed={sortBy === "price"}
+            aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 rounded text-sm ${
               sortBy === "price" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
@@ -454,6 +475,8 @@ export default function RateTable({
           </button>
           <button
             onClick={() => setSortBy("speed")}
+            aria-pressed={sortBy === "speed"}
+            aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 rounded text-sm ${
               sortBy === "speed" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
@@ -462,12 +485,13 @@ export default function RateTable({
           </button>
         </div>
         <div className="h-4 w-px bg-gray-300 hidden sm:block" />
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-500">{locale === "ru" ? "Тип:" : "Type:"}</span>
+        <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
+          <span className="text-sm text-gray-500">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
+              aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 rounded text-sm ${
                 filterType === opt.value ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
@@ -481,14 +505,14 @@ export default function RateTable({
       {/* Results count + compare button */}
       <div className="flex items-center justify-between mb-3">
         <p className="text-sm text-gray-500">
-          {ratesAtWeight.length} {locale === "ru" ? "результатов" : "results"}
+          {ratesAtWeight.length} {labels.results}
         </p>
         {compareIds.size >= 2 && (
           <button
             onClick={() => setShowCompare(!showCompare)}
             className="px-4 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700"
           >
-            {locale === "ru" ? `Сравнить (${compareIds.size})` : `Compare (${compareIds.size})`}
+            {labels.compare} ({compareIds.size})
           </button>
         )}
       </div>
@@ -497,16 +521,16 @@ export default function RateTable({
       {showCompare && comparedRates.length >= 2 && (
         <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4 overflow-x-auto">
           <h3 className="font-semibold text-gray-900 mb-3">
-            {locale === "ru" ? "Сравнение" : "Comparison"}
+            {labels.comparison}
           </h3>
-          <table className="w-full text-sm">
+          <table className="w-full text-sm" role="table">
             <thead>
               <tr className="text-left text-gray-500">
-                <th className="pb-2">{labels.carrier}</th>
-                <th className="pb-2">{labels.service}</th>
-                <th className="pb-2">{labels.price}</th>
-                <th className="pb-2">{labels.delivery_time}</th>
-                <th className="pb-2">{labels.tracking}</th>
+                <th className="pb-2" scope="col">{labels.carrier}</th>
+                <th className="pb-2" scope="col">{labels.service}</th>
+                <th className="pb-2" scope="col">{labels.price}</th>
+                <th className="pb-2" scope="col">{labels.delivery_time}</th>
+                <th className="pb-2" scope="col">{labels.tracking}</th>
               </tr>
             </thead>
             <tbody>
@@ -525,7 +549,7 @@ export default function RateTable({
             onClick={() => setShowCompare(false)}
             className="mt-2 text-sm text-blue-600 hover:text-blue-800"
           >
-            {locale === "ru" ? "Закрыть" : "Close"}
+            {labels.close}
           </button>
         </div>
       )}
@@ -559,7 +583,8 @@ export default function RateTable({
                       checked={isCompared}
                       onChange={() => toggleCompare(rate.id)}
                       className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
-                      title={locale === "ru" ? "Сравнить" : "Compare"}
+                      aria-label={`${labels.compare} ${rate.carrier_name} ${rate.service_name}`}
+                      title={labels.compare}
                     />
                     <span className="font-semibold text-gray-900">
                       {rate.carrier_name}
@@ -617,7 +642,7 @@ export default function RateTable({
                       ${rate.price}
                     </p>
                     {currency !== "USD" && rate.price && (
-                      <p className="text-xs text-gray-400">
+                      <p className="text-xs text-gray-500">
                         {convertPrice(rate.price, currency)}
                       </p>
                     )}
@@ -635,12 +660,12 @@ export default function RateTable({
 
       {ratesAtWeight.length === 0 && (
         <div className="text-center py-8 text-gray-500">
-          <p>{locale === "ru" ? "Нет результатов для выбранного фильтра" : "No results for selected filter"}</p>
+          <p>{labels.no_filter_results}</p>
         </div>
       )}
 
       {/* Disclaimer */}
-      <p className="mt-6 text-xs text-gray-400 leading-relaxed">
+      <p className="mt-6 text-xs text-gray-500 leading-relaxed">
         {labels.disclaimer}
       </p>
     </div>

@@ -1,0 +1,271 @@
+{
+  "carrier_id": "emirates-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Emirates Post rates from UAE. Express, standard parcel, and registered mail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "GCC Neighbors",
+      "countries_from": [
+        "AE"
+      ],
+      "countries_to": [
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Middle East & North Africa (Regional)",
+      "countries_from": [
+        "AE"
+      ],
+      "countries_to": [
+        "JO",
+        "LB",
+        "IQ",
+        "EG",
+        "MA",
+        "TN",
+        "TR",
+        "IR",
+        "YE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "AE"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT",
+        "ES",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia, Africa & Oceania (Remote)",
+      "countries_from": [
+        "AE"
+      ],
+      "countries_to": [
+        "IN",
+        "PK",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "ZA",
+        "NG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "emirates-post-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12,
+          18,
+          28,
+          30
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16,
+          24,
+          38,
+          40
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22,
+          32,
+          50,
+          55
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          38,
+          55,
+          82,
+          90
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          62,
+          90,
+          138,
+          152
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          108,
+          158,
+          242,
+          268
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          152,
+          225,
+          348,
+          385
+        ]
+      }
+    ],
+    "emirates-post-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          7,
+          10,
+          16,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10,
+          15,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14,
+          20,
+          30,
+          34
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          24,
+          35,
+          50,
+          58
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          40,
+          58,
+          85,
+          98
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          68,
+          100,
+          150,
+          172
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          98,
+          142,
+          215,
+          248
+        ]
+      }
+    ],
+    "emirates-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          8,
+          11,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          12,
+          16,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

@@ -16,14 +16,14 @@ export async function generateMetadata({
   const loc = locale as Locale;
   return {
     title: t(loc, "compare_shipping_rates") + " | ShipWorldwide",
-    description: t(loc, "hero_subtitle", { count: "109" }),
+    description: t(loc, "hero_subtitle", { count: "134" }),
     alternates: {
       canonical: `/${locale}`,
-      languages: { en: "/en", ru: "/ru" },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
     },
     openGraph: {
       title: t(loc, "compare_shipping_rates"),
-      description: t(loc, "hero_subtitle", { count: "109" }),
+      description: t(loc, "hero_subtitle", { count: "134" }),
       type: "website",
     },
   };
@@ -54,42 +54,44 @@ export default async function HomePage({
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-lg sm:text-xl text-blue-100 text-center max-w-3xl mx-auto mb-8">
-            {t(loc, "hero_subtitle", { count: "109" })}
+          <p className="text-lg sm:text-xl text-white/90 text-center max-w-3xl mx-auto mb-8">
+            {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
             <div className="text-center">
               <p className="text-3xl sm:text-4xl font-bold">213</p>
-              <p className="text-sm text-blue-200">{t(loc, "all_countries")}</p>
+              <p className="text-sm text-blue-100">{t(loc, "all_countries")}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold">109</p>
-              <p className="text-sm text-blue-200">{t(loc, "carriers_page")}</p>
+              <p className="text-3xl sm:text-4xl font-bold">134</p>
+              <p className="text-sm text-blue-100">{t(loc, "carriers_page")}</p>
             </div>
             <div className="text-center">
               <p className="text-3xl sm:text-4xl font-bold">45K+</p>
-              <p className="text-sm text-blue-200">{loc === "ru" ? "Маршрутов" : "Routes"}</p>
+              <p className="text-sm text-blue-100">{t(loc, "routes")}</p>
             </div>
           </div>
 
           {/* Shipping form */}
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div className="max-w-4xl mx-auto bg-white/15 backdrop-blur-sm rounded-xl p-6">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
-                name_en: c.name_en,
-                name_ru: c.name_ru,
+                name: getCountryName(c, loc),
+                slug: loc === "ru" ? c.slug_ru : c.slug_en,
                 slug_en: c.slug_en,
                 slug_ru: c.slug_ru,
                 continent: c.continent,
               }))}
               locale={loc}
+              corridorSep={loc === "ru" ? "-v-" : "-to-"}
               labels={{
                 from: t(loc, "from"),
                 to: t(loc, "to"),
                 submit: t(loc, "get_rates"),
+                swap: t(loc, "swap_countries"),
               }}
             />
           </div>
@@ -111,12 +113,13 @@ export default async function HomePage({
               <Link
                 key={`${fromCode}-${toCode}`}
                 href={`/${locale}/shipping/${slug}`}
+                prefetch={false}
                 className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
               >
                 <p className="font-medium text-gray-900">
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                 </p>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-600 mt-1">
                   {t(loc, "compare_rates")}
                 </p>
               </Link>
@@ -137,6 +140,7 @@ export default async function HomePage({
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/from/${c.slug_en}`}
+                  prefetch={false}
                   className="text-sm text-blue-600 hover:text-blue-800 py-1"
                 >
                   {t(loc, "ship_from", { country: getCountryName(c, loc) })}
@@ -153,6 +157,7 @@ export default async function HomePage({
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/to/${c.slug_en}`}
+                  prefetch={false}
                   className="text-sm text-blue-600 hover:text-blue-800 py-1"
                 >
                   {t(loc, "ship_to", { country: getCountryName(c, loc) })}
@@ -166,19 +171,19 @@ export default async function HomePage({
       {/* Trusted carriers */}
       <section className="bg-white py-10 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-gray-500 mb-6">
-            {loc === "ru" ? "Сравниваем тарифы 109+ перевозчиков, включая:" : "Comparing rates from 109+ carriers, including:"}
+          <p className="text-center text-sm text-gray-600 mb-6">
+            {t(loc, "comparing_carriers")}
           </p>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
             {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name) => (
-              <span key={name} className="text-gray-400 font-semibold text-sm sm:text-base whitespace-nowrap">
+              <span key={name} className="text-gray-500 font-semibold text-sm sm:text-base whitespace-nowrap">
                 {name}
               </span>
             ))}
           </div>
           <div className="text-center mt-4">
             <Link href={`/${locale}/carriers`} className="text-sm text-blue-600 hover:text-blue-800">
-              {loc === "ru" ? "Все перевозчики →" : "View all carriers →"}
+              {t(loc, "view_all_carriers")} →
             </Link>
           </div>
         </div>
@@ -194,34 +199,28 @@ export default async function HomePage({
             <div className="text-center">
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                {loc === "ru" ? "Выберите маршрут" : "Choose your route"}
+                {t(loc, "choose_route")}
               </h3>
-              <p className="text-sm text-gray-600">
-                {loc === "ru"
-                  ? "Укажите страну отправления и назначения. Мы поддерживаем 213 стран и территорий."
-                  : "Select your origin and destination countries. We support 213 countries and territories."}
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {t(loc, "choose_route_desc")}
               </p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                {loc === "ru" ? "Сравните тарифы" : "Compare rates"}
+                {t(loc, "compare_rates")}
               </h3>
-              <p className="text-sm text-gray-600">
-                {loc === "ru"
-                  ? "Увидьте цены от 109+ перевозчиков включая DHL, FedEx, UPS, EMS и почтовые службы."
-                  : "See prices from 109+ carriers including DHL, FedEx, UPS, EMS, and postal services."}
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {t(loc, "compare_rates_desc")}
               </p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                {loc === "ru" ? "Отправьте посылку" : "Ship your package"}
+                {t(loc, "ship_package")}
               </h3>
-              <p className="text-sm text-gray-600">
-                {loc === "ru"
-                  ? "Выберите лучший вариант по цене и скорости, и оформите отправку через сайт перевозчика."
-                  : "Pick the best option by price and speed, then book directly through the carrier's website."}
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {t(loc, "ship_package_desc")}
               </p>
             </div>
           </div>
@@ -238,7 +237,8 @@ export default async function HomePage({
             <Link
               key={c.code}
               href={`/${locale}/shipping/from/${c.slug_en}`}
-              className="text-sm text-gray-600 hover:text-blue-600 py-1"
+              prefetch={false}
+              className="text-sm text-gray-700 hover:text-blue-600 py-1"
             >
               {getCountryName(c, loc)}
             </Link>
@@ -249,13 +249,14 @@ export default async function HomePage({
       {/* Popular shipping guides */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          {loc === "ru" ? "Популярные гиды по доставке" : "Popular Shipping Guides"}
+          {t(loc, "popular_guides")}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {popular.slice(0, 12).map((c) => (
             <Link
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
+              prefetch={false}
               className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
             >
               <span>{countryFlag(c.code)}</span>
@@ -265,7 +266,7 @@ export default async function HomePage({
         </div>
         <div className="text-center mt-4">
           <Link href={`/${locale}/guide`} className="text-sm text-blue-600 hover:text-blue-800">
-            {loc === "ru" ? "Все гиды →" : "All shipping guides →"}
+            {t(loc, "all_guides")} →
           </Link>
         </div>
       </section>
@@ -274,44 +275,39 @@ export default async function HomePage({
       <section className="bg-blue-600 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
-            {loc === "ru"
-              ? "Получайте лучшие тарифы на доставку"
-              : "Get the Best Shipping Deals"}
+            {t(loc, "newsletter_title")}
           </h2>
-          <p className="text-blue-100 mb-6 text-sm">
-            {loc === "ru"
-              ? "Подпишитесь на обновления о скидках перевозчиков, изменениях таможенных правил и советах по международной доставке."
-              : "Subscribe for carrier discount alerts, customs rule changes, and international shipping tips."}
+          <p className="text-white/80 mb-6 text-sm">
+            {t(loc, "newsletter_subtitle")}
           </p>
-          <NewsletterForm locale={locale} />
-          <p className="text-xs text-blue-200 mt-3">
-            {loc === "ru"
-              ? "Не более 2 писем в месяц. Отписаться можно в любой момент."
-              : "Max 2 emails per month. Unsubscribe anytime."}
+          <NewsletterForm
+            locale={locale}
+            labels={{
+              thanks: t(loc, "newsletter_thanks"),
+              placeholder: t(loc, "newsletter_placeholder"),
+              subscribe: t(loc, "newsletter_subscribe"),
+            }}
+          />
+          <p className="text-xs text-white/60 mt-3">
+            {t(loc, "newsletter_privacy")}
           </p>
         </div>
       </section>
 
       {/* Homepage FAQ */}
       {(() => {
-        const faqs = loc === "ru" ? [
-          { q: "Как работает ShipWorldwide?", a: "ShipWorldwide сравнивает тарифы международной доставки от 109+ перевозчиков по всему миру. Выберите страну отправления и назначения, и мы покажем все доступные варианты с ценами, сроками и возможностью отслеживания." },
-          { q: "Это бесплатно?", a: "Да, сравнение тарифов на ShipWorldwide полностью бесплатно. Мы показываем ориентировочные цены на основе опубликованных тарифов перевозчиков." },
-          { q: "Какие перевозчики поддерживаются?", a: "Мы поддерживаем 109+ перевозчиков, включая DHL Express, FedEx, UPS, EMS, Почту России, CDEK, Aramex, SF Express, и десятки региональных и почтовых служб по всему миру." },
-          { q: "Насколько точны цены?", a: "Цены являются оценочными на основе опубликованных прайс-листов. Фактическая стоимость может отличаться в зависимости от габаритов посылки, топливных сборов, страховки и типа аккаунта у перевозчика." },
-          { q: "Нужно ли платить таможенные пошлины?", a: "Таможенные пошлины и налоги зависят от страны назначения, стоимости и типа товара. Мы показываем информацию о таможенных правилах для каждого направления, включая беспошлинные пороги и ставки НДС." },
-        ] : [
-          { q: "How does ShipWorldwide work?", a: "ShipWorldwide compares international shipping rates from 109+ carriers worldwide. Select your origin and destination countries, and we'll show all available options with prices, delivery times, and tracking availability." },
-          { q: "Is it free to use?", a: "Yes, comparing shipping rates on ShipWorldwide is completely free. We display estimated prices based on carriers' published tariffs." },
-          { q: "Which carriers are supported?", a: "We support 109+ carriers including DHL Express, FedEx, UPS, EMS, USPS, Royal Mail, Aramex, SF Express, and dozens of regional and postal services worldwide." },
-          { q: "How accurate are the prices?", a: "Prices are estimates based on published rate cards. Actual costs may vary depending on package dimensions, fuel surcharges, insurance, and your account type with the carrier." },
-          { q: "Do I need to pay customs duties?", a: "Customs duties and taxes depend on the destination country, declared value, and type of goods. We display customs information for each route, including duty-free thresholds and VAT rates." },
+        const faqs = [
+          { q: t(loc, "home_faq_1_q"), a: t(loc, "home_faq_1_a") },
+          { q: t(loc, "home_faq_2_q"), a: t(loc, "home_faq_2_a") },
+          { q: t(loc, "home_faq_3_q"), a: t(loc, "home_faq_3_a") },
+          { q: t(loc, "home_faq_4_q"), a: t(loc, "home_faq_4_a") },
+          { q: t(loc, "home_faq_5_q"), a: t(loc, "home_faq_5_a") },
         ];
 
         return (
           <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              {loc === "ru" ? "Часто задаваемые вопросы" : "Frequently Asked Questions"}
+              {t(loc, "faq_title")}
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (

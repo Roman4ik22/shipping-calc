@@ -2,6 +2,16 @@ export interface Country {
   code: string;
   name_en: string;
   name_ru: string;
+  name_es: string;
+  name_de: string;
+  name_fr: string;
+  name_pt: string;
+  name_zh: string;
+  name_ja: string;
+  name_ko: string;
+  name_ar: string;
+  name_tr: string;
+  name_it: string;
   slug_en: string;
   slug_ru: string;
   region: string;

@@ -1,0 +1,222 @@
+{
+  "carrier_id": "mercado-envios",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Mercado Envíos rates. MercadoLibre's logistics network across Latin America. Primarily intra-LATAM.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Argentina Domestic & Mercosur",
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "AR",
+        "UY",
+        "PY",
+        "BR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Brazil & Southern Cone",
+      "countries_from": [
+        "BR",
+        "AR"
+      ],
+      "countries_to": [
+        "BR",
+        "CL",
+        "CO",
+        "PE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Mexico & Central America",
+      "countries_from": [
+        "MX"
+      ],
+      "countries_to": [
+        "MX",
+        "GT",
+        "CR",
+        "PA",
+        "SV",
+        "HN"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Cross-LATAM",
+      "countries_from": [
+        "AR",
+        "BR",
+        "MX"
+      ],
+      "countries_to": [
+        "VE",
+        "EC",
+        "BO",
+        "DO",
+        "CU"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "International (US)",
+      "countries_from": [
+        "MX"
+      ],
+      "countries_to": [
+        "US",
+        "CA"
+      ]
+    }
+  ],
+  "rates": {
+    "mercado-envios-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          8,
+          6,
+          12,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          11,
+          8,
+          16,
+          24
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10,
+          15,
+          12,
+          22,
+          32
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16,
+          24,
+          18,
+          35,
+          52
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          26,
+          40,
+          30,
+          58,
+          88
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          45,
+          70,
+          52,
+          100,
+          155
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          65,
+          100,
+          75,
+          142,
+          222
+        ]
+      }
+    ],
+    "mercado-envios-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          4,
+          8,
+          12
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4,
+          7,
+          5,
+          11,
+          16
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6,
+          10,
+          8,
+          15,
+          22
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10,
+          16,
+          12,
+          25,
+          38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          17,
+          28,
+          20,
+          42,
+          62
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          30,
+          48,
+          35,
+          72,
+          108
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          42,
+          68,
+          50,
+          102,
+          155
+        ]
+      }
+    ]
+  }
+}

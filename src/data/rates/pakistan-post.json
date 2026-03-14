@@ -1,0 +1,201 @@
+{
+  "carrier_id": "pakistan-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Pakistan Post rates from Pakistan. EMS and registered airmail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "South Asia Neighbors",
+      "countries_from": [
+        "PK"
+      ],
+      "countries_to": [
+        "IN",
+        "BD",
+        "LK",
+        "NP",
+        "AF",
+        "IR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Middle East & Central Asia (Regional)",
+      "countries_from": [
+        "PK"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM",
+        "TR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "PK"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "East Asia, Africa & Oceania (Remote)",
+      "countries_from": [
+        "PK"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "ZA",
+        "NG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "pakistan-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          18,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9,
+          14,
+          24,
+          27
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13,
+          20,
+          34,
+          38
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          32,
+          55,
+          62
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36,
+          55,
+          92,
+          105
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          95,
+          162,
+          185
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          135,
+          232,
+          265
+        ]
+      }
+    ],
+    "pakistan-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2,
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3,
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5,
+          8,
+          12,
+          14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

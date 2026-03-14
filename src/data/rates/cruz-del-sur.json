@@ -1,0 +1,211 @@
+{
+  "carrier_id": "cruz-del-sur",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Cruz del Sur rates from Peru. Peruvian logistics company with domestic and regional cargo services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Peru Domestic & Neighbors",
+      "countries_from": [
+        "PE"
+      ],
+      "countries_to": [
+        "PE",
+        "EC",
+        "CO",
+        "BO",
+        "CL"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of South America",
+      "countries_from": [
+        "PE"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "UY",
+        "PY",
+        "VE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Central America & Mexico",
+      "countries_from": [
+        "PE"
+      ],
+      "countries_to": [
+        "MX",
+        "PA",
+        "CR",
+        "GT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "International",
+      "countries_from": [
+        "PE"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "ES",
+        "GB"
+      ]
+    }
+  ],
+  "rates": {
+    "cruz-del-sur-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          10,
+          15,
+          30
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          14,
+          20,
+          38
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          18,
+          28,
+          50
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          14,
+          30,
+          45,
+          82
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          22,
+          50,
+          75,
+          138
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          38,
+          88,
+          132,
+          242
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          55,
+          125,
+          188,
+          348
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          85,
+          195,
+          295,
+          null
+        ]
+      }
+    ],
+    "cruz-del-sur-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          7,
+          10,
+          22
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4,
+          10,
+          14,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6,
+          13,
+          20,
+          36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10,
+          22,
+          32,
+          60
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          16,
+          36,
+          55,
+          100
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          28,
+          62,
+          95,
+          178
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          40,
+          90,
+          135,
+          255
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          62,
+          140,
+          210,
+          null
+        ]
+      }
+    ]
+  }
+}

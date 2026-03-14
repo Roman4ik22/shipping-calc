@@ -1,0 +1,209 @@
+{
+  "carrier_id": "posta-kenya",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Posta Kenya rates from Kenya. National postal service with EMS and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "East Africa (Neighbors)",
+      "countries_from": [
+        "KE"
+      ],
+      "countries_to": [
+        "TZ",
+        "UG",
+        "ET",
+        "RW",
+        "SO",
+        "SS",
+        "BI",
+        "DJ"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Africa (Regional)",
+      "countries_from": [
+        "KE"
+      ],
+      "countries_to": [
+        "ZA",
+        "NG",
+        "GH",
+        "EG",
+        "MA",
+        "ZW",
+        "ZM",
+        "SN",
+        "CI",
+        "CM"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "KE"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT",
+        "ES",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia & Oceania (Remote)",
+      "countries_from": [
+        "KE"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "IN",
+        "AU",
+        "NZ",
+        "AE",
+        "SA"
+      ]
+    }
+  ],
+  "rates": {
+    "posta-kenya-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          12,
+          18,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12,
+          18,
+          25,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          25,
+          35,
+          40
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          42,
+          58,
+          65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          45,
+          70,
+          98,
+          110
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          78,
+          122,
+          172,
+          195
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          110,
+          175,
+          248,
+          280
+        ]
+      }
+    ],
+    "posta-kenya-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          8,
+          10,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          12,
+          16,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

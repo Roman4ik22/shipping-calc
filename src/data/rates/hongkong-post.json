@@ -1,0 +1,269 @@
+{
+  "carrier_id": "hongkong-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Hongkong Post rates from Hong Kong. Speedpost (EMS), e-Express, and registered airmail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Greater China & East Asia",
+      "countries_from": [
+        "HK"
+      ],
+      "countries_to": [
+        "CN",
+        "MO",
+        "TW",
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia & Oceania (Regional)",
+      "countries_from": [
+        "HK"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "HK"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "NL",
+        "IT",
+        "ES"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East & Africa (Remote)",
+      "countries_from": [
+        "HK"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "TR",
+        "ZA",
+        "NG",
+        "KE",
+        "EG"
+      ]
+    }
+  ],
+  "rates": {
+    "hongkong-post-speedpost": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          14,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14,
+          18,
+          28,
+          32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          26,
+          40,
+          45
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          42,
+          65,
+          74
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          52,
+          70,
+          108,
+          125
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90,
+          122,
+          190,
+          218
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          128,
+          175,
+          272,
+          312
+        ]
+      }
+    ],
+    "hongkong-post-eexpress": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5,
+          7,
+          10,
+          12
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10,
+          14,
+          20,
+          23
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "hongkong-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

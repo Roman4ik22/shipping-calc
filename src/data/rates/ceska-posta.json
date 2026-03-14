@@ -1,0 +1,271 @@
+{
+  "carrier_id": "ceska-posta",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Česká Pošta rates from Czech Republic. EMS, international parcels, and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Neighboring Countries",
+      "countries_from": [
+        "CZ"
+      ],
+      "countries_to": [
+        "SK",
+        "DE",
+        "PL",
+        "AT"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Europe (Regional)",
+      "countries_from": [
+        "CZ"
+      ],
+      "countries_to": [
+        "GB",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "HU",
+        "SE",
+        "DK",
+        "CH",
+        "NO",
+        "RO",
+        "BG"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & East Asia (Intercontinental)",
+      "countries_from": [
+        "CZ"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "CN",
+        "JP",
+        "KR",
+        "AU"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East, Africa, South Asia (Remote)",
+      "countries_from": [
+        "CZ"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IN",
+        "PK",
+        "ZA",
+        "NG",
+        "EG",
+        "TR"
+      ]
+    }
+  ],
+  "rates": {
+    "ceska-posta-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          14,
+          22,
+          26
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          18,
+          29,
+          33
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          25,
+          39,
+          45
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          40,
+          64,
+          74
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          46,
+          66,
+          108,
+          125
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          80,
+          116,
+          188,
+          218
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          114,
+          166,
+          270,
+          312
+        ]
+      }
+    ],
+    "ceska-posta-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          9,
+          14,
+          17
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          12,
+          19,
+          23
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          17,
+          27,
+          32
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          19,
+          28,
+          44,
+          53
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          31,
+          47,
+          75,
+          90
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          54,
+          82,
+          132,
+          158
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          77,
+          118,
+          190,
+          228
+        ]
+      }
+    ],
+    "ceska-posta-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          11,
+          16,
+          19
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

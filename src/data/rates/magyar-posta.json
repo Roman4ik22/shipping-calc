@@ -1,0 +1,275 @@
+{
+  "carrier_id": "magyar-posta",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Magyar Posta rates from Hungary. EMS, international parcels, and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Neighboring Countries",
+      "countries_from": [
+        "HU"
+      ],
+      "countries_to": [
+        "AT",
+        "SK",
+        "RO",
+        "UA",
+        "RS",
+        "HR",
+        "SI"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Europe (Regional)",
+      "countries_from": [
+        "HU"
+      ],
+      "countries_to": [
+        "DE",
+        "GB",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "PL",
+        "CZ",
+        "SE",
+        "DK",
+        "CH",
+        "NO",
+        "BG"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & East Asia (Intercontinental)",
+      "countries_from": [
+        "HU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "CN",
+        "JP",
+        "KR",
+        "AU"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East, Africa, South Asia (Remote)",
+      "countries_from": [
+        "HU"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IN",
+        "PK",
+        "ZA",
+        "NG",
+        "EG",
+        "TR"
+      ]
+    }
+  ],
+  "rates": {
+    "magyar-posta-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          14,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          18,
+          28,
+          32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          25,
+          38,
+          44
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          40,
+          62,
+          72
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          46,
+          66,
+          105,
+          122
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          80,
+          115,
+          185,
+          215
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          112,
+          165,
+          265,
+          308
+        ]
+      }
+    ],
+    "magyar-posta-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          9,
+          14,
+          17
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          12,
+          19,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          17,
+          26,
+          31
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18,
+          28,
+          44,
+          52
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          30,
+          46,
+          74,
+          88
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          52,
+          80,
+          128,
+          155
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          75,
+          115,
+          185,
+          222
+        ]
+      }
+    ],
+    "magyar-posta-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          8,
+          11,
+          13
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          11,
+          15,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

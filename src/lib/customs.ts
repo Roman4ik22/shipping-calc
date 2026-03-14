@@ -161,3 +161,8 @@ export function getCustomsInfo(countryCode: string): CustomsInfo {
 export function hasCustomsData(countryCode: string): boolean {
   return countryCode in customsData;
 }
+
+export function getCustomsNotes(customs: CustomsInfo, locale: string): string | undefined {
+  if (locale === "ru" && customs.notes_ru) return customs.notes_ru;
+  return customs.notes_en;
+}

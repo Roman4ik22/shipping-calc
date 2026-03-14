@@ -1,0 +1,200 @@
+{
+  "carrier_id": "bangladesh-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Bangladesh Post rates from Bangladesh. EMS and registered airmail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "South Asia Neighbors",
+      "countries_from": [
+        "BD"
+      ],
+      "countries_to": [
+        "IN",
+        "PK",
+        "LK",
+        "NP",
+        "MM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Middle East & Southeast Asia (Regional)",
+      "countries_from": [
+        "BD"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "MY",
+        "SG",
+        "TH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "BD"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "East Asia, Africa & Oceania (Remote)",
+      "countries_from": [
+        "BD"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "ZA",
+        "NG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "bangladesh-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          18,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9,
+          14,
+          25,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13,
+          20,
+          35,
+          40
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          34,
+          58,
+          65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36,
+          56,
+          96,
+          108
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          98,
+          168,
+          192
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          140,
+          240,
+          275
+        ]
+      }
+    ],
+    "bangladesh-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2,
+          3,
+          5,
+          6
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3,
+          5,
+          7,
+          9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5,
+          7,
+          11,
+          13
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

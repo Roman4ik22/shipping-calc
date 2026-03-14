@@ -8,6 +8,7 @@ import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import MobileMenu from "@/components/MobileMenu";
 import Analytics from "@/components/Analytics";
+import WebVitals from "@/components/WebVitals";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -67,6 +68,7 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         <Analytics />
+        <WebVitals />
         {/* Organization JSON-LD */}
         <script
           type="application/ld+json"
@@ -90,7 +92,7 @@ export default async function LocaleLayout({
           }}
         />
         {/* Header */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link
@@ -103,25 +105,25 @@ export default async function LocaleLayout({
                 <nav className="hidden sm:flex items-center gap-6">
                   <Link
                     href={`/${locale}`}
-                    className="text-sm text-gray-600 hover:text-gray-900"
+                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
                   >
                     {t(loc, "home")}
                   </Link>
                   <Link
                     href={`/${locale}/carriers`}
-                    className="text-sm text-gray-600 hover:text-gray-900"
+                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
                   >
                     {t(loc, "carriers_page")}
                   </Link>
                   <Link
                     href={`/${locale}/guide`}
-                    className="text-sm text-gray-600 hover:text-gray-900"
+                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
                   >
                     {t(loc, "guides")}
                   </Link>
                   <Link
                     href={`/${locale}/about`}
-                    className="text-sm text-gray-600 hover:text-gray-900"
+                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
                   >
                     {t(loc, "about")}
                   </Link>
@@ -145,7 +147,7 @@ export default async function LocaleLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-gray-300 mt-16">
+        <footer className="bg-gray-900 text-gray-300 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
@@ -172,6 +174,7 @@ export default async function LocaleLayout({
                       <Link
                         key={code}
                         href={`/${locale}/shipping/to/${country.slug_en}`}
+                        prefetch={false}
                         className="hover:text-white"
                       >
                         {t(loc, "ship_to", {
@@ -194,6 +197,7 @@ export default async function LocaleLayout({
                       <Link
                         key={code}
                         href={`/${locale}/shipping/from/${country.slug_en}`}
+                        prefetch={false}
                         className="hover:text-white"
                       >
                         {t(loc, "ship_from", {
@@ -208,10 +212,10 @@ export default async function LocaleLayout({
                 <h4 className="text-white font-semibold mb-3">
                   {t(loc, "information")}
                 </h4>
-                <p className="text-sm text-gray-400">{t(loc, "disclaimer")}</p>
+                <p className="text-sm text-gray-400 leading-relaxed">{t(loc, "disclaimer")}</p>
               </div>
             </div>
-            <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+            <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-500">
               &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
               {t(loc, "all_rights")}
             </div>

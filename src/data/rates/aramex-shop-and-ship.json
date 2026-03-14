@@ -1,0 +1,231 @@
+{
+  "carrier_id": "aramex-shop-and-ship",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Aramex Shop & Ship rates. Cross-border shopping service delivering from US/UK/EU to Middle East, Africa, Asia.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "From US/UK to GCC",
+      "countries_from": [
+        "US",
+        "GB"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "From US/UK to Middle East / North Africa",
+      "countries_from": [
+        "US",
+        "GB"
+      ],
+      "countries_to": [
+        "JO",
+        "LB",
+        "EG",
+        "MA",
+        "TN",
+        "TR"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "From US/UK to South Asia",
+      "countries_from": [
+        "US",
+        "GB"
+      ],
+      "countries_to": [
+        "IN",
+        "PK",
+        "BD",
+        "LK"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "From US/UK to Africa",
+      "countries_from": [
+        "US",
+        "GB"
+      ],
+      "countries_to": [
+        "KE",
+        "NG",
+        "ZA",
+        "GH",
+        "ET",
+        "TZ"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "From US/UK to Southeast Asia",
+      "countries_from": [
+        "US",
+        "GB"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN"
+      ]
+    }
+  ],
+  "rates": {
+    "aramex-sns-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          20,
+          25,
+          28,
+          35,
+          30
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          26,
+          32,
+          36,
+          45,
+          38
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          35,
+          42,
+          48,
+          60,
+          50
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          55,
+          68,
+          78,
+          95,
+          82
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          90,
+          112,
+          128,
+          158,
+          135
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          158,
+          198,
+          228,
+          280,
+          238
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          225,
+          282,
+          325,
+          400,
+          342
+        ]
+      }
+    ],
+    "aramex-sns-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          14,
+          18,
+          20,
+          25,
+          22
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          18,
+          22,
+          26,
+          32,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          24,
+          30,
+          35,
+          42,
+          36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          40,
+          50,
+          58,
+          70,
+          60
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          65,
+          82,
+          95,
+          118,
+          100
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          115,
+          145,
+          168,
+          208,
+          178
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          165,
+          208,
+          242,
+          298,
+          255
+        ]
+      }
+    ]
+  }
+}

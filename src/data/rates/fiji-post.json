@@ -1,0 +1,200 @@
+{
+  "carrier_id": "fiji-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Fiji Post rates from Fiji. EMS and registered airmail services for Pacific Islands.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Pacific Islands (Neighbors)",
+      "countries_from": [
+        "FJ"
+      ],
+      "countries_to": [
+        "NZ",
+        "TO",
+        "WS",
+        "VU",
+        "PG",
+        "SB",
+        "NC"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Australia & Southeast Asia (Regional)",
+      "countries_from": [
+        "FJ"
+      ],
+      "countries_to": [
+        "AU",
+        "SG",
+        "MY",
+        "ID",
+        "PH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "East Asia & Americas (Intercontinental)",
+      "countries_from": [
+        "FJ"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "JP",
+        "KR",
+        "CN",
+        "HK"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Europe, Middle East & Africa (Remote)",
+      "countries_from": [
+        "FJ"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "AE",
+        "SA",
+        "IN",
+        "ZA"
+      ]
+    }
+  ],
+  "rates": {
+    "fiji-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          15,
+          22,
+          28
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14,
+          20,
+          30,
+          36
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          28,
+          42,
+          50
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          46,
+          68,
+          82
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          54,
+          78,
+          115,
+          138
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          94,
+          135,
+          200,
+          242
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          134,
+          192,
+          285,
+          348
+        ]
+      }
+    ],
+    "fiji-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6,
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          12,
+          16,
+          20
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

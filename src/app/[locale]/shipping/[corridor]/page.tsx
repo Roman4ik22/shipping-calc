@@ -8,7 +8,7 @@ import {
   getPopularCountries,
   getCarrierDescription,
 } from "@/lib/data";
-import { getCustomsInfo, hasCustomsData } from "@/lib/customs";
+import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
@@ -75,10 +75,9 @@ export async function generateMetadata({
     }),
     alternates: {
       canonical: `/${locale}/shipping/${corridor}`,
-      languages: {
-        en: `/en/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, "en")}`,
-        ru: `/ru/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, "ru")}`,
-      },
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
+      ),
     },
     openGraph: {
       title: t(loc, "meta_corridor_title", { origin: originName, destination: destName }),
@@ -150,7 +149,7 @@ export default async function CorridorPage({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-500 mb-6">
+      <nav className="text-sm text-gray-600 mb-6">
         <Link href={`/${locale}`} className="hover:text-blue-600">
           {t(loc, "home")}
         </Link>
@@ -177,21 +176,21 @@ export default async function CorridorPage({
 
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
-        <div className="flex flex-wrap gap-4 mb-8 text-sm text-gray-600">
+        <div className="flex flex-wrap gap-4 mb-8 text-sm text-gray-700">
           <span>
             {corridorData.carriers.length}{" "}
-            {loc === "ru" ? "вариантов доставки" : "shipping options"}
+            {t(loc, "shipping_options")}
           </span>
           <span>
-            {loc === "ru" ? "от" : "from"} $
+            {t(loc, "from_price")} $
             {Math.min(
               ...corridorData.carriers
                 .map((c) => c.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 999)
             )}{" "}
-            {loc === "ru" ? "за 1 кг" : "for 1 kg"}
+            {t(loc, "for_1_kg")}
           </span>
           <span>
-            {loc === "ru" ? "от" : "from"}{" "}
+            {t(loc, "from_price")}{" "}
             {Math.min(...corridorData.carriers.map((c) => c.estimated_days_min))}{" "}
             {t(loc, "days")}
           </span>
@@ -228,6 +227,28 @@ export default async function CorridorPage({
           kg: t(loc, "kg"),
           no_rates: t(loc, "no_rates"),
           disclaimer: t(loc, "disclaimer"),
+          or_enter_weight: t(loc, "or_enter_weight"),
+          hide_dimensions: t(loc, "hide_dimensions"),
+          enter_dimensions: t(loc, "enter_dimensions"),
+          package_dimensions: t(loc, "package_dimensions"),
+          volumetric_weight: t(loc, "volumetric_weight"),
+          volumetric_exceeds: t(loc, "volumetric_exceeds"),
+          volumetric_formula: t(loc, "volumetric_formula"),
+          billed_at: t(loc, "billed_at"),
+          nearest_bracket: t(loc, "nearest_bracket"),
+          currency: t(loc, "currency"),
+          auto_detected: t(loc, "auto_detected"),
+          sort: t(loc, "sort"),
+          type_label: t(loc, "type_label"),
+          all: t(loc, "all"),
+          express: t(loc, "express"),
+          regional: t(loc, "regional"),
+          postal: t(loc, "postal"),
+          results: t(loc, "results"),
+          compare: t(loc, "compare"),
+          comparison: t(loc, "comparison"),
+          close: t(loc, "close"),
+          no_filter_results: t(loc, "no_filter_results"),
         }}
       />
 
@@ -239,14 +260,20 @@ export default async function CorridorPage({
         return (
           <section className="mt-8 bg-gray-50 rounded-lg p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3">
-              {loc === "ru"
-                ? `Доставка из ${originName} в ${destName}: обзор`
-                : `Shipping from ${originName} to ${destName}: Overview`}
+              {t(loc, "shipping_from_to", { origin: originName, destination: destName })}: {t(loc, "overview")}
             </h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              {loc === "ru"
-                ? `Мы нашли ${corridorData.carriers.length} вариантов доставки из ${originName} в ${destName}. Самый дешёвый вариант — ${cheapestRate.carrier.name} (${cheapestRate.service.name}) от $${cheapestPrice} за 1 кг. Самая быстрая доставка — ${fastestCarrier.carrier.name} за ${fastestCarrier.estimated_days_min}–${fastestCarrier.estimated_days_max} дней. Цены зависят от веса посылки, выбранного сервиса и дополнительных услуг. Экспресс-перевозчики (DHL, FedEx, UPS) предлагают быструю доставку с отслеживанием, почтовые сервисы — более доступные тарифы.`
-                : `We found ${corridorData.carriers.length} shipping options from ${originName} to ${destName}. The cheapest option is ${cheapestRate.carrier.name} (${cheapestRate.service.name}) starting from $${cheapestPrice} for 1 kg. The fastest delivery is ${fastestCarrier.carrier.name} in ${fastestCarrier.estimated_days_min}–${fastestCarrier.estimated_days_max} days. Prices depend on package weight, chosen service, and additional options. Express carriers (DHL, FedEx, UPS) offer fast delivery with tracking, while postal services provide more affordable rates.`}
+              {t(loc, "corridor_overview", {
+                count: String(corridorData.carriers.length),
+                origin: originName,
+                destination: destName,
+                cheapest_carrier: cheapestRate.carrier.name,
+                cheapest_service: cheapestRate.service.name,
+                cheapest_price: String(cheapestPrice),
+                fastest_carrier: fastestCarrier.carrier.name,
+                fastest_min: String(fastestCarrier.estimated_days_min),
+                fastest_max: String(fastestCarrier.estimated_days_max),
+              })}
             </p>
           </section>
         );
@@ -326,24 +353,24 @@ export default async function CorridorPage({
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div>
-                  <p className="text-sm text-gray-500">{t(loc, "de_minimis")}</p>
+                  <p className="text-sm text-gray-600">{t(loc, "de_minimis")}</p>
                   <p className="text-lg font-semibold">
-                    {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : (loc === "ru" ? "Нет (пошлина с $0)" : "None (duty from $0)")}
+                    {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : t(loc, "duty_from_zero")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">{t(loc, "vat_rate")}</p>
+                  <p className="text-sm text-gray-600">{t(loc, "vat_rate")}</p>
                   <p className="text-lg font-semibold">{customs.vat_rate}%</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">{t(loc, "avg_duty")}</p>
+                  <p className="text-sm text-gray-600">{t(loc, "avg_duty")}</p>
                   <p className="text-lg font-semibold">{customs.avg_duty_rate}%</p>
                 </div>
               </div>
-              {(loc === "ru" ? customs.notes_ru : customs.notes_en) && (
+              {getCustomsNotes(customs, loc) && (
                 <p className="text-sm text-gray-600 mb-3">
                   <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
-                  {loc === "ru" ? customs.notes_ru : customs.notes_en}
+                  {getCustomsNotes(customs, loc)}
                 </p>
               )}
               <p className="text-xs text-gray-400">{t(loc, "customs_disclaimer")}</p>
@@ -420,7 +447,7 @@ export default async function CorridorPage({
       {/* Shipping guide links */}
       <section className="mt-12">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          {loc === "ru" ? "Подробнее о доставке" : "Learn more about shipping"}
+          {t(loc, "learn_more_shipping")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
@@ -430,10 +457,10 @@ export default async function CorridorPage({
             <span className="text-2xl">{countryFlag(destination.code)}</span>
             <div>
               <p className="font-medium text-gray-900 text-sm">
-                {loc === "ru" ? `Гид по доставке в ${destName}` : `Shipping Guide to ${destName}`}
+                {t(loc, "guide_title", { country: destName })}
               </p>
               <p className="text-xs text-gray-500">
-                {loc === "ru" ? "Таможня, пошлины, советы" : "Customs, duties, tips"}
+                {t(loc, "customs_duties_tips")}
               </p>
             </div>
           </Link>
@@ -444,10 +471,10 @@ export default async function CorridorPage({
             <span className="text-2xl">{countryFlag(origin.code)}</span>
             <div>
               <p className="font-medium text-gray-900 text-sm">
-                {loc === "ru" ? `Гид по доставке в ${originName}` : `Shipping Guide to ${originName}`}
+                {t(loc, "guide_title", { country: originName })}
               </p>
               <p className="text-xs text-gray-500">
-                {loc === "ru" ? "Таможня, пошлины, советы" : "Customs, duties, tips"}
+                {t(loc, "customs_duties_tips")}
               </p>
             </div>
           </Link>

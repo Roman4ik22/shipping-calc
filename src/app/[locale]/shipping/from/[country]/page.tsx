@@ -30,15 +30,10 @@ export async function generateMetadata({
       country: getCountryName(country, loc),
     }),
     description:
-      loc === "ru"
-        ? `Сравните тарифы доставки из ${getCountryName(country, loc)} в любую страну мира. Цены от DHL, FedEx, UPS, EMS и 100+ перевозчиков.`
-        : `Compare shipping rates from ${getCountryName(country, loc)} to any country worldwide. Prices from DHL, FedEx, UPS, EMS and 100+ carriers.`,
+      t(loc, "meta_country_from_desc", { country: getCountryName(country, loc) }),
     alternates: {
       canonical: `/${locale}/shipping/from/${slug}`,
-      languages: {
-        en: `/en/shipping/from/${slug}`,
-        ru: `/ru/shipping/from/${slug}`,
-      },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/shipping/from/${slug}`])),
     },
   };
 }
@@ -72,7 +67,7 @@ export default async function FromCountryPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-gray-500 mb-6">
+      <nav className="text-sm text-gray-600 mb-6">
         <Link href={`/${locale}`} className="hover:text-blue-600">
           {t(loc, "home")}
         </Link>
@@ -86,9 +81,7 @@ export default async function FromCountryPage({
         {countryFlag(country.code)} {t(loc, "ship_from", { country: name })}
       </h1>
       <p className="text-gray-600 mb-8">
-        {loc === "ru"
-          ? `Сравните тарифы доставки из ${name} в любую страну мира`
-          : `Compare shipping rates from ${name} to any country worldwide`}
+        {t(loc, "meta_country_from_desc", { country: name })}
       </p>
 
       <section className="mb-10">
@@ -103,6 +96,7 @@ export default async function FromCountryPage({
               <Link
                 key={dest.code}
                 href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
+                prefetch={false}
                 className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm"
               >
                 <p className="font-medium">
@@ -129,6 +123,7 @@ export default async function FromCountryPage({
                   <Link
                     key={dest.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
+                    prefetch={false}
                     className="text-sm text-blue-600 hover:text-blue-800 py-1"
                   >
                     {getCountryName(dest, loc)}

@@ -1,0 +1,274 @@
+{
+  "carrier_id": "poczta-polska",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Poczta Polska rates from Poland. EMS, international parcels, and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Neighboring EU (Neighbors)",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "DE",
+        "CZ",
+        "SK",
+        "LT",
+        "UA",
+        "BY"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Europe (Regional)",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "GB",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AT",
+        "SE",
+        "DK",
+        "HU",
+        "RO",
+        "BG",
+        "CH",
+        "NO"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & East Asia (Intercontinental)",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "CN",
+        "JP",
+        "KR",
+        "AU"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East, Africa, South Asia (Remote)",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IN",
+        "PK",
+        "ZA",
+        "NG",
+        "EG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "poczta-polska-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          14,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13,
+          18,
+          28,
+          32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          25,
+          38,
+          44
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          40,
+          62,
+          72
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          45,
+          65,
+          105,
+          120
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          78,
+          112,
+          182,
+          210
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          110,
+          160,
+          260,
+          300
+        ]
+      }
+    ],
+    "poczta-polska-parcel": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          9,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          12,
+          18,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          17,
+          26,
+          30
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18,
+          28,
+          42,
+          50
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          30,
+          45,
+          72,
+          85
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          52,
+          78,
+          125,
+          148
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          74,
+          112,
+          178,
+          212
+        ]
+      }
+    ],
+    "poczta-polska-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          8,
+          11,
+          13
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          11,
+          15,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

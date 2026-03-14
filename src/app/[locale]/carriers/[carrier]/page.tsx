@@ -30,10 +30,7 @@ export async function generateMetadata({
     description: desc,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
-      languages: {
-        en: `/en/carriers/${carrierId}`,
-        ru: `/ru/carriers/${carrierId}`,
-      },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/carriers/${carrierId}`])),
     },
     openGraph: {
       title: `${carrier.name} — International Shipping Rates`,
@@ -62,7 +59,7 @@ export default async function CarrierPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-gray-500 mb-6">
+      <nav className="text-sm text-gray-600 mb-6">
         <Link href={`/${locale}`} className="hover:text-blue-600">
           {t(loc, "home")}
         </Link>
@@ -105,7 +102,7 @@ export default async function CarrierPage({
             rel="noopener noreferrer"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
           >
-            {loc === "ru" ? "Официальный сайт" : "Official Website"}
+            {t(loc, "official_website")}
           </a>
         </div>
       </div>
@@ -124,7 +121,7 @@ export default async function CarrierPage({
             </h3>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <div>
-                <span className="text-gray-500">
+                <span className="text-gray-600">
                   {t(loc, "delivery_time")}:
                 </span>
                 <p className="font-medium">
@@ -133,13 +130,13 @@ export default async function CarrierPage({
                 </p>
               </div>
               <div>
-                <span className="text-gray-500">
-                  {loc === "ru" ? "Макс. вес" : "Max weight"}:
+                <span className="text-gray-600">
+                  {t(loc, "max_weight")}:
                 </span>
                 <p className="font-medium">{service.max_weight_kg} {t(loc, "kg")}</p>
               </div>
               <div>
-                <span className="text-gray-500">{t(loc, "tracking")}:</span>
+                <span className="text-gray-600">{t(loc, "tracking")}:</span>
                 <p className="font-medium">
                   {service.tracking ? t(loc, "yes") : t(loc, "no")}
                 </p>
@@ -151,7 +148,7 @@ export default async function CarrierPage({
 
       {/* Popular corridors for this carrier */}
       <h2 className="text-xl font-bold text-gray-900 mb-4">
-        {loc === "ru" ? `Популярные маршруты ${carrier.name}` : `Popular ${carrier.name} routes`}
+        {t(loc, "popular_routes_carrier", { carrier: carrier.name })}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
         {(() => {
@@ -176,7 +173,7 @@ export default async function CarrierPage({
 
       {/* Shipping guides */}
       <h2 className="text-xl font-bold text-gray-900 mb-4">
-        {loc === "ru" ? "Гиды по доставке" : "Shipping Guides"}
+        {t(loc, "guides_heading")}
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-8">
         {getPopularCountries().slice(0, 8).map((c) => (

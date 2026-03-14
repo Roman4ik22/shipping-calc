@@ -2818,5 +2818,777 @@
         "tracking": true
       }
     ]
+  },
+  {
+    "id": "aramex-africa",
+    "name": "Aramex Africa",
+    "type": "regional",
+    "logo": "/logos/aramex.svg",
+    "website": "https://www.aramex.com",
+    "tracking_url": "https://www.aramex.com/track/results?ShipmentNumber={tracking}",
+    "description_en": "Aramex's regional service for intra-Africa shipping. Covers major markets across East, West, and Southern Africa.",
+    "description_ru": "Региональная служба Aramex для доставки по Африке. Охватывает крупнейшие рынки Восточной, Западной и Южной Африки.",
+    "services": [
+      {
+        "id": "aramex-africa-express",
+        "name": "Africa Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "aramex-africa-economy",
+        "name": "Africa Economy",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dhl-africa-ecommerce",
+    "name": "DHL Africa (eCommerce)",
+    "type": "regional",
+    "logo": "/logos/dhl.svg",
+    "website": "https://www.dhl.com/en/ecommerce.html",
+    "tracking_url": "https://www.dhl.com/en/express/tracking.html?AWB={tracking}",
+    "description_en": "DHL's dedicated eCommerce service for Africa. Affordable delivery across 50+ African countries with customs-ready solutions.",
+    "description_ru": "Специализированная служба DHL для электронной коммерции в Африке. Доступная доставка в 50+ африканских стран с таможенными решениями.",
+    "services": [
+      {
+        "id": "dhl-africa-ecommerce-standard",
+        "name": "eCommerce Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 12,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "dhl-africa-ecommerce-express",
+        "name": "eCommerce Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "posta-kenya",
+    "name": "Posta Kenya",
+    "type": "postal",
+    "logo": "/logos/posta-kenya.svg",
+    "website": "https://www.posta.co.ke",
+    "tracking_url": "https://www.posta.co.ke/tracking?id={tracking}",
+    "description_en": "Kenya's national postal service. Provides domestic and international mail and parcel delivery across East Africa and worldwide.",
+    "description_ru": "Национальная почтовая служба Кении. Обеспечивает доставку почты и посылок по Восточной Африке и всему миру.",
+    "services": [
+      {
+        "id": "posta-kenya-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "posta-kenya-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sa-post",
+    "name": "SA Post (South Africa Post Office)",
+    "type": "postal",
+    "logo": "/logos/sa-post.svg",
+    "website": "https://www.postoffice.co.za",
+    "tracking_url": "https://www.postoffice.co.za/track?id={tracking}",
+    "description_en": "South Africa's national postal service. Provides mail and parcel services across Southern Africa and internationally.",
+    "description_ru": "Национальная почтовая служба Южной Африки. Предоставляет почтовые и посылочные услуги по Южной Африке и за рубежом.",
+    "services": [
+      {
+        "id": "sa-post-ems",
+        "name": "EMS Speed Services",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "sa-post-international",
+        "name": "International Parcel",
+        "speed_days_min": 10,
+        "speed_days_max": 25,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "sa-post-registered",
+        "name": "Registered Mail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "emirates-post",
+    "name": "Emirates Post",
+    "type": "postal",
+    "logo": "/logos/emirates-post.svg",
+    "website": "https://emiratespost.ae",
+    "tracking_url": "https://emiratespost.ae/track?id={tracking}",
+    "description_en": "Official postal service of the United Arab Emirates. Offers domestic and international mail, parcel, and express delivery services.",
+    "description_ru": "Официальная почтовая служба ОАЭ. Предлагает услуги внутренней и международной почты, посылок и экспресс-доставки.",
+    "services": [
+      {
+        "id": "emirates-post-express",
+        "name": "Express Mail",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "emirates-post-standard",
+        "name": "Standard Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "emirates-post-registered",
+        "name": "Registered Mail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "saudi-post",
+    "name": "Saudi Post (SPL)",
+    "type": "postal",
+    "logo": "/logos/saudi-post.svg",
+    "website": "https://www.sp.com.sa",
+    "tracking_url": "https://www.sp.com.sa/en/tracking?id={tracking}",
+    "description_en": "Saudi Arabia's national postal service (Saudi Post / SPL). Provides mail, parcel, and logistics services across the Kingdom and internationally.",
+    "description_ru": "Национальная почтовая служба Саудовской Аравии. Предоставляет почтовые, посылочные и логистические услуги по Королевству и за рубежом.",
+    "services": [
+      {
+        "id": "saudi-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "saudi-post-standard",
+        "name": "International Parcel",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "aramex-shop-and-ship",
+    "name": "Aramex Shop & Ship",
+    "type": "regional",
+    "logo": "/logos/aramex.svg",
+    "website": "https://www.shopandship.com",
+    "tracking_url": "https://www.aramex.com/track/results?ShipmentNumber={tracking}",
+    "description_en": "Aramex's cross-border shopping and shipping service. Get a virtual address in the US, UK, or other countries and ship to Middle East, Africa, and Asia.",
+    "description_ru": "Сервис трансграничного шоппинга Aramex. Получите виртуальный адрес в США, Великобритании или других странах и отправляйте на Ближний Восток, в Африку и Азию.",
+    "services": [
+      {
+        "id": "aramex-sns-express",
+        "name": "Shop & Ship Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "aramex-sns-standard",
+        "name": "Shop & Ship Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "mercado-envios",
+    "name": "Mercado Envíos",
+    "type": "regional",
+    "logo": "/logos/mercado-envios.svg",
+    "website": "https://www.mercadolibre.com",
+    "tracking_url": "https://www.mercadolibre.com/tracking?id={tracking}",
+    "description_en": "MercadoLibre's integrated shipping service. The largest logistics network in Latin America, covering Argentina, Brazil, Mexico, Colombia, Chile, and more.",
+    "description_ru": "Интегрированная служба доставки MercadoLibre. Крупнейшая логистическая сеть Латинской Америки, охватывающая Аргентину, Бразилию, Мексику, Колумбию, Чили и др.",
+    "services": [
+      {
+        "id": "mercado-envios-express",
+        "name": "Envío Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "mercado-envios-standard",
+        "name": "Envío Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "deprisa",
+    "name": "Deprisa",
+    "type": "regional",
+    "logo": "/logos/deprisa.svg",
+    "website": "https://www.deprisa.com",
+    "tracking_url": "https://www.deprisa.com/rastreo?guia={tracking}",
+    "description_en": "Colombian courier and logistics company. Part of Avianca group. Covers Colombia with connections to Latin America and international destinations.",
+    "description_ru": "Колумбийская курьерская и логистическая компания. Входит в группу Avianca. Покрывает Колумбию и связи с Латинской Америкой и международными направлениями.",
+    "services": [
+      {
+        "id": "deprisa-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "deprisa-standard",
+        "name": "Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cruz-del-sur",
+    "name": "Cruz del Sur",
+    "type": "regional",
+    "logo": "/logos/cruz-del-sur.svg",
+    "website": "https://www.cruzdelsur.com.pe",
+    "tracking_url": "https://www.cruzdelsur.com.pe/rastreo?numero={tracking}",
+    "description_en": "Peruvian logistics and cargo company. One of Peru's largest transportation companies with domestic and regional parcel delivery services.",
+    "description_ru": "Перуанская логистическая и грузовая компания. Одна из крупнейших транспортных компаний Перу с доставкой посылок по стране и региону.",
+    "services": [
+      {
+        "id": "cruz-del-sur-express",
+        "name": "Cargo Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "cruz-del-sur-standard",
+        "name": "Cargo Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "omniva",
+    "name": "Omniva",
+    "type": "postal",
+    "logo": "/logos/omniva.svg",
+    "website": "https://www.omniva.ee",
+    "tracking_url": "https://www.omniva.ee/track?barcode={tracking}",
+    "description_en": "Estonian state-owned postal and logistics company serving the Baltic states (Estonia, Latvia, Lithuania). Offers parcel locker networks and international delivery.",
+    "description_ru": "Государственная почтовая и логистическая компания Эстонии, обслуживающая страны Балтии (Эстония, Латвия, Литва). Сеть почтоматов и международная доставка.",
+    "services": [
+      {
+        "id": "omniva-express",
+        "name": "Express",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "omniva-standard",
+        "name": "Standard Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "omniva-registered",
+        "name": "Registered Letter",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "poczta-polska",
+    "name": "Poczta Polska",
+    "type": "postal",
+    "logo": "/logos/poczta-polska.svg",
+    "website": "https://www.poczta-polska.pl",
+    "tracking_url": "https://emonitoring.poczta-polska.pl/?numer={tracking}",
+    "description_en": "Poland's national postal service. One of the largest postal operators in Central Europe with extensive international mail and parcel delivery network.",
+    "description_ru": "Национальная почтовая служба Польши. Один из крупнейших почтовых операторов Центральной Европы с обширной сетью международной доставки.",
+    "services": [
+      {
+        "id": "poczta-polska-ems",
+        "name": "EMS Pocztex",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "poczta-polska-parcel",
+        "name": "International Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "poczta-polska-registered",
+        "name": "Registered Letter",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "magyar-posta",
+    "name": "Magyar Posta",
+    "type": "postal",
+    "logo": "/logos/magyar-posta.svg",
+    "website": "https://www.posta.hu",
+    "tracking_url": "https://www.posta.hu/nyomkovetes?number={tracking}",
+    "description_en": "Hungary's national postal service. Provides domestic and international mail, parcel, and express delivery across Central Europe and worldwide.",
+    "description_ru": "Национальная почтовая служба Венгрии. Обеспечивает доставку почты и посылок по Центральной Европе и всему миру.",
+    "services": [
+      {
+        "id": "magyar-posta-ems",
+        "name": "EMS",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "magyar-posta-standard",
+        "name": "International Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "magyar-posta-registered",
+        "name": "Registered Letter",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "ceska-posta",
+    "name": "Česká Pošta",
+    "type": "postal",
+    "logo": "/logos/ceska-posta.svg",
+    "website": "https://www.ceskaposta.cz",
+    "tracking_url": "https://www.postaonline.cz/trackandtrace/-/zasilka/cislo?parcelNumber={tracking}",
+    "description_en": "Czech Republic's national postal service. Comprehensive domestic and international mail and parcel delivery throughout Europe and worldwide.",
+    "description_ru": "Национальная почтовая служба Чехии. Комплексная доставка почты и посылок по Европе и всему миру.",
+    "services": [
+      {
+        "id": "ceska-posta-ems",
+        "name": "EMS",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "ceska-posta-standard",
+        "name": "International Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "ceska-posta-registered",
+        "name": "Registered Letter",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "correos-express",
+    "name": "Correos Express",
+    "type": "regional",
+    "logo": "/logos/correos-express.svg",
+    "website": "https://www.correosexpress.com",
+    "tracking_url": "https://www.correosexpress.com/web/seguimiento-online?numero={tracking}",
+    "description_en": "Spain's express parcel delivery service. Subsidiary of Correos Group. Fast domestic and international deliveries across Europe and Latin America.",
+    "description_ru": "Служба экспресс-доставки посылок Испании. Дочерняя компания группы Correos. Быстрая доставка по Европе и Латинской Америке.",
+    "services": [
+      {
+        "id": "correos-express-paq",
+        "name": "Paq Express",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "correos-express-international",
+        "name": "International Express",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pos-indonesia",
+    "name": "Pos Indonesia",
+    "type": "postal",
+    "logo": "/logos/pos-indonesia.svg",
+    "website": "https://www.posindonesia.co.id",
+    "tracking_url": "https://www.posindonesia.co.id/en/tracking?barcode={tracking}",
+    "description_en": "Indonesia's national postal service. Serves the world's largest archipelago with domestic and international mail and parcel delivery.",
+    "description_ru": "Национальная почтовая служба Индонезии. Обслуживает крупнейший архипелаг мира с внутренней и международной доставкой.",
+    "services": [
+      {
+        "id": "pos-indonesia-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "pos-indonesia-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "pos-indonesia-paket",
+        "name": "Paket International",
+        "speed_days_min": 10,
+        "speed_days_max": 30,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "vietnam-post",
+    "name": "Vietnam Post",
+    "type": "postal",
+    "logo": "/logos/vietnam-post.svg",
+    "website": "https://www.vnpost.vn",
+    "tracking_url": "https://www.vnpost.vn/en/tracking?code={tracking}",
+    "description_en": "Vietnam's national postal service. Provides mail and parcel services domestically and to international destinations across Asia and worldwide.",
+    "description_ru": "Национальная почтовая служба Вьетнама. Предоставляет почтовые и посылочные услуги по стране и за рубежом.",
+    "services": [
+      {
+        "id": "vietnam-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "vietnam-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "philpost",
+    "name": "PhilPost",
+    "type": "postal",
+    "logo": "/logos/philpost.svg",
+    "website": "https://www.phlpost.gov.ph",
+    "tracking_url": "https://tracking.phlpost.gov.ph/?tracking={tracking}",
+    "description_en": "Philippine Postal Corporation. The national postal service of the Philippines with domestic and international delivery services.",
+    "description_ru": "Почтовая корпорация Филиппин. Национальная почтовая служба Филиппин с внутренней и международной доставкой.",
+    "services": [
+      {
+        "id": "philpost-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "philpost-registered",
+        "name": "Registered Mail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pos-laju",
+    "name": "Pos Laju",
+    "type": "postal",
+    "logo": "/logos/pos-laju.svg",
+    "website": "https://www.pos.com.my",
+    "tracking_url": "https://www.pos.com.my/track?id={tracking}",
+    "description_en": "Malaysia's express postal and courier service under Pos Malaysia. Provides domestic express and international parcel delivery across ASEAN and worldwide.",
+    "description_ru": "Экспресс-почтовая и курьерская служба Малайзии. Предоставляет экспресс-доставку по стране и международную доставку посылок по АСЕАН и всему миру.",
+    "services": [
+      {
+        "id": "pos-laju-ems",
+        "name": "EMS",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "pos-laju-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pakistan-post",
+    "name": "Pakistan Post",
+    "type": "postal",
+    "logo": "/logos/pakistan-post.svg",
+    "website": "https://www.pakpost.gov.pk",
+    "tracking_url": "https://ep.gov.pk/track?id={tracking}",
+    "description_en": "Pakistan's national postal service. One of the largest postal networks in South Asia with domestic and international delivery services.",
+    "description_ru": "Национальная почтовая служба Пакистана. Одна из крупнейших почтовых сетей в Южной Азии с внутренними и международными услугами доставки.",
+    "services": [
+      {
+        "id": "pakistan-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "pakistan-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "bangladesh-post",
+    "name": "Bangladesh Post",
+    "type": "postal",
+    "logo": "/logos/bangladesh-post.svg",
+    "website": "https://www.bangladeshpost.gov.bd",
+    "tracking_url": "https://track.bangladeshpost.gov.bd/?id={tracking}",
+    "description_en": "Bangladesh's national postal service. Provides mail and parcel delivery across Bangladesh and internationally.",
+    "description_ru": "Национальная почтовая служба Бангладеш. Обеспечивает доставку почты и посылок по Бангладеш и за рубежом.",
+    "services": [
+      {
+        "id": "bangladesh-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "bangladesh-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 10,
+        "speed_days_max": 28,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sri-lanka-post",
+    "name": "Sri Lanka Post",
+    "type": "postal",
+    "logo": "/logos/sri-lanka-post.svg",
+    "website": "https://www.slpost.gov.lk",
+    "tracking_url": "https://www.slpost.gov.lk/tracking?id={tracking}",
+    "description_en": "Sri Lanka's national postal service. Provides domestic and international mail and parcel delivery services.",
+    "description_ru": "Национальная почтовая служба Шри-Ланки. Предоставляет услуги внутренней и международной доставки почты и посылок.",
+    "services": [
+      {
+        "id": "sri-lanka-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "sri-lanka-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 7,
+        "speed_days_max": 21,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "hongkong-post",
+    "name": "Hongkong Post",
+    "type": "postal",
+    "logo": "/logos/hongkong-post.svg",
+    "website": "https://www.hongkongpost.hk",
+    "tracking_url": "https://www.hongkongpost.hk/en/mail_tracking/index.html?id={tracking}",
+    "description_en": "Hong Kong's postal service. A major international mail hub with fast and reliable delivery services worldwide. Key gateway for Asia-Pacific shipping.",
+    "description_ru": "Почтовая служба Гонконга. Крупный международный почтовый узел с быстрой и надежной доставкой по всему миру. Ключевой шлюз для доставки в Азиатско-Тихоокеанском регионе.",
+    "services": [
+      {
+        "id": "hongkong-post-speedpost",
+        "name": "Speedpost",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "hongkong-post-eexpress",
+        "name": "e-Express",
+        "speed_days_min": 5,
+        "speed_days_max": 10,
+        "max_weight_kg": 2,
+        "tracking": true
+      },
+      {
+        "id": "hongkong-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "taiwan-post",
+    "name": "Taiwan Post (Chunghwa Post)",
+    "type": "postal",
+    "logo": "/logos/taiwan-post.svg",
+    "website": "https://www.post.gov.tw",
+    "tracking_url": "https://postserv.post.gov.tw/pstmail/main_mail.html?targetRecv={tracking}",
+    "description_en": "Chunghwa Post, Taiwan's national postal service. Provides comprehensive domestic and international mail, parcel, and express delivery services.",
+    "description_ru": "Chunghwa Post, национальная почтовая служба Тайваня. Предоставляет комплексные услуги внутренней и международной доставки почты, посылок и экспресс-доставки.",
+    "services": [
+      {
+        "id": "taiwan-post-ems",
+        "name": "EMS",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "taiwan-post-airmail",
+        "name": "Air Parcel",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "taiwan-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "fiji-post",
+    "name": "Fiji Post",
+    "type": "postal",
+    "logo": "/logos/fiji-post.svg",
+    "website": "https://www.postfiji.com.fj",
+    "tracking_url": "https://www.postfiji.com.fj/tracking?id={tracking}",
+    "description_en": "Fiji's national postal service. Provides domestic and international mail and parcel delivery across the Pacific Islands and worldwide.",
+    "description_ru": "Национальная почтовая служба Фиджи. Обеспечивает доставку почты и посылок по Тихоокеанским островам и всему миру.",
+    "services": [
+      {
+        "id": "fiji-post-ems",
+        "name": "EMS",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "fiji-post-registered",
+        "name": "Registered Airmail",
+        "speed_days_min": 10,
+        "speed_days_max": 28,
+        "max_weight_kg": 2,
+        "tracking": true
+      }
+    ]
   }
 ]

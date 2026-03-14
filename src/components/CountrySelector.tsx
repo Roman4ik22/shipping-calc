@@ -5,8 +5,7 @@ import type { Locale } from "@/lib/types";
 
 interface Country {
   code: string;
-  name_en: string;
-  name_ru: string;
+  name: string;
   slug_en: string;
   slug_ru: string;
   continent: string;
@@ -36,7 +35,7 @@ export default function CountrySelector({
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const getName = (c: Country) => (locale === "ru" ? c.name_ru : c.name_en);
+  const getName = (c: Country) => c.name;
 
   // Close on click outside
   useEffect(() => {
@@ -69,8 +68,7 @@ export default function CountrySelector({
     const q = search.toLowerCase();
     return countries.filter(
       (c) =>
-        c.name_en.toLowerCase().includes(q) ||
-        c.name_ru.toLowerCase().includes(q) ||
+        c.name.toLowerCase().includes(q) ||
         c.code.toLowerCase().includes(q)
     );
   }, [countries, search]);
@@ -79,13 +77,13 @@ export default function CountrySelector({
 
   return (
     <div className="relative" ref={ref}>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label className="block text-sm font-medium mb-1">
         {label}
       </label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-3 text-left bg-white border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-3 text-left bg-white text-gray-900 border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         {selected ? (
           <span>
@@ -97,14 +95,14 @@ export default function CountrySelector({
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-hidden">
+        <div className="absolute z-50 mt-1 w-full bg-white text-gray-900 border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-hidden">
           <div className="p-2 border-b">
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder={locale === "ru" ? "Поиск страны..." : "Search country..."}
-              className="w-full px-3 py-2 border border-gray-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              placeholder={label}
+              className="w-full px-3 py-2 border border-gray-200 rounded text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500"
               autoFocus
             />
           </div>
@@ -127,7 +125,7 @@ export default function CountrySelector({
             ))}
             {filtered.length === 0 && (
               <div className="px-4 py-3 text-sm text-gray-500">
-                {locale === "ru" ? "Не найдено" : "No results"}
+                {"—"}
               </div>
             )}
           </div>

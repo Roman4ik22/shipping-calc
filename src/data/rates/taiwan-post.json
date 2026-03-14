@@ -1,0 +1,268 @@
+{
+  "carrier_id": "taiwan-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Taiwan Post (Chunghwa Post) rates from Taiwan. EMS, air parcel, and registered airmail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "East Asia Neighbors",
+      "countries_from": [
+        "TW"
+      ],
+      "countries_to": [
+        "CN",
+        "HK",
+        "MO",
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia & Oceania (Regional)",
+      "countries_from": [
+        "TW"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "PH",
+        "ID",
+        "VN",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "TW"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "IT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East & Africa (Remote)",
+      "countries_from": [
+        "TW"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "TR",
+        "ZA",
+        "NG",
+        "KE",
+        "EG"
+      ]
+    }
+  ],
+  "rates": {
+    "taiwan-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          14,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14,
+          18,
+          28,
+          33
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20,
+          26,
+          40,
+          46
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32,
+          42,
+          65,
+          75
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          54,
+          70,
+          110,
+          128
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          94,
+          122,
+          192,
+          225
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          134,
+          175,
+          275,
+          322
+        ]
+      }
+    ],
+    "taiwan-post-airmail": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          8,
+          13,
+          15
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          12,
+          18,
+          20
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          16,
+          25,
+          29
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20,
+          28,
+          42,
+          48
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          34,
+          46,
+          72,
+          82
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          58,
+          80,
+          125,
+          145
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          82,
+          115,
+          178,
+          208
+        ]
+      }
+    ],
+    "taiwan-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          7,
+          10,
+          11
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

@@ -7,8 +7,8 @@ import type { Locale } from "@/lib/types";
 
 interface Country {
   code: string;
-  name_en: string;
-  name_ru: string;
+  name: string;
+  slug: string;
   slug_en: string;
   slug_ru: string;
   continent: string;
@@ -18,10 +18,12 @@ export default function ShippingForm({
   countries,
   locale,
   labels,
+  corridorSep,
 }: {
   countries: Country[];
   locale: Locale;
-  labels: { from: string; to: string; submit: string };
+  labels: { from: string; to: string; submit: string; swap: string };
+  corridorSep: string;
 }) {
   const router = useRouter();
   const [origin, setOrigin] = useState("");
@@ -33,10 +35,7 @@ export default function ShippingForm({
     const destCountry = countries.find((c) => c.code === dest);
     if (!originCountry || !destCountry) return;
 
-    const originSlug = locale === "ru" ? originCountry.slug_ru : originCountry.slug_en;
-    const destSlug = locale === "ru" ? destCountry.slug_ru : destCountry.slug_en;
-    const sep = locale === "ru" ? "-v-" : "-to-";
-    router.push(`/${locale}/shipping/${originSlug}${sep}${destSlug}`);
+    router.push(`/${locale}/shipping/${originCountry.slug}${corridorSep}${destCountry.slug}`);
   };
 
   const handleSwap = () => {
@@ -58,7 +57,7 @@ export default function ShippingForm({
         onClick={handleSwap}
         disabled={!origin && !dest}
         className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 rounded-full bg-white/20 hover:bg-white/30 text-white disabled:opacity-30 transition-colors"
-        title={locale === "ru" ? "Поменять местами" : "Swap"}
+        title={labels.swap}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M7 16l-4-4 4-4" />
@@ -73,7 +72,7 @@ export default function ShippingForm({
         disabled={!origin && !dest}
         className="md:hidden flex items-center justify-center w-full py-2 rounded-lg bg-white/20 hover:bg-white/30 text-white disabled:opacity-30 text-sm"
       >
-        {locale === "ru" ? "Поменять местами" : "Swap countries"}
+        {labels.swap}
       </button>
       <CountrySelector
         countries={countries}

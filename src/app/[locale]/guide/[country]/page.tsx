@@ -7,7 +7,7 @@ import {
   makeCorridorSlug,
   carriers,
 } from "@/lib/data";
-import { getCustomsInfo, hasCustomsData } from "@/lib/customs";
+import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
 import { t, locales } from "@/lib/i18n";
 import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
@@ -35,26 +35,15 @@ export async function generateMetadata({
   const name = getCountryName(country, loc);
 
   return {
-    title:
-      loc === "ru"
-        ? `Гид по доставке в ${name} — Таможня, перевозчики, советы`
-        : `Shipping Guide to ${name} — Customs, Carriers & Tips`,
-    description:
-      loc === "ru"
-        ? `Полный гид по международной доставке в ${name}. Таможенные правила, лучшие перевозчики, сроки и стоимость доставки.`
-        : `Complete guide to international shipping to ${name}. Customs rules, best carriers, delivery times and rates.`,
+    title: t(loc, "guide_title", { country: name }) + " — " + t(loc, "customs_info"),
+    description: t(loc, "guide_meta_description", { country: name }),
     alternates: {
       canonical: `/${locale}/guide/${slug}`,
-      languages: {
-        en: `/en/guide/${slug}`,
-        ru: `/ru/guide/${slug}`,
-      },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/guide/${slug}`])),
     },
     openGraph: {
-      title: loc === "ru" ? `Гид по доставке в ${name}` : `Shipping Guide to ${name}`,
-      description: loc === "ru"
-        ? `Таможенные правила, перевозчики и тарифы для ${name}`
-        : `Customs rules, carriers and rates for ${name}`,
+      title: t(loc, "guide_title", { country: name }),
+      description: t(loc, "guide_meta_description", { country: name }),
       type: "article",
     },
   };
@@ -90,13 +79,13 @@ export default async function GuidePage({
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-500 mb-6">
+      <nav className="text-sm text-gray-600 mb-6">
         <Link href={`/${locale}`} className="hover:text-blue-600">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
         <Link href={`/${locale}/guide`} className="hover:text-blue-600">
-          {loc === "ru" ? "Гиды" : "Guides"}
+          {t(loc, "guides")}
         </Link>
         <span className="mx-2">/</span>
         <span className="text-gray-900">{name}</span>
@@ -105,9 +94,7 @@ export default async function GuidePage({
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         {countryFlag(country.code)}{" "}
-        {loc === "ru"
-          ? `Гид по доставке в ${name}`
-          : `Shipping Guide to ${name}`}
+        {t(loc, "guide_title", { country: name })}
       </h1>
 
       {/* Quick links */}
@@ -129,12 +116,17 @@ export default async function GuidePage({
       {/* Overview */}
       <section className="prose max-w-none mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-3">
-          {loc === "ru" ? "Обзор" : "Overview"}
+          {t(loc, "overview")}
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          {loc === "ru"
-            ? `${name} находится в регионе ${country.region} (${country.continent}). На нашем сайте доступно сравнение тарифов от ${carrierCount}+ перевозчиков для доставки в ${name} и из ${name}. Среди них ${internationalCarriers.length} международных экспресс-служб (DHL, FedEx, UPS и другие) и ${postalCarriers.length} почтовых сервисов.`
-            : `${name} is located in ${country.region} (${country.continent}). We compare rates from ${carrierCount}+ carriers for shipping to and from ${name}, including ${internationalCarriers.length} international express services (DHL, FedEx, UPS, and more) and ${postalCarriers.length} postal services.`}
+          {t(loc, "guide_overview", {
+            country: name,
+            region: country.region,
+            continent: country.continent,
+            carrier_count: String(carrierCount),
+            international_count: String(internationalCarriers.length),
+            postal_count: String(postalCarriers.length),
+          })}
         </p>
       </section>
 
@@ -147,40 +139,34 @@ export default async function GuidePage({
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-500 mb-1">{t(loc, "de_minimis")}</p>
+                <p className="text-sm text-gray-600 mb-1">{t(loc, "de_minimis")}</p>
                 <p className="text-2xl font-bold text-gray-900">
-                  {customs.de_minimis_usd > 0
-                    ? `$${customs.de_minimis_usd}`
-                    : loc === "ru" ? "$0" : "$0"}
+                  ${customs.de_minimis_usd}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
                   {customs.de_minimis_usd > 0
-                    ? (loc === "ru"
-                        ? `Посылки дешевле $${customs.de_minimis_usd} — без пошлины`
-                        : `Packages under $${customs.de_minimis_usd} — duty free`)
-                    : (loc === "ru"
-                        ? "Пошлина с первого доллара"
-                        : "Duty applies from $0")}
+                    ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
+                    : t(loc, "duty_from_zero")}
                 </p>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-500 mb-1">{t(loc, "vat_rate")}</p>
+                <p className="text-sm text-gray-600 mb-1">{t(loc, "vat_rate")}</p>
                 <p className="text-2xl font-bold text-gray-900">{customs.vat_rate}%</p>
                 <p className="text-xs text-gray-400 mt-1">{customs.currency}</p>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-500 mb-1">{t(loc, "avg_duty")}</p>
+                <p className="text-sm text-gray-600 mb-1">{t(loc, "avg_duty")}</p>
                 <p className="text-2xl font-bold text-gray-900">{customs.avg_duty_rate}%</p>
                 <p className="text-xs text-gray-400 mt-1">
-                  {loc === "ru" ? "В среднем" : "Average"}
+                  {t(loc, "average")}
                 </p>
               </div>
             </div>
-            {(loc === "ru" ? customs.notes_ru : customs.notes_en) && (
+            {getCustomsNotes(customs, loc) && (
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
                 <p className="text-sm text-blue-800">
                   <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
-                  {loc === "ru" ? customs.notes_ru : customs.notes_en}
+                  {getCustomsNotes(customs, loc)}
                 </p>
               </div>
             )}
@@ -191,25 +177,18 @@ export default async function GuidePage({
       {/* Required Documents */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          {loc === "ru" ? "Необходимые документы" : "Required Documents"}
+          {t(loc, "required_documents")}
         </h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {(loc === "ru" ? [
-              { doc: "Коммерческий инвойс (Commercial Invoice)", desc: "Описание товара, количество, стоимость, данные отправителя и получателя" },
-              { doc: "Упаковочный лист (Packing List)", desc: "Детальное описание содержимого каждого места" },
-              { doc: "Таможенная декларация (CN22/CN23)", desc: "Обязательна для почтовых отправлений" },
-              { doc: "Авианакладная (AWB)", desc: "Создаётся перевозчиком при оформлении отправки" },
-              { doc: "Сертификат происхождения", desc: "Может потребоваться для снижения пошлин (FTA/преференции)" },
-              { doc: "Лицензия на экспорт/импорт", desc: "Для товаров с ограничениями (электроника, лекарства, химикаты)" },
-            ] : [
-              { doc: "Commercial Invoice", desc: "Item description, quantity, value, sender and receiver details" },
-              { doc: "Packing List", desc: "Detailed description of contents in each package" },
-              { doc: "Customs Declaration (CN22/CN23)", desc: "Required for postal shipments" },
-              { doc: "Air Waybill (AWB)", desc: "Generated by the carrier when booking the shipment" },
-              { doc: "Certificate of Origin", desc: "May be required for reduced duties (FTA/preferential rates)" },
-              { doc: "Export/Import License", desc: "For restricted goods (electronics, medicines, chemicals)" },
-            ]).map((item, i) => (
+            {[
+              { doc: t(loc, "doc_invoice"), desc: t(loc, "doc_invoice_desc") },
+              { doc: t(loc, "doc_packing"), desc: t(loc, "doc_packing_desc") },
+              { doc: t(loc, "doc_customs"), desc: t(loc, "doc_customs_desc") },
+              { doc: t(loc, "doc_awb"), desc: t(loc, "doc_awb_desc") },
+              { doc: t(loc, "doc_origin"), desc: t(loc, "doc_origin_desc") },
+              { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
+            ].map((item, i) => (
               <div key={i} className="flex gap-3 items-start p-3 bg-gray-50 rounded-lg">
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-xs font-bold">
                   {i + 1}
@@ -228,22 +207,20 @@ export default async function GuidePage({
       {hasCustoms && (
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            {loc === "ru" ? "Оценка пошлин и налогов" : "Duty & Tax Estimate"}
+            {t(loc, "duty_tax_estimate")}
           </h2>
           <div className="bg-white border border-gray-200 rounded-xl p-6">
             <p className="text-sm text-gray-600 mb-4">
-              {loc === "ru"
-                ? `Примерный расчёт импортных платежей при ввозе товара в ${name}:`
-                : `Estimated import charges when shipping goods to ${name}:`}
+              {t(loc, "duty_estimate_intro", { country: name })}
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-left text-gray-500 border-b border-gray-200">
-                    <th className="pb-2 pr-4">{loc === "ru" ? "Стоимость товара" : "Goods Value"}</th>
-                    <th className="pb-2 pr-4">{loc === "ru" ? "Пошлина" : "Duty"}</th>
-                    <th className="pb-2 pr-4">{loc === "ru" ? "НДС/Налог" : "VAT/Tax"}</th>
-                    <th className="pb-2">{loc === "ru" ? "Итого к оплате" : "Total Charges"}</th>
+                  <tr className="text-left text-gray-600 border-b border-gray-200">
+                    <th className="pb-2 pr-4">{t(loc, "goods_value")}</th>
+                    <th className="pb-2 pr-4">{t(loc, "duty")}</th>
+                    <th className="pb-2 pr-4">{t(loc, "vat_tax")}</th>
+                    <th className="pb-2">{t(loc, "total_charges")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -259,7 +236,7 @@ export default async function GuidePage({
                         <td className="py-2 pr-4">${duty.toFixed(0)}</td>
                         <td className="py-2 pr-4">${vat.toFixed(0)}</td>
                         <td className="py-2 font-bold text-gray-900">
-                          {total > 0 ? `$${total.toFixed(0)}` : (loc === "ru" ? "Бесплатно" : "Free")}
+                          {total > 0 ? `$${total.toFixed(0)}` : t(loc, "free")}
                         </td>
                       </tr>
                     );
@@ -268,9 +245,7 @@ export default async function GuidePage({
               </table>
             </div>
             <p className="text-xs text-gray-400 mt-3">
-              {loc === "ru"
-                ? "* Расчёт приблизительный. Реальные пошлины зависят от категории товара и HS-кода."
-                : "* Estimates only. Actual duties depend on product category and HS code."}
+              {t(loc, "duty_estimate_note")}
             </p>
           </div>
         </section>
@@ -279,27 +254,17 @@ export default async function GuidePage({
       {/* Tips */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          {loc === "ru" ? "Советы по доставке" : "Shipping Tips"}
+          {t(loc, "shipping_tips")}
         </h2>
         <div className="space-y-3">
-          {(loc === "ru"
-            ? [
-                "Всегда декларируйте содержимое и стоимость посылки. Недекларирование может привести к задержке на таможне.",
-                "Для ценных посылок выбирайте сервисы с отслеживанием и страховкой.",
-                `Учитывайте беспошлинный порог $${customs.de_minimis_usd} при отправке в ${name}.`,
-                "Сравните цены нескольких перевозчиков — разница может достигать 3-5 раз.",
-                "Экспресс-доставка (DHL, FedEx, UPS) обычно включает таможенное оформление в стоимость.",
-                "Почтовые сервисы дешевле, но сроки доставки менее предсказуемы.",
-              ]
-            : [
-                "Always declare package contents and value accurately. Misdeclaration can lead to customs delays.",
-                "For valuable shipments, choose services with tracking and insurance.",
-                `Keep the duty-free threshold of $${customs.de_minimis_usd} in mind when shipping to ${name}.`,
-                "Compare rates from multiple carriers — prices can vary 3-5x for the same route.",
-                "Express services (DHL, FedEx, UPS) typically include customs clearance in the price.",
-                "Postal services are cheaper but delivery times are less predictable.",
-              ]
-          ).map((tip, i) => (
+          {[
+            t(loc, "tip_1"),
+            t(loc, "tip_2"),
+            t(loc, "tip_3", { threshold: String(customs.de_minimis_usd), country: name }),
+            t(loc, "tip_4"),
+            t(loc, "tip_5"),
+            t(loc, "tip_6"),
+          ].map((tip, i) => (
             <div key={i} className="flex gap-3 items-start">
               <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-sm font-medium">
                 {i + 1}
@@ -313,19 +278,22 @@ export default async function GuidePage({
       {/* Prohibited & Restricted Items */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          {loc === "ru" ? "Запрещённые и ограниченные товары" : "Prohibited & Restricted Items"}
+          {t(loc, "prohibited_items")}
         </h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <h3 className="font-semibold text-red-700 mb-2 text-sm">
-                {loc === "ru" ? "Запрещено к пересылке" : "Prohibited"}
+                {t(loc, "prohibited")}
               </h3>
               <ul className="space-y-1 text-sm text-gray-700">
-                {(loc === "ru"
-                  ? ["Наркотические вещества", "Взрывчатые и легковоспламеняющиеся предметы", "Оружие и боеприпасы", "Контрафактная продукция", "Поддельные валюты и документы"]
-                  : ["Narcotics and illegal drugs", "Explosives and flammable materials", "Weapons and ammunition", "Counterfeit goods", "Counterfeit currency and documents"]
-                ).map((item, i) => (
+                {[
+                  t(loc, "prohibited_1"),
+                  t(loc, "prohibited_2"),
+                  t(loc, "prohibited_3"),
+                  t(loc, "prohibited_4"),
+                  t(loc, "prohibited_5"),
+                ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-red-500 flex-shrink-0">✕</span>
                     {item}
@@ -335,13 +303,16 @@ export default async function GuidePage({
             </div>
             <div>
               <h3 className="font-semibold text-amber-700 mb-2 text-sm">
-                {loc === "ru" ? "Ограничения (нужно разрешение)" : "Restricted (permit required)"}
+                {t(loc, "restricted")}
               </h3>
               <ul className="space-y-1 text-sm text-gray-700">
-                {(loc === "ru"
-                  ? ["Лекарства и медицинские препараты", "Продукты питания и напитки", "Растения и семена", "Электроника (литиевые батареи)", "Парфюмерия и косметика (объём)"]
-                  : ["Medicines and pharmaceuticals", "Food and beverages", "Plants and seeds", "Electronics (lithium batteries)", "Perfumes and cosmetics (volume limits)"]
-                ).map((item, i) => (
+                {[
+                  t(loc, "restricted_1"),
+                  t(loc, "restricted_2"),
+                  t(loc, "restricted_3"),
+                  t(loc, "restricted_4"),
+                  t(loc, "restricted_5"),
+                ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-amber-500 flex-shrink-0">!</span>
                     {item}
@@ -356,15 +327,14 @@ export default async function GuidePage({
       {/* Popular routes */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          {loc === "ru"
-            ? `Популярные маршруты в ${name}`
-            : `Popular routes to ${name}`}
+          {t(loc, "popular_routes_to", { country: name })}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {popular.slice(0, 8).map((from) => (
             <Link
               key={from.code}
               href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
+              prefetch={false}
               className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
             >
               <span>{countryFlag(from.code)}</span>
@@ -380,15 +350,14 @@ export default async function GuidePage({
       {/* Popular routes FROM this country */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          {loc === "ru"
-            ? `Популярные маршруты из ${name}`
-            : `Popular routes from ${name}`}
+          {t(loc, "popular_routes_from", { country: name })}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {popular.slice(0, 8).map((to) => (
             <Link
               key={to.code}
               href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
+              prefetch={false}
               className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
             >
               <span>{countryFlag(country.code)}</span>
@@ -403,20 +372,30 @@ export default async function GuidePage({
 
       {/* Guide FAQ */}
       {(() => {
-        const faqs = loc === "ru" ? [
-          { q: `Сколько стоит доставка в ${name}?`, a: `Стоимость доставки в ${name} зависит от страны отправления, веса посылки и выбранного перевозчика. Экспресс-доставка (DHL, FedEx, UPS) начинается от $20-50 за 1 кг, почтовые сервисы — от $10-25.` },
-          { q: `Какой беспошлинный порог в ${name}?`, a: `Беспошлинный порог для импорта в ${name} составляет $${customs.de_minimis_usd}. Посылки стоимостью выше этого порога облагаются импортными пошлинами (в среднем ${customs.avg_duty_rate}%) и НДС (${customs.vat_rate}%).` },
-          { q: `Какие перевозчики доставляют в ${name}?`, a: `В ${name} доставляют все крупные международные перевозчики: DHL Express, FedEx, UPS, EMS, Aramex и десятки других. Всего доступно ${carrierCount}+ вариантов доставки.` },
-        ] : [
-          { q: `How much does shipping to ${name} cost?`, a: `Shipping costs to ${name} depend on the origin country, package weight, and carrier. Express delivery (DHL, FedEx, UPS) starts from $20-50 for 1 kg, while postal services start from $10-25.` },
-          { q: `What is the duty-free threshold for ${name}?`, a: `The duty-free threshold for imports to ${name} is $${customs.de_minimis_usd}. Packages valued above this threshold are subject to import duties (average ${customs.avg_duty_rate}%) and VAT (${customs.vat_rate}%).` },
-          { q: `Which carriers deliver to ${name}?`, a: `All major international carriers deliver to ${name}: DHL Express, FedEx, UPS, EMS, Aramex, and dozens more. In total, ${carrierCount}+ shipping options are available.` },
+        const faqs = [
+          {
+            q: t(loc, "guide_faq_cost_q", { country: name }),
+            a: t(loc, "guide_faq_cost_a", { country: name }),
+          },
+          {
+            q: t(loc, "guide_faq_threshold_q", { country: name }),
+            a: t(loc, "guide_faq_threshold_a", {
+              country: name,
+              threshold: String(customs.de_minimis_usd),
+              duty: String(customs.avg_duty_rate),
+              vat: String(customs.vat_rate),
+            }),
+          },
+          {
+            q: t(loc, "guide_faq_carriers_q", { country: name }),
+            a: t(loc, "guide_faq_carriers_a", { country: name, count: String(carrierCount) }),
+          },
         ];
 
         return (
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              {loc === "ru" ? "Часто задаваемые вопросы" : "FAQ"}
+              {t(loc, "faq_title")}
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -453,14 +432,8 @@ export default async function GuidePage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline:
-              loc === "ru"
-                ? `Гид по доставке в ${name}`
-                : `Shipping Guide to ${name}`,
-            description:
-              loc === "ru"
-                ? `Полный гид по международной доставке в ${name}`
-                : `Complete guide to international shipping to ${name}`,
+            headline: t(loc, "guide_title", { country: name }),
+            description: t(loc, "guide_meta_description", { country: name }),
             author: { "@type": "Organization", name: "ShipWorldwide" },
           }),
         }}
@@ -481,7 +454,7 @@ export default async function GuidePage({
               {
                 "@type": "ListItem",
                 position: 2,
-                name: loc === "ru" ? "Гиды" : "Guides",
+                name: t(loc, "guides"),
                 item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/guide`,
               },
               {

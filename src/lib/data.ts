@@ -115,6 +115,32 @@ import ipostal1Rates from "../data/rates/ipostal1.json";
 import postnlIntlRates from "../data/rates/postnl-international.json";
 import globalpostRates from "../data/rates/globalpost-by-auctane.json";
 import landmarkRates from "../data/rates/landmark-global.json";
+// Batch 13
+import aramexAfricaRates from "../data/rates/aramex-africa.json";
+import aramexShopShipRates from "../data/rates/aramex-shop-and-ship.json";
+import bangladeshPostRates from "../data/rates/bangladesh-post.json";
+import ceskaPostaRates from "../data/rates/ceska-posta.json";
+import correosExpressRates from "../data/rates/correos-express.json";
+import cruzDelSurRates from "../data/rates/cruz-del-sur.json";
+import deprisaRates from "../data/rates/deprisa.json";
+import dhlAfricaRates from "../data/rates/dhl-africa-ecommerce.json";
+import emiratesPostRates from "../data/rates/emirates-post.json";
+import fijiPostRates from "../data/rates/fiji-post.json";
+import hongkongPostRates from "../data/rates/hongkong-post.json";
+import magyarPostaRates from "../data/rates/magyar-posta.json";
+import mercadoEnviosRates from "../data/rates/mercado-envios.json";
+import omnivaRates from "../data/rates/omniva.json";
+import pakistanPostRates from "../data/rates/pakistan-post.json";
+import philpostRates from "../data/rates/philpost.json";
+import pocztaPolskaRates from "../data/rates/poczta-polska.json";
+import posIndonesiaRates from "../data/rates/pos-indonesia.json";
+import posLajuRates from "../data/rates/pos-laju.json";
+import postaKenyaRates from "../data/rates/posta-kenya.json";
+import saPostRates from "../data/rates/sa-post.json";
+import saudiPostRates from "../data/rates/saudi-post.json";
+import sriLankaPostRates from "../data/rates/sri-lanka-post.json";
+import taiwanPostRates from "../data/rates/taiwan-post.json";
+import vietnamPostRates from "../data/rates/vietnam-post.json";
 import type {
   Country,
   Carrier,
@@ -243,6 +269,32 @@ const allRateData: CarrierRateData[] = [
   postnlIntlRates,
   globalpostRates,
   landmarkRates,
+  // Batch 13
+  aramexAfricaRates,
+  aramexShopShipRates,
+  bangladeshPostRates,
+  ceskaPostaRates,
+  correosExpressRates,
+  cruzDelSurRates,
+  deprisaRates,
+  dhlAfricaRates,
+  emiratesPostRates,
+  fijiPostRates,
+  hongkongPostRates,
+  magyarPostaRates,
+  mercadoEnviosRates,
+  omnivaRates,
+  pakistanPostRates,
+  philpostRates,
+  pocztaPolskaRates,
+  posIndonesiaRates,
+  posLajuRates,
+  postaKenyaRates,
+  saPostRates,
+  saudiPostRates,
+  sriLankaPostRates,
+  taiwanPostRates,
+  vietnamPostRates,
 ] as CarrierRateData[];
 
 // Lookup maps
@@ -472,7 +524,8 @@ export function getPopularCountries(): Country[] {
 }
 
 export function getCountryName(country: Country, locale: Locale): string {
-  return locale === "ru" ? country.name_ru : country.name_en;
+  const nameKey = `name_${locale}` as keyof Country;
+  return (country[nameKey] as string) || country.name_en;
 }
 
 export function getCarrierDescription(carrier: Carrier, locale: Locale): string {

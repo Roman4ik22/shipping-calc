@@ -16,14 +16,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const loc = locale as Locale;
   return {
-    title: loc === "ru" ? "Все перевозчики — Международная доставка" : "All Carriers — International Shipping",
-    description:
-      loc === "ru"
-        ? "Полный список международных перевозчиков: DHL, FedEx, UPS, EMS и 100+ других. Сравните услуги, сроки и тарифы."
-        : "Complete list of international shipping carriers: DHL, FedEx, UPS, EMS and 100+ more. Compare services, delivery times and rates.",
+    title: t(loc, "carriers_title"),
+    description: t(loc, "carriers_desc"),
     alternates: {
       canonical: `/${locale}/carriers`,
-      languages: { en: "/en/carriers", ru: "/ru/carriers" },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/carriers`])),
     },
   };
 }
@@ -54,6 +51,7 @@ export default async function CarriersPage({
           <Link
             key={carrier.id}
             href={`/${locale}/carriers/${carrier.id}`}
+            prefetch={false}
             className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-sm transition-all"
           >
             <h3 className="font-semibold text-gray-900 mb-2">
@@ -104,7 +102,7 @@ export default async function CarriersPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: loc === "ru" ? "Все перевозчики" : "All Shipping Carriers",
+            name: t(loc, "all_carriers"),
             numberOfItems: carriers.length,
             itemListElement: carriers.map((carrier, idx) => ({
               "@type": "ListItem",

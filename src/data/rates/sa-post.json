@@ -1,0 +1,276 @@
+{
+  "carrier_id": "sa-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated South Africa Post Office rates from South Africa. EMS, international parcels, and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "SADC Neighbors",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "BW",
+        "NA",
+        "SZ",
+        "LS",
+        "ZW",
+        "ZM",
+        "MW",
+        "MZ"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Africa (Regional)",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "KE",
+        "NG",
+        "GH",
+        "TZ",
+        "UG",
+        "ET",
+        "EG",
+        "MA",
+        "SN",
+        "CI"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "NL",
+        "IT",
+        "ES",
+        "BR"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia & Oceania (Remote)",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "IN",
+        "AU",
+        "NZ",
+        "AE",
+        "SA",
+        "SG"
+      ]
+    }
+  ],
+  "rates": {
+    "sa-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10,
+          15,
+          22,
+          25
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          15,
+          22,
+          30,
+          35
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22,
+          30,
+          42,
+          48
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          35,
+          50,
+          68,
+          78
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          58,
+          82,
+          115,
+          132
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          100,
+          145,
+          200,
+          232
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142,
+          208,
+          288,
+          332
+        ]
+      }
+    ],
+    "sa-post-international": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9,
+          14,
+          20,
+          22
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14,
+          20,
+          28,
+          32
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          35,
+          48,
+          55
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          38,
+          58,
+          80,
+          92
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          65,
+          100,
+          140,
+          162
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          92,
+          142,
+          200,
+          232
+        ]
+      }
+    ],
+    "sa-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          7,
+          10,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

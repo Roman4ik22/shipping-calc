@@ -1,0 +1,275 @@
+{
+  "carrier_id": "omniva",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Omniva rates from Estonia/Baltic states. Express, standard parcel, and registered mail.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Baltic States (Neighbors)",
+      "countries_from": [
+        "EE",
+        "LV",
+        "LT"
+      ],
+      "countries_to": [
+        "EE",
+        "LV",
+        "LT",
+        "FI"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "EU / Europe (Regional)",
+      "countries_from": [
+        "EE"
+      ],
+      "countries_to": [
+        "DE",
+        "PL",
+        "SE",
+        "DK",
+        "NL",
+        "FR",
+        "AT",
+        "CZ",
+        "SK",
+        "HU",
+        "IT",
+        "ES",
+        "GB",
+        "NO",
+        "CH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas & Asia (Intercontinental)",
+      "countries_from": [
+        "EE"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "CN",
+        "JP",
+        "KR",
+        "AU",
+        "BR"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East, Africa (Remote)",
+      "countries_from": [
+        "EE"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IN",
+        "ZA",
+        "NG",
+        "EG",
+        "KE"
+      ]
+    }
+  ],
+  "rates": {
+    "omniva-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          12,
+          22,
+          28
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8,
+          16,
+          28,
+          35
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12,
+          22,
+          38,
+          48
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18,
+          35,
+          62,
+          78
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28,
+          58,
+          105,
+          132
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          48,
+          100,
+          185,
+          232
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          68,
+          142,
+          265,
+          332
+        ]
+      }
+    ],
+    "omniva-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4,
+          8,
+          14,
+          18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          11,
+          18,
+          24
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8,
+          15,
+          26,
+          34
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12,
+          24,
+          42,
+          55
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          20,
+          40,
+          72,
+          95
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          34,
+          68,
+          125,
+          168
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          48,
+          98,
+          180,
+          242
+        ]
+      }
+    ],
+    "omniva-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4,
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6,
+          10,
+          15,
+          18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

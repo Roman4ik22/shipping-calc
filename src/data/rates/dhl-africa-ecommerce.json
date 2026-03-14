@@ -1,0 +1,227 @@
+{
+  "carrier_id": "dhl-africa-ecommerce",
+  "effective_date": "2026-01-01",
+  "note": "Estimated DHL Africa eCommerce rates. Affordable cross-border ecommerce delivery across Africa.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Southern Africa",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "ZA",
+        "BW",
+        "NA",
+        "SZ",
+        "LS",
+        "ZW",
+        "ZM",
+        "MW",
+        "MZ"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Africa",
+      "countries_from": [
+        "ZA",
+        "KE"
+      ],
+      "countries_to": [
+        "KE",
+        "TZ",
+        "UG",
+        "ET",
+        "RW"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "West Africa",
+      "countries_from": [
+        "ZA",
+        "NG"
+      ],
+      "countries_to": [
+        "NG",
+        "GH",
+        "SN",
+        "CI",
+        "CM"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North Africa",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "EG",
+        "MA",
+        "TN",
+        "DZ"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "International (Europe/Americas)",
+      "countries_from": [
+        "ZA"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "US",
+        "FR"
+      ]
+    }
+  ],
+  "rates": {
+    "dhl-africa-ecommerce-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8,
+          12,
+          15,
+          18,
+          32
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12,
+          18,
+          22,
+          25,
+          42
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18,
+          25,
+          30,
+          35,
+          55
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          42,
+          50,
+          58,
+          88
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          45,
+          68,
+          82,
+          95,
+          148
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          78,
+          118,
+          142,
+          165,
+          262
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          112,
+          168,
+          202,
+          235,
+          378
+        ]
+      }
+    ],
+    "dhl-africa-ecommerce-express": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          14,
+          20,
+          25,
+          30,
+          48
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          18,
+          26,
+          32,
+          38,
+          60
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          25,
+          36,
+          42,
+          50,
+          78
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          42,
+          58,
+          70,
+          82,
+          128
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          68,
+          98,
+          118,
+          138,
+          215
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          118,
+          172,
+          208,
+          242,
+          382
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          168,
+          248,
+          298,
+          348,
+          548
+        ]
+      }
+    ]
+  }
+}

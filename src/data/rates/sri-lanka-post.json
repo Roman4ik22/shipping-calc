@@ -1,0 +1,201 @@
+{
+  "carrier_id": "sri-lanka-post",
+  "effective_date": "2026-01-01",
+  "note": "Estimated Sri Lanka Post rates from Sri Lanka. EMS and registered airmail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "South Asia Neighbors",
+      "countries_from": [
+        "LK"
+      ],
+      "countries_to": [
+        "IN",
+        "PK",
+        "BD",
+        "NP",
+        "MV"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Middle East & Southeast Asia (Regional)",
+      "countries_from": [
+        "LK"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "MY",
+        "SG",
+        "TH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "LK"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "US",
+        "CA",
+        "IT",
+        "AU"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "East Asia & Africa (Remote)",
+      "countries_from": [
+        "LK"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "ZA",
+        "NG",
+        "KE",
+        "EG"
+      ]
+    }
+  ],
+  "rates": {
+    "sri-lanka-post-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6,
+          10,
+          18,
+          20
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9,
+          15,
+          25,
+          28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13,
+          21,
+          35,
+          40
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22,
+          35,
+          58,
+          66
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36,
+          58,
+          98,
+          112
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          62,
+          100,
+          172,
+          198
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          88,
+          142,
+          245,
+          282
+        ]
+      }
+    ],
+    "sri-lanka-post-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2,
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3,
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5,
+          8,
+          12,
+          14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

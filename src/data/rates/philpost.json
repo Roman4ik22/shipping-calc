@@ -1,0 +1,206 @@
+{
+  "carrier_id": "philpost",
+  "effective_date": "2026-01-01",
+  "note": "Estimated PhilPost rates from the Philippines. EMS and registered mail services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "ASEAN Neighbors",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "MY",
+        "SG",
+        "TH",
+        "ID",
+        "VN",
+        "BN",
+        "MM",
+        "KH",
+        "LA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "East Asia & Oceania (Regional)",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "TW",
+        "HK",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Americas (Intercontinental)",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East & Africa (Remote)",
+      "countries_from": [
+        "PH"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "ZA",
+        "EG",
+        "NG"
+      ]
+    }
+  ],
+  "rates": {
+    "philpost-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          9,
+          13,
+          20,
+          22
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12,
+          17,
+          26,
+          30
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          17,
+          24,
+          36,
+          42
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28,
+          40,
+          60,
+          68
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          45,
+          65,
+          100,
+          115
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          78,
+          115,
+          175,
+          200
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          112,
+          165,
+          252,
+          288
+        ]
+      }
+    ],
+    "philpost-registered": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3,
+          5,
+          7,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7,
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}
