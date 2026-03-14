@@ -4,6 +4,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
+import NewsletterForm from "@/components/NewsletterForm";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -266,6 +267,28 @@ export default async function HomePage({
           <Link href={`/${locale}/guide`} className="text-sm text-blue-600 hover:text-blue-800">
             {loc === "ru" ? "Все гиды →" : "All shipping guides →"}
           </Link>
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="bg-blue-600 py-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">
+            {loc === "ru"
+              ? "Получайте лучшие тарифы на доставку"
+              : "Get the Best Shipping Deals"}
+          </h2>
+          <p className="text-blue-100 mb-6 text-sm">
+            {loc === "ru"
+              ? "Подпишитесь на обновления о скидках перевозчиков, изменениях таможенных правил и советах по международной доставке."
+              : "Subscribe for carrier discount alerts, customs rule changes, and international shipping tips."}
+          </p>
+          <NewsletterForm locale={locale} />
+          <p className="text-xs text-blue-200 mt-3">
+            {loc === "ru"
+              ? "Не более 2 писем в месяц. Отписаться можно в любой момент."
+              : "Max 2 emails per month. Unsubscribe anytime."}
+          </p>
         </div>
       </section>
 
