@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import type { Locale } from "@/lib/types";
 
 interface Rate {
@@ -25,20 +25,115 @@ const EXCHANGE_RATES: Record<string, { rate: number; symbol: string; name: strin
   EUR: { rate: 0.92, symbol: "€", name: "Euro" },
   GBP: { rate: 0.79, symbol: "£", name: "British Pound" },
   CHF: { rate: 0.88, symbol: "Fr", name: "Swiss Franc" },
-  RUB: { rate: 92, symbol: "₽", name: "Russian Ruble" },
-  CNY: { rate: 7.25, symbol: "¥", name: "Chinese Yuan" },
-  JPY: { rate: 150, symbol: "¥", name: "Japanese Yen" },
-  KRW: { rate: 1350, symbol: "₩", name: "Korean Won" },
-  INR: { rate: 83, symbol: "₹", name: "Indian Rupee" },
-  AED: { rate: 3.67, symbol: "د.إ", name: "UAE Dirham" },
-  BRL: { rate: 4.95, symbol: "R$", name: "Brazilian Real" },
   CAD: { rate: 1.36, symbol: "C$", name: "Canadian Dollar" },
   AUD: { rate: 1.53, symbol: "A$", name: "Australian Dollar" },
-  TRY: { rate: 32, symbol: "₺", name: "Turkish Lira" },
-  PLN: { rate: 4.0, symbol: "zł", name: "Polish Zloty" },
+  NZD: { rate: 1.67, symbol: "NZ$", name: "New Zealand Dollar" },
+  SGD: { rate: 1.34, symbol: "S$", name: "Singapore Dollar" },
+  HKD: { rate: 7.82, symbol: "HK$", name: "Hong Kong Dollar" },
+  JPY: { rate: 150, symbol: "¥", name: "Japanese Yen" },
+  CNY: { rate: 7.25, symbol: "¥", name: "Chinese Yuan" },
+  KRW: { rate: 1350, symbol: "₩", name: "Korean Won" },
+  INR: { rate: 83, symbol: "₹", name: "Indian Rupee" },
+  RUB: { rate: 92, symbol: "₽", name: "Russian Ruble" },
   UAH: { rate: 41, symbol: "₴", name: "Ukrainian Hryvnia" },
   KZT: { rate: 460, symbol: "₸", name: "Kazakh Tenge" },
+  BRL: { rate: 4.95, symbol: "R$", name: "Brazilian Real" },
+  MXN: { rate: 17.2, symbol: "MX$", name: "Mexican Peso" },
+  ARS: { rate: 870, symbol: "AR$", name: "Argentine Peso" },
+  COP: { rate: 3950, symbol: "COL$", name: "Colombian Peso" },
+  CLP: { rate: 950, symbol: "CL$", name: "Chilean Peso" },
+  PEN: { rate: 3.72, symbol: "S/", name: "Peruvian Sol" },
+  AED: { rate: 3.67, symbol: "د.إ", name: "UAE Dirham" },
+  SAR: { rate: 3.75, symbol: "﷼", name: "Saudi Riyal" },
+  ILS: { rate: 3.65, symbol: "₪", name: "Israeli Shekel" },
+  TRY: { rate: 32, symbol: "₺", name: "Turkish Lira" },
+  PLN: { rate: 4.0, symbol: "zł", name: "Polish Zloty" },
+  CZK: { rate: 23.3, symbol: "Kč", name: "Czech Koruna" },
+  HUF: { rate: 365, symbol: "Ft", name: "Hungarian Forint" },
+  RON: { rate: 4.6, symbol: "lei", name: "Romanian Leu" },
+  SEK: { rate: 10.5, symbol: "kr", name: "Swedish Krona" },
+  NOK: { rate: 10.8, symbol: "kr", name: "Norwegian Krone" },
+  DKK: { rate: 6.9, symbol: "kr", name: "Danish Krone" },
+  THB: { rate: 35.5, symbol: "฿", name: "Thai Baht" },
+  MYR: { rate: 4.7, symbol: "RM", name: "Malaysian Ringgit" },
+  IDR: { rate: 15700, symbol: "Rp", name: "Indonesian Rupiah" },
+  PHP: { rate: 56, symbol: "₱", name: "Philippine Peso" },
+  VND: { rate: 24500, symbol: "₫", name: "Vietnamese Dong" },
+  TWD: { rate: 31.5, symbol: "NT$", name: "Taiwan Dollar" },
+  ZAR: { rate: 18.5, symbol: "R", name: "South African Rand" },
+  NGN: { rate: 1550, symbol: "₦", name: "Nigerian Naira" },
+  EGP: { rate: 48, symbol: "E£", name: "Egyptian Pound" },
+  KES: { rate: 153, symbol: "KSh", name: "Kenyan Shilling" },
+  PKR: { rate: 278, symbol: "₨", name: "Pakistani Rupee" },
+  BDT: { rate: 110, symbol: "৳", name: "Bangladeshi Taka" },
+  GEL: { rate: 2.7, symbol: "₾", name: "Georgian Lari" },
 };
+
+// Map browser locale/timezone to default currency
+function detectUserCurrency(): string {
+  if (typeof window === "undefined") return "USD";
+  try {
+    // Try Intl.NumberFormat resolved options
+    const locale = navigator.language || "en-US";
+    const resolved = new Intl.NumberFormat(locale, { style: "currency", currency: "USD" }).resolvedOptions();
+
+    // Map locale to likely currency
+    const localeCurrencyMap: Record<string, string> = {
+      "ru": "RUB", "uk": "UAH", "kk": "KZT", "be": "BYN",
+      "ja": "JPY", "ko": "KRW", "zh": "CNY",
+      "hi": "INR", "bn": "BDT", "ta": "INR", "te": "INR",
+      "th": "THB", "vi": "VND", "ms": "MYR", "id": "IDR", "fil": "PHP",
+      "pt-BR": "BRL", "es-MX": "MXN", "es-AR": "ARS", "es-CO": "COP", "es-CL": "CLP", "es-PE": "PEN",
+      "tr": "TRY", "pl": "PLN", "cs": "CZK", "hu": "HUF", "ro": "RON",
+      "sv": "SEK", "nb": "NOK", "da": "DKK",
+      "he": "ILS", "ar-SA": "SAR", "ar-AE": "AED", "ar-EG": "EGP",
+      "ka": "GEL", "sw": "KES",
+      "en-GB": "GBP", "en-AU": "AUD", "en-NZ": "NZD", "en-CA": "CAD",
+      "en-SG": "SGD", "en-HK": "HKD", "en-ZA": "ZAR", "en-NG": "NGN",
+      "en-PK": "PKR", "en-PH": "PHP", "en-IN": "INR",
+      "fr-CH": "CHF", "de-CH": "CHF", "it-CH": "CHF",
+      "zh-TW": "TWD", "zh-HK": "HKD",
+    };
+
+    // Check full locale first, then language only
+    const lang = locale.split("-").slice(0, 2).join("-");
+    const langShort = locale.split("-")[0];
+
+    if (localeCurrencyMap[lang] && EXCHANGE_RATES[localeCurrencyMap[lang]]) return localeCurrencyMap[lang];
+    if (localeCurrencyMap[langShort] && EXCHANGE_RATES[localeCurrencyMap[langShort]]) return localeCurrencyMap[langShort];
+
+    // Timezone-based fallback
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const tzCurrencyMap: Record<string, string> = {
+      "Europe/Moscow": "RUB", "Europe/Kiev": "UAH", "Europe/Kyiv": "UAH",
+      "Asia/Almaty": "KZT", "Asia/Tokyo": "JPY", "Asia/Seoul": "KRW",
+      "Asia/Shanghai": "CNY", "Asia/Kolkata": "INR", "Asia/Bangkok": "THB",
+      "Asia/Ho_Chi_Minh": "VND", "Asia/Jakarta": "IDR", "Asia/Manila": "PHP",
+      "Asia/Kuala_Lumpur": "MYR", "Asia/Singapore": "SGD", "Asia/Hong_Kong": "HKD",
+      "Asia/Taipei": "TWD", "Asia/Tbilisi": "GEL", "Asia/Dubai": "AED",
+      "Asia/Riyadh": "SAR", "Asia/Jerusalem": "ILS", "Asia/Karachi": "PKR",
+      "Asia/Dhaka": "BDT", "Asia/Istanbul": "TRY",
+      "America/Sao_Paulo": "BRL", "America/Mexico_City": "MXN", "America/Argentina/Buenos_Aires": "ARS",
+      "America/Bogota": "COP", "America/Santiago": "CLP", "America/Lima": "PEN",
+      "America/Toronto": "CAD", "America/Vancouver": "CAD",
+      "Europe/London": "GBP", "Europe/Zurich": "CHF",
+      "Europe/Warsaw": "PLN", "Europe/Prague": "CZK", "Europe/Budapest": "HUF",
+      "Europe/Bucharest": "RON", "Europe/Stockholm": "SEK", "Europe/Oslo": "NOK",
+      "Europe/Copenhagen": "DKK",
+      "Australia/Sydney": "AUD", "Pacific/Auckland": "NZD",
+      "Africa/Johannesburg": "ZAR", "Africa/Lagos": "NGN", "Africa/Cairo": "EGP",
+      "Africa/Nairobi": "KES",
+    };
+
+    if (tzCurrencyMap[tz] && EXCHANGE_RATES[tzCurrencyMap[tz]]) return tzCurrencyMap[tz];
+
+    // If in Europe and no specific match, default EUR
+    if (tz.startsWith("Europe/")) return "EUR";
+  } catch {
+    // ignore
+  }
+  return "USD";
+}
 
 function convertPrice(usd: number, currency: string): string {
   const info = EXCHANGE_RATES[currency];
@@ -97,6 +192,16 @@ export default function RateTable({
   const [compareIds, setCompareIds] = useState<Set<string>>(new Set());
   const [showCompare, setShowCompare] = useState(false);
   const [currency, setCurrency] = useState("USD");
+  const [currencyAutoDetected, setCurrencyAutoDetected] = useState(false);
+
+  // Auto-detect user currency on mount
+  useEffect(() => {
+    const detected = detectUserCurrency();
+    if (detected !== "USD") {
+      setCurrency(detected);
+      setCurrencyAutoDetected(true);
+    }
+  }, []);
 
   // Calculate volumetric weight
   const volumetricWeight = useMemo(() => {
@@ -326,6 +431,11 @@ export default function RateTable({
         {currency !== "USD" && (
           <span className="text-xs text-gray-400">
             (1 USD = {EXCHANGE_RATES[currency].rate} {currency})
+            {currencyAutoDetected && (
+              <span className="ml-1">
+                — {locale === "ru" ? "определено автоматически" : "auto-detected"}
+              </span>
+            )}
           </span>
         )}
       </div>
