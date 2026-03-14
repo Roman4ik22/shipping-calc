@@ -31,16 +31,13 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       siteName: t(loc, "site_name"),
-      locale: locale === "ru" ? "ru_RU" : "en_US",
+      locale: locale,
     },
     twitter: {
       card: "summary_large_image",
     },
     alternates: {
-      languages: {
-        en: "/en",
-        ru: "/ru",
-      },
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
     },
     icons: {
       icon: "/favicon.svg",
@@ -63,7 +60,7 @@ export default async function LocaleLayout({
   const loc = locale as Locale;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -80,7 +77,7 @@ export default async function LocaleLayout({
               name: "ShipWorldwide",
               url: process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com",
               description: t(loc, "site_description"),
-              inLanguage: locale === "ru" ? "ru" : "en",
+              inLanguage: locale,
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
@@ -209,14 +206,14 @@ export default async function LocaleLayout({
               </div>
               <div>
                 <h4 className="text-white font-semibold mb-3">
-                  {loc === "ru" ? "Информация" : "Information"}
+                  {t(loc, "information")}
                 </h4>
                 <p className="text-sm text-gray-400">{t(loc, "disclaimer")}</p>
               </div>
             </div>
             <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
               &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
-              {loc === "ru" ? "Все права защищены." : "All rights reserved."}
+              {t(loc, "all_rights")}
             </div>
           </div>
         </footer>

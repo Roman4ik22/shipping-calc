@@ -1,34 +1,48 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+
+const localeLabels: Record<string, string> = {
+  en: "EN",
+  ru: "RU",
+  es: "ES",
+  de: "DE",
+  fr: "FR",
+  pt: "PT",
+  zh: "中文",
+  ja: "日本",
+  ko: "한국",
+  ar: "عرب",
+  tr: "TR",
+  it: "IT",
+};
+
+const locales = Object.keys(localeLabels);
 
 export default function LanguageSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
-  const pathWithoutLocale = pathname.replace(/^\/(en|ru)/, "") || "";
+  const router = useRouter();
+
+  const localeRegex = new RegExp(`^\\/(${locales.join("|")})`);
+  const pathWithoutLocale = pathname.replace(localeRegex, "") || "";
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = e.target.value;
+    router.push(`/${newLocale}${pathWithoutLocale}`);
+  };
 
   return (
-    <div className="flex gap-1 ml-4 border-l pl-4">
-      <Link
-        href={`/en${pathWithoutLocale}`}
-        className={`text-xs px-2 py-1 rounded ${
-          locale === "en"
-            ? "bg-blue-100 text-blue-700 font-medium"
-            : "text-gray-500 hover:text-gray-700"
-        }`}
-      >
-        EN
-      </Link>
-      <Link
-        href={`/ru${pathWithoutLocale}`}
-        className={`text-xs px-2 py-1 rounded ${
-          locale === "ru"
-            ? "bg-blue-100 text-blue-700 font-medium"
-            : "text-gray-500 hover:text-gray-700"
-        }`}
-      >
-        RU
-      </Link>
-    </div>
+    <select
+      value={locale}
+      onChange={handleChange}
+      className="text-xs px-2 py-1 rounded border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 ml-2"
+      aria-label="Language"
+    >
+      {locales.map((loc) => (
+        <option key={loc} value={loc}>
+          {localeLabels[loc]}
+        </option>
+      ))}
+    </select>
   );
 }

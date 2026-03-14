@@ -1,12 +1,37 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const locales = ["en", "ru"];
+const locales = ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
 const defaultLocale = "en";
+
+const langMap: Record<string, string> = {
+  ru: "ru", uk: "ru", be: "ru", kk: "ru",
+  es: "es",
+  de: "de",
+  fr: "fr",
+  pt: "pt",
+  zh: "zh",
+  ja: "ja",
+  ko: "ko",
+  ar: "ar",
+  tr: "tr",
+  it: "it",
+};
 
 function getPreferredLocale(request: NextRequest): string {
   const acceptLang = request.headers.get("accept-language") || "";
-  if (acceptLang.includes("ru")) return "ru";
+  // Parse Accept-Language header for best match
+  const langs = acceptLang.split(",").map((part) => {
+    const [lang] = part.trim().split(";");
+    return lang.trim().toLowerCase();
+  });
+
+  for (const lang of langs) {
+    // Check exact match first (e.g., "pt-br" -> "pt")
+    const short = lang.split("-")[0];
+    if (langMap[short]) return langMap[short];
+  }
+
   return defaultLocale;
 }
 
@@ -28,7 +53,6 @@ export function middleware(request: NextRequest) {
   );
 
   if (!hasLocale) {
-    // Redirect root or non-locale paths to preferred locale
     const locale = getPreferredLocale(request);
     const url = request.nextUrl.clone();
     url.pathname = `/${locale}${pathname}`;

@@ -63,4 +63,4 @@ export interface CorridorData {
   carriers: CorridorRate[];
 }
 
-export type Locale = "en" | "ru";
+export type Locale = "en" | "ru" | "es" | "de" | "fr" | "pt" | "zh" | "ja" | "ko" | "ar" | "tr" | "it";
