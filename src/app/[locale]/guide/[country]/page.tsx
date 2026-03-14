@@ -13,11 +13,20 @@ import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   const params: { locale: string; country: string }[] = [];
+  // Pre-generate only popular countries; rest via ISR
+  const popularCodes = new Set([
+    "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
+    "IN", "AE", "SG", "BR", "IT", "ES",
+  ]);
   for (const locale of locales) {
     for (const c of countries) {
-      params.push({ locale, country: c.slug_en });
+      if (popularCodes.has(c.code)) {
+        params.push({ locale, country: c.slug_en });
+      }
     }
   }
   return params;

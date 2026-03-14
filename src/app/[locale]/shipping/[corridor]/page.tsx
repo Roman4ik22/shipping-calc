@@ -23,8 +23,7 @@ export function generateStaticParams() {
   // For build performance, only pre-generate popular corridors
   // Other pages will be generated on-demand with ISR
   const popularCodes = [
-    "US", "GB", "DE", "FR", "CN", "JP", "KR", "AU", "CA", "RU",
-    "IN", "AE", "SG", "TH", "MY", "BR", "IT", "ES", "NL", "TR",
+    "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
   ];
 
   for (const locale of locales) {

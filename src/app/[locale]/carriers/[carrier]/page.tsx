@@ -5,11 +5,21 @@ import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   const params: { locale: string; carrier: string }[] = [];
+  // Pre-generate top carriers for en/ru; rest via ISR
+  const topCarrierIds = new Set([
+    "dhl-express", "fedex", "ups", "ems", "usps", "royal-mail",
+    "japan-post", "dpd", "aramex", "sf-express",
+  ]);
+  const primaryLocales = ["en", "ru"];
   for (const locale of locales) {
     for (const c of carriers) {
-      params.push({ locale, carrier: c.id });
+      if (topCarrierIds.has(c.id) || primaryLocales.includes(locale)) {
+        params.push({ locale, carrier: c.id });
+      }
     }
   }
   return params;
