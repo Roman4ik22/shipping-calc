@@ -14,6 +14,7 @@ import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
+import LocaleSuggestion from "@/components/LocaleSuggestion";
 
 // Generate all corridor pages at build time
 // For ISR mode, this can be limited to popular corridors
@@ -162,6 +163,14 @@ export default async function CorridorPage({
         <span className="mx-2">/</span>
         <span className="text-gray-900">{destName}</span>
       </nav>
+
+      {/* Language suggestion based on corridor countries */}
+      <LocaleSuggestion
+        currentLocale={locale}
+        originCode={origin.code}
+        destCode={destination.code}
+        viewInLabel={t(loc, "view_in")}
+      />
 
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
