@@ -16,7 +16,7 @@ export default function MobileMenu({
     <div className="sm:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 text-gray-600 hover:text-gray-900"
+        className="p-2 text-gray-400 hover:text-white"
         aria-label="Menu"
       >
         <svg
@@ -43,32 +43,32 @@ export default function MobileMenu({
         </svg>
       </button>
       {open && (
-        <div className="absolute top-16 left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50">
+        <div className="absolute top-16 left-0 right-0 bg-dark-800 border-b border-white/10 shadow-lg z-50">
           <nav className="flex flex-col p-4 gap-3">
             <Link
               href={`/${locale}`}
-              className="text-gray-700 hover:text-blue-600 py-2"
+              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
               onClick={() => setOpen(false)}
             >
               {labels.home}
             </Link>
             <Link
               href={`/${locale}/carriers`}
-              className="text-gray-700 hover:text-blue-600 py-2"
+              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
               onClick={() => setOpen(false)}
             >
               {labels.carriers}
             </Link>
             <Link
               href={`/${locale}/guide`}
-              className="text-gray-700 hover:text-blue-600 py-2"
+              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
               onClick={() => setOpen(false)}
             >
               {labels.guides}
             </Link>
             <Link
               href={`/${locale}/about`}
-              className="text-gray-700 hover:text-blue-600 py-2"
+              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
               onClick={() => setOpen(false)}
             >
               {labels.about || "About"}

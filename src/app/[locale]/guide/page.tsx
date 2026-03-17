@@ -45,16 +45,16 @@ export default async function GuidesPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         {t(loc, "guides_heading")}
       </h1>
-      <p className="text-gray-600 mb-8 max-w-3xl">
+      <p className="text-gray-400 mb-8 max-w-3xl">
         {t(loc, "guides_subtitle")}
       </p>
 
       {/* Popular guides */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">
+        <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_guides")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -63,14 +63,14 @@ export default async function GuidesPage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+              className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all"
             >
               <span className="text-2xl">{countryFlag(c.code)}</span>
               <div>
-                <p className="font-medium text-gray-900">
+                <p className="font-medium text-white">
                   {getCountryName(c, loc)}
                 </p>
-                <p className="text-xs text-gray-600">{c.continent}</p>
+                <p className="text-xs text-gray-400">{c.continent}</p>
               </div>
             </Link>
           ))}
@@ -82,7 +82,7 @@ export default async function GuidesPage({
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([continent, list]) => (
           <section key={continent} className="mb-8">
-            <h2 className="text-lg font-bold text-gray-900 mb-3">
+            <h2 className="text-lg font-bold text-white mb-3">
               {continent}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
@@ -95,7 +95,7 @@ export default async function GuidesPage({
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-600 hover:text-blue-600 py-1"
+                    className="text-sm text-gray-400 hover:text-accent-light py-1"
                   >
                     {countryFlag(c.code)} {getCountryName(c, loc)}
                   </Link>

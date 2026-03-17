@@ -49,33 +49,35 @@ export default async function HomePage({
   return (
     <div>
       {/* Hero section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-dark/30 via-dark-900 to-dark-800" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-accent)/15%,transparent_70%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 text-white tracking-tight">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 text-center max-w-3xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8">
             {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold">213</p>
-              <p className="text-sm text-blue-100">{t(loc, "all_countries")}</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">213</p>
+              <p className="text-sm text-gray-400">{t(loc, "all_countries")}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold">134</p>
-              <p className="text-sm text-blue-100">{t(loc, "carriers_page")}</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">134</p>
+              <p className="text-sm text-gray-400">{t(loc, "carriers_page")}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold">45K+</p>
-              <p className="text-sm text-blue-100">{t(loc, "routes")}</p>
+              <p className="text-3xl sm:text-4xl font-bold text-white">45K+</p>
+              <p className="text-sm text-gray-400">{t(loc, "routes")}</p>
             </div>
           </div>
 
           {/* Shipping form */}
-          <div className="max-w-4xl mx-auto bg-white/15 backdrop-blur-sm rounded-xl p-6">
+          <div className="max-w-4xl mx-auto bg-surface-light/80 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
@@ -100,7 +102,7 @@ export default async function HomePage({
 
       {/* Popular corridors */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6">
           {t(loc, "popular_destinations")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -114,12 +116,12 @@ export default async function HomePage({
                 key={`${fromCode}-${toCode}`}
                 href={`/${locale}/shipping/${slug}`}
                 prefetch={false}
-                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="block bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 hover:bg-surface-light transition-all"
               >
-                <p className="font-medium text-gray-900">
+                <p className="font-medium text-white">
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                 </p>
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-gray-400 mt-1">
                   {t(loc, "compare_rates")}
                 </p>
               </Link>
@@ -132,7 +134,7 @@ export default async function HomePage({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-white mb-4">
               {t(loc, "popular_origins")}
             </h2>
             <div className="grid grid-cols-2 gap-2">
@@ -141,7 +143,7 @@ export default async function HomePage({
                   key={c.code}
                   href={`/${locale}/shipping/from/${c.slug_en}`}
                   prefetch={false}
-                  className="text-sm text-blue-600 hover:text-blue-800 py-1"
+                  className="text-sm text-accent-light hover:text-white py-1 transition-colors"
                 >
                   {t(loc, "ship_from", { country: getCountryName(c, loc) })}
                 </Link>
@@ -149,7 +151,7 @@ export default async function HomePage({
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-white mb-4">
               {t(loc, "popular_destinations")}
             </h2>
             <div className="grid grid-cols-2 gap-2">
@@ -158,7 +160,7 @@ export default async function HomePage({
                   key={c.code}
                   href={`/${locale}/shipping/to/${c.slug_en}`}
                   prefetch={false}
-                  className="text-sm text-blue-600 hover:text-blue-800 py-1"
+                  className="text-sm text-accent-light hover:text-white py-1 transition-colors"
                 >
                   {t(loc, "ship_to", { country: getCountryName(c, loc) })}
                 </Link>
@@ -169,20 +171,20 @@ export default async function HomePage({
       </section>
 
       {/* Trusted carriers */}
-      <section className="bg-white py-10 border-b border-gray-100">
+      <section className="bg-surface py-10 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-gray-600 mb-6">
+          <p className="text-center text-sm text-gray-400 mb-6">
             {t(loc, "comparing_carriers")}
           </p>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
             {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name) => (
-              <span key={name} className="text-gray-500 font-semibold text-sm sm:text-base whitespace-nowrap">
+              <span key={name} className="text-gray-300 font-semibold text-sm sm:text-base whitespace-nowrap">
                 {name}
               </span>
             ))}
           </div>
           <div className="text-center mt-4">
-            <Link href={`/${locale}/carriers`} className="text-sm text-blue-600 hover:text-blue-800">
+            <Link href={`/${locale}/carriers`} className="text-sm text-accent-light hover:text-white transition-colors">
               {t(loc, "view_all_carriers")} →
             </Link>
           </div>
@@ -190,36 +192,36 @@ export default async function HomePage({
       </section>
 
       {/* How it works */}
-      <section className="bg-white py-12">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
             {t(loc, "how_it_works")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-              <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+              <h3 className="font-semibold text-white mb-2">
                 {t(loc, "choose_route")}
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 {t(loc, "choose_route_desc")}
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-              <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+              <h3 className="font-semibold text-white mb-2">
                 {t(loc, "compare_rates")}
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 {t(loc, "compare_rates_desc")}
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-              <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+              <h3 className="font-semibold text-white mb-2">
                 {t(loc, "ship_package")}
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 {t(loc, "ship_package_desc")}
               </p>
             </div>
@@ -229,7 +231,7 @@ export default async function HomePage({
 
       {/* All countries */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6">
           {t(loc, "all_countries")}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
@@ -238,7 +240,7 @@ export default async function HomePage({
               key={c.code}
               href={`/${locale}/shipping/from/${c.slug_en}`}
               prefetch={false}
-              className="text-sm text-gray-700 hover:text-blue-600 py-1"
+              className="text-sm text-gray-400 hover:text-accent-light py-1 transition-colors"
             >
               {getCountryName(c, loc)}
             </Link>
@@ -248,7 +250,7 @@ export default async function HomePage({
 
       {/* Popular shipping guides */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6">
           {t(loc, "popular_guides")}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -257,22 +259,22 @@ export default async function HomePage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 hover:shadow-sm transition-all text-sm"
+              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:bg-surface-light transition-all text-sm"
             >
               <span>{countryFlag(c.code)}</span>
-              <span className="text-gray-700">{getCountryName(c, loc)}</span>
+              <span className="text-gray-300">{getCountryName(c, loc)}</span>
             </Link>
           ))}
         </div>
         <div className="text-center mt-4">
-          <Link href={`/${locale}/guide`} className="text-sm text-blue-600 hover:text-blue-800">
+          <Link href={`/${locale}/guide`} className="text-sm text-accent-light hover:text-white transition-colors">
             {t(loc, "all_guides")} →
           </Link>
         </div>
       </section>
 
       {/* Newsletter CTA */}
-      <section className="bg-blue-600 py-12">
+      <section className="bg-gradient-to-r from-accent-dark to-accent py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
             {t(loc, "newsletter_title")}
@@ -306,16 +308,16 @@ export default async function HomePage({
 
         return (
           <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-white mb-6">
               {t(loc, "faq_title")}
             </h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
-                <details key={i} className="bg-white border border-gray-200 rounded-lg">
-                  <summary className="p-4 font-medium text-gray-900 cursor-pointer hover:text-blue-600">
+                <details key={i} className="bg-surface border border-white/10 rounded-lg">
+                  <summary className="p-4 font-medium text-gray-200 cursor-pointer hover:text-accent-light transition-colors">
                     {faq.q}
                   </summary>
-                  <p className="px-4 pb-4 text-gray-600 text-sm">{faq.a}</p>
+                  <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
                 </details>
               ))}
             </div>

@@ -75,25 +75,25 @@ export default async function ToCountryPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-gray-600 mb-6">
-        <Link href={`/${locale}`} className="hover:text-blue-600">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-900">
+        <span className="text-white">
           {t(loc, "ship_to", { country: name })}
         </span>
       </nav>
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <h1 className="text-3xl font-bold text-white mb-2">
         {countryFlag(country.code)} {t(loc, "ship_to", { country: name })}
       </h1>
-      <p className="text-gray-600 mb-8">
+      <p className="text-gray-400 mb-8">
         {t(loc, "meta_country_to_desc", { country: name })}
       </p>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">
+        <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_origins")}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -105,7 +105,7 @@ export default async function ToCountryPage({
                 key={orig.code}
                 href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`}
                 prefetch={false}
-                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm"
+                className="block bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50"
               >
                 <p className="font-medium">
                   {countryFlag(orig.code)} {getCountryName(orig, loc)} → {name} {countryFlag(country.code)}
@@ -132,7 +132,7 @@ export default async function ToCountryPage({
                     key={orig.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`}
                     prefetch={false}
-                    className="text-sm text-blue-600 hover:text-blue-800 py-1"
+                    className="text-sm text-accent-light hover:text-white py-1"
                   >
                     {getCountryName(orig, loc)}
                   </Link>

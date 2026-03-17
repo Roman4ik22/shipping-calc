@@ -8,15 +8,23 @@ interface Rate {
   price_usd: number;
 }
 
+interface CarrierReviewData {
+  rating: number;
+  reviews: number;
+  url: string;
+}
+
 interface CorridorRateData {
   carrier_name: string;
   carrier_logo: string;
   carrier_type: string;
+  carrier_id: string;
   service_name: string;
   rates: Rate[];
   estimated_days_min: number;
   estimated_days_max: number;
   tracking: boolean;
+  review?: CarrierReviewData | null;
 }
 
 // Approximate exchange rates from USD (updated periodically)
@@ -73,11 +81,8 @@ const EXCHANGE_RATES: Record<string, { rate: number; symbol: string; name: strin
 function detectUserCurrency(): string {
   if (typeof window === "undefined") return "USD";
   try {
-    // Try Intl.NumberFormat resolved options
     const locale = navigator.language || "en-US";
-    const resolved = new Intl.NumberFormat(locale, { style: "currency", currency: "USD" }).resolvedOptions();
 
-    // Map locale to likely currency
     const localeCurrencyMap: Record<string, string> = {
       "ru": "RUB", "uk": "UAH", "kk": "KZT", "be": "BYN",
       "ja": "JPY", "ko": "KRW", "zh": "CNY",
@@ -95,14 +100,12 @@ function detectUserCurrency(): string {
       "zh-TW": "TWD", "zh-HK": "HKD",
     };
 
-    // Check full locale first, then language only
     const lang = locale.split("-").slice(0, 2).join("-");
     const langShort = locale.split("-")[0];
 
     if (localeCurrencyMap[lang] && EXCHANGE_RATES[localeCurrencyMap[lang]]) return localeCurrencyMap[lang];
     if (localeCurrencyMap[langShort] && EXCHANGE_RATES[localeCurrencyMap[langShort]]) return localeCurrencyMap[langShort];
 
-    // Timezone-based fallback
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
     const tzCurrencyMap: Record<string, string> = {
       "Europe/Moscow": "RUB", "Europe/Kiev": "UAH", "Europe/Kyiv": "UAH",
@@ -126,8 +129,6 @@ function detectUserCurrency(): string {
     };
 
     if (tzCurrencyMap[tz] && EXCHANGE_RATES[tzCurrencyMap[tz]]) return tzCurrencyMap[tz];
-
-    // If in Europe and no specific match, default EUR
     if (tz.startsWith("Europe/")) return "EUR";
   } catch {
     // ignore
@@ -139,7 +140,6 @@ function convertPrice(usd: number, currency: string): string {
   const info = EXCHANGE_RATES[currency];
   if (!info || currency === "USD") return "";
   const converted = usd * info.rate;
-  // Format based on magnitude
   if (converted >= 1000) return `${info.symbol}${Math.round(converted).toLocaleString()}`;
   if (converted >= 100) return `${info.symbol}${Math.round(converted)}`;
   return `${info.symbol}${converted.toFixed(2)}`;
@@ -150,12 +150,11 @@ function calcVolumetricWeight(l: number, w: number, h: number): number {
 }
 
 function findClosestWeight(weight: number, availableWeights: number[]): number {
-  // Find the smallest available weight that is >= the target
   const sorted = [...availableWeights].sort((a, b) => a - b);
   for (const w of sorted) {
     if (w >= weight) return w;
   }
-  return sorted[sorted.length - 1]; // fallback to max
+  return sorted[sorted.length - 1];
 }
 
 export default function RateTable({
@@ -216,7 +215,6 @@ export default function RateTable({
   const [currency, setCurrency] = useState("USD");
   const [currencyAutoDetected, setCurrencyAutoDetected] = useState(false);
 
-  // Auto-detect user currency on mount
   useEffect(() => {
     const detected = detectUserCurrency();
     if (detected !== "USD") {
@@ -225,7 +223,6 @@ export default function RateTable({
     }
   }, []);
 
-  // Calculate volumetric weight
   const volumetricWeight = useMemo(() => {
     const l = parseFloat(dimensions.l);
     const w = parseFloat(dimensions.w);
@@ -236,7 +233,6 @@ export default function RateTable({
     return 0;
   }, [dimensions]);
 
-  // Determine effective weight (max of actual and volumetric)
   const effectiveWeight = useMemo(() => {
     const actual = (selectedPreset ?? parseFloat(customWeight)) || 0;
     if (volumetricWeight > 0 && actual > 0) {
@@ -245,7 +241,6 @@ export default function RateTable({
     return actual;
   }, [selectedPreset, customWeight, volumetricWeight]);
 
-  // Available weight steps from rate data
   const availableWeights = useMemo(() => {
     const weights = new Set<number>();
     for (const cr of corridorRates) {
@@ -268,7 +263,6 @@ export default function RateTable({
     );
   }
 
-  // Get rates for billing weight
   const ratesAtWeight = corridorRates
     .map((cr) => {
       const rate = cr.rates.find((r) => r.weight_kg === billingWeight);
@@ -309,10 +303,9 @@ export default function RateTable({
   return (
     <div>
       {/* Weight input section */}
-      <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
-        {/* Presets */}
+      <div className="bg-surface border border-white/10 rounded-lg p-4 mb-6">
         <div className="mb-3">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             {labels.select_weight}
           </label>
           <div className="flex flex-wrap gap-2">
@@ -324,8 +317,8 @@ export default function RateTable({
                 aria-pressed={selectedPreset === w && !customWeight}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   selectedPreset === w && !customWeight
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-50 border border-gray-300 text-gray-700 hover:border-blue-400"
+                    ? "bg-accent text-white"
+                    : "bg-dark-700 border border-white/20 text-gray-300 hover:border-accent/50"
                 }`}
               >
                 {w} {labels.kg}
@@ -334,7 +327,6 @@ export default function RateTable({
           </div>
         </div>
 
-        {/* Custom weight input */}
         <div className="flex flex-wrap items-end gap-4">
           <div>
             <label className="block text-xs text-gray-500 mb-1">
@@ -349,24 +341,22 @@ export default function RateTable({
                 min="0.1"
                 max="70"
                 step="0.1"
-                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
               />
               <span className="text-sm text-gray-500">{labels.kg}</span>
             </div>
           </div>
 
-          {/* Dimensions toggle */}
           <button
             onClick={() => setShowDimensions(!showDimensions)}
-            className="px-3 py-2 text-sm text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
+            className="px-3 py-2 text-sm text-accent-light hover:text-white border border-accent/30 rounded-lg hover:bg-accent/10 transition-colors"
           >
             {showDimensions ? labels.hide_dimensions : labels.enter_dimensions}
           </button>
         </div>
 
-        {/* Dimensions input */}
         {showDimensions && (
-          <div className="mt-3 pt-3 border-t border-gray-100">
+          <div className="mt-3 pt-3 border-t border-white/10">
             <label className="block text-xs text-gray-500 mb-2">
               {labels.package_dimensions}
             </label>
@@ -377,36 +367,36 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
                 placeholder="L"
                 min="1"
-                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
               />
-              <span className="text-gray-400">×</span>
+              <span className="text-gray-500">×</span>
               <input
                 type="number"
                 value={dimensions.w}
                 onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
                 placeholder="W"
                 min="1"
-                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
               />
-              <span className="text-gray-400">×</span>
+              <span className="text-gray-500">×</span>
               <input
                 type="number"
                 value={dimensions.h}
                 onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
                 placeholder="H"
                 min="1"
-                className="w-20 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
               />
               <span className="text-sm text-gray-500">cm</span>
             </div>
             {volumetricWeight > 0 && (
               <div className="mt-2 text-sm">
-                <span className="text-gray-500">
+                <span className="text-gray-400">
                   {labels.volumetric_weight}:{" "}
                 </span>
-                <span className="font-semibold text-gray-900">{volumetricWeight.toFixed(1)} {labels.kg}</span>
+                <span className="font-semibold text-white">{volumetricWeight.toFixed(1)} {labels.kg}</span>
                 {effectiveWeight > ((selectedPreset ?? parseFloat(customWeight)) || 0) && (
-                  <span className="ml-2 text-orange-600 text-xs">
+                  <span className="ml-2 text-orange-400 text-xs">
                     ⚠ {labels.volumetric_exceeds}
                   </span>
                 )}
@@ -418,11 +408,10 @@ export default function RateTable({
           </div>
         )}
 
-        {/* Effective weight display */}
         {effectiveWeight > 0 && (
-          <div className="mt-3 pt-3 border-t border-gray-100 text-sm">
-            <span className="text-gray-500">{labels.billed_at}: </span>
-            <span className="font-semibold text-gray-900">{billingWeight} {labels.kg}</span>
+          <div className="mt-3 pt-3 border-t border-white/10 text-sm">
+            <span className="text-gray-400">{labels.billed_at}: </span>
+            <span className="font-semibold text-white">{billingWeight} {labels.kg}</span>
             {billingWeight !== effectiveWeight && (
               <span className="text-xs text-gray-500 ml-1">
                 ({labels.nearest_bracket})
@@ -434,12 +423,12 @@ export default function RateTable({
 
       {/* Currency selector */}
       <div className="flex items-center gap-2 mb-4">
-        <span className="text-sm text-gray-500">{labels.currency}:</span>
+        <span className="text-sm text-gray-400">{labels.currency}:</span>
         <select
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
           aria-label={labels.currency}
-          className="px-3 py-1.5 rounded border border-gray-300 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="px-3 py-1.5 rounded border border-white/20 text-sm bg-dark-700 text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent"
         >
           {Object.entries(EXCHANGE_RATES).map(([code, info]) => (
             <option key={code} value={code}>
@@ -462,13 +451,13 @@ export default function RateTable({
       {/* Sort & filter controls */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
         <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
-          <span className="text-sm text-gray-500">{labels.sort}:</span>
+          <span className="text-sm text-gray-400">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
-            className={`px-3 py-1.5 rounded text-sm ${
-              sortBy === "price" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            className={`px-3 py-1.5 rounded text-sm transition-colors ${
+              sortBy === "price" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
             }`}
           >
             {labels.price}
@@ -477,23 +466,23 @@ export default function RateTable({
             onClick={() => setSortBy("speed")}
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
-            className={`px-3 py-1.5 rounded text-sm ${
-              sortBy === "speed" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            className={`px-3 py-1.5 rounded text-sm transition-colors ${
+              sortBy === "speed" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
             }`}
           >
             {labels.delivery_time}
           </button>
         </div>
-        <div className="h-4 w-px bg-gray-300 hidden sm:block" />
+        <div className="h-4 w-px bg-white/10 hidden sm:block" />
         <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
-          <span className="text-sm text-gray-500">{labels.type_label}:</span>
+          <span className="text-sm text-gray-400">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
-              className={`px-3 py-1.5 rounded text-sm ${
-                filterType === opt.value ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              className={`px-3 py-1.5 rounded text-sm transition-colors ${
+                filterType === opt.value ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
               }`}
             >
               {opt.label}
@@ -504,13 +493,13 @@ export default function RateTable({
 
       {/* Results count + compare button */}
       <div className="flex items-center justify-between mb-3">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-400">
           {ratesAtWeight.length} {labels.results}
         </p>
         {compareIds.size >= 2 && (
           <button
             onClick={() => setShowCompare(!showCompare)}
-            className="px-4 py-1.5 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700"
+            className="px-4 py-1.5 bg-accent text-white text-sm rounded-lg hover:bg-accent-dark transition-colors"
           >
             {labels.compare} ({compareIds.size})
           </button>
@@ -519,13 +508,13 @@ export default function RateTable({
 
       {/* Comparison table */}
       {showCompare && comparedRates.length >= 2 && (
-        <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4 overflow-x-auto">
-          <h3 className="font-semibold text-gray-900 mb-3">
+        <div className="mb-6 bg-accent/10 border border-accent/30 rounded-lg p-4 overflow-x-auto">
+          <h3 className="font-semibold text-white mb-3">
             {labels.comparison}
           </h3>
           <table className="w-full text-sm" role="table">
             <thead>
-              <tr className="text-left text-gray-500">
+              <tr className="text-left text-gray-400">
                 <th className="pb-2" scope="col">{labels.carrier}</th>
                 <th className="pb-2" scope="col">{labels.service}</th>
                 <th className="pb-2" scope="col">{labels.price}</th>
@@ -535,19 +524,19 @@ export default function RateTable({
             </thead>
             <tbody>
               {comparedRates.map((rate) => (
-                <tr key={rate.id} className="border-t border-blue-200">
-                  <td className="py-2 font-medium">{rate.carrier_name}</td>
-                  <td className="py-2">{rate.service_name}</td>
-                  <td className="py-2 font-bold">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
-                  <td className="py-2">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
-                  <td className="py-2">{rate.tracking ? labels.yes : labels.no}</td>
+                <tr key={rate.id} className="border-t border-accent/20">
+                  <td className="py-2 font-medium text-gray-200">{rate.carrier_name}</td>
+                  <td className="py-2 text-gray-300">{rate.service_name}</td>
+                  <td className="py-2 font-bold text-white">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
+                  <td className="py-2 text-gray-300">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
+                  <td className="py-2 text-gray-300">{rate.tracking ? labels.yes : labels.no}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <button
             onClick={() => setShowCompare(false)}
-            className="mt-2 text-sm text-blue-600 hover:text-blue-800"
+            className="mt-2 text-sm text-accent-light hover:text-white transition-colors"
           >
             {labels.close}
           </button>
@@ -564,54 +553,71 @@ export default function RateTable({
           return (
             <div
               key={rate.id}
-              className={`bg-white rounded-lg border p-4 sm:p-5 ${
+              className={`bg-surface rounded-lg border p-4 sm:p-5 transition-colors ${
                 isCheapest
-                  ? "border-green-300 ring-1 ring-green-200"
+                  ? "border-green-500/50 ring-1 ring-green-500/30"
                   : isFastest
-                  ? "border-blue-300 ring-1 ring-blue-200"
+                  ? "border-accent/50 ring-1 ring-accent/30"
                   : isCompared
-                  ? "border-purple-300 ring-1 ring-purple-200"
-                  : "border-gray-200"
+                  ? "border-purple-500/50 ring-1 ring-purple-500/30"
+                  : "border-white/10"
               }`}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    {/* Compare checkbox */}
                     <input
                       type="checkbox"
                       checked={isCompared}
                       onChange={() => toggleCompare(rate.id)}
-                      className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                      className="w-4 h-4 text-accent rounded border-white/30 bg-dark-700 focus:ring-accent"
                       aria-label={`${labels.compare} ${rate.carrier_name} ${rate.service_name}`}
                       title={labels.compare}
                     />
-                    <span className="font-semibold text-gray-900">
+                    <span className="font-semibold text-white">
                       {rate.carrier_name}
                     </span>
                     {isCheapest && (
-                      <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                      <span className="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
                         {labels.cheapest}
                       </span>
                     )}
                     {isFastest && (
-                      <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                      <span className="px-2 py-0.5 bg-accent/20 text-accent-light text-xs font-medium rounded-full">
                         {labels.fastest}
                       </span>
                     )}
                     <span
                       className={`px-2 py-0.5 text-xs rounded-full ${
                         rate.carrier_type === "international"
-                          ? "bg-purple-100 text-purple-700"
+                          ? "bg-purple-500/20 text-purple-400"
                           : rate.carrier_type === "postal"
-                          ? "bg-orange-100 text-orange-700"
-                          : "bg-teal-100 text-teal-700"
+                          ? "bg-orange-500/20 text-orange-400"
+                          : "bg-teal-500/20 text-teal-400"
                       }`}
                     >
                       {rate.carrier_type}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-500 ml-6">{rate.service_name}</p>
+                  <div className="flex items-center gap-2 ml-6">
+                    <p className="text-sm text-gray-400">{rate.service_name}</p>
+                    {rate.review && (
+                      <a
+                        href={rate.review.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-xs flex items-center gap-1 ${
+                          rate.review.rating >= 3.5 ? "text-green-400" :
+                          rate.review.rating >= 2.5 ? "text-yellow-400" :
+                          rate.review.rating >= 1.5 ? "text-orange-400" : "text-red-400"
+                        } hover:underline`}
+                        title="Trustpilot"
+                      >
+                        <span>★ {rate.review.rating.toFixed(1)}</span>
+                        <span className="text-gray-500">({rate.review.reviews >= 1000 ? `${(rate.review.reviews / 1000).toFixed(1)}K` : rate.review.reviews})</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-4 sm:gap-6">
@@ -619,7 +625,7 @@ export default function RateTable({
                     <p className="text-xs text-gray-500 uppercase">
                       {labels.delivery_time}
                     </p>
-                    <p className="font-medium">
+                    <p className="font-medium text-gray-200">
                       {rate.estimated_days_min}–{rate.estimated_days_max}{" "}
                       <span className="text-sm text-gray-500">
                         {labels.days}
@@ -630,7 +636,7 @@ export default function RateTable({
                     <p className="text-xs text-gray-500 uppercase">
                       {labels.tracking}
                     </p>
-                    <p className="font-medium">
+                    <p className="font-medium text-gray-200">
                       {rate.tracking ? labels.yes : labels.no}
                     </p>
                   </div>
@@ -638,7 +644,7 @@ export default function RateTable({
                     <p className="text-xs text-gray-500 uppercase">
                       {labels.price}
                     </p>
-                    <p className="text-2xl font-bold text-gray-900">
+                    <p className="text-2xl font-bold text-white">
                       ${rate.price}
                     </p>
                     {currency !== "USD" && rate.price && (
@@ -649,7 +655,6 @@ export default function RateTable({
                   </div>
                 </div>
               </div>
-              {/* Mobile tracking info */}
               <div className="sm:hidden mt-2 text-xs text-gray-500 ml-6">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
               </div>
@@ -664,7 +669,6 @@ export default function RateTable({
         </div>
       )}
 
-      {/* Disclaimer */}
       <p className="mt-6 text-xs text-gray-500 leading-relaxed">
         {labels.disclaimer}
       </p>

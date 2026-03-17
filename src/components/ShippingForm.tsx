@@ -84,7 +84,7 @@ export default function ShippingForm({
       <button
         onClick={handleSubmit}
         disabled={!origin || !dest || origin === dest}
-        className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors md:col-span-1"
+        className="px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark disabled:bg-dark-500 disabled:cursor-not-allowed transition-colors md:col-span-1"
       >
         {labels.submit}
       </button>

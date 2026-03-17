@@ -117,14 +117,14 @@ export default function LocaleSuggestion({
   };
 
   return (
-    <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-3 mb-6 flex items-center justify-between flex-wrap gap-2">
+    <div className="bg-accent/10 border border-accent/30 rounded-lg px-4 py-3 mb-6 flex items-center justify-between flex-wrap gap-2">
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-sm text-blue-800">{viewInLabel}:</span>
+        <span className="text-sm text-accent-light">{viewInLabel}:</span>
         {display.map((loc) => (
           <button
             key={loc}
             onClick={() => switchTo(loc)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-blue-300 rounded-full text-sm font-medium text-blue-700 hover:bg-blue-100 hover:border-blue-400 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-dark-700 border border-accent/30 rounded-full text-sm font-medium text-accent-light hover:bg-accent/20 hover:border-accent/50 transition-colors"
           >
             <span>{localeFlags[loc]}</span>
             <span>{localeLabels[loc]}</span>
@@ -133,7 +133,7 @@ export default function LocaleSuggestion({
       </div>
       <button
         onClick={() => setDismissed(true)}
-        className="text-blue-400 hover:text-blue-600 text-lg leading-none"
+        className="text-gray-500 hover:text-gray-300 text-lg leading-none"
         aria-label="Dismiss"
       >
         ×

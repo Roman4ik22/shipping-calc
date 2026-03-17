@@ -45,26 +45,26 @@ export default async function CarriersPage({
     items: typeof carriers;
   }) => (
     <section className="mb-10">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">{title}</h2>
+      <h2 className="text-xl font-bold text-white mb-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map((carrier) => (
           <Link
             key={carrier.id}
             href={`/${locale}/carriers/${carrier.id}`}
             prefetch={false}
-            className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+            className="block bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all"
           >
-            <h3 className="font-semibold text-gray-900 mb-2">
+            <h3 className="font-semibold text-white mb-2">
               {carrier.name}
             </h3>
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-sm text-gray-400 mb-3">
               {getCarrierDescription(carrier, loc)}
             </p>
             <div className="flex flex-wrap gap-1">
               {carrier.services.map((s) => (
                 <span
                   key={s.id}
-                  className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded"
+                  className="px-2 py-0.5 bg-gray-100 text-gray-400 text-xs rounded"
                 >
                   {s.name}
                 </span>
@@ -78,7 +78,7 @@ export default async function CarriersPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+      <h1 className="text-3xl font-bold text-white mb-8">
         {t(loc, "all_carriers")}
       </h1>
 

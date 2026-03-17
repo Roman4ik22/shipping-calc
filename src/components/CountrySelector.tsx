@@ -77,32 +77,32 @@ export default function CountrySelector({
 
   return (
     <div className="relative" ref={ref}>
-      <label className="block text-sm font-medium mb-1">
+      <label className="block text-sm font-medium text-gray-300 mb-1">
         {label}
       </label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-3 text-left bg-white text-gray-900 border border-gray-300 rounded-lg shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-3 text-left bg-dark-700 text-gray-100 border border-white/20 rounded-lg shadow-sm hover:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent"
       >
         {selected ? (
           <span>
             {countryFlag(selected.code)} {getName(selected)}
           </span>
         ) : (
-          <span className="text-gray-400">—</span>
+          <span className="text-gray-500">—</span>
         )}
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-1 w-full bg-white text-gray-900 border border-gray-200 rounded-lg shadow-lg max-h-72 overflow-hidden">
-          <div className="p-2 border-b">
+        <div className="absolute z-50 mt-1 w-full bg-dark-700 text-gray-100 border border-white/20 rounded-lg shadow-lg max-h-72 overflow-hidden">
+          <div className="p-2 border-b border-white/10">
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={label}
-              className="w-full px-3 py-2 border border-gray-200 rounded text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-white/20 rounded text-sm text-gray-100 bg-dark-600 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
               autoFocus
             />
           </div>
@@ -116,8 +116,8 @@ export default function CountrySelector({
                   setIsOpen(false);
                   setSearch("");
                 }}
-                className={`w-full px-4 py-2 text-left text-sm hover:bg-blue-50 ${
-                  c.code === value ? "bg-blue-50 font-medium" : ""
+                className={`w-full px-4 py-2 text-left text-sm hover:bg-accent/20 transition-colors ${
+                  c.code === value ? "bg-accent/20 font-medium text-accent-light" : "text-gray-200"
                 }`}
               >
                 {countryFlag(c.code)} {getName(c)}

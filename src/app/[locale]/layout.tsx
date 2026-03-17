@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import "../globals.css";
 import { locales } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
@@ -66,7 +70,7 @@ export default async function LocaleLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <body className="min-h-screen bg-dark-900 text-gray-100 antialiased font-sans">
         <Analytics />
         <WebVitals />
         {/* Organization JSON-LD */}
@@ -92,12 +96,12 @@ export default async function LocaleLayout({
           }}
         />
         {/* Header */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <header className="bg-dark-800/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link
                 href={`/${locale}`}
-                className="text-xl font-bold text-blue-600"
+                className="text-xl font-bold text-accent-light"
               >
                 {t(loc, "site_name")}
               </Link>
@@ -105,25 +109,25 @@ export default async function LocaleLayout({
                 <nav className="hidden sm:flex items-center gap-6">
                   <Link
                     href={`/${locale}`}
-                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
                   >
                     {t(loc, "home")}
                   </Link>
                   <Link
                     href={`/${locale}/carriers`}
-                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
                   >
                     {t(loc, "carriers_page")}
                   </Link>
                   <Link
                     href={`/${locale}/guide`}
-                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
                   >
                     {t(loc, "guides")}
                   </Link>
                   <Link
                     href={`/${locale}/about`}
-                    className="text-sm text-gray-700 hover:text-gray-900 font-medium"
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
                   >
                     {t(loc, "about")}
                   </Link>
@@ -147,19 +151,19 @@ export default async function LocaleLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-gray-300 mt-16">
+        <footer className="bg-dark-800 border-t border-white/10 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-white font-bold text-lg mb-3">
                   {t(loc, "site_name")}
                 </h3>
-                <p className="text-sm mb-4">{t(loc, "site_description")}</p>
+                <p className="text-sm text-gray-400 mb-4">{t(loc, "site_description")}</p>
                 <div className="flex flex-wrap gap-3 text-sm">
-                  <Link href={`/${locale}`} className="hover:text-white">{t(loc, "home")}</Link>
-                  <Link href={`/${locale}/carriers`} className="hover:text-white">{t(loc, "carriers_page")}</Link>
-                  <Link href={`/${locale}/guide`} className="hover:text-white">{t(loc, "guides")}</Link>
-                  <Link href={`/${locale}/about`} className="hover:text-white">{t(loc, "about")}</Link>
+                  <Link href={`/${locale}`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "home")}</Link>
+                  <Link href={`/${locale}/carriers`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "carriers_page")}</Link>
+                  <Link href={`/${locale}/guide`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "guides")}</Link>
+                  <Link href={`/${locale}/about`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "about")}</Link>
                 </div>
               </div>
               <div>
@@ -175,7 +179,7 @@ export default async function LocaleLayout({
                         key={code}
                         href={`/${locale}/shipping/to/${country.slug_en}`}
                         prefetch={false}
-                        className="hover:text-white"
+                        className="text-gray-400 hover:text-accent-light transition-colors"
                       >
                         {t(loc, "ship_to", {
                           country: getCountryName(country, loc),
@@ -198,7 +202,7 @@ export default async function LocaleLayout({
                         key={code}
                         href={`/${locale}/shipping/from/${country.slug_en}`}
                         prefetch={false}
-                        className="hover:text-white"
+                        className="text-gray-400 hover:text-accent-light transition-colors"
                       >
                         {t(loc, "ship_from", {
                           country: getCountryName(country, loc),
@@ -212,10 +216,10 @@ export default async function LocaleLayout({
                 <h4 className="text-white font-semibold mb-3">
                   {t(loc, "information")}
                 </h4>
-                <p className="text-sm text-gray-400 leading-relaxed">{t(loc, "disclaimer")}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{t(loc, "disclaimer")}</p>
               </div>
             </div>
-            <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-500">
+            <div className="border-t border-white/10 mt-8 pt-6 text-sm text-center text-gray-500">
               &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
               {t(loc, "all_rights")}
             </div>

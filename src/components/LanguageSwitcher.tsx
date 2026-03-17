@@ -35,7 +35,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
     <select
       value={locale}
       onChange={handleChange}
-      className="text-xs px-2 py-1 rounded border border-gray-200 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 ml-2"
+      className="text-xs px-2 py-1 rounded border border-white/20 bg-dark-700 text-gray-300 focus:outline-none focus:ring-1 focus:ring-accent ml-2"
       aria-label="Language"
     >
       {locales.map((loc) => (
