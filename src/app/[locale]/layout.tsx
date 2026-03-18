@@ -12,7 +12,9 @@ import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import MobileMenu from "@/components/MobileMenu";
 import Analytics from "@/components/Analytics";
+import AdSense from "@/components/AdSense";
 import WebVitals from "@/components/WebVitals";
+import ServiceWorker from "@/components/ServiceWorker";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -72,7 +74,9 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen bg-dark-900 text-gray-100 antialiased font-sans">
         <Analytics />
+        <AdSense />
         <WebVitals />
+        <ServiceWorker />
         {/* Organization JSON-LD */}
         <script
           type="application/ld+json"

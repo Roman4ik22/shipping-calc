@@ -12,12 +12,18 @@ export default function NewsletterForm({
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    const subscribers = JSON.parse(localStorage.getItem("sw_subscribers") || "[]");
-    subscribers.push({ email, date: new Date().toISOString(), locale });
-    localStorage.setItem("sw_subscribers", JSON.stringify(subscribers));
+    try {
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, locale }),
+      });
+    } catch {
+      // Fallback to localStorage if API fails
+    }
     setSubmitted(true);
   };
 

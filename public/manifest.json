@@ -1,11 +1,11 @@
 {
-  "name": "ShipWorldwide — Compare Shipping Rates",
-  "short_name": "ShipWorldwide",
-  "description": "Compare international shipping rates from all major carriers worldwide",
+  "name": "RateShips — Compare Shipping Rates",
+  "short_name": "RateShips",
+  "description": "Compare international shipping rates from 150+ carriers worldwide",
   "start_url": "/en",
   "display": "standalone",
-  "background_color": "#f9fafb",
-  "theme_color": "#2563eb",
+  "background_color": "#0a0e17",
+  "theme_color": "#3b82f6",
   "icons": [
     {
       "src": "/favicon.svg",
