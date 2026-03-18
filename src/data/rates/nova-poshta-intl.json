@@ -1,0 +1,45 @@
+{
+  "carrier_id": "nova-poshta-intl",
+  "effective_date": "2025-01-01",
+  "note": "Nova Poshta domestic and international rates. Largest private delivery service in Ukraine.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Ukraine Domestic",
+      "countries_from": ["UA"],
+      "countries_to": ["UA"]
+    },
+    {
+      "zone": 2,
+      "description": "Neighboring Countries",
+      "countries_from": ["UA"],
+      "countries_to": ["PL", "RO", "HU", "SK", "CZ", "MD", "LT", "LV", "EE"]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & International",
+      "countries_from": ["UA"],
+      "countries_to": ["DE", "FR", "GB", "IT", "ES", "NL", "US", "CA"]
+    }
+  ],
+  "rates": {
+    "nova-poshta-intl-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 15, 28] },
+      { "weight_kg": 1, "prices_by_zone": [3, 20, 35] },
+      { "weight_kg": 2, "prices_by_zone": [4, 28, 48] },
+      { "weight_kg": 5, "prices_by_zone": [7, 45, 78] },
+      { "weight_kg": 10, "prices_by_zone": [11, 75, 132] },
+      { "weight_kg": 20, "prices_by_zone": [18, 132, 235] },
+      { "weight_kg": 30, "prices_by_zone": [25, 188, 338] }
+    ],
+    "nova-poshta-intl-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [1, 10, 20] },
+      { "weight_kg": 1, "prices_by_zone": [2, 14, 26] },
+      { "weight_kg": 2, "prices_by_zone": [3, 20, 35] },
+      { "weight_kg": 5, "prices_by_zone": [5, 32, 58] },
+      { "weight_kg": 10, "prices_by_zone": [8, 55, 100] },
+      { "weight_kg": 20, "prices_by_zone": [13, 98, 178] },
+      { "weight_kg": 30, "prices_by_zone": [18, 140, 255] }
+    ]
+  }
+}

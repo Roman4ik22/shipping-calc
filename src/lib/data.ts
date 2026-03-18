@@ -141,6 +141,8 @@ import saudiPostRates from "../data/rates/saudi-post.json";
 import sriLankaPostRates from "../data/rates/sri-lanka-post.json";
 import taiwanPostRates from "../data/rates/taiwan-post.json";
 import vietnamPostRates from "../data/rates/vietnam-post.json";
+import jAndTExpressRates from "../data/rates/j-and-t-express.json";
+import theCourierGuyRates from "../data/rates/the-courier-guy.json";
 import type {
   Country,
   Carrier,
@@ -295,6 +297,8 @@ const allRateData: CarrierRateData[] = [
   sriLankaPostRates,
   taiwanPostRates,
   vietnamPostRates,
+  jAndTExpressRates,
+  theCourierGuyRates,
 ] as CarrierRateData[];
 
 // Lookup maps

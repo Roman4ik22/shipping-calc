@@ -1,0 +1,45 @@
+{
+  "carrier_id": "dtdc",
+  "effective_date": "2025-01-01",
+  "note": "DTDC India domestic and international rates. One of India's largest courier networks.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "India Domestic",
+      "countries_from": ["IN"],
+      "countries_to": ["IN"]
+    },
+    {
+      "zone": 2,
+      "description": "South Asia & Middle East",
+      "countries_from": ["IN"],
+      "countries_to": ["LK", "NP", "BD", "AE", "SA", "QA", "OM", "BH", "KW"]
+    },
+    {
+      "zone": 3,
+      "description": "International",
+      "countries_from": ["IN"],
+      "countries_to": ["US", "GB", "DE", "AU", "CA", "SG", "MY"]
+    }
+  ],
+  "rates": {
+    "dtdc-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 12, 25] },
+      { "weight_kg": 1, "prices_by_zone": [3, 16, 32] },
+      { "weight_kg": 2, "prices_by_zone": [4, 22, 42] },
+      { "weight_kg": 5, "prices_by_zone": [7, 38, 72] },
+      { "weight_kg": 10, "prices_by_zone": [12, 62, 122] },
+      { "weight_kg": 20, "prices_by_zone": [20, 110, 218] },
+      { "weight_kg": 30, "prices_by_zone": [28, 155, 312] }
+    ],
+    "dtdc-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [1, 8, 18] },
+      { "weight_kg": 1, "prices_by_zone": [2, 11, 24] },
+      { "weight_kg": 2, "prices_by_zone": [3, 16, 32] },
+      { "weight_kg": 5, "prices_by_zone": [5, 28, 55] },
+      { "weight_kg": 10, "prices_by_zone": [8, 48, 95] },
+      { "weight_kg": 20, "prices_by_zone": [14, 85, 168] },
+      { "weight_kg": 30, "prices_by_zone": [20, 120, 242] }
+    ]
+  }
+}

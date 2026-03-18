@@ -3590,5 +3590,93 @@
         "tracking": true
       }
     ]
+  },
+  {
+    "id": "j-and-t-express",
+    "name": "J&T Express",
+    "type": "regional",
+    "logo": "",
+    "website": "https://www.jtexpress.sg",
+    "tracking_url": "https://www.jtexpress.sg/tracking",
+    "description_en": "Leading Southeast Asian express delivery company operating in Indonesia, Malaysia, Thailand, Vietnam, Philippines, and Singapore.",
+    "description_ru": "Ведущая экспресс-курьерская компания Юго-Восточной Азии, работает в Индонезии, Малайзии, Таиланде, Вьетнаме, Филиппинах и Сингапуре.",
+    "services": [
+      {
+        "id": "j-and-t-standard",
+        "name": "J&T Standard",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "kerry-express",
+    "name": "Kerry Express",
+    "type": "regional",
+    "logo": "",
+    "website": "https://www.kerryexpress.com",
+    "tracking_url": "https://th.kerryexpress.com/en/track",
+    "description_en": "Major express delivery service in Thailand and Southeast Asia with next-day delivery.",
+    "description_ru": "Крупнейшая экспресс-служба доставки в Таиланде и Юго-Восточной Азии.",
+    "services": [
+      {
+        "id": "kerry-standard",
+        "name": "Kerry Standard",
+        "speed_days_min": 1,
+        "speed_days_max": 4,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cdek-regional",
+    "name": "CDEK",
+    "type": "regional",
+    "logo": "",
+    "website": "https://www.cdek.ru",
+    "tracking_url": "https://www.cdek.ru/en/tracking",
+    "description_en": "Major Russian delivery service operating in Russia, Kazakhstan, Belarus, Armenia, and Kyrgyzstan.",
+    "description_ru": "Крупная российская служба доставки, работает в России, Казахстане, Беларуси, Армении и Киргизии.",
+    "services": [
+      {
+        "id": "cdek-express",
+        "name": "CDEK Express",
+        "speed_days_min": 2,
+        "speed_days_max": 5,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cdek-economy",
+        "name": "CDEK Economy",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "dtdc",
+    "name": "DTDC Express",
+    "type": "regional",
+    "logo": "",
+    "website": "https://www.dtdc.in",
+    "tracking_url": "https://www.dtdc.in/tracking.asp",
+    "description_en": "One of India largest courier and logistics companies with 10,000+ offices.",
+    "description_ru": "Одна из крупнейших курьерских компаний Индии с 10 000+ офисов.",
+    "services": [
+      {
+        "id": "dtdc-express",
+        "name": "DTDC Express",
+        "speed_days_min": 2,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
   }
 ]

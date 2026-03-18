@@ -1,0 +1,45 @@
+{
+  "carrier_id": "kerry-express",
+  "effective_date": "2025-01-01",
+  "note": "Kerry Express regional rates. Major logistics provider in Thailand and Southeast Asia.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Domestic Thailand",
+      "countries_from": ["TH"],
+      "countries_to": ["TH"]
+    },
+    {
+      "zone": 2,
+      "description": "SEA Regional",
+      "countries_from": ["TH", "HK", "VN", "MY", "ID"],
+      "countries_to": ["TH", "HK", "VN", "MY", "ID", "SG", "PH"]
+    },
+    {
+      "zone": 3,
+      "description": "Greater Asia & International",
+      "countries_from": ["TH", "HK"],
+      "countries_to": ["CN", "JP", "KR", "TW", "AU", "US", "GB"]
+    }
+  ],
+  "rates": {
+    "kerry-express-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 10, 22] },
+      { "weight_kg": 1, "prices_by_zone": [3, 14, 28] },
+      { "weight_kg": 2, "prices_by_zone": [4, 20, 38] },
+      { "weight_kg": 5, "prices_by_zone": [7, 35, 65] },
+      { "weight_kg": 10, "prices_by_zone": [12, 58, 110] },
+      { "weight_kg": 20, "prices_by_zone": [20, 102, 195] },
+      { "weight_kg": 30, "prices_by_zone": [28, 145, 278] }
+    ],
+    "kerry-express-next-day": [
+      { "weight_kg": 0.5, "prices_by_zone": [4, 14, 28] },
+      { "weight_kg": 1, "prices_by_zone": [5, 18, 36] },
+      { "weight_kg": 2, "prices_by_zone": [7, 26, 48] },
+      { "weight_kg": 5, "prices_by_zone": [11, 45, 82] },
+      { "weight_kg": 10, "prices_by_zone": [18, 75, 140] },
+      { "weight_kg": 20, "prices_by_zone": [30, 132, 250] },
+      { "weight_kg": 30, "prices_by_zone": [42, 188, 355] }
+    ]
+  }
+}

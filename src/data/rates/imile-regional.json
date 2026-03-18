@@ -1,0 +1,45 @@
+{
+  "carrier_id": "imile-regional",
+  "effective_date": "2025-01-01",
+  "note": "iMile regional rates. Middle East e-commerce delivery specialist.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "UAE Domestic",
+      "countries_from": ["AE"],
+      "countries_to": ["AE"]
+    },
+    {
+      "zone": 2,
+      "description": "GCC & Egypt",
+      "countries_from": ["AE", "SA"],
+      "countries_to": ["AE", "SA", "KW", "BH", "QA", "OM", "EG"]
+    },
+    {
+      "zone": 3,
+      "description": "Middle East Extended",
+      "countries_from": ["AE", "SA"],
+      "countries_to": ["JO", "LB", "IQ", "MA", "PK", "IN"]
+    }
+  ],
+  "rates": {
+    "imile-regional-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18] },
+      { "weight_kg": 1, "prices_by_zone": [4, 11, 24] },
+      { "weight_kg": 2, "prices_by_zone": [6, 16, 32] },
+      { "weight_kg": 5, "prices_by_zone": [10, 28, 55] },
+      { "weight_kg": 10, "prices_by_zone": [17, 48, 95] },
+      { "weight_kg": 20, "prices_by_zone": [30, 85, 168] },
+      { "weight_kg": 30, "prices_by_zone": [42, 120, 240] }
+    ],
+    "imile-regional-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 24] },
+      { "weight_kg": 1, "prices_by_zone": [7, 16, 30] },
+      { "weight_kg": 2, "prices_by_zone": [9, 22, 42] },
+      { "weight_kg": 5, "prices_by_zone": [15, 38, 70] },
+      { "weight_kg": 10, "prices_by_zone": [25, 65, 120] },
+      { "weight_kg": 20, "prices_by_zone": [42, 115, 215] },
+      { "weight_kg": 30, "prices_by_zone": [58, 162, 305] }
+    ]
+  }
+}

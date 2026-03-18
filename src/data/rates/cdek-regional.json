@@ -1,0 +1,45 @@
+{
+  "carrier_id": "cdek-regional",
+  "effective_date": "2025-01-01",
+  "note": "CDEK regional rates for Russia, CIS and neighboring countries.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Russia Domestic",
+      "countries_from": ["RU"],
+      "countries_to": ["RU"]
+    },
+    {
+      "zone": 2,
+      "description": "CIS Countries",
+      "countries_from": ["RU", "KZ", "BY"],
+      "countries_to": ["RU", "KZ", "BY", "UA", "AM", "GE", "KG", "UZ"]
+    },
+    {
+      "zone": 3,
+      "description": "International",
+      "countries_from": ["RU"],
+      "countries_to": ["CN", "TR", "AE", "DE", "FI", "EE"]
+    }
+  ],
+  "rates": {
+    "cdek-regional-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 25] },
+      { "weight_kg": 1, "prices_by_zone": [7, 16, 32] },
+      { "weight_kg": 2, "prices_by_zone": [9, 22, 42] },
+      { "weight_kg": 5, "prices_by_zone": [14, 35, 68] },
+      { "weight_kg": 10, "prices_by_zone": [22, 58, 115] },
+      { "weight_kg": 20, "prices_by_zone": [38, 102, 205] },
+      { "weight_kg": 30, "prices_by_zone": [52, 145, 292] }
+    ],
+    "cdek-regional-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18] },
+      { "weight_kg": 1, "prices_by_zone": [4, 11, 24] },
+      { "weight_kg": 2, "prices_by_zone": [6, 15, 32] },
+      { "weight_kg": 5, "prices_by_zone": [9, 25, 52] },
+      { "weight_kg": 10, "prices_by_zone": [15, 42, 88] },
+      { "weight_kg": 20, "prices_by_zone": [26, 75, 158] },
+      { "weight_kg": 30, "prices_by_zone": [36, 105, 225] }
+    ]
+  }
+}

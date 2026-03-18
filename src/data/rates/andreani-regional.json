@@ -1,0 +1,45 @@
+{
+  "carrier_id": "andreani-regional",
+  "effective_date": "2025-01-01",
+  "note": "Andreani regional rates. Argentina's leading logistics provider.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Argentina Domestic",
+      "countries_from": ["AR"],
+      "countries_to": ["AR"]
+    },
+    {
+      "zone": 2,
+      "description": "Southern Cone",
+      "countries_from": ["AR"],
+      "countries_to": ["CL", "UY", "PY", "BR", "BO"]
+    },
+    {
+      "zone": 3,
+      "description": "Americas International",
+      "countries_from": ["AR"],
+      "countries_to": ["US", "MX", "CO", "PE", "EC"]
+    }
+  ],
+  "rates": {
+    "andreani-regional-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 18, 35] },
+      { "weight_kg": 1, "prices_by_zone": [7, 24, 42] },
+      { "weight_kg": 2, "prices_by_zone": [9, 32, 58] },
+      { "weight_kg": 5, "prices_by_zone": [15, 52, 95] },
+      { "weight_kg": 10, "prices_by_zone": [25, 88, 162] },
+      { "weight_kg": 20, "prices_by_zone": [42, 155, 288] },
+      { "weight_kg": 30, "prices_by_zone": [58, 220, 412] }
+    ],
+    "andreani-regional-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 12, 25] },
+      { "weight_kg": 1, "prices_by_zone": [4, 16, 32] },
+      { "weight_kg": 2, "prices_by_zone": [6, 22, 42] },
+      { "weight_kg": 5, "prices_by_zone": [10, 38, 72] },
+      { "weight_kg": 10, "prices_by_zone": [17, 65, 122] },
+      { "weight_kg": 20, "prices_by_zone": [29, 115, 218] },
+      { "weight_kg": 30, "prices_by_zone": [40, 162, 312] }
+    ]
+  }
+}

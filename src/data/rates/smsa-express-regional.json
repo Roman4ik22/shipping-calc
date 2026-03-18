@@ -1,0 +1,45 @@
+{
+  "carrier_id": "smsa-express-regional",
+  "effective_date": "2025-01-01",
+  "note": "SMSA Express regional rates. Saudi Arabia's leading express delivery company covering GCC.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Saudi Arabia Domestic",
+      "countries_from": ["SA"],
+      "countries_to": ["SA"]
+    },
+    {
+      "zone": 2,
+      "description": "GCC Countries",
+      "countries_from": ["SA", "AE"],
+      "countries_to": ["SA", "AE", "KW", "BH", "QA", "OM"]
+    },
+    {
+      "zone": 3,
+      "description": "Middle East & North Africa",
+      "countries_from": ["SA", "AE"],
+      "countries_to": ["EG", "JO", "LB", "IQ", "MA", "TN"]
+    }
+  ],
+  "rates": {
+    "smsa-express-regional-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22] },
+      { "weight_kg": 1, "prices_by_zone": [7, 16, 28] },
+      { "weight_kg": 2, "prices_by_zone": [10, 22, 38] },
+      { "weight_kg": 5, "prices_by_zone": [18, 38, 62] },
+      { "weight_kg": 10, "prices_by_zone": [30, 62, 108] },
+      { "weight_kg": 20, "prices_by_zone": [52, 110, 192] },
+      { "weight_kg": 30, "prices_by_zone": [72, 155, 275] }
+    ],
+    "smsa-express-regional-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 16] },
+      { "weight_kg": 1, "prices_by_zone": [4, 11, 22] },
+      { "weight_kg": 2, "prices_by_zone": [6, 16, 30] },
+      { "weight_kg": 5, "prices_by_zone": [12, 28, 48] },
+      { "weight_kg": 10, "prices_by_zone": [20, 48, 82] },
+      { "weight_kg": 20, "prices_by_zone": [35, 85, 148] },
+      { "weight_kg": 30, "prices_by_zone": [48, 120, 212] }
+    ]
+  }
+}

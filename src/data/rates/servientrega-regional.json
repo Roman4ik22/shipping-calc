@@ -1,0 +1,45 @@
+{
+  "carrier_id": "servientrega-regional",
+  "effective_date": "2025-01-01",
+  "note": "Servientrega regional rates. Leading courier in Colombia with Andean region coverage.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Colombia Domestic",
+      "countries_from": ["CO"],
+      "countries_to": ["CO"]
+    },
+    {
+      "zone": 2,
+      "description": "Andean Region",
+      "countries_from": ["CO"],
+      "countries_to": ["EC", "PE", "VE", "PA"]
+    },
+    {
+      "zone": 3,
+      "description": "Americas International",
+      "countries_from": ["CO"],
+      "countries_to": ["US", "MX", "BR", "CL", "AR"]
+    }
+  ],
+  "rates": {
+    "servientrega-regional-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [4, 15, 30] },
+      { "weight_kg": 1, "prices_by_zone": [6, 20, 38] },
+      { "weight_kg": 2, "prices_by_zone": [8, 28, 52] },
+      { "weight_kg": 5, "prices_by_zone": [14, 45, 85] },
+      { "weight_kg": 10, "prices_by_zone": [22, 75, 145] },
+      { "weight_kg": 20, "prices_by_zone": [38, 132, 258] },
+      { "weight_kg": 30, "prices_by_zone": [52, 188, 368] }
+    ],
+    "servientrega-regional-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 10, 22] },
+      { "weight_kg": 1, "prices_by_zone": [4, 14, 28] },
+      { "weight_kg": 2, "prices_by_zone": [5, 20, 38] },
+      { "weight_kg": 5, "prices_by_zone": [9, 32, 65] },
+      { "weight_kg": 10, "prices_by_zone": [15, 55, 110] },
+      { "weight_kg": 20, "prices_by_zone": [26, 98, 198] },
+      { "weight_kg": 30, "prices_by_zone": [36, 138, 282] }
+    ]
+  }
+}
