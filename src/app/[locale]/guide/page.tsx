@@ -116,7 +116,7 @@ export default async function GuidesPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",

@@ -102,7 +102,7 @@ export default async function AboutPage({
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-white mb-3">{t(loc, "about_contact")}</h2>
           <p className="text-gray-300 leading-relaxed">
-            {t(loc, "about_contact_text")} <span className="font-medium">info@shipworldwide.com</span>
+            {t(loc, "about_contact_text")} <span className="font-medium">info@rateships.com</span>
           </p>
         </section>
       </div>
@@ -118,8 +118,8 @@ export default async function AboutPage({
             description: t(loc, "about_json_desc"),
             mainEntity: {
               "@type": "Organization",
-              name: "ShipWorldwide",
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com",
+              name: "RateShips",
+              url: process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com",
             },
           }),
         }}
@@ -135,7 +135,7 @@ export default async function AboutPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",

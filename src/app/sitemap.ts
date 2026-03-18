@@ -3,7 +3,7 @@ import { countries, carriers, makeCorridorSlug } from "@/lib/data";
 import { locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
 const URLS_PER_SITEMAP = 5000;
 
 // Pre-compute all corridor pairs for both locales

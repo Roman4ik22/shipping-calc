@@ -25,7 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const loc = locale as Locale;
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
   return {
     title: {
       default: `${t(loc, "site_name")} — ${t(loc, "compare_rates")}`,
@@ -80,15 +80,15 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "ShipWorldwide",
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com",
+              name: "RateShips",
+              url: process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com",
               description: t(loc, "site_description"),
               inLanguage: locale,
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/shipping/{search_term}`,
+                  urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/shipping/{search_term}`,
                 },
                 "query-input": "required name=search_term",
               },

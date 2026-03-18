@@ -1,0 +1,45 @@
+{
+  "carrier_id": "kazpost",
+  "effective_date": "2025-01-01",
+  "note": "KazPost rates. National postal operator of Kazakhstan with domestic and international mail/parcel services.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Kazakhstan Domestic",
+      "countries_from": ["KZ"],
+      "countries_to": ["KZ"]
+    },
+    {
+      "zone": 2,
+      "description": "CIS Countries",
+      "countries_from": ["KZ"],
+      "countries_to": ["RU", "UZ", "KG", "TJ", "TM", "BY", "UA", "AM", "GE", "AZ"]
+    },
+    {
+      "zone": 3,
+      "description": "International",
+      "countries_from": ["KZ"],
+      "countries_to": ["CN", "TR", "DE", "US", "GB", "KR", "JP", "AE", "IN", "FR", "IT"]
+    }
+  ],
+  "rates": {
+    "kazpost-ems": [
+      { "weight_kg": 0.5, "prices_by_zone": [4, 15, 28] },
+      { "weight_kg": 1, "prices_by_zone": [6, 20, 38] },
+      { "weight_kg": 2, "prices_by_zone": [9, 28, 52] },
+      { "weight_kg": 5, "prices_by_zone": [16, 48, 88] },
+      { "weight_kg": 10, "prices_by_zone": [28, 80, 148] },
+      { "weight_kg": 20, "prices_by_zone": [48, 140, 262] },
+      { "weight_kg": 30, "prices_by_zone": [68, 200, 375] }
+    ],
+    "kazpost-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 8, 18] },
+      { "weight_kg": 1, "prices_by_zone": [3, 12, 25] },
+      { "weight_kg": 2, "prices_by_zone": [5, 18, 35] },
+      { "weight_kg": 5, "prices_by_zone": [10, 32, 60] },
+      { "weight_kg": 10, "prices_by_zone": [18, 55, 102] },
+      { "weight_kg": 20, "prices_by_zone": [32, 98, 182] },
+      { "weight_kg": 30, "prices_by_zone": [46, 140, 262] }
+    ]
+  }
+}

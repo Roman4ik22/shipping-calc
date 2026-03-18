@@ -238,13 +238,13 @@ export default async function CarrierPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: t(loc, "carriers_page"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/carriers`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/carriers`,
               },
               {
                 "@type": "ListItem",

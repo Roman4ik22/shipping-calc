@@ -1,0 +1,45 @@
+{
+  "carrier_id": "toll",
+  "effective_date": "2025-01-01",
+  "note": "Toll Group rates. Australia's leading logistics provider with strong presence in Asia-Pacific.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Australia & New Zealand",
+      "countries_from": ["AU", "NZ"],
+      "countries_to": ["AU", "NZ"]
+    },
+    {
+      "zone": 2,
+      "description": "Asia-Pacific",
+      "countries_from": ["AU", "NZ"],
+      "countries_to": ["SG", "MY", "TH", "ID", "PH", "VN", "CN", "JP", "KR", "HK", "TW", "IN"]
+    },
+    {
+      "zone": 3,
+      "description": "International",
+      "countries_from": ["AU"],
+      "countries_to": ["US", "GB", "DE", "FR", "CA", "AE", "SA", "IT", "NL", "BR"]
+    }
+  ],
+  "rates": {
+    "toll-priority": [
+      { "weight_kg": 0.5, "prices_by_zone": [8, 22, 38] },
+      { "weight_kg": 1, "prices_by_zone": [12, 30, 52] },
+      { "weight_kg": 2, "prices_by_zone": [18, 42, 72] },
+      { "weight_kg": 5, "prices_by_zone": [30, 70, 120] },
+      { "weight_kg": 10, "prices_by_zone": [50, 115, 200] },
+      { "weight_kg": 20, "prices_by_zone": [85, 200, 355] },
+      { "weight_kg": 30, "prices_by_zone": [120, 285, 510] }
+    ],
+    "toll-ipec": [
+      { "weight_kg": 0.5, "prices_by_zone": [6, 18, 30] },
+      { "weight_kg": 1, "prices_by_zone": [9, 24, 42] },
+      { "weight_kg": 2, "prices_by_zone": [13, 34, 58] },
+      { "weight_kg": 5, "prices_by_zone": [22, 56, 96] },
+      { "weight_kg": 10, "prices_by_zone": [38, 92, 160] },
+      { "weight_kg": 20, "prices_by_zone": [65, 160, 285] },
+      { "weight_kg": 30, "prices_by_zone": [92, 228, 408] }
+    ]
+  }
+}

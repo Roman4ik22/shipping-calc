@@ -437,7 +437,7 @@ export default async function GuidePage({
             "@type": "Article",
             headline: t(loc, "guide_title", { country: name }),
             description: t(loc, "guide_meta_description", { country: name }),
-            author: { "@type": "Organization", name: "ShipWorldwide" },
+            author: { "@type": "Organization", name: "RateShips" },
           }),
         }}
       />
@@ -452,13 +452,13 @@ export default async function GuidePage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: t(loc, "guides"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://shipworldwide.com"}/${locale}/guide`,
+                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/guide`,
               },
               {
                 "@type": "ListItem",

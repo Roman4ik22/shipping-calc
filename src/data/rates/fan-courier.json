@@ -1,0 +1,45 @@
+{
+  "carrier_id": "fan-courier",
+  "effective_date": "2025-01-01",
+  "note": "Fan Courier rates. Romania's largest private courier company with EU delivery network.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Romania Domestic",
+      "countries_from": ["RO"],
+      "countries_to": ["RO"]
+    },
+    {
+      "zone": 2,
+      "description": "EU Neighboring",
+      "countries_from": ["RO"],
+      "countries_to": ["BG", "HU", "MD", "RS", "UA", "PL", "CZ", "SK", "AT", "DE"]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of EU & International",
+      "countries_from": ["RO"],
+      "countries_to": ["FR", "IT", "ES", "NL", "BE", "GB", "SE", "DK", "FI", "PT", "GR", "IE", "HR"]
+    }
+  ],
+  "rates": {
+    "fan-courier-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 12, 18] },
+      { "weight_kg": 1, "prices_by_zone": [4, 16, 25] },
+      { "weight_kg": 2, "prices_by_zone": [6, 22, 35] },
+      { "weight_kg": 5, "prices_by_zone": [10, 38, 58] },
+      { "weight_kg": 10, "prices_by_zone": [16, 62, 98] },
+      { "weight_kg": 20, "prices_by_zone": [28, 108, 172] },
+      { "weight_kg": 30, "prices_by_zone": [40, 155, 248] }
+    ],
+    "fan-courier-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2, 9, 14] },
+      { "weight_kg": 1, "prices_by_zone": [3, 12, 20] },
+      { "weight_kg": 2, "prices_by_zone": [4, 17, 28] },
+      { "weight_kg": 5, "prices_by_zone": [7, 30, 46] },
+      { "weight_kg": 10, "prices_by_zone": [12, 50, 78] },
+      { "weight_kg": 20, "prices_by_zone": [20, 88, 138] },
+      { "weight_kg": 30, "prices_by_zone": [29, 125, 198] }
+    ]
+  }
+}

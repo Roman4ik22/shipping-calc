@@ -1,0 +1,45 @@
+{
+  "carrier_id": "blue-dart",
+  "effective_date": "2025-01-01",
+  "note": "Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership.",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "India Domestic",
+      "countries_from": ["IN"],
+      "countries_to": ["IN"]
+    },
+    {
+      "zone": 2,
+      "description": "South Asia & Middle East",
+      "countries_from": ["IN"],
+      "countries_to": ["LK", "NP", "BD", "PK", "AE", "SA", "QA", "KW", "BH", "OM", "SG", "MY", "TH"]
+    },
+    {
+      "zone": 3,
+      "description": "Worldwide",
+      "countries_from": ["IN"],
+      "countries_to": ["US", "GB", "DE", "FR", "AU", "CA", "JP", "CN", "KR", "IT", "NL", "ES", "BR", "ZA", "RU", "SE", "NO"]
+    }
+  ],
+  "rates": {
+    "blue-dart-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 18, 35] },
+      { "weight_kg": 1, "prices_by_zone": [7, 25, 48] },
+      { "weight_kg": 2, "prices_by_zone": [10, 35, 65] },
+      { "weight_kg": 5, "prices_by_zone": [18, 58, 110] },
+      { "weight_kg": 10, "prices_by_zone": [30, 95, 185] },
+      { "weight_kg": 20, "prices_by_zone": [52, 165, 330] },
+      { "weight_kg": 30, "prices_by_zone": [75, 235, 475] }
+    ],
+    "blue-dart-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 14, 28] },
+      { "weight_kg": 1, "prices_by_zone": [5, 19, 38] },
+      { "weight_kg": 2, "prices_by_zone": [7, 27, 52] },
+      { "weight_kg": 5, "prices_by_zone": [13, 45, 88] },
+      { "weight_kg": 10, "prices_by_zone": [22, 75, 148] },
+      { "weight_kg": 20, "prices_by_zone": [38, 130, 265] },
+      { "weight_kg": 30, "prices_by_zone": [55, 185, 380] }
+    ]
+  }
+}
