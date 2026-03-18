@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import type { Locale } from "@/lib/types";
 
 interface Rate {
@@ -159,6 +159,100 @@ function findClosestWeight(weight: number, availableWeights: number[]): number {
     if (w >= weight) return w;
   }
   return sorted[sorted.length - 1];
+}
+
+function CurrencySelector({
+  currency,
+  setCurrency,
+  exchangeRates,
+  labels,
+  currencyAutoDetected,
+}: {
+  currency: string;
+  setCurrency: (c: string) => void;
+  exchangeRates: Record<string, { rate: number; symbol: string; name: string }>;
+  labels: { currency: string; auto_detected: string };
+  currencyAutoDetected: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+        setSearch("");
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
+  const filtered = Object.entries(exchangeRates).filter(([code, info]) => {
+    if (!search) return true;
+    const q = search.toLowerCase();
+    return code.toLowerCase().includes(q) || info.name.toLowerCase().includes(q) || info.symbol.includes(q);
+  });
+
+  const current = exchangeRates[currency];
+
+  return (
+    <div className="flex items-center gap-2 mb-4">
+      <span className="text-sm text-gray-400">{labels.currency}:</span>
+      <div className="relative" ref={ref}>
+        <button
+          onClick={() => setOpen(!open)}
+          className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/20 bg-dark-700 text-gray-200 hover:bg-dark-600 hover:border-white/30 transition-colors text-sm"
+        >
+          <span className="font-medium">{current?.symbol}</span>
+          <span>{currency}</span>
+          <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {open && (
+          <div className="absolute left-0 mt-1 w-64 bg-dark-700 border border-white/20 rounded-lg shadow-xl z-50 overflow-hidden">
+            <div className="p-2 border-b border-white/10">
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search currency..."
+                className="w-full px-3 py-1.5 text-sm bg-dark-600 border border-white/10 rounded text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50"
+                autoFocus
+              />
+            </div>
+            <div className="max-h-60 overflow-y-auto">
+              {filtered.map(([code, info]) => (
+                <button
+                  key={code}
+                  onClick={() => { setCurrency(code); setOpen(false); setSearch(""); }}
+                  className={`w-full px-3 py-2 text-left text-sm flex items-center justify-between transition-colors ${
+                    code === currency ? "bg-accent/20 text-accent-light" : "text-gray-300 hover:bg-dark-600"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <span className="font-medium w-6">{info.symbol}</span>
+                    <span>{code}</span>
+                  </span>
+                  <span className="text-xs text-gray-500">{info.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+      {currency !== "USD" && (
+        <span className="text-xs text-gray-500">
+          1 USD = {current?.rate} {currency}
+          {currencyAutoDetected && <span className="ml-1">— {labels.auto_detected}</span>}
+        </span>
+      )}
+    </div>
+  );
 }
 
 export default function RateTable({
@@ -432,32 +526,13 @@ export default function RateTable({
       </div>
 
       {/* Currency selector */}
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-sm text-gray-400">{labels.currency}:</span>
-        <select
-          value={currency}
-          onChange={(e) => setCurrency(e.target.value)}
-          aria-label={labels.currency}
-          className="px-3 py-1.5 rounded border border-white/20 text-sm bg-dark-700 text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent"
-        >
-          {Object.entries(EXCHANGE_RATES).map(([code, info]) => (
-            <option key={code} value={code}>
-              {info.symbol} {code}
-            </option>
-          ))}
-        </select>
-        {currency !== "USD" && (
-          <span className="text-xs text-gray-500">
-            (1 USD = {EXCHANGE_RATES[currency].rate} {currency})
-            {currencyAutoDetected && (
-              <span className="ml-1">
-                — {labels.auto_detected}
-              </span>
-            )}
-          </span>
-        )}
-      </div>
-
+      <CurrencySelector
+        currency={currency}
+        setCurrency={setCurrency}
+        exchangeRates={EXCHANGE_RATES}
+        labels={labels}
+        currencyAutoDetected={currencyAutoDetected}
+      />
       {/* Sort & filter controls */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
         <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
