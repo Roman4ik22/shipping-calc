@@ -8,7 +8,7 @@ export default function MobileMenu({
   labels,
 }: {
   locale: string;
-  labels: { home: string; carriers: string; guides: string; about?: string };
+  labels: { home: string; carriers: string; guides: string; about?: string; blog?: string };
 }) {
   const [open, setOpen] = useState(false);
 
@@ -72,6 +72,13 @@ export default function MobileMenu({
               onClick={() => setOpen(false)}
             >
               {labels.about || "About"}
+            </Link>
+            <Link
+              href={`/${locale}/blog`}
+              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              {labels.blog || "Blog"}
             </Link>
           </nav>
         </div>

@@ -135,6 +135,12 @@ export default async function LocaleLayout({
                   >
                     {t(loc, "about")}
                   </Link>
+                  <Link
+                    href={`/${locale}/blog`}
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    {t(loc, "blog")}
+                  </Link>
                 </nav>
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
@@ -144,6 +150,7 @@ export default async function LocaleLayout({
                     carriers: t(loc, "carriers_page"),
                     guides: t(loc, "guides"),
                     about: t(loc, "about"),
+                    blog: t(loc, "blog"),
                   }}
                 />
               </div>
@@ -168,6 +175,7 @@ export default async function LocaleLayout({
                   <Link href={`/${locale}/carriers`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "carriers_page")}</Link>
                   <Link href={`/${locale}/guide`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "guides")}</Link>
                   <Link href={`/${locale}/about`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "about")}</Link>
+                  <Link href={`/${locale}/blog`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "blog")}</Link>
                 </div>
               </div>
               <div>

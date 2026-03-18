@@ -262,6 +262,11 @@ const dictionaries: Record<string, Record<string, string>> = {
     newsletter_thanks: "Thanks for subscribing!",
     newsletter_placeholder: "Your email",
     newsletter_subscribe: "Subscribe",
+    blog: "Blog",
+    blog_title: "Shipping Blog",
+    blog_description: "Tips and guides for international shipping",
+    read_more: "Read more",
+    related_posts: "Related articles",
   },
   ru: {
     site_name: "RateShips",
@@ -484,6 +489,11 @@ const dictionaries: Record<string, Record<string, string>> = {
     newsletter_thanks: "Спасибо за подписку!",
     newsletter_placeholder: "Ваш email",
     newsletter_subscribe: "Подписаться",
+    blog: "Блог",
+    blog_title: "Блог о доставке",
+    blog_description: "Советы и руководства по международной доставке",
+    read_more: "Читать далее",
+    related_posts: "Похожие статьи",
   },
   es: {
     site_name: "RateShips",
