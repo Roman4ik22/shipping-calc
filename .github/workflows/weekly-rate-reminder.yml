@@ -1,0 +1,25 @@
+name: Weekly Rate Update Reminder
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9:00 UTC
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create reminder issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Weekly rate update — ${date}`,
+              body: `## Weekly Rate Update Checklist\n\n- [ ] Check DHL Express rates\n- [ ] Check FedEx rates\n- [ ] Check UPS rates\n- [ ] Check EMS/postal rates\n- [ ] Check regional carriers (CDEK, J&T, etc.)\n- [ ] Verify customs thresholds for key countries\n- [ ] Run build and deploy\n\n> Open Claude Code and say: **"обнови тарифы"**`,
+              labels: ['maintenance', 'rates']
+            });
