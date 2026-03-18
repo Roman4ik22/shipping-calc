@@ -17,14 +17,14 @@ import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 
-// Generate all corridor pages at build time
-// For ISR mode, this can be limited to popular corridors
+// Pre-generate popular corridors; rest generated on-demand via ISR
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   const params: { locale: string; corridor: string }[] = [];
 
   const popularCodes = [
-    "US", "GB", "DE", "FR", "CN", "JP", "KR", "AU", "CA", "RU",
-    "IN", "AE", "SG", "TH", "MY", "BR", "IT", "ES", "NL", "TR",
+    "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
   ];
 
   for (const locale of locales) {
