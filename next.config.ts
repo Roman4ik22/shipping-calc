@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   compress: true,
+  rewrites: async () => [
+    { source: "/sitemap.xml", destination: "/api/sitemap" },
+  ],
   poweredByHeader: false,
   reactStrictMode: true,
   headers: async () => [
