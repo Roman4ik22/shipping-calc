@@ -27,6 +27,8 @@ interface CorridorRateData {
   review?: CarrierReviewData | null;
   route_score?: number;
   route_score_label?: string;
+  carrier_website?: string;
+  tracking_url?: string;
 }
 
 // Approximate exchange rates from USD (updated periodically)
@@ -204,6 +206,8 @@ export default function RateTable({
     close: string;
     no_filter_results: string;
     route_reliability?: string;
+    ship_now?: string;
+    track_package?: string;
   };
 }) {
   const weightPresets = [0.5, 1, 2, 5, 10, 20, 30, 50, 70];
@@ -682,6 +686,28 @@ export default function RateTable({
                     )}
                   </div>
                 </div>
+              </div>
+              <div className="flex items-center gap-3 mt-3 ml-6 flex-wrap">
+                {rate.carrier_website && (
+                  <a
+                    href={rate.carrier_website}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="px-4 py-1.5 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-dark transition-colors"
+                  >
+                    {labels.ship_now || "Ship Now →"}
+                  </a>
+                )}
+                {rate.tracking && rate.tracking_url && (
+                  <a
+                    href={rate.tracking_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 border border-white/20 text-gray-300 text-sm rounded-lg hover:border-accent/50 hover:text-white transition-colors"
+                  >
+                    {labels.track_package || "Track Package"}
+                  </a>
+                )}
               </div>
               <div className="sm:hidden mt-2 text-xs text-gray-500 ml-6">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}

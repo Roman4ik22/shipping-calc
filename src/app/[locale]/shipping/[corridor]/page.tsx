@@ -14,6 +14,7 @@ import { getRouteScore, getScoreLabel } from "@/lib/route-scoring";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
+import DutyCalculator from "@/components/DutyCalculator";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
@@ -225,6 +226,8 @@ export default async function CorridorPage({
               review: review ? review.trustpilot : null,
               route_score: routeScore,
               route_score_label: getScoreLabel(routeScore, locale),
+              carrier_website: cr.carrier.website,
+              tracking_url: cr.carrier.tracking_url,
             };
           }) ?? []
         }
@@ -267,8 +270,30 @@ export default async function CorridorPage({
           close: t(loc, "close"),
           no_filter_results: t(loc, "no_filter_results"),
           route_reliability: t(loc, "route_reliability"),
+          ship_now: t(loc, "ship_now"),
+          track_package: t(loc, "track_package"),
         }}
       />
+
+      {/* Duty Calculator */}
+      <div className="mt-8">
+        <DutyCalculator
+          destCode={destination.code}
+          locale={loc}
+          labels={{
+            title: t(loc, "duty_calc_title"),
+            item_value: t(loc, "duty_calc_value"),
+            calculate: t(loc, "duty_calc_calculate"),
+            duty: t(loc, "duty_calc_duty"),
+            vat: t(loc, "duty_calc_vat"),
+            total_import_cost: t(loc, "duty_calc_total"),
+            de_minimis_note: t(loc, "duty_calc_below"),
+            below_threshold: t(loc, "duty_calc_below"),
+            currency_label: t(loc, "currency"),
+            result_title: t(loc, "duty_calc_result"),
+          }}
+        />
+      </div>
 
       {/* SEO summary text */}
       {corridorData && corridorData.carriers.length > 0 && (() => {
