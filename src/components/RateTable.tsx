@@ -25,6 +25,8 @@ interface CorridorRateData {
   estimated_days_max: number;
   tracking: boolean;
   review?: CarrierReviewData | null;
+  route_score?: number;
+  route_score_label?: string;
 }
 
 // Approximate exchange rates from USD (updated periodically)
@@ -201,6 +203,7 @@ export default function RateTable({
     comparison: string;
     close: string;
     no_filter_results: string;
+    route_reliability?: string;
   };
 }) {
   const weightPresets = [0.5, 1, 2, 5, 10, 20, 30, 50, 70];
@@ -208,7 +211,7 @@ export default function RateTable({
   const [customWeight, setCustomWeight] = useState("");
   const [dimensions, setDimensions] = useState({ l: "", w: "", h: "" });
   const [showDimensions, setShowDimensions] = useState(false);
-  const [sortBy, setSortBy] = useState<"price" | "speed">("price");
+  const [sortBy, setSortBy] = useState<"price" | "speed" | "reliability">("price");
   const [filterType, setFilterType] = useState<"all" | "international" | "regional" | "postal">("all");
   const [compareIds, setCompareIds] = useState<Set<string>>(new Set());
   const [showCompare, setShowCompare] = useState(false);
@@ -273,6 +276,9 @@ export default function RateTable({
     .sort((a, b) => {
       if (sortBy === "speed") {
         return a.estimated_days_min - b.estimated_days_min || (a.price ?? 999) - (b.price ?? 999);
+      }
+      if (sortBy === "reliability") {
+        return (b.route_score ?? 0) - (a.route_score ?? 0) || (a.price ?? 999) - (b.price ?? 999);
       }
       return (a.price ?? 999) - (b.price ?? 999);
     });
@@ -472,6 +478,15 @@ export default function RateTable({
           >
             {labels.delivery_time}
           </button>
+          <button
+            onClick={() => setSortBy("reliability")}
+            aria-pressed={sortBy === "reliability"}
+            className={`px-3 py-1.5 rounded text-sm transition-colors ${
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
+            }`}
+          >
+            {labels.route_reliability || "Route ★"}
+          </button>
         </div>
         <div className="h-4 w-px bg-white/10 hidden sm:block" />
         <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
@@ -585,6 +600,19 @@ export default function RateTable({
                     {isFastest && (
                       <span className="px-2 py-0.5 bg-accent/20 text-accent-light text-xs font-medium rounded-full">
                         {labels.fastest}
+                      </span>
+                    )}
+                    {rate.route_score && (
+                      <span
+                        className={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                          rate.route_score >= 4.0 ? "bg-green-500/20 text-green-400" :
+                          rate.route_score >= 3.0 ? "bg-yellow-500/20 text-yellow-400" :
+                          rate.route_score >= 2.0 ? "bg-orange-500/20 text-orange-400" :
+                          "bg-red-500/20 text-red-400"
+                        }`}
+                        title={rate.route_score_label}
+                      >
+                        {rate.route_score.toFixed(1)} ★
                       </span>
                     )}
                     <span

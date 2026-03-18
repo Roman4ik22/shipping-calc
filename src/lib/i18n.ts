@@ -146,6 +146,7 @@ const dictionaries: Record<string, Record<string, string>> = {
     currency: "Currency",
     auto_detected: "auto-detected",
     no_filter_results: "No results for selected filter",
+    route_reliability: "Route ★",
     information: "Information",
     all_rights: "All rights reserved.",
     // Duty table

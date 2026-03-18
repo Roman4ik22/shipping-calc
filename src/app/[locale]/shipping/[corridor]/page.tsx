@@ -10,6 +10,7 @@ import {
 } from "@/lib/data";
 import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
 import { getCarrierReview } from "@/lib/reviews";
+import { getRouteScore, getScoreLabel } from "@/lib/route-scoring";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
@@ -210,6 +211,7 @@ export default async function CorridorPage({
         corridorRates={
           corridorData?.carriers.map((cr) => {
             const review = getCarrierReview(cr.carrier.id);
+            const routeScore = getRouteScore(cr.carrier.id, origin.code, destination.code);
             return {
               carrier_name: cr.carrier.name,
               carrier_logo: cr.carrier.logo,
@@ -221,6 +223,8 @@ export default async function CorridorPage({
               estimated_days_max: cr.estimated_days_max,
               tracking: cr.service.tracking,
               review: review ? review.trustpilot : null,
+              route_score: routeScore,
+              route_score_label: getScoreLabel(routeScore, locale),
             };
           }) ?? []
         }
@@ -262,6 +266,7 @@ export default async function CorridorPage({
           comparison: t(loc, "comparison"),
           close: t(loc, "close"),
           no_filter_results: t(loc, "no_filter_results"),
+          route_reliability: t(loc, "route_reliability"),
         }}
       />
 
