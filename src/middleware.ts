@@ -38,11 +38,17 @@ function getPreferredLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip static files, api routes, and Next.js internals
+  // Skip static files, api routes, sitemaps, and Next.js internals
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.includes(".") // static files like .xml, .ico, .svg
+    pathname.startsWith("/sitemap") ||
+    pathname === "/robots.txt" ||
+    pathname === "/ads.txt" ||
+    pathname === "/sw.js" ||
+    pathname === "/favicon.svg" ||
+    pathname === "/manifest.json" ||
+    pathname.includes(".")
   ) {
     return NextResponse.next();
   }
@@ -63,5 +69,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  matcher: ["/((?!_next|api|sitemap|robots\\.txt|ads\\.txt|sw\\.js|favicon\\.svg|manifest\\.json|.*\\..*).*)"],
 };
