@@ -274,12 +274,12 @@ export default async function HomePage({
       </section>
 
       {/* Newsletter CTA */}
-      <section className="bg-gradient-to-r from-accent-dark to-accent py-12">
+      <section className="bg-surface-light border-y border-white/10 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
             {t(loc, "newsletter_title")}
           </h2>
-          <p className="text-white/80 mb-6 text-sm">
+          <p className="text-gray-400 mb-6 text-sm">
             {t(loc, "newsletter_subtitle")}
           </p>
           <NewsletterForm
@@ -290,7 +290,7 @@ export default async function HomePage({
               subscribe: t(loc, "newsletter_subscribe"),
             }}
           />
-          <p className="text-xs text-white/60 mt-3">
+          <p className="text-xs text-gray-500 mt-3">
             {t(loc, "newsletter_privacy")}
           </p>
         </div>
