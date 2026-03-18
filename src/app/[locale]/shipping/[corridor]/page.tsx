@@ -15,6 +15,10 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import RateTable from "@/components/RateTable";
 import DutyCalculator from "@/components/DutyCalculator";
+import ShareRoute from "@/components/ShareRoute";
+import SaveRoute from "@/components/SaveRoute";
+import InsuranceComparison from "@/components/InsuranceComparison";
+import PriceHistory from "@/components/PriceHistory";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
@@ -184,6 +188,12 @@ export default async function CorridorPage({
         <span className="inline-block ml-2">{countryFlag(destination.code)}</span>
       </h1>
 
+      {/* Share & Save */}
+      <div className="flex items-center gap-3 mb-4">
+        <ShareRoute originName={originName} destName={destName} locale={locale} />
+        <SaveRoute corridorSlug={corridor} originName={originName} destName={destName} locale={locale} />
+      </div>
+
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="flex flex-wrap gap-4 mb-8 text-sm text-gray-300">
@@ -294,6 +304,45 @@ export default async function CorridorPage({
           }}
         />
       </div>
+
+      {/* Insurance Comparison */}
+      <div className="mt-8">
+        <InsuranceComparison
+          labels={{
+            title: locale === "ru" ? "Сравнение страхования посылок" : "Shipping Insurance Comparison",
+            item_value: locale === "ru" ? "Стоимость товара" : "Item value",
+            calculate: t(loc, "duty_calc_calculate"),
+            carrier: t(loc, "carrier"),
+            included: locale === "ru" ? "Включено" : "Included",
+            premium: locale === "ru" ? "Премия" : "Premium",
+            payout: locale === "ru" ? "Выплата" : "Payout",
+            yes: t(loc, "yes"),
+            no: t(loc, "no"),
+            note: locale === "ru" ? "Примечание" : "Note",
+          }}
+        />
+      </div>
+
+      {/* Price History */}
+      {corridorData && corridorData.carriers.length > 0 && (
+        <div className="mt-8">
+          <PriceHistory
+            carriers={corridorData.carriers.map((cr) => ({
+              name: cr.carrier.name,
+              service: cr.service.name,
+              price: cr.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0,
+            }))}
+            labels={{
+              title: locale === "ru" ? "Изменение цен за 30 дней" : "Price Changes (30 days)",
+              carrier: t(loc, "carrier"),
+              current: locale === "ru" ? "Сейчас" : "Current",
+              previous: locale === "ru" ? "Было" : "Previous",
+              change: locale === "ru" ? "Изменение" : "Change",
+              no_changes: locale === "ru" ? "Нет данных об изменениях" : "No price change data available",
+            }}
+          />
+        </div>
+      )}
 
       {/* SEO summary text */}
       {corridorData && corridorData.carriers.length > 0 && (() => {
