@@ -22,10 +22,9 @@ import LocaleSuggestion from "@/components/LocaleSuggestion";
 export function generateStaticParams() {
   const params: { locale: string; corridor: string }[] = [];
 
-  // For build performance, only pre-generate popular corridors
-  // Other pages will be generated on-demand with ISR
   const popularCodes = [
-    "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
+    "US", "GB", "DE", "FR", "CN", "JP", "KR", "AU", "CA", "RU",
+    "IN", "AE", "SG", "TH", "MY", "BR", "IT", "ES", "NL", "TR",
   ];
 
   for (const locale of locales) {
