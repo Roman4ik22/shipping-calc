@@ -49,7 +49,7 @@ export default async function HomePage({
   return (
     <div>
       {/* Hero section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <div className="absolute inset-0 bg-gradient-to-br from-accent-dark/30 via-dark-900 to-dark-800" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-accent)/15%,transparent_70%)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -77,7 +77,7 @@ export default async function HomePage({
           </div>
 
           {/* Shipping form */}
-          <div className="max-w-4xl mx-auto bg-surface-light/80 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+          <div className="max-w-4xl mx-auto bg-surface-light/80 backdrop-blur-sm border border-white/10 rounded-xl p-6 pb-20 overflow-visible relative">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
