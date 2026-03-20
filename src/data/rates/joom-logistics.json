@@ -1,0 +1,37 @@
+{
+  "carrier_id": "joom-logistics",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "CIS",
+      "countries_from": ["CN"],
+      "countries_to": ["RU", "BY", "KZ", "KG", "AM", "UZ", "TJ", "AZ", "MD", "GE", "UA"]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": ["CN"],
+      "countries_to": ["DE", "FR", "IT", "ES", "GB", "NL", "PL", "CZ", "AT", "SE", "FI", "DK", "BE", "CH", "HU", "RO", "BG", "SK", "LT", "LV", "EE"]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": ["CN"],
+      "countries_to": ["US", "CA", "AU", "JP", "KR", "BR", "MX", "AE", "SA", "TR", "IL", "IN"]
+    }
+  ],
+  "rates": {
+    "joom-logistics-express": [
+      { "weight_kg": 0.5, "prices_by_zone": [5, 7, 9] },
+      { "weight_kg": 1, "prices_by_zone": [7, 10, 14] },
+      { "weight_kg": 2, "prices_by_zone": [10, 15, 20] },
+      { "weight_kg": 5, "prices_by_zone": [18, 28, 38] }
+    ],
+    "joom-logistics-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3, 4, 5] },
+      { "weight_kg": 1, "prices_by_zone": [4, 6, 8] },
+      { "weight_kg": 2, "prices_by_zone": [6, 9, 12] },
+      { "weight_kg": 5, "prices_by_zone": [12, 18, 24] }
+    ]
+  }
+}

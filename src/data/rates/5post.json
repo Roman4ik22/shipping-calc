@@ -1,0 +1,29 @@
+{
+  "carrier_id": "5post",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Russia Domestic",
+      "countries_from": ["RU"],
+      "countries_to": ["RU"]
+    }
+  ],
+  "rates": {
+    "5post-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [2] },
+      { "weight_kg": 1, "prices_by_zone": [3] },
+      { "weight_kg": 2, "prices_by_zone": [4] },
+      { "weight_kg": 5, "prices_by_zone": [7] },
+      { "weight_kg": 10, "prices_by_zone": [11] },
+      { "weight_kg": 20, "prices_by_zone": [18] }
+    ],
+    "5post-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [1] },
+      { "weight_kg": 1, "prices_by_zone": [2] },
+      { "weight_kg": 2, "prices_by_zone": [3] },
+      { "weight_kg": 5, "prices_by_zone": [5] },
+      { "weight_kg": 10, "prices_by_zone": [9] },
+      { "weight_kg": 20, "prices_by_zone": [15] }
+    ]
+  }
+}

@@ -3678,5 +3678,153 @@
         "tracking": true
       }
     ]
+  },
+  {
+    "id": "wishpost",
+    "name": "WishPost",
+    "type": "regional",
+    "logo": "",
+    "website": "https://merchant.wish.com/",
+    "tracking_url": "https://www.wish.com/order/tracking/{tracking}",
+    "description_en": "Proprietary shipping platform of the Wish e-commerce marketplace. Manages logistics from China to global buyers with consolidation and last-mile partnerships. Primarily for Wish sellers.",
+    "description_ru": "Собственная логистическая платформа маркетплейса Wish. Управляет доставкой из Китая глобальным покупателям с консолидацией и партнёрствами по последней миле.",
+    "services": [
+      {
+        "id": "wishpost-advanced",
+        "name": "WishPost Advanced",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "wishpost-standard",
+        "name": "WishPost Standard",
+        "speed_days_min": 15,
+        "speed_days_max": 30,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "wishpost-economy",
+        "name": "WishPost Economy",
+        "speed_days_min": 20,
+        "speed_days_max": 45,
+        "max_weight_kg": 5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "joom-logistics",
+    "name": "Joom Logistics",
+    "type": "regional",
+    "logo": "",
+    "website": "https://www.joom.com/",
+    "tracking_url": "https://www.joom.com/en/tracking/{tracking}",
+    "description_en": "In-house logistics arm of Joom marketplace (Latvia/China). Specializes in China-to-CIS/Europe small parcel delivery with competitive rates. Integrated customs clearance.",
+    "description_ru": "Собственная логистика маркетплейса Joom (Латвия/Китай). Специализируется на доставке мелких посылок из Китая в СНГ и Европу с конкурентными тарифами.",
+    "services": [
+      {
+        "id": "joom-logistics-express",
+        "name": "Joom Express",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "joom-logistics-standard",
+        "name": "Joom Standard",
+        "speed_days_min": 15,
+        "speed_days_max": 30,
+        "max_weight_kg": 5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "pickpoint",
+    "name": "PickPoint",
+    "type": "regional",
+    "logo": "",
+    "website": "https://pickpoint.ru/",
+    "tracking_url": "https://pickpoint.ru/tracking/?invoice={tracking}",
+    "description_en": "Russia's largest parcel locker (postamat) network operator with 80% market share. 3,500+ postamats in 540+ Russian cities. Primarily for small e-commerce parcels.",
+    "description_ru": "Крупнейший оператор сети постаматов в России с 80% долей рынка. 3 500+ постаматов в 540+ городах России. Преимущественно для мелких посылок электронной коммерции.",
+    "services": [
+      {
+        "id": "pickpoint-standard",
+        "name": "Postamat Delivery",
+        "speed_days_min": 1,
+        "speed_days_max": 2,
+        "max_weight_kg": 15,
+        "tracking": true
+      },
+      {
+        "id": "pickpoint-regional",
+        "name": "Regional Delivery",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 15,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "5post",
+    "name": "5Post (Pyaterochka Post)",
+    "type": "regional",
+    "logo": "",
+    "website": "https://5post.ru/",
+    "tracking_url": "https://5post.ru/tracking?barcode={tracking}",
+    "description_en": "Budget delivery service using Pyaterochka supermarket chain as pickup points. Often the cheapest option for Russian e-commerce deliveries. Free delivery even for small orders.",
+    "description_ru": "Бюджетная служба доставки с использованием сети супермаркетов «Пятёрочка» в качестве пунктов выдачи. Часто самый дешёвый вариант для доставки в России.",
+    "services": [
+      {
+        "id": "5post-standard",
+        "name": "Standard Delivery",
+        "speed_days_min": 2,
+        "speed_days_max": 4,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "5post-economy",
+        "name": "Economy Delivery",
+        "speed_days_min": 3,
+        "speed_days_max": 10,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sberlogistika",
+    "name": "Sberlogistika (Сберлогистика)",
+    "type": "regional",
+    "logo": "",
+    "website": "https://sberlogistics.ru/",
+    "tracking_url": "https://sberlogistics.ru/tracking?barcode={tracking}",
+    "description_en": "Logistics arm of Sberbank (Russia's largest bank). Growing network of pickup points and delivery services, integrated with Sber ecosystem and e-commerce platforms.",
+    "description_ru": "Логистическое подразделение Сбербанка. Растущая сеть пунктов выдачи и услуг доставки, интегрированная с экосистемой Сбера и платформами электронной коммерции.",
+    "services": [
+      {
+        "id": "sberlogistika-standard",
+        "name": "Standard Delivery",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "sberlogistika-economy",
+        "name": "Economy Delivery",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
   }
 ]

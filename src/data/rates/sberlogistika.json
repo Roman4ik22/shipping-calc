@@ -1,0 +1,31 @@
+{
+  "carrier_id": "sberlogistika",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Russia Domestic",
+      "countries_from": ["RU"],
+      "countries_to": ["RU"]
+    }
+  ],
+  "rates": {
+    "sberlogistika-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3] },
+      { "weight_kg": 1, "prices_by_zone": [4] },
+      { "weight_kg": 2, "prices_by_zone": [6] },
+      { "weight_kg": 5, "prices_by_zone": [10] },
+      { "weight_kg": 10, "prices_by_zone": [16] },
+      { "weight_kg": 20, "prices_by_zone": [28] },
+      { "weight_kg": 30, "prices_by_zone": [40] }
+    ],
+    "sberlogistika-economy": [
+      { "weight_kg": 0.5, "prices_by_zone": [2] },
+      { "weight_kg": 1, "prices_by_zone": [3] },
+      { "weight_kg": 2, "prices_by_zone": [4] },
+      { "weight_kg": 5, "prices_by_zone": [7] },
+      { "weight_kg": 10, "prices_by_zone": [12] },
+      { "weight_kg": 20, "prices_by_zone": [20] },
+      { "weight_kg": 30, "prices_by_zone": [28] }
+    ]
+  }
+}

@@ -271,6 +271,9 @@ const dictionaries: Record<string, Record<string, string>> = {
     blog_description: "Tips and guides for international shipping",
     read_more: "Read more",
     related_posts: "Related articles",
+    platforms: "Platforms",
+    platforms_title: "Shipping Platforms & API Partners",
+    platforms_description: "Compare shipping API platforms, aggregators, and logistics partners",
   },
   ru: {
     site_name: "RateShips",
@@ -513,6 +516,9 @@ const dictionaries: Record<string, Record<string, string>> = {
     blog_description: "Советы и руководства по международной доставке",
     read_more: "Читать далее",
     related_posts: "Похожие статьи",
+    platforms: "Платформы",
+    platforms_title: "Платформы доставки и API-партнёры",
+    platforms_description: "Сравните API-платформы доставки, агрегаторы и логистических партнёров",
   },
   es: {
     site_name: "RateShips",

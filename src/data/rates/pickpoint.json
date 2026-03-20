@@ -1,0 +1,29 @@
+{
+  "carrier_id": "pickpoint",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "Moscow & Moscow Oblast",
+      "countries_from": ["RU"],
+      "countries_to": ["RU"]
+    }
+  ],
+  "rates": {
+    "pickpoint-standard": [
+      { "weight_kg": 0.5, "prices_by_zone": [3] },
+      { "weight_kg": 1, "prices_by_zone": [4] },
+      { "weight_kg": 2, "prices_by_zone": [5] },
+      { "weight_kg": 5, "prices_by_zone": [8] },
+      { "weight_kg": 10, "prices_by_zone": [12] },
+      { "weight_kg": 15, "prices_by_zone": [16] }
+    ],
+    "pickpoint-regional": [
+      { "weight_kg": 0.5, "prices_by_zone": [4] },
+      { "weight_kg": 1, "prices_by_zone": [5] },
+      { "weight_kg": 2, "prices_by_zone": [7] },
+      { "weight_kg": 5, "prices_by_zone": [11] },
+      { "weight_kg": 10, "prices_by_zone": [17] },
+      { "weight_kg": 15, "prices_by_zone": [23] }
+    ]
+  }
+}

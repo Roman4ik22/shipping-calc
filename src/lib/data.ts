@@ -143,6 +143,12 @@ import taiwanPostRates from "../data/rates/taiwan-post.json";
 import vietnamPostRates from "../data/rates/vietnam-post.json";
 import jAndTExpressRates from "../data/rates/j-and-t-express.json";
 import theCourierGuyRates from "../data/rates/the-courier-guy.json";
+// Batch 14
+import wishpostRates from "../data/rates/wishpost.json";
+import joomLogisticsRates from "../data/rates/joom-logistics.json";
+import pickpointRates from "../data/rates/pickpoint.json";
+import fivePostRates from "../data/rates/5post.json";
+import sberlogistikaRates from "../data/rates/sberlogistika.json";
 import type {
   Country,
   Carrier,
@@ -299,6 +305,12 @@ const allRateData: CarrierRateData[] = [
   vietnamPostRates,
   jAndTExpressRates,
   theCourierGuyRates,
+  // Batch 14
+  wishpostRates,
+  joomLogisticsRates,
+  pickpointRates,
+  fivePostRates,
+  sberlogistikaRates,
 ] as CarrierRateData[];
 
 // Lookup maps
