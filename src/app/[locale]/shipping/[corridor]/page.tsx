@@ -20,6 +20,7 @@ import SaveRoute from "@/components/SaveRoute";
 import InsuranceComparison from "@/components/InsuranceComparison";
 import PriceHistory from "@/components/PriceHistory";
 import { countryFlag } from "@/lib/flags";
+import { getCorridorContent } from "@/data/corridor-content";
 import Link from "next/link";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 
@@ -343,6 +344,56 @@ export default async function CorridorPage({
           />
         </div>
       )}
+
+      {/* Corridor unique content */}
+      {(() => {
+        const corridorContent = getCorridorContent(origin.code, destination.code);
+        if (!corridorContent) return null;
+        const isRu = locale === "ru";
+        const tradeInfo = isRu ? corridorContent.trade_info_ru : corridorContent.trade_info_en;
+        const tips = isRu ? corridorContent.tips_ru : corridorContent.tips_en;
+        return (
+          <section className="mt-8 space-y-6">
+            <div className="bg-surface border border-white/10 rounded-lg p-6">
+              <h2 className="text-lg font-bold text-white mb-3">
+                {isRu ? "Торговая информация" : "Trade Information"}
+              </h2>
+              <p className="text-sm text-gray-300 leading-relaxed">{tradeInfo}</p>
+            </div>
+            <div className="bg-surface border border-white/10 rounded-lg p-6">
+              <h2 className="text-lg font-bold text-white mb-3">
+                {isRu ? "Советы по доставке" : "Shipping Tips"}
+              </h2>
+              <p className="text-sm text-gray-300 leading-relaxed">{tips}</p>
+            </div>
+            {corridorContent.reviews.length > 0 && (
+              <div>
+                <h2 className="text-lg font-bold text-white mb-3">
+                  {isRu ? "Отзывы пользователей" : "User Reviews"}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {corridorContent.reviews.map((review, i) => (
+                    <div
+                      key={i}
+                      className="bg-surface border border-white/10 rounded-lg p-5"
+                    >
+                      <p className="text-sm text-gray-300 italic leading-relaxed mb-3">
+                        &ldquo;{isRu ? review.text_ru : review.text_en}&rdquo;
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span className="font-medium text-accent-light">{review.carrier}</span>
+                        <span>
+                          {review.days} {isRu ? "дней" : "days"}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        );
+      })()}
 
       {/* SEO summary text */}
       {corridorData && corridorData.carriers.length > 0 && (() => {

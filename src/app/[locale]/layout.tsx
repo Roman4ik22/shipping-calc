@@ -255,7 +255,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h4 className="text-white font-semibold mb-3">
                   {t(loc, "information")}
                 </h4>
-                <p className="text-sm text-gray-500 leading-relaxed">{t(loc, "disclaimer")}</p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <Link href={`/${locale}/terms`} className="text-gray-400 hover:text-accent-light transition-colors">
+                    {locale === "ru" ? "Условия" : "Terms"}
+                  </Link>
+                  <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-accent-light transition-colors">
+                    {locale === "ru" ? "Конфиденциальность" : "Privacy"}
+                  </Link>
+                  <Link href={`/${locale}/data-methodology`} className="text-gray-400 hover:text-accent-light transition-colors">
+                    {locale === "ru" ? "Методология" : "Data Methodology"}
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="border-t border-white/10 mt-8 pt-6 text-sm text-center text-gray-500">
