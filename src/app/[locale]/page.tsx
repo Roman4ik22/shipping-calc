@@ -229,6 +229,38 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* HowTo JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: t(loc, "how_it_works"),
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: t(loc, "choose_route"),
+                text: t(loc, "choose_route_desc"),
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: t(loc, "compare_rates"),
+                text: t(loc, "compare_rates_desc"),
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: t(loc, "ship_package"),
+                text: t(loc, "ship_package_desc"),
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* All countries */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-white mb-6">

@@ -592,6 +592,32 @@ export default async function CorridorPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Product JSON-LD for rich snippets */}
+      {corridorData && corridorData.carriers.length > 0 && (() => {
+        const prices = corridorData.carriers.map(
+          (cr) => cr.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0
+        ).filter((p) => p > 0);
+        if (prices.length === 0) return null;
+        const productJsonLd = {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: `Shipping from ${originName} to ${destName}`,
+          description: `Compare ${corridorData.carriers.length} carrier rates for shipping from ${originName} to ${destName}`,
+          offers: {
+            "@type": "AggregateOffer",
+            lowPrice: Math.min(...prices),
+            highPrice: Math.max(...prices),
+            priceCurrency: "USD",
+            offerCount: corridorData.carriers.length,
+          },
+        };
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+          />
+        );
+      })()}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
