@@ -71,8 +71,27 @@ export default async function LocaleLayout({
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKV39RWK');`,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-dark-900 text-gray-100 antialiased font-sans">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TKV39RWK"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Analytics />
         <AdSense />
         <WebVitals />
@@ -141,6 +160,12 @@ export default async function LocaleLayout({
                   >
                     {t(loc, "blog")}
                   </Link>
+                  <Link
+                    href={`/${locale}/platforms`}
+                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    {t(loc, "platforms")}
+                  </Link>
                 </nav>
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
@@ -151,6 +176,7 @@ export default async function LocaleLayout({
                     guides: t(loc, "guides"),
                     about: t(loc, "about"),
                     blog: t(loc, "blog"),
+                    platforms: t(loc, "platforms"),
                   }}
                 />
               </div>
@@ -176,6 +202,7 @@ export default async function LocaleLayout({
                   <Link href={`/${locale}/guide`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "guides")}</Link>
                   <Link href={`/${locale}/about`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "about")}</Link>
                   <Link href={`/${locale}/blog`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "blog")}</Link>
+                  <Link href={`/${locale}/platforms`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "platforms")}</Link>
                 </div>
               </div>
               <div>
