@@ -680,13 +680,13 @@ export default async function CorridorPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
+                item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: t(loc, "ship_from", { country: originName }),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/shipping/from/${origin.slug_en}`,
+                item: `${"https://rateships.com"}/${locale}/shipping/from/${origin.slug_en}`,
               },
               {
                 "@type": "ListItem",

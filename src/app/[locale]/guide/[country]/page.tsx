@@ -452,13 +452,13 @@ export default async function GuidePage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
+                item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: t(loc, "guides"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/guide`,
+                item: `${"https://rateships.com"}/${locale}/guide`,
               },
               {
                 "@type": "ListItem",

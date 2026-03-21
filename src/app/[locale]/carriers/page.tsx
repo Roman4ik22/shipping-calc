@@ -108,7 +108,7 @@ export default async function CarriersPage({
               "@type": "ListItem",
               position: idx + 1,
               name: carrier.name,
-              url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/carriers/${carrier.id}`,
+              url: `${"https://rateships.com"}/${locale}/carriers/${carrier.id}`,
             })),
           }),
         }}
@@ -124,7 +124,7 @@ export default async function CarriersPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
+                item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",

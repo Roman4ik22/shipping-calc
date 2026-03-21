@@ -147,7 +147,7 @@ export default async function FromCountryPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
+                item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",

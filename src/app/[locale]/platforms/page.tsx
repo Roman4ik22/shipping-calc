@@ -158,7 +158,7 @@ export default async function PlatformsPage({
     "Forwarding",
   ];
 
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
+  const BASE_URL = "https://rateships.com";
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

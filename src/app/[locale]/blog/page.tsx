@@ -15,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const loc = locale as Locale;
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
+  const BASE_URL = "https://rateships.com";
 
   return {
     title: t(loc, "blog_title"),

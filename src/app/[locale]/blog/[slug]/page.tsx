@@ -23,7 +23,7 @@ export async function generateMetadata({
   const loc = locale as Locale;
   const isRu = loc === "ru";
   const post = getPostBySlug(slug);
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
+  const BASE_URL = "https://rateships.com";
 
   if (!post) {
     return { title: "Not Found" };
@@ -137,7 +137,7 @@ export default async function BlogPostPage({
   const loc = locale as Locale;
   const isRu = loc === "ru";
   const post = getPostBySlug(slug);
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
+  const BASE_URL = "https://rateships.com";
 
   if (!post) {
     return (

@@ -27,7 +27,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const loc = locale as Locale;
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com";
+  const BASE_URL = "https://rateships.com";
   return {
     title: {
       default: `${t(loc, "site_name")} — ${t(loc, "compare_rates")}`,
@@ -104,14 +104,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "RateShips",
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com",
+              url: "https://rateships.com",
               description: t(loc, "site_description"),
               inLanguage: locale,
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}/shipping/{search_term}`,
+                  urlTemplate: `${"https://rateships.com"}/${locale}/shipping/{search_term}`,
                 },
                 "query-input": "required name=search_term",
               },

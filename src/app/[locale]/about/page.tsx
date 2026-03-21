@@ -119,7 +119,7 @@ export default async function AboutPage({
             mainEntity: {
               "@type": "Organization",
               name: "RateShips",
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com",
+              url: "https://rateships.com",
             },
           }),
         }}
@@ -135,7 +135,7 @@ export default async function AboutPage({
                 "@type": "ListItem",
                 position: 1,
                 name: t(loc, "home"),
-                item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://rateships.com"}/${locale}`,
+                item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
