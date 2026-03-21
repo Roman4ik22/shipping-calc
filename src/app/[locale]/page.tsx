@@ -15,7 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const loc = locale as Locale;
   return {
-    title: t(loc, "compare_shipping_rates") + " | RateShips",
+    title: t(loc, "compare_shipping_rates"),
     description: t(loc, "hero_subtitle", { count: "134" }),
     alternates: {
       canonical: `/${locale}`,
