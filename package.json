@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@easypost/api": "^8.8.0",
     "@fontsource/inter": "^5.2.8",
     "next": "16.1.6",
     "react": "19.2.3",

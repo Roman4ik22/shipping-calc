@@ -1,4 +1,4 @@
-name: Weekly Rate Update Reminder
+name: Weekly Rate Update
 
 on:
   schedule:
@@ -6,20 +6,58 @@ on:
   workflow_dispatch:  # Manual trigger
 
 jobs:
-  create-issue:
+  update-rates:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       issues: write
     steps:
-      - name: Create reminder issue
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run rate update script
+        run: npx tsx scripts/update-rates.ts
+        env:
+          EASYPOST_API_KEY: ${{ secrets.EASYPOST_API_KEY }}
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ -n "$(git diff --name-only)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/rates/
+          git commit -m "Weekly rate update — $(date +%Y-%m-%d)"
+          git push
+
+      - name: Create summary issue
         uses: actions/github-script@v7
         with:
           script: |
             const date = new Date().toISOString().split('T')[0];
+            const changed = '${{ steps.check.outputs.changed }}' === 'true';
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `Weekly rate update — ${date}`,
-              body: `## Weekly Rate Update Checklist\n\n- [ ] Check DHL Express rates\n- [ ] Check FedEx rates\n- [ ] Check UPS rates\n- [ ] Check EMS/postal rates\n- [ ] Check regional carriers (CDEK, J&T, etc.)\n- [ ] Verify customs thresholds for key countries\n- [ ] Run build and deploy\n\n> Open Claude Code and say: **"обнови тарифы"**`,
+              body: changed
+                ? `## Rates Updated Automatically\n\nRate files were adjusted based on carrier GRI (General Rate Increase) factors.\n\n- DHL: +4.9%\n- FedEx/UPS: +5.9%\n- USPS: +3.7%\n- Regional: +3%\n- Postal: +3.5%\n\nTo use live EasyPost rates, add \`EASYPOST_API_KEY\` to repository secrets.`
+                : `## No Rate Changes\n\nAll rates are up to date. No adjustments needed this week.`,
               labels: ['maintenance', 'rates']
             });
