@@ -1,22 +1,114 @@
 {
   "carrier_id": "ems",
-  "effective_date": "2026-01-01",
+  "effective_date": "2026-03-21",
   "note": "Estimated EMS rates. EMS operates through national postal services; actual rates vary by origin country.",
   "zones": [
-    {"zone": 1, "description": "Zone 1 - Neighboring", "countries_from": ["*"], "countries_to": ["NEIGHBORS"]},
-    {"zone": 2, "description": "Zone 2 - Regional", "countries_from": ["*"], "countries_to": ["REGIONAL"]},
-    {"zone": 3, "description": "Zone 3 - Intercontinental", "countries_from": ["*"], "countries_to": ["INTERCONTINENTAL"]},
-    {"zone": 4, "description": "Zone 4 - Remote", "countries_from": ["*"], "countries_to": ["REMOTE"]}
+    {
+      "zone": 1,
+      "description": "Zone 1 - Neighboring",
+      "countries_from": [
+        "*"
+      ],
+      "countries_to": [
+        "NEIGHBORS"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Zone 2 - Regional",
+      "countries_from": [
+        "*"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Zone 3 - Intercontinental",
+      "countries_from": [
+        "*"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Zone 4 - Remote",
+      "countries_from": [
+        "*"
+      ],
+      "countries_to": [
+        "REMOTE"
+      ]
+    }
   ],
   "rates": {
     "ems-express": [
-      {"weight_kg": 0.5, "prices_by_zone": [22, 28, 35, 42]},
-      {"weight_kg": 1, "prices_by_zone": [28, 35, 45, 55]},
-      {"weight_kg": 2, "prices_by_zone": [35, 48, 62, 75]},
-      {"weight_kg": 5, "prices_by_zone": [55, 78, 105, 128]},
-      {"weight_kg": 10, "prices_by_zone": [88, 128, 175, 215]},
-      {"weight_kg": 20, "prices_by_zone": [148, 225, 315, 395]},
-      {"weight_kg": 30, "prices_by_zone": [208, 322, 455, 575]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          15,
+          20,
+          25,
+          30
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          22,
+          28,
+          35,
+          42
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          30,
+          38,
+          48,
+          58
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          50,
+          65,
+          82,
+          100
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          85,
+          110,
+          142,
+          175
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          150,
+          195,
+          250,
+          310
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          215,
+          275,
+          355,
+          440
+        ]
+      }
     ]
   }
 }

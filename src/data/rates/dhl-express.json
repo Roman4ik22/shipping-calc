@@ -1,41 +1,586 @@
 {
   "carrier_id": "dhl-express",
-  "effective_date": "2026-01-01",
+  "effective_date": "2026-03-21",
   "note": "Estimated rates based on published DHL Express tariffs. Actual rates depend on account type, surcharges, and fuel adjustments.",
   "zones": [
-    {"zone": 1, "description": "Domestic / Same country", "countries_from": ["*"], "countries_to": ["SAME"]},
-    {"zone": 2, "description": "Neighboring / Border countries", "countries_from": ["US"], "countries_to": ["CA", "MX"]},
-    {"zone": 3, "description": "North America / Caribbean", "countries_from": ["US"], "countries_to": ["BS", "JM", "TT", "BB", "PR", "DO", "HT", "CU", "BZ", "GT", "HN", "SV", "NI", "CR", "PA"]},
-    {"zone": 4, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU", "MC", "LI", "AD", "MT", "IS"]},
-    {"zone": 5, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "BA", "ME", "MK", "AL", "EE", "LV", "LT", "UA", "MD", "BY", "GR", "CY"]},
-    {"zone": 6, "description": "East Asia / Oceania", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "MO"]},
-    {"zone": 7, "description": "Southeast Asia / Indian Subcontinent", "countries_from": ["US"], "countries_to": ["TH", "MY", "ID", "PH", "VN", "KH", "LA", "MM", "BN", "TL", "IN", "PK", "BD", "LK", "NP", "MV", "BT"]},
-    {"zone": 8, "description": "Middle East", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "BH", "OM", "JO", "IL", "LB", "IQ", "IR", "YE", "SY", "PS", "TR", "GE", "AM", "AZ"]},
-    {"zone": 9, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "VE", "UY", "PY", "BO", "GY", "SR", "GF"]},
-    {"zone": 10, "description": "Africa", "countries_from": ["US"], "countries_to": ["ZA", "NG", "KE", "EG", "MA", "TN", "DZ", "GH", "ET", "TZ", "UG", "SN", "CI", "CM", "AO", "MZ", "MG", "ZW", "ZM", "BW", "NA", "RW", "MU", "SC", "DJ", "ER", "SO", "SD", "SS", "LY", "ML", "NE", "BF", "TD", "CG", "CD", "CF", "GA", "GQ", "ST", "CV", "GM", "GN", "GW", "LR", "SL", "TG", "BJ", "MW", "LS", "SZ", "BI", "KM", "RE"]},
-    {"zone": 11, "description": "Central Asia / Mongolia", "countries_from": ["US"], "countries_to": ["KZ", "UZ", "TJ", "KG", "TM", "MN", "AF"]},
-    {"zone": 12, "description": "Pacific Islands", "countries_from": ["US"], "countries_to": ["FJ", "PG", "WS", "TO", "VU", "SB", "KI", "MH", "FM", "NR", "TV", "PW", "GU", "NC", "PF"]}
+    {
+      "zone": 1,
+      "description": "Domestic / Same country",
+      "countries_from": [
+        "*"
+      ],
+      "countries_to": [
+        "SAME"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Neighboring / Border countries",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA",
+        "MX"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "North America / Caribbean",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "BS",
+        "JM",
+        "TT",
+        "BB",
+        "PR",
+        "DO",
+        "HT",
+        "CU",
+        "BZ",
+        "GT",
+        "HN",
+        "SV",
+        "NI",
+        "CR",
+        "PA"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Western Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "IE",
+        "PT",
+        "DK",
+        "SE",
+        "NO",
+        "FI",
+        "LU",
+        "MC",
+        "LI",
+        "AD",
+        "MT",
+        "IS"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Eastern Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "RS",
+        "BA",
+        "ME",
+        "MK",
+        "AL",
+        "EE",
+        "LV",
+        "LT",
+        "UA",
+        "MD",
+        "BY",
+        "GR",
+        "CY"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "East Asia / Oceania",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ",
+        "MO"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "Southeast Asia / Indian Subcontinent",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "VN",
+        "KH",
+        "LA",
+        "MM",
+        "BN",
+        "TL",
+        "IN",
+        "PK",
+        "BD",
+        "LK",
+        "NP",
+        "MV",
+        "BT"
+      ]
+    },
+    {
+      "zone": 8,
+      "description": "Middle East",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM",
+        "JO",
+        "IL",
+        "LB",
+        "IQ",
+        "IR",
+        "YE",
+        "SY",
+        "PS",
+        "TR",
+        "GE",
+        "AM",
+        "AZ"
+      ]
+    },
+    {
+      "zone": 9,
+      "description": "South America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "EC",
+        "VE",
+        "UY",
+        "PY",
+        "BO",
+        "GY",
+        "SR",
+        "GF"
+      ]
+    },
+    {
+      "zone": 10,
+      "description": "Africa",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "MA",
+        "TN",
+        "DZ",
+        "GH",
+        "ET",
+        "TZ",
+        "UG",
+        "SN",
+        "CI",
+        "CM",
+        "AO",
+        "MZ",
+        "MG",
+        "ZW",
+        "ZM",
+        "BW",
+        "NA",
+        "RW",
+        "MU",
+        "SC",
+        "DJ",
+        "ER",
+        "SO",
+        "SD",
+        "SS",
+        "LY",
+        "ML",
+        "NE",
+        "BF",
+        "TD",
+        "CG",
+        "CD",
+        "CF",
+        "GA",
+        "GQ",
+        "ST",
+        "CV",
+        "GM",
+        "GN",
+        "GW",
+        "LR",
+        "SL",
+        "TG",
+        "BJ",
+        "MW",
+        "LS",
+        "SZ",
+        "BI",
+        "KM",
+        "RE"
+      ]
+    },
+    {
+      "zone": 11,
+      "description": "Central Asia / Mongolia",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "KZ",
+        "UZ",
+        "TJ",
+        "KG",
+        "TM",
+        "MN",
+        "AF"
+      ]
+    },
+    {
+      "zone": 12,
+      "description": "Pacific Islands",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "FJ",
+        "PG",
+        "WS",
+        "TO",
+        "VU",
+        "SB",
+        "KI",
+        "MH",
+        "FM",
+        "NR",
+        "TV",
+        "PW",
+        "GU",
+        "NC",
+        "PF"
+      ]
+    }
   ],
   "rates": {
     "dhl-express-worldwide": [
-      {"weight_kg": 0.5, "prices_by_zone": [null, 45, 55, 55, 65, 60, 65, 70, 75, 85, 80, 90]},
-      {"weight_kg": 1, "prices_by_zone": [null, 52, 65, 65, 75, 70, 78, 82, 88, 98, 95, 105]},
-      {"weight_kg": 2, "prices_by_zone": [null, 62, 80, 80, 92, 85, 95, 100, 108, 120, 115, 130]},
-      {"weight_kg": 3, "prices_by_zone": [null, 72, 95, 95, 108, 100, 112, 118, 128, 142, 135, 155]},
-      {"weight_kg": 5, "prices_by_zone": [null, 92, 125, 125, 140, 130, 145, 155, 168, 188, 175, 200]},
-      {"weight_kg": 10, "prices_by_zone": [null, 145, 195, 195, 225, 210, 235, 250, 270, 305, 285, 330]},
-      {"weight_kg": 15, "prices_by_zone": [null, 195, 265, 265, 310, 290, 325, 345, 370, 420, 395, 455]},
-      {"weight_kg": 20, "prices_by_zone": [null, 245, 335, 335, 395, 370, 415, 440, 470, 535, 505, 580]},
-      {"weight_kg": 30, "prices_by_zone": [null, 340, 475, 475, 565, 530, 595, 630, 670, 765, 725, 830]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          28,
+          35,
+          42,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          36,
+          45,
+          55,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          45,
+          58,
+          72,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          null,
+          72,
+          95,
+          95,
+          108,
+          100,
+          112,
+          118,
+          128,
+          142,
+          135,
+          155
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          72,
+          95,
+          125,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          120,
+          165,
+          220,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          null,
+          195,
+          265,
+          265,
+          310,
+          290,
+          325,
+          345,
+          370,
+          420,
+          395,
+          455
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          210,
+          290,
+          390,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          300,
+          410,
+          550,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710
+        ]
+      }
     ],
     "dhl-economy-select": [
-      {"weight_kg": 0.5, "prices_by_zone": [null, 30, 38, 38, 42, 40, 45, 48, 52, 58, 55, 62]},
-      {"weight_kg": 1, "prices_by_zone": [null, 35, 45, 45, 50, 48, 55, 58, 62, 70, 65, 75]},
-      {"weight_kg": 2, "prices_by_zone": [null, 42, 55, 55, 62, 58, 68, 72, 78, 88, 82, 95]},
-      {"weight_kg": 5, "prices_by_zone": [null, 60, 82, 82, 95, 88, 100, 108, 115, 132, 122, 142]},
-      {"weight_kg": 10, "prices_by_zone": [null, 95, 132, 132, 155, 145, 165, 175, 190, 218, 200, 235]},
-      {"weight_kg": 20, "prices_by_zone": [null, 165, 232, 232, 275, 258, 292, 310, 335, 385, 358, 415]},
-      {"weight_kg": 30, "prices_by_zone": [null, 232, 330, 330, 395, 370, 418, 445, 478, 550, 515, 595]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          28,
+          35,
+          42,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          36,
+          45,
+          55,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65,
+          65
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          45,
+          58,
+          72,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88,
+          88
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          72,
+          95,
+          125,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155,
+          155
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          120,
+          165,
+          220,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280,
+          280
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          210,
+          290,
+          390,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          300,
+          410,
+          550,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710,
+          710
+        ]
+      }
     ]
   }
 }
