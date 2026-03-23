@@ -238,12 +238,20 @@ function buildSitemapIndex(parts: string[]): string {
 
 export async function GET(req: NextRequest) {
   const part = req.nextUrl.searchParams.get("part");
+  const key = req.nextUrl.searchParams.get("key");
+
+  // Secret full sitemap: /api/sitemap?part=full&key=rs2026map
+  // Not linked anywhere, not in robots.txt, Google won't find it
+  const SECRET_KEY = "rs2026map";
 
   let xml: string;
-  if (part === "gradual") {
+  if (part === "full" && key === SECRET_KEY) {
+    xml = buildUrlset(getFullUrls());
+  } else if (part === "gradual") {
     xml = buildUrlset(getGradualUrls());
   } else if (part === "full") {
-    xml = buildUrlset(getFullUrls());
+    // Without key — return 403
+    return new NextResponse("Forbidden", { status: 403 });
   } else {
     // Default sitemap.xml = gradual (submitted to Google)
     xml = buildSitemapIndex(["gradual"]);
