@@ -99,7 +99,7 @@ import cjLogisticsRates from "../data/rates/cj-logistics-cj-korea-express.json";
 import hanjinRates from "../data/rates/hanjin-express.json";
 // Batch 11
 import lotteRates from "../data/rates/lotte-global-logistics.json";
-import sendleRates from "../data/rates/sendle.json";
+// Removed: sendle (shut down Jan 2026)
 import courierspleaseRates from "../data/rates/couriersplease.json";
 import startrackRates from "../data/rates/startrack.json";
 import aramexAuRates from "../data/rates/aramex-australia-formerly-fastway.json";
@@ -260,7 +260,6 @@ const allRateData: CarrierRateData[] = [
   hanjinRates,
   // Batch 11
   lotteRates,
-  sendleRates,
   courierspleaseRates,
   startrackRates,
   aramexAuRates,

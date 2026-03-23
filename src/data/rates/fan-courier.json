@@ -1,7 +1,7 @@
 {
   "carrier_id": "fan-courier",
   "effective_date": "2026-03-23",
-  "note": "Fan Courier rates. Romania's largest private courier company with EU delivery network. [Rates adjusted 2026-03-23]",
+  "note": "Fan Courier real rates. EUROBAG to Europe €12 flat up to 5kg (EUR→USD at 1.09). Source: fancourier.ro [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -61,7 +61,7 @@
         "weight_kg": 0.5,
         "prices_by_zone": [
           3.09,
-          12.36,
+          13,
           18.54
         ]
       },
@@ -69,7 +69,7 @@
         "weight_kg": 1,
         "prices_by_zone": [
           4.12,
-          16.48,
+          13,
           25.75
         ]
       },
@@ -77,7 +77,7 @@
         "weight_kg": 2,
         "prices_by_zone": [
           6.18,
-          22.66,
+          13,
           36.05
         ]
       },
@@ -85,7 +85,7 @@
         "weight_kg": 5,
         "prices_by_zone": [
           10.3,
-          39.14,
+          13,
           59.74
         ]
       },
@@ -93,7 +93,7 @@
         "weight_kg": 10,
         "prices_by_zone": [
           16.48,
-          63.86,
+          25,
           100.94
         ]
       },
@@ -101,7 +101,7 @@
         "weight_kg": 20,
         "prices_by_zone": [
           28.84,
-          111.24,
+          45,
           177.16
         ]
       },
@@ -109,7 +109,7 @@
         "weight_kg": 30,
         "prices_by_zone": [
           41.2,
-          159.65,
+          70,
           255.44
         ]
       }
@@ -119,7 +119,7 @@
         "weight_kg": 0.5,
         "prices_by_zone": [
           2.06,
-          9.27,
+          13,
           14.42
         ]
       },
@@ -127,7 +127,7 @@
         "weight_kg": 1,
         "prices_by_zone": [
           3.09,
-          12.36,
+          13,
           20.6
         ]
       },
@@ -135,7 +135,7 @@
         "weight_kg": 2,
         "prices_by_zone": [
           4.12,
-          17.51,
+          13,
           28.84
         ]
       },
@@ -143,7 +143,7 @@
         "weight_kg": 5,
         "prices_by_zone": [
           7.21,
-          30.9,
+          13,
           47.38
         ]
       },
@@ -151,7 +151,7 @@
         "weight_kg": 10,
         "prices_by_zone": [
           12.36,
-          51.5,
+          25,
           80.34
         ]
       },
@@ -159,7 +159,7 @@
         "weight_kg": 20,
         "prices_by_zone": [
           20.6,
-          90.64,
+          45,
           142.14
         ]
       },
@@ -167,7 +167,7 @@
         "weight_kg": 30,
         "prices_by_zone": [
           29.87,
-          128.75,
+          70,
           203.94
         ]
       }

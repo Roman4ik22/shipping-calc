@@ -43,7 +43,7 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
+          5,
           8.24,
           16.48,
           28.84
@@ -52,7 +52,7 @@
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.64,
+          5,
           11.33,
           22.66,
           37.08
@@ -61,7 +61,7 @@
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18,
+          5,
           15.45,
           30.9,
           51.5
@@ -70,7 +70,7 @@
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          8.24,
+          5,
           20.6,
           39.14,
           63.86
@@ -79,7 +79,7 @@
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          11.33,
+          5,
           27.81,
           53.56,
           87.55
@@ -88,7 +88,7 @@
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.54,
+          10,
           45.32,
           87.55,
           144.2
@@ -97,7 +97,7 @@
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          24.72,
+          15,
           59.74,
           115.36,
           193.64
@@ -106,7 +106,7 @@
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.9,
+          20,
           74.16,
           142.14,
           238.96
@@ -115,7 +115,7 @@
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          41.2,
+          30,
           97.85,
           190.55,
           321.36
@@ -124,5 +124,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Pargo real rates. ~ZAR99 flat rate ($5.35 at 18.5) for domestic up to 5kg. Source: pargo.co.za [Rates updated 2026-03-23]"
 }

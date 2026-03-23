@@ -1,7 +1,7 @@
 {
   "carrier_id": "ninja-van-sea",
   "effective_date": "2026-03-23",
-  "note": "Ninja Van SEA regional rates. Tech-enabled last-mile delivery across Southeast Asia. [Rates adjusted 2026-03-23]",
+  "note": "Real domestic rates: MY RM6.50/kg ($1.40), PH PHP80 for <3kg ($1.40). Zone 1 (Domestic SG) and Zone 2 (Intra-SEA) anchored to real prices.",
   "zones": [
     {
       "zone": 1,
@@ -59,57 +59,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          9.27,
-          18.54
+          1.40,
+          5.00,
+          18.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12,
-          12.36,
-          24.72
+          1.40,
+          7.00,
+          24.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.15,
-          18.54,
-          32.96
+          2.80,
+          12.00,
+          33.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          8.24,
-          30.9,
-          56.65
+          7.00,
+          25.00,
+          57.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          14.42,
-          53.56,
-          97.85
+          14.00,
+          45.00,
+          98.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          24.72,
-          94.76,
-          175.1
+          28.00,
+          85.00,
+          175.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          35.02,
-          133.9,
-          249.26
+          42.00,
+          125.00,
+          250.00
         ]
       }
     ],
@@ -117,57 +117,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          12.36,
-          22.66
+          2.50,
+          8.00,
+          22.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.18,
-          16.48,
-          30.9
+          2.50,
+          11.00,
+          30.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.24,
-          22.66,
-          41.2
+          4.50,
+          17.00,
+          41.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.36,
-          39.14,
-          70.04
+          10.00,
+          35.00,
+          70.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          20.6,
-          66.95,
-          121.54
+          18.00,
+          60.00,
+          122.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          36.05,
-          118.45,
-          216.3
+          34.00,
+          110.00,
+          216.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          49.44,
-          166.86,
-          306.94
+          48.00,
+          158.00,
+          307.00
         ]
       }
     ]

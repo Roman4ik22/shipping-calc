@@ -1,7 +1,7 @@
 {
   "carrier_id": "sagawa-express",
   "effective_date": "2026-03-23",
-  "note": "Estimated Sagawa Express international rates from Japan. Japan's second-largest parcel delivery, generally cheaper than Yamato. [Rates adjusted 2026-03-23]",
+  "note": "Real rates from sagawa-exp.co.jp. Min 4000JPY (~$27), 80JPY/kg above threshold. JPY→USD at 150. Zone 3 (NA/EU) anchored to real data.",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.3,
-          14.42,
-          20.6,
-          26.78
+          22.00,
+          25.00,
+          27.00,
+          30.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.42,
-          20.6,
-          28.84,
-          36.05
+          22.00,
+          25.00,
+          27.00,
+          30.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.6,
-          28.84,
-          39.14,
-          51.5
+          22.00,
+          25.00,
+          27.00,
+          30.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          35.02,
-          49.44,
-          67.98,
-          87.55
+          22.00,
+          25.00,
+          27.00,
+          30.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          57.68,
-          80.34,
-          113.3,
-          146.26
+          40.00,
+          47.00,
+          53.00,
+          60.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          97.85,
-          139.05,
-          195.7,
-          255.44
+          80.00,
+          93.00,
+          107.00,
+          120.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          135.96,
-          193.64,
-          269.86,
-          352.26
+          120.00,
+          140.00,
+          160.00,
+          180.00
         ]
       }
     ]

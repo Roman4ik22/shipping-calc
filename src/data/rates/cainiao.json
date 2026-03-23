@@ -69,33 +69,41 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.18,
-          10.3,
-          12.36
+          10.00,
+          16.00,
+          19.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.24,
-          14.42,
-          17.51
+          16.00,
+          25.00,
+          30.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.36,
-          22.66,
-          26.78
+          28.00,
+          46.00,
+          55.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.66,
-          43.26,
-          51.5
+          55.00,
+          88.00,
+          105.00
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          100.00,
+          160.00,
+          190.00
         ]
       }
     ],
@@ -103,37 +111,45 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          5.15,
-          7.21
+          7.00,
+          12.00,
+          14.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12,
-          7.21,
-          9.27
+          12.00,
+          19.00,
+          23.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18,
-          11.33,
-          14.42
+          22.00,
+          35.00,
+          42.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.36,
-          22.66,
-          28.84
+          42.00,
+          65.00,
+          78.00
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          75.00,
+          120.00,
+          145.00
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Real rates from cainiao.us. Air Economy CN→US ~$18-20 for 1kg. Standard tier anchored to real CN→US data."
 }

@@ -12,12 +12,22 @@
     },
     {
       "name": "Zone 1",
+      "description": "BE/LU - flat €5.99 ($7)",
       "countries_from": [
         "FR"
       ],
       "countries_to": [
         "BE",
-        "LU",
+        "LU"
+      ]
+    },
+    {
+      "name": "Zone 1b",
+      "description": "ES/IT/NL/DE/PT/AT - flat €8.99 ($10)",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
         "NL",
         "DE",
         "ES",
@@ -51,7 +61,8 @@
         "weight_kg": 0.5,
         "prices_by_zone": [
           3.61,
-          6.7,
+          7,
+          10,
           12.36,
           22.66
         ]
@@ -60,7 +71,8 @@
         "weight_kg": 1,
         "prices_by_zone": [
           4.64,
-          8.24,
+          7,
+          10,
           15.45,
           28.84
         ]
@@ -69,7 +81,8 @@
         "weight_kg": 2,
         "prices_by_zone": [
           5.67,
-          10.3,
+          7,
+          10,
           19.57,
           37.08
         ]
@@ -78,7 +91,8 @@
         "weight_kg": 3,
         "prices_by_zone": [
           7,
-          12.36,
+          7,
+          10,
           23.69,
           45.32
         ]
@@ -87,7 +101,8 @@
         "weight_kg": 5,
         "prices_by_zone": [
           8.76,
-          15.97,
+          7,
+          10,
           30.9,
           59.74
         ]
@@ -96,7 +111,8 @@
         "weight_kg": 10,
         "prices_by_zone": [
           12.88,
-          24.72,
+          7,
+          10,
           47.38,
           92.7
         ]
@@ -105,7 +121,8 @@
         "weight_kg": 15,
         "prices_by_zone": [
           16.48,
-          31.93,
+          7,
+          10,
           61.8,
           121.54
         ]
@@ -114,7 +131,8 @@
         "weight_kg": 20,
         "prices_by_zone": [
           20.09,
-          39.14,
+          7,
+          10,
           76.22,
           150.38
         ]
@@ -123,7 +141,8 @@
         "weight_kg": 25,
         "prices_by_zone": [
           23.69,
-          45.32,
+          7,
+          10,
           88.58,
           175.1
         ]
@@ -132,7 +151,8 @@
         "weight_kg": 30,
         "prices_by_zone": [
           26.78,
-          51.5,
+          7,
+          10,
           100.94,
           199.82
         ]
@@ -140,5 +160,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Mondial Relay real rates. FR→BE/LU=€5.99, FR→ES=€8.99 flat up to 20kg. Source: mondialrelay.fr [Rates updated 2026-03-23]"
 }

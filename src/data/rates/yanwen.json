@@ -1,7 +1,7 @@
 {
   "carrier_id": "yanwen",
   "effective_date": "2026-03-23",
-  "note": "Estimated Yanwen rates from China. Budget e-commerce shipping specialist, very affordable for small parcels. [Rates adjusted 2026-03-23]",
+  "note": "Real rates from nextsmartship.com. Premium ~$9-15/kg. Zone 3 (Americas/Oceania) anchored to real CN→US data.",
   "zones": [
     {
       "zone": 1,
@@ -85,64 +85,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          4.12,
-          5.15,
-          5.15
+          3.50,
+          4.50,
+          6.00,
+          6.50
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          6.18,
-          7.21,
-          8.24
+          6.00,
+          8.00,
+          12.00,
+          13.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.21,
-          9.27,
-          11.33,
-          12.36
+          10.00,
+          14.00,
+          20.00,
+          22.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          null,
-          null,
-          null,
-          null
+          22.00,
+          30.00,
+          45.00,
+          50.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          null,
-          null,
-          null,
-          null
+          40.00,
+          55.00,
+          85.00,
+          95.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          null,
-          null,
-          null,
-          null
+          75.00,
+          105.00,
+          160.00,
+          180.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          null,
-          null,
-          null,
-          null
+          110.00,
+          155.00,
+          235.00,
+          265.00
         ]
       }
     ],
@@ -150,64 +150,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          7.21,
-          9.27,
-          10.3
+          5.00,
+          7.00,
+          9.00,
+          10.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.24,
-          11.33,
-          14.42,
-          15.45
+          9.00,
+          12.00,
+          16.00,
+          18.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.36,
-          16.48,
-          20.6,
-          22.66
+          15.00,
+          20.00,
+          28.00,
+          31.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.66,
-          30.9,
-          39.14,
-          43.26
+          30.00,
+          42.00,
+          60.00,
+          67.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          39.14,
-          53.56,
-          67.98,
-          76.22
+          55.00,
+          75.00,
+          110.00,
+          125.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          70.04,
-          97.85,
-          123.6,
-          139.05
+          100.00,
+          140.00,
+          210.00,
+          235.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          98.88,
-          139.05,
-          175.1,
-          197.76
+          145.00,
+          200.00,
+          305.00,
+          345.00
         ]
       }
     ]

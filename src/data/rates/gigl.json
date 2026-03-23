@@ -1,7 +1,7 @@
 {
   "carrier_id": "gigl",
   "effective_date": "2026-03-23",
-  "note": "GIG Logistics (GIGL) rates. Nigeria's leading logistics company with operations in Ghana, US, and UK. [Rates adjusted 2026-03-23]",
+  "note": "GIG Logistics real rates. US→NG $4.49/lb, export from NG: NGN7500/kg ($4.84). Source: giglogistics.com [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -17,18 +17,26 @@
     },
     {
       "zone": 2,
-      "description": "International (US & UK)",
+      "description": "Nigeria to UK",
       "countries_from": [
-        "NG",
-        "GH"
+        "NG"
       ],
       "countries_to": [
-        "US",
         "GB"
       ]
     },
     {
       "zone": 3,
+      "description": "Nigeria to US",
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "US"
+      ]
+    },
+    {
+      "zone": 4,
       "description": "Rest of Africa",
       "countries_from": [
         "NG"
@@ -49,57 +57,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          39.14,
-          22.66
+          3,
+          4,
+          4,
+          15
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.24,
-          53.56,
-          30.9
+          5,
+          5,
+          5,
+          20
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.36,
-          74.16,
-          43.26
+          8,
+          8,
+          8,
+          30
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.66,
-          128.75,
-          72.1
+          15,
+          13,
+          14,
+          50
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          39.14,
-          216.3,
-          121.54
+          25,
+          23,
+          26,
+          85
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          66.95,
-          386.25,
-          211.15
+          45,
+          42,
+          48,
+          150
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          94.76,
-          551.05,
-          300.76
+          65,
+          60,
+          70,
+          215
         ]
       }
     ],
@@ -107,57 +122,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          30.9,
-          18.54
+          2,
+          3,
+          3,
+          12
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          43.26,
-          24.72
+          3,
+          5,
+          5,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.24,
-          59.74,
-          35.02
+          5,
+          7,
+          7,
+          24
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          16.48,
-          103,
-          57.68
+          10,
+          13,
+          14,
+          40
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          28.84,
-          173.04,
-          97.85
+          18,
+          23,
+          26,
+          68
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          49.44,
-          309,
-          169.95
+          32,
+          42,
+          48,
+          120
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          70.04,
-          440.84,
-          242.05
+          46,
+          60,
+          70,
+          172
         ]
       }
     ]

@@ -1,7 +1,7 @@
 {
   "carrier_id": "yamato-transport-kuroneko-yamato",
   "effective_date": "2026-03-23",
-  "note": "Estimated Yamato Transport (Kuroneko) international rates from Japan. Japan's #1 door-to-door delivery with 41% market share. [Rates adjusted 2026-03-23]",
+  "note": "Real rates from kuronekoyamato.co.jp. JP→Asia(Z1): 2kg=¥3000($20), 5kg=¥5000($33). JP→US(Z3): 2kg=¥4100($27), 5kg=¥8000($53). JPY→USD at 150.",
   "zones": [
     {
       "zone": 1,
@@ -74,64 +74,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.36,
-          16.48,
-          22.66,
-          28.84
+          13.00,
+          15.00,
+          20.00,
+          24.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.48,
-          22.66,
-          30.9,
-          39.14
+          15.00,
+          18.00,
+          23.00,
+          28.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.66,
-          30.9,
-          43.26,
-          55.62
+          20.00,
+          24.00,
+          27.00,
+          31.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          39.14,
-          53.56,
-          74.16,
-          94.76
+          33.00,
+          40.00,
+          53.00,
+          60.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          63.86,
-          88.58,
-          123.6,
-          159.65
+          53.00,
+          65.00,
+          93.00,
+          107.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          108.15,
-          152.44,
-          211.15,
-          276.04
+          93.00,
+          115.00,
+          170.00,
+          195.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          149.35,
-          211.15,
-          293.55,
-          381.1
+          133.00,
+          165.00,
+          247.00,
+          283.00
         ]
       }
     ]
