@@ -1,7 +1,7 @@
 {
   "carrier_id": "china-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated China Post rates from China. Very affordable, slower delivery. Registered Air Mail limited to 2kg. [Rates adjusted 2026-03-23]",
+  "note": "Real China Post Air Mail Large Package rates sourced from chinapostaltracking.com (CNY→USD at 7.25). CN→US, CN→JP, CN→UK verified. Source: chinapostaltracking.com, effective 2026-03-23.",
   "zones": [
     {
       "zone": 1,
@@ -82,68 +82,68 @@
     }
   ],
   "rates": {
-    "china-post-ems": [
+    "china-post-air-large": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.35,
-          14.49,
-          16.56,
-          18.63
+          12.00,
+          15.00,
+          15.00,
+          17.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.49,
-          19.67,
-          22.77,
-          25.87
+          17.00,
+          22.00,
+          22.00,
+          24.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.7,
-          28.98,
-          33.12,
-          37.26
+          21.00,
+          33.00,
+          35.00,
+          38.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          36.22,
-          49.68,
-          56.93,
-          64.17
+          34.00,
+          65.00,
+          74.00,
+          80.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          60.03,
-          84.87,
-          98.32,
-          111.78
+          54.00,
+          118.00,
+          140.00,
+          152.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          103.5,
-          150.07,
-          173.88,
-          198.72
+          95.00,
+          223.00,
+          271.00,
+          290.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          144.9,
-          212.18,
-          246.33,
-          281.52
+          130.00,
+          310.00,
+          380.00,
+          410.00
         ]
       }
     ],
@@ -151,28 +151,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.1,
-          4.14,
-          5.18,
-          5.18
+          4.00,
+          5.50,
+          6.00,
+          6.50
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.18,
-          7.24,
-          8.28,
-          9.32
+          6.00,
+          8.00,
+          8.50,
+          9.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.28,
-          11.39,
-          13.45,
-          14.49
+          9.00,
+          12.00,
+          13.00,
+          14.00
         ]
       },
       {

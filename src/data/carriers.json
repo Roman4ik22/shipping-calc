@@ -306,8 +306,8 @@
     "description_ru": "Национальная почтовая служба Китая. Предлагает экономичную международную доставку.",
     "services": [
       {
-        "id": "china-post-ems",
-        "name": "China Post EMS",
+        "id": "china-post-air-large",
+        "name": "China Post Air Mail Large Package",
         "speed_days_min": 5,
         "speed_days_max": 10,
         "max_weight_kg": 30,
@@ -2314,8 +2314,8 @@
     "description_ru": "Национальная почтовая служба Швейцарии. Надёжная и пунктуальная. Совладелец Asendia (вместе с La Poste) для международной электронной коммерции.",
     "services": [
       {
-        "id": "swiss-post-standard",
-        "name": "Standard",
+        "id": "swiss-post-postpac-intl",
+        "name": "PostPac International",
         "speed_days_min": 1,
         "speed_days_max": 1,
         "max_weight_kg": 30,
