@@ -1,7 +1,7 @@
 {
   "carrier_id": "cdek-regional",
-  "effective_date": "2025-01-01",
-  "note": "CDEK regional rates for Russia, CIS and neighboring countries.",
+  "effective_date": "2026-03-23",
+  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -11,35 +11,35 @@
     },
     {
       "zone": 2,
-      "description": "CIS Countries",
+      "description": "CIS Countries (Kazakhstan etc.)",
       "countries_from": ["RU", "KZ", "BY"],
       "countries_to": ["RU", "KZ", "BY", "UA", "AM", "GE", "KG", "UZ"]
     },
     {
       "zone": 3,
-      "description": "International",
+      "description": "International (Europe, Asia)",
       "countries_from": ["RU"],
       "countries_to": ["CN", "TR", "AE", "DE", "FI", "EE"]
     }
   ],
   "rates": {
     "cdek-regional-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 25] },
-      { "weight_kg": 1, "prices_by_zone": [7, 16, 32] },
-      { "weight_kg": 2, "prices_by_zone": [9, 22, 42] },
-      { "weight_kg": 5, "prices_by_zone": [14, 35, 68] },
-      { "weight_kg": 10, "prices_by_zone": [22, 58, 115] },
-      { "weight_kg": 20, "prices_by_zone": [38, 102, 205] },
-      { "weight_kg": 30, "prices_by_zone": [52, 145, 292] }
+      { "weight_kg": 0.5, "prices_by_zone": [5, 7, 14] },
+      { "weight_kg": 1, "prices_by_zone": [7, 10, 22] },
+      { "weight_kg": 2, "prices_by_zone": [9, 15, 33] },
+      { "weight_kg": 5, "prices_by_zone": [14, 27, 60] },
+      { "weight_kg": 10, "prices_by_zone": [22, 49, 98] },
+      { "weight_kg": 20, "prices_by_zone": [38, 85, 175] },
+      { "weight_kg": 30, "prices_by_zone": [52, 120, 250] }
     ],
     "cdek-regional-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18] },
-      { "weight_kg": 1, "prices_by_zone": [4, 11, 24] },
-      { "weight_kg": 2, "prices_by_zone": [6, 15, 32] },
-      { "weight_kg": 5, "prices_by_zone": [9, 25, 52] },
-      { "weight_kg": 10, "prices_by_zone": [15, 42, 88] },
-      { "weight_kg": 20, "prices_by_zone": [26, 75, 158] },
-      { "weight_kg": 30, "prices_by_zone": [36, 105, 225] }
+      { "weight_kg": 0.5, "prices_by_zone": [3, 5, 10] },
+      { "weight_kg": 1, "prices_by_zone": [4, 7, 16] },
+      { "weight_kg": 2, "prices_by_zone": [6, 11, 24] },
+      { "weight_kg": 5, "prices_by_zone": [9, 20, 44] },
+      { "weight_kg": 10, "prices_by_zone": [15, 36, 72] },
+      { "weight_kg": 20, "prices_by_zone": [26, 63, 130] },
+      { "weight_kg": 30, "prices_by_zone": [36, 88, 185] }
     ]
   }
 }
