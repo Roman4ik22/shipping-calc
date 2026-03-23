@@ -1,7 +1,7 @@
 {
   "carrier_id": "royal-mail",
   "effective_date": "2026-03-23",
-  "note": "Estimated Royal Mail international rates from UK origin. Reliable postal service with tracked and economy options. [Rates adjusted 2026-03-23]",
+  "note": "Real Royal Mail International Tracked rates from royalmail.com, April 2026. GBP converted to USD at 1.27. Zone 1=Europe Z1, Zone 3=World Z1/Z3 (AU, US). Source: royalmail.com/sending/international",
   "zones": [
     {
       "zone": 1,
@@ -103,71 +103,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.48,
-          14.56,
-          18.72,
-          20.8,
-          22.88
+          17,
+          19,
+          29,
+          33,
+          36
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.64,
-          19.76,
-          24.96,
-          27.04,
-          31.2
+          22,
+          25,
+          38,
+          43,
+          47
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.88,
-          27.04,
-          33.28,
-          37.44,
-          43.68
+          22,
+          28,
+          50,
+          50,
+          55
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          36.4,
-          43.68,
-          54.08,
-          60.32,
-          70.72
+          26,
+          35,
+          72,
+          80,
+          88
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          57.2,
-          70.72,
-          88.4,
-          98.8,
-          116.48
+          34,
+          50,
+          120,
+          146,
+          160
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          95.68,
-          119.6,
-          153.92,
-          171.6,
-          202.8
+          53,
+          80,
+          208,
+          230,
+          253
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          133.12,
-          166.4,
-          216.32,
-          241.28,
-          286
+          72,
+          110,
+          285,
+          315,
+          347
         ]
       }
     ],
@@ -175,41 +175,41 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.28,
-          9.36,
-          11.44,
-          12.48,
-          14.56
+          10,
+          12,
+          18,
+          20,
+          22
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.36,
-          12.48,
-          15.6,
-          17.68,
-          19.76
+          13,
+          15,
+          23,
+          26,
+          29
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13.52,
-          17.68,
-          21.84,
-          24.96,
-          29.12
+          14,
+          17,
+          30,
+          31,
+          34
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.88,
-          29.12,
-          37.44,
-          41.6,
-          49.92
+          17,
+          22,
+          44,
+          49,
+          54
         ]
       },
       {

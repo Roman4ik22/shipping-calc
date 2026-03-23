@@ -1,7 +1,7 @@
 {
   "carrier_id": "japan-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Japan Post international rates from Japan. EMS is premium express, SAL is economy surface-air. [Rates adjusted 2026-03-23]",
+  "note": "Real Japan Post EMS rates from post.japanpost.jp, January 2026. JPY converted to USD at 150. Zone 1=East Asia (China), Zone 2=SE Asia/Oceania, Zone 3=NA/Europe (UK), Zone 4=S.America/Africa/ME (US rates used as reference). Source: post.japanpost.jp/int/charge/list",
   "zones": [
     {
       "zone": 1,
@@ -80,64 +80,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15.52,
-          18.63,
-          22.77,
-          25.87
+          10,
+          16,
+          21,
+          26
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          20.7,
-          25.87,
-          31.05,
-          36.22
+          15,
+          22,
+          29,
+          35
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          28.98,
-          36.22,
-          43.47,
-          49.68
+          23,
+          34,
+          45,
+          53
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          49.68,
-          62.1,
-          74.52,
-          84.87
+          43,
+          65,
+          87,
+          101
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          80.73,
-          101.43,
-          124.2,
-          142.83
+          71,
+          114,
+          157,
+          181
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          139.73,
-          178.02,
-          219.42,
-          253.58
+          124,
+          210,
+          297,
+          341
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          196.65,
-          250.47,
-          308.43,
-          360.18
+          175,
+          300,
+          420,
+          480
         ]
       }
     ],
@@ -145,64 +145,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.28,
-          10.35,
-          12.42,
-          14.49
+          6,
+          10,
+          13,
+          16
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.39,
-          14.49,
-          17.6,
-          20.7
+          9,
+          13,
+          18,
+          21
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.56,
-          20.7,
-          25.87,
-          28.98
+          14,
+          20,
+          27,
+          32
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28.98,
-          37.26,
-          45.54,
-          51.75
+          26,
+          39,
+          52,
+          61
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          49.68,
-          64.17,
-          78.66,
-          91.08
+          43,
+          68,
+          94,
+          108
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          87.98,
-          113.85,
-          142.83,
-          163.53
+          74,
+          126,
+          178,
+          204
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          124.2,
-          160.42,
-          201.83,
-          232.87
+          105,
+          180,
+          252,
+          288
         ]
       }
     ]

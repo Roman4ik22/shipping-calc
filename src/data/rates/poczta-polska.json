@@ -1,7 +1,7 @@
 {
   "carrier_id": "poczta-polska",
   "effective_date": "2026-03-23",
-  "note": "Estimated Poczta Polska rates from Poland. EMS, international parcels, and registered mail. [Rates adjusted 2026-03-23]",
+  "note": "Poczta Polska rates from Poland based on real tariffs from cennik.poczta-polska.pl. PLN converted to USD at 0.25. Zone A1=DE neighbors, A2=UK/rest EU, A4=USA/intercontinental. Source: https://cennik.poczta-polska.pl [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,

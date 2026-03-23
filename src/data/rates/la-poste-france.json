@@ -1,7 +1,7 @@
 {
   "carrier_id": "la-poste-france",
   "effective_date": "2026-03-23",
-  "note": "Estimated La Poste international rates from France. Colissimo parcels and Chronopost express. Extensive international reach. [Rates adjusted 2026-03-23]",
+  "note": "La Poste France international rates based on real Colissimo tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A (EU/UK), Zone C (Americas/Asia). Source: https://tarif-lettre.com [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -95,64 +95,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.32,
-          13.45,
-          18.63,
-          22.77
+          16.00,
+          27.00,
+          38.00,
+          42.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.42,
-          17.6,
-          24.84,
-          30.01
+          21.00,
+          32.00,
+          43.00,
+          47.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.56,
-          23.81,
-          33.12,
-          41.4
+          24.00,
+          41.50,
+          59.00,
+          65.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.91,
-          39.33,
-          56.93,
-          70.38
+          31.00,
+          58.50,
+          86.00,
+          95.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.47,
-          64.17,
-          95.22,
-          119.03
+          51.00,
+          106.50,
+          162.00,
+          178.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          70.38,
-          108.68,
-          163.53,
-          204.93
+          96.00,
+          null,
+          null,
+          null
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          95.22,
-          146.97,
-          222.52,
-          279.45
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
