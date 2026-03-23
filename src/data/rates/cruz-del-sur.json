@@ -1,7 +1,7 @@
 {
   "carrier_id": "cruz-del-sur",
   "effective_date": "2026-03-23",
-  "note": "Estimated Cruz del Sur rates from Peru. Peruvian logistics company with domestic and regional cargo services. [Rates adjusted 2026-03-23]",
+  "note": "Estimated Cruz del Sur rates from Peru. Peruvian logistics company with domestic and regional cargo services. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -63,72 +63,72 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.12,
-          10.3,
-          15.45,
-          30.9
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.18,
-          14.42,
-          20.6,
-          39.14
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.24,
-          18.54,
-          28.84,
-          51.5
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          14.42,
-          30.9,
-          46.35,
-          84.46
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          22.66,
-          51.5,
-          77.25,
-          142.14
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          39.14,
-          90.64,
-          135.96,
-          249.26
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          56.65,
-          128.75,
-          193.64,
-          358.44
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          87.55,
-          200.85,
-          303.85,
+          212.5,
+          566.52,
+          920.98,
           null
         ]
       }
@@ -137,72 +137,72 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          7.21,
-          10.3,
-          22.66
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12,
-          10.3,
-          14.42,
-          28.84
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18,
-          13.39,
-          20.6,
-          37.08
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.3,
-          22.66,
-          32.96,
-          61.8
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.48,
-          37.08,
-          56.65,
-          103
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.84,
-          63.86,
-          97.85,
-          183.34
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          41.2,
-          92.7,
-          139.05,
-          262.65
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          63.86,
-          144.2,
-          216.3,
+          212.5,
+          566.52,
+          920.98,
           null
         ]
       }

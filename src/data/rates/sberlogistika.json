@@ -17,43 +17,43 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09
+          3.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12
+          5.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18
+          7.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.3
+          12.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.48
+          21.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.84
+          36.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          41.2
+          50.0
         ]
       }
     ],
@@ -61,47 +61,47 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.06
+          3.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.09
+          5.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.12
+          7.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.21
+          12.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          12.36
+          21.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          20.6
+          36.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          28.84
+          50.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "[Calibrated from industry benchmarks March 2026]"
 }

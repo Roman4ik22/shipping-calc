@@ -1,7 +1,7 @@
 {
   "carrier_id": "austrian-post-sterreichische-post",
   "effective_date": "2026-03-23",
-  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]",
+  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -89,64 +89,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.00,
-          10.00,
-          11.00,
-          15.00
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.00,
-          15.00,
-          16.50,
-          22.00
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.00,
-          22.00,
-          24.00,
-          32.00
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28.00,
-          34.00,
-          38.00,
-          55.00
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          38.00,
-          48.00,
-          55.00,
-          90.00
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          55.00,
-          72.00,
-          85.00,
-          160.00
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          72.00,
-          95.00,
-          115.00,
-          220.00
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

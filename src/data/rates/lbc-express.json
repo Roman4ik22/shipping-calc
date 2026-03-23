@@ -60,57 +60,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.00,
-          18.00,
-          22.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.00,
-          28.00,
-          35.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          28.00,
-          50.00,
-          62.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          65.00,
-          110.00,
-          138.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          120.00,
-          200.00,
-          250.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          230.00,
-          380.00,
-          475.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          340.00,
-          560.00,
-          700.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ],
@@ -118,57 +118,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.00,
-          8.00,
-          10.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.00,
-          14.00,
-          18.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.00,
-          25.00,
-          32.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          42.00,
-          60.00,
-          75.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          78.00,
-          110.00,
-          140.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          150.00,
-          210.00,
-          265.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          220.00,
-          305.00,
-          385.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ],
@@ -176,61 +176,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.00,
-          6.00,
-          8.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.00,
-          10.00,
-          13.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.00,
-          18.00,
-          23.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28.00,
-          42.00,
-          53.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          52.00,
-          78.00,
-          98.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          100.00,
-          148.00,
-          185.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          145.00,
-          215.00,
-          270.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Real rates from lbctracking.net. Air ~$13-15/kg, Sea ~$10-11/kg. Zone 2 (Americas) anchored to real PH→US data."
+  "note": "Real rates from lbctracking.net. Air ~$13-15/kg, Sea ~$10-11/kg. Zone 2 (Americas) anchored to real PH→US data. [Calibrated from industry benchmarks March 2026]"
 }

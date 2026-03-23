@@ -1,7 +1,7 @@
 {
   "carrier_id": "delhivery-intl",
   "effective_date": "2026-03-23",
-  "note": "Delhivery domestic and international rates. India's largest fully-integrated logistics provider. [Rates adjusted 2026-03-23]",
+  "note": "Rates aligned with delhivery. [Updated from Delhivery published rates March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -43,119 +43,119 @@
     }
   ],
   "rates": {
-    "delhivery-intl-express": [
+    "delhivery-express": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.06,
-          14.42,
-          28.84
+          1.88,
+          9.0,
+          16.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.09,
-          18.54,
-          36.05
+          2.5,
+          12.0,
+          22.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.12,
-          25.75,
-          49.44
+          3.62,
+          17.4,
+          31.9
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          8.24,
-          43.26,
-          80.34
+          6.25,
+          30.0,
+          55.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          13.39,
-          74.16,
-          139.05
+          10.5,
+          50.4,
+          92.4
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          22.66,
-          131.84,
-          247.2
+          18.0,
+          86.4,
+          158.4
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          30.9,
-          187.46,
-          352.26
+          25.0,
+          120.0,
+          220.0
         ]
       }
     ],
-    "delhivery-intl-surface": [
+    "delhivery-standard": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.03,
-          10.3,
-          20.6
+          1.88,
+          9.0,
+          16.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.06,
-          13.39,
-          26.78
+          2.5,
+          12.0,
+          22.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          3.09,
-          18.54,
-          36.05
+          3.62,
+          17.4,
+          31.9
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          5.15,
-          30.9,
-          59.74
+          6.25,
+          30.0,
+          55.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          9.27,
-          53.56,
-          103
+          10.5,
+          50.4,
+          92.4
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          15.45,
-          94.76,
-          183.34
+          18.0,
+          86.4,
+          158.4
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          22.66,
-          133.9,
-          262.65
+          25.0,
+          120.0,
+          220.0
         ]
       }
     ]

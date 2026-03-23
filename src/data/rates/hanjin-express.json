@@ -1,7 +1,7 @@
 {
   "carrier_id": "hanjin-express",
   "effective_date": "2026-03-23",
-  "note": "Estimated Hanjin Express international rates from South Korea. Mainly domestic Korean market with growing international capabilities. [Rates adjusted 2026-03-23]",
+  "note": "Estimated Hanjin Express international rates from South Korea. Mainly domestic Korean market with growing international capabilities. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.36,
-          16.48,
-          22.66,
-          28.84
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.48,
-          22.66,
-          30.9,
-          39.14
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.66,
-          30.9,
-          43.26,
-          55.62
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          39.14,
-          53.56,
-          74.16,
-          94.76
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          63.86,
-          88.58,
-          123.6,
-          159.65
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          108.15,
-          152.44,
-          211.15,
-          276.04
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          149.35,
-          211.15,
-          293.55,
-          381.1
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

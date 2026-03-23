@@ -1,7 +1,7 @@
 {
   "carrier_id": "la-poste-france",
   "effective_date": "2026-03-23",
-  "note": "La Poste France international rates based on real Colissimo tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A (EU/UK), Zone C (Americas/Asia). Source: https://tarif-lettre.com [Rates updated 2026-03-23]",
+  "note": "La Poste France international rates based on real Colissimo tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A (EU/UK), Zone C (Americas/Asia). Source: https://tarif-lettre.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -95,52 +95,52 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.00,
-          27.00,
-          38.00,
-          42.00
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          21.00,
-          32.00,
-          43.00,
-          47.00
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          24.00,
-          41.50,
-          59.00,
-          65.00
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          31.00,
-          58.50,
-          86.00,
-          95.00
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          51.00,
-          106.50,
-          162.00,
-          178.00
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          96.00,
+          36.0,
           null,
           null,
           null

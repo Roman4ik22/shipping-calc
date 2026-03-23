@@ -1,7 +1,7 @@
 {
   "carrier_id": "boxberry-regional",
   "effective_date": "2026-03-23",
-  "note": "Boxberry regional rates. Russian pickup-point delivery network with CIS coverage. [Rates adjusted 2026-03-23]",
+  "note": "Rates aligned with boxberry. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -42,119 +42,61 @@
     }
   ],
   "rates": {
-    "boxberry-regional-standard": [
+    "boxberry-standard": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          8.24,
-          20.6
-        ]
-      },
-      {
-        "weight_kg": 1,
-        "prices_by_zone": [
-          4.12,
-          11.33,
-          26.78
-        ]
-      },
-      {
-        "weight_kg": 2,
-        "prices_by_zone": [
-          5.15,
-          15.45,
-          36.05
-        ]
-      },
-      {
-        "weight_kg": 5,
-        "prices_by_zone": [
-          8.24,
-          25.75,
-          59.74
-        ]
-      },
-      {
-        "weight_kg": 10,
-        "prices_by_zone": [
-          14.42,
-          43.26,
-          100.94
-        ]
-      },
-      {
-        "weight_kg": 20,
-        "prices_by_zone": [
-          24.72,
-          77.25,
-          180.25
-        ]
-      },
-      {
-        "weight_kg": 30,
-        "prices_by_zone": [
-          35.02,
-          108.15,
-          257.5
-        ]
-      }
-    ],
-    "boxberry-regional-pickup": [
-      {
-        "weight_kg": 0.5,
-        "prices_by_zone": [
-          2.06,
           6.18,
-          16.48
-        ]
-      },
-      {
-        "weight_kg": 1,
-        "prices_by_zone": [
-          3.09,
-          9.27,
-          22.66
-        ]
-      },
-      {
-        "weight_kg": 2,
-        "prices_by_zone": [
-          4.12,
-          12.36,
-          28.84
-        ]
-      },
-      {
-        "weight_kg": 5,
-        "prices_by_zone": [
-          6.18,
-          20.6,
-          47.38
-        ]
-      },
-      {
-        "weight_kg": 10,
-        "prices_by_zone": [
-          10.3,
-          35.02,
-          80.34
-        ]
-      },
-      {
-        "weight_kg": 20,
-        "prices_by_zone": [
           18.54,
+          29.36
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.24,
+          24.72,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          11.95,
+          35.84,
+          56.75
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20.6,
           61.8,
-          144.2
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          34.61,
+          103.82,
+          164.39
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          59.33,
+          177.98,
+          281.81
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          26.78,
-          87.55,
-          206
+          82.4,
+          247.2,
+          391.4
         ]
       }
     ]

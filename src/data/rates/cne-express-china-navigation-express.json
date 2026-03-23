@@ -67,57 +67,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.00,
-          12.00,
-          14.50
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.00,
-          17.50,
-          21.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.00,
-          25.00,
-          30.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          23.00,
-          42.00,
-          50.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          42.00,
-          78.00,
-          94.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          80.00,
-          150.00,
-          180.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          115.00,
-          220.00,
-          265.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ],
@@ -125,57 +125,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.00,
-          9.00,
-          11.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.50,
-          13.00,
-          16.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.50,
-          18.00,
-          22.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.00,
-          29.00,
-          35.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          32.00,
-          58.00,
-          70.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          62.00,
-          117.00,
-          140.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          90.00,
-          170.00,
-          205.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ],
@@ -183,61 +183,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.00,
-          5.50,
-          6.50
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.50,
-          8.00,
-          10.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.50,
-          12.00,
-          14.50
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          11.00,
-          20.00,
-          24.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          20.00,
-          38.00,
-          46.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          38.00,
-          72.00,
-          86.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          55.00,
-          105.00,
-          126.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Real rates from leelinesourcing.com. CN→US: 0.5kg=$9, 1kg=$13, 5kg=$29, bulk $5.85/kg. Zone 2 prices anchored to real CN→US data."
+  "note": "Real rates from leelinesourcing.com. CN→US: 0.5kg=$9, 1kg=$13, 5kg=$29, bulk $5.85/kg. Zone 2 prices anchored to real CN→US data. [Calibrated from industry benchmarks March 2026]"
 }

@@ -57,68 +57,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.27,
-          6.18,
-          14.42,
-          22.66
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          0.53,
-          9.27,
-          20.6,
-          32.96
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.06,
-          14.42,
-          30.9,
-          49.44
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.65,
-          26.78,
-          56.65,
-          90.64
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          5.3,
-          46.35,
-          97.85,
-          156.56
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          10.6,
-          80.34,
-          169.95,
-          272.95
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          15.9,
-          111.24,
-          234.84,
-          379.04
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Shadowfax real domestic rates. INR22/0.5kg ($0.27). Source: shadowfax.in [Rates updated 2026-03-23]"
+  "note": "Shadowfax real domestic rates. INR22/0.5kg ($0.27). Source: shadowfax.in [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]"
 }

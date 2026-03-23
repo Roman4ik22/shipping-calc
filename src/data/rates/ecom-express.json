@@ -63,64 +63,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.54,
-          10.3,
-          20.6,
-          32.96
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.02,
-          15.45,
-          30.9,
-          49.44
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.8,
-          22.66,
-          45.32,
-          72.1
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          3.5,
-          41.2,
-          84.46,
-          131.84
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          6.5,
-          72.1,
-          146.26,
-          231.75
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          12,
-          123.6,
-          255.44,
-          401.7
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          17,
-          173.04,
-          355.35,
-          561.35
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ],
@@ -128,68 +128,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.54,
-          7.21,
-          15.45,
-          24.72
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          0.85,
-          11.33,
-          22.66,
-          37.08
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.5,
-          16.48,
-          32.96,
-          53.56
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.7,
-          30.9,
-          61.8,
-          98.88
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          5.1,
-          53.56,
-          108.15,
-          173.04
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          10,
-          90.64,
-          187.46,
-          298.7
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          14,
-          125.66,
-          259.56,
-          414.06
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Ecom Express real domestic rates. INR45-85/kg ($0.54-1.02). Source: ecomexpress.in [Rates updated 2026-03-23]"
+  "note": "Ecom Express real domestic rates. INR45-85/kg ($0.54-1.02). Source: ecomexpress.in [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]"
 }

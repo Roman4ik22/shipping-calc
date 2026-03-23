@@ -73,61 +73,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.12,
-          8.24,
-          16.48
+          0.64,
+          2.62,
+          4.61
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.18,
-          12.36,
-          22.66
+          0.85,
+          3.5,
+          6.15
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          9.27,
-          18.54,
-          35.02
+          1.23,
+          5.08,
+          8.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          16.48,
-          35.02,
-          63.86
+          2.12,
+          8.75,
+          15.38
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          28.84,
-          61.8,
-          111.24
+          3.57,
+          14.7,
+          25.83
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.5,
-          111.24,
-          200.85
+          6.12,
+          25.2,
+          44.28
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          74.16,
-          159.65,
-          286.34
+          8.5,
+          35.0,
+          61.5
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "[Updated from Flash Express Thailand rates March 2026]"
 }

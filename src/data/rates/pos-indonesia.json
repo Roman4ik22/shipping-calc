@@ -1,7 +1,7 @@
 {
   "carrier_id": "pos-indonesia",
   "effective_date": "2026-03-23",
-  "note": "Estimated Pos Indonesia rates from Indonesia. EMS, registered airmail, and international parcel services. [Rates adjusted 2026-03-23]",
+  "note": "Estimated Pos Indonesia rates from Indonesia. EMS, registered airmail, and international parcel services. [Updated from Pos Indonesia EMS tariffs March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -77,10 +77,10 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.24,
+          8.5,
           12.36,
           18.54,
-          20.6
+          20.86
         ]
       },
       {
@@ -95,46 +95,46 @@
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.48,
-          22.66,
-          35.02,
-          39.14
+          16.43,
+          23.9,
+          35.84,
+          40.32
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          25.75,
-          37.08,
-          56.65,
-          63.86
+          28.32,
+          41.2,
+          61.8,
+          69.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.26,
-          61.8,
-          94.76,
-          108.15
+          47.59,
+          69.22,
+          103.82,
+          116.8
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          74.16,
-          108.15,
-          166.86,
-          190.55
+          81.58,
+          118.66,
+          177.98,
+          200.23
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          105.06,
-          154.5,
-          238.96,
-          272.95
+          113.3,
+          164.8,
+          247.2,
+          278.1
         ]
       }
     ],
@@ -142,28 +142,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          4.12,
-          6.18,
-          7.21
+          8.5,
+          12.36,
+          18.54,
+          20.86
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12,
-          6.18,
-          8.24,
-          10.3
+          11.33,
+          16.48,
+          24.72,
+          27.81
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18,
-          9.27,
-          12.36,
-          14.42
+          16.43,
+          23.9,
+          35.84,
+          40.32
         ]
       },
       {
@@ -207,64 +207,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          7.21,
-          10.3,
-          12.36
+          8.5,
+          12.36,
+          18.54,
+          20.86
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.21,
-          10.3,
-          14.42,
-          16.48
+          11.33,
+          16.48,
+          24.72,
+          27.81
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.3,
-          14.42,
-          20.6,
-          24.72
+          16.43,
+          23.9,
+          35.84,
+          40.32
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          16.48,
-          24.72,
-          36.05,
-          41.2
+          28.32,
+          41.2,
+          61.8,
+          69.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          28.84,
-          41.2,
-          59.74,
-          70.04
+          47.59,
+          69.22,
+          103.82,
+          116.8
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          49.44,
-          72.1,
-          105.06,
-          121.54
+          81.58,
+          118.66,
+          177.98,
+          200.23
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          70.04,
-          103,
-          149.35,
-          173.04
+          113.3,
+          164.8,
+          247.2,
+          278.1
         ]
       }
     ]

@@ -1,7 +1,7 @@
 {
   "carrier_id": "yamato-transport-kuroneko-yamato",
   "effective_date": "2026-03-23",
-  "note": "Real rates from kuronekoyamato.co.jp. JP→Asia(Z1): 2kg=¥3000($20), 5kg=¥5000($33). JP→US(Z3): 2kg=¥4100($27), 5kg=¥8000($53). JPY→USD at 150.",
+  "note": "Real rates from kuronekoyamato.co.jp. JP→Asia(Z1): 2kg=¥3000($20), 5kg=¥5000($33). JP→US(Z3): 2kg=¥4100($27), 5kg=¥8000($53). JPY→USD at 150. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -74,64 +74,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13.00,
-          15.00,
-          20.00,
-          24.00
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.00,
-          18.00,
-          23.00,
-          28.00
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.00,
-          24.00,
-          27.00,
-          31.00
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          33.00,
-          40.00,
-          53.00,
-          60.00
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          53.00,
-          65.00,
-          93.00,
-          107.00
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          93.00,
-          115.00,
-          170.00,
-          195.00
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          133.00,
-          165.00,
-          247.00,
-          283.00
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

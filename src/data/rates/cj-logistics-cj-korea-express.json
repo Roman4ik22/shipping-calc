@@ -1,7 +1,7 @@
 {
   "carrier_id": "cj-logistics-cj-korea-express",
   "effective_date": "2026-03-23",
-  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight. [Rates adjusted 2026-03-23]",
+  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -75,64 +75,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          11.33,
-          15.45,
-          21.63,
-          27.81
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.45,
-          21.63,
-          28.84,
-          37.08
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          21.63,
-          29.87,
-          41.2,
-          53.56
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          37.08,
-          51.5,
-          70.04,
-          90.64
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          59.74,
-          84.46,
-          118.45,
-          154.5
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          103,
-          146.26,
-          203.94,
-          265.74
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          142.14,
-          201.88,
-          283.25,
-          368.74
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

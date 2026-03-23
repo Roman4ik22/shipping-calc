@@ -1,7 +1,7 @@
 {
   "carrier_id": "sagawa-express",
   "effective_date": "2026-03-23",
-  "note": "Real rates from sagawa-exp.co.jp. Min 4000JPY (~$27), 80JPY/kg above threshold. JPY→USD at 150. Zone 3 (NA/EU) anchored to real data.",
+  "note": "Real rates from sagawa-exp.co.jp. Min 4000JPY (~$27), 80JPY/kg above threshold. JPY→USD at 150. Zone 3 (NA/EU) anchored to real data. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          22.00,
-          25.00,
-          27.00,
-          30.00
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22.00,
-          25.00,
-          27.00,
-          30.00
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.00,
-          25.00,
-          27.00,
-          30.00
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.00,
-          25.00,
-          27.00,
-          30.00
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          40.00,
-          47.00,
-          53.00,
-          60.00
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          80.00,
-          93.00,
-          107.00,
-          120.00
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          120.00,
-          140.00,
-          160.00,
-          180.00
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

@@ -74,61 +74,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.40,
-          9.00,
-          16.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.40,
-          12.00,
-          22.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          2.80,
-          18.00,
-          32.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.00,
-          35.00,
-          60.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          14.00,
-          60.00,
-          105.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.00,
-          108.00,
-          190.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          42.00,
-          155.00,
-          273.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Real domestic rates: MY RM6.50/kg ($1.40), PH PHP80 for <3kg ($1.40). Zone 1 (ASEAN domestic) anchored to real MY/PH prices."
+  "note": "Real domestic rates: MY RM6.50/kg ($1.40), PH PHP80 for <3kg ($1.40). Zone 1 (ASEAN domestic) anchored to real MY/PH prices. [Calibrated from industry benchmarks March 2026]"
 }

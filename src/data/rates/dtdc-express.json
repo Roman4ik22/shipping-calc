@@ -55,123 +55,123 @@
     }
   ],
   "rates": {
-    "dtdc-express-express": [
+    "dtdc-express": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.36,
-          22.66,
-          39.14
+          2.06,
+          11.2,
+          14
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.48,
-          30.9,
-          51.5
+          3.09,
+          19.2,
+          24
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          24.72,
-          46.35,
-          77.25
+          4.12,
+          32,
+          40
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          47.38,
-          87.55,
-          144.2
+          7.21,
+          52.8,
+          66
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          80.34,
-          152.44,
-          252.35
+          12.36,
+          96,
+          120
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          144.2,
-          276.04,
-          453.2
+          20.6,
+          192.8,
+          241
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          206,
-          396.55,
-          654.05
+          28.84,
+          288,
+          360
         ]
       }
     ],
-    "dtdc-express-standard": [
+    "dtdc-economy": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.24,
-          16.48,
-          28.84
+          1.03,
+          7.84,
+          9.8
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.33,
-          22.66,
-          37.08
+          2.06,
+          13.44,
+          16.8
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.51,
-          32.96,
-          56.65
+          3.09,
+          22.4,
+          28
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.96,
-          63.86,
-          105.06
+          5.15,
+          36.96,
+          46.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          56.65,
-          111.24,
-          183.34
+          8.24,
+          67.2,
+          84
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          103,
-          200.85,
-          331.66
+          14.42,
+          134.96,
+          168.7
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          146.26,
-          288.4,
-          475.86
+          20.6,
+          201.6,
+          252
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Rates aligned with dtdc. [Calibrated from industry benchmarks March 2026]"
 }

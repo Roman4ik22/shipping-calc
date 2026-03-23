@@ -65,181 +65,123 @@
     }
   ],
   "rates": {
-    "blue-dart-dhl-group-express": [
+    "blue-dart-express": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15.75,
-          26.25,
-          42
+          5.15,
+          6.3,
+          9
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          21,
-          36.75,
-          57.75
+          7.21,
+          14,
+          20
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
+          10.3,
           31.5,
-          52.5,
-          84
+          45
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          57.75,
-          99.75,
-          157.5
+          18.54,
+          59.5,
+          85
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          94.5,
-          168,
-          273
+          30.9,
+          98,
+          140
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          168,
-          299.25,
-          483
+          53.56,
+          154,
+          220
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          241.5,
-          430.5,
-          693
+          77.25,
+          210,
+          300
         ]
       }
     ],
-    "blue-dart-dhl-group-standard": [
+    "blue-dart-economy": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.6,
-          21,
-          33.6
+          3.09,
+          5,
+          7.2
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.8,
-          29.4,
-          46.2
+          5.15,
+          11.2,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
+          7.21,
           25.2,
-          42,
-          67.2
+          36
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          46.2,
-          79.8,
-          126
+          13.39,
+          47.6,
+          68
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          75.6,
-          134.4,
-          218.4
+          22.66,
+          78.4,
+          112
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          134.4,
-          239.4,
-          386.4
+          39.14,
+          123.2,
+          176
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          193.2,
-          344.4,
-          554.4
-        ]
-      }
-    ],
-    "blue-dart-dhl-group-economy": [
-      {
-        "weight_kg": 0.5,
-        "prices_by_zone": [
-          8.4,
-          14.7,
-          23.1
-        ]
-      },
-      {
-        "weight_kg": 1,
-        "prices_by_zone": [
-          11.55,
-          19.95,
-          31.5
-        ]
-      },
-      {
-        "weight_kg": 2,
-        "prices_by_zone": [
-          16.8,
-          29.4,
-          46.2
-        ]
-      },
-      {
-        "weight_kg": 5,
-        "prices_by_zone": [
-          31.5,
-          54.6,
-          86.1
-        ]
-      },
-      {
-        "weight_kg": 10,
-        "prices_by_zone": [
-          52.5,
-          92.4,
-          149.1
-        ]
-      },
-      {
-        "weight_kg": 20,
-        "prices_by_zone": [
-          92.4,
-          163.8,
-          264.6
-        ]
-      },
-      {
-        "weight_kg": 30,
-        "prices_by_zone": [
-          132.3,
-          235.2,
-          380.1
+          56.65,
+          168,
+          240
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Blue Dart DHL Group international express rates from India. [Updated from official rate data March 2026]"
+  "note": "Rates aligned with blue-dart. [Calibrated from industry benchmarks March 2026]"
 }

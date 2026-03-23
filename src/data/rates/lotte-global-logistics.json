@@ -1,7 +1,7 @@
 {
   "carrier_id": "lotte-global-logistics",
   "effective_date": "2026-03-23",
-  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network. [Rates adjusted 2026-03-23]",
+  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -84,71 +84,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          15.45,
-          20.6,
-          28.84,
-          32.96
+          3.75,
+          8.44,
+          13.12,
+          17.81,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.18,
-          20.6,
-          28.84,
-          39.14,
-          45.32
+          5.0,
+          11.25,
+          17.5,
+          23.75,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.24,
-          28.84,
-          39.14,
-          53.56,
-          61.8
+          7.25,
+          16.31,
+          25.38,
+          34.44,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.36,
-          49.44,
-          63.86,
-          90.64,
-          105.06
+          12.5,
+          28.12,
+          43.75,
+          59.38,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.54,
-          80.34,
-          105.06,
-          152.44,
-          177.16
+          21.0,
+          47.25,
+          73.5,
+          99.75,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.84,
-          139.05,
-          183.34,
-          265.74,
-          306.94
+          36.0,
+          81.0,
+          126.0,
+          171.0,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          39.14,
-          197.76,
-          262.65,
-          379.04,
-          437.75
+          50.0,
+          112.5,
+          175.0,
+          237.5,
+          300.0
         ]
       }
     ]

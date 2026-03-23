@@ -1,7 +1,7 @@
 {
   "carrier_id": "couriersplease",
   "effective_date": "2026-03-23",
-  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing. [Rates adjusted 2026-03-23]",
+  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -69,64 +69,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.24,
-          20.6,
-          26.78,
-          35.02
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.3,
-          26.78,
-          35.02,
-          45.32
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.42,
-          35.02,
-          47.38,
-          61.8
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.66,
-          57.68,
-          78.28,
-          100.94
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          36.05,
-          94.76,
-          128.75,
-          169.95
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          59.74,
-          162.74,
-          221.45,
-          293.55
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          74.16,
-          200.85,
-          276.04,
-          365.65
+          106.25,
+          283.26,
+          460.49,
+          637.5
         ]
       }
     ]

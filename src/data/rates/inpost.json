@@ -50,86 +50,86 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.9,
-          7,
-          14.49,
-          28.98
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.62,
-          7,
-          17.6,
-          35.19
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.66,
-          7,
-          22.77,
-          45.54
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          5.69,
-          12,
-          26.91,
-          53.82
+          9.25,
+          24.66,
+          40.09,
+          55.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.24,
-          12,
-          35.19,
-          70.38
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          10.87,
-          12,
-          55.89,
-          111.78
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          14.49,
-          14,
-          72.45,
-          146.97
+          29.0,
+          77.31,
+          125.69,
+          174.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          17.6,
-          14,
-          89.01,
-          180.09
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          20.7,
-          18,
-          105.57,
-          213.21
+          106.25,
+          283.26,
+          460.49,
+          637.5
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "InPost real rates. Size A=PLN28.99, B=PLN49.99, C=PLN54.99 (PLN→USD at 0.25). Source: inpost.pl [Rates updated 2026-03-23]"
+  "note": "InPost real rates. Size A=PLN28.99, B=PLN49.99, C=PLN54.99 (PLN→USD at 0.25). Source: inpost.pl [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]"
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "postnl",
   "effective_date": "2026-03-23",
-  "note": "Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Rates adjusted 2026-03-23]",
+  "note": "Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -80,64 +80,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.18,
-          10.35,
-          14.49,
-          22.77
+          3.75,
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.21,
-          12.42,
-          17.6,
-          28.98
+          5.0,
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.24,
-          15.52,
-          22.77,
-          36.22
+          7.25,
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.35,
-          22.77,
-          33.12,
-          56.93
+          12.5,
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          14.49,
-          33.12,
-          49.68,
-          91.08
+          21.0,
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          20.7,
-          53.82,
-          80.73,
-          153.18
+          36.0,
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          26.91,
-          72.45,
-          108.68,
-          212.18
+          50.0,
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]

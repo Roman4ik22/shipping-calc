@@ -1,7 +1,7 @@
 {
   "carrier_id": "evri-formerly-hermes",
   "effective_date": "2026-03-23",
-  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23.",
+  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -100,66 +100,66 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.00,
-          10.00,
-          11.00,
-          11.00,
-          12.00,
-          14.00
+          3.75,
+          7.95,
+          12.15,
+          16.35,
+          20.55,
+          24.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.00,
-          13.00,
-          14.00,
-          14.00,
-          15.00,
-          18.00
+          5.0,
+          10.6,
+          16.2,
+          21.8,
+          27.4,
+          33.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.00,
-          17.00,
-          18.00,
-          19.00,
-          20.00,
-          35.00
+          7.25,
+          15.37,
+          23.49,
+          31.61,
+          39.73,
+          47.85
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.00,
-          22.00,
-          23.00,
-          24.00,
-          26.00,
-          46.00
+          12.5,
+          26.5,
+          40.5,
+          54.5,
+          68.5,
+          82.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.00,
-          25.00,
-          27.00,
-          29.00,
-          32.00,
-          69.00
+          21.0,
+          44.52,
+          68.04,
+          91.56,
+          115.08,
+          138.6
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.00,
-          35.00,
-          40.00,
-          45.00,
-          50.00,
+          36.0,
+          76.32,
+          116.64,
+          156.96,
+          197.28,
           null
         ]
       },

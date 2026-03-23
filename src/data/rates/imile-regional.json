@@ -1,7 +1,7 @@
 {
   "carrier_id": "imile-regional",
   "effective_date": "2026-03-23",
-  "note": "iMile regional rates. Middle East e-commerce delivery specialist. [Rates adjusted 2026-03-23]",
+  "note": "Rates aligned with imile. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -48,119 +48,85 @@
     }
   ],
   "rates": {
-    "imile-regional-standard": [
+    "imile-standard": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.09,
-          8.24,
-          18.54
+          3.75,
+          10.0,
+          16.25
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.12,
-          11.33,
-          24.72
+          5.0,
+          13.33,
+          21.67
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.18,
-          16.48,
-          32.96
+          7.25,
+          19.33,
+          31.42
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          9.25,
+          24.66,
+          40.09
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.3,
-          28.84,
-          56.65
+          12.5,
+          33.33,
+          54.18
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          17.51,
-          49.44,
-          97.85
+          21.0,
+          55.99,
+          91.01
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          29.0,
+          77.31,
+          125.69
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.9,
-          87.55,
-          173.04
+          36.0,
+          95.98,
+          156.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          43.26,
-          123.6,
-          247.2
-        ]
-      }
-    ],
-    "imile-regional-express": [
-      {
-        "weight_kg": 0.5,
-        "prices_by_zone": [
-          5.15,
-          12.36,
-          24.72
+          50.0,
+          133.3,
+          216.7
         ]
       },
       {
-        "weight_kg": 1,
+        "weight_kg": 50,
         "prices_by_zone": [
-          7.21,
-          16.48,
-          30.9
-        ]
-      },
-      {
-        "weight_kg": 2,
-        "prices_by_zone": [
-          9.27,
-          22.66,
-          43.26
-        ]
-      },
-      {
-        "weight_kg": 5,
-        "prices_by_zone": [
-          15.45,
-          39.14,
-          72.1
-        ]
-      },
-      {
-        "weight_kg": 10,
-        "prices_by_zone": [
-          25.75,
-          66.95,
-          123.6
-        ]
-      },
-      {
-        "weight_kg": 20,
-        "prices_by_zone": [
-          43.26,
-          118.45,
-          221.45
-        ]
-      },
-      {
-        "weight_kg": 30,
-        "prices_by_zone": [
-          59.74,
-          166.86,
-          314.15
+          212.5,
+          566.52,
+          920.98
         ]
       }
     ]

@@ -66,65 +66,123 @@
     }
   ],
   "rates": {
-    "kerry-express-kex-standard": [
+    "kerry-express-standard": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          12.36,
-          20.6
+          1.7,
+          10.3,
+          22.66
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.21,
-          16.48,
+          1.7,
+          14.42,
           28.84
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.3,
-          24.72,
-          43.26
+          2.3,
+          20.6,
+          39.14
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20.6,
-          46.35,
-          77.25
+          4.2,
+          36.05,
+          66.95
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          36.05,
-          80.34,
-          135.96
+          7,
+          59.74,
+          113.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          63.86,
-          144.2,
-          245.14
+          12.7,
+          105.06,
+          200.85
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          90.64,
-          206,
-          350.2
+          18.3,
+          149.35,
+          286.34
+        ]
+      }
+    ],
+    "kerry-express-next-day": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.5,
+          14.42,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2.5,
+          18.54,
+          37.08
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          3.4,
+          26.78,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          6.3,
+          46.35,
+          84.46
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          10.5,
+          77.25,
+          144.2
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          19.1,
+          135.96,
+          257.5
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          27.5,
+          193.64,
+          365.65
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Rates aligned with kerry-express. [Calibrated from industry benchmarks March 2026]"
 }

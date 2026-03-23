@@ -1,7 +1,7 @@
 {
   "carrier_id": "kazpost",
   "effective_date": "2026-03-23",
-  "note": "KazPost rates based on typical Kazakh postal pricing. National postal operator of Kazakhstan with domestic and international mail/parcel services. [Rates updated 2026-03-23]",
+  "note": "KazPost rates based on typical Kazakh postal pricing. National postal operator of Kazakhstan with domestic and international mail/parcel services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -58,57 +58,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.50,
-          5.00,
-          12.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.00,
-          8.00,
-          18.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.50,
-          12.00,
-          28.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.00,
-          22.00,
-          50.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          22.00,
-          38.00,
-          90.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          38.00,
-          68.00,
-          162.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          54.00,
-          98.00,
-          232.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ],
@@ -116,57 +116,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.80,
-          3.50,
-          8.00
+          3.75,
+          11.25,
+          18.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.50,
-          5.50,
-          12.00
+          5.0,
+          15.0,
+          25.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.00,
-          8.00,
-          18.00
+          7.25,
+          21.75,
+          36.25
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.50,
-          15.00,
-          34.00
+          12.5,
+          37.5,
+          62.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          13.00,
-          26.00,
-          60.00
+          21.0,
+          63.0,
+          105.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          23.00,
-          46.00,
-          108.00
+          36.0,
+          108.0,
+          180.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          33.00,
-          66.00,
-          155.00
+          50.0,
+          150.0,
+          250.0
         ]
       }
     ]

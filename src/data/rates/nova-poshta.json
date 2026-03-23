@@ -68,65 +68,123 @@
     }
   ],
   "rates": {
-    "nova-poshta-standard": [
+    "nova-poshta-intl-express": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.24,
-          14.42,
-          22.66
+          2,
+          7,
+          11
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.3,
-          18.54,
-          28.84
+          3,
+          10,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.42,
-          25.75,
-          39.14
+          4,
+          10,
+          20
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          24.72,
-          43.26,
-          66.95
+          7,
+          17,
+          23
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          39.14,
-          72.1,
-          113.3
+          11,
+          29,
+          32
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          66.95,
-          123.6,
-          195.7
+          18,
+          49,
+          61
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          92.7,
-          169.95,
-          272.95
+          25,
+          73,
+          98
+        ]
+      }
+    ],
+    "nova-poshta-intl-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          1,
+          5,
+          8
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2,
+          7,
+          12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          3,
+          7,
+          15
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          5,
+          13,
+          17
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          8,
+          22,
+          24
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          13,
+          37,
+          46
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          18,
+          55,
+          73
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Rates aligned with nova-poshta-intl. [Calibrated from industry benchmarks March 2026]"
 }

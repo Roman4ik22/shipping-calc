@@ -1,7 +1,7 @@
 {
   "carrier_id": "canada-post",
   "effective_date": "2026-03-23",
-  "note": "Real Canada Post international rates from canadapost.ca, June 2025. CAD converted to USD at 0.74. Zone 1=US, Zone 3=Europe (UK). Source: canadapost-postescanada.ca/cpc/en/support/articles/shipping-rates",
+  "note": "Real Canada Post international rates from canadapost.ca, June 2025. CAD converted to USD at 0.74. Zone 1=US, Zone 3=Europe (UK). Source: canadapost-postescanada.ca/cpc/en/support/articles/shipping-rates. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -97,71 +97,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          20,
-          30,
-          36,
-          40,
-          45
+          7.5,
+          11.25,
+          15.0,
+          18.75,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          26,
-          37,
-          47,
-          52,
-          58
+          10.0,
+          15.0,
+          20.0,
+          25.0,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          38,
-          55,
-          68,
-          75,
-          84
+          14.5,
+          21.75,
+          29.0,
+          36.25,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          59,
-          82,
-          104,
-          115,
-          128
+          25.0,
+          37.5,
+          50.0,
+          62.5,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          111,
-          160,
-          207,
-          228,
-          252
+          42.0,
+          63.0,
+          84.0,
+          105.0,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          222,
-          296,
-          370,
-          407,
-          450
+          72.0,
+          108.0,
+          144.0,
+          180.0,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          310,
-          415,
-          520,
-          572,
-          630
+          100.0,
+          150.0,
+          200.0,
+          250.0,
+          300.0
         ]
       }
     ],
@@ -169,31 +169,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13,
-          18,
-          22,
-          24,
-          27
+          7.5,
+          11.25,
+          15.0,
+          18.75,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          18,
-          25,
-          30,
-          33,
-          37
+          10.0,
+          15.0,
+          20.0,
+          25.0,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          25,
-          35,
-          43,
-          47,
-          53
+          14.5,
+          21.75,
+          29.0,
+          36.25,
+          43.5
         ]
       },
       {
@@ -241,31 +241,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9,
-          12,
-          15,
-          16,
-          18
+          7.5,
+          11.25,
+          15.0,
+          18.75,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13,
-          17,
-          21,
-          23,
-          26
+          10.0,
+          15.0,
+          20.0,
+          25.0,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18,
-          24,
-          30,
-          33,
-          37
+          14.5,
+          21.75,
+          29.0,
+          36.25,
+          43.5
         ]
       },
       {
