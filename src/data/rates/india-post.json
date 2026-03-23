@@ -1,32 +1,239 @@
 {
   "carrier_id": "india-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated India Post international rates from India. One of the most affordable postal services globally.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated India Post international rates from India. One of the most affordable postal services globally. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "South Asia (Neighbors)", "countries_from": ["IN"], "countries_to": ["LK", "NP", "BD", "PK", "BT", "MV"]},
-    {"zone": 2, "description": "Southeast & East Asia", "countries_from": ["IN"], "countries_to": ["SG", "MY", "TH", "CN", "JP", "KR", "HK", "ID", "PH"]},
-    {"zone": 3, "description": "Middle East & Central Asia", "countries_from": ["IN"], "countries_to": ["AE", "SA", "QA", "KW", "OM", "BH", "IL", "KZ"]},
-    {"zone": 4, "description": "Europe & Oceania", "countries_from": ["IN"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "AU", "NZ", "SE", "CH"]},
-    {"zone": 5, "description": "Americas & Africa", "countries_from": ["IN"], "countries_to": ["US", "CA", "BR", "MX", "ZA", "NG", "KE", "EG"]}
+    {
+      "zone": 1,
+      "description": "South Asia (Neighbors)",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "LK",
+        "NP",
+        "BD",
+        "PK",
+        "BT",
+        "MV"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast & East Asia",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "ID",
+        "PH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Middle East & Central Asia",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "OM",
+        "BH",
+        "IL",
+        "KZ"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Europe & Oceania",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AU",
+        "NZ",
+        "SE",
+        "CH"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Americas & Africa",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "MX",
+        "ZA",
+        "NG",
+        "KE",
+        "EG"
+      ]
+    }
   ],
   "rates": {
     "india-post-ems": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 18, 20, 25, 28]},
-      {"weight_kg": 1, "prices_by_zone": [16, 24, 28, 34, 38]},
-      {"weight_kg": 2, "prices_by_zone": [22, 32, 38, 46, 52]},
-      {"weight_kg": 5, "prices_by_zone": [38, 55, 65, 78, 88]},
-      {"weight_kg": 10, "prices_by_zone": [60, 90, 108, 130, 148]},
-      {"weight_kg": 20, "prices_by_zone": [100, 155, 188, 228, 260]},
-      {"weight_kg": 30, "prices_by_zone": [138, 215, 262, 320, 365]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.42,
+          18.63,
+          20.7,
+          25.87,
+          28.98
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16.56,
+          24.84,
+          28.98,
+          35.19,
+          39.33
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22.77,
+          33.12,
+          39.33,
+          47.61,
+          53.82
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          39.33,
+          56.93,
+          67.27,
+          80.73,
+          91.08
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          62.1,
+          93.15,
+          111.78,
+          134.55,
+          153.18
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          103.5,
+          160.42,
+          194.58,
+          235.98,
+          269.1
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142.83,
+          222.52,
+          271.17,
+          331.2,
+          377.78
+        ]
+      }
     ],
     "india-post-air-parcel": [
-      {"weight_kg": 0.5, "prices_by_zone": [6, 9, 10, 13, 15]},
-      {"weight_kg": 1, "prices_by_zone": [8, 12, 14, 18, 20]},
-      {"weight_kg": 2, "prices_by_zone": [12, 18, 22, 26, 30]},
-      {"weight_kg": 5, "prices_by_zone": [22, 32, 40, 48, 55]},
-      {"weight_kg": 10, "prices_by_zone": [38, 55, 70, 85, 98]},
-      {"weight_kg": 20, "prices_by_zone": [65, 98, 125, 155, 180]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6.21,
+          9.32,
+          10.35,
+          13.45,
+          15.52
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.28,
+          12.42,
+          14.49,
+          18.63,
+          20.7
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.42,
+          18.63,
+          22.77,
+          26.91,
+          31.05
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.77,
+          33.12,
+          41.4,
+          49.68,
+          56.93
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          39.33,
+          56.93,
+          72.45,
+          87.98,
+          101.43
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          67.27,
+          101.43,
+          129.38,
+          160.42,
+          186.3
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

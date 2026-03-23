@@ -1,45 +1,162 @@
 {
   "carrier_id": "boxberry-regional",
-  "effective_date": "2025-01-01",
-  "note": "Boxberry regional rates. Russian pickup-point delivery network with CIS coverage.",
+  "effective_date": "2026-03-23",
+  "note": "Boxberry regional rates. Russian pickup-point delivery network with CIS coverage. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Russia Domestic",
-      "countries_from": ["RU"],
-      "countries_to": ["RU"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "RU"
+      ]
     },
     {
       "zone": 2,
       "description": "CIS Partners",
-      "countries_from": ["RU"],
-      "countries_to": ["KZ", "BY", "AM", "KG"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "KZ",
+        "BY",
+        "AM",
+        "KG"
+      ]
     },
     {
       "zone": 3,
       "description": "International",
-      "countries_from": ["RU"],
-      "countries_to": ["DE", "TR", "CN", "AE", "US"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "TR",
+        "CN",
+        "AE",
+        "US"
+      ]
     }
   ],
   "rates": {
     "boxberry-regional-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 20] },
-      { "weight_kg": 1, "prices_by_zone": [4, 11, 26] },
-      { "weight_kg": 2, "prices_by_zone": [5, 15, 35] },
-      { "weight_kg": 5, "prices_by_zone": [8, 25, 58] },
-      { "weight_kg": 10, "prices_by_zone": [14, 42, 98] },
-      { "weight_kg": 20, "prices_by_zone": [24, 75, 175] },
-      { "weight_kg": 30, "prices_by_zone": [34, 105, 250] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          8.24,
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          11.33,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5.15,
+          15.45,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          8.24,
+          25.75,
+          59.74
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          14.42,
+          43.26,
+          100.94
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          24.72,
+          77.25,
+          180.25
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          35.02,
+          108.15,
+          257.5
+        ]
+      }
     ],
     "boxberry-regional-pickup": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 6, 16] },
-      { "weight_kg": 1, "prices_by_zone": [3, 9, 22] },
-      { "weight_kg": 2, "prices_by_zone": [4, 12, 28] },
-      { "weight_kg": 5, "prices_by_zone": [6, 20, 46] },
-      { "weight_kg": 10, "prices_by_zone": [10, 34, 78] },
-      { "weight_kg": 20, "prices_by_zone": [18, 60, 140] },
-      { "weight_kg": 30, "prices_by_zone": [26, 85, 200] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.06,
+          6.18,
+          16.48
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.09,
+          9.27,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12,
+          12.36,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          6.18,
+          20.6,
+          47.38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          10.3,
+          35.02,
+          80.34
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          18.54,
+          61.8,
+          144.2
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          26.78,
+          87.55,
+          206
+        ]
+      }
     ]
   }
 }

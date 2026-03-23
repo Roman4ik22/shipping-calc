@@ -1,31 +1,248 @@
 {
   "carrier_id": "pochta-rossii",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Pochta Rossii international rates from Russia.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Pochta Rossii international rates from Russia. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "CIS countries", "countries_from": ["RU"], "countries_to": ["BY", "KZ", "AM", "KG", "TJ", "UZ", "MD", "AZ", "TM"]},
-    {"zone": 2, "description": "Europe / Turkey / Israel", "countries_from": ["RU"], "countries_to": ["DE", "FR", "IT", "ES", "GB", "PL", "CZ", "NL", "BE", "AT", "CH", "SE", "NO", "FI", "DK", "HU", "RO", "BG", "GR", "PT", "IE", "TR", "IL", "UA"]},
-    {"zone": 3, "description": "East Asia", "countries_from": ["RU"], "countries_to": ["CN", "JP", "KR", "MN", "HK", "TW"]},
-    {"zone": 4, "description": "South/Southeast Asia", "countries_from": ["RU"], "countries_to": ["TH", "MY", "SG", "ID", "PH", "VN", "IN", "PK", "BD", "LK"]},
-    {"zone": 5, "description": "Americas / Oceania / Africa", "countries_from": ["RU"], "countries_to": ["US", "CA", "BR", "AR", "MX", "AU", "NZ", "ZA", "EG", "KE", "NG"]}
+    {
+      "zone": 1,
+      "description": "CIS countries",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "BY",
+        "KZ",
+        "AM",
+        "KG",
+        "TJ",
+        "UZ",
+        "MD",
+        "AZ",
+        "TM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe / Turkey / Israel",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "GB",
+        "PL",
+        "CZ",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "SE",
+        "NO",
+        "FI",
+        "DK",
+        "HU",
+        "RO",
+        "BG",
+        "GR",
+        "PT",
+        "IE",
+        "TR",
+        "IL",
+        "UA"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "East Asia",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "MN",
+        "HK",
+        "TW"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "South/Southeast Asia",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "TH",
+        "MY",
+        "SG",
+        "ID",
+        "PH",
+        "VN",
+        "IN",
+        "PK",
+        "BD",
+        "LK"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Americas / Oceania / Africa",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "AR",
+        "MX",
+        "AU",
+        "NZ",
+        "ZA",
+        "EG",
+        "KE",
+        "NG"
+      ]
+    }
   ],
   "rates": {
     "pochta-ems": [
-      {"weight_kg": 0.5, "prices_by_zone": [15, 25, 28, 32, 38]},
-      {"weight_kg": 1, "prices_by_zone": [20, 32, 35, 42, 48]},
-      {"weight_kg": 2, "prices_by_zone": [28, 45, 50, 58, 68]},
-      {"weight_kg": 5, "prices_by_zone": [48, 78, 88, 100, 118]},
-      {"weight_kg": 10, "prices_by_zone": [78, 130, 148, 170, 200]},
-      {"weight_kg": 20, "prices_by_zone": [135, 232, 265, 305, 362]},
-      {"weight_kg": 30, "prices_by_zone": [192, 335, 382, 440, 525]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          15.45,
+          25.75,
+          28.84,
+          32.96,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          20.6,
+          32.96,
+          36.05,
+          43.26,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          28.84,
+          46.35,
+          51.5,
+          59.74,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          49.44,
+          80.34,
+          90.64,
+          103,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          80.34,
+          133.9,
+          152.44,
+          175.1,
+          206
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          139.05,
+          238.96,
+          272.95,
+          314.15,
+          372.86
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          197.76,
+          345.05,
+          393.46,
+          453.2,
+          540.75
+        ]
+      }
     ],
     "pochta-parcel": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 12, 14, 16, 20]},
-      {"weight_kg": 1, "prices_by_zone": [10, 16, 18, 22, 26]},
-      {"weight_kg": 2, "prices_by_zone": [14, 22, 26, 30, 38]},
-      {"weight_kg": 5, "prices_by_zone": [25, 40, 48, 55, 68]},
-      {"weight_kg": 10, "prices_by_zone": [42, 70, 82, 98, 120]},
-      {"weight_kg": 20, "prices_by_zone": [75, 128, 152, 180, 222]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.24,
+          12.36,
+          14.42,
+          16.48,
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10.3,
+          16.48,
+          18.54,
+          22.66,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14.42,
+          22.66,
+          26.78,
+          30.9,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          25.75,
+          41.2,
+          49.44,
+          56.65,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          43.26,
+          72.1,
+          84.46,
+          100.94,
+          123.6
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          77.25,
+          131.84,
+          156.56,
+          185.4,
+          228.66
+        ]
+      }
     ]
   }
 }

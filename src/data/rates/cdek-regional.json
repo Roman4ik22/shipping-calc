@@ -1,45 +1,169 @@
 {
   "carrier_id": "cdek-regional",
-  "effective_date": "2025-01-01",
-  "note": "CDEK regional rates for Russia, CIS and neighboring countries.",
+  "effective_date": "2026-03-23",
+  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Russia Domestic",
-      "countries_from": ["RU"],
-      "countries_to": ["RU"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "RU"
+      ]
     },
     {
       "zone": 2,
       "description": "CIS Countries",
-      "countries_from": ["RU", "KZ", "BY"],
-      "countries_to": ["RU", "KZ", "BY", "UA", "AM", "GE", "KG", "UZ"]
+      "countries_from": [
+        "RU",
+        "KZ",
+        "BY"
+      ],
+      "countries_to": [
+        "RU",
+        "KZ",
+        "BY",
+        "UA",
+        "AM",
+        "GE",
+        "KG",
+        "UZ"
+      ]
     },
     {
       "zone": 3,
       "description": "International",
-      "countries_from": ["RU"],
-      "countries_to": ["CN", "TR", "AE", "DE", "FI", "EE"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "CN",
+        "TR",
+        "AE",
+        "DE",
+        "FI",
+        "EE"
+      ]
     }
   ],
   "rates": {
     "cdek-regional-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 25] },
-      { "weight_kg": 1, "prices_by_zone": [7, 16, 32] },
-      { "weight_kg": 2, "prices_by_zone": [9, 22, 42] },
-      { "weight_kg": 5, "prices_by_zone": [14, 35, 68] },
-      { "weight_kg": 10, "prices_by_zone": [22, 58, 115] },
-      { "weight_kg": 20, "prices_by_zone": [38, 102, 205] },
-      { "weight_kg": 30, "prices_by_zone": [52, 145, 292] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          12.36,
+          25.75
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.21,
+          16.48,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9.27,
+          22.66,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          14.42,
+          36.05,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          22.66,
+          59.74,
+          118.45
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          39.14,
+          105.06,
+          211.15
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          53.56,
+          149.35,
+          300.76
+        ]
+      }
     ],
     "cdek-regional-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18] },
-      { "weight_kg": 1, "prices_by_zone": [4, 11, 24] },
-      { "weight_kg": 2, "prices_by_zone": [6, 15, 32] },
-      { "weight_kg": 5, "prices_by_zone": [9, 25, 52] },
-      { "weight_kg": 10, "prices_by_zone": [15, 42, 88] },
-      { "weight_kg": 20, "prices_by_zone": [26, 75, 158] },
-      { "weight_kg": 30, "prices_by_zone": [36, 105, 225] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          8.24,
+          18.54
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          11.33,
+          24.72
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          15.45,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          9.27,
+          25.75,
+          53.56
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          15.45,
+          43.26,
+          90.64
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          26.78,
+          77.25,
+          162.74
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          37.08,
+          108.15,
+          231.75
+        ]
+      }
     ]
   }
 }

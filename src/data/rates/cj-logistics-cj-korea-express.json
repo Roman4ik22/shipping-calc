@@ -1,22 +1,140 @@
 {
   "carrier_id": "cj-logistics-cj-korea-express",
-  "effective_date": "2026-01-01",
-  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "East Asia (JP, CN, TW, HK)", "countries_from": ["KR"], "countries_to": ["JP", "CN", "TW", "HK"]},
-    {"zone": 2, "description": "Southeast Asia & Oceania", "countries_from": ["KR"], "countries_to": ["SG", "MY", "TH", "ID", "VN", "PH", "AU", "NZ", "IN"]},
-    {"zone": 3, "description": "North America & Europe", "countries_from": ["KR"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL", "SE"]},
-    {"zone": 4, "description": "Rest of World", "countries_from": ["KR"], "countries_to": ["AE", "SA", "BR", "MX", "ZA", "TR", "RU", "AR"]}
+    {
+      "zone": 1,
+      "description": "East Asia (JP, CN, TW, HK)",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "JP",
+        "CN",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia & Oceania",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "VN",
+        "PH",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "North America & Europe",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Rest of World",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "BR",
+        "MX",
+        "ZA",
+        "TR",
+        "RU",
+        "AR"
+      ]
+    }
   ],
   "rates": {
     "cj-logistics-cj-korea-express-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [11, 15, 21, 27]},
-      {"weight_kg": 1, "prices_by_zone": [15, 21, 28, 36]},
-      {"weight_kg": 2, "prices_by_zone": [21, 29, 40, 52]},
-      {"weight_kg": 5, "prices_by_zone": [36, 50, 68, 88]},
-      {"weight_kg": 10, "prices_by_zone": [58, 82, 115, 150]},
-      {"weight_kg": 20, "prices_by_zone": [100, 142, 198, 258]},
-      {"weight_kg": 30, "prices_by_zone": [138, 196, 275, 358]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          11.33,
+          15.45,
+          21.63,
+          27.81
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          15.45,
+          21.63,
+          28.84,
+          37.08
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          21.63,
+          29.87,
+          41.2,
+          53.56
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          37.08,
+          51.5,
+          70.04,
+          90.64
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          59.74,
+          84.46,
+          118.45,
+          154.5
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          103,
+          146.26,
+          203.94,
+          265.74
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142.14,
+          201.88,
+          283.25,
+          368.74
+        ]
+      }
     ]
   }
 }

@@ -1,20 +1,124 @@
 {
   "carrier_id": "shadowfax",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["IN"], "countries_to": ["IN"] },
-    { "name": "Zone 1", "countries_from": ["IN"], "countries_to": ["NP","BD","LK","BT","MV"] },
-    { "name": "Zone 2", "countries_from": ["IN"], "countries_to": ["AE","SA","QA","SG","MY","TH"] },
-    { "name": "Zone 3", "countries_from": ["IN"], "countries_to": ["US","CA","GB","DE","AU","JP"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "IN"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "NP",
+        "BD",
+        "LK",
+        "BT",
+        "MV"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "SG",
+        "MY",
+        "TH"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "AU",
+        "JP"
+      ]
+    }
   ],
   "rates": {
     "shadowfax-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [1, 6, 14, 22] },
-      { "weight_kg": 1, "prices_by_zone": [2, 9, 20, 32] },
-      { "weight_kg": 2, "prices_by_zone": [4, 14, 30, 48] },
-      { "weight_kg": 5, "prices_by_zone": [8, 26, 55, 88] },
-      { "weight_kg": 10, "prices_by_zone": [13, 45, 95, 152] },
-      { "weight_kg": 20, "prices_by_zone": [22, 78, 165, 265] },
-      { "weight_kg": 30, "prices_by_zone": [30, 108, 228, 368] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          1.03,
+          6.18,
+          14.42,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2.06,
+          9.27,
+          20.6,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12,
+          14.42,
+          30.9,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          8.24,
+          26.78,
+          56.65,
+          90.64
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          13.39,
+          46.35,
+          97.85,
+          156.56
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          22.66,
+          80.34,
+          169.95,
+          272.95
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          30.9,
+          111.24,
+          234.84,
+          379.04
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

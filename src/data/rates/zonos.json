@@ -1,23 +1,163 @@
 {
   "carrier_id": "zonos",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Zonos platform rates. Zonos is a cross-border trade compliance platform, not a traditional carrier. Rates represent aggregated shipping costs through Zonos partner carriers.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Zonos platform rates. Zonos is a cross-border trade compliance platform, not a traditional carrier. Rates represent aggregated shipping costs through Zonos partner carriers. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "North America", "countries_from": ["US"], "countries_to": ["CA", "MX"]},
-    {"zone": 2, "description": "Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "NL", "IT", "ES", "SE", "DK", "IE", "BE", "AT", "CH"]},
-    {"zone": 3, "description": "Asia Pacific", "countries_from": ["US"], "countries_to": ["JP", "KR", "AU", "NZ", "SG", "HK", "TW", "CN"]},
-    {"zone": 4, "description": "Southeast Asia & South Asia", "countries_from": ["US"], "countries_to": ["TH", "MY", "PH", "ID", "VN", "IN"]},
-    {"zone": 5, "description": "Middle East, Africa & South America", "countries_from": ["US"], "countries_to": ["AE", "SA", "IL", "ZA", "BR", "AR", "CL", "CO", "EG"]}
+    {
+      "zone": 1,
+      "description": "North America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA",
+        "MX"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "IT",
+        "ES",
+        "SE",
+        "DK",
+        "IE",
+        "BE",
+        "AT",
+        "CH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Asia Pacific",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "AU",
+        "NZ",
+        "SG",
+        "HK",
+        "TW",
+        "CN"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Southeast Asia & South Asia",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "TH",
+        "MY",
+        "PH",
+        "ID",
+        "VN",
+        "IN"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Middle East, Africa & South America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IL",
+        "ZA",
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "EG"
+      ]
+    }
   ],
   "rates": {
     "zonos-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 22, 25, 28, 32]},
-      {"weight_kg": 1, "prices_by_zone": [16, 30, 34, 38, 44]},
-      {"weight_kg": 2, "prices_by_zone": [22, 42, 48, 52, 60]},
-      {"weight_kg": 5, "prices_by_zone": [36, 70, 78, 88, 100]},
-      {"weight_kg": 10, "prices_by_zone": [58, 115, 130, 148, 170]},
-      {"weight_kg": 20, "prices_by_zone": [98, 198, 225, 255, 295]},
-      {"weight_kg": 30, "prices_by_zone": [138, 280, 318, 362, 418]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.36,
+          22.66,
+          25.75,
+          28.84,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16.48,
+          30.9,
+          35.02,
+          39.14,
+          45.32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22.66,
+          43.26,
+          49.44,
+          53.56,
+          61.8
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          37.08,
+          72.1,
+          80.34,
+          90.64,
+          103
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          59.74,
+          118.45,
+          133.9,
+          152.44,
+          175.1
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          100.94,
+          203.94,
+          231.75,
+          262.65,
+          303.85
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142.14,
+          288.4,
+          327.54,
+          372.86,
+          430.54
+        ]
+      }
     ]
   }
 }

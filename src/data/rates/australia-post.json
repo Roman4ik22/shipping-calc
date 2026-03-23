@@ -1,41 +1,302 @@
 {
   "carrier_id": "australia-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Australia Post international rates from Australia. National postal service with express, standard, and economy tiers.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Australia Post international rates from Australia. National postal service with express, standard, and economy tiers. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "New Zealand & Pacific Islands", "countries_from": ["AU"], "countries_to": ["NZ", "FJ", "PG", "WS", "TO"]},
-    {"zone": 2, "description": "Southeast Asia", "countries_from": ["AU"], "countries_to": ["SG", "MY", "TH", "ID", "PH", "VN"]},
-    {"zone": 3, "description": "East Asia", "countries_from": ["AU"], "countries_to": ["JP", "KR", "CN", "HK", "TW"]},
-    {"zone": 4, "description": "Europe & North America", "countries_from": ["AU"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "US", "CA"]},
-    {"zone": 5, "description": "Middle East, South Asia, Africa & South America", "countries_from": ["AU"], "countries_to": ["IN", "AE", "SA", "IL", "ZA", "BR", "AR", "EG"]}
+    {
+      "zone": 1,
+      "description": "New Zealand & Pacific Islands",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "NZ",
+        "FJ",
+        "PG",
+        "WS",
+        "TO"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "PH",
+        "VN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "East Asia",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Europe & North America",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "US",
+        "CA"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Middle East, South Asia, Africa & South America",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "IL",
+        "ZA",
+        "BR",
+        "AR",
+        "EG"
+      ]
+    }
   ],
   "rates": {
     "auspost-express": [
-      {"weight_kg": 0.5, "prices_by_zone": [25, 30, 35, 42, 48]},
-      {"weight_kg": 1, "prices_by_zone": [32, 40, 48, 55, 62]},
-      {"weight_kg": 2, "prices_by_zone": [42, 52, 62, 72, 82]},
-      {"weight_kg": 5, "prices_by_zone": [68, 85, 100, 118, 135]},
-      {"weight_kg": 10, "prices_by_zone": [108, 138, 165, 195, 225]},
-      {"weight_kg": 20, "prices_by_zone": [178, 232, 280, 335, 388]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          25.87,
+          31.05,
+          36.22,
+          43.47,
+          49.68
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          33.12,
+          41.4,
+          49.68,
+          56.93,
+          64.17
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          43.47,
+          53.82,
+          64.17,
+          74.52,
+          84.87
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          70.38,
+          87.98,
+          103.5,
+          122.13,
+          139.73
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          111.78,
+          142.83,
+          170.77,
+          201.83,
+          232.87
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          184.23,
+          240.12,
+          289.8,
+          346.73,
+          401.58
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ],
     "auspost-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [15, 18, 22, 26, 30]},
-      {"weight_kg": 1, "prices_by_zone": [20, 25, 30, 35, 42]},
-      {"weight_kg": 2, "prices_by_zone": [28, 35, 42, 50, 58]},
-      {"weight_kg": 5, "prices_by_zone": [45, 58, 70, 85, 98]},
-      {"weight_kg": 10, "prices_by_zone": [72, 95, 115, 140, 162]},
-      {"weight_kg": 20, "prices_by_zone": [120, 160, 198, 240, 280]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          15.52,
+          18.63,
+          22.77,
+          26.91,
+          31.05
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          20.7,
+          25.87,
+          31.05,
+          36.22,
+          43.47
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          28.98,
+          36.22,
+          43.47,
+          51.75,
+          60.03
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          46.58,
+          60.03,
+          72.45,
+          87.98,
+          101.43
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          74.52,
+          98.32,
+          119.03,
+          144.9,
+          167.67
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          124.2,
+          165.6,
+          204.93,
+          248.4,
+          289.8
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ],
     "auspost-economy": [
-      {"weight_kg": 0.5, "prices_by_zone": [10, 12, 15, 18, 20]},
-      {"weight_kg": 1, "prices_by_zone": [14, 17, 20, 24, 28]},
-      {"weight_kg": 2, "prices_by_zone": [20, 24, 30, 35, 40]},
-      {"weight_kg": 5, "prices_by_zone": [32, 40, 50, 60, 70]},
-      {"weight_kg": 10, "prices_by_zone": [52, 68, 85, 102, 120]},
-      {"weight_kg": 20, "prices_by_zone": [88, 118, 148, 178, 210]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10.35,
+          12.42,
+          15.52,
+          18.63,
+          20.7
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14.49,
+          17.6,
+          20.7,
+          24.84,
+          28.98
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20.7,
+          24.84,
+          31.05,
+          36.22,
+          41.4
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          33.12,
+          41.4,
+          51.75,
+          62.1,
+          72.45
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          53.82,
+          70.38,
+          87.98,
+          105.57,
+          124.2
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          91.08,
+          122.13,
+          153.18,
+          184.23,
+          217.35
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

@@ -1,45 +1,168 @@
 {
   "carrier_id": "imile-regional",
-  "effective_date": "2025-01-01",
-  "note": "iMile regional rates. Middle East e-commerce delivery specialist.",
+  "effective_date": "2026-03-23",
+  "note": "iMile regional rates. Middle East e-commerce delivery specialist. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "UAE Domestic",
-      "countries_from": ["AE"],
-      "countries_to": ["AE"]
+      "countries_from": [
+        "AE"
+      ],
+      "countries_to": [
+        "AE"
+      ]
     },
     {
       "zone": 2,
       "description": "GCC & Egypt",
-      "countries_from": ["AE", "SA"],
-      "countries_to": ["AE", "SA", "KW", "BH", "QA", "OM", "EG"]
+      "countries_from": [
+        "AE",
+        "SA"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "KW",
+        "BH",
+        "QA",
+        "OM",
+        "EG"
+      ]
     },
     {
       "zone": 3,
       "description": "Middle East Extended",
-      "countries_from": ["AE", "SA"],
-      "countries_to": ["JO", "LB", "IQ", "MA", "PK", "IN"]
+      "countries_from": [
+        "AE",
+        "SA"
+      ],
+      "countries_to": [
+        "JO",
+        "LB",
+        "IQ",
+        "MA",
+        "PK",
+        "IN"
+      ]
     }
   ],
   "rates": {
     "imile-regional-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 18] },
-      { "weight_kg": 1, "prices_by_zone": [4, 11, 24] },
-      { "weight_kg": 2, "prices_by_zone": [6, 16, 32] },
-      { "weight_kg": 5, "prices_by_zone": [10, 28, 55] },
-      { "weight_kg": 10, "prices_by_zone": [17, 48, 95] },
-      { "weight_kg": 20, "prices_by_zone": [30, 85, 168] },
-      { "weight_kg": 30, "prices_by_zone": [42, 120, 240] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          8.24,
+          18.54
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          11.33,
+          24.72
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          16.48,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10.3,
+          28.84,
+          56.65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          17.51,
+          49.44,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          30.9,
+          87.55,
+          173.04
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          43.26,
+          123.6,
+          247.2
+        ]
+      }
     ],
     "imile-regional-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 24] },
-      { "weight_kg": 1, "prices_by_zone": [7, 16, 30] },
-      { "weight_kg": 2, "prices_by_zone": [9, 22, 42] },
-      { "weight_kg": 5, "prices_by_zone": [15, 38, 70] },
-      { "weight_kg": 10, "prices_by_zone": [25, 65, 120] },
-      { "weight_kg": 20, "prices_by_zone": [42, 115, 215] },
-      { "weight_kg": 30, "prices_by_zone": [58, 162, 305] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          12.36,
+          24.72
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.21,
+          16.48,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9.27,
+          22.66,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          15.45,
+          39.14,
+          72.1
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          25.75,
+          66.95,
+          123.6
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          43.26,
+          118.45,
+          221.45
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          59.74,
+          166.86,
+          314.15
+        ]
+      }
     ]
   }
 }

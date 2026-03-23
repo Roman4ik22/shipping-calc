@@ -1,22 +1,129 @@
 {
   "carrier_id": "sendle",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Sendle rates from Australia. WARNING: Sendle halted operations in January 2026. Rates are historical reference only.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Sendle rates from Australia. WARNING: Sendle halted operations in January 2026. Rates are historical reference only. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Domestic Australia Metro", "countries_from": ["AU"], "countries_to": ["AU"]},
-    {"zone": 2, "description": "New Zealand & Pacific", "countries_from": ["AU"], "countries_to": ["NZ", "FJ", "PG", "WS"]},
-    {"zone": 3, "description": "Asia", "countries_from": ["AU"], "countries_to": ["SG", "MY", "TH", "JP", "KR", "CN", "HK"]},
-    {"zone": 4, "description": "North America & Europe", "countries_from": ["AU"], "countries_to": ["US", "CA", "GB", "DE", "FR", "NL", "IT"]}
+    {
+      "zone": 1,
+      "description": "Domestic Australia Metro",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "AU"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "New Zealand & Pacific",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "NZ",
+        "FJ",
+        "PG",
+        "WS"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Asia",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "JP",
+        "KR",
+        "CN",
+        "HK"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North America & Europe",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "IT"
+      ]
+    }
   ],
   "rates": {
     "sendle-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 18, 24, 30]},
-      {"weight_kg": 1, "prices_by_zone": [10, 24, 32, 40]},
-      {"weight_kg": 2, "prices_by_zone": [13, 32, 42, 54]},
-      {"weight_kg": 5, "prices_by_zone": [20, 52, 70, 90]},
-      {"weight_kg": 10, "prices_by_zone": [32, 85, 115, 150]},
-      {"weight_kg": 20, "prices_by_zone": [52, 145, 195, 260]},
-      {"weight_kg": 25, "prices_by_zone": [65, 180, 242, 322]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.24,
+          18.54,
+          24.72,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10.3,
+          24.72,
+          32.96,
+          41.2
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13.39,
+          32.96,
+          43.26,
+          55.62
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          20.6,
+          53.56,
+          72.1,
+          92.7
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          32.96,
+          87.55,
+          118.45,
+          154.5
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          53.56,
+          149.35,
+          200.85,
+          267.8
+        ]
+      },
+      {
+        "weight_kg": 25,
+        "prices_by_zone": [
+          66.95,
+          185.4,
+          249.26,
+          331.66
+        ]
+      }
     ]
   }
 }

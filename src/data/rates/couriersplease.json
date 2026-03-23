@@ -1,22 +1,134 @@
 {
   "carrier_id": "couriersplease",
-  "effective_date": "2026-01-01",
-  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Domestic Australia Metro", "countries_from": ["AU"], "countries_to": ["AU"]},
-    {"zone": 2, "description": "New Zealand & Pacific", "countries_from": ["AU"], "countries_to": ["NZ", "FJ", "PG"]},
-    {"zone": 3, "description": "Asia & Southeast Asia", "countries_from": ["AU"], "countries_to": ["SG", "MY", "TH", "ID", "PH", "VN", "JP", "KR", "CN", "HK"]},
-    {"zone": 4, "description": "North America, Europe & Rest of World", "countries_from": ["AU"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL", "AE", "IN"]}
+    {
+      "zone": 1,
+      "description": "Domestic Australia Metro",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "AU"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "New Zealand & Pacific",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "NZ",
+        "FJ",
+        "PG"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Asia & Southeast Asia",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "PH",
+        "VN",
+        "JP",
+        "KR",
+        "CN",
+        "HK"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North America, Europe & Rest of World",
+      "countries_from": [
+        "AU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AE",
+        "IN"
+      ]
+    }
   ],
   "rates": {
     "couriersplease-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 20, 26, 34]},
-      {"weight_kg": 1, "prices_by_zone": [10, 26, 34, 44]},
-      {"weight_kg": 2, "prices_by_zone": [14, 34, 46, 60]},
-      {"weight_kg": 5, "prices_by_zone": [22, 56, 76, 98]},
-      {"weight_kg": 10, "prices_by_zone": [35, 92, 125, 165]},
-      {"weight_kg": 20, "prices_by_zone": [58, 158, 215, 285]},
-      {"weight_kg": 25, "prices_by_zone": [72, 195, 268, 355]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.24,
+          20.6,
+          26.78,
+          35.02
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10.3,
+          26.78,
+          35.02,
+          45.32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          14.42,
+          35.02,
+          47.38,
+          61.8
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.66,
+          57.68,
+          78.28,
+          100.94
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36.05,
+          94.76,
+          128.75,
+          169.95
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          59.74,
+          162.74,
+          221.45,
+          293.55
+        ]
+      },
+      {
+        "weight_kg": 25,
+        "prices_by_zone": [
+          74.16,
+          200.85,
+          276.04,
+          365.65
+        ]
+      }
     ]
   }
 }

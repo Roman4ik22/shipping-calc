@@ -1,24 +1,162 @@
 {
   "carrier_id": "packlink",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["ES", "DE", "FR", "IT", "GB"], "countries_to": ["NEIGHBORS"] },
-    { "name": "Zone 1", "countries_from": ["ES", "DE", "FR", "IT", "GB"], "countries_to": ["REGIONAL"] },
-    { "name": "Zone 2", "countries_from": ["ES", "DE", "FR", "IT", "GB"], "countries_to": ["INTERCONTINENTAL"] },
-    { "name": "Zone 3", "countries_from": ["ES", "DE", "FR", "IT", "GB"], "countries_to": ["REMOTE"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "ES",
+        "DE",
+        "FR",
+        "IT",
+        "GB"
+      ],
+      "countries_to": [
+        "NEIGHBORS"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "ES",
+        "DE",
+        "FR",
+        "IT",
+        "GB"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "ES",
+        "DE",
+        "FR",
+        "IT",
+        "GB"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "ES",
+        "DE",
+        "FR",
+        "IT",
+        "GB"
+      ],
+      "countries_to": [
+        "REMOTE"
+      ]
+    }
   ],
   "rates": {
     "packlink-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [4.50, 8.00, 16.00, 28.00] },
-      { "weight_kg": 1, "prices_by_zone": [5.80, 10.00, 20.00, 35.00] },
-      { "weight_kg": 2, "prices_by_zone": [7.50, 13.00, 26.00, 46.00] },
-      { "weight_kg": 3, "prices_by_zone": [9.50, 16.00, 32.00, 56.00] },
-      { "weight_kg": 5, "prices_by_zone": [12.50, 22.00, 42.00, 74.00] },
-      { "weight_kg": 10, "prices_by_zone": [19.00, 34.00, 66.00, 118.00] },
-      { "weight_kg": 15, "prices_by_zone": [25.00, 44.00, 88.00, 156.00] },
-      { "weight_kg": 20, "prices_by_zone": [31.00, 54.00, 108.00, 192.00] },
-      { "weight_kg": 30, "prices_by_zone": [42.00, 74.00, 148.00, 264.00] },
-      { "weight_kg": 50, "prices_by_zone": [62.00, 112.00, 224.00, 398.00] },
-      { "weight_kg": 70, "prices_by_zone": [80.00, 146.00, 292.00, 520.00] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4.64,
+          8.24,
+          16.48,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5.97,
+          10.3,
+          20.6,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          7.73,
+          13.39,
+          26.78,
+          47.38
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          9.79,
+          16.48,
+          32.96,
+          57.68
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.88,
+          22.66,
+          43.26,
+          76.22
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          19.57,
+          35.02,
+          67.98,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          25.75,
+          45.32,
+          90.64,
+          160.68
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          31.93,
+          55.62,
+          111.24,
+          197.76
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          43.26,
+          76.22,
+          152.44,
+          271.92
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          63.86,
+          115.36,
+          230.72,
+          409.94
+        ]
+      },
+      {
+        "weight_kg": 70,
+        "prices_by_zone": [
+          82.4,
+          150.38,
+          300.76,
+          535.6
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

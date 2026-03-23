@@ -1,23 +1,159 @@
 {
   "carrier_id": "evri-formerly-hermes",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Evri (formerly Hermes) international rates from UK/Germany. Budget-friendly European parcel delivery.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Evri (formerly Hermes) international rates from UK/Germany. Budget-friendly European parcel delivery. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Germany & Benelux", "countries_from": ["GB", "DE"], "countries_to": ["DE", "GB", "NL", "BE", "LU"]},
-    {"zone": 2, "description": "Western Europe", "countries_from": ["GB", "DE"], "countries_to": ["FR", "AT", "CH", "DK", "IE"]},
-    {"zone": 3, "description": "Southern Europe", "countries_from": ["GB", "DE"], "countries_to": ["IT", "ES", "PT", "GR"]},
-    {"zone": 4, "description": "Northern & Eastern Europe", "countries_from": ["GB", "DE"], "countries_to": ["SE", "NO", "FI", "PL", "CZ", "SK", "HU"]},
-    {"zone": 5, "description": "Rest of Europe & Beyond", "countries_from": ["GB", "DE"], "countries_to": ["RO", "BG", "HR", "SI", "LT", "LV", "EE"]}
+    {
+      "zone": 1,
+      "description": "Germany & Benelux",
+      "countries_from": [
+        "GB",
+        "DE"
+      ],
+      "countries_to": [
+        "DE",
+        "GB",
+        "NL",
+        "BE",
+        "LU"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Western Europe",
+      "countries_from": [
+        "GB",
+        "DE"
+      ],
+      "countries_to": [
+        "FR",
+        "AT",
+        "CH",
+        "DK",
+        "IE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Southern Europe",
+      "countries_from": [
+        "GB",
+        "DE"
+      ],
+      "countries_to": [
+        "IT",
+        "ES",
+        "PT",
+        "GR"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Northern & Eastern Europe",
+      "countries_from": [
+        "GB",
+        "DE"
+      ],
+      "countries_to": [
+        "SE",
+        "NO",
+        "FI",
+        "PL",
+        "CZ",
+        "SK",
+        "HU"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Rest of Europe & Beyond",
+      "countries_from": [
+        "GB",
+        "DE"
+      ],
+      "countries_to": [
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "LT",
+        "LV",
+        "EE"
+      ]
+    }
   ],
   "rates": {
     "evri-formerly-hermes-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [5, 7, 8, 9, 11]},
-      {"weight_kg": 1, "prices_by_zone": [6, 8, 10, 11, 13]},
-      {"weight_kg": 2, "prices_by_zone": [8, 10, 13, 14, 17]},
-      {"weight_kg": 5, "prices_by_zone": [12, 16, 20, 22, 26]},
-      {"weight_kg": 10, "prices_by_zone": [18, 24, 30, 34, 40]},
-      {"weight_kg": 20, "prices_by_zone": [28, 38, 48, 55, 65]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          7.21,
+          8.24,
+          9.27,
+          11.33
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6.18,
+          8.24,
+          10.3,
+          11.33,
+          13.39
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.24,
+          10.3,
+          13.39,
+          14.42,
+          17.51
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.36,
+          16.48,
+          20.6,
+          22.66,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          18.54,
+          24.72,
+          30.9,
+          35.02,
+          41.2
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          28.84,
+          39.14,
+          49.44,
+          56.65,
+          66.95
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

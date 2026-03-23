@@ -1,41 +1,313 @@
 {
   "carrier_id": "canada-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Canada Post international rates from Canada. Reliable postal service with tracked and economy options.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Canada Post international rates from Canada. Reliable postal service with tracked and economy options. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "United States", "countries_from": ["CA"], "countries_to": ["US"]},
-    {"zone": 2, "description": "Mexico & Caribbean", "countries_from": ["CA"], "countries_to": ["MX", "JM", "DO", "CU", "TT", "BS"]},
-    {"zone": 3, "description": "Europe", "countries_from": ["CA"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "NO", "DK", "CH", "AT", "BE", "PT", "IE"]},
-    {"zone": 4, "description": "Asia & Oceania", "countries_from": ["CA"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "TH", "MY", "AU", "NZ", "IN"]},
-    {"zone": 5, "description": "South America, Africa & Rest of World", "countries_from": ["CA"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "ZA", "NG", "KE", "EG", "AE", "SA"]}
+    {
+      "zone": 1,
+      "description": "United States",
+      "countries_from": [
+        "CA"
+      ],
+      "countries_to": [
+        "US"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Mexico & Caribbean",
+      "countries_from": [
+        "CA"
+      ],
+      "countries_to": [
+        "MX",
+        "JM",
+        "DO",
+        "CU",
+        "TT",
+        "BS"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe",
+      "countries_from": [
+        "CA"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE",
+        "NO",
+        "DK",
+        "CH",
+        "AT",
+        "BE",
+        "PT",
+        "IE"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia & Oceania",
+      "countries_from": [
+        "CA"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "TH",
+        "MY",
+        "AU",
+        "NZ",
+        "IN"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "South America, Africa & Rest of World",
+      "countries_from": [
+        "CA"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "AE",
+        "SA"
+      ]
+    }
   ],
   "rates": {
     "cp-xpresspost-international": [
-      {"weight_kg": 0.5, "prices_by_zone": [30, 38, 42, 48, 55]},
-      {"weight_kg": 1, "prices_by_zone": [38, 48, 55, 62, 70]},
-      {"weight_kg": 2, "prices_by_zone": [48, 60, 70, 80, 90]},
-      {"weight_kg": 5, "prices_by_zone": [72, 92, 108, 125, 140]},
-      {"weight_kg": 10, "prices_by_zone": [110, 145, 172, 200, 225]},
-      {"weight_kg": 20, "prices_by_zone": [180, 240, 290, 338, 380]},
-      {"weight_kg": 30, "prices_by_zone": [245, 330, 400, 468, 528]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          31.05,
+          39.33,
+          43.47,
+          49.68,
+          56.93
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          39.33,
+          49.68,
+          56.93,
+          64.17,
+          72.45
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          49.68,
+          62.1,
+          72.45,
+          82.8,
+          93.15
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          74.52,
+          95.22,
+          111.78,
+          129.38,
+          144.9
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          113.85,
+          150.07,
+          178.02,
+          207,
+          232.87
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          186.3,
+          248.4,
+          300.15,
+          349.83,
+          393.3
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          253.58,
+          341.55,
+          414,
+          484.38,
+          546.48
+        ]
+      }
     ],
     "cp-tracked-packet-international": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 16, 18, 20, 22]},
-      {"weight_kg": 1, "prices_by_zone": [16, 22, 25, 28, 32]},
-      {"weight_kg": 2, "prices_by_zone": [22, 30, 35, 40, 45]},
-      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.42,
+          16.56,
+          18.63,
+          20.7,
+          22.77
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16.56,
+          22.77,
+          25.87,
+          28.98,
+          33.12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22.77,
+          31.05,
+          36.22,
+          41.4,
+          46.58
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ],
     "cp-small-packet-air": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 10, 12, 13, 15]},
-      {"weight_kg": 1, "prices_by_zone": [11, 14, 16, 18, 20]},
-      {"weight_kg": 2, "prices_by_zone": [16, 20, 24, 26, 30]},
-      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.28,
+          10.35,
+          12.42,
+          13.45,
+          15.52
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          11.39,
+          14.49,
+          16.56,
+          18.63,
+          20.7
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          16.56,
+          20.7,
+          24.84,
+          26.91,
+          31.05
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

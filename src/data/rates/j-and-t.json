@@ -76,59 +76,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5,
-          10,
-          18
+          5.15,
+          10.3,
+          18.54
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7,
-          14,
-          24
+          7.21,
+          14.42,
+          24.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10,
-          20,
-          36
+          10.3,
+          20.6,
+          37.08
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          18,
-          38,
-          65
+          18.54,
+          39.14,
+          66.95
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          30,
-          65,
-          115
+          30.9,
+          66.95,
+          118.45
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          55,
-          115,
-          205
+          56.65,
+          118.45,
+          211.15
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          78,
-          165,
-          290
+          80.34,
+          169.95,
+          298.7
         ]
       }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

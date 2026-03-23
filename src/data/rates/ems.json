@@ -1,7 +1,7 @@
 {
   "carrier_id": "ems",
-  "effective_date": "2026-03-21",
-  "note": "Estimated EMS rates. EMS operates through national postal services; actual rates vary by origin country.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated EMS rates. EMS operates through national postal services; actual rates vary by origin country. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -49,64 +49,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15,
-          20,
-          25,
-          30
+          15.52,
+          20.7,
+          25.87,
+          31.05
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22,
-          28,
-          35,
-          42
+          22.77,
+          28.98,
+          36.22,
+          43.47
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          30,
-          38,
-          48,
-          58
+          31.05,
+          39.33,
+          49.68,
+          60.03
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          50,
-          65,
-          82,
-          100
+          51.75,
+          67.27,
+          84.87,
+          103.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          85,
-          110,
-          142,
-          175
+          87.98,
+          113.85,
+          146.97,
+          181.13
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          150,
-          195,
-          250,
-          310
+          155.25,
+          201.83,
+          258.75,
+          320.85
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          215,
-          275,
-          355,
-          440
+          222.52,
+          284.63,
+          367.42,
+          455.4
         ]
       }
     ]

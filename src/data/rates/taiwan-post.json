@@ -1,7 +1,7 @@
 {
   "carrier_id": "taiwan-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Taiwan Post (Chunghwa Post) rates from Taiwan. EMS, air parcel, and registered airmail.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Taiwan Post (Chunghwa Post) rates from Taiwan. EMS, air parcel, and registered airmail. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10,
-          14,
-          22,
-          25
+          10.35,
+          14.49,
+          22.77,
+          25.87
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14,
-          18,
-          28,
-          33
+          14.49,
+          18.63,
+          28.98,
+          34.15
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20,
-          26,
-          40,
-          46
+          20.7,
+          26.91,
+          41.4,
+          47.61
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32,
-          42,
-          65,
-          75
+          33.12,
+          43.47,
+          67.27,
+          77.63
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          54,
-          70,
-          110,
-          128
+          55.89,
+          72.45,
+          113.85,
+          132.48
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          94,
-          122,
-          192,
-          225
+          97.29,
+          126.27,
+          198.72,
+          232.87
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          134,
-          175,
-          275,
-          322
+          138.69,
+          181.13,
+          284.63,
+          333.27
         ]
       }
     ],
@@ -138,64 +138,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6,
-          8,
-          13,
-          15
+          6.21,
+          8.28,
+          13.45,
+          15.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8,
-          12,
-          18,
-          20
+          8.28,
+          12.42,
+          18.63,
+          20.7
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12,
-          16,
-          25,
-          29
+          12.42,
+          16.56,
+          25.87,
+          30.01
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20,
-          28,
-          42,
-          48
+          20.7,
+          28.98,
+          43.47,
+          49.68
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          34,
-          46,
-          72,
-          82
+          35.19,
+          47.61,
+          74.52,
+          84.87
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          58,
-          80,
-          125,
-          145
+          60.03,
+          82.8,
+          129.38,
+          150.07
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          82,
-          115,
-          178,
-          208
+          84.87,
+          119.03,
+          184.23,
+          215.28
         ]
       }
     ],
@@ -203,28 +203,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4,
-          5,
-          7,
-          8
+          4.14,
+          5.18,
+          7.24,
+          8.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5,
-          7,
-          10,
-          11
+          5.18,
+          7.24,
+          10.35,
+          11.39
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7,
-          10,
-          14,
-          16
+          7.24,
+          10.35,
+          14.49,
+          16.56
         ]
       },
       {

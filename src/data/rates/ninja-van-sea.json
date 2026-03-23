@@ -1,45 +1,175 @@
 {
   "carrier_id": "ninja-van-sea",
-  "effective_date": "2025-01-01",
-  "note": "Ninja Van SEA regional rates. Tech-enabled last-mile delivery across Southeast Asia.",
+  "effective_date": "2026-03-23",
+  "note": "Ninja Van SEA regional rates. Tech-enabled last-mile delivery across Southeast Asia. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Domestic Singapore",
-      "countries_from": ["SG"],
-      "countries_to": ["SG"]
+      "countries_from": [
+        "SG"
+      ],
+      "countries_to": [
+        "SG"
+      ]
     },
     {
       "zone": 2,
       "description": "Intra-SEA",
-      "countries_from": ["SG", "MY", "ID", "TH", "VN", "PH"],
-      "countries_to": ["SG", "MY", "ID", "TH", "VN", "PH"]
+      "countries_from": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ]
     },
     {
       "zone": 3,
       "description": "Extended Asia",
-      "countries_from": ["SG", "MY", "ID", "TH", "VN", "PH"],
-      "countries_to": ["CN", "HK", "TW", "JP", "KR", "AU"]
+      "countries_from": [
+        "SG",
+        "MY",
+        "ID",
+        "TH",
+        "VN",
+        "PH"
+      ],
+      "countries_to": [
+        "CN",
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "AU"
+      ]
     }
   ],
   "rates": {
     "ninja-van-sea-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 9, 18] },
-      { "weight_kg": 1, "prices_by_zone": [4, 12, 24] },
-      { "weight_kg": 2, "prices_by_zone": [5, 18, 32] },
-      { "weight_kg": 5, "prices_by_zone": [8, 30, 55] },
-      { "weight_kg": 10, "prices_by_zone": [14, 52, 95] },
-      { "weight_kg": 20, "prices_by_zone": [24, 92, 170] },
-      { "weight_kg": 30, "prices_by_zone": [34, 130, 242] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          9.27,
+          18.54
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          12.36,
+          24.72
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5.15,
+          18.54,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          8.24,
+          30.9,
+          56.65
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          14.42,
+          53.56,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          24.72,
+          94.76,
+          175.1
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          35.02,
+          133.9,
+          249.26
+        ]
+      }
     ],
     "ninja-van-sea-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22] },
-      { "weight_kg": 1, "prices_by_zone": [6, 16, 30] },
-      { "weight_kg": 2, "prices_by_zone": [8, 22, 40] },
-      { "weight_kg": 5, "prices_by_zone": [12, 38, 68] },
-      { "weight_kg": 10, "prices_by_zone": [20, 65, 118] },
-      { "weight_kg": 20, "prices_by_zone": [35, 115, 210] },
-      { "weight_kg": 30, "prices_by_zone": [48, 162, 298] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          12.36,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6.18,
+          16.48,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.24,
+          22.66,
+          41.2
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.36,
+          39.14,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          20.6,
+          66.95,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          36.05,
+          118.45,
+          216.3
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          49.44,
+          166.86,
+          306.94
+        ]
+      }
     ]
   }
 }

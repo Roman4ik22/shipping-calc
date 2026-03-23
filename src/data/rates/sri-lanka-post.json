@@ -1,7 +1,7 @@
 {
   "carrier_id": "sri-lanka-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Sri Lanka Post rates from Sri Lanka. EMS and registered airmail services.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Sri Lanka Post rates from Sri Lanka. EMS and registered airmail services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -71,64 +71,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6,
-          10,
-          18,
-          20
+          6.21,
+          10.35,
+          18.63,
+          20.7
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9,
-          15,
-          25,
-          28
+          9.32,
+          15.52,
+          25.87,
+          28.98
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13,
-          21,
-          35,
-          40
+          13.45,
+          21.74,
+          36.22,
+          41.4
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22,
-          35,
-          58,
-          66
+          22.77,
+          36.22,
+          60.03,
+          68.31
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          36,
-          58,
-          98,
-          112
+          37.26,
+          60.03,
+          101.43,
+          115.92
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          62,
-          100,
-          172,
-          198
+          64.17,
+          103.5,
+          178.02,
+          204.93
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          88,
-          142,
-          245,
-          282
+          91.08,
+          146.97,
+          253.58,
+          291.87
         ]
       }
     ],
@@ -136,28 +136,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2,
-          4,
-          6,
-          7
+          2.07,
+          4.14,
+          6.21,
+          7.24
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3,
-          5,
-          8,
-          10
+          3.1,
+          5.18,
+          8.28,
+          10.35
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5,
-          8,
-          12,
-          14
+          5.18,
+          8.28,
+          12.42,
+          14.49
         ]
       },
       {

@@ -1,22 +1,138 @@
 {
   "carrier_id": "hanjin-express",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Hanjin Express international rates from South Korea. Mainly domestic Korean market with growing international capabilities.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Hanjin Express international rates from South Korea. Mainly domestic Korean market with growing international capabilities. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "East Asia (JP, CN, TW, HK)", "countries_from": ["KR"], "countries_to": ["JP", "CN", "TW", "HK"]},
-    {"zone": 2, "description": "Southeast Asia & Oceania", "countries_from": ["KR"], "countries_to": ["SG", "MY", "TH", "ID", "VN", "PH", "AU", "NZ"]},
-    {"zone": 3, "description": "North America & Europe", "countries_from": ["KR"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL"]},
-    {"zone": 4, "description": "Rest of World", "countries_from": ["KR"], "countries_to": ["IN", "AE", "SA", "BR", "MX", "ZA", "TR", "RU"]}
+    {
+      "zone": 1,
+      "description": "East Asia (JP, CN, TW, HK)",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "JP",
+        "CN",
+        "TW",
+        "HK"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia & Oceania",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "VN",
+        "PH",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "North America & Europe",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Rest of World",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "BR",
+        "MX",
+        "ZA",
+        "TR",
+        "RU"
+      ]
+    }
   ],
   "rates": {
     "hanjin-express-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 16, 22, 28]},
-      {"weight_kg": 1, "prices_by_zone": [16, 22, 30, 38]},
-      {"weight_kg": 2, "prices_by_zone": [22, 30, 42, 54]},
-      {"weight_kg": 5, "prices_by_zone": [38, 52, 72, 92]},
-      {"weight_kg": 10, "prices_by_zone": [62, 86, 120, 155]},
-      {"weight_kg": 20, "prices_by_zone": [105, 148, 205, 268]},
-      {"weight_kg": 30, "prices_by_zone": [145, 205, 285, 370]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.36,
+          16.48,
+          22.66,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16.48,
+          22.66,
+          30.9,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22.66,
+          30.9,
+          43.26,
+          55.62
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          39.14,
+          53.56,
+          74.16,
+          94.76
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          63.86,
+          88.58,
+          123.6,
+          159.65
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          108.15,
+          152.44,
+          211.15,
+          276.04
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          149.35,
+          211.15,
+          293.55,
+          381.1
+        ]
+      }
     ]
   }
 }

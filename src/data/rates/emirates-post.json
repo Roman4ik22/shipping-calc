@@ -1,7 +1,7 @@
 {
   "carrier_id": "emirates-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Emirates Post rates from UAE. Express, standard parcel, and registered mail services.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Emirates Post rates from UAE. Express, standard parcel, and registered mail services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -76,64 +76,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12,
-          18,
-          28,
-          30
+          12.42,
+          18.63,
+          28.98,
+          31.05
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16,
-          24,
-          38,
-          40
+          16.56,
+          24.84,
+          39.33,
+          41.4
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22,
-          32,
-          50,
-          55
+          22.77,
+          33.12,
+          51.75,
+          56.93
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          38,
-          55,
-          82,
-          90
+          39.33,
+          56.93,
+          84.87,
+          93.15
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          62,
-          90,
-          138,
-          152
+          64.17,
+          93.15,
+          142.83,
+          157.32
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          108,
-          158,
-          242,
-          268
+          111.78,
+          163.53,
+          250.47,
+          277.38
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          152,
-          225,
-          348,
-          385
+          157.32,
+          232.87,
+          360.18,
+          398.48
         ]
       }
     ],
@@ -141,64 +141,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7,
-          10,
-          16,
-          18
+          7.24,
+          10.35,
+          16.56,
+          18.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10,
-          15,
-          22,
-          25
+          10.35,
+          15.52,
+          22.77,
+          25.87
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14,
-          20,
-          30,
-          34
+          14.49,
+          20.7,
+          31.05,
+          35.19
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          24,
-          35,
-          50,
-          58
+          24.84,
+          36.22,
+          51.75,
+          60.03
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          40,
-          58,
-          85,
-          98
+          41.4,
+          60.03,
+          87.98,
+          101.43
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          68,
-          100,
-          150,
-          172
+          70.38,
+          103.5,
+          155.25,
+          178.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          98,
-          142,
-          215,
-          248
+          101.43,
+          146.97,
+          222.52,
+          256.68
         ]
       }
     ],
@@ -206,28 +206,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4,
-          6,
-          8,
-          9
+          4.14,
+          6.21,
+          8.28,
+          9.32
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6,
-          8,
-          11,
-          12
+          6.21,
+          8.28,
+          11.39,
+          12.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8,
-          12,
-          16,
-          18
+          8.28,
+          12.42,
+          16.56,
+          18.63
         ]
       },
       {

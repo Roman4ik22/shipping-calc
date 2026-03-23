@@ -1,22 +1,160 @@
 {
   "carrier_id": "la-poste-france",
-  "effective_date": "2026-01-01",
-  "note": "Estimated La Poste international rates from France. Colissimo parcels and Chronopost express. Extensive international reach.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated La Poste international rates from France. Colissimo parcels and Chronopost express. Extensive international reach. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "EU & Overseas Territories (DOM-TOM)", "countries_from": ["FR"], "countries_to": ["DE", "BE", "LU", "NL", "IT", "ES", "PT", "AT", "CH", "GB", "IE"]},
-    {"zone": 2, "description": "Rest of Europe", "countries_from": ["FR"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "GR", "SE", "NO", "FI", "DK", "LT", "LV", "EE"]},
-    {"zone": 3, "description": "North America & East Asia", "countries_from": ["FR"], "countries_to": ["US", "CA", "JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ"]},
-    {"zone": 4, "description": "Rest of World", "countries_from": ["FR"], "countries_to": ["BR", "MX", "AR", "IN", "AE", "SA", "ZA", "NG", "TH", "MY", "ID", "TR", "UA", "RU"]}
+    {
+      "zone": 1,
+      "description": "EU & Overseas Territories (DOM-TOM)",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "DE",
+        "BE",
+        "LU",
+        "NL",
+        "IT",
+        "ES",
+        "PT",
+        "AT",
+        "CH",
+        "GB",
+        "IE"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Europe",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "GR",
+        "SE",
+        "NO",
+        "FI",
+        "DK",
+        "LT",
+        "LV",
+        "EE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "North America & East Asia",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Rest of World",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "BR",
+        "MX",
+        "AR",
+        "IN",
+        "AE",
+        "SA",
+        "ZA",
+        "NG",
+        "TH",
+        "MY",
+        "ID",
+        "TR",
+        "UA",
+        "RU"
+      ]
+    }
   ],
   "rates": {
     "la-poste-france-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [9, 13, 18, 22]},
-      {"weight_kg": 1, "prices_by_zone": [12, 17, 24, 29]},
-      {"weight_kg": 2, "prices_by_zone": [16, 23, 32, 40]},
-      {"weight_kg": 5, "prices_by_zone": [26, 38, 55, 68]},
-      {"weight_kg": 10, "prices_by_zone": [42, 62, 92, 115]},
-      {"weight_kg": 20, "prices_by_zone": [68, 105, 158, 198]},
-      {"weight_kg": 30, "prices_by_zone": [92, 142, 215, 270]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          9.32,
+          13.45,
+          18.63,
+          22.77
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12.42,
+          17.6,
+          24.84,
+          30.01
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          16.56,
+          23.81,
+          33.12,
+          41.4
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          26.91,
+          39.33,
+          56.93,
+          70.38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          43.47,
+          64.17,
+          95.22,
+          119.03
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          70.38,
+          108.68,
+          163.53,
+          204.93
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          95.22,
+          146.97,
+          222.52,
+          279.45
+        ]
+      }
     ]
   }
 }

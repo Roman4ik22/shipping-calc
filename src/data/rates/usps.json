@@ -1,32 +1,252 @@
 {
   "carrier_id": "usps",
-  "effective_date": "2026-01-01",
-  "note": "Estimated USPS international rates from US origin. Affordable postal service for worldwide delivery.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated USPS international rates from US origin. Affordable postal service for worldwide delivery. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Canada & Mexico", "countries_from": ["US"], "countries_to": ["CA", "MX"]},
-    {"zone": 2, "description": "Central America & Caribbean", "countries_from": ["US"], "countries_to": ["GT", "HN", "SV", "NI", "CR", "PA", "JM", "DO", "CU", "TT", "BS"]},
-    {"zone": 3, "description": "Europe & Australia", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "NO", "DK", "CH", "AT", "BE", "PT", "IE", "AU", "NZ"]},
-    {"zone": 4, "description": "Asia & Middle East", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "TH", "MY", "ID", "PH", "IN", "AE", "SA", "IL"]},
-    {"zone": 5, "description": "South America, Africa & Rest of World", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "ZA", "NG", "KE", "EG", "GH", "ET"]}
+    {
+      "zone": 1,
+      "description": "Canada & Mexico",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA",
+        "MX"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Central America & Caribbean",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GT",
+        "HN",
+        "SV",
+        "NI",
+        "CR",
+        "PA",
+        "JM",
+        "DO",
+        "CU",
+        "TT",
+        "BS"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & Australia",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE",
+        "NO",
+        "DK",
+        "CH",
+        "AT",
+        "BE",
+        "PT",
+        "IE",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia & Middle East",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "IN",
+        "AE",
+        "SA",
+        "IL"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "South America, Africa & Rest of World",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "GH",
+        "ET"
+      ]
+    }
   ],
   "rates": {
     "usps-priority-international": [
-      {"weight_kg": 0.5, "prices_by_zone": [28, 32, 38, 42, 48]},
-      {"weight_kg": 1, "prices_by_zone": [35, 40, 48, 52, 58]},
-      {"weight_kg": 2, "prices_by_zone": [42, 50, 58, 65, 72]},
-      {"weight_kg": 5, "prices_by_zone": [62, 75, 88, 98, 108]},
-      {"weight_kg": 10, "prices_by_zone": [95, 118, 140, 158, 175]},
-      {"weight_kg": 20, "prices_by_zone": [155, 198, 238, 268, 298]},
-      {"weight_kg": 30, "prices_by_zone": [212, 272, 328, 370, 412]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          29.04,
+          33.18,
+          39.41,
+          43.55,
+          49.78
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          36.29,
+          41.48,
+          49.78,
+          53.92,
+          60.15
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          43.55,
+          51.85,
+          60.15,
+          67.41,
+          74.66
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          64.29,
+          77.77,
+          91.26,
+          101.63,
+          112
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          98.51,
+          122.37,
+          145.18,
+          163.85,
+          181.48
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          160.73,
+          205.33,
+          246.81,
+          277.92,
+          309.03
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          219.84,
+          282.06,
+          340.14,
+          383.69,
+          427.24
+        ]
+      }
     ],
     "usps-first-class-international": [
-      {"weight_kg": 0.5, "prices_by_zone": [10, 12, 14, 15, 16]},
-      {"weight_kg": 1, "prices_by_zone": [14, 16, 19, 20, 22]},
-      {"weight_kg": 2, "prices_by_zone": [20, 24, 28, 30, 32]},
-      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10.37,
+          12.44,
+          14.52,
+          15.56,
+          16.59
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14.52,
+          16.59,
+          19.7,
+          20.74,
+          22.81
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20.74,
+          24.89,
+          29.04,
+          31.11,
+          33.18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

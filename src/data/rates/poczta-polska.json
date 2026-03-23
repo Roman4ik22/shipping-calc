@@ -1,7 +1,7 @@
 {
   "carrier_id": "poczta-polska",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Poczta Polska rates from Poland. EMS, international parcels, and registered mail.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Poczta Polska rates from Poland. EMS, international parcels, and registered mail. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -79,64 +79,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10,
-          14,
-          22,
-          25
+          10.3,
+          14.42,
+          22.66,
+          25.75
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13,
-          18,
-          28,
-          32
+          13.39,
+          18.54,
+          28.84,
+          32.96
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18,
-          25,
-          38,
-          44
+          18.54,
+          25.75,
+          39.14,
+          45.32
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28,
-          40,
-          62,
-          72
+          28.84,
+          41.2,
+          63.86,
+          74.16
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45,
-          65,
-          105,
-          120
+          46.35,
+          66.95,
+          108.15,
+          123.6
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          78,
-          112,
-          182,
-          210
+          80.34,
+          115.36,
+          187.46,
+          216.3
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          110,
-          160,
-          260,
-          300
+          113.3,
+          164.8,
+          267.8,
+          309
         ]
       }
     ],
@@ -144,64 +144,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6,
-          9,
-          14,
-          16
+          6.18,
+          9.27,
+          14.42,
+          16.48
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8,
-          12,
-          18,
-          22
+          8.24,
+          12.36,
+          18.54,
+          22.66
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12,
-          17,
-          26,
-          30
+          12.36,
+          17.51,
+          26.78,
+          30.9
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          18,
-          28,
-          42,
-          50
+          18.54,
+          28.84,
+          43.26,
+          51.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          30,
-          45,
-          72,
-          85
+          30.9,
+          46.35,
+          74.16,
+          87.55
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          52,
-          78,
-          125,
-          148
+          53.56,
+          80.34,
+          128.75,
+          152.44
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          74,
-          112,
-          178,
-          212
+          76.22,
+          115.36,
+          183.34,
+          218.36
         ]
       }
     ],
@@ -209,28 +209,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4,
-          6,
-          8,
-          10
+          4.12,
+          6.18,
+          8.24,
+          10.3
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5,
-          8,
-          11,
-          13
+          5.15,
+          8.24,
+          11.33,
+          13.39
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7,
-          11,
-          15,
-          18
+          7.21,
+          11.33,
+          15.45,
+          18.54
         ]
       },
       {

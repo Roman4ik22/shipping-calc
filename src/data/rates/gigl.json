@@ -1,45 +1,165 @@
 {
   "carrier_id": "gigl",
-  "effective_date": "2025-01-01",
-  "note": "GIG Logistics (GIGL) rates. Nigeria's leading logistics company with operations in Ghana, US, and UK.",
+  "effective_date": "2026-03-23",
+  "note": "GIG Logistics (GIGL) rates. Nigeria's leading logistics company with operations in Ghana, US, and UK. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Nigeria Domestic & Ghana",
-      "countries_from": ["NG", "GH"],
-      "countries_to": ["NG", "GH"]
+      "countries_from": [
+        "NG",
+        "GH"
+      ],
+      "countries_to": [
+        "NG",
+        "GH"
+      ]
     },
     {
       "zone": 2,
       "description": "International (US & UK)",
-      "countries_from": ["NG", "GH"],
-      "countries_to": ["US", "GB"]
+      "countries_from": [
+        "NG",
+        "GH"
+      ],
+      "countries_to": [
+        "US",
+        "GB"
+      ]
     },
     {
       "zone": 3,
       "description": "Rest of Africa",
-      "countries_from": ["NG"],
-      "countries_to": ["KE", "ZA", "CI", "SN", "CM", "TZ", "ET"]
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "KE",
+        "ZA",
+        "CI",
+        "SN",
+        "CM",
+        "TZ",
+        "ET"
+      ]
     }
   ],
   "rates": {
     "gigl-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 38, 22] },
-      { "weight_kg": 1, "prices_by_zone": [8, 52, 30] },
-      { "weight_kg": 2, "prices_by_zone": [12, 72, 42] },
-      { "weight_kg": 5, "prices_by_zone": [22, 125, 70] },
-      { "weight_kg": 10, "prices_by_zone": [38, 210, 118] },
-      { "weight_kg": 20, "prices_by_zone": [65, 375, 205] },
-      { "weight_kg": 30, "prices_by_zone": [92, 535, 292] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          39.14,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.24,
+          53.56,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.36,
+          74.16,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.66,
+          128.75,
+          72.1
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          39.14,
+          216.3,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          66.95,
+          386.25,
+          211.15
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          94.76,
+          551.05,
+          300.76
+        ]
+      }
     ],
     "gigl-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 30, 18] },
-      { "weight_kg": 1, "prices_by_zone": [5, 42, 24] },
-      { "weight_kg": 2, "prices_by_zone": [8, 58, 34] },
-      { "weight_kg": 5, "prices_by_zone": [16, 100, 56] },
-      { "weight_kg": 10, "prices_by_zone": [28, 168, 95] },
-      { "weight_kg": 20, "prices_by_zone": [48, 300, 165] },
-      { "weight_kg": 30, "prices_by_zone": [68, 428, 235] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          30.9,
+          18.54
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5.15,
+          43.26,
+          24.72
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.24,
+          59.74,
+          35.02
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16.48,
+          103,
+          57.68
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28.84,
+          173.04,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          49.44,
+          309,
+          169.95
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          70.04,
+          440.84,
+          242.05
+        ]
+      }
     ]
   }
 }

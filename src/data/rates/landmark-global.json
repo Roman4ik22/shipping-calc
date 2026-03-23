@@ -1,28 +1,276 @@
 {
   "carrier_id": "landmark-global",
-  "effective_date": "2026-01-01",
-  "note": "Estimated rates for Landmark Global (bpost subsidiary) cross-border e-commerce delivery. Actual rates depend on volume agreements and customs options.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated rates for Landmark Global (bpost subsidiary) cross-border e-commerce delivery. Actual rates depend on volume agreements and customs options. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Benelux & Neighboring", "countries_from": ["BE", "US"], "countries_to": ["BE", "NL", "LU", "DE", "FR"]},
-    {"zone": 2, "description": "Western Europe", "countries_from": ["BE", "US"], "countries_to": ["GB", "IT", "ES", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI"]},
-    {"zone": 3, "description": "Eastern Europe", "countries_from": ["BE", "US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "GR", "CY"]},
-    {"zone": 4, "description": "North America", "countries_from": ["BE"], "countries_to": ["US", "CA", "MX"]},
-    {"zone": 5, "description": "Asia Pacific", "countries_from": ["BE", "US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
-    {"zone": 6, "description": "South America", "countries_from": ["BE", "US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "UY"]},
-    {"zone": 7, "description": "Middle East", "countries_from": ["BE", "US"], "countries_to": ["AE", "SA", "QA", "KW", "IL", "JO", "TR"]},
-    {"zone": 8, "description": "Africa", "countries_from": ["BE", "US"], "countries_to": ["ZA", "NG", "KE", "EG", "MA", "TN", "GH", "ET"]}
+    {
+      "zone": 1,
+      "description": "Benelux & Neighboring",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "BE",
+        "NL",
+        "LU",
+        "DE",
+        "FR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Western Europe",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "IT",
+        "ES",
+        "AT",
+        "CH",
+        "IE",
+        "PT",
+        "DK",
+        "SE",
+        "NO",
+        "FI"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Eastern Europe",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "RS",
+        "EE",
+        "LV",
+        "LT",
+        "GR",
+        "CY"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North America",
+      "countries_from": [
+        "BE"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "MX"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Asia Pacific",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ",
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "VN",
+        "IN"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "South America",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "EC",
+        "UY"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "Middle East",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "IL",
+        "JO",
+        "TR"
+      ]
+    },
+    {
+      "zone": 8,
+      "description": "Africa",
+      "countries_from": [
+        "BE",
+        "US"
+      ],
+      "countries_to": [
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "MA",
+        "TN",
+        "GH",
+        "ET"
+      ]
+    }
   ],
   "rates": {
     "landmark-global-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [7, 11, 14, 16, 18, 20, 22, 26]},
-      {"weight_kg": 1, "prices_by_zone": [9, 15, 19, 22, 25, 28, 30, 36]},
-      {"weight_kg": 2, "prices_by_zone": [13, 20, 26, 32, 35, 40, 44, 50]},
-      {"weight_kg": 3, "prices_by_zone": [17, 28, 36, 42, 48, 54, 58, 68]},
-      {"weight_kg": 5, "prices_by_zone": [24, 38, 50, 60, 68, 78, 84, 98]},
-      {"weight_kg": 10, "prices_by_zone": [40, 66, 88, 105, 120, 138, 150, 175]},
-      {"weight_kg": 15, "prices_by_zone": [56, 92, 124, 148, 170, 198, 215, 252]},
-      {"weight_kg": 20, "prices_by_zone": [72, 120, 160, 192, 222, 258, 280, 328]},
-      {"weight_kg": 30, "prices_by_zone": [105, 175, 235, 282, 325, 378, 412, 482]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          7.21,
+          11.33,
+          14.42,
+          16.48,
+          18.54,
+          20.6,
+          22.66,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9.27,
+          15.45,
+          19.57,
+          22.66,
+          25.75,
+          28.84,
+          30.9,
+          37.08
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13.39,
+          20.6,
+          26.78,
+          32.96,
+          36.05,
+          41.2,
+          45.32,
+          51.5
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          17.51,
+          28.84,
+          37.08,
+          43.26,
+          49.44,
+          55.62,
+          59.74,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          24.72,
+          39.14,
+          51.5,
+          61.8,
+          70.04,
+          80.34,
+          86.52,
+          100.94
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          41.2,
+          67.98,
+          90.64,
+          108.15,
+          123.6,
+          142.14,
+          154.5,
+          180.25
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          57.68,
+          94.76,
+          127.72,
+          152.44,
+          175.1,
+          203.94,
+          221.45,
+          259.56
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          74.16,
+          123.6,
+          164.8,
+          197.76,
+          228.66,
+          265.74,
+          288.4,
+          337.84
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          108.15,
+          180.25,
+          242.05,
+          290.46,
+          334.75,
+          389.34,
+          424.36,
+          496.46
+        ]
+      }
     ]
   }
 }

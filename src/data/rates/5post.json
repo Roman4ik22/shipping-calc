@@ -4,26 +4,92 @@
     {
       "zone": 1,
       "description": "Russia Domestic",
-      "countries_from": ["RU"],
-      "countries_to": ["RU"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "RU"
+      ]
     }
   ],
   "rates": {
     "5post-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [2] },
-      { "weight_kg": 1, "prices_by_zone": [3] },
-      { "weight_kg": 2, "prices_by_zone": [4] },
-      { "weight_kg": 5, "prices_by_zone": [7] },
-      { "weight_kg": 10, "prices_by_zone": [11] },
-      { "weight_kg": 20, "prices_by_zone": [18] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.07
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.1
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          7.24
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          11.39
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          18.63
+        ]
+      }
     ],
     "5post-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [1] },
-      { "weight_kg": 1, "prices_by_zone": [2] },
-      { "weight_kg": 2, "prices_by_zone": [3] },
-      { "weight_kg": 5, "prices_by_zone": [5] },
-      { "weight_kg": 10, "prices_by_zone": [9] },
-      { "weight_kg": 20, "prices_by_zone": [15] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          1.03
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2.07
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          3.1
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          5.18
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          9.32
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          15.52
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

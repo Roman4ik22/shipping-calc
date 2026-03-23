@@ -1,32 +1,247 @@
 {
   "carrier_id": "deutsche-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Deutsche Post / DHL Paket international rates from Germany. Affordable postal service for parcels and packets.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Deutsche Post / DHL Paket international rates from Germany. Affordable postal service for parcels and packets. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "EU Neighboring (AT, NL, BE, LU, DK, PL, CZ)", "countries_from": ["DE"], "countries_to": ["AT", "NL", "BE", "LU", "DK", "PL", "CZ"]},
-    {"zone": 2, "description": "Western & Northern Europe", "countries_from": ["DE"], "countries_to": ["FR", "GB", "IT", "ES", "PT", "IE", "SE", "NO", "FI", "CH"]},
-    {"zone": 3, "description": "Eastern & Southern Europe", "countries_from": ["DE"], "countries_to": ["SK", "HU", "RO", "BG", "HR", "SI", "GR", "TR", "UA", "RS"]},
-    {"zone": 4, "description": "North America & East Asia", "countries_from": ["DE"], "countries_to": ["US", "CA", "JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ"]},
-    {"zone": 5, "description": "Rest of World", "countries_from": ["DE"], "countries_to": ["BR", "MX", "AR", "IN", "AE", "SA", "ZA", "NG", "KE", "TH", "MY", "ID"]}
+    {
+      "zone": 1,
+      "description": "EU Neighboring (AT, NL, BE, LU, DK, PL, CZ)",
+      "countries_from": [
+        "DE"
+      ],
+      "countries_to": [
+        "AT",
+        "NL",
+        "BE",
+        "LU",
+        "DK",
+        "PL",
+        "CZ"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Western & Northern Europe",
+      "countries_from": [
+        "DE"
+      ],
+      "countries_to": [
+        "FR",
+        "GB",
+        "IT",
+        "ES",
+        "PT",
+        "IE",
+        "SE",
+        "NO",
+        "FI",
+        "CH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Eastern & Southern Europe",
+      "countries_from": [
+        "DE"
+      ],
+      "countries_to": [
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "GR",
+        "TR",
+        "UA",
+        "RS"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North America & East Asia",
+      "countries_from": [
+        "DE"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Rest of World",
+      "countries_from": [
+        "DE"
+      ],
+      "countries_to": [
+        "BR",
+        "MX",
+        "AR",
+        "IN",
+        "AE",
+        "SA",
+        "ZA",
+        "NG",
+        "KE",
+        "TH",
+        "MY",
+        "ID"
+      ]
+    }
   ],
   "rates": {
     "dp-international-packet": [
-      {"weight_kg": 0.5, "prices_by_zone": [5, 6, 7, 9, 10]},
-      {"weight_kg": 1, "prices_by_zone": [7, 9, 10, 13, 14]},
-      {"weight_kg": 2, "prices_by_zone": [10, 13, 14, 18, 20]},
-      {"weight_kg": 5, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 10, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 20, "prices_by_zone": [null, null, null, null, null]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.18,
+          6.21,
+          7.24,
+          9.32,
+          10.35
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.24,
+          9.32,
+          10.35,
+          13.45,
+          14.49
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10.35,
+          13.45,
+          14.49,
+          18.63,
+          20.7
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ],
     "dp-international-parcel": [
-      {"weight_kg": 0.5, "prices_by_zone": [9, 12, 14, 18, 22]},
-      {"weight_kg": 1, "prices_by_zone": [10, 14, 16, 22, 26]},
-      {"weight_kg": 2, "prices_by_zone": [12, 17, 20, 28, 32]},
-      {"weight_kg": 5, "prices_by_zone": [18, 26, 30, 42, 50]},
-      {"weight_kg": 10, "prices_by_zone": [28, 40, 48, 68, 82]},
-      {"weight_kg": 20, "prices_by_zone": [45, 68, 82, 118, 142]},
-      {"weight_kg": 30, "prices_by_zone": [62, 92, 112, 165, 198]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          9.32,
+          12.42,
+          14.49,
+          18.63,
+          22.77
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          10.35,
+          14.49,
+          16.56,
+          22.77,
+          26.91
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.42,
+          17.6,
+          20.7,
+          28.98,
+          33.12
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18.63,
+          26.91,
+          31.05,
+          43.47,
+          51.75
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28.98,
+          41.4,
+          49.68,
+          70.38,
+          84.87
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          46.58,
+          70.38,
+          84.87,
+          122.13,
+          146.97
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          64.17,
+          95.22,
+          115.92,
+          170.77,
+          204.93
+        ]
+      }
     ]
   }
 }

@@ -1,38 +1,375 @@
 {
   "carrier_id": "passport-shipping-passport-global",
-  "effective_date": "2026-01-01",
-  "note": "Estimated rates for Passport Global cross-border e-commerce shipping. Actual rates depend on account agreements, surcharges, and destination.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated rates for Passport Global cross-border e-commerce shipping. Actual rates depend on account agreements, surcharges, and destination. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
-    {"zone": 2, "description": "Mexico & Caribbean", "countries_from": ["US"], "countries_to": ["MX", "BS", "JM", "TT", "BB", "DO", "PR", "HT", "CU", "BZ", "GT", "HN", "SV", "NI", "CR", "PA"]},
-    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU"]},
-    {"zone": 4, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "UA", "GR", "CY"]},
-    {"zone": 5, "description": "Asia Pacific", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
-    {"zone": 6, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "UY", "PY", "BO"]},
-    {"zone": 7, "description": "Middle East & Africa", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "IL", "JO", "TR", "ZA", "NG", "KE", "EG", "MA"]}
+    {
+      "zone": 1,
+      "description": "Canada",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Mexico & Caribbean",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "MX",
+        "BS",
+        "JM",
+        "TT",
+        "BB",
+        "DO",
+        "PR",
+        "HT",
+        "CU",
+        "BZ",
+        "GT",
+        "HN",
+        "SV",
+        "NI",
+        "CR",
+        "PA"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Western Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "IE",
+        "PT",
+        "DK",
+        "SE",
+        "NO",
+        "FI",
+        "LU"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Eastern Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "RS",
+        "EE",
+        "LV",
+        "LT",
+        "UA",
+        "GR",
+        "CY"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Asia Pacific",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ",
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "VN",
+        "IN"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "South America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "EC",
+        "UY",
+        "PY",
+        "BO"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "Middle East & Africa",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "IL",
+        "JO",
+        "TR",
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "MA"
+      ]
+    }
   ],
   "rates": {
     "passport-shipping-passport-global-express": [
-      {"weight_kg": 0.5, "prices_by_zone": [18, 25, 30, 35, 38, 40, 45]},
-      {"weight_kg": 1, "prices_by_zone": [22, 32, 38, 45, 48, 52, 58]},
-      {"weight_kg": 2, "prices_by_zone": [28, 42, 50, 58, 62, 68, 75]},
-      {"weight_kg": 3, "prices_by_zone": [34, 52, 62, 72, 78, 85, 95]},
-      {"weight_kg": 5, "prices_by_zone": [45, 70, 85, 98, 105, 115, 128]},
-      {"weight_kg": 10, "prices_by_zone": [72, 115, 140, 162, 175, 192, 215]},
-      {"weight_kg": 15, "prices_by_zone": [98, 158, 195, 225, 245, 268, 300]},
-      {"weight_kg": 20, "prices_by_zone": [125, 200, 248, 288, 312, 342, 385]},
-      {"weight_kg": 30, "prices_by_zone": [175, 285, 355, 412, 448, 492, 555]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          18.54,
+          25.75,
+          30.9,
+          36.05,
+          39.14,
+          41.2,
+          46.35
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          22.66,
+          32.96,
+          39.14,
+          46.35,
+          49.44,
+          53.56,
+          59.74
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          28.84,
+          43.26,
+          51.5,
+          59.74,
+          63.86,
+          70.04,
+          77.25
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          35.02,
+          53.56,
+          63.86,
+          74.16,
+          80.34,
+          87.55,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          46.35,
+          72.1,
+          87.55,
+          100.94,
+          108.15,
+          118.45,
+          131.84
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          74.16,
+          118.45,
+          144.2,
+          166.86,
+          180.25,
+          197.76,
+          221.45
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          100.94,
+          162.74,
+          200.85,
+          231.75,
+          252.35,
+          276.04,
+          309
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          128.75,
+          206,
+          255.44,
+          296.64,
+          321.36,
+          352.26,
+          396.55
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          180.25,
+          293.55,
+          365.65,
+          424.36,
+          461.44,
+          506.76,
+          571.65
+        ]
+      }
     ],
     "passport-shipping-passport-global-economy": [
-      {"weight_kg": 0.5, "prices_by_zone": [10, 15, 18, 22, 24, 26, 30]},
-      {"weight_kg": 1, "prices_by_zone": [13, 20, 25, 30, 32, 35, 40]},
-      {"weight_kg": 2, "prices_by_zone": [17, 28, 35, 42, 45, 50, 55]},
-      {"weight_kg": 3, "prices_by_zone": [22, 36, 45, 54, 58, 65, 72]},
-      {"weight_kg": 5, "prices_by_zone": [30, 50, 62, 75, 82, 90, 100]},
-      {"weight_kg": 10, "prices_by_zone": [50, 85, 105, 125, 138, 152, 170]},
-      {"weight_kg": 15, "prices_by_zone": [68, 118, 148, 175, 192, 212, 238]},
-      {"weight_kg": 20, "prices_by_zone": [88, 150, 188, 225, 245, 270, 305]},
-      {"weight_kg": 30, "prices_by_zone": [125, 215, 270, 322, 352, 388, 438]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10.3,
+          15.45,
+          18.54,
+          22.66,
+          24.72,
+          26.78,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          13.39,
+          20.6,
+          25.75,
+          30.9,
+          32.96,
+          36.05,
+          41.2
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          17.51,
+          28.84,
+          36.05,
+          43.26,
+          46.35,
+          51.5,
+          56.65
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          22.66,
+          37.08,
+          46.35,
+          55.62,
+          59.74,
+          66.95,
+          74.16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          30.9,
+          51.5,
+          63.86,
+          77.25,
+          84.46,
+          92.7,
+          103
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          51.5,
+          87.55,
+          108.15,
+          128.75,
+          142.14,
+          156.56,
+          175.1
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          70.04,
+          121.54,
+          152.44,
+          180.25,
+          197.76,
+          218.36,
+          245.14
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          90.64,
+          154.5,
+          193.64,
+          231.75,
+          252.35,
+          278.1,
+          314.15
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          128.75,
+          221.45,
+          278.1,
+          331.66,
+          362.56,
+          399.64,
+          451.14
+        ]
+      }
     ]
   }
 }

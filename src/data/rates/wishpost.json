@@ -4,40 +4,169 @@
     {
       "zone": 1,
       "description": "Asia",
-      "countries_from": ["CN"],
-      "countries_to": ["JP", "KR", "SG", "MY", "TH", "VN", "ID", "PH", "TW", "HK"]
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "ID",
+        "PH",
+        "TW",
+        "HK"
+      ]
     },
     {
       "zone": 2,
       "description": "Europe & CIS",
-      "countries_from": ["CN"],
-      "countries_to": ["RU", "UA", "BY", "KZ", "GB", "DE", "FR", "IT", "ES", "NL", "PL", "SE", "CZ"]
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "RU",
+        "UA",
+        "BY",
+        "KZ",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "PL",
+        "SE",
+        "CZ"
+      ]
     },
     {
       "zone": 3,
       "description": "Americas & Rest of World",
-      "countries_from": ["CN"],
-      "countries_to": ["US", "CA", "AU", "NZ", "BR", "MX", "AE", "SA", "TR", "IL", "IN"]
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "AU",
+        "NZ",
+        "BR",
+        "MX",
+        "AE",
+        "SA",
+        "TR",
+        "IL",
+        "IN"
+      ]
     }
   ],
   "rates": {
     "wishpost-advanced": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 7, 9] },
-      { "weight_kg": 1, "prices_by_zone": [7, 10, 13] },
-      { "weight_kg": 2, "prices_by_zone": [10, 15, 19] },
-      { "weight_kg": 5, "prices_by_zone": [18, 28, 35] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.18,
+          7.24,
+          9.32
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.24,
+          10.35,
+          13.45
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10.35,
+          15.52,
+          19.67
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18.63,
+          28.98,
+          36.22
+        ]
+      }
     ],
     "wishpost-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 4, 5] },
-      { "weight_kg": 1, "prices_by_zone": [4, 6, 8] },
-      { "weight_kg": 2, "prices_by_zone": [6, 9, 12] },
-      { "weight_kg": 5, "prices_by_zone": [12, 18, 24] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.1,
+          4.14,
+          5.18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.14,
+          6.21,
+          8.28
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.21,
+          9.32,
+          12.42
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.42,
+          18.63,
+          24.84
+        ]
+      }
     ],
     "wishpost-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 3, 3] },
-      { "weight_kg": 1, "prices_by_zone": [3, 4, 5] },
-      { "weight_kg": 2, "prices_by_zone": [4, 6, 8] },
-      { "weight_kg": 5, "prices_by_zone": [8, 12, 16] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.07,
+          3.1,
+          3.1
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.1,
+          4.14,
+          5.18
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.14,
+          6.21,
+          8.28
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          8.28,
+          12.42,
+          16.56
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }
