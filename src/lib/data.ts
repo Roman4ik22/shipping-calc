@@ -86,8 +86,7 @@ import olvaRates from "../data/rates/olva-courier.json";
 import estafetaRates from "../data/rates/estafeta.json";
 import inpostRates from "../data/rates/inpost.json";
 import mondialRates from "../data/rates/mondial-relay.json";
-import springGdsRates from "../data/rates/spring-gds.json";
-import packlinkRates from "../data/rates/packlink.json";
+// Removed: spring-gds, packlink (aggregators, not carriers)
 import bpostRates from "../data/rates/bpost.json";
 // Batch 10
 import austrianPostRates from "../data/rates/austrian-post-sterreichische-post.json";
@@ -106,12 +105,12 @@ import startrackRates from "../data/rates/startrack.json";
 import aramexAuRates from "../data/rates/aramex-australia-formerly-fastway.json";
 import nzPostRates from "../data/rates/nz-post.json";
 import epacketRates from "../data/rates/epacket-china-post-usps.json";
-import zonosRates from "../data/rates/zonos.json";
+// Removed: zonos (platform, not carrier)
 // Batch 12
 import passportRates from "../data/rates/passport-shipping-passport-global.json";
 import pitneyBowesRates from "../data/rates/pitney-bowes.json";
 import asendiaRates from "../data/rates/asendia.json";
-import ipostal1Rates from "../data/rates/ipostal1.json";
+// Removed: ipostal1 (virtual mailbox, not carrier)
 import postnlIntlRates from "../data/rates/postnl-international.json";
 import globalpostRates from "../data/rates/globalpost-by-auctane.json";
 import landmarkRates from "../data/rates/landmark-global.json";
@@ -249,8 +248,6 @@ const allRateData: CarrierRateData[] = [
   estafetaRates,
   inpostRates,
   mondialRates,
-  springGdsRates,
-  packlinkRates,
   bpostRates,
   // Batch 10
   austrianPostRates,
@@ -269,12 +266,10 @@ const allRateData: CarrierRateData[] = [
   aramexAuRates,
   nzPostRates,
   epacketRates,
-  zonosRates,
   // Batch 12
   passportRates,
   pitneyBowesRates,
   asendiaRates,
-  ipostal1Rates,
   postnlIntlRates,
   globalpostRates,
   landmarkRates,
