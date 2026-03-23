@@ -1,23 +1,156 @@
 {
   "carrier_id": "lotte-global-logistics",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Domestic South Korea", "countries_from": ["KR"], "countries_to": ["KR"]},
-    {"zone": 2, "description": "Northeast Asia", "countries_from": ["KR"], "countries_to": ["JP", "CN", "TW", "HK", "MN"]},
-    {"zone": 3, "description": "Southeast Asia & Oceania", "countries_from": ["KR"], "countries_to": ["SG", "MY", "TH", "VN", "PH", "ID", "AU", "NZ"]},
-    {"zone": 4, "description": "North America & Europe", "countries_from": ["KR"], "countries_to": ["US", "CA", "GB", "DE", "FR", "NL", "IT", "ES"]},
-    {"zone": 5, "description": "Middle East, South Asia, Africa & South America", "countries_from": ["KR"], "countries_to": ["AE", "SA", "IN", "BR", "ZA", "EG", "AR", "IL"]}
+    {
+      "zone": 1,
+      "description": "Domestic South Korea",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "KR"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Northeast Asia",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "JP",
+        "CN",
+        "TW",
+        "HK",
+        "MN"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Southeast Asia & Oceania",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "ID",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "North America & Europe",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "NL",
+        "IT",
+        "ES"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Middle East, South Asia, Africa & South America",
+      "countries_from": [
+        "KR"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IN",
+        "BR",
+        "ZA",
+        "EG",
+        "AR",
+        "IL"
+      ]
+    }
   ],
   "rates": {
     "lotte-global-logistics-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [5, 15, 20, 28, 32]},
-      {"weight_kg": 1, "prices_by_zone": [6, 20, 28, 38, 44]},
-      {"weight_kg": 2, "prices_by_zone": [8, 28, 38, 52, 60]},
-      {"weight_kg": 5, "prices_by_zone": [12, 48, 62, 88, 102]},
-      {"weight_kg": 10, "prices_by_zone": [18, 78, 102, 148, 172]},
-      {"weight_kg": 20, "prices_by_zone": [28, 135, 178, 258, 298]},
-      {"weight_kg": 30, "prices_by_zone": [38, 192, 255, 368, 425]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          15.45,
+          20.6,
+          28.84,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6.18,
+          20.6,
+          28.84,
+          39.14,
+          45.32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.24,
+          28.84,
+          39.14,
+          53.56,
+          61.8
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.36,
+          49.44,
+          63.86,
+          90.64,
+          105.06
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          18.54,
+          80.34,
+          105.06,
+          152.44,
+          177.16
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          28.84,
+          139.05,
+          183.34,
+          265.74,
+          306.94
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          39.14,
+          197.76,
+          262.65,
+          379.04,
+          437.75
+        ]
+      }
     ]
   }
 }

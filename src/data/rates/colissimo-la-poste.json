@@ -1,23 +1,168 @@
 {
   "carrier_id": "colissimo-la-poste",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Colissimo (La Poste France) international rates from France. Affordable tracked parcel delivery to 235 countries.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Colissimo (La Poste France) international rates from France. Affordable tracked parcel delivery to 235 countries. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "EU Neighbors", "countries_from": ["FR"], "countries_to": ["BE", "LU", "DE", "NL", "ES", "IT"]},
-    {"zone": 2, "description": "Rest of EU & UK", "countries_from": ["FR"], "countries_to": ["GB", "IE", "PT", "AT", "CH", "DK", "SE", "PL", "CZ"]},
-    {"zone": 3, "description": "Eastern Europe & Mediterranean", "countries_from": ["FR"], "countries_to": ["RO", "BG", "HR", "GR", "HU", "SK", "SI", "NO", "FI"]},
-    {"zone": 4, "description": "Americas & Asia", "countries_from": ["FR"], "countries_to": ["US", "CA", "MX", "BR", "JP", "KR", "CN", "AU", "SG"]},
-    {"zone": 5, "description": "Africa, Middle East & Rest of World", "countries_from": ["FR"], "countries_to": ["MA", "TN", "DZ", "SN", "CI", "AE", "SA", "IN", "ZA"]}
+    {
+      "zone": 1,
+      "description": "EU Neighbors",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "BE",
+        "LU",
+        "DE",
+        "NL",
+        "ES",
+        "IT"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of EU & UK",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "GB",
+        "IE",
+        "PT",
+        "AT",
+        "CH",
+        "DK",
+        "SE",
+        "PL",
+        "CZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Eastern Europe & Mediterranean",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "RO",
+        "BG",
+        "HR",
+        "GR",
+        "HU",
+        "SK",
+        "SI",
+        "NO",
+        "FI"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Americas & Asia",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "MX",
+        "BR",
+        "JP",
+        "KR",
+        "CN",
+        "AU",
+        "SG"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Africa, Middle East & Rest of World",
+      "countries_from": [
+        "FR"
+      ],
+      "countries_to": [
+        "MA",
+        "TN",
+        "DZ",
+        "SN",
+        "CI",
+        "AE",
+        "SA",
+        "IN",
+        "ZA"
+      ]
+    }
   ],
   "rates": {
     "colissimo-la-poste-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [9, 12, 14, 22, 25]},
-      {"weight_kg": 1, "prices_by_zone": [12, 15, 18, 28, 32]},
-      {"weight_kg": 2, "prices_by_zone": [15, 19, 24, 36, 42]},
-      {"weight_kg": 5, "prices_by_zone": [22, 30, 38, 58, 68]},
-      {"weight_kg": 10, "prices_by_zone": [35, 48, 60, 95, 112]},
-      {"weight_kg": 20, "prices_by_zone": [55, 78, 100, 165, 195]},
-      {"weight_kg": 30, "prices_by_zone": [75, 108, 138, 230, 275]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          9.32,
+          12.42,
+          14.49,
+          22.77,
+          25.87
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12.42,
+          15.52,
+          18.63,
+          28.98,
+          33.12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          15.52,
+          19.67,
+          24.84,
+          37.26,
+          43.47
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.77,
+          31.05,
+          39.33,
+          60.03,
+          70.38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          36.22,
+          49.68,
+          62.1,
+          98.32,
+          115.92
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          56.93,
+          80.73,
+          103.5,
+          170.77,
+          201.83
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          77.63,
+          111.78,
+          142.83,
+          238.05,
+          284.63
+        ]
+      }
     ]
   }
 }

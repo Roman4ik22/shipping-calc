@@ -1,45 +1,163 @@
 {
   "carrier_id": "andreani-regional",
-  "effective_date": "2025-01-01",
-  "note": "Andreani regional rates. Argentina's leading logistics provider.",
+  "effective_date": "2026-03-23",
+  "note": "Andreani regional rates. Argentina's leading logistics provider. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Argentina Domestic",
-      "countries_from": ["AR"],
-      "countries_to": ["AR"]
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "AR"
+      ]
     },
     {
       "zone": 2,
       "description": "Southern Cone",
-      "countries_from": ["AR"],
-      "countries_to": ["CL", "UY", "PY", "BR", "BO"]
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "CL",
+        "UY",
+        "PY",
+        "BR",
+        "BO"
+      ]
     },
     {
       "zone": 3,
       "description": "Americas International",
-      "countries_from": ["AR"],
-      "countries_to": ["US", "MX", "CO", "PE", "EC"]
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "US",
+        "MX",
+        "CO",
+        "PE",
+        "EC"
+      ]
     }
   ],
   "rates": {
     "andreani-regional-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 18, 35] },
-      { "weight_kg": 1, "prices_by_zone": [7, 24, 42] },
-      { "weight_kg": 2, "prices_by_zone": [9, 32, 58] },
-      { "weight_kg": 5, "prices_by_zone": [15, 52, 95] },
-      { "weight_kg": 10, "prices_by_zone": [25, 88, 162] },
-      { "weight_kg": 20, "prices_by_zone": [42, 155, 288] },
-      { "weight_kg": 30, "prices_by_zone": [58, 220, 412] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          18.54,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.21,
+          24.72,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9.27,
+          32.96,
+          59.74
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          15.45,
+          53.56,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          25.75,
+          90.64,
+          166.86
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          43.26,
+          159.65,
+          296.64
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          59.74,
+          226.6,
+          424.36
+        ]
+      }
     ],
     "andreani-regional-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 12, 25] },
-      { "weight_kg": 1, "prices_by_zone": [4, 16, 32] },
-      { "weight_kg": 2, "prices_by_zone": [6, 22, 42] },
-      { "weight_kg": 5, "prices_by_zone": [10, 38, 72] },
-      { "weight_kg": 10, "prices_by_zone": [17, 65, 122] },
-      { "weight_kg": 20, "prices_by_zone": [29, 115, 218] },
-      { "weight_kg": 30, "prices_by_zone": [40, 162, 312] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          12.36,
+          25.75
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          16.48,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          22.66,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10.3,
+          39.14,
+          74.16
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          17.51,
+          66.95,
+          125.66
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          29.87,
+          118.45,
+          224.54
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          41.2,
+          166.86,
+          321.36
+        ]
+      }
     ]
   }
 }

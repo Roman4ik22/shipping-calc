@@ -1,29 +1,195 @@
 {
   "carrier_id": "xpressbees",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["IN"], "countries_to": ["IN"] },
-    { "name": "Zone 1", "countries_from": ["IN"], "countries_to": ["NP","BD","LK","BT","MV","PK","MM"] },
-    { "name": "Zone 2", "countries_from": ["IN"], "countries_to": ["AE","SA","QA","KW","SG","MY","TH","ID"] },
-    { "name": "Zone 3", "countries_from": ["IN"], "countries_to": ["US","CA","GB","DE","AU","JP","FR","IT"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "IN"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "NP",
+        "BD",
+        "LK",
+        "BT",
+        "MV",
+        "PK",
+        "MM"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "SG",
+        "MY",
+        "TH",
+        "ID"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "AU",
+        "JP",
+        "FR",
+        "IT"
+      ]
+    }
   ],
   "rates": {
     "xpressbees-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 9, 18, 30] },
-      { "weight_kg": 1, "prices_by_zone": [4, 14, 28, 44] },
-      { "weight_kg": 2, "prices_by_zone": [6, 20, 40, 65] },
-      { "weight_kg": 5, "prices_by_zone": [12, 38, 75, 118] },
-      { "weight_kg": 10, "prices_by_zone": [20, 65, 130, 208] },
-      { "weight_kg": 20, "prices_by_zone": [35, 112, 228, 362] },
-      { "weight_kg": 30, "prices_by_zone": [48, 155, 318, 505] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.06,
+          9.27,
+          18.54,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          14.42,
+          28.84,
+          45.32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          20.6,
+          41.2,
+          66.95
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.36,
+          39.14,
+          77.25,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          20.6,
+          66.95,
+          133.9,
+          214.24
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          36.05,
+          115.36,
+          234.84,
+          372.86
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          49.44,
+          159.65,
+          327.54,
+          520.15
+        ]
+      }
     ],
     "xpressbees-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [1, 6, 14, 22] },
-      { "weight_kg": 1, "prices_by_zone": [2, 10, 20, 32] },
-      { "weight_kg": 2, "prices_by_zone": [4, 14, 30, 48] },
-      { "weight_kg": 5, "prices_by_zone": [8, 28, 55, 88] },
-      { "weight_kg": 10, "prices_by_zone": [14, 48, 96, 155] },
-      { "weight_kg": 20, "prices_by_zone": [24, 82, 168, 268] },
-      { "weight_kg": 30, "prices_by_zone": [32, 112, 232, 372] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          1.03,
+          6.18,
+          14.42,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2.06,
+          10.3,
+          20.6,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12,
+          14.42,
+          30.9,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          8.24,
+          28.84,
+          56.65,
+          90.64
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          14.42,
+          49.44,
+          98.88,
+          159.65
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          24.72,
+          84.46,
+          173.04,
+          276.04
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          32.96,
+          115.36,
+          238.96,
+          383.16
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

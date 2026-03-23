@@ -6,8 +6,12 @@
     {
       "zone": 1,
       "description": "Russia Domestic",
-      "countries_from": ["RU"],
-      "countries_to": ["RU"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "RU"
+      ]
     },
     {
       "zone": 2,

@@ -1,27 +1,255 @@
 {
   "carrier_id": "asendia",
-  "effective_date": "2026-01-01",
-  "note": "Estimated rates for Asendia e-PAQ international mail and parcel service. Alliance between La Poste and Swiss Post. Actual rates vary by contract.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated rates for Asendia e-PAQ international mail and parcel service. Alliance between La Poste and Swiss Post. Actual rates vary by contract. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
-    {"zone": 2, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU"]},
-    {"zone": 3, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "EE", "LV", "LT", "GR", "CY"]},
-    {"zone": 4, "description": "Asia Pacific", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ", "TH", "MY", "ID", "PH", "VN", "IN"]},
-    {"zone": 5, "description": "Latin America", "countries_from": ["US"], "countries_to": ["MX", "BR", "AR", "CL", "CO", "PE", "EC", "CR", "PA", "GT", "DO"]},
-    {"zone": 6, "description": "Middle East & Africa", "countries_from": ["US"], "countries_to": ["AE", "SA", "IL", "TR", "ZA", "NG", "KE", "EG", "MA"]},
-    {"zone": 7, "description": "Rest of World", "countries_from": ["US"], "countries_to": ["RU", "KZ", "UZ", "GE", "AM", "FJ", "PG", "MN"]}
+    {
+      "zone": 1,
+      "description": "Canada",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Western Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "IE",
+        "PT",
+        "DK",
+        "SE",
+        "NO",
+        "FI",
+        "LU"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Eastern Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "RS",
+        "EE",
+        "LV",
+        "LT",
+        "GR",
+        "CY"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Asia Pacific",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ",
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "VN",
+        "IN"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Latin America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "MX",
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "EC",
+        "CR",
+        "PA",
+        "GT",
+        "DO"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "Middle East & Africa",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IL",
+        "TR",
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "MA"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "Rest of World",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "RU",
+        "KZ",
+        "UZ",
+        "GE",
+        "AM",
+        "FJ",
+        "PG",
+        "MN"
+      ]
+    }
   ],
   "rates": {
     "asendia-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 12, 15, 16, 14, 18, 22]},
-      {"weight_kg": 1, "prices_by_zone": [11, 16, 20, 22, 19, 25, 30]},
-      {"weight_kg": 2, "prices_by_zone": [15, 22, 28, 32, 28, 36, 42]},
-      {"weight_kg": 3, "prices_by_zone": [20, 30, 38, 42, 38, 48, 56]},
-      {"weight_kg": 5, "prices_by_zone": [28, 42, 55, 60, 54, 68, 80]},
-      {"weight_kg": 10, "prices_by_zone": [48, 72, 95, 105, 95, 120, 142]},
-      {"weight_kg": 15, "prices_by_zone": [66, 100, 132, 148, 135, 170, 202]},
-      {"weight_kg": 20, "prices_by_zone": [85, 130, 170, 192, 175, 222, 265]},
-      {"weight_kg": 30, "prices_by_zone": [122, 188, 248, 280, 255, 325, 390]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.24,
+          12.36,
+          15.45,
+          16.48,
+          14.42,
+          18.54,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          11.33,
+          16.48,
+          20.6,
+          22.66,
+          19.57,
+          25.75,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          15.45,
+          22.66,
+          28.84,
+          32.96,
+          28.84,
+          37.08,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          20.6,
+          30.9,
+          39.14,
+          43.26,
+          39.14,
+          49.44,
+          57.68
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          28.84,
+          43.26,
+          56.65,
+          61.8,
+          55.62,
+          70.04,
+          82.4
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          49.44,
+          74.16,
+          97.85,
+          108.15,
+          97.85,
+          123.6,
+          146.26
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          67.98,
+          103,
+          135.96,
+          152.44,
+          139.05,
+          175.1,
+          208.06
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          87.55,
+          133.9,
+          175.1,
+          197.76,
+          180.25,
+          228.66,
+          272.95
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          125.66,
+          193.64,
+          255.44,
+          288.4,
+          262.65,
+          334.75,
+          401.7
+        ]
+      }
     ]
   }
 }

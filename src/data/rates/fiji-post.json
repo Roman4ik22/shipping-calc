@@ -1,7 +1,7 @@
 {
   "carrier_id": "fiji-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Fiji Post rates from Fiji. EMS and registered airmail services for Pacific Islands.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Fiji Post rates from Fiji. EMS and registered airmail services for Pacific Islands. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -70,64 +70,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10,
-          15,
-          22,
-          28
+          10.35,
+          15.52,
+          22.77,
+          28.98
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14,
-          20,
-          30,
-          36
+          14.49,
+          20.7,
+          31.05,
+          37.26
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20,
-          28,
-          42,
-          50
+          20.7,
+          28.98,
+          43.47,
+          51.75
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32,
-          46,
-          68,
-          82
+          33.12,
+          47.61,
+          70.38,
+          84.87
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          54,
-          78,
-          115,
-          138
+          55.89,
+          80.73,
+          119.03,
+          142.83
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          94,
-          135,
-          200,
-          242
+          97.29,
+          139.73,
+          207,
+          250.47
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          134,
-          192,
-          285,
-          348
+          138.69,
+          198.72,
+          294.97,
+          360.18
         ]
       }
     ],
@@ -135,28 +135,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4,
-          6,
-          8,
-          10
+          4.14,
+          6.21,
+          8.28,
+          10.35
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6,
-          8,
-          11,
-          14
+          6.21,
+          8.28,
+          11.39,
+          14.49
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8,
-          12,
-          16,
-          20
+          8.28,
+          12.42,
+          16.56,
+          20.7
         ]
       },
       {

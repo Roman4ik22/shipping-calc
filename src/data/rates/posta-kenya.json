@@ -1,7 +1,7 @@
 {
   "carrier_id": "posta-kenya",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Posta Kenya rates from Kenya. National postal service with EMS and registered mail.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Posta Kenya rates from Kenya. National postal service with EMS and registered mail. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -79,64 +79,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8,
-          12,
-          18,
-          20
+          8.28,
+          12.42,
+          18.63,
+          20.7
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12,
-          18,
-          25,
-          28
+          12.42,
+          18.63,
+          25.87,
+          28.98
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18,
-          25,
-          35,
-          40
+          18.63,
+          25.87,
+          36.22,
+          41.4
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28,
-          42,
-          58,
-          65
+          28.98,
+          43.47,
+          60.03,
+          67.27
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45,
-          70,
-          98,
-          110
+          46.58,
+          72.45,
+          101.43,
+          113.85
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          78,
-          122,
-          172,
-          195
+          80.73,
+          126.27,
+          178.02,
+          201.83
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          110,
-          175,
-          248,
-          280
+          113.85,
+          181.13,
+          256.68,
+          289.8
         ]
       }
     ],
@@ -144,28 +144,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3,
-          5,
-          7,
-          8
+          3.1,
+          5.18,
+          7.24,
+          8.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5,
-          8,
-          10,
-          12
+          5.18,
+          8.28,
+          10.35,
+          12.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8,
-          12,
-          16,
-          18
+          8.28,
+          12.42,
+          16.56,
+          18.63
         ]
       },
       {

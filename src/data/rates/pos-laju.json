@@ -1,7 +1,7 @@
 {
   "carrier_id": "pos-laju",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Pos Laju (Pos Malaysia) rates from Malaysia. EMS and registered airmail services.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Pos Laju (Pos Malaysia) rates from Malaysia. EMS and registered airmail services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -76,64 +76,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7,
-          11,
-          17,
-          20
+          7.21,
+          11.33,
+          17.51,
+          20.6
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10,
-          15,
-          23,
-          26
+          10.3,
+          15.45,
+          23.69,
+          26.78
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14,
-          20,
-          32,
-          36
+          14.42,
+          20.6,
+          32.96,
+          37.08
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          23,
-          34,
-          52,
-          60
+          23.69,
+          35.02,
+          53.56,
+          61.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          38,
-          55,
-          88,
-          100
+          39.14,
+          56.65,
+          90.64,
+          103
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          65,
-          98,
-          155,
-          178
+          66.95,
+          100.94,
+          159.65,
+          183.34
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          92,
-          140,
-          222,
-          255
+          94.76,
+          144.2,
+          228.66,
+          262.65
         ]
       }
     ],
@@ -141,28 +141,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3,
-          4,
-          6,
-          7
+          3.09,
+          4.12,
+          6.18,
+          7.21
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4,
-          6,
-          8,
-          10
+          4.12,
+          6.18,
+          8.24,
+          10.3
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6,
-          8,
-          12,
-          14
+          6.18,
+          8.24,
+          12.36,
+          14.42
         ]
       },
       {

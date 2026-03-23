@@ -1,22 +1,135 @@
 {
   "carrier_id": "inpost",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["PL"], "countries_to": ["PL"] },
-    { "name": "Zone 1", "countries_from": ["PL"], "countries_to": ["DE", "CZ", "SK", "LT", "GB", "FR", "IT", "ES"] },
-    { "name": "Zone 2", "countries_from": ["PL"], "countries_to": ["REGIONAL"] },
-    { "name": "Zone 3", "countries_from": ["PL"], "countries_to": ["INTERCONTINENTAL"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "PL"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "DE",
+        "CZ",
+        "SK",
+        "LT",
+        "GB",
+        "FR",
+        "IT",
+        "ES"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "PL"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
+      ]
+    }
   ],
   "rates": {
     "inpost-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [2.80, 7.50, 14.00, 28.00] },
-      { "weight_kg": 1, "prices_by_zone": [3.50, 9.00, 17.00, 34.00] },
-      { "weight_kg": 2, "prices_by_zone": [4.50, 11.50, 22.00, 44.00] },
-      { "weight_kg": 3, "prices_by_zone": [5.50, 14.00, 26.00, 52.00] },
-      { "weight_kg": 5, "prices_by_zone": [7.00, 18.00, 34.00, 68.00] },
-      { "weight_kg": 10, "prices_by_zone": [10.50, 28.00, 54.00, 108.00] },
-      { "weight_kg": 15, "prices_by_zone": [14.00, 36.00, 70.00, 142.00] },
-      { "weight_kg": 20, "prices_by_zone": [17.00, 44.00, 86.00, 174.00] },
-      { "weight_kg": 25, "prices_by_zone": [20.00, 52.00, 102.00, 206.00] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.9,
+          7.76,
+          14.49,
+          28.98
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.62,
+          9.32,
+          17.6,
+          35.19
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.66,
+          11.9,
+          22.77,
+          45.54
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          5.69,
+          14.49,
+          26.91,
+          53.82
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          7.24,
+          18.63,
+          35.19,
+          70.38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          10.87,
+          28.98,
+          55.89,
+          111.78
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          14.49,
+          37.26,
+          72.45,
+          146.97
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          17.6,
+          45.54,
+          89.01,
+          180.09
+        ]
+      },
+      {
+        "weight_kg": 25,
+        "prices_by_zone": [
+          20.7,
+          53.82,
+          105.57,
+          213.21
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

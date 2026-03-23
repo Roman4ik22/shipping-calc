@@ -3,11 +3,92 @@
   "effective_date": "2026-03-23",
   "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026]",
   "zones": [
-    {"zone": 1, "description": "South Asia (Neighbors)", "countries_from": ["IN"], "countries_to": ["LK", "NP", "BD", "PK", "BT", "MV"]},
-    {"zone": 2, "description": "Southeast & East Asia", "countries_from": ["IN"], "countries_to": ["SG", "MY", "TH", "CN", "JP", "KR", "HK", "ID", "PH"]},
-    {"zone": 3, "description": "Middle East & Central Asia", "countries_from": ["IN"], "countries_to": ["AE", "SA", "QA", "KW", "OM", "BH", "IL", "KZ"]},
-    {"zone": 4, "description": "Europe & Oceania", "countries_from": ["IN"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "AU", "NZ", "SE", "CH"]},
-    {"zone": 5, "description": "Americas & Africa", "countries_from": ["IN"], "countries_to": ["US", "CA", "BR", "MX", "ZA", "NG", "KE", "EG"]}
+    {
+      "zone": 1,
+      "description": "South Asia (Neighbors)",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "LK",
+        "NP",
+        "BD",
+        "PK",
+        "BT",
+        "MV"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast & East Asia",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "CN",
+        "JP",
+        "KR",
+        "HK",
+        "ID",
+        "PH"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Middle East & Central Asia",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "OM",
+        "BH",
+        "IL",
+        "KZ"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Europe & Oceania",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "AU",
+        "NZ",
+        "SE",
+        "CH"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Americas & Africa",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "MX",
+        "ZA",
+        "NG",
+        "KE",
+        "EG"
+      ]
+    }
   ],
   "rates": {
     "india-post-ems": [

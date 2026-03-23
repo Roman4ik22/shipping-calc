@@ -6,8 +6,12 @@
     {
       "zone": 1,
       "description": "Ukraine Domestic",
-      "countries_from": ["UA"],
-      "countries_to": ["UA"]
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "UA"
+      ]
     },
     {
       "zone": 2,

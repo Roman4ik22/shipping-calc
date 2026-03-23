@@ -1,45 +1,174 @@
 {
   "carrier_id": "kazpost",
-  "effective_date": "2025-01-01",
-  "note": "KazPost rates. National postal operator of Kazakhstan with domestic and international mail/parcel services.",
+  "effective_date": "2026-03-23",
+  "note": "KazPost rates. National postal operator of Kazakhstan with domestic and international mail/parcel services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Kazakhstan Domestic",
-      "countries_from": ["KZ"],
-      "countries_to": ["KZ"]
+      "countries_from": [
+        "KZ"
+      ],
+      "countries_to": [
+        "KZ"
+      ]
     },
     {
       "zone": 2,
       "description": "CIS Countries",
-      "countries_from": ["KZ"],
-      "countries_to": ["RU", "UZ", "KG", "TJ", "TM", "BY", "UA", "AM", "GE", "AZ"]
+      "countries_from": [
+        "KZ"
+      ],
+      "countries_to": [
+        "RU",
+        "UZ",
+        "KG",
+        "TJ",
+        "TM",
+        "BY",
+        "UA",
+        "AM",
+        "GE",
+        "AZ"
+      ]
     },
     {
       "zone": 3,
       "description": "International",
-      "countries_from": ["KZ"],
-      "countries_to": ["CN", "TR", "DE", "US", "GB", "KR", "JP", "AE", "IN", "FR", "IT"]
+      "countries_from": [
+        "KZ"
+      ],
+      "countries_to": [
+        "CN",
+        "TR",
+        "DE",
+        "US",
+        "GB",
+        "KR",
+        "JP",
+        "AE",
+        "IN",
+        "FR",
+        "IT"
+      ]
     }
   ],
   "rates": {
     "kazpost-ems": [
-      { "weight_kg": 0.5, "prices_by_zone": [4, 15, 28] },
-      { "weight_kg": 1, "prices_by_zone": [6, 20, 38] },
-      { "weight_kg": 2, "prices_by_zone": [9, 28, 52] },
-      { "weight_kg": 5, "prices_by_zone": [16, 48, 88] },
-      { "weight_kg": 10, "prices_by_zone": [28, 80, 148] },
-      { "weight_kg": 20, "prices_by_zone": [48, 140, 262] },
-      { "weight_kg": 30, "prices_by_zone": [68, 200, 375] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4.14,
+          15.52,
+          28.98
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6.21,
+          20.7,
+          39.33
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9.32,
+          28.98,
+          53.82
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16.56,
+          49.68,
+          91.08
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          28.98,
+          82.8,
+          153.18
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          49.68,
+          144.9,
+          271.17
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          70.38,
+          207,
+          388.12
+        ]
+      }
     ],
     "kazpost-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 8, 18] },
-      { "weight_kg": 1, "prices_by_zone": [3, 12, 25] },
-      { "weight_kg": 2, "prices_by_zone": [5, 18, 35] },
-      { "weight_kg": 5, "prices_by_zone": [10, 32, 60] },
-      { "weight_kg": 10, "prices_by_zone": [18, 55, 102] },
-      { "weight_kg": 20, "prices_by_zone": [32, 98, 182] },
-      { "weight_kg": 30, "prices_by_zone": [46, 140, 262] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.07,
+          8.28,
+          18.63
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.1,
+          12.42,
+          25.87
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          5.18,
+          18.63,
+          36.22
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10.35,
+          33.12,
+          62.1
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          18.63,
+          56.93,
+          105.57
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          33.12,
+          101.43,
+          188.37
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          47.61,
+          144.9,
+          271.17
+        ]
+      }
     ]
   }
 }

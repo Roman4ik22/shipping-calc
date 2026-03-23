@@ -1,35 +1,229 @@
 {
   "carrier_id": "andreani",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["AR"], "countries_to": ["AR"] },
-    { "name": "Zone 1", "countries_from": ["AR"], "countries_to": ["NEIGHBORS"] },
-    { "name": "Zone 2", "countries_from": ["AR"], "countries_to": ["REGIONAL"] },
-    { "name": "Zone 3", "countries_from": ["AR"], "countries_to": ["INTERCONTINENTAL"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "AR"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "NEIGHBORS"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "AR"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
+      ]
+    }
   ],
   "rates": {
     "andreani-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5.50, 18.00, 32.00, 55.00] },
-      { "weight_kg": 1, "prices_by_zone": [7.00, 22.00, 40.00, 68.00] },
-      { "weight_kg": 2, "prices_by_zone": [9.50, 28.00, 52.00, 88.00] },
-      { "weight_kg": 3, "prices_by_zone": [12.00, 34.00, 62.00, 105.00] },
-      { "weight_kg": 5, "prices_by_zone": [16.00, 44.00, 82.00, 140.00] },
-      { "weight_kg": 10, "prices_by_zone": [26.00, 68.00, 130.00, 220.00] },
-      { "weight_kg": 15, "prices_by_zone": [35.00, 90.00, 175.00, 295.00] },
-      { "weight_kg": 20, "prices_by_zone": [44.00, 112.00, 218.00, 370.00] },
-      { "weight_kg": 30, "prices_by_zone": [60.00, 155.00, 300.00, 510.00] },
-      { "weight_kg": 50, "prices_by_zone": [90.00, 235.00, 460.00, 780.00] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.67,
+          18.54,
+          32.96,
+          56.65
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.21,
+          22.66,
+          41.2,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          9.79,
+          28.84,
+          53.56,
+          90.64
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          12.36,
+          35.02,
+          63.86,
+          108.15
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          16.48,
+          45.32,
+          84.46,
+          144.2
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          26.78,
+          70.04,
+          133.9,
+          226.6
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          36.05,
+          92.7,
+          180.25,
+          303.85
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          45.32,
+          115.36,
+          224.54,
+          381.1
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          61.8,
+          159.65,
+          309,
+          525.3
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          92.7,
+          242.05,
+          473.8,
+          803.4
+        ]
+      }
     ],
     "andreani-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3.50, 12.00, 24.00, 42.00] },
-      { "weight_kg": 1, "prices_by_zone": [4.80, 16.00, 30.00, 52.00] },
-      { "weight_kg": 2, "prices_by_zone": [6.50, 20.00, 40.00, 68.00] },
-      { "weight_kg": 3, "prices_by_zone": [8.50, 25.00, 48.00, 82.00] },
-      { "weight_kg": 5, "prices_by_zone": [11.50, 34.00, 64.00, 110.00] },
-      { "weight_kg": 10, "prices_by_zone": [19.00, 52.00, 100.00, 172.00] },
-      { "weight_kg": 15, "prices_by_zone": [26.00, 70.00, 135.00, 232.00] },
-      { "weight_kg": 20, "prices_by_zone": [33.00, 86.00, 168.00, 290.00] },
-      { "weight_kg": 30, "prices_by_zone": [46.00, 120.00, 235.00, 400.00] },
-      { "weight_kg": 50, "prices_by_zone": [70.00, 182.00, 355.00, 610.00] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.61,
+          12.36,
+          24.72,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.94,
+          16.48,
+          30.9,
+          53.56
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.7,
+          20.6,
+          41.2,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          8.76,
+          25.75,
+          49.44,
+          84.46
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          11.85,
+          35.02,
+          65.92,
+          113.3
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          19.57,
+          53.56,
+          103,
+          177.16
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          26.78,
+          72.1,
+          139.05,
+          238.96
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          33.99,
+          88.58,
+          173.04,
+          298.7
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          47.38,
+          123.6,
+          242.05,
+          412
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          72.1,
+          187.46,
+          365.65,
+          628.3
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

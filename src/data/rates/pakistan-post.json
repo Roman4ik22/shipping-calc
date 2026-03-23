@@ -1,7 +1,7 @@
 {
   "carrier_id": "pakistan-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Pakistan Post rates from Pakistan. EMS and registered airmail services.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Pakistan Post rates from Pakistan. EMS and registered airmail services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -71,64 +71,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6,
-          10,
-          18,
-          20
+          6.21,
+          10.35,
+          18.63,
+          20.7
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9,
-          14,
-          24,
-          27
+          9.32,
+          14.49,
+          24.84,
+          27.94
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13,
-          20,
-          34,
-          38
+          13.45,
+          20.7,
+          35.19,
+          39.33
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22,
-          32,
-          55,
-          62
+          22.77,
+          33.12,
+          56.93,
+          64.17
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          36,
-          55,
-          92,
-          105
+          37.26,
+          56.93,
+          95.22,
+          108.68
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          62,
-          95,
-          162,
-          185
+          64.17,
+          98.32,
+          167.67,
+          191.48
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          88,
-          135,
-          232,
-          265
+          91.08,
+          139.73,
+          240.12,
+          274.27
         ]
       }
     ],
@@ -136,28 +136,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2,
-          4,
-          6,
-          7
+          2.07,
+          4.14,
+          6.21,
+          7.24
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3,
-          5,
-          8,
-          10
+          3.1,
+          5.18,
+          8.28,
+          10.35
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5,
-          8,
-          12,
-          14
+          5.18,
+          8.28,
+          12.42,
+          14.49
         ]
       },
       {

@@ -1,45 +1,176 @@
 {
   "carrier_id": "fan-courier",
-  "effective_date": "2025-01-01",
-  "note": "Fan Courier rates. Romania's largest private courier company with EU delivery network.",
+  "effective_date": "2026-03-23",
+  "note": "Fan Courier rates. Romania's largest private courier company with EU delivery network. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Romania Domestic",
-      "countries_from": ["RO"],
-      "countries_to": ["RO"]
+      "countries_from": [
+        "RO"
+      ],
+      "countries_to": [
+        "RO"
+      ]
     },
     {
       "zone": 2,
       "description": "EU Neighboring",
-      "countries_from": ["RO"],
-      "countries_to": ["BG", "HU", "MD", "RS", "UA", "PL", "CZ", "SK", "AT", "DE"]
+      "countries_from": [
+        "RO"
+      ],
+      "countries_to": [
+        "BG",
+        "HU",
+        "MD",
+        "RS",
+        "UA",
+        "PL",
+        "CZ",
+        "SK",
+        "AT",
+        "DE"
+      ]
     },
     {
       "zone": 3,
       "description": "Rest of EU & International",
-      "countries_from": ["RO"],
-      "countries_to": ["FR", "IT", "ES", "NL", "BE", "GB", "SE", "DK", "FI", "PT", "GR", "IE", "HR"]
+      "countries_from": [
+        "RO"
+      ],
+      "countries_to": [
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "GB",
+        "SE",
+        "DK",
+        "FI",
+        "PT",
+        "GR",
+        "IE",
+        "HR"
+      ]
     }
   ],
   "rates": {
     "fan-courier-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 12, 18] },
-      { "weight_kg": 1, "prices_by_zone": [4, 16, 25] },
-      { "weight_kg": 2, "prices_by_zone": [6, 22, 35] },
-      { "weight_kg": 5, "prices_by_zone": [10, 38, 58] },
-      { "weight_kg": 10, "prices_by_zone": [16, 62, 98] },
-      { "weight_kg": 20, "prices_by_zone": [28, 108, 172] },
-      { "weight_kg": 30, "prices_by_zone": [40, 155, 248] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          12.36,
+          18.54
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          16.48,
+          25.75
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          22.66,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10.3,
+          39.14,
+          59.74
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          16.48,
+          63.86,
+          100.94
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          28.84,
+          111.24,
+          177.16
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          41.2,
+          159.65,
+          255.44
+        ]
+      }
     ],
     "fan-courier-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 9, 14] },
-      { "weight_kg": 1, "prices_by_zone": [3, 12, 20] },
-      { "weight_kg": 2, "prices_by_zone": [4, 17, 28] },
-      { "weight_kg": 5, "prices_by_zone": [7, 30, 46] },
-      { "weight_kg": 10, "prices_by_zone": [12, 50, 78] },
-      { "weight_kg": 20, "prices_by_zone": [20, 88, 138] },
-      { "weight_kg": 30, "prices_by_zone": [29, 125, 198] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.06,
+          9.27,
+          14.42
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.09,
+          12.36,
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12,
+          17.51,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          7.21,
+          30.9,
+          47.38
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          12.36,
+          51.5,
+          80.34
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          20.6,
+          90.64,
+          142.14
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          29.87,
+          128.75,
+          203.94
+        ]
+      }
     ]
   }
 }

@@ -1,40 +1,440 @@
 {
   "carrier_id": "pitney-bowes",
-  "effective_date": "2026-01-01",
-  "note": "Estimated rates for Pitney Bowes cross-border e-commerce logistics. Actual rates depend on volume discounts, account type, and surcharges.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated rates for Pitney Bowes cross-border e-commerce logistics. Actual rates depend on volume discounts, account type, and surcharges. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Canada", "countries_from": ["US"], "countries_to": ["CA"]},
-    {"zone": 2, "description": "Mexico & Central America", "countries_from": ["US"], "countries_to": ["MX", "GT", "HN", "SV", "NI", "CR", "PA", "BZ"]},
-    {"zone": 3, "description": "Western Europe", "countries_from": ["US"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "IE", "PT", "DK", "SE", "NO", "FI", "LU", "IS"]},
-    {"zone": 4, "description": "Eastern Europe", "countries_from": ["US"], "countries_to": ["PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI", "RS", "BA", "EE", "LV", "LT", "UA", "GR", "CY", "AL", "MK", "ME"]},
-    {"zone": 5, "description": "East Asia & Oceania", "countries_from": ["US"], "countries_to": ["JP", "KR", "CN", "HK", "TW", "SG", "AU", "NZ"]},
-    {"zone": 6, "description": "Southeast Asia & India", "countries_from": ["US"], "countries_to": ["TH", "MY", "ID", "PH", "VN", "KH", "IN", "PK", "BD", "LK"]},
-    {"zone": 7, "description": "South America", "countries_from": ["US"], "countries_to": ["BR", "AR", "CL", "CO", "PE", "EC", "VE", "UY", "PY", "BO"]},
-    {"zone": 8, "description": "Middle East", "countries_from": ["US"], "countries_to": ["AE", "SA", "QA", "KW", "BH", "OM", "JO", "IL", "LB", "TR"]},
-    {"zone": 9, "description": "Africa", "countries_from": ["US"], "countries_to": ["ZA", "NG", "KE", "EG", "MA", "TN", "GH", "ET", "TZ", "UG", "SN"]}
+    {
+      "zone": 1,
+      "description": "Canada",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "CA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Mexico & Central America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "MX",
+        "GT",
+        "HN",
+        "SV",
+        "NI",
+        "CR",
+        "PA",
+        "BZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Western Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "IE",
+        "PT",
+        "DK",
+        "SE",
+        "NO",
+        "FI",
+        "LU",
+        "IS"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Eastern Europe",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI",
+        "RS",
+        "BA",
+        "EE",
+        "LV",
+        "LT",
+        "UA",
+        "GR",
+        "CY",
+        "AL",
+        "MK",
+        "ME"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "East Asia & Oceania",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "JP",
+        "KR",
+        "CN",
+        "HK",
+        "TW",
+        "SG",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "Southeast Asia & India",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "VN",
+        "KH",
+        "IN",
+        "PK",
+        "BD",
+        "LK"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "South America",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE",
+        "EC",
+        "VE",
+        "UY",
+        "PY",
+        "BO"
+      ]
+    },
+    {
+      "zone": 8,
+      "description": "Middle East",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM",
+        "JO",
+        "IL",
+        "LB",
+        "TR"
+      ]
+    },
+    {
+      "zone": 9,
+      "description": "Africa",
+      "countries_from": [
+        "US"
+      ],
+      "countries_to": [
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "MA",
+        "TN",
+        "GH",
+        "ET",
+        "TZ",
+        "UG",
+        "SN"
+      ]
+    }
   ],
   "rates": {
     "pitney-bowes-express": [
-      {"weight_kg": 0.5, "prices_by_zone": [20, 28, 32, 38, 35, 40, 42, 45, 50]},
-      {"weight_kg": 1, "prices_by_zone": [25, 35, 42, 48, 45, 52, 55, 58, 65]},
-      {"weight_kg": 2, "prices_by_zone": [32, 45, 55, 62, 58, 68, 72, 75, 85]},
-      {"weight_kg": 3, "prices_by_zone": [40, 55, 68, 78, 72, 85, 90, 95, 108]},
-      {"weight_kg": 5, "prices_by_zone": [52, 75, 92, 105, 98, 115, 122, 130, 148]},
-      {"weight_kg": 10, "prices_by_zone": [85, 125, 155, 178, 168, 195, 208, 220, 252]},
-      {"weight_kg": 15, "prices_by_zone": [118, 172, 215, 248, 235, 272, 292, 308, 355]},
-      {"weight_kg": 20, "prices_by_zone": [150, 220, 275, 318, 302, 350, 375, 395, 455]},
-      {"weight_kg": 30, "prices_by_zone": [215, 315, 395, 458, 435, 505, 542, 572, 658]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          20.6,
+          28.84,
+          32.96,
+          39.14,
+          36.05,
+          41.2,
+          43.26,
+          46.35,
+          51.5
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          25.75,
+          36.05,
+          43.26,
+          49.44,
+          46.35,
+          53.56,
+          56.65,
+          59.74,
+          66.95
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          32.96,
+          46.35,
+          56.65,
+          63.86,
+          59.74,
+          70.04,
+          74.16,
+          77.25,
+          87.55
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          41.2,
+          56.65,
+          70.04,
+          80.34,
+          74.16,
+          87.55,
+          92.7,
+          97.85,
+          111.24
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          53.56,
+          77.25,
+          94.76,
+          108.15,
+          100.94,
+          118.45,
+          125.66,
+          133.9,
+          152.44
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          87.55,
+          128.75,
+          159.65,
+          183.34,
+          173.04,
+          200.85,
+          214.24,
+          226.6,
+          259.56
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          121.54,
+          177.16,
+          221.45,
+          255.44,
+          242.05,
+          280.16,
+          300.76,
+          317.24,
+          365.65
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          154.5,
+          226.6,
+          283.25,
+          327.54,
+          311.06,
+          360.5,
+          386.25,
+          406.85,
+          468.65
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          221.45,
+          324.45,
+          406.85,
+          471.74,
+          448.05,
+          520.15,
+          558.26,
+          589.16,
+          677.74
+        ]
+      }
     ],
     "pitney-bowes-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 18, 20, 24, 22, 26, 28, 30, 35]},
-      {"weight_kg": 1, "prices_by_zone": [15, 22, 28, 32, 30, 35, 38, 40, 46]},
-      {"weight_kg": 2, "prices_by_zone": [20, 30, 38, 44, 40, 48, 52, 55, 62]},
-      {"weight_kg": 3, "prices_by_zone": [25, 38, 48, 56, 52, 62, 66, 70, 80]},
-      {"weight_kg": 5, "prices_by_zone": [35, 55, 68, 78, 72, 86, 92, 98, 112]},
-      {"weight_kg": 10, "prices_by_zone": [58, 92, 115, 132, 125, 148, 158, 168, 192]},
-      {"weight_kg": 15, "prices_by_zone": [80, 128, 162, 188, 178, 208, 222, 235, 272]},
-      {"weight_kg": 20, "prices_by_zone": [102, 165, 208, 242, 228, 268, 288, 305, 352]},
-      {"weight_kg": 30, "prices_by_zone": [148, 238, 300, 348, 330, 388, 418, 442, 510]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.36,
+          18.54,
+          20.6,
+          24.72,
+          22.66,
+          26.78,
+          28.84,
+          30.9,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          15.45,
+          22.66,
+          28.84,
+          32.96,
+          30.9,
+          36.05,
+          39.14,
+          41.2,
+          47.38
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20.6,
+          30.9,
+          39.14,
+          45.32,
+          41.2,
+          49.44,
+          53.56,
+          56.65,
+          63.86
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          25.75,
+          39.14,
+          49.44,
+          57.68,
+          53.56,
+          63.86,
+          67.98,
+          72.1,
+          82.4
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          36.05,
+          56.65,
+          70.04,
+          80.34,
+          74.16,
+          88.58,
+          94.76,
+          100.94,
+          115.36
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          59.74,
+          94.76,
+          118.45,
+          135.96,
+          128.75,
+          152.44,
+          162.74,
+          173.04,
+          197.76
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          82.4,
+          131.84,
+          166.86,
+          193.64,
+          183.34,
+          214.24,
+          228.66,
+          242.05,
+          280.16
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          105.06,
+          169.95,
+          214.24,
+          249.26,
+          234.84,
+          276.04,
+          296.64,
+          314.15,
+          362.56
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          152.44,
+          245.14,
+          309,
+          358.44,
+          339.9,
+          399.64,
+          430.54,
+          455.26,
+          525.3
+        ]
+      }
     ]
   }
 }

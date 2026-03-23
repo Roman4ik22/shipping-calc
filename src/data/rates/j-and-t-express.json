@@ -1,45 +1,175 @@
 {
   "carrier_id": "j-and-t-express",
-  "effective_date": "2025-01-01",
-  "note": "J&T Express Southeast Asia regional rates. Major SEA e-commerce carrier.",
+  "effective_date": "2026-03-23",
+  "note": "J&T Express Southeast Asia regional rates. Major SEA e-commerce carrier. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Domestic Indonesia",
-      "countries_from": ["ID"],
-      "countries_to": ["ID"]
+      "countries_from": [
+        "ID"
+      ],
+      "countries_to": [
+        "ID"
+      ]
     },
     {
       "zone": 2,
       "description": "Intra-SEA",
-      "countries_from": ["ID", "MY", "TH", "VN", "PH", "SG"],
-      "countries_to": ["ID", "MY", "TH", "VN", "PH", "SG"]
+      "countries_from": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG"
+      ],
+      "countries_to": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG"
+      ]
     },
     {
       "zone": 3,
       "description": "Greater Asia",
-      "countries_from": ["ID", "MY", "TH", "VN", "PH", "SG"],
-      "countries_to": ["CN", "HK", "TW", "JP", "KR", "IN"]
+      "countries_from": [
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG"
+      ],
+      "countries_to": [
+        "CN",
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "IN"
+      ]
     }
   ],
   "rates": {
     "j-and-t-express-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [2, 8, 15] },
-      { "weight_kg": 1, "prices_by_zone": [3, 11, 20] },
-      { "weight_kg": 2, "prices_by_zone": [4, 16, 28] },
-      { "weight_kg": 5, "prices_by_zone": [7, 28, 48] },
-      { "weight_kg": 10, "prices_by_zone": [12, 48, 82] },
-      { "weight_kg": 20, "prices_by_zone": [20, 85, 148] },
-      { "weight_kg": 30, "prices_by_zone": [28, 120, 210] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.06,
+          8.24,
+          15.45
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.09,
+          11.33,
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12,
+          16.48,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          7.21,
+          28.84,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          12.36,
+          49.44,
+          84.46
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          20.6,
+          87.55,
+          152.44
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          28.84,
+          123.6,
+          216.3
+        ]
+      }
     ],
     "j-and-t-express-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [1, 6, 12] },
-      { "weight_kg": 1, "prices_by_zone": [2, 8, 16] },
-      { "weight_kg": 2, "prices_by_zone": [3, 12, 22] },
-      { "weight_kg": 5, "prices_by_zone": [5, 22, 38] },
-      { "weight_kg": 10, "prices_by_zone": [9, 38, 65] },
-      { "weight_kg": 20, "prices_by_zone": [15, 68, 118] },
-      { "weight_kg": 30, "prices_by_zone": [22, 95, 168] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          1.03,
+          6.18,
+          12.36
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          2.06,
+          8.24,
+          16.48
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          3.09,
+          12.36,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          5.15,
+          22.66,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          9.27,
+          39.14,
+          66.95
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          15.45,
+          70.04,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          22.66,
+          97.85,
+          173.04
+        ]
+      }
     ]
   }
 }

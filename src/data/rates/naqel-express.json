@@ -1,24 +1,146 @@
 {
   "carrier_id": "naqel-express",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["SA"], "countries_to": ["SA"] },
-    { "name": "Zone 1", "countries_from": ["SA"], "countries_to": ["NEIGHBORS"] },
-    { "name": "Zone 2", "countries_from": ["SA"], "countries_to": ["REGIONAL"] },
-    { "name": "Zone 3", "countries_from": ["SA"], "countries_to": ["INTERCONTINENTAL"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "SA"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "NEIGHBORS"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
+      ]
+    }
   ],
   "rates": {
     "naqel-express-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [6, 12, 20, 32] },
-      { "weight_kg": 1, "prices_by_zone": [8, 16, 26, 42] },
-      { "weight_kg": 2, "prices_by_zone": [12, 22, 36, 56] },
-      { "weight_kg": 3, "prices_by_zone": [16, 28, 45, 70] },
-      { "weight_kg": 5, "prices_by_zone": [22, 38, 60, 95] },
-      { "weight_kg": 10, "prices_by_zone": [36, 62, 100, 158] },
-      { "weight_kg": 15, "prices_by_zone": [48, 82, 135, 210] },
-      { "weight_kg": 20, "prices_by_zone": [58, 100, 165, 260] },
-      { "weight_kg": 30, "prices_by_zone": [78, 135, 225, 355] },
-      { "weight_kg": 50, "prices_by_zone": [115, 200, 335, 530] },
-      { "weight_kg": 70, "prices_by_zone": [150, 265, 440, 700] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6.18,
+          12.36,
+          20.6,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.24,
+          16.48,
+          26.78,
+          43.26
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.36,
+          22.66,
+          37.08,
+          57.68
+        ]
+      },
+      {
+        "weight_kg": 3,
+        "prices_by_zone": [
+          16.48,
+          28.84,
+          46.35,
+          72.1
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.66,
+          39.14,
+          61.8,
+          97.85
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          37.08,
+          63.86,
+          103,
+          162.74
+        ]
+      },
+      {
+        "weight_kg": 15,
+        "prices_by_zone": [
+          49.44,
+          84.46,
+          139.05,
+          216.3
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          59.74,
+          103,
+          169.95,
+          267.8
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          80.34,
+          139.05,
+          231.75,
+          365.65
+        ]
+      },
+      {
+        "weight_kg": 50,
+        "prices_by_zone": [
+          118.45,
+          206,
+          345.05,
+          545.9
+        ]
+      },
+      {
+        "weight_kg": 70,
+        "prices_by_zone": [
+          154.5,
+          272.95,
+          453.2,
+          721
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

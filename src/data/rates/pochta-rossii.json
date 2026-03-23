@@ -3,11 +3,111 @@
   "effective_date": "2026-03-23",
   "note": "Pochta Rossii international rates from Russia. [Updated from public calculator data March 2026]",
   "zones": [
-    {"zone": 1, "description": "CIS countries", "countries_from": ["RU"], "countries_to": ["BY", "KZ", "AM", "KG", "TJ", "UZ", "MD", "AZ", "TM"]},
-    {"zone": 2, "description": "Europe / Turkey / Israel", "countries_from": ["RU"], "countries_to": ["DE", "FR", "IT", "ES", "GB", "PL", "CZ", "NL", "BE", "AT", "CH", "SE", "NO", "FI", "DK", "HU", "RO", "BG", "GR", "PT", "IE", "TR", "IL", "UA"]},
-    {"zone": 3, "description": "East Asia", "countries_from": ["RU"], "countries_to": ["CN", "JP", "KR", "MN", "HK", "TW"]},
-    {"zone": 4, "description": "South/Southeast Asia", "countries_from": ["RU"], "countries_to": ["TH", "MY", "SG", "ID", "PH", "VN", "IN", "PK", "BD", "LK"]},
-    {"zone": 5, "description": "Americas / Oceania / Africa", "countries_from": ["RU"], "countries_to": ["US", "CA", "BR", "AR", "MX", "AU", "NZ", "ZA", "EG", "KE", "NG"]}
+    {
+      "zone": 1,
+      "description": "CIS countries",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "BY",
+        "KZ",
+        "AM",
+        "KG",
+        "TJ",
+        "UZ",
+        "MD",
+        "AZ",
+        "TM"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe / Turkey / Israel",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "GB",
+        "PL",
+        "CZ",
+        "NL",
+        "BE",
+        "AT",
+        "CH",
+        "SE",
+        "NO",
+        "FI",
+        "DK",
+        "HU",
+        "RO",
+        "BG",
+        "GR",
+        "PT",
+        "IE",
+        "TR",
+        "IL",
+        "UA"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "East Asia",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "MN",
+        "HK",
+        "TW"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "South/Southeast Asia",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "TH",
+        "MY",
+        "SG",
+        "ID",
+        "PH",
+        "VN",
+        "IN",
+        "PK",
+        "BD",
+        "LK"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Americas / Oceania / Africa",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "AR",
+        "MX",
+        "AU",
+        "NZ",
+        "ZA",
+        "EG",
+        "KE",
+        "NG"
+      ]
+    }
   ],
   "rates": {
     "pochta-ems": [

@@ -4,28 +4,104 @@
     {
       "zone": 1,
       "description": "Russia Domestic",
-      "countries_from": ["RU"],
-      "countries_to": ["RU"]
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "RU"
+      ]
     }
   ],
   "rates": {
     "sberlogistika-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [3] },
-      { "weight_kg": 1, "prices_by_zone": [4] },
-      { "weight_kg": 2, "prices_by_zone": [6] },
-      { "weight_kg": 5, "prices_by_zone": [10] },
-      { "weight_kg": 10, "prices_by_zone": [16] },
-      { "weight_kg": 20, "prices_by_zone": [28] },
-      { "weight_kg": 30, "prices_by_zone": [40] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          10.3
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          16.48
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          41.2
+        ]
+      }
     ],
     "sberlogistika-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [2] },
-      { "weight_kg": 1, "prices_by_zone": [3] },
-      { "weight_kg": 2, "prices_by_zone": [4] },
-      { "weight_kg": 5, "prices_by_zone": [7] },
-      { "weight_kg": 10, "prices_by_zone": [12] },
-      { "weight_kg": 20, "prices_by_zone": [20] },
-      { "weight_kg": 30, "prices_by_zone": [28] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          2.06
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          3.09
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          4.12
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          7.21
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          12.36
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          28.84
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

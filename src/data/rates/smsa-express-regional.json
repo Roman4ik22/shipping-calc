@@ -1,45 +1,167 @@
 {
   "carrier_id": "smsa-express-regional",
-  "effective_date": "2025-01-01",
-  "note": "SMSA Express regional rates. Saudi Arabia's leading express delivery company covering GCC.",
+  "effective_date": "2026-03-23",
+  "note": "SMSA Express regional rates. Saudi Arabia's leading express delivery company covering GCC. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
       "description": "Saudi Arabia Domestic",
-      "countries_from": ["SA"],
-      "countries_to": ["SA"]
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "SA"
+      ]
     },
     {
       "zone": 2,
       "description": "GCC Countries",
-      "countries_from": ["SA", "AE"],
-      "countries_to": ["SA", "AE", "KW", "BH", "QA", "OM"]
+      "countries_from": [
+        "SA",
+        "AE"
+      ],
+      "countries_to": [
+        "SA",
+        "AE",
+        "KW",
+        "BH",
+        "QA",
+        "OM"
+      ]
     },
     {
       "zone": 3,
       "description": "Middle East & North Africa",
-      "countries_from": ["SA", "AE"],
-      "countries_to": ["EG", "JO", "LB", "IQ", "MA", "TN"]
+      "countries_from": [
+        "SA",
+        "AE"
+      ],
+      "countries_to": [
+        "EG",
+        "JO",
+        "LB",
+        "IQ",
+        "MA",
+        "TN"
+      ]
     }
   ],
   "rates": {
     "smsa-express-regional-express": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22] },
-      { "weight_kg": 1, "prices_by_zone": [7, 16, 28] },
-      { "weight_kg": 2, "prices_by_zone": [10, 22, 38] },
-      { "weight_kg": 5, "prices_by_zone": [18, 38, 62] },
-      { "weight_kg": 10, "prices_by_zone": [30, 62, 108] },
-      { "weight_kg": 20, "prices_by_zone": [52, 110, 192] },
-      { "weight_kg": 30, "prices_by_zone": [72, 155, 275] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          12.36,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          7.21,
+          16.48,
+          28.84
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          10.3,
+          22.66,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          18.54,
+          39.14,
+          63.86
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          30.9,
+          63.86,
+          111.24
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          53.56,
+          113.3,
+          197.76
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          74.16,
+          159.65,
+          283.25
+        ]
+      }
     ],
     "smsa-express-regional-economy": [
-      { "weight_kg": 0.5, "prices_by_zone": [3, 8, 16] },
-      { "weight_kg": 1, "prices_by_zone": [4, 11, 22] },
-      { "weight_kg": 2, "prices_by_zone": [6, 16, 30] },
-      { "weight_kg": 5, "prices_by_zone": [12, 28, 48] },
-      { "weight_kg": 10, "prices_by_zone": [20, 48, 82] },
-      { "weight_kg": 20, "prices_by_zone": [35, 85, 148] },
-      { "weight_kg": 30, "prices_by_zone": [48, 120, 212] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.09,
+          8.24,
+          16.48
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          4.12,
+          11.33,
+          22.66
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.18,
+          16.48,
+          30.9
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          12.36,
+          28.84,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          20.6,
+          49.44,
+          84.46
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          36.05,
+          87.55,
+          152.44
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          49.44,
+          123.6,
+          218.36
+        ]
+      }
     ]
   }
 }

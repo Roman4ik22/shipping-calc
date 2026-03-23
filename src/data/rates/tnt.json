@@ -1,35 +1,352 @@
 {
   "carrier_id": "tnt",
-  "effective_date": "2026-01-01",
-  "note": "Estimated TNT (FedEx) rates. Strong European network, competitive for intra-Europe shipments.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated TNT (FedEx) rates. Strong European network, competitive for intra-Europe shipments. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "Domestic Europe (Benelux, DE, FR)", "countries_from": ["NL", "BE", "DE", "FR"], "countries_to": ["NL", "BE", "DE", "FR", "LU"]},
-    {"zone": 2, "description": "Western Europe", "countries_from": ["NL", "DE", "FR"], "countries_to": ["GB", "IT", "ES", "PT", "AT", "CH", "IE", "DK"]},
-    {"zone": 3, "description": "Northern & Central Europe", "countries_from": ["NL", "DE"], "countries_to": ["SE", "NO", "FI", "PL", "CZ", "SK", "HU", "RO", "BG", "HR", "SI"]},
-    {"zone": 4, "description": "Eastern Europe & Turkey", "countries_from": ["NL", "DE"], "countries_to": ["GR", "TR", "UA", "RS", "BA", "ME", "MK", "AL", "MD", "BY"]},
-    {"zone": 5, "description": "Middle East & North Africa", "countries_from": ["NL", "DE"], "countries_to": ["AE", "SA", "IL", "EG", "MA", "QA", "KW", "BH", "JO", "LB"]},
-    {"zone": 6, "description": "Asia Pacific", "countries_from": ["NL", "DE"], "countries_to": ["CN", "JP", "KR", "SG", "HK", "TW", "TH", "MY", "ID", "PH", "IN", "AU", "NZ"]},
-    {"zone": 7, "description": "Americas", "countries_from": ["NL", "DE"], "countries_to": ["US", "CA", "MX", "BR", "AR", "CL", "CO", "PE"]},
-    {"zone": 8, "description": "Africa & Rest of World", "countries_from": ["NL", "DE"], "countries_to": ["ZA", "NG", "KE", "GH", "ET", "TZ", "UG", "SN", "CI"]}
+    {
+      "zone": 1,
+      "description": "Domestic Europe (Benelux, DE, FR)",
+      "countries_from": [
+        "NL",
+        "BE",
+        "DE",
+        "FR"
+      ],
+      "countries_to": [
+        "NL",
+        "BE",
+        "DE",
+        "FR",
+        "LU"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Western Europe",
+      "countries_from": [
+        "NL",
+        "DE",
+        "FR"
+      ],
+      "countries_to": [
+        "GB",
+        "IT",
+        "ES",
+        "PT",
+        "AT",
+        "CH",
+        "IE",
+        "DK"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Northern & Central Europe",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "SE",
+        "NO",
+        "FI",
+        "PL",
+        "CZ",
+        "SK",
+        "HU",
+        "RO",
+        "BG",
+        "HR",
+        "SI"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Eastern Europe & Turkey",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "GR",
+        "TR",
+        "UA",
+        "RS",
+        "BA",
+        "ME",
+        "MK",
+        "AL",
+        "MD",
+        "BY"
+      ]
+    },
+    {
+      "zone": 5,
+      "description": "Middle East & North Africa",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "IL",
+        "EG",
+        "MA",
+        "QA",
+        "KW",
+        "BH",
+        "JO",
+        "LB"
+      ]
+    },
+    {
+      "zone": 6,
+      "description": "Asia Pacific",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "CN",
+        "JP",
+        "KR",
+        "SG",
+        "HK",
+        "TW",
+        "TH",
+        "MY",
+        "ID",
+        "PH",
+        "IN",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 7,
+      "description": "Americas",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "MX",
+        "BR",
+        "AR",
+        "CL",
+        "CO",
+        "PE"
+      ]
+    },
+    {
+      "zone": 8,
+      "description": "Africa & Rest of World",
+      "countries_from": [
+        "NL",
+        "DE"
+      ],
+      "countries_to": [
+        "ZA",
+        "NG",
+        "KE",
+        "GH",
+        "ET",
+        "TZ",
+        "UG",
+        "SN",
+        "CI"
+      ]
+    }
   ],
   "rates": {
     "tnt-express": [
-      {"weight_kg": 0.5, "prices_by_zone": [22, 28, 32, 38, 45, 52, 58, 65]},
-      {"weight_kg": 1, "prices_by_zone": [28, 35, 40, 48, 56, 65, 72, 82]},
-      {"weight_kg": 2, "prices_by_zone": [35, 45, 52, 62, 72, 85, 95, 108]},
-      {"weight_kg": 5, "prices_by_zone": [55, 72, 85, 102, 118, 140, 158, 178]},
-      {"weight_kg": 10, "prices_by_zone": [88, 118, 140, 168, 198, 235, 265, 298]},
-      {"weight_kg": 20, "prices_by_zone": [155, 210, 250, 298, 355, 420, 475, 535]},
-      {"weight_kg": 30, "prices_by_zone": [218, 298, 355, 425, 505, 598, 678, 762]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          22.66,
+          28.84,
+          32.96,
+          39.14,
+          46.35,
+          53.56,
+          59.74,
+          66.95
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          28.84,
+          36.05,
+          41.2,
+          49.44,
+          57.68,
+          66.95,
+          74.16,
+          84.46
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          36.05,
+          46.35,
+          53.56,
+          63.86,
+          74.16,
+          87.55,
+          97.85,
+          111.24
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          56.65,
+          74.16,
+          87.55,
+          105.06,
+          121.54,
+          144.2,
+          162.74,
+          183.34
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          90.64,
+          121.54,
+          144.2,
+          173.04,
+          203.94,
+          242.05,
+          272.95,
+          306.94
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          159.65,
+          216.3,
+          257.5,
+          306.94,
+          365.65,
+          432.6,
+          489.25,
+          551.05
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          224.54,
+          306.94,
+          365.65,
+          437.75,
+          520.15,
+          615.94,
+          698.34,
+          784.86
+        ]
+      }
     ],
     "tnt-economy": [
-      {"weight_kg": 0.5, "prices_by_zone": [15, 20, 24, 28, 34, 40, 45, 50]},
-      {"weight_kg": 1, "prices_by_zone": [19, 26, 30, 36, 42, 50, 56, 64]},
-      {"weight_kg": 2, "prices_by_zone": [25, 34, 40, 48, 56, 66, 74, 84]},
-      {"weight_kg": 5, "prices_by_zone": [40, 55, 65, 78, 92, 108, 122, 138]},
-      {"weight_kg": 10, "prices_by_zone": [65, 90, 108, 128, 152, 180, 205, 230]},
-      {"weight_kg": 20, "prices_by_zone": [115, 162, 192, 230, 275, 325, 368, 415]},
-      {"weight_kg": 30, "prices_by_zone": [162, 228, 272, 325, 388, 460, 522, 588]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          15.45,
+          20.6,
+          24.72,
+          28.84,
+          35.02,
+          41.2,
+          46.35,
+          51.5
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          19.57,
+          26.78,
+          30.9,
+          37.08,
+          43.26,
+          51.5,
+          57.68,
+          65.92
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          25.75,
+          35.02,
+          41.2,
+          49.44,
+          57.68,
+          67.98,
+          76.22,
+          86.52
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          41.2,
+          56.65,
+          66.95,
+          80.34,
+          94.76,
+          111.24,
+          125.66,
+          142.14
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          66.95,
+          92.7,
+          111.24,
+          131.84,
+          156.56,
+          185.4,
+          211.15,
+          236.9
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          118.45,
+          166.86,
+          197.76,
+          236.9,
+          283.25,
+          334.75,
+          379.04,
+          427.45
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          166.86,
+          234.84,
+          280.16,
+          334.75,
+          399.64,
+          473.8,
+          537.66,
+          605.64
+        ]
+      }
     ]
   }
 }

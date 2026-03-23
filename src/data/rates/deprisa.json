@@ -1,7 +1,7 @@
 {
   "carrier_id": "deprisa",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Deprisa rates from Colombia. Colombian courier with domestic and regional coverage.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Deprisa rates from Colombia. Colombian courier with domestic and regional coverage. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -64,64 +64,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5,
-          10,
-          15,
-          28
+          5.15,
+          10.3,
+          15.45,
+          28.84
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7,
-          14,
-          20,
-          36
+          7.21,
+          14.42,
+          20.6,
+          37.08
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10,
-          18,
-          28,
-          48
+          10.3,
+          18.54,
+          28.84,
+          49.44
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          16,
-          30,
-          45,
-          78
+          16.48,
+          30.9,
+          46.35,
+          80.34
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          26,
-          50,
-          75,
-          130
+          26.78,
+          51.5,
+          77.25,
+          133.9
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          45,
-          88,
-          132,
-          230
+          46.35,
+          90.64,
+          135.96,
+          236.9
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          65,
-          125,
-          188,
-          328
+          66.95,
+          128.75,
+          193.64,
+          337.84
         ]
       }
     ],
@@ -129,64 +129,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3,
-          7,
-          10,
-          20
+          3.09,
+          7.21,
+          10.3,
+          20.6
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4,
-          10,
-          14,
-          26
+          4.12,
+          10.3,
+          14.42,
+          26.78
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6,
-          14,
-          20,
-          35
+          6.18,
+          14.42,
+          20.6,
+          36.05
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10,
-          22,
-          32,
-          58
+          10.3,
+          22.66,
+          32.96,
+          59.74
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18,
-          38,
-          55,
-          98
+          18.54,
+          39.14,
+          56.65,
+          100.94
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          32,
-          65,
-          95,
-          172
+          32.96,
+          66.95,
+          97.85,
+          177.16
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          45,
-          92,
-          135,
-          248
+          46.35,
+          94.76,
+          139.05,
+          255.44
         ]
       }
     ]

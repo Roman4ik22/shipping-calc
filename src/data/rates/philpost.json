@@ -1,7 +1,7 @@
 {
   "carrier_id": "philpost",
-  "effective_date": "2026-01-01",
-  "note": "Estimated PhilPost rates from the Philippines. EMS and registered mail services.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated PhilPost rates from the Philippines. EMS and registered mail services. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -76,64 +76,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9,
-          13,
-          20,
-          22
+          9.32,
+          13.45,
+          20.7,
+          22.77
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12,
-          17,
-          26,
-          30
+          12.42,
+          17.6,
+          26.91,
+          31.05
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17,
-          24,
-          36,
-          42
+          17.6,
+          24.84,
+          37.26,
+          43.47
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28,
-          40,
-          60,
-          68
+          28.98,
+          41.4,
+          62.1,
+          70.38
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45,
-          65,
-          100,
-          115
+          46.58,
+          67.27,
+          103.5,
+          119.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          78,
-          115,
-          175,
-          200
+          80.73,
+          119.03,
+          181.13,
+          207
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          112,
-          165,
-          252,
-          288
+          115.92,
+          170.77,
+          260.82,
+          298.08
         ]
       }
     ],
@@ -141,28 +141,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3,
-          5,
-          7,
-          8
+          3.1,
+          5.18,
+          7.24,
+          8.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5,
-          7,
-          9,
-          11
+          5.18,
+          7.24,
+          9.32,
+          11.39
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7,
-          10,
-          14,
-          16
+          7.24,
+          10.35,
+          14.49,
+          16.56
         ]
       },
       {

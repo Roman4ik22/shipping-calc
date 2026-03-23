@@ -1,7 +1,7 @@
 {
   "carrier_id": "omniva",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Omniva rates from Estonia/Baltic states. Express, standard parcel, and registered mail.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Omniva rates from Estonia/Baltic states. Express, standard parcel, and registered mail. [Rates adjusted 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -80,64 +80,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6,
-          12,
-          22,
-          28
+          6.18,
+          12.36,
+          22.66,
+          28.84
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8,
-          16,
-          28,
-          35
+          8.24,
+          16.48,
+          28.84,
+          36.05
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12,
-          22,
-          38,
-          48
+          12.36,
+          22.66,
+          39.14,
+          49.44
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          18,
-          35,
-          62,
-          78
+          18.54,
+          36.05,
+          63.86,
+          80.34
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          28,
-          58,
-          105,
-          132
+          28.84,
+          59.74,
+          108.15,
+          135.96
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          48,
-          100,
-          185,
-          232
+          49.44,
+          103,
+          190.55,
+          238.96
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          68,
-          142,
-          265,
-          332
+          70.04,
+          146.26,
+          272.95,
+          341.96
         ]
       }
     ],
@@ -145,64 +145,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4,
-          8,
-          14,
-          18
+          4.12,
+          8.24,
+          14.42,
+          18.54
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5,
-          11,
-          18,
-          24
+          5.15,
+          11.33,
+          18.54,
+          24.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8,
-          15,
-          26,
-          34
+          8.24,
+          15.45,
+          26.78,
+          35.02
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12,
-          24,
-          42,
-          55
+          12.36,
+          24.72,
+          43.26,
+          56.65
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          20,
-          40,
-          72,
-          95
+          20.6,
+          41.2,
+          74.16,
+          97.85
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          34,
-          68,
-          125,
-          168
+          35.02,
+          70.04,
+          128.75,
+          173.04
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          48,
-          98,
-          180,
-          242
+          49.44,
+          100.94,
+          185.4,
+          249.26
         ]
       }
     ],
@@ -210,28 +210,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3,
-          5,
-          8,
-          10
+          3.09,
+          5.15,
+          8.24,
+          10.3
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4,
-          7,
-          10,
-          13
+          4.12,
+          7.21,
+          10.3,
+          13.39
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6,
-          10,
-          15,
-          18
+          6.18,
+          10.3,
+          15.45,
+          18.54
         ]
       },
       {

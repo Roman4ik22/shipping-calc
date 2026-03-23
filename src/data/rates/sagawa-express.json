@@ -1,22 +1,138 @@
 {
   "carrier_id": "sagawa-express",
-  "effective_date": "2026-01-01",
-  "note": "Estimated Sagawa Express international rates from Japan. Japan's second-largest parcel delivery, generally cheaper than Yamato.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated Sagawa Express international rates from Japan. Japan's second-largest parcel delivery, generally cheaper than Yamato. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "East Asia (KR, TW, HK, CN)", "countries_from": ["JP"], "countries_to": ["KR", "TW", "HK", "CN"]},
-    {"zone": 2, "description": "Southeast Asia & Oceania", "countries_from": ["JP"], "countries_to": ["SG", "MY", "TH", "ID", "VN", "PH", "AU", "NZ"]},
-    {"zone": 3, "description": "North America & Europe", "countries_from": ["JP"], "countries_to": ["US", "CA", "GB", "DE", "FR", "IT", "ES", "NL"]},
-    {"zone": 4, "description": "Rest of World", "countries_from": ["JP"], "countries_to": ["IN", "AE", "SA", "BR", "MX", "ZA", "TR", "RU"]}
+    {
+      "zone": 1,
+      "description": "East Asia (KR, TW, HK, CN)",
+      "countries_from": [
+        "JP"
+      ],
+      "countries_to": [
+        "KR",
+        "TW",
+        "HK",
+        "CN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Southeast Asia & Oceania",
+      "countries_from": [
+        "JP"
+      ],
+      "countries_to": [
+        "SG",
+        "MY",
+        "TH",
+        "ID",
+        "VN",
+        "PH",
+        "AU",
+        "NZ"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "North America & Europe",
+      "countries_from": [
+        "JP"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Rest of World",
+      "countries_from": [
+        "JP"
+      ],
+      "countries_to": [
+        "IN",
+        "AE",
+        "SA",
+        "BR",
+        "MX",
+        "ZA",
+        "TR",
+        "RU"
+      ]
+    }
   ],
   "rates": {
     "sagawa-express-standard": [
-      {"weight_kg": 0.5, "prices_by_zone": [10, 14, 20, 26]},
-      {"weight_kg": 1, "prices_by_zone": [14, 20, 28, 35]},
-      {"weight_kg": 2, "prices_by_zone": [20, 28, 38, 50]},
-      {"weight_kg": 5, "prices_by_zone": [34, 48, 66, 85]},
-      {"weight_kg": 10, "prices_by_zone": [56, 78, 110, 142]},
-      {"weight_kg": 20, "prices_by_zone": [95, 135, 190, 248]},
-      {"weight_kg": 30, "prices_by_zone": [132, 188, 262, 342]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10.3,
+          14.42,
+          20.6,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14.42,
+          20.6,
+          28.84,
+          36.05
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20.6,
+          28.84,
+          39.14,
+          51.5
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          35.02,
+          49.44,
+          67.98,
+          87.55
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          57.68,
+          80.34,
+          113.3,
+          146.26
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          97.85,
+          139.05,
+          195.7,
+          255.44
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          135.96,
+          193.64,
+          269.86,
+          352.26
+        ]
+      }
     ]
   }
 }

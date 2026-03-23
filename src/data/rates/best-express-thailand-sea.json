@@ -1,20 +1,157 @@
 {
   "carrier_id": "best-express-thailand-sea",
   "zones": [
-    { "name": "Zone 0", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["TH","VN","MY","ID","PH","SG","MM","KH","LA","BN"] },
-    { "name": "Zone 1", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["CN","HK","TW","JP","KR","IN","BD","LK"] },
-    { "name": "Zone 2", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["AU","NZ","AE","SA","QA","KW","BH","OM"] },
-    { "name": "Zone 3", "countries_from": ["TH","VN","MY","ID","PH"], "countries_to": ["US","CA","GB","DE","FR","IT","ES","NL","SE"] }
+    {
+      "name": "Zone 0",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH",
+        "SG",
+        "MM",
+        "KH",
+        "LA",
+        "BN"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "CN",
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "IN",
+        "BD",
+        "LK"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "AU",
+        "NZ",
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE"
+      ]
+    }
   ],
   "rates": {
     "best-express-thailand-sea-standard": [
-      { "weight_kg": 0.5, "prices_by_zone": [5, 12, 22, 32] },
-      { "weight_kg": 1, "prices_by_zone": [8, 18, 32, 48] },
-      { "weight_kg": 2, "prices_by_zone": [12, 26, 48, 72] },
-      { "weight_kg": 5, "prices_by_zone": [22, 48, 88, 130] },
-      { "weight_kg": 10, "prices_by_zone": [38, 82, 155, 230] },
-      { "weight_kg": 20, "prices_by_zone": [65, 140, 270, 400] },
-      { "weight_kg": 30, "prices_by_zone": [90, 195, 375, 560] }
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          12.36,
+          22.66,
+          32.96
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.24,
+          18.54,
+          32.96,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.36,
+          26.78,
+          49.44,
+          74.16
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.66,
+          49.44,
+          90.64,
+          133.9
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          39.14,
+          84.46,
+          159.65,
+          236.9
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          66.95,
+          144.2,
+          278.1,
+          412
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          92.7,
+          200.85,
+          386.25,
+          576.8
+        ]
+      }
     ]
-  }
+  },
+  "effective_date": "2026-03-23",
+  "note": "undefined [Rates adjusted 2026-03-23]"
 }

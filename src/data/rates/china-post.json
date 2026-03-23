@@ -1,31 +1,216 @@
 {
   "carrier_id": "china-post",
-  "effective_date": "2026-01-01",
-  "note": "Estimated China Post rates from China. Very affordable, slower delivery. Registered Air Mail limited to 2kg.",
+  "effective_date": "2026-03-23",
+  "note": "Estimated China Post rates from China. Very affordable, slower delivery. Registered Air Mail limited to 2kg. [Rates adjusted 2026-03-23]",
   "zones": [
-    {"zone": 1, "description": "East & Southeast Asia", "countries_from": ["CN"], "countries_to": ["HK", "MO", "TW", "KR", "JP", "SG", "TH", "MY", "VN", "PH", "ID"]},
-    {"zone": 2, "description": "Europe & Oceania", "countries_from": ["CN"], "countries_to": ["GB", "DE", "FR", "IT", "ES", "NL", "SE", "PL", "AU", "NZ", "CH", "AT", "BE"]},
-    {"zone": 3, "description": "Americas", "countries_from": ["CN"], "countries_to": ["US", "CA", "MX", "BR", "AR", "CL", "CO"]},
-    {"zone": 4, "description": "Middle East, Africa & Rest of World", "countries_from": ["CN"], "countries_to": ["AE", "SA", "TR", "IN", "PK", "ZA", "NG", "KE", "EG", "RU"]}
+    {
+      "zone": 1,
+      "description": "East & Southeast Asia",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "HK",
+        "MO",
+        "TW",
+        "KR",
+        "JP",
+        "SG",
+        "TH",
+        "MY",
+        "VN",
+        "PH",
+        "ID"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Europe & Oceania",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "SE",
+        "PL",
+        "AU",
+        "NZ",
+        "CH",
+        "AT",
+        "BE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Americas",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "MX",
+        "BR",
+        "AR",
+        "CL",
+        "CO"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Middle East, Africa & Rest of World",
+      "countries_from": [
+        "CN"
+      ],
+      "countries_to": [
+        "AE",
+        "SA",
+        "TR",
+        "IN",
+        "PK",
+        "ZA",
+        "NG",
+        "KE",
+        "EG",
+        "RU"
+      ]
+    }
   ],
   "rates": {
     "china-post-ems": [
-      {"weight_kg": 0.5, "prices_by_zone": [10, 14, 16, 18]},
-      {"weight_kg": 1, "prices_by_zone": [14, 19, 22, 25]},
-      {"weight_kg": 2, "prices_by_zone": [20, 28, 32, 36]},
-      {"weight_kg": 5, "prices_by_zone": [35, 48, 55, 62]},
-      {"weight_kg": 10, "prices_by_zone": [58, 82, 95, 108]},
-      {"weight_kg": 20, "prices_by_zone": [100, 145, 168, 192]},
-      {"weight_kg": 30, "prices_by_zone": [140, 205, 238, 272]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          10.35,
+          14.49,
+          16.56,
+          18.63
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          14.49,
+          19.67,
+          22.77,
+          25.87
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          20.7,
+          28.98,
+          33.12,
+          37.26
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          36.22,
+          49.68,
+          56.93,
+          64.17
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          60.03,
+          84.87,
+          98.32,
+          111.78
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          103.5,
+          150.07,
+          173.88,
+          198.72
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          144.9,
+          212.18,
+          246.33,
+          281.52
+        ]
+      }
     ],
     "china-post-registered": [
-      {"weight_kg": 0.5, "prices_by_zone": [3, 4, 5, 5]},
-      {"weight_kg": 1, "prices_by_zone": [5, 7, 8, 9]},
-      {"weight_kg": 2, "prices_by_zone": [8, 11, 13, 14]},
-      {"weight_kg": 5, "prices_by_zone": [null, null, null, null]},
-      {"weight_kg": 10, "prices_by_zone": [null, null, null, null]},
-      {"weight_kg": 20, "prices_by_zone": [null, null, null, null]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          3.1,
+          4.14,
+          5.18,
+          5.18
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5.18,
+          7.24,
+          8.28,
+          9.32
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.28,
+          11.39,
+          13.45,
+          14.49
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }
