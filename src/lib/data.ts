@@ -149,6 +149,7 @@ import joomLogisticsRates from "../data/rates/joom-logistics.json";
 import pickpointRates from "../data/rates/pickpoint.json";
 import fivePostRates from "../data/rates/5post.json";
 import sberlogistikaRates from "../data/rates/sberlogistika.json";
+import nipostRates from "../data/rates/nipost.json";
 import type {
   Country,
   Carrier,
@@ -311,6 +312,7 @@ const allRateData: CarrierRateData[] = [
   pickpointRates,
   fivePostRates,
   sberlogistikaRates,
+  nipostRates,
 ] as CarrierRateData[];
 
 // Lookup maps

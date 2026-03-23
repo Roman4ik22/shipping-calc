@@ -3826,5 +3826,33 @@
         "tracking": true
       }
     ]
+  },
+  {
+    "id": "nipost",
+    "name": "NIPOST (Nigerian Postal Service)",
+    "type": "postal",
+    "logo": "/logos/nipost.svg",
+    "website": "https://nipost.gov.ng",
+    "tracking_url": "https://nipost.gov.ng/track?id={tracking}",
+    "description_en": "Nigeria's national postal service. Affordable international mail and parcel delivery from Nigeria to over 190 countries.",
+    "description_ru": "Национальная почтовая служба Нигерии. Доступная международная доставка писем и посылок из Нигерии в более чем 190 стран.",
+    "services": [
+      {
+        "id": "nipost-standard",
+        "name": "International Parcel",
+        "speed_days_min": 10,
+        "speed_days_max": 30,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "nipost-ems",
+        "name": "EMS Express",
+        "speed_days_min": 5,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
   }
 ]

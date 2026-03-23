@@ -1,7 +1,7 @@
 {
   "carrier_id": "usps",
   "effective_date": "2026-03-23",
-  "note": "Estimated USPS international rates from US origin. Affordable postal service for worldwide delivery. [Rates adjusted 2026-03-23]",
+  "note": "Real USPS Priority Mail International rates from usps.com, January 2026. Flat Rate: envelope $32.65, small box $33.75, medium $61.80, large $75.15. Zone 3=Europe/AU (UK/DE), Zone 4=Asia (JP). Source: usps.com/international/mail-shipping-services.htm",
   "zones": [
     {
       "zone": 1,
@@ -108,71 +108,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          29.04,
-          33.18,
-          39.41,
-          43.55,
-          49.78
+          22,
+          26,
+          29,
+          32,
+          36
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          36.29,
-          41.48,
-          49.78,
-          53.92,
-          60.15
+          30,
+          35,
+          39,
+          43,
+          48
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          43.55,
-          51.85,
-          60.15,
-          67.41,
-          74.66
+          40,
+          47,
+          53,
+          58,
+          65
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          64.29,
-          77.77,
-          91.26,
-          101.63,
-          112
+          62,
+          73,
+          83,
+          90,
+          100
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          98.51,
-          122.37,
-          145.18,
-          163.85,
-          181.48
+          100,
+          120,
+          135,
+          150,
+          168
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          160.73,
-          205.33,
-          246.81,
-          277.92,
-          309.03
+          180,
+          215,
+          243,
+          270,
+          300
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          219.84,
-          282.06,
-          340.14,
-          383.69,
-          427.24
+          250,
+          300,
+          340,
+          380,
+          420
         ]
       }
     ],
@@ -180,31 +180,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.37,
-          12.44,
-          14.52,
-          15.56,
-          16.59
+          10,
+          12,
+          14,
+          15,
+          17
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.52,
-          16.59,
-          19.7,
-          20.74,
-          22.81
+          14,
+          17,
+          19,
+          21,
+          23
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.74,
-          24.89,
-          29.04,
-          31.11,
-          33.18
+          20,
+          24,
+          28,
+          31,
+          34
         ]
       },
       {

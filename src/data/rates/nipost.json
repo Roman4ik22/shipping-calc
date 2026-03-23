@@ -1,0 +1,212 @@
+{
+  "carrier_id": "nipost",
+  "effective_date": "2026-03-23",
+  "note": "NIPOST (Nigerian Postal Service) international rates based on real tariffs from nipost.gov.ng. NGN converted to USD at 1550 NGN/USD. Extrapolated ~900NGN ($0.58)/0.5kg additional for intermediate weights. Source: https://nipost.gov.ng [Rates updated 2026-03-23]",
+  "zones": [
+    {
+      "zone": 1,
+      "description": "West Africa (Neighbors)",
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "GH",
+        "CM",
+        "BJ",
+        "TG",
+        "NE",
+        "CI",
+        "SN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Rest of Africa",
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "KE",
+        "ZA",
+        "TZ",
+        "ET",
+        "EG",
+        "MA"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Europe & UK",
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "GB",
+        "DE",
+        "FR",
+        "IT",
+        "ES",
+        "NL",
+        "BE",
+        "PL",
+        "SE",
+        "CH",
+        "AT",
+        "IE"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Americas & Asia",
+      "countries_from": [
+        "NG"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
+        "BR",
+        "MX",
+        "CN",
+        "JP",
+        "KR",
+        "IN",
+        "AU",
+        "AE",
+        "SA",
+        "SG"
+      ]
+    }
+  ],
+  "rates": {
+    "nipost-standard": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          4.00,
+          5.00,
+          6.00,
+          6.50
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          5.00,
+          6.50,
+          8.00,
+          8.00
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          6.00,
+          8.00,
+          9.50,
+          10.00
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          9.00,
+          11.00,
+          13.00,
+          15.00
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          13.00,
+          16.00,
+          19.00,
+          22.00
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          20.00,
+          25.00,
+          31.00,
+          36.00
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          27.00,
+          34.00,
+          43.00,
+          50.00
+        ]
+      }
+    ],
+    "nipost-ems": [
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.50,
+          6.50,
+          7.00,
+          7.50
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          6.50,
+          7.50,
+          8.00,
+          8.00
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          8.00,
+          9.50,
+          10.50,
+          11.00
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          11.00,
+          13.00,
+          15.00,
+          17.00
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          16.00,
+          19.00,
+          22.00,
+          25.00
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          25.00,
+          30.00,
+          36.00,
+          42.00
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          34.00,
+          41.00,
+          50.00,
+          58.00
+        ]
+      }
+    ]
+  }
+}

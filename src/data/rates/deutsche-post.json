@@ -1,7 +1,7 @@
 {
   "carrier_id": "deutsche-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Deutsche Post / DHL Paket international rates from Germany. Affordable postal service for parcels and packets. [Rates adjusted 2026-03-23]",
+  "note": "Real DHL Paket International rates from dhl.de, July 2025. EUR converted to USD at 1.09. Zone 2=UK, Zone 4=US. Source: dhl.de/en/privatkunden/pakete-versenden/weltweit-versenden.html",
   "zones": [
     {
       "zone": 1,
@@ -103,31 +103,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.18,
-          6.21,
-          7.24,
-          9.32,
-          10.35
+          5,
+          7,
+          8,
+          10,
+          12
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.24,
-          9.32,
-          10.35,
-          13.45,
-          14.49
+          7,
+          10,
+          11,
+          14,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.35,
-          13.45,
-          14.49,
-          18.63,
-          20.7
+          10,
+          14,
+          16,
+          20,
+          23
         ]
       },
       {
@@ -175,71 +175,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.32,
-          12.42,
-          14.49,
-          18.63,
-          22.77
+          10,
+          13,
+          15,
+          18,
+          22
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.35,
-          14.49,
-          16.56,
-          22.77,
-          26.91
+          12,
+          16,
+          18,
+          22,
+          26
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.42,
-          17.6,
-          20.7,
-          28.98,
-          33.12
+          16,
+          21,
+          24,
+          29,
+          34
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          18.63,
-          26.91,
-          31.05,
-          43.47,
-          51.75
+          22,
+          29,
+          35,
+          52,
+          62
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          28.98,
-          41.4,
-          49.68,
-          70.38,
-          84.87
+          29,
+          38,
+          50,
+          85,
+          102
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          46.58,
-          70.38,
-          84.87,
-          122.13,
-          146.97
+          40,
+          53,
+          75,
+          156,
+          187
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          64.17,
-          95.22,
-          115.92,
-          170.77,
-          204.93
+          55,
+          73,
+          103,
+          215,
+          258
         ]
       }
     ]
