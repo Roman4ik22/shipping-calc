@@ -1,0 +1,10 @@
+[
+  {
+    "carrier": "skynet-worldwide-express",
+    "route": "MY domestic",
+    "weight_kg": 1,
+    "price": 5.99,
+    "currency": "MYR",
+    "source": "skynet.com.my"
+  }
+]
