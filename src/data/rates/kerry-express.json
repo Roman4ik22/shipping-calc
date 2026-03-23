@@ -1,7 +1,7 @@
 {
   "carrier_id": "kerry-express",
   "effective_date": "2026-03-23",
-  "note": "Kerry Express regional rates. Major logistics provider in Thailand and Southeast Asia. [Rates adjusted 2026-03-23]",
+  "note": "Kerry Express rates. Domestic Thailand rates from official Kerry Express rate card (THB converted at 35.5 THB/USD). International zones estimated. [Updated from official calculator/rate card March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -56,7 +56,7 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.06,
+          1.7,
           10.3,
           22.66
         ]
@@ -64,7 +64,7 @@
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.09,
+          1.7,
           14.42,
           28.84
         ]
@@ -72,7 +72,7 @@
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.12,
+          2.3,
           20.6,
           39.14
         ]
@@ -80,7 +80,7 @@
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.21,
+          4.2,
           36.05,
           66.95
         ]
@@ -88,7 +88,7 @@
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          12.36,
+          7,
           59.74,
           113.3
         ]
@@ -96,7 +96,7 @@
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          20.6,
+          12.7,
           105.06,
           200.85
         ]
@@ -104,7 +104,7 @@
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          28.84,
+          18.3,
           149.35,
           286.34
         ]
@@ -114,7 +114,7 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.12,
+          2.5,
           14.42,
           28.84
         ]
@@ -122,7 +122,7 @@
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
+          2.5,
           18.54,
           37.08
         ]
@@ -130,7 +130,7 @@
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.21,
+          3.4,
           26.78,
           49.44
         ]
@@ -138,7 +138,7 @@
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          11.33,
+          6.3,
           46.35,
           84.46
         ]
@@ -146,7 +146,7 @@
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.54,
+          10.5,
           77.25,
           144.2
         ]
@@ -154,7 +154,7 @@
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.9,
+          19.1,
           135.96,
           257.5
         ]
@@ -162,7 +162,7 @@
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          43.26,
+          27.5,
           193.64,
           365.65
         ]

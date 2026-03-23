@@ -3,6 +3,16 @@
   "zones": [
     {
       "zone": 1,
+      "description": "Domestic Malaysia",
+      "countries_from": [
+        "MY"
+      ],
+      "countries_to": [
+        "MY"
+      ]
+    },
+    {
+      "zone": 2,
       "description": "ASEAN",
       "countries_from": [
         "MY"
@@ -20,7 +30,7 @@
       ]
     },
     {
-      "zone": 2,
+      "zone": 3,
       "description": "Asia & Pacific",
       "countries_from": [
         "MY"
@@ -38,7 +48,7 @@
       ]
     },
     {
-      "zone": 3,
+      "zone": 4,
       "description": "Europe & Americas",
       "countries_from": [
         "MY"
@@ -68,57 +78,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.3,
-          16.48,
-          26.78
+          1.2,
+          4.7,
+          9.2,
+          13.8
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.42,
-          22.66,
-          35.02
+          1.6,
+          8.5,
+          15,
+          21.3
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.66,
-          35.02,
-          51.5
+          2.5,
+          14,
+          24,
+          34
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          43.26,
-          66.95,
-          97.85
+          5,
+          28,
+          46,
+          65
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          72.1,
-          113.3,
-          169.95
+          8.5,
+          48,
+          78,
+          112
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          128.75,
-          206,
-          309
+          15,
+          85,
+          140,
+          200
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          185.4,
-          298.7,
-          448.05
+          21,
+          120,
+          200,
+          285
         ]
       }
     ],
@@ -126,53 +143,59 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.21,
-          10.3,
-          16.48
+          0.9,
+          3.5,
+          6.9,
+          10.4
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.27,
-          14.42,
-          22.66
+          1.2,
+          6.4,
+          11.3,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.42,
-          22.66,
-          35.02
+          1.9,
+          10.5,
+          18,
+          25.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          28.84,
-          45.32,
-          66.95
+          3.8,
+          21,
+          34.5,
+          49
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          49.44,
-          80.34,
-          121.54
+          6.4,
+          36,
+          58.5,
+          84
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          90.64,
-          146.26,
-          218.36
+          11.3,
+          64,
+          105,
+          150
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026]"
 }

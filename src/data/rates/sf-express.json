@@ -1,7 +1,7 @@
 {
   "carrier_id": "sf-express",
   "effective_date": "2026-03-23",
-  "note": "Estimated SF Express international rates from China. China's largest private courier, strong in Asia. [Rates adjusted 2026-03-23]",
+  "note": "SF Express international rates from China. Economy Express rates based on sf-international.com official calculator (CN→JP, CN→US). Standard rates estimated at ~1.4x economy. [Updated from official calculator/rate card March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -91,71 +91,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.24,
-          12.36,
-          15.45,
-          18.54,
-          20.6
+          17.6,
+          29.4,
+          39.2,
+          49,
+          56
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.36,
-          17.51,
-          21.63,
-          25.75,
-          28.84
+          20.2,
+          33.6,
+          46.2,
+          58.8,
+          67.2
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.54,
-          25.75,
-          30.9,
-          37.08,
-          41.2
+          26,
+          43.4,
+          60.2,
+          77,
+          88.2
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.96,
-          46.35,
-          55.62,
-          66.95,
-          74.16
+          47,
+          78.4,
+          105,
+          131.6,
+          151.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          56.65,
-          80.34,
-          96.82,
-          115.36,
-          128.75
+          73.9,
+          123.2,
+          173.6,
+          222.6,
+          256.2
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          100.94,
-          144.2,
-          173.04,
-          206,
-          231.75
+          126.8,
+          211.4,
+          308,
+          403.2,
+          463.4
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          142.14,
-          203.94,
-          245.14,
-          293.55,
-          327.54
+          177.8,
+          298.2,
+          434,
+          567,
+          652.4
         ]
       }
     ],
@@ -163,71 +163,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.15,
-          8.24,
-          10.3,
-          13.39,
-          15.45
+          12.6,
+          21,
+          28,
+          35,
+          40
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.24,
-          12.36,
-          15.45,
-          18.54,
-          20.6
+          14.4,
+          24,
+          33,
+          42,
+          48
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.36,
-          18.54,
-          22.66,
-          26.78,
-          30.9
+          18.6,
+          31,
+          43,
+          55,
+          63
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.66,
-          32.96,
-          41.2,
-          49.44,
-          55.62
+          33.6,
+          56,
+          75,
+          94,
+          108
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          39.14,
-          57.68,
-          70.04,
-          84.46,
-          94.76
+          52.8,
+          88,
+          124,
+          159,
+          183
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          70.04,
-          103,
-          125.66,
-          152.44,
-          169.95
+          90.6,
+          151,
+          220,
+          288,
+          331
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          98.88,
-          146.26,
-          177.16,
-          216.3,
-          242.05
+          127,
+          213,
+          310,
+          405,
+          466
         ]
       }
     ]

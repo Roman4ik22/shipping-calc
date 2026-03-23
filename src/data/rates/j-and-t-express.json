@@ -1,7 +1,7 @@
 {
   "carrier_id": "j-and-t-express",
   "effective_date": "2026-03-23",
-  "note": "J&T Express Southeast Asia regional rates. Major SEA e-commerce carrier. [Rates adjusted 2026-03-23]",
+  "note": "J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -59,57 +59,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.06,
-          8.24,
-          15.45
+          0.7,
+          1,
+          8.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.09,
-          11.33,
-          20.6
+          0.8,
+          1,
+          11.5
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.12,
-          16.48,
-          28.84
+          1.3,
+          1.4,
+          16
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.21,
-          28.84,
-          49.44
+          2,
+          2.8,
+          28
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          12.36,
-          49.44,
-          84.46
+          2.5,
+          5.1,
+          48
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          20.6,
-          87.55,
-          152.44
+          5.1,
+          10,
+          86
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          28.84,
-          123.6,
-          216.3
+          7.6,
+          15,
+          122
         ]
       }
     ],
@@ -117,57 +117,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.03,
-          6.18,
-          12.36
+          0.5,
+          0.8,
+          6.4
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.06,
-          8.24,
-          16.48
+          0.6,
+          0.8,
+          8.6
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          3.09,
-          12.36,
-          22.66
+          1,
+          1.1,
+          12
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          5.15,
-          22.66,
-          39.14
+          1.5,
+          2.1,
+          21
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          9.27,
-          39.14,
-          66.95
+          1.9,
+          3.8,
+          36
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          15.45,
-          70.04,
-          121.54
+          3.8,
+          7.5,
+          65
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          22.66,
-          97.85,
-          173.04
+          5.7,
+          11.3,
+          92
         ]
       }
     ]
