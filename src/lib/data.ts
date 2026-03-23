@@ -415,10 +415,8 @@ export function getCorridorRates(
           .filter((r) => r.price_usd > 0);
       }
 
-      // If no rate data, create estimated rates based on carrier type and distance
-      if (rates.length === 0 && !rateData) {
-        rates = generateEstimatedRates(carrier, origin, dest);
-      }
+      // Only show carriers that have actual rate data for this corridor
+      // No more estimated/generated rates — they were inaccurate
 
       if (rates.length > 0) {
         results.push({
