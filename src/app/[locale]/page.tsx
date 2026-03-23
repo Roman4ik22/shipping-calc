@@ -38,7 +38,6 @@ export default async function HomePage({
   const loc = locale as Locale;
   const popular = getPopularCountries();
 
-  // Popular corridors for display
   const popularCorridors = [
     ["US", "GB"], ["US", "DE"], ["CN", "US"], ["GB", "DE"],
     ["US", "JP"], ["US", "AU"], ["CN", "GB"], ["DE", "FR"],
@@ -48,36 +47,25 @@ export default async function HomePage({
 
   return (
     <div>
-      {/* Hero section */}
-      <section className="relative overflow-visible">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-dark/30 via-dark-900 to-dark-800" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-accent)/15%,transparent_70%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4 text-white tracking-tight">
+      {/* Hero */}
+      <section className="bg-dark-900 py-24 sm:py-32">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-center">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-500 text-center max-w-2xl mx-auto mt-6">
             {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
-            <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-white">213</p>
-              <p className="text-sm text-gray-400">{t(loc, "all_countries")}</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-white">134</p>
-              <p className="text-sm text-gray-400">{t(loc, "carriers_page")}</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-white">45K+</p>
-              <p className="text-sm text-gray-400">{t(loc, "routes")}</p>
-            </div>
-          </div>
+          <p className="text-center mt-8 text-sm text-gray-600 tracking-wide">
+            <span className="font-mono">213</span> {t(loc, "all_countries")}
+            <span className="mx-3 text-gray-700">|</span>
+            <span className="font-mono">134</span> {t(loc, "carriers_page")}
+            <span className="mx-3 text-gray-700">|</span>
+            <span className="font-mono">45K+</span> {t(loc, "routes")}
+          </p>
 
-          {/* Shipping form */}
-          <div className="max-w-4xl mx-auto bg-surface-light/80 backdrop-blur-sm border border-white/10 rounded-xl p-6 pb-20 overflow-visible relative">
+          <div className="max-w-4xl mx-auto mt-14 bg-dark-800 rounded-2xl p-8 pb-20 overflow-visible relative">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
@@ -101,127 +89,123 @@ export default async function HomePage({
       </section>
 
       {/* Popular corridors */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-white mb-6">
-          {t(loc, "popular_destinations")}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {popularCorridors.map(([fromCode, toCode]) => {
-            const from = countries.find((c) => c.code === fromCode);
-            const to = countries.find((c) => c.code === toCode);
-            if (!from || !to) return null;
-            const slug = makeCorridorSlug(from, to, loc);
-            return (
-              <Link
-                key={`${fromCode}-${toCode}`}
-                href={`/${locale}/shipping/${slug}`}
-                prefetch={false}
-                className="block bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 hover:bg-surface-light transition-all"
-              >
-                <p className="font-medium text-white">
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-10">
+            {t(loc, "popular_destinations")}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8">
+            {popularCorridors.map(([fromCode, toCode]) => {
+              const from = countries.find((c) => c.code === fromCode);
+              const to = countries.find((c) => c.code === toCode);
+              if (!from || !to) return null;
+              const slug = makeCorridorSlug(from, to, loc);
+              return (
+                <Link
+                  key={`${fromCode}-${toCode}`}
+                  href={`/${locale}/shipping/${slug}`}
+                  prefetch={false}
+                  className="text-gray-300 hover:opacity-60 transition-opacity py-1"
+                >
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
-                </p>
-                <p className="text-sm text-gray-400 mt-1">
-                  {t(loc, "compare_rates")}
-                </p>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Ship from / Ship to sections */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">
-              {t(loc, "popular_origins")}
-            </h2>
-            <div className="grid grid-cols-2 gap-2">
-              {popular.slice(0, 16).map((c) => (
-                <Link
-                  key={c.code}
-                  href={`/${locale}/shipping/from/${c.slug_en}`}
-                  prefetch={false}
-                  className="text-sm text-accent-light hover:text-white py-1 transition-colors"
-                >
-                  {t(loc, "ship_from", { country: getCountryName(c, loc) })}
                 </Link>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">
-              {t(loc, "popular_destinations")}
-            </h2>
-            <div className="grid grid-cols-2 gap-2">
-              {popular.slice(0, 16).map((c) => (
-                <Link
-                  key={c.code}
-                  href={`/${locale}/shipping/to/${c.slug_en}`}
-                  prefetch={false}
-                  className="text-sm text-accent-light hover:text-white py-1 transition-colors"
-                >
-                  {t(loc, "ship_to", { country: getCountryName(c, loc) })}
-                </Link>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Trusted carriers */}
-      <section className="bg-surface py-10 border-y border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-gray-400 mb-6">
+      {/* Ship from / Ship to */}
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                {t(loc, "popular_origins")}
+              </h2>
+              <div className="grid grid-cols-2 gap-y-2">
+                {popular.slice(0, 16).map((c) => (
+                  <Link
+                    key={c.code}
+                    href={`/${locale}/shipping/from/${c.slug_en}`}
+                    prefetch={false}
+                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity py-1"
+                  >
+                    {t(loc, "ship_from", { country: getCountryName(c, loc) })}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                {t(loc, "popular_destinations")}
+              </h2>
+              <div className="grid grid-cols-2 gap-y-2">
+                {popular.slice(0, 16).map((c) => (
+                  <Link
+                    key={c.code}
+                    href={`/${locale}/shipping/to/${c.slug_en}`}
+                    prefetch={false}
+                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity py-1"
+                  >
+                    {t(loc, "ship_to", { country: getCountryName(c, loc) })}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Carriers */}
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <p className="text-sm text-gray-600 uppercase tracking-widest mb-6">
             {t(loc, "comparing_carriers")}
           </p>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
-            {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name) => (
-              <span key={name} className="text-gray-300 font-semibold text-sm sm:text-base whitespace-nowrap">
-                {name}
-              </span>
-            ))}
-          </div>
-          <div className="text-center mt-4">
-            <Link href={`/${locale}/carriers`} className="text-sm text-accent-light hover:text-white transition-colors">
-              {t(loc, "view_all_carriers")} →
-            </Link>
-          </div>
+          <p className="text-gray-400 text-lg leading-loose">
+            {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].join(" · ")}
+          </p>
+          <Link
+            href={`/${locale}/carriers`}
+            className="inline-block mt-6 text-sm text-gray-500 hover:opacity-60 transition-opacity"
+          >
+            {t(loc, "view_all_carriers")} →
+          </Link>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white mb-8 text-center">
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <h2 className="text-3xl font-bold text-white mb-16 text-center">
             {t(loc, "how_it_works")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-              <h3 className="font-semibold text-white mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">1.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "choose_route")}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-500 leading-relaxed">
                 {t(loc, "choose_route_desc")}
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-              <h3 className="font-semibold text-white mb-2">
+            <div>
+              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">2.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "compare_rates")}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-500 leading-relaxed">
                 {t(loc, "compare_rates_desc")}
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-accent/20 text-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-              <h3 className="font-semibold text-white mb-2">
+            <div>
+              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">3.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "ship_package")}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-500 leading-relaxed">
                 {t(loc, "ship_package_desc")}
               </p>
             </div>
@@ -262,56 +246,60 @@ export default async function HomePage({
       />
 
       {/* All countries */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-white mb-6">
-          {t(loc, "all_countries")}
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-          {countries.map((c) => (
-            <Link
-              key={c.code}
-              href={`/${locale}/shipping/from/${c.slug_en}`}
-              prefetch={false}
-              className="text-sm text-gray-400 hover:text-accent-light py-1 transition-colors"
-            >
-              {getCountryName(c, loc)}
-            </Link>
-          ))}
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            {t(loc, "all_countries")}
+          </h2>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-y-1 gap-x-4">
+            {countries.map((c) => (
+              <Link
+                key={c.code}
+                href={`/${locale}/shipping/from/${c.slug_en}`}
+                prefetch={false}
+                className="text-xs text-gray-600 hover:opacity-60 transition-opacity py-0.5 truncate"
+              >
+                {getCountryName(c, loc)}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Popular shipping guides */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold text-white mb-6">
-          {t(loc, "popular_guides")}
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {popular.slice(0, 12).map((c) => (
-            <Link
-              key={c.code}
-              href={`/${locale}/guide/${c.slug_en}`}
-              prefetch={false}
-              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:bg-surface-light transition-all text-sm"
-            >
-              <span>{countryFlag(c.code)}</span>
-              <span className="text-gray-300">{getCountryName(c, loc)}</span>
-            </Link>
-          ))}
-        </div>
-        <div className="text-center mt-4">
-          <Link href={`/${locale}/guide`} className="text-sm text-accent-light hover:text-white transition-colors">
+      {/* Popular guides */}
+      <section className="border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            {t(loc, "popular_guides")}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-3 gap-x-8">
+            {popular.slice(0, 12).map((c) => (
+              <Link
+                key={c.code}
+                href={`/${locale}/guide/${c.slug_en}`}
+                prefetch={false}
+                className="text-gray-400 hover:opacity-60 transition-opacity text-sm py-1"
+              >
+                {countryFlag(c.code)} {getCountryName(c, loc)}
+              </Link>
+            ))}
+          </div>
+          <Link
+            href={`/${locale}/guide`}
+            className="inline-block mt-8 text-sm text-gray-500 hover:opacity-60 transition-opacity"
+          >
             {t(loc, "all_guides")} →
           </Link>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="bg-surface-light border-y border-white/10 py-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">
+      {/* Newsletter */}
+      <section className="border-t border-white/5">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h2 className="text-3xl font-bold text-white mb-3">
             {t(loc, "newsletter_title")}
           </h2>
-          <p className="text-gray-400 mb-6 text-sm">
+          <p className="text-gray-500 mb-8 text-sm">
             {t(loc, "newsletter_subtitle")}
           </p>
           <NewsletterForm
@@ -322,13 +310,13 @@ export default async function HomePage({
               subscribe: t(loc, "newsletter_subscribe"),
             }}
           />
-          <p className="text-xs text-gray-500 mt-3">
+          <p className="text-xs text-gray-600 mt-4">
             {t(loc, "newsletter_privacy")}
           </p>
         </div>
       </section>
 
-      {/* Homepage FAQ */}
+      {/* FAQ */}
       {(() => {
         const faqs = [
           { q: t(loc, "home_faq_1_q"), a: t(loc, "home_faq_1_a") },
@@ -339,34 +327,38 @@ export default async function HomePage({
         ];
 
         return (
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 className="text-2xl font-bold text-white mb-6">
-              {t(loc, "faq_title")}
-            </h2>
-            <div className="space-y-3">
-              {faqs.map((faq, i) => (
-                <details key={i} className="bg-surface border border-white/10 rounded-lg">
-                  <summary className="p-4 font-medium text-gray-200 cursor-pointer hover:text-accent-light transition-colors">
-                    {faq.q}
-                  </summary>
-                  <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
-                </details>
-              ))}
+          <section className="border-t border-white/5">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+              <h2 className="text-3xl font-bold text-white mb-10">
+                {t(loc, "faq_title")}
+              </h2>
+              <div>
+                {faqs.map((faq, i) => (
+                  <details key={i} className="border-b border-white/5 group">
+                    <summary className="py-5 font-medium text-gray-300 cursor-pointer hover:opacity-60 transition-opacity select-none">
+                      {faq.q}
+                    </summary>
+                    <p className="pb-6 text-gray-500 text-sm leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    mainEntity: faqs.map((faq) => ({
+                      "@type": "Question",
+                      name: faq.q,
+                      acceptedAnswer: { "@type": "Answer", text: faq.a },
+                    })),
+                  }),
+                }}
+              />
             </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  mainEntity: faqs.map((faq) => ({
-                    "@type": "Question",
-                    name: faq.q,
-                    acceptedAnswer: { "@type": "Answer", text: faq.a },
-                  })),
-                }),
-              }}
-            />
           </section>
         );
       })()}

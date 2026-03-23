@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-screen bg-dark-900 text-gray-100 antialiased font-sans">
+      <body className="min-h-screen bg-[#0a0a0a] text-gray-400 antialiased font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -119,12 +119,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* Header */}
-        <header className="bg-dark-800/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+        <header className="sticky top-0 z-50 bg-[#0a0a0a]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
+            <div className="flex justify-between items-center h-12">
               <Link
                 href={`/${locale}`}
-                className="text-xl font-bold text-accent-light"
+                className="text-lg font-semibold tracking-tight text-white"
               >
                 {t(loc, "site_name")}
               </Link>
@@ -132,37 +132,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <nav className="hidden sm:flex items-center gap-6">
                   <Link
                     href={`/${locale}`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "home")}
                   </Link>
                   <Link
                     href={`/${locale}/carriers`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "carriers_page")}
                   </Link>
                   <Link
                     href={`/${locale}/guide`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "guides")}
                   </Link>
                   <Link
                     href={`/${locale}/about`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "about")}
                   </Link>
                   <Link
                     href={`/${locale}/blog`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "blog")}
                   </Link>
                   <Link
                     href={`/${locale}/platforms`}
-                    className="text-sm text-gray-300 hover:text-white font-medium transition-colors"
+                    className="text-sm text-gray-500 hover:text-white transition-opacity"
                   >
                     {t(loc, "platforms")}
                   </Link>
@@ -188,28 +188,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="bg-dark-800 border-t border-white/10 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <footer className="border-t border-white/5 mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-white font-bold text-lg mb-3">
+                <h3 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "site_name")}
                 </h3>
-                <p className="text-sm text-gray-400 mb-4">{t(loc, "site_description")}</p>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <Link href={`/${locale}`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "home")}</Link>
-                  <Link href={`/${locale}/carriers`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "carriers_page")}</Link>
-                  <Link href={`/${locale}/guide`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "guides")}</Link>
-                  <Link href={`/${locale}/about`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "about")}</Link>
-                  <Link href={`/${locale}/blog`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "blog")}</Link>
-                  <Link href={`/${locale}/platforms`} className="text-gray-400 hover:text-accent-light transition-colors">{t(loc, "platforms")}</Link>
+                <p className="text-xs text-gray-500 mb-4">{t(loc, "site_description")}</p>
+                <div className="flex flex-wrap gap-3 text-xs">
+                  <Link href={`/${locale}`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "home")}</Link>
+                  <Link href={`/${locale}/carriers`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "carriers_page")}</Link>
+                  <Link href={`/${locale}/guide`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "guides")}</Link>
+                  <Link href={`/${locale}/about`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "about")}</Link>
+                  <Link href={`/${locale}/blog`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "blog")}</Link>
+                  <Link href={`/${locale}/platforms`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "platforms")}</Link>
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold mb-3">
+                <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_destinations")}
                 </h4>
-                <div className="grid grid-cols-1 gap-1 text-sm">
+                <div className="grid grid-cols-1 gap-1 text-xs">
                   {["US", "GB", "DE", "CN", "JP", "AU", "CA", "FR"].map((code) => {
                     const country = getCountryByCode(code);
                     if (!country) return null;
@@ -218,7 +218,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         key={code}
                         href={`/${locale}/shipping/to/${country.slug_en}`}
                         prefetch={false}
-                        className="text-gray-400 hover:text-accent-light transition-colors"
+                        className="text-gray-500 hover:text-white transition-colors"
                       >
                         {t(loc, "ship_to", {
                           country: getCountryName(country, loc),
@@ -229,10 +229,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold mb-3">
+                <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_origins")}
                 </h4>
-                <div className="grid grid-cols-1 gap-1 text-sm">
+                <div className="grid grid-cols-1 gap-1 text-xs">
                   {["US", "CN", "GB", "DE", "JP", "KR", "IN", "RU"].map((code) => {
                     const country = getCountryByCode(code);
                     if (!country) return null;
@@ -241,7 +241,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         key={code}
                         href={`/${locale}/shipping/from/${country.slug_en}`}
                         prefetch={false}
-                        className="text-gray-400 hover:text-accent-light transition-colors"
+                        className="text-gray-500 hover:text-white transition-colors"
                       >
                         {t(loc, "ship_from", {
                           country: getCountryName(country, loc),
@@ -252,24 +252,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold mb-3">
+                <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "information")}
                 </h4>
-                <p className="text-sm text-gray-500 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <Link href={`/${locale}/terms`} className="text-gray-400 hover:text-accent-light transition-colors">
+                <p className="text-xs text-gray-600 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
+                <div className="flex flex-wrap gap-3 text-xs">
+                  <Link href={`/${locale}/terms`} className="text-gray-500 hover:text-white transition-colors">
                     {locale === "ru" ? "Условия" : "Terms"}
                   </Link>
-                  <Link href={`/${locale}/privacy`} className="text-gray-400 hover:text-accent-light transition-colors">
+                  <Link href={`/${locale}/privacy`} className="text-gray-500 hover:text-white transition-colors">
                     {locale === "ru" ? "Конфиденциальность" : "Privacy"}
                   </Link>
-                  <Link href={`/${locale}/data-methodology`} className="text-gray-400 hover:text-accent-light transition-colors">
+                  <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
                     {locale === "ru" ? "Методология" : "Data Methodology"}
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="border-t border-white/10 mt-8 pt-6 text-sm text-center text-gray-500">
+            <div className="border-t border-white/5 mt-8 pt-6 text-xs text-center text-gray-600">
               &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
               {t(loc, "all_rights")}
             </div>

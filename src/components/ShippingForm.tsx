@@ -44,7 +44,7 @@ export default function ShippingForm({
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto] gap-4 items-end">
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto] gap-6 items-end">
       <CountrySelector
         countries={countries}
         locale={locale}
@@ -56,10 +56,10 @@ export default function ShippingForm({
         type="button"
         onClick={handleSwap}
         disabled={!origin && !dest}
-        className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 rounded-full bg-white/20 hover:bg-white/30 text-white disabled:opacity-30 transition-colors"
+        className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 text-gray-500 hover:opacity-70 disabled:opacity-20 transition-opacity"
         title={labels.swap}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M7 16l-4-4 4-4" />
           <path d="M17 8l4 4-4 4" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -70,7 +70,7 @@ export default function ShippingForm({
         type="button"
         onClick={handleSwap}
         disabled={!origin && !dest}
-        className="md:hidden flex items-center justify-center w-full py-2 rounded-lg bg-white/20 hover:bg-white/30 text-white disabled:opacity-30 text-sm"
+        className="md:hidden flex items-center justify-center w-full py-2 text-gray-500 hover:opacity-70 disabled:opacity-20 text-sm transition-opacity"
       >
         {labels.swap}
       </button>
@@ -84,7 +84,7 @@ export default function ShippingForm({
       <button
         onClick={handleSubmit}
         disabled={!origin || !dest || origin === dest}
-        className="px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark disabled:bg-dark-500 disabled:cursor-not-allowed transition-colors md:col-span-1"
+        className="px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 disabled:bg-gray-800 disabled:text-gray-600 disabled:cursor-not-allowed transition-colors md:col-span-1"
       >
         {labels.submit}
       </button>

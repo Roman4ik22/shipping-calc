@@ -2,15 +2,15 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --color-dark-900: #0a0e17;
-  --color-dark-800: #111827;
-  --color-dark-700: #1a2236;
-  --color-dark-600: #243049;
-  --color-dark-500: #334155;
-  --color-dark-400: #475569;
-  --color-accent: #3b82f6;
-  --color-accent-light: #60a5fa;
-  --color-accent-dark: #2563eb;
-  --color-surface: #151c2c;
-  --color-surface-light: #1e2a3e;
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #111111;
+  --color-dark-700: #1a1a1a;
+  --color-dark-600: #222222;
+  --color-dark-500: #333333;
+  --color-dark-400: #444444;
+  --color-accent: #0071e3;
+  --color-accent-light: #2997ff;
+  --color-accent-dark: #0059b3;
+  --color-surface: #111111;
+  --color-surface-light: #1a1a1a;
 }

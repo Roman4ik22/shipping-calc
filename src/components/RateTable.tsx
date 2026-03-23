@@ -34,51 +34,51 @@ interface CorridorRateData {
 // Approximate exchange rates from USD (updated periodically)
 const EXCHANGE_RATES: Record<string, { rate: number; symbol: string; name: string }> = {
   USD: { rate: 1, symbol: "$", name: "US Dollar" },
-  EUR: { rate: 0.92, symbol: "€", name: "Euro" },
-  GBP: { rate: 0.79, symbol: "£", name: "British Pound" },
+  EUR: { rate: 0.92, symbol: "\u20ac", name: "Euro" },
+  GBP: { rate: 0.79, symbol: "\u00a3", name: "British Pound" },
   CHF: { rate: 0.88, symbol: "Fr", name: "Swiss Franc" },
   CAD: { rate: 1.36, symbol: "C$", name: "Canadian Dollar" },
   AUD: { rate: 1.53, symbol: "A$", name: "Australian Dollar" },
   NZD: { rate: 1.67, symbol: "NZ$", name: "New Zealand Dollar" },
   SGD: { rate: 1.34, symbol: "S$", name: "Singapore Dollar" },
   HKD: { rate: 7.82, symbol: "HK$", name: "Hong Kong Dollar" },
-  JPY: { rate: 150, symbol: "¥", name: "Japanese Yen" },
-  CNY: { rate: 7.25, symbol: "¥", name: "Chinese Yuan" },
-  KRW: { rate: 1350, symbol: "₩", name: "Korean Won" },
-  INR: { rate: 83, symbol: "₹", name: "Indian Rupee" },
-  RUB: { rate: 92, symbol: "₽", name: "Russian Ruble" },
-  UAH: { rate: 41, symbol: "₴", name: "Ukrainian Hryvnia" },
-  KZT: { rate: 460, symbol: "₸", name: "Kazakh Tenge" },
+  JPY: { rate: 150, symbol: "\u00a5", name: "Japanese Yen" },
+  CNY: { rate: 7.25, symbol: "\u00a5", name: "Chinese Yuan" },
+  KRW: { rate: 1350, symbol: "\u20a9", name: "Korean Won" },
+  INR: { rate: 83, symbol: "\u20b9", name: "Indian Rupee" },
+  RUB: { rate: 92, symbol: "\u20bd", name: "Russian Ruble" },
+  UAH: { rate: 41, symbol: "\u20b4", name: "Ukrainian Hryvnia" },
+  KZT: { rate: 460, symbol: "\u20b8", name: "Kazakh Tenge" },
   BRL: { rate: 4.95, symbol: "R$", name: "Brazilian Real" },
   MXN: { rate: 17.2, symbol: "MX$", name: "Mexican Peso" },
   ARS: { rate: 870, symbol: "AR$", name: "Argentine Peso" },
   COP: { rate: 3950, symbol: "COL$", name: "Colombian Peso" },
   CLP: { rate: 950, symbol: "CL$", name: "Chilean Peso" },
   PEN: { rate: 3.72, symbol: "S/", name: "Peruvian Sol" },
-  AED: { rate: 3.67, symbol: "د.إ", name: "UAE Dirham" },
-  SAR: { rate: 3.75, symbol: "﷼", name: "Saudi Riyal" },
-  ILS: { rate: 3.65, symbol: "₪", name: "Israeli Shekel" },
-  TRY: { rate: 32, symbol: "₺", name: "Turkish Lira" },
-  PLN: { rate: 4.0, symbol: "zł", name: "Polish Zloty" },
-  CZK: { rate: 23.3, symbol: "Kč", name: "Czech Koruna" },
+  AED: { rate: 3.67, symbol: "\u062f.\u0625", name: "UAE Dirham" },
+  SAR: { rate: 3.75, symbol: "\ufdfc", name: "Saudi Riyal" },
+  ILS: { rate: 3.65, symbol: "\u20aa", name: "Israeli Shekel" },
+  TRY: { rate: 32, symbol: "\u20ba", name: "Turkish Lira" },
+  PLN: { rate: 4.0, symbol: "z\u0142", name: "Polish Zloty" },
+  CZK: { rate: 23.3, symbol: "K\u010d", name: "Czech Koruna" },
   HUF: { rate: 365, symbol: "Ft", name: "Hungarian Forint" },
   RON: { rate: 4.6, symbol: "lei", name: "Romanian Leu" },
   SEK: { rate: 10.5, symbol: "kr", name: "Swedish Krona" },
   NOK: { rate: 10.8, symbol: "kr", name: "Norwegian Krone" },
   DKK: { rate: 6.9, symbol: "kr", name: "Danish Krone" },
-  THB: { rate: 35.5, symbol: "฿", name: "Thai Baht" },
+  THB: { rate: 35.5, symbol: "\u0e3f", name: "Thai Baht" },
   MYR: { rate: 4.7, symbol: "RM", name: "Malaysian Ringgit" },
   IDR: { rate: 15700, symbol: "Rp", name: "Indonesian Rupiah" },
-  PHP: { rate: 56, symbol: "₱", name: "Philippine Peso" },
-  VND: { rate: 24500, symbol: "₫", name: "Vietnamese Dong" },
+  PHP: { rate: 56, symbol: "\u20b1", name: "Philippine Peso" },
+  VND: { rate: 24500, symbol: "\u20ab", name: "Vietnamese Dong" },
   TWD: { rate: 31.5, symbol: "NT$", name: "Taiwan Dollar" },
   ZAR: { rate: 18.5, symbol: "R", name: "South African Rand" },
-  NGN: { rate: 1550, symbol: "₦", name: "Nigerian Naira" },
-  EGP: { rate: 48, symbol: "E£", name: "Egyptian Pound" },
+  NGN: { rate: 1550, symbol: "\u20a6", name: "Nigerian Naira" },
+  EGP: { rate: 48, symbol: "E\u00a3", name: "Egyptian Pound" },
   KES: { rate: 153, symbol: "KSh", name: "Kenyan Shilling" },
-  PKR: { rate: 278, symbol: "₨", name: "Pakistani Rupee" },
-  BDT: { rate: 110, symbol: "৳", name: "Bangladeshi Taka" },
-  GEL: { rate: 2.7, symbol: "₾", name: "Georgian Lari" },
+  PKR: { rate: 278, symbol: "\u20a8", name: "Pakistani Rupee" },
+  BDT: { rate: 110, symbol: "\u09f3", name: "Bangladeshi Taka" },
+  GEL: { rate: 2.7, symbol: "\u20be", name: "Georgian Lari" },
 };
 
 // Map browser locale/timezone to default currency
@@ -199,29 +199,29 @@ function CurrencySelector({
   const current = exchangeRates[currency];
 
   return (
-    <div className="flex items-center gap-2 mb-4">
-      <span className="text-sm text-gray-400">{labels.currency}:</span>
+    <div className="flex items-center gap-2 mb-6">
+      <span className="text-sm text-gray-500">{labels.currency}:</span>
       <div className="relative" ref={ref}>
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/20 bg-dark-700 text-gray-200 hover:bg-dark-600 hover:border-white/30 transition-colors text-sm"
+          className="flex items-center gap-2 px-3 py-1.5 text-gray-400 hover:text-white transition-colors text-sm"
         >
           <span className="font-medium">{current?.symbol}</span>
           <span>{currency}</span>
-          <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
 
         {open && (
-          <div className="absolute left-0 mt-1 w-64 bg-dark-700 border border-white/20 rounded-lg shadow-xl z-50 overflow-hidden">
-            <div className="p-2 border-b border-white/10">
+          <div className="absolute left-0 mt-1 w-64 bg-[#1a1a1a] rounded-xl shadow-2xl z-50 overflow-hidden">
+            <div className="p-3">
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search currency..."
-                className="w-full px-3 py-1.5 text-sm bg-dark-600 border border-white/10 rounded text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50"
+                className="w-full px-3 py-1.5 text-sm bg-transparent border-b border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-white/30"
                 autoFocus
               />
             </div>
@@ -230,15 +230,15 @@ function CurrencySelector({
                 <button
                   key={code}
                   onClick={() => { setCurrency(code); setOpen(false); setSearch(""); }}
-                  className={`w-full px-3 py-2 text-left text-sm flex items-center justify-between transition-colors ${
-                    code === currency ? "bg-accent/20 text-accent-light" : "text-gray-300 hover:bg-dark-600"
+                  className={`w-full px-4 py-2.5 text-left text-sm flex items-center justify-between transition-colors hover:bg-white/5 ${
+                    code === currency ? "text-white font-medium" : "text-gray-400"
                   }`}
                 >
                   <span className="flex items-center gap-2">
                     <span className="font-medium w-6">{info.symbol}</span>
                     <span>{code}</span>
                   </span>
-                  <span className="text-xs text-gray-500">{info.name}</span>
+                  <span className="text-xs text-gray-600">{info.name}</span>
                 </button>
               ))}
             </div>
@@ -246,7 +246,7 @@ function CurrencySelector({
         )}
       </div>
       {currency !== "USD" && (
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-gray-600">
           1 USD = {current?.rate} {currency}
           {currencyAutoDetected && <span className="ml-1">— {labels.auto_detected}</span>}
         </span>
@@ -358,7 +358,7 @@ export default function RateTable({
 
   if (corridorRates.length === 0) {
     return (
-      <div className="text-center py-12 text-gray-500">
+      <div className="text-center py-12 text-gray-600">
         <p className="text-lg">{labels.no_rates}</p>
       </div>
     );
@@ -407,22 +407,22 @@ export default function RateTable({
   return (
     <div>
       {/* Weight input section */}
-      <div className="bg-surface border border-white/10 rounded-lg p-4 mb-6">
-        <div className="mb-3">
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+      <div className="mb-8">
+        <div className="mb-4">
+          <label className="block text-xs text-gray-500 mb-3 uppercase tracking-wide">
             {labels.select_weight}
           </label>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1">
             {weightPresets.map((w) => (
               <button
                 key={w}
                 onClick={() => { setSelectedPreset(w); setCustomWeight(""); }}
                 aria-label={`${w} ${labels.kg}`}
                 aria-pressed={selectedPreset === w && !customWeight}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-3 py-2 text-sm transition-colors ${
                   selectedPreset === w && !customWeight
-                    ? "bg-accent text-white"
-                    : "bg-dark-700 border border-white/20 text-gray-300 hover:border-accent/50"
+                    ? "text-white font-medium border-b-2 border-white"
+                    : "text-gray-500 hover:text-gray-300"
                 }`}
               >
                 {w} {labels.kg}
@@ -433,7 +433,7 @@ export default function RateTable({
 
         <div className="flex flex-wrap items-end gap-4">
           <div>
-            <label className="block text-xs text-gray-500 mb-1">
+            <label className="block text-xs text-gray-600 mb-1">
               {labels.or_enter_weight}
             </label>
             <div className="flex items-center gap-1">
@@ -445,23 +445,23 @@ export default function RateTable({
                 min="0.1"
                 max="70"
                 step="0.1"
-                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
+                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
               />
-              <span className="text-sm text-gray-500">{labels.kg}</span>
+              <span className="text-sm text-gray-600">{labels.kg}</span>
             </div>
           </div>
 
           <button
             onClick={() => setShowDimensions(!showDimensions)}
-            className="px-3 py-2 text-sm text-accent-light hover:text-white border border-accent/30 rounded-lg hover:bg-accent/10 transition-colors"
+            className="px-3 py-2 text-sm text-gray-500 hover:text-white transition-colors"
           >
             {showDimensions ? labels.hide_dimensions : labels.enter_dimensions}
           </button>
         </div>
 
         {showDimensions && (
-          <div className="mt-3 pt-3 border-t border-white/10">
-            <label className="block text-xs text-gray-500 mb-2">
+          <div className="mt-4 pt-4 border-t border-white/5">
+            <label className="block text-xs text-gray-600 mb-2">
               {labels.package_dimensions}
             </label>
             <div className="flex items-center gap-2">
@@ -471,53 +471,53 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
                 placeholder="L"
                 min="1"
-                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
+                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
               />
-              <span className="text-gray-500">×</span>
+              <span className="text-gray-600">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.w}
                 onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
                 placeholder="W"
                 min="1"
-                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
+                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
               />
-              <span className="text-gray-500">×</span>
+              <span className="text-gray-600">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.h}
                 onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
                 placeholder="H"
                 min="1"
-                className="w-20 px-3 py-2 border border-white/20 rounded-lg text-sm bg-dark-700 text-gray-100 focus:outline-none focus:ring-1 focus:ring-accent placeholder-gray-500"
+                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
               />
-              <span className="text-sm text-gray-500">cm</span>
+              <span className="text-sm text-gray-600">cm</span>
             </div>
             {volumetricWeight > 0 && (
               <div className="mt-2 text-sm">
-                <span className="text-gray-400">
+                <span className="text-gray-500">
                   {labels.volumetric_weight}:{" "}
                 </span>
-                <span className="font-semibold text-white">{volumetricWeight.toFixed(1)} {labels.kg}</span>
+                <span className="font-medium text-white">{volumetricWeight.toFixed(1)} {labels.kg}</span>
                 {effectiveWeight > ((selectedPreset ?? parseFloat(customWeight)) || 0) && (
                   <span className="ml-2 text-orange-400 text-xs">
-                    ⚠ {labels.volumetric_exceeds}
+                    {labels.volumetric_exceeds}
                   </span>
                 )}
               </div>
             )}
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-600 mt-1">
               {labels.volumetric_formula}
             </p>
           </div>
         )}
 
         {effectiveWeight > 0 && (
-          <div className="mt-3 pt-3 border-t border-white/10 text-sm">
-            <span className="text-gray-400">{labels.billed_at}: </span>
-            <span className="font-semibold text-white">{billingWeight} {labels.kg}</span>
+          <div className="mt-4 pt-4 border-t border-white/5 text-sm">
+            <span className="text-gray-500">{labels.billed_at}: </span>
+            <span className="font-medium text-white">{billingWeight} {labels.kg}</span>
             {billingWeight !== effectiveWeight && (
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-gray-600 ml-1">
                 ({labels.nearest_bracket})
               </span>
             )}
@@ -534,15 +534,15 @@ export default function RateTable({
         currencyAutoDetected={currencyAutoDetected}
       />
       {/* Sort & filter controls */}
-      <div className="flex flex-wrap items-center gap-3 mb-4">
-        <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
-          <span className="text-sm text-gray-400">{labels.sort}:</span>
+      <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="flex items-center gap-1" role="group" aria-label={labels.sort}>
+          <span className="text-sm text-gray-600 mr-1">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
-            className={`px-3 py-1.5 rounded text-sm transition-colors ${
-              sortBy === "price" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
+            className={`px-3 py-1.5 text-sm transition-colors ${
+              sortBy === "price" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
             }`}
           >
             {labels.price}
@@ -551,8 +551,8 @@ export default function RateTable({
             onClick={() => setSortBy("speed")}
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
-            className={`px-3 py-1.5 rounded text-sm transition-colors ${
-              sortBy === "speed" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
+            className={`px-3 py-1.5 text-sm transition-colors ${
+              sortBy === "speed" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
             }`}
           >
             {labels.delivery_time}
@@ -560,23 +560,23 @@ export default function RateTable({
           <button
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
-            className={`px-3 py-1.5 rounded text-sm transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
+            className={`px-3 py-1.5 text-sm transition-colors ${
+              sortBy === "reliability" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
             }`}
           >
-            {labels.route_reliability || "Route ★"}
+            {labels.route_reliability || "Route"}
           </button>
         </div>
-        <div className="h-4 w-px bg-white/10 hidden sm:block" />
-        <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
-          <span className="text-sm text-gray-400">{labels.type_label}:</span>
+        <div className="h-4 w-px bg-white/5 hidden sm:block" />
+        <div className="flex items-center gap-1" role="group" aria-label={labels.type_label}>
+          <span className="text-sm text-gray-600 mr-1">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
-              className={`px-3 py-1.5 rounded text-sm transition-colors ${
-                filterType === opt.value ? "bg-accent text-white" : "bg-dark-700 text-gray-300 hover:bg-dark-600"
+              className={`px-3 py-1.5 text-sm transition-colors ${
+                filterType === opt.value ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
               }`}
             >
               {opt.label}
@@ -585,52 +585,44 @@ export default function RateTable({
         </div>
       </div>
 
-      {/* Results count + compare button */}
-      <div className="flex items-center justify-between mb-3">
-        <p className="text-sm text-gray-400">
+      {/* Results count */}
+      <div className="flex items-center justify-between mb-4">
+        <p className="text-sm text-gray-600">
           {ratesAtWeight.length} {labels.results}
         </p>
-        {compareIds.size >= 2 && (
-          <button
-            onClick={() => setShowCompare(!showCompare)}
-            className="px-4 py-1.5 bg-accent text-white text-sm rounded-lg hover:bg-accent-dark transition-colors"
-          >
-            {labels.compare} ({compareIds.size})
-          </button>
-        )}
       </div>
 
       {/* Comparison table */}
       {showCompare && comparedRates.length >= 2 && (
-        <div className="mb-6 bg-accent/10 border border-accent/30 rounded-lg p-4 overflow-x-auto">
-          <h3 className="font-semibold text-white mb-3">
+        <div className="mb-6 border-b border-white/5 pb-6 overflow-x-auto">
+          <h3 className="font-medium text-white mb-3 text-sm">
             {labels.comparison}
           </h3>
           <table className="w-full text-sm" role="table">
             <thead>
-              <tr className="text-left text-gray-400">
-                <th className="pb-2" scope="col">{labels.carrier}</th>
-                <th className="pb-2" scope="col">{labels.service}</th>
-                <th className="pb-2" scope="col">{labels.price}</th>
-                <th className="pb-2" scope="col">{labels.delivery_time}</th>
-                <th className="pb-2" scope="col">{labels.tracking}</th>
+              <tr className="text-left text-gray-600">
+                <th className="pb-2 font-normal" scope="col">{labels.carrier}</th>
+                <th className="pb-2 font-normal" scope="col">{labels.service}</th>
+                <th className="pb-2 font-normal" scope="col">{labels.price}</th>
+                <th className="pb-2 font-normal" scope="col">{labels.delivery_time}</th>
+                <th className="pb-2 font-normal" scope="col">{labels.tracking}</th>
               </tr>
             </thead>
             <tbody>
               {comparedRates.map((rate) => (
-                <tr key={rate.id} className="border-t border-accent/20">
-                  <td className="py-2 font-medium text-gray-200">{rate.carrier_name}</td>
-                  <td className="py-2 text-gray-300">{rate.service_name}</td>
-                  <td className="py-2 font-bold text-white">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
-                  <td className="py-2 text-gray-300">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
-                  <td className="py-2 text-gray-300">{rate.tracking ? labels.yes : labels.no}</td>
+                <tr key={rate.id} className="border-t border-white/5">
+                  <td className="py-2 font-medium text-white">{rate.carrier_name}</td>
+                  <td className="py-2 text-gray-400">{rate.service_name}</td>
+                  <td className="py-2 font-light text-white">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
+                  <td className="py-2 text-gray-400">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
+                  <td className="py-2 text-gray-400">{rate.tracking ? labels.yes : labels.no}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <button
             onClick={() => setShowCompare(false)}
-            className="mt-2 text-sm text-accent-light hover:text-white transition-colors"
+            className="mt-2 text-sm text-gray-500 hover:text-white transition-colors"
           >
             {labels.close}
           </button>
@@ -638,76 +630,51 @@ export default function RateTable({
       )}
 
       {/* Rate cards */}
-      <div className="space-y-3">
+      <div className="divide-y divide-white/5">
         {ratesAtWeight.map((rate) => {
           const isCheapest = rate === cheapest;
           const isFastest = rate === fastest && !isCheapest;
-          const isCompared = compareIds.has(rate.id);
 
           return (
             <div
               key={rate.id}
-              className={`bg-surface rounded-lg border p-4 sm:p-5 transition-colors ${
-                isCheapest
-                  ? "border-green-500/50 ring-1 ring-green-500/30"
-                  : isFastest
-                  ? "border-accent/50 ring-1 ring-accent/30"
-                  : isCompared
-                  ? "border-purple-500/50 ring-1 ring-purple-500/30"
-                  : "border-white/10"
-              }`}
+              className="py-5 sm:py-6 transition-colors"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <input
-                      type="checkbox"
-                      checked={isCompared}
-                      onChange={() => toggleCompare(rate.id)}
-                      className="w-4 h-4 text-accent rounded border-white/30 bg-dark-700 focus:ring-accent"
-                      aria-label={`${labels.compare} ${rate.carrier_name} ${rate.service_name}`}
-                      title={labels.compare}
-                    />
-                    <span className="font-semibold text-white">
+                  <div className="flex items-center gap-3 mb-1 flex-wrap">
+                    <span className="font-medium text-white">
                       {rate.carrier_name}
                     </span>
                     {isCheapest && (
-                      <span className="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
+                      <span className="text-xs text-green-400">
                         {labels.cheapest}
                       </span>
                     )}
                     {isFastest && (
-                      <span className="px-2 py-0.5 bg-accent/20 text-accent-light text-xs font-medium rounded-full">
+                      <span className="text-xs text-blue-400">
                         {labels.fastest}
                       </span>
                     )}
                     {rate.route_score && (
                       <span
-                        className={`px-2 py-0.5 text-xs font-medium rounded-full ${
-                          rate.route_score >= 4.0 ? "bg-green-500/20 text-green-400" :
-                          rate.route_score >= 3.0 ? "bg-yellow-500/20 text-yellow-400" :
-                          rate.route_score >= 2.0 ? "bg-orange-500/20 text-orange-400" :
-                          "bg-red-500/20 text-red-400"
+                        className={`text-xs ${
+                          rate.route_score >= 4.0 ? "text-green-400" :
+                          rate.route_score >= 3.0 ? "text-yellow-400" :
+                          rate.route_score >= 2.0 ? "text-orange-400" :
+                          "text-red-400"
                         }`}
                         title={rate.route_score_label}
                       >
                         {rate.route_score.toFixed(1)} ★
                       </span>
                     )}
-                    <span
-                      className={`px-2 py-0.5 text-xs rounded-full ${
-                        rate.carrier_type === "international"
-                          ? "bg-purple-500/20 text-purple-400"
-                          : rate.carrier_type === "postal"
-                          ? "bg-orange-500/20 text-orange-400"
-                          : "bg-teal-500/20 text-teal-400"
-                      }`}
-                    >
+                    <span className="text-xs text-gray-600">
                       {rate.carrier_type}
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 ml-6">
-                    <p className="text-sm text-gray-400">{rate.service_name}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm text-gray-500">{rate.service_name}</p>
                     {rate.review && (
                       <a
                         href={rate.review.url}
@@ -721,56 +688,56 @@ export default function RateTable({
                         title="Trustpilot"
                       >
                         <span>★ {rate.review.rating.toFixed(1)}</span>
-                        <span className="text-gray-500">({rate.review.reviews >= 1000 ? `${(rate.review.reviews / 1000).toFixed(1)}K` : rate.review.reviews})</span>
+                        <span className="text-gray-600">({rate.review.reviews >= 1000 ? `${(rate.review.reviews / 1000).toFixed(1)}K` : rate.review.reviews})</span>
                       </a>
                     )}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 sm:gap-6">
+                <div className="flex items-center gap-6 sm:gap-8">
                   <div className="text-center">
-                    <p className="text-xs text-gray-500 uppercase">
+                    <p className="text-xs text-gray-600 mb-1">
                       {labels.delivery_time}
                     </p>
-                    <p className="font-medium text-gray-200">
+                    <p className="text-gray-300">
                       {rate.estimated_days_min}–{rate.estimated_days_max}{" "}
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-gray-600">
                         {labels.days}
                       </span>
                     </p>
                   </div>
                   <div className="text-center hidden sm:block">
-                    <p className="text-xs text-gray-500 uppercase">
+                    <p className="text-xs text-gray-600 mb-1">
                       {labels.tracking}
                     </p>
-                    <p className="font-medium text-gray-200">
+                    <p className="text-gray-300">
                       {rate.tracking ? labels.yes : labels.no}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-500 uppercase">
+                    <p className="text-xs text-gray-600 mb-1">
                       {labels.price}
                     </p>
-                    <p className="text-2xl font-bold text-white">
+                    <p className="text-3xl font-light text-white">
                       ${rate.price}
                     </p>
                     {currency !== "USD" && rate.price && (
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-gray-600">
                         {convertPrice(rate.price, currency)}
                       </p>
                     )}
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 mt-3 ml-6 flex-wrap">
+              <div className="flex items-center gap-3 mt-3 flex-wrap">
                 {rate.carrier_website && (
                   <a
                     href={rate.carrier_website}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="px-4 py-1.5 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-dark transition-colors"
+                    className="px-5 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-gray-200 transition-colors"
                   >
-                    {labels.ship_now || "Ship Now →"}
+                    {labels.ship_now || "Ship Now"}
                   </a>
                 )}
                 {rate.tracking && rate.tracking_url && (
@@ -778,13 +745,13 @@ export default function RateTable({
                     href={rate.tracking_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1.5 border border-white/20 text-gray-300 text-sm rounded-lg hover:border-accent/50 hover:text-white transition-colors"
+                    className="px-4 py-2 text-gray-500 text-sm hover:text-white transition-colors"
                   >
                     {labels.track_package || "Track Package"}
                   </a>
                 )}
               </div>
-              <div className="sm:hidden mt-2 text-xs text-gray-500 ml-6">
+              <div className="sm:hidden mt-2 text-xs text-gray-600">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
               </div>
             </div>
@@ -793,12 +760,12 @@ export default function RateTable({
       </div>
 
       {ratesAtWeight.length === 0 && (
-        <div className="text-center py-8 text-gray-500">
+        <div className="text-center py-8 text-gray-600">
           <p>{labels.no_filter_results}</p>
         </div>
       )}
 
-      <p className="mt-6 text-xs text-gray-500 leading-relaxed">
+      <p className="mt-8 text-xs text-gray-600 leading-relaxed">
         {labels.disclaimer}
       </p>
     </div>
