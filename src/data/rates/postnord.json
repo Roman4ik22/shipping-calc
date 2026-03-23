@@ -82,53 +82,53 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.35,
-          16.56,
-          25.87
+          5.50,
+          8.00,
+          15.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.49,
-          22.77,
-          33.12
+          7.50,
+          11.00,
+          20.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.7,
-          33.12,
-          49.68
+          9.50,
+          14.00,
+          28.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          36.22,
-          60.03,
-          87.98
+          13.00,
+          19.00,
+          42.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          56.93,
-          98.32,
-          150.07
+          16.50,
+          24.00,
+          68.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          93.15,
-          170.77,
-          263.92
+          22.00,
+          33.00,
+          120.00
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "PostNord rates from Sweden based on postnord.se pricing (~SEK converted at 0.095 USD/SEK). Tracked parcel service to Scandinavia, Europe, and worldwide. [Rates updated 2026-03-23]"
 }

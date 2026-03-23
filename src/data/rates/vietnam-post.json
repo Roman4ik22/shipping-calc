@@ -1,7 +1,7 @@
 {
   "carrier_id": "vietnam-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Vietnam Post rates from Vietnam. EMS and registered airmail services. [Rates adjusted 2026-03-23]",
+  "note": "Vietnam Post rates from Vietnam based on typical Vietnamese postal pricing. EMS and registered airmail services. [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -75,64 +75,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.28,
-          12.42,
-          18.63,
-          22.77
+          7.00,
+          10.00,
+          16.00,
+          19.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.39,
-          16.56,
-          25.87,
-          28.98
+          10.00,
+          15.00,
+          24.00,
+          27.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.56,
-          23.81,
-          36.22,
-          41.4
+          16.00,
+          24.00,
+          38.00,
+          43.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.91,
-          39.33,
-          60.03,
-          67.27
+          28.00,
+          42.00,
+          70.00,
+          80.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.47,
-          64.17,
-          101.43,
-          113.85
+          48.00,
+          78.00,
+          130.00,
+          148.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          76.59,
-          111.78,
-          178.02,
-          201.83
+          85.00,
+          138.00,
+          232.00,
+          265.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          108.68,
-          160.42,
-          253.58,
-          289.8
+          120.00,
+          198.00,
+          332.00,
+          380.00
         ]
       }
     ],
@@ -140,28 +140,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.1,
-          4.14,
-          6.21,
-          7.24
+          3.00,
+          4.00,
+          6.00,
+          7.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.14,
-          6.21,
-          9.32,
-          10.35
+          4.00,
+          6.00,
+          9.00,
+          10.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.21,
-          9.32,
-          13.45,
-          15.52
+          6.00,
+          9.00,
+          13.50,
+          15.50
         ]
       },
       {

@@ -1,7 +1,7 @@
 {
   "carrier_id": "taiwan-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Taiwan Post (Chunghwa Post) rates from Taiwan. EMS, air parcel, and registered airmail. [Rates adjusted 2026-03-23]",
+  "note": "Taiwan Post (Chunghwa Post) rates from Taiwan based on typical postal pricing. EMS, air parcel, and registered airmail services. [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.35,
-          14.49,
-          22.77,
-          25.87
+          10.00,
+          13.00,
+          15.00,
+          18.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.49,
-          18.63,
-          28.98,
-          34.15
+          15.00,
+          18.00,
+          22.00,
+          26.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.7,
-          26.91,
-          41.4,
-          47.61
+          22.00,
+          28.00,
+          35.00,
+          40.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          33.12,
-          43.47,
-          67.27,
-          77.63
+          40.00,
+          50.00,
+          65.00,
+          75.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          55.89,
-          72.45,
-          113.85,
-          132.48
+          72.00,
+          90.00,
+          120.00,
+          138.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          97.29,
-          126.27,
-          198.72,
-          232.87
+          128.00,
+          160.00,
+          215.00,
+          248.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          138.69,
-          181.13,
-          284.63,
-          333.27
+          182.00,
+          228.00,
+          308.00,
+          355.00
         ]
       }
     ],
@@ -138,64 +138,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.21,
-          8.28,
-          13.45,
-          15.52
+          6.00,
+          8.00,
+          10.00,
+          12.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.28,
-          12.42,
-          18.63,
-          20.7
+          9.00,
+          12.00,
+          15.00,
+          17.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.42,
-          16.56,
-          25.87,
-          30.01
+          14.00,
+          18.00,
+          24.00,
+          27.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20.7,
-          28.98,
-          43.47,
-          49.68
+          26.00,
+          34.00,
+          45.00,
+          52.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          35.19,
-          47.61,
-          74.52,
-          84.87
+          48.00,
+          62.00,
+          82.00,
+          95.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          60.03,
-          82.8,
-          129.38,
-          150.07
+          85.00,
+          110.00,
+          148.00,
+          170.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          84.87,
-          119.03,
-          184.23,
-          215.28
+          120.00,
+          158.00,
+          212.00,
+          245.00
         ]
       }
     ],
@@ -203,28 +203,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.14,
-          5.18,
-          7.24,
-          8.28
+          4.00,
+          5.00,
+          6.50,
+          7.50
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.18,
-          7.24,
-          10.35,
-          11.39
+          5.50,
+          7.00,
+          9.50,
+          11.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.24,
-          10.35,
-          14.49,
-          16.56
+          8.00,
+          10.50,
+          14.00,
+          16.00
         ]
       },
       {

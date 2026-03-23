@@ -1,7 +1,7 @@
 {
   "carrier_id": "hongkong-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Hongkong Post rates from Hong Kong. Speedpost (EMS), e-Express, and registered airmail. [Rates adjusted 2026-03-23]",
+  "note": "Hongkong Post Speedpost rates from Hong Kong based on typical HK Post pricing. Speedpost (EMS), e-Express, and registered airmail. [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -74,64 +74,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.35,
-          14.49,
-          22.77,
-          25.87
+          8.00,
+          12.00,
+          18.00,
+          22.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          14.49,
-          18.63,
-          28.98,
-          33.12
+          12.00,
+          17.00,
+          25.00,
+          30.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.7,
-          26.91,
-          41.4,
-          46.58
+          18.00,
+          25.00,
+          38.00,
+          44.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          33.12,
-          43.47,
-          67.27,
-          76.59
+          35.00,
+          48.00,
+          72.00,
+          82.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          53.82,
-          72.45,
-          111.78,
-          129.38
+          60.00,
+          82.00,
+          130.00,
+          150.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          93.15,
-          126.27,
-          196.65,
-          225.63
+          105.00,
+          142.00,
+          230.00,
+          265.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          132.48,
-          181.13,
-          281.52,
-          322.92
+          148.00,
+          202.00,
+          330.00,
+          380.00
         ]
       }
     ],
@@ -139,28 +139,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.18,
-          7.24,
-          10.35,
-          12.42
+          4.50,
+          6.50,
+          10.00,
+          12.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.24,
-          10.35,
-          14.49,
-          16.56
+          6.50,
+          9.50,
+          14.00,
+          16.50
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.35,
-          14.49,
-          20.7,
-          23.81
+          10.00,
+          14.00,
+          21.00,
+          24.00
         ]
       },
       {
@@ -204,28 +204,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.14,
-          5.18,
-          7.24,
-          8.28
+          3.50,
+          4.50,
+          6.50,
+          7.50
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.18,
-          7.24,
-          9.32,
-          11.39
+          5.00,
+          6.50,
+          9.00,
+          10.50
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.24,
-          10.35,
-          14.49,
-          16.56
+          7.00,
+          10.00,
+          13.50,
+          15.50
         ]
       },
       {

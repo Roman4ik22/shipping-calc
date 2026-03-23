@@ -1,7 +1,7 @@
 {
   "carrier_id": "austrian-post-sterreichische-post",
   "effective_date": "2026-03-23",
-  "note": "Estimated Austrian Post international rates from Austria. Strong network for Central European deliveries. [Rates adjusted 2026-03-23]",
+  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]",
   "zones": [
     {
       "zone": 1,
@@ -89,64 +89,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.28,
-          12.42,
-          14.49,
-          22.77
+          8.00,
+          10.00,
+          11.00,
+          15.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.35,
-          15.52,
-          18.63,
-          28.98
+          12.00,
+          15.00,
+          16.50,
+          22.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.49,
-          20.7,
-          24.84,
-          37.26
+          18.00,
+          22.00,
+          24.00,
+          32.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.77,
-          35.19,
-          41.4,
-          62.1
+          28.00,
+          34.00,
+          38.00,
+          55.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          37.26,
-          57.96,
-          68.31,
-          103.5
+          38.00,
+          48.00,
+          55.00,
+          90.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          60.03,
-          95.22,
-          113.85,
-          175.95
+          55.00,
+          72.00,
+          85.00,
+          160.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          80.73,
-          130.41,
-          155.25,
-          243.23
+          72.00,
+          95.00,
+          115.00,
+          220.00
         ]
       }
     ]

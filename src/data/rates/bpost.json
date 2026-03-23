@@ -46,95 +46,95 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.66,
-          8.8,
-          15.52,
-          26.91
+          4.50,
+          7.00,
+          9.00,
+          18.00
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6,
-          10.87,
-          19.67,
-          34.15
+          6.00,
+          10.00,
+          14.00,
+          26.00
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.76,
-          13.97,
-          25.87,
-          45.54
+          7.50,
+          13.00,
+          19.00,
+          38.00
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          9.52,
-          17.08,
-          31.05,
-          55.89
+          9.00,
+          16.00,
+          24.00,
+          48.00
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.42,
-          21.74,
-          41.4,
-          74.52
+          12.00,
+          21.00,
+          30.00,
+          65.00
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.63,
-          33.12,
-          64.17,
-          117.99
+          18.00,
+          32.00,
+          42.00,
+          110.00
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          24.32,
-          43.47,
-          84.87,
-          155.25
+          23.00,
+          42.00,
+          52.00,
+          145.00
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          29.5,
-          53.82,
-          103.5,
-          190.44
+          28.00,
+          50.00,
+          60.00,
+          180.00
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          34.67,
-          62.1,
-          122.13,
-          223.56
+          33.00,
+          58.00,
+          70.00,
+          210.00
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          39.33,
-          70.38,
-          138.69,
-          254.61
+          38.00,
+          66.00,
+          80.00,
+          240.00
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "undefined [Rates adjusted 2026-03-23]"
+  "note": "bpost international rates from Belgium based on typical Belgian postal pricing. Standard parcel service to EU and intercontinental destinations. [Rates updated 2026-03-23]"
 }
