@@ -3,229 +3,167 @@
   "zones": [
     {
       "zone": 1,
-      "description": "CIS Countries",
+      "description": "Russia Domestic",
       "countries_from": [
         "RU"
       ],
       "countries_to": [
-        "KZ",
-        "BY",
-        "KG",
-        "AM",
-        "UZ",
-        "TJ",
-        "AZ",
-        "MD",
-        "GE"
+        "RU"
       ]
     },
     {
       "zone": 2,
-      "description": "Europe",
+      "description": "CIS Countries (Kazakhstan etc.)",
       "countries_from": [
-        "RU"
+        "RU",
+        "KZ",
+        "BY"
       ],
       "countries_to": [
-        "DE",
-        "FR",
-        "IT",
-        "ES",
-        "PL",
-        "NL",
-        "CZ",
-        "AT",
-        "SE",
-        "FI",
-        "NO",
-        "DK",
-        "BE",
-        "CH",
-        "GB",
-        "PT",
-        "HU",
-        "RO",
-        "BG",
-        "HR",
-        "SK",
-        "SI",
-        "LT",
-        "LV",
-        "EE",
-        "IE",
-        "GR"
+        "RU",
+        "KZ",
+        "BY",
+        "UA",
+        "AM",
+        "GE",
+        "KG",
+        "UZ"
       ]
     },
     {
       "zone": 3,
-      "description": "Asia",
+      "description": "International (Europe, Asia)",
       "countries_from": [
         "RU"
       ],
       "countries_to": [
         "CN",
-        "JP",
-        "KR",
-        "TH",
-        "VN",
-        "MY",
-        "SG",
-        "ID",
-        "PH",
-        "IN",
-        "AE",
         "TR",
-        "IL"
-      ]
-    },
-    {
-      "zone": 4,
-      "description": "Americas & Remote",
-      "countries_from": [
-        "RU"
-      ],
-      "countries_to": [
-        "US",
-        "CA",
-        "BR",
-        "MX",
-        "AU",
-        "NZ",
-        "ZA"
+        "AE",
+        "DE",
+        "FI",
+        "EE"
       ]
     }
   ],
   "rates": {
-    "cdek-international-express": [
+    "cdek-regional-express": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.75,
-          10.0,
-          16.25,
-          22.5
+          5,
+          7,
+          14
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.0,
-          13.33,
-          21.67,
-          30.0
+          7,
+          10,
+          22
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.25,
-          19.33,
-          31.42,
-          43.5
+          9,
+          15,
+          33
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.5,
-          33.33,
-          54.18,
-          75.0
+          14,
+          27,
+          60
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.0,
-          55.99,
-          91.01,
-          126.0
+          22,
+          49,
+          98
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          36.0,
-          95.98,
-          156.02,
-          216.0
+          38,
+          85,
+          175
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          50.0,
-          133.3,
-          216.7,
-          300.0
+          52,
+          120,
+          250
         ]
       }
     ],
-    "cdek-international-economy": [
+    "cdek-regional-economy": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.75,
-          10.0,
-          16.25,
-          22.5
+          3,
+          5,
+          10
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.0,
-          13.33,
-          21.67,
-          30.0
+          4,
+          7,
+          16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.25,
-          19.33,
-          31.42,
-          43.5
+          6,
+          11,
+          24
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.5,
-          33.33,
-          54.18,
-          75.0
+          9,
+          20,
+          44
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.0,
-          55.99,
-          91.01,
-          126.0
+          15,
+          36,
+          72
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          36.0,
-          95.98,
-          156.02,
-          216.0
+          26,
+          63,
+          130
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          50.0,
-          133.3,
-          216.7,
-          300.0
+          36,
+          88,
+          185
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "[Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from cdek-regional. CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026]"
 }

@@ -1,43 +1,74 @@
 {
   "carrier_id": "boxberry-regional",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with boxberry. [Calibrated from industry benchmarks March 2026]",
+  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026]",
   "zones": [
     {
       "zone": 1,
-      "description": "Russia Domestic",
-      "countries_from": [
-        "RU"
-      ],
-      "countries_to": [
-        "RU"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "CIS Partners",
+      "description": "CIS",
       "countries_from": [
         "RU"
       ],
       "countries_to": [
         "KZ",
         "BY",
+        "KG",
         "AM",
-        "KG"
+        "UZ",
+        "TJ",
+        "AZ",
+        "MD",
+        "GE"
       ]
     },
     {
-      "zone": 3,
-      "description": "International",
+      "zone": 2,
+      "description": "Europe",
       "countries_from": [
         "RU"
       ],
       "countries_to": [
         "DE",
-        "TR",
+        "FR",
+        "IT",
+        "ES",
+        "PL",
+        "NL",
+        "CZ",
+        "AT",
+        "GB",
+        "SE",
+        "FI",
+        "DK",
+        "BE",
+        "CH",
+        "HU",
+        "RO",
+        "BG",
+        "SK",
+        "LT",
+        "LV",
+        "EE"
+      ]
+    },
+    {
+      "zone": 3,
+      "description": "Rest of World",
+      "countries_from": [
+        "RU"
+      ],
+      "countries_to": [
+        "US",
+        "CA",
         "CN",
+        "JP",
+        "KR",
+        "AU",
         "AE",
-        "US"
+        "TR",
+        "IL",
+        "IN",
+        "BR"
       ]
     }
   ],

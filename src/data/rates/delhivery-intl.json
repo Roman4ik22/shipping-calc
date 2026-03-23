@@ -1,44 +1,57 @@
 {
   "carrier_id": "delhivery-intl",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with delhivery. [Updated from Delhivery published rates March 2026]",
+  "note": "Synced from delhivery. [Updated from Delhivery published rates March 2026]",
   "zones": [
     {
       "zone": 1,
-      "description": "India Domestic",
+      "description": "South Asia",
       "countries_from": [
         "IN"
       ],
       "countries_to": [
-        "IN"
+        "LK",
+        "NP",
+        "BD",
+        "PK",
+        "BT"
       ]
     },
     {
       "zone": 2,
-      "description": "Key International",
+      "description": "Asia & Middle East",
       "countries_from": [
         "IN"
       ],
       "countries_to": [
-        "AE",
         "SG",
         "MY",
-        "TH"
+        "TH",
+        "AE",
+        "SA",
+        "HK",
+        "CN",
+        "JP",
+        "KR"
       ]
     },
     {
       "zone": 3,
-      "description": "US, UK & Europe",
+      "description": "Americas & Europe",
       "countries_from": [
         "IN"
       ],
       "countries_to": [
         "US",
+        "CA",
         "GB",
         "DE",
         "FR",
-        "CA",
-        "AU"
+        "IT",
+        "AU",
+        "NL",
+        "RU",
+        "BR"
       ]
     }
   ],

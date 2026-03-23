@@ -3,7 +3,17 @@
   "zones": [
     {
       "zone": 1,
-      "description": "South Asia",
+      "description": "India Domestic",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "IN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "South Asia & Middle East",
       "countries_from": [
         "IN"
       ],
@@ -11,46 +21,28 @@
         "LK",
         "NP",
         "BD",
-        "PK",
-        "BT"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "Asia & Middle East",
-      "countries_from": [
-        "IN"
-      ],
-      "countries_to": [
-        "SG",
-        "MY",
-        "TH",
         "AE",
         "SA",
-        "HK",
-        "CN",
-        "JP",
-        "KR"
+        "QA",
+        "OM",
+        "BH",
+        "KW"
       ]
     },
     {
       "zone": 3,
-      "description": "Americas & Europe",
+      "description": "International",
       "countries_from": [
         "IN"
       ],
       "countries_to": [
         "US",
-        "CA",
         "GB",
         "DE",
-        "FR",
-        "IT",
         "AU",
-        "NL",
-        "RU",
-        "BR",
-        "ZA"
+        "CA",
+        "SG",
+        "MY"
       ]
     }
   ],
@@ -173,5 +165,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with dtdc. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from dtdc. DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026]"
 }

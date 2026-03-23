@@ -3,65 +3,49 @@
   "zones": [
     {
       "zone": 1,
-      "description": "ASEAN",
+      "description": "Domestic Thailand",
+      "countries_from": [
+        "TH"
+      ],
+      "countries_to": [
+        "TH"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "SEA Regional",
       "countries_from": [
         "TH",
+        "HK",
         "VN",
         "MY",
         "ID"
       ],
       "countries_to": [
         "TH",
+        "HK",
         "VN",
         "MY",
         "ID",
         "SG",
-        "PH",
-        "KH",
-        "MM",
-        "LA"
+        "PH"
       ]
     },
     {
-      "zone": 2,
-      "description": "Asia & Pacific",
+      "zone": 3,
+      "description": "Greater Asia & International",
       "countries_from": [
         "TH",
-        "VN",
-        "MY",
-        "ID"
+        "HK"
       ],
       "countries_to": [
         "CN",
         "JP",
         "KR",
-        "HK",
         "TW",
         "AU",
-        "NZ",
-        "IN"
-      ]
-    },
-    {
-      "zone": 3,
-      "description": "Global",
-      "countries_from": [
-        "TH",
-        "VN",
-        "MY",
-        "ID"
-      ],
-      "countries_to": [
         "US",
-        "CA",
-        "GB",
-        "DE",
-        "FR",
-        "NL",
-        "AE",
-        "IT",
-        "RU",
-        "BR"
+        "GB"
       ]
     }
   ],
@@ -184,5 +168,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with kerry-express. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from kerry-express. Kerry Express rates. Domestic Thailand rates from official Kerry Express rate card (THB converted at 35.5 THB/USD). International zones estimated. [Updated from official calculator/rate card March 2026]"
 }

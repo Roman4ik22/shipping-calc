@@ -3,67 +3,56 @@
   "zones": [
     {
       "zone": 1,
-      "description": "Europe neighbors",
+      "description": "Ukraine Domestic",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "UA"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Neighboring Countries (Zone 1)",
       "countries_from": [
         "UA"
       ],
       "countries_to": [
         "PL",
-        "CZ",
-        "SK",
-        "HU",
         "RO",
+        "HU",
+        "SK",
+        "CZ",
         "MD",
         "LT",
         "LV",
-        "EE",
-        "BG",
-        "DE",
-        "AT"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "Europe wide",
-      "countries_from": [
-        "UA"
-      ],
-      "countries_to": [
-        "GB",
-        "FR",
-        "IT",
-        "ES",
-        "NL",
-        "BE",
-        "SE",
-        "NO",
-        "DK",
-        "FI",
-        "CH",
-        "PT",
-        "IE",
-        "GR",
-        "HR"
+        "EE"
       ]
     },
     {
       "zone": 3,
-      "description": "Rest of World",
+      "description": "Western Europe (Zone 2)",
+      "countries_from": [
+        "UA"
+      ],
+      "countries_to": [
+        "DE",
+        "FR",
+        "GB",
+        "IT",
+        "ES",
+        "NL"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Americas & Overseas (Zone 3)",
       "countries_from": [
         "UA"
       ],
       "countries_to": [
         "US",
-        "CA",
-        "CN",
-        "JP",
-        "KR",
-        "AU",
-        "IL",
-        "AE",
-        "TR",
-        "IN",
-        "BR"
+        "CA"
       ]
     }
   ],
@@ -74,7 +63,8 @@
         "prices_by_zone": [
           2,
           7,
-          11
+          11,
+          16
         ]
       },
       {
@@ -82,7 +72,8 @@
         "prices_by_zone": [
           3,
           10,
-          16
+          16,
+          22
         ]
       },
       {
@@ -90,7 +81,8 @@
         "prices_by_zone": [
           4,
           10,
-          20
+          20,
+          22
         ]
       },
       {
@@ -98,7 +90,8 @@
         "prices_by_zone": [
           7,
           17,
-          23
+          23,
+          37
         ]
       },
       {
@@ -106,7 +99,8 @@
         "prices_by_zone": [
           11,
           29,
-          32
+          32,
+          61
         ]
       },
       {
@@ -114,7 +108,8 @@
         "prices_by_zone": [
           18,
           49,
-          61
+          61,
+          112
         ]
       },
       {
@@ -122,7 +117,8 @@
         "prices_by_zone": [
           25,
           73,
-          98
+          98,
+          171
         ]
       }
     ],
@@ -132,7 +128,8 @@
         "prices_by_zone": [
           1,
           5,
-          8
+          8,
+          12
         ]
       },
       {
@@ -140,7 +137,8 @@
         "prices_by_zone": [
           2,
           7,
-          12
+          12,
+          16
         ]
       },
       {
@@ -148,7 +146,8 @@
         "prices_by_zone": [
           3,
           7,
-          15
+          15,
+          16
         ]
       },
       {
@@ -156,7 +155,8 @@
         "prices_by_zone": [
           5,
           13,
-          17
+          17,
+          27
         ]
       },
       {
@@ -164,7 +164,8 @@
         "prices_by_zone": [
           8,
           22,
-          24
+          24,
+          46
         ]
       },
       {
@@ -172,7 +173,8 @@
         "prices_by_zone": [
           13,
           37,
-          46
+          46,
+          84
         ]
       },
       {
@@ -180,11 +182,12 @@
         "prices_by_zone": [
           18,
           55,
-          73
+          73,
+          128
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with nova-poshta-intl. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from nova-poshta-intl. Nova Poshta international rates. Largest private delivery service in Ukraine. [Updated from public calculator data March 2026]"
 }

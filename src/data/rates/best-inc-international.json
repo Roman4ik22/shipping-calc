@@ -2,10 +2,13 @@
   "carrier_id": "best-inc-international",
   "zones": [
     {
-      "zone": 1,
-      "description": "ASEAN",
+      "name": "Zone 0",
       "countries_from": [
-        "CN"
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
       ],
       "countries_to": [
         "TH",
@@ -14,30 +17,60 @@
         "ID",
         "PH",
         "SG",
+        "MM",
         "KH",
-        "MM"
+        "LA",
+        "BN"
       ]
     },
     {
-      "zone": 2,
-      "description": "East Asia & Pacific",
+      "name": "Zone 1",
       "countries_from": [
-        "CN"
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
       ],
       "countries_to": [
+        "CN",
+        "HK",
+        "TW",
         "JP",
         "KR",
-        "TW",
-        "HK",
-        "AU",
-        "NZ"
+        "IN",
+        "BD",
+        "LK"
       ]
     },
     {
-      "zone": 3,
-      "description": "Americas & Europe",
+      "name": "Zone 2",
       "countries_from": [
-        "CN"
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
+      ],
+      "countries_to": [
+        "AU",
+        "NZ",
+        "AE",
+        "SA",
+        "QA",
+        "KW",
+        "BH",
+        "OM"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "TH",
+        "VN",
+        "MY",
+        "ID",
+        "PH"
       ],
       "countries_to": [
         "US",
@@ -46,75 +79,79 @@
         "DE",
         "FR",
         "IT",
-        "NL",
-        "BR",
-        "RU",
         "ES",
-        "IN",
-        "AE"
+        "NL",
+        "SE"
       ]
     }
   ],
   "rates": {
-    "best-inc-international-standard": [
+    "best-express-thailand-sea-standard": [
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
           3.75,
-          11.25,
-          18.75
+          10.0,
+          16.25,
+          22.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
           5.0,
-          15.0,
-          25.0
+          13.33,
+          21.67,
+          30.0
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
           7.25,
-          21.75,
-          36.25
+          19.33,
+          31.42,
+          43.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
           12.5,
-          37.5,
-          62.5
+          33.33,
+          54.18,
+          75.0
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
           21.0,
-          63.0,
-          105.0
+          55.99,
+          91.01,
+          126.0
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
           36.0,
-          108.0,
-          180.0
+          95.98,
+          156.02,
+          216.0
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
           50.0,
-          150.0,
-          250.0
+          133.3,
+          216.7,
+          300.0
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "[Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from best-express-thailand-sea. [Calibrated from industry benchmarks March 2026]"
 }

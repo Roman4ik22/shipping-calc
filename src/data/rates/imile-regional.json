@@ -1,49 +1,67 @@
 {
   "carrier_id": "imile-regional",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with imile. [Calibrated from industry benchmarks March 2026]",
+  "note": "Synced from imile. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
-      "zone": 1,
-      "description": "UAE Domestic",
-      "countries_from": [
-        "AE"
-      ],
-      "countries_to": [
-        "AE"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "GCC & Egypt",
+      "name": "Zone 0",
       "countries_from": [
         "AE",
-        "SA"
+        "SA",
+        "KW",
+        "BH",
+        "OM",
+        "QA"
       ],
       "countries_to": [
         "AE",
         "SA",
         "KW",
         "BH",
-        "QA",
         "OM",
-        "EG"
+        "QA"
       ]
     },
     {
-      "zone": 3,
-      "description": "Middle East Extended",
+      "name": "Zone 1",
       "countries_from": [
         "AE",
-        "SA"
+        "SA",
+        "KW",
+        "BH",
+        "OM",
+        "QA"
       ],
       "countries_to": [
-        "JO",
-        "LB",
-        "IQ",
-        "MA",
-        "PK",
-        "IN"
+        "NEIGHBORS"
+      ]
+    },
+    {
+      "name": "Zone 2",
+      "countries_from": [
+        "AE",
+        "SA",
+        "KW",
+        "BH",
+        "OM",
+        "QA"
+      ],
+      "countries_to": [
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "AE",
+        "SA",
+        "KW",
+        "BH",
+        "OM",
+        "QA"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
       ]
     }
   ],
@@ -54,7 +72,8 @@
         "prices_by_zone": [
           3.75,
           10.0,
-          16.25
+          16.25,
+          22.5
         ]
       },
       {
@@ -62,7 +81,8 @@
         "prices_by_zone": [
           5.0,
           13.33,
-          21.67
+          21.67,
+          30.0
         ]
       },
       {
@@ -70,7 +90,8 @@
         "prices_by_zone": [
           7.25,
           19.33,
-          31.42
+          31.42,
+          43.5
         ]
       },
       {
@@ -78,7 +99,8 @@
         "prices_by_zone": [
           9.25,
           24.66,
-          40.09
+          40.09,
+          55.5
         ]
       },
       {
@@ -86,7 +108,8 @@
         "prices_by_zone": [
           12.5,
           33.33,
-          54.18
+          54.18,
+          75.0
         ]
       },
       {
@@ -94,7 +117,8 @@
         "prices_by_zone": [
           21.0,
           55.99,
-          91.01
+          91.01,
+          126.0
         ]
       },
       {
@@ -102,7 +126,8 @@
         "prices_by_zone": [
           29.0,
           77.31,
-          125.69
+          125.69,
+          174.0
         ]
       },
       {
@@ -110,7 +135,8 @@
         "prices_by_zone": [
           36.0,
           95.98,
-          156.02
+          156.02,
+          216.0
         ]
       },
       {
@@ -118,7 +144,8 @@
         "prices_by_zone": [
           50.0,
           133.3,
-          216.7
+          216.7,
+          300.0
         ]
       },
       {
@@ -126,7 +153,8 @@
         "prices_by_zone": [
           212.5,
           566.52,
-          920.98
+          920.98,
+          1275.0
         ]
       }
     ]

@@ -1,11 +1,10 @@
 {
   "carrier_id": "smsa-express-regional",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with smsa-express. [Updated from SMSA Express published rates March 2026]",
+  "note": "Synced from smsa-express. [Updated from SMSA Express published rates March 2026]",
   "zones": [
     {
-      "zone": 1,
-      "description": "Saudi Arabia Domestic",
+      "name": "Zone 0",
       "countries_from": [
         "SA"
       ],
@@ -14,35 +13,30 @@
       ]
     },
     {
-      "zone": 2,
-      "description": "GCC Countries",
+      "name": "Zone 1",
       "countries_from": [
-        "SA",
-        "AE"
+        "SA"
       ],
       "countries_to": [
-        "SA",
-        "AE",
-        "KW",
-        "BH",
-        "QA",
-        "OM"
+        "NEIGHBORS"
       ]
     },
     {
-      "zone": 3,
-      "description": "Middle East & North Africa",
+      "name": "Zone 2",
       "countries_from": [
-        "SA",
-        "AE"
+        "SA"
       ],
       "countries_to": [
-        "EG",
-        "JO",
-        "LB",
-        "IQ",
-        "MA",
-        "TN"
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "SA"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
       ]
     }
   ],
@@ -53,7 +47,8 @@
         "prices_by_zone": [
           4.12,
           7.5,
-          16.5
+          16.5,
+          22.5
         ]
       },
       {
@@ -61,7 +56,8 @@
         "prices_by_zone": [
           5.5,
           10.0,
-          22.0
+          22.0,
+          30.0
         ]
       },
       {
@@ -69,7 +65,8 @@
         "prices_by_zone": [
           7.97,
           14.5,
-          31.9
+          31.9,
+          43.5
         ]
       },
       {
@@ -77,7 +74,8 @@
         "prices_by_zone": [
           10.18,
           18.5,
-          40.7
+          40.7,
+          55.5
         ]
       },
       {
@@ -85,7 +83,8 @@
         "prices_by_zone": [
           13.75,
           25.0,
-          55.0
+          55.0,
+          75.0
         ]
       },
       {
@@ -93,7 +92,8 @@
         "prices_by_zone": [
           23.1,
           42.0,
-          92.4
+          92.4,
+          126.0
         ]
       },
       {
@@ -101,7 +101,8 @@
         "prices_by_zone": [
           31.9,
           58.0,
-          127.6
+          127.6,
+          174.0
         ]
       },
       {
@@ -109,7 +110,8 @@
         "prices_by_zone": [
           39.6,
           72.0,
-          158.4
+          158.4,
+          216.0
         ]
       },
       {
@@ -117,7 +119,8 @@
         "prices_by_zone": [
           55.0,
           100.0,
-          220.0
+          220.0,
+          300.0
         ]
       },
       {
@@ -125,7 +128,8 @@
         "prices_by_zone": [
           233.75,
           425.0,
-          935.0
+          935.0,
+          1275.0
         ]
       },
       {
@@ -133,7 +137,8 @@
         "prices_by_zone": [
           327.25,
           595.0,
-          1309.0
+          1309.0,
+          1785.0
         ]
       }
     ]

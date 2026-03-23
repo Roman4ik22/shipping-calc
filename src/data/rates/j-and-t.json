@@ -3,7 +3,17 @@
   "zones": [
     {
       "zone": 1,
-      "description": "ASEAN",
+      "description": "Domestic Indonesia",
+      "countries_from": [
+        "ID"
+      ],
+      "countries_to": [
+        "ID"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "Intra-SEA",
       "countries_from": [
         "ID",
         "MY",
@@ -18,56 +28,27 @@
         "TH",
         "VN",
         "PH",
-        "SG",
-        "KH",
-        "MM",
-        "BN"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "East Asia",
-      "countries_from": [
-        "ID",
-        "MY",
-        "TH",
-        "VN",
-        "PH",
-        "SG",
-        "CN"
-      ],
-      "countries_to": [
-        "CN",
-        "JP",
-        "KR",
-        "HK",
-        "TW"
+        "SG"
       ]
     },
     {
       "zone": 3,
-      "description": "Rest of World",
+      "description": "Greater Asia",
       "countries_from": [
         "ID",
         "MY",
         "TH",
         "VN",
         "PH",
-        "SG",
-        "CN"
+        "SG"
       ],
       "countries_to": [
-        "US",
-        "CA",
-        "GB",
-        "DE",
-        "FR",
-        "AU",
-        "AE",
-        "IN",
-        "BR",
-        "NL",
-        "IT"
+        "CN",
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "IN"
       ]
     }
   ],
@@ -190,5 +171,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with j-and-t-express. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from j-and-t-express. J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026]"
 }

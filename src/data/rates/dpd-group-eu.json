@@ -1,100 +1,115 @@
 {
   "carrier_id": "dpd-group-eu",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with dpd. [Updated from DPD Germany published rates March 2026]",
+  "note": "Synced from dpd. Real DPD rates based on size classes from dpd.de (EUR\u2192USD at 1.09). DE\u2192PL/AT (Z1) and DE\u2192FR/IT (Z2) verified. DPD uses size-based pricing; weights are approximate equivalents. Source: dpd.de, effective 2026-03-23. [Updated from DPD Germany published rates March 2026]",
   "zones": [
     {
       "zone": 1,
-      "description": "Core EU (DE, FR, NL, BE, LU, AT)",
+      "description": "Core Europe (DE, NL, BE, AT)",
       "countries_from": [
         "DE",
-        "FR",
         "NL",
         "BE",
         "AT"
       ],
       "countries_to": [
         "DE",
-        "FR",
         "NL",
         "BE",
-        "LU",
         "AT",
-        "CH"
+        "LU",
+        "DK"
       ]
     },
     {
       "zone": 2,
-      "description": "Extended EU (ES, IT, PT, DK, SE, PL, CZ)",
+      "description": "Western Europe",
       "countries_from": [
         "DE",
-        "FR",
-        "NL",
-        "BE",
-        "AT"
+        "NL"
       ],
       "countries_to": [
-        "ES",
-        "IT",
-        "PT",
-        "DK",
-        "SE",
-        "FI",
-        "NO",
-        "IE",
+        "FR",
         "GB",
-        "PL",
-        "CZ",
-        "SK"
+        "IT",
+        "ES",
+        "PT",
+        "IE",
+        "CH"
       ]
     },
     {
       "zone": 3,
-      "description": "Eastern & South-Eastern Europe",
+      "description": "Northern Europe",
       "countries_from": [
         "DE",
-        "FR",
-        "NL",
-        "BE",
-        "AT"
+        "NL"
       ],
       "countries_to": [
+        "SE",
+        "NO",
+        "FI",
+        "EE",
+        "LV",
+        "LT"
+      ]
+    },
+    {
+      "zone": 4,
+      "description": "Central & Eastern Europe",
+      "countries_from": [
+        "DE",
+        "NL"
+      ],
+      "countries_to": [
+        "PL",
+        "CZ",
+        "SK",
         "HU",
         "RO",
         "BG",
         "HR",
         "SI",
-        "GR",
-        "LT",
-        "LV",
-        "EE",
-        "RS",
-        "BA"
+        "GR"
       ]
     },
     {
-      "zone": 4,
+      "zone": 5,
+      "description": "Eastern Europe & Turkey",
+      "countries_from": [
+        "DE",
+        "NL"
+      ],
+      "countries_to": [
+        "TR",
+        "UA",
+        "RS",
+        "BA",
+        "ME",
+        "MK",
+        "AL",
+        "MD"
+      ]
+    },
+    {
+      "zone": 6,
       "description": "Rest of World",
       "countries_from": [
         "DE",
-        "FR",
-        "NL",
-        "BE",
-        "AT"
+        "NL"
       ],
       "countries_to": [
         "US",
         "CA",
+        "CN",
         "JP",
         "KR",
-        "CN",
         "AU",
-        "NZ",
-        "BR",
-        "IN",
         "AE",
-        "TR",
-        "UA"
+        "SA",
+        "BR",
+        "ZA",
+        "IN"
       ]
     }
   ],
@@ -106,7 +121,9 @@
           7.5,
           9.75,
           9.0,
-          7.5
+          7.5,
+          9.0,
+          26.25
         ]
       },
       {
@@ -115,7 +132,9 @@
           10.0,
           13.0,
           12.0,
-          10.0
+          10.0,
+          12.0,
+          35.0
         ]
       },
       {
@@ -124,7 +143,9 @@
           14.5,
           18.85,
           17.4,
-          14.5
+          14.5,
+          17.4,
+          50.75
         ]
       },
       {
@@ -133,7 +154,9 @@
           25.0,
           32.5,
           30.0,
-          25.0
+          25.0,
+          30.0,
+          87.5
         ]
       },
       {
@@ -142,7 +165,9 @@
           42.0,
           54.6,
           50.4,
-          42.0
+          42.0,
+          50.4,
+          147.0
         ]
       },
       {
@@ -151,7 +176,9 @@
           72.0,
           93.6,
           86.4,
-          72.0
+          72.0,
+          86.4,
+          252.0
         ]
       },
       {
@@ -160,7 +187,9 @@
           100.0,
           130.0,
           120.0,
-          100.0
+          100.0,
+          120.0,
+          350.0
         ]
       }
     ],
@@ -171,7 +200,9 @@
           7.5,
           9.75,
           9.0,
-          7.5
+          7.5,
+          9.0,
+          26.25
         ]
       },
       {
@@ -180,7 +211,9 @@
           10.0,
           13.0,
           12.0,
-          10.0
+          10.0,
+          12.0,
+          35.0
         ]
       },
       {
@@ -189,7 +222,9 @@
           14.5,
           18.85,
           17.4,
-          14.5
+          14.5,
+          17.4,
+          50.75
         ]
       },
       {
@@ -198,7 +233,9 @@
           25.0,
           32.5,
           30.0,
-          25.0
+          25.0,
+          30.0,
+          87.5
         ]
       },
       {
@@ -207,7 +244,9 @@
           42.0,
           54.6,
           50.4,
-          42.0
+          42.0,
+          50.4,
+          147.0
         ]
       },
       {
@@ -216,7 +255,9 @@
           72.0,
           93.6,
           86.4,
-          72.0
+          72.0,
+          86.4,
+          252.0
         ]
       },
       {
@@ -225,7 +266,9 @@
           100.0,
           130.0,
           120.0,
-          100.0
+          100.0,
+          120.0,
+          350.0
         ]
       }
     ]

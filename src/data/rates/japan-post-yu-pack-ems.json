@@ -1,37 +1,38 @@
 {
   "carrier_id": "japan-post-yu-pack-ems",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with japan-post. [Calibrated from industry benchmarks March 2026]",
+  "note": "Synced from japan-post. Real Japan Post EMS rates from post.japanpost.jp, January 2026. JPY converted to USD at 150. Zone 1=East Asia (China), Zone 2=SE Asia/Oceania, Zone 3=NA/Europe (UK), Zone 4=S.America/Africa/ME (US rates used as reference). Source: post.japanpost.jp/int/charge/list. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
-      "description": "East Asia (KR, TW, HK, CN)",
+      "description": "Asia Zone 1 (East Asia)",
       "countries_from": [
         "JP"
       ],
       "countries_to": [
+        "CN",
         "KR",
         "TW",
         "HK",
-        "CN"
+        "MO"
       ]
     },
     {
       "zone": 2,
-      "description": "Southeast Asia & Oceania",
+      "description": "Asia Zone 2 & Oceania",
       "countries_from": [
         "JP"
       ],
       "countries_to": [
         "SG",
-        "MY",
         "TH",
+        "MY",
         "ID",
-        "VN",
         "PH",
+        "VN",
+        "IN",
         "AU",
-        "NZ",
-        "IN"
+        "NZ"
       ]
     },
     {
@@ -43,34 +44,34 @@
       "countries_to": [
         "US",
         "CA",
+        "MX",
         "GB",
         "DE",
         "FR",
         "IT",
         "ES",
         "NL",
-        "BE",
         "SE",
-        "NO"
+        "CH"
       ]
     },
     {
       "zone": 4,
-      "description": "Rest of World",
+      "description": "South America, Africa, Middle East",
       "countries_from": [
         "JP"
       ],
       "countries_to": [
-        "AE",
-        "SA",
         "BR",
-        "MX",
         "AR",
+        "CL",
         "ZA",
         "NG",
         "KE",
-        "TR",
-        "RU"
+        "AE",
+        "SA",
+        "EG",
+        "TR"
       ]
     }
   ],

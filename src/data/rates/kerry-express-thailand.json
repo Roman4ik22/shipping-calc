@@ -2,7 +2,8 @@
   "carrier_id": "kerry-express-thailand",
   "zones": [
     {
-      "name": "Zone 0",
+      "zone": 1,
+      "description": "Domestic Thailand",
       "countries_from": [
         "TH"
       ],
@@ -11,52 +12,40 @@
       ]
     },
     {
-      "name": "Zone 1",
+      "zone": 2,
+      "description": "SEA Regional",
       "countries_from": [
-        "TH"
-      ],
-      "countries_to": [
-        "MY",
-        "SG",
+        "TH",
+        "HK",
         "VN",
-        "KH",
-        "LA",
-        "MM",
+        "MY",
+        "ID"
+      ],
+      "countries_to": [
+        "TH",
+        "HK",
+        "VN",
+        "MY",
         "ID",
-        "PH",
-        "BN"
+        "SG",
+        "PH"
       ]
     },
     {
-      "name": "Zone 2",
+      "zone": 3,
+      "description": "Greater Asia & International",
       "countries_from": [
-        "TH"
+        "TH",
+        "HK"
       ],
       "countries_to": [
         "CN",
-        "HK",
-        "TW",
         "JP",
         "KR",
-        "IN",
+        "TW",
         "AU",
-        "NZ"
-      ]
-    },
-    {
-      "name": "Zone 3",
-      "countries_from": [
-        "TH"
-      ],
-      "countries_to": [
         "US",
-        "CA",
-        "GB",
-        "DE",
-        "FR",
-        "AE",
-        "SA",
-        "IT"
+        "GB"
       ]
     }
   ],
@@ -67,7 +56,6 @@
         "prices_by_zone": [
           1.7,
           10.3,
-          22.66,
           22.66
         ]
       },
@@ -76,7 +64,6 @@
         "prices_by_zone": [
           1.7,
           14.42,
-          28.84,
           28.84
         ]
       },
@@ -85,7 +72,6 @@
         "prices_by_zone": [
           2.3,
           20.6,
-          39.14,
           39.14
         ]
       },
@@ -94,7 +80,6 @@
         "prices_by_zone": [
           4.2,
           36.05,
-          66.95,
           66.95
         ]
       },
@@ -103,7 +88,6 @@
         "prices_by_zone": [
           7,
           59.74,
-          113.3,
           113.3
         ]
       },
@@ -112,7 +96,6 @@
         "prices_by_zone": [
           12.7,
           105.06,
-          200.85,
           200.85
         ]
       },
@@ -121,7 +104,6 @@
         "prices_by_zone": [
           18.3,
           149.35,
-          286.34,
           286.34
         ]
       }
@@ -132,7 +114,6 @@
         "prices_by_zone": [
           2.5,
           14.42,
-          28.84,
           28.84
         ]
       },
@@ -141,7 +122,6 @@
         "prices_by_zone": [
           2.5,
           18.54,
-          37.08,
           37.08
         ]
       },
@@ -150,7 +130,6 @@
         "prices_by_zone": [
           3.4,
           26.78,
-          49.44,
           49.44
         ]
       },
@@ -159,7 +138,6 @@
         "prices_by_zone": [
           6.3,
           46.35,
-          84.46,
           84.46
         ]
       },
@@ -168,7 +146,6 @@
         "prices_by_zone": [
           10.5,
           77.25,
-          144.2,
           144.2
         ]
       },
@@ -177,7 +154,6 @@
         "prices_by_zone": [
           19.1,
           135.96,
-          257.5,
           257.5
         ]
       },
@@ -186,12 +162,11 @@
         "prices_by_zone": [
           27.5,
           193.64,
-          365.65,
           365.65
         ]
       }
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with kerry-express. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from kerry-express. Kerry Express rates. Domestic Thailand rates from official Kerry Express rate card (THB converted at 35.5 THB/USD). International zones estimated. [Updated from official calculator/rate card March 2026]"
 }

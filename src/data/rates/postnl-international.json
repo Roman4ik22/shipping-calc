@@ -1,7 +1,7 @@
 {
   "carrier_id": "postnl-international",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with postnl. [Calibrated from industry benchmarks March 2026]",
+  "note": "Synced from postnl. Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -10,49 +10,40 @@
         "NL"
       ],
       "countries_to": [
+        "NL",
         "BE",
         "LU"
       ]
     },
     {
       "zone": 2,
-      "description": "Germany & France",
+      "description": "Western Europe",
       "countries_from": [
         "NL"
       ],
       "countries_to": [
         "DE",
-        "FR"
+        "FR",
+        "GB",
+        "IT",
+        "ES",
+        "PT",
+        "AT",
+        "CH",
+        "IE",
+        "DK"
       ]
     },
     {
       "zone": 3,
-      "description": "Rest of Western Europe",
+      "description": "Rest of Europe",
       "countries_from": [
         "NL"
       ],
       "countries_to": [
-        "GB",
-        "IT",
-        "ES",
-        "AT",
-        "CH",
-        "IE",
-        "PT",
-        "DK",
         "SE",
         "NO",
         "FI",
-        "IS"
-      ]
-    },
-    {
-      "zone": 4,
-      "description": "Eastern Europe",
-      "countries_from": [
-        "NL"
-      ],
-      "countries_to": [
         "PL",
         "CZ",
         "SK",
@@ -60,82 +51,27 @@
         "RO",
         "BG",
         "HR",
-        "SI",
-        "RS",
-        "EE",
-        "LV",
-        "LT",
         "GR",
-        "CY"
+        "TR"
       ]
     },
     {
-      "zone": 5,
-      "description": "North America",
+      "zone": 4,
+      "description": "Rest of World",
       "countries_from": [
         "NL"
       ],
       "countries_to": [
         "US",
         "CA",
-        "MX"
-      ]
-    },
-    {
-      "zone": 6,
-      "description": "Asia Pacific",
-      "countries_from": [
-        "NL"
-      ],
-      "countries_to": [
+        "CN",
         "JP",
         "KR",
-        "CN",
-        "HK",
-        "TW",
-        "SG",
         "AU",
-        "NZ",
-        "TH",
-        "MY",
-        "ID",
-        "PH",
-        "VN",
-        "IN"
-      ]
-    },
-    {
-      "zone": 7,
-      "description": "South America",
-      "countries_from": [
-        "NL"
-      ],
-      "countries_to": [
-        "BR",
-        "AR",
-        "CL",
-        "CO",
-        "PE",
-        "EC",
-        "UY"
-      ]
-    },
-    {
-      "zone": 8,
-      "description": "Middle East & Africa",
-      "countries_from": [
-        "NL"
-      ],
-      "countries_to": [
         "AE",
-        "SA",
-        "IL",
-        "TR",
+        "BR",
         "ZA",
-        "NG",
-        "KE",
-        "EG",
-        "MA"
+        "IN"
       ]
     }
   ],
@@ -147,10 +83,6 @@
           3.75,
           10.0,
           16.25,
-          22.5,
-          22.5,
-          22.5,
-          22.5,
           22.5
         ]
       },
@@ -160,10 +92,6 @@
           5.0,
           13.33,
           21.67,
-          30.0,
-          30.0,
-          30.0,
-          30.0,
           30.0
         ]
       },
@@ -173,10 +101,6 @@
           7.25,
           19.33,
           31.42,
-          43.5,
-          43.5,
-          43.5,
-          43.5,
           43.5
         ]
       },
@@ -186,10 +110,6 @@
           12.5,
           33.33,
           54.18,
-          75.0,
-          75.0,
-          75.0,
-          75.0,
           75.0
         ]
       },
@@ -199,10 +119,6 @@
           21.0,
           55.99,
           91.01,
-          126.0,
-          126.0,
-          126.0,
-          126.0,
           126.0
         ]
       },
@@ -212,10 +128,6 @@
           36.0,
           95.98,
           156.02,
-          216.0,
-          216.0,
-          216.0,
-          216.0,
           216.0
         ]
       },
@@ -225,10 +137,6 @@
           50.0,
           133.3,
           216.7,
-          300.0,
-          300.0,
-          300.0,
-          300.0,
           300.0
         ]
       }

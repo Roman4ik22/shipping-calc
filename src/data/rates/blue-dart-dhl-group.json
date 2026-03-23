@@ -3,7 +3,17 @@
   "zones": [
     {
       "zone": 1,
-      "description": "South Asia",
+      "description": "India Domestic",
+      "countries_from": [
+        "IN"
+      ],
+      "countries_to": [
+        "IN"
+      ]
+    },
+    {
+      "zone": 2,
+      "description": "South Asia & Middle East",
       "countries_from": [
         "IN"
       ],
@@ -12,55 +22,41 @@
         "NP",
         "BD",
         "PK",
-        "BT",
-        "MV"
-      ]
-    },
-    {
-      "zone": 2,
-      "description": "Asia & Middle East",
-      "countries_from": [
-        "IN"
-      ],
-      "countries_to": [
-        "SG",
-        "MY",
-        "TH",
         "AE",
         "SA",
-        "HK",
-        "CN",
-        "JP",
-        "KR",
-        "ID",
-        "PH",
-        "VN"
+        "QA",
+        "KW",
+        "BH",
+        "OM",
+        "SG",
+        "MY",
+        "TH"
       ]
     },
     {
       "zone": 3,
-      "description": "Europe & Americas",
+      "description": "Worldwide",
       "countries_from": [
         "IN"
       ],
       "countries_to": [
         "US",
-        "CA",
         "GB",
         "DE",
         "FR",
-        "IT",
         "AU",
+        "CA",
+        "JP",
+        "CN",
+        "KR",
+        "IT",
         "NL",
-        "SE",
-        "CH",
-        "RU",
+        "ES",
         "BR",
-        "MX",
         "ZA",
-        "NZ",
-        "TR",
-        "IL"
+        "RU",
+        "SE",
+        "NO"
       ]
     }
   ],
@@ -183,5 +179,5 @@
     ]
   },
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with blue-dart. [Calibrated from industry benchmarks March 2026]"
+  "note": "Synced from blue-dart. Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership. [Updated from official rate data March 2026]"
 }

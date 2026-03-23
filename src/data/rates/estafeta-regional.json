@@ -1,11 +1,10 @@
 {
   "carrier_id": "estafeta-regional",
   "effective_date": "2026-03-23",
-  "note": "Rates aligned with estafeta. [Updated from Estafeta published tariffs March 2026]",
+  "note": "Synced from estafeta. [Updated from Estafeta published tariffs March 2026]",
   "zones": [
     {
-      "zone": 1,
-      "description": "Mexico Domestic",
+      "name": "Zone 0",
       "countries_from": [
         "MX"
       ],
@@ -14,28 +13,31 @@
       ]
     },
     {
-      "zone": 2,
-      "description": "US Cross-Border",
+      "name": "Zone 1",
       "countries_from": [
         "MX"
       ],
       "countries_to": [
-        "US"
+        "US",
+        "CA"
       ]
     },
     {
-      "zone": 3,
-      "description": "Latin America",
+      "name": "Zone 2",
       "countries_from": [
         "MX"
       ],
       "countries_to": [
-        "GT",
-        "CO",
-        "BR",
-        "CL",
-        "AR",
-        "PE"
+        "REGIONAL"
+      ]
+    },
+    {
+      "name": "Zone 3",
+      "countries_from": [
+        "MX"
+      ],
+      "countries_to": [
+        "INTERCONTINENTAL"
       ]
     }
   ],
@@ -46,7 +48,8 @@
         "prices_by_zone": [
           2.62,
           6.0,
-          21.0
+          21.0,
+          26.25
         ]
       },
       {
@@ -54,7 +57,8 @@
         "prices_by_zone": [
           3.5,
           8.0,
-          28.0
+          28.0,
+          35.0
         ]
       },
       {
@@ -62,7 +66,8 @@
         "prices_by_zone": [
           5.08,
           11.6,
-          40.6
+          40.6,
+          50.75
         ]
       },
       {
@@ -70,7 +75,8 @@
         "prices_by_zone": [
           6.48,
           14.8,
-          51.8
+          51.8,
+          64.75
         ]
       },
       {
@@ -78,7 +84,8 @@
         "prices_by_zone": [
           8.75,
           20.0,
-          70.0
+          70.0,
+          87.5
         ]
       },
       {
@@ -86,7 +93,8 @@
         "prices_by_zone": [
           14.7,
           33.6,
-          117.6
+          117.6,
+          147.0
         ]
       },
       {
@@ -94,7 +102,8 @@
         "prices_by_zone": [
           20.3,
           46.4,
-          162.4
+          162.4,
+          203.0
         ]
       },
       {
@@ -102,7 +111,8 @@
         "prices_by_zone": [
           25.2,
           57.6,
-          201.6
+          201.6,
+          252.0
         ]
       },
       {
@@ -110,7 +120,8 @@
         "prices_by_zone": [
           35.0,
           80.0,
-          280.0
+          280.0,
+          350.0
         ]
       },
       {
@@ -118,7 +129,8 @@
         "prices_by_zone": [
           148.75,
           340.0,
-          1190.0
+          1190.0,
+          1487.5
         ]
       },
       {
@@ -126,7 +138,8 @@
         "prices_by_zone": [
           202.3,
           462.4,
-          1618.4
+          1618.4,
+          2023.0
         ]
       }
     ]
