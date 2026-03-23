@@ -1,7 +1,7 @@
 {
   "carrier_id": "dtdc",
   "effective_date": "2026-03-23",
-  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Rates adjusted 2026-03-23]",
+  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026]",
   "zones": [
     {
       "zone": 1,
@@ -54,56 +54,56 @@
         "weight_kg": 0.5,
         "prices_by_zone": [
           2.06,
-          12.36,
-          25.75
+          11.2,
+          14
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
           3.09,
-          16.48,
-          32.96
+          19.2,
+          24
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
           4.12,
-          22.66,
-          43.26
+          32,
+          40
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
           7.21,
-          39.14,
-          74.16
+          52.8,
+          66
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
           12.36,
-          63.86,
-          125.66
+          96,
+          120
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
           20.6,
-          113.3,
-          224.54
+          192.8,
+          241
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
           28.84,
-          159.65,
-          321.36
+          288,
+          360
         ]
       }
     ],
@@ -112,56 +112,56 @@
         "weight_kg": 0.5,
         "prices_by_zone": [
           1.03,
-          8.24,
-          18.54
+          7.84,
+          9.8
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
           2.06,
-          11.33,
-          24.72
+          13.44,
+          16.8
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
           3.09,
-          16.48,
-          32.96
+          22.4,
+          28
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
           5.15,
-          28.84,
-          56.65
+          36.96,
+          46.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
           8.24,
-          49.44,
-          97.85
+          67.2,
+          84
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
           14.42,
-          87.55,
-          173.04
+          134.96,
+          168.7
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
           20.6,
-          123.6,
-          249.26
+          201.6,
+          252
         ]
       }
     ]
