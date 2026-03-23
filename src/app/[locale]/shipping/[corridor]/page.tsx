@@ -21,7 +21,10 @@ import InsuranceComparison from "@/components/InsuranceComparison";
 import PriceHistory from "@/components/PriceHistory";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorContent } from "@/data/corridor-content";
+import { generateCorridorInfo } from "@/lib/corridor-generator";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 
 // Pre-generate popular corridors; rest generated on-demand via ISR
@@ -83,7 +86,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/shipping/${corridor}`,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
+        getCorridorLocales(parsed.origin.code, parsed.destination.code).map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
       ),
     },
     openGraph: {
@@ -116,6 +119,13 @@ export default async function CorridorPage({
   }
 
   const { origin, destination } = parsed;
+
+  // Redirect to English if locale is not relevant for this corridor
+  if (!isCorridorLocaleValid(origin.code, destination.code, loc)) {
+    const enSlug = makeCorridorSlug(origin, destination, "en");
+    redirect(`/en/shipping/${enSlug}`);
+  }
+
   const corridorData = getCorridorData(origin.code, destination.code);
   const originName = getCountryName(origin, loc);
   const destName = getCountryName(destination, loc);
@@ -344,6 +354,129 @@ export default async function CorridorPage({
           />
         </div>
       )}
+
+      {/* Dynamic corridor info from per-country data */}
+      {(() => {
+        const corridorInfo = generateCorridorInfo(origin.code, destination.code, locale);
+        if (!corridorInfo) return null;
+        const isRu = locale === "ru";
+        return (
+          <section className="mt-10 space-y-6">
+            {/* Customs & Import Rules */}
+            {corridorInfo.prohibited_section && (
+              <div className="bg-surface border border-white/10 rounded-lg p-6">
+                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-red-400">&#9888;</span>
+                  {isRu
+                    ? `Таможенные и импортные правила: ${originName} → ${destName}`
+                    : `Customs & Import Rules: ${originName} → ${destName}`}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.prohibited_section}</p>
+              </div>
+            )}
+
+            {/* Required Documents */}
+            {corridorInfo.docs_section && (
+              <div className="bg-surface border border-white/10 rounded-lg p-6">
+                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-blue-400">&#128196;</span>
+                  {isRu ? "Необходимые документы" : "Required Documents"}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.docs_section}</p>
+              </div>
+            )}
+
+            {/* Trade Agreements */}
+            {corridorInfo.trade_section && (
+              <div className="bg-surface border border-white/10 rounded-lg p-6">
+                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-green-400">&#128101;</span>
+                  {isRu ? "Торговые соглашения" : "Trade Agreements"}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.trade_section}</p>
+              </div>
+            )}
+
+            {/* Customs Overview */}
+            {corridorInfo.customs_section && (
+              <div className="bg-surface border border-white/10 rounded-lg p-6">
+                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-yellow-400">&#128230;</span>
+                  {isRu
+                    ? `Обзор торговли: ${originName} → ${destName}`
+                    : `Trade Overview: ${originName} → ${destName}`}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.customs_section}</p>
+              </div>
+            )}
+
+            {/* Useful Links */}
+            {corridorInfo.trade_links.length > 0 && (
+              <div className="bg-surface border border-white/10 rounded-lg p-6">
+                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-accent-light">&#128279;</span>
+                  {isRu ? "Полезные ссылки" : "Useful Links"}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {corridorInfo.trade_links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-accent-light hover:text-white transition-colors bg-surface-light rounded-lg p-3 border border-white/5 hover:border-accent/30"
+                    >
+                      <span className="text-gray-500">&#8599;</span>
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Route-specific FAQ with JSON-LD */}
+            {corridorInfo.faq.length > 0 && (
+              <div>
+                <h2 className="text-lg font-bold text-white mb-3">
+                  {isRu
+                    ? `Часто задаваемые вопросы: ${originName} → ${destName}`
+                    : `FAQ: Shipping from ${originName} to ${destName}`}
+                </h2>
+                <div className="space-y-3">
+                  {corridorInfo.faq.map((item, i) => (
+                    <details
+                      key={`corridor-faq-${i}`}
+                      className="bg-surface border border-white/10 rounded-lg"
+                    >
+                      <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light text-sm">
+                        {item.q}
+                      </summary>
+                      <p className="px-4 pb-4 text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                    </details>
+                  ))}
+                </div>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: corridorInfo.faq.map((item) => ({
+                        "@type": "Question",
+                        name: item.q,
+                        acceptedAnswer: {
+                          "@type": "Answer",
+                          text: item.a,
+                        },
+                      })),
+                    }),
+                  }}
+                />
+              </div>
+            )}
+          </section>
+        );
+      })()}
 
       {/* Corridor unique content */}
       {(() => {
