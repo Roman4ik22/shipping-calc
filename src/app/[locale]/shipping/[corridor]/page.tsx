@@ -455,23 +455,7 @@ export default async function CorridorPage({
                     </details>
                   ))}
                 </div>
-                <script
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      mainEntity: corridorInfo.faq.map((item) => ({
-                        "@type": "Question",
-                        name: item.q,
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: item.a,
-                        },
-                      })),
-                    }),
-                  }}
-                />
+                {/* FAQPage schema moved to main FAQ section to avoid duplicates */}
               </div>
             )}
           </section>
@@ -782,11 +766,17 @@ export default async function CorridorPage({
           (cr) => cr.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0
         ).filter((p) => p > 0);
         if (prices.length === 0) return null;
+        // Use Service schema instead of Product to avoid missing review/rating warnings
         const productJsonLd = {
           "@context": "https://schema.org",
-          "@type": "Product",
+          "@type": "Service",
           name: `Shipping from ${originName} to ${destName}`,
           description: `Compare ${corridorData.carriers.length} carrier rates for shipping from ${originName} to ${destName}`,
+          provider: {
+            "@type": "Organization",
+            name: "RateShips",
+            url: "https://rateships.com",
+          },
           offers: {
             "@type": "AggregateOffer",
             lowPrice: Math.min(...prices),
