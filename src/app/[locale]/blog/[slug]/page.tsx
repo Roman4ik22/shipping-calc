@@ -3,6 +3,101 @@ import Link from "next/link";
 import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/data/blog-posts";
+import { countries, makeCorridorSlug, getCountryName } from "@/lib/data";
+
+/** Map blog post tags to relevant shipping corridors (origin code, dest code). */
+function getRelatedCorridors(tags: string[]): { from: string; to: string }[] {
+  const tagToCorridors: Record<string, { from: string; to: string }[]> = {
+    china: [
+      { from: "CN", to: "US" },
+      { from: "CN", to: "GB" },
+      { from: "CN", to: "DE" },
+    ],
+    usa: [
+      { from: "US", to: "GB" },
+      { from: "US", to: "DE" },
+      { from: "US", to: "CA" },
+    ],
+    uk: [
+      { from: "GB", to: "US" },
+      { from: "US", to: "GB" },
+      { from: "GB", to: "DE" },
+    ],
+    europe: [
+      { from: "US", to: "DE" },
+      { from: "US", to: "FR" },
+      { from: "CN", to: "DE" },
+    ],
+    eu: [
+      { from: "US", to: "DE" },
+      { from: "CN", to: "FR" },
+      { from: "GB", to: "DE" },
+    ],
+    japan: [
+      { from: "JP", to: "US" },
+      { from: "JP", to: "GB" },
+      { from: "JP", to: "AU" },
+    ],
+    korea: [
+      { from: "KR", to: "US" },
+      { from: "KR", to: "JP" },
+      { from: "KR", to: "GB" },
+    ],
+    turkey: [
+      { from: "TR", to: "US" },
+      { from: "TR", to: "DE" },
+      { from: "TR", to: "GB" },
+    ],
+    russia: [
+      { from: "DE", to: "RU" },
+      { from: "CN", to: "RU" },
+      { from: "TR", to: "RU" },
+    ],
+    australia: [
+      { from: "US", to: "AU" },
+      { from: "CN", to: "AU" },
+      { from: "GB", to: "AU" },
+    ],
+    "middle-east": [
+      { from: "CN", to: "AE" },
+      { from: "US", to: "AE" },
+      { from: "GB", to: "AE" },
+    ],
+  };
+
+  const seen = new Set<string>();
+  const result: { from: string; to: string }[] = [];
+
+  for (const tag of tags) {
+    const corridors = tagToCorridors[tag];
+    if (!corridors) continue;
+    for (const c of corridors) {
+      const key = `${c.from}-${c.to}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        result.push(c);
+      }
+      if (result.length >= 3) return result;
+    }
+  }
+
+  // Fallback: popular corridors
+  const fallback = [
+    { from: "US", to: "GB" },
+    { from: "CN", to: "US" },
+    { from: "US", to: "DE" },
+  ];
+  for (const c of fallback) {
+    const key = `${c.from}-${c.to}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      result.push(c);
+    }
+    if (result.length >= 3) return result;
+  }
+
+  return result;
+}
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -288,6 +383,44 @@ export default async function BlogPostPage({
           </div>
         </section>
       )}
+
+      {/* Related shipping corridors */}
+      {(() => {
+        const corridors = getRelatedCorridors(post.tags);
+        if (corridors.length === 0) return null;
+        return (
+          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div className="border-t border-white/10 pt-10">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                {isRu ? "Сравните тарифы доставки" : "Compare Shipping Rates"}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {corridors.map((c) => {
+                  const originCountry = countries.find((co) => co.code === c.from);
+                  const destCountry = countries.find((co) => co.code === c.to);
+                  if (!originCountry || !destCountry) return null;
+                  const oName = getCountryName(originCountry, loc);
+                  const dName = getCountryName(destCountry, loc);
+                  return (
+                    <Link
+                      key={`${c.from}-${c.to}`}
+                      href={`/${locale}/shipping/${makeCorridorSlug(originCountry, destCountry, loc)}`}
+                      className="group bg-surface rounded-xl border border-white/10 p-5 hover:border-accent-light/30 transition-all duration-200"
+                    >
+                      <p className="text-base font-semibold text-white group-hover:text-accent-light transition-colors">
+                        {oName} → {dName}
+                      </p>
+                      <p className="text-sm text-gray-400 mt-1">
+                        {isRu ? "Сравнить перевозчиков и цены" : "Compare carriers & prices"}
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
     </div>
   );
 }

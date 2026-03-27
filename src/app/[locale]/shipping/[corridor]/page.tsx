@@ -26,6 +26,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
+import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
 
 // Pre-generate popular corridors; rest generated on-demand via ISR
 export const dynamicParams = true;
@@ -321,6 +322,23 @@ export default async function CorridorPage({
           track_package: t(loc, "track_package"),
         }}
       />
+
+      {/* Delivery Date Estimator */}
+      {corridorData && corridorData.carriers.length > 0 && (
+        <div className="mt-8">
+          <DeliveryDateEstimator
+            estimatedDaysMin={Math.min(...corridorData.carriers.map(c => c.estimated_days_min))}
+            estimatedDaysMax={Math.max(...corridorData.carriers.map(c => c.estimated_days_max))}
+            locale={locale}
+            labels={{
+              title: t(loc, "delivery_estimate"),
+              ship_today: t(loc, "ship_date"),
+              estimated_arrival: t(loc, "estimated_arrival"),
+              business_days_note: t(loc, "business_days_note"),
+            }}
+          />
+        </div>
+      )}
 
       {/* Duty Calculator */}
       <div className="mt-8">
@@ -627,6 +645,99 @@ export default async function CorridorPage({
           </div>
         </section>
       )}
+
+      {/* More shipping routes — dense internal link network */}
+      <section className="mt-12">
+        <h2 className="text-xl font-bold text-white mb-4">
+          {locale === "ru" ? "Ещё маршруты доставки" : "More Shipping Routes"}
+        </h2>
+        <div className="space-y-6">
+          {/* From same origin to other destinations */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+              {locale === "ru" ? `Доставка из ${originName}` : `Ship from ${originName}`}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {popular
+                .filter((c) => c.code !== origin.code && c.code !== destination.code)
+                .filter((c) => !relatedFrom.some((rf) => rf.code === c.code))
+                .slice(0, 6)
+                .map((c) => (
+                  <Link
+                    key={`from-${c.code}`}
+                    href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
+                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                  >
+                    {originName} → {getCountryName(c, loc)}
+                  </Link>
+                ))}
+            </div>
+          </div>
+          {/* To same destination from other origins */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+              {locale === "ru" ? `Доставка в ${destName}` : `Ship to ${destName}`}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {popular
+                .filter((c) => c.code !== origin.code && c.code !== destination.code)
+                .slice(6, 12)
+                .map((c) => (
+                  <Link
+                    key={`to-${c.code}`}
+                    href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
+                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                  >
+                    {getCountryName(c, loc)} → {destName}
+                  </Link>
+                ))}
+            </div>
+          </div>
+          {/* Country guide links */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+              {locale === "ru" ? "Руководства по странам" : "Country Guides"}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href={`/${locale}/guide/${origin.slug_en}`}
+                className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+              >
+                {locale === "ru" ? `Руководство: ${originName}` : `${originName} Shipping Guide`}
+              </Link>
+              <Link
+                href={`/${locale}/guide/${destination.slug_en}`}
+                className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+              >
+                {locale === "ru" ? `Руководство: ${destName}` : `${destName} Shipping Guide`}
+              </Link>
+            </div>
+          </div>
+          {/* Carrier page links */}
+          {corridorData && corridorData.carriers.length > 0 && (
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 mb-2">
+                {locale === "ru" ? "Перевозчики на маршруте" : "Carriers on This Route"}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 8).map((carrierId) => {
+                  const carrier = corridorData.carriers.find((cr) => cr.carrier.id === carrierId)?.carrier;
+                  if (!carrier) return null;
+                  return (
+                    <Link
+                      key={`more-${carrierId}`}
+                      href={`/${locale}/carriers/${carrierId}`}
+                      className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                    >
+                      {carrier.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Customs info for destination */}
       {hasCustomsData(destination.code) && (() => {
