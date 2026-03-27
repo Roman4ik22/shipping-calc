@@ -740,7 +740,7 @@ export default function RateTable({
                     {labels.ship_now || "Ship Now"}
                   </a>
                 )}
-                {rate.tracking && rate.tracking_url && (
+                {rate.tracking && rate.tracking_url && !rate.tracking_url.includes("{tracking}") && (
                   <a
                     href={rate.tracking_url}
                     target="_blank"
