@@ -36,6 +36,21 @@ export default async function DataMethodologyPage({
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: isRu ? "Главная" : "Home", item: `https://rateships.com/${locale}` },
+              { "@type": "ListItem", position: 2, name: isRu ? "Методология данных" : "How We Collect Data" },
+            ],
+          }),
+        }}
+      />
+
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {isRu ? "Главная" : "Home"}

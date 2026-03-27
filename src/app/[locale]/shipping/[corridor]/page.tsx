@@ -33,14 +33,40 @@ export const dynamicParams = true;
 export function generateStaticParams() {
   const params: { locale: string; corridor: string }[] = [];
 
-  const popularCodes = [
+  // Top 20 countries for high-traffic locales (en, ru)
+  const topCodes = [
+    "US", "GB", "DE", "FR", "CN", "JP", "KR", "AU", "CA", "RU",
+    "IN", "AE", "SG", "TH", "MY", "BR", "IT", "ES", "NL", "TR",
+  ];
+
+  // Top 10 for other locales
+  const basicCodes = [
     "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
   ];
 
-  for (const locale of locales) {
+  // Pre-generate top 20 x 19 = 380 corridors for en and ru (most traffic)
+  for (const locale of ["en", "ru"] as const) {
     const loc = locale as Locale;
-    for (const fromCode of popularCodes) {
-      for (const toCode of popularCodes) {
+    for (const fromCode of topCodes) {
+      for (const toCode of topCodes) {
+        if (fromCode === toCode) continue;
+        const from = countries.find((c) => c.code === fromCode);
+        const to = countries.find((c) => c.code === toCode);
+        if (!from || !to) continue;
+        params.push({
+          locale,
+          corridor: makeCorridorSlug(from, to, loc),
+        });
+      }
+    }
+  }
+
+  // For other locales, only top 10 corridors
+  for (const locale of locales) {
+    if (locale === "en" || locale === "ru") continue;
+    const loc = locale as Locale;
+    for (const fromCode of basicCodes) {
+      for (const toCode of basicCodes) {
         if (fromCode === toCode) continue;
         const from = countries.find((c) => c.code === fromCode);
         const to = countries.find((c) => c.code === toCode);
