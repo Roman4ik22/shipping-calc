@@ -1,7 +1,7 @@
 {
   "carrier_id": "correos",
-  "effective_date": "2026-03-23",
-  "note": "Correos (Spain) international rates. Strong connections to Latin America and affordable European delivery. [Updated from official rate data March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Correos (Spain) international rates. Strong connections to Latin America and affordable European delivery. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -93,31 +93,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.5,
-          10,
-          11.5,
-          20,
-          22
+          7.73,
+          10.3,
+          11.85,
+          20.6,
+          22.66
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12,
-          16,
-          18.4,
-          36,
-          40
+          12.36,
+          16.48,
+          18.95,
+          37.08,
+          41.2
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.5,
-          22,
-          25.3,
-          46,
-          51
+          17,
+          22.66,
+          26.06,
+          47.38,
+          52.53
         ]
       },
       {
@@ -165,71 +165,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.5,
-          10,
-          11.5,
-          20,
-          22
+          7.73,
+          10.3,
+          11.85,
+          20.6,
+          22.66
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12,
-          16,
-          18.4,
-          36,
-          40
+          12.36,
+          16.48,
+          18.95,
+          37.08,
+          41.2
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.5,
-          22,
-          25.3,
-          46,
-          51
+          17,
+          22.66,
+          26.06,
+          47.38,
+          52.53
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          24.75,
-          33,
-          38,
-          74,
-          82
+          25.49,
+          33.99,
+          39.14,
+          76.22,
+          84.46
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          41.25,
-          55,
-          63.25,
-          121,
-          134
+          42.49,
+          56.65,
+          65.15,
+          124.63,
+          138.02
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          65.25,
-          87,
-          100,
-          214,
-          238
+          67.21,
+          89.61,
+          103,
+          220.42,
+          245.14
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          90,
-          120,
-          138,
-          306,
-          340
+          92.7,
+          123.6,
+          142.14,
+          315.18,
+          350.2
         ]
       }
     ]

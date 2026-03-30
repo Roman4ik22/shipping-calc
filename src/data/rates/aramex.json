@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex",
-  "effective_date": "2026-03-23",
-  "note": "[Updated from Aramex published rate card (AUB PDF) March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "[Updated from Aramex published rate card (AUB PDF) March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -89,31 +89,73 @@
     "aramex-express": [
       {
         "weight_kg": 0.5,
-        "prices_by_zone": [9.59, 9.59, 12.80, 10.61, 9.59]
+        "prices_by_zone": [
+          9.88,
+          9.88,
+          13.18,
+          10.93,
+          9.88
+        ]
       },
       {
         "weight_kg": 1,
-        "prices_by_zone": [14.65, 14.65, 17.86, 15.66, 14.65]
+        "prices_by_zone": [
+          15.09,
+          15.09,
+          18.4,
+          16.13,
+          15.09
+        ]
       },
       {
         "weight_kg": 2,
-        "prices_by_zone": [24.77, 24.77, 27.98, 25.78, 24.77]
+        "prices_by_zone": [
+          25.51,
+          25.51,
+          28.82,
+          26.55,
+          25.51
+        ]
       },
       {
         "weight_kg": 5,
-        "prices_by_zone": [55.13, 55.13, 58.34, 56.14, 55.13]
+        "prices_by_zone": [
+          56.78,
+          56.78,
+          60.09,
+          57.82,
+          56.78
+        ]
       },
       {
         "weight_kg": 10,
-        "prices_by_zone": [105.73, 105.73, 108.94, 106.74, 105.73]
+        "prices_by_zone": [
+          108.9,
+          108.9,
+          112.21,
+          109.94,
+          108.9
+        ]
       },
       {
         "weight_kg": 20,
-        "prices_by_zone": [206.93, 206.93, 210.14, 207.94, 206.93]
+        "prices_by_zone": [
+          213.14,
+          213.14,
+          216.44,
+          214.18,
+          213.14
+        ]
       },
       {
         "weight_kg": 30,
-        "prices_by_zone": [308.13, 308.13, 311.34, 309.14, 308.13]
+        "prices_by_zone": [
+          317.37,
+          317.37,
+          320.68,
+          318.41,
+          317.37
+        ]
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "correos-express",
-  "effective_date": "2026-03-23",
-  "note": "Correos Express rates from Spain. Express delivery across Europe and Latin America. [Updated from official rate data March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Correos Express rates from Spain. Express delivery across Europe and Latin America. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -87,71 +87,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.75,
-          13,
-          14.95,
-          26,
-          28.6
+          10.04,
+          13.39,
+          15.4,
+          26.78,
+          29.46
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.6,
-          20.8,
-          23.9,
-          46.8,
-          52
+          16.07,
+          21.42,
+          24.62,
+          48.2,
+          53.56
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          21.45,
-          28.6,
-          32.9,
-          59.8,
-          66.3
+          22.09,
+          29.46,
+          33.89,
+          61.59,
+          68.29
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.2,
-          42.9,
-          49.4,
-          96.2,
-          106.6
+          33.17,
+          44.19,
+          50.88,
+          99.09,
+          109.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          53.6,
-          71.5,
-          82.2,
-          157.3,
-          174.2
+          55.21,
+          73.65,
+          84.67,
+          162.02,
+          179.43
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          84.8,
-          113.1,
-          130,
-          278.2,
-          309.4
+          87.34,
+          116.49,
+          133.9,
+          286.55,
+          318.68
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          117,
-          156,
-          179.4,
-          397.8,
-          442
+          120.51,
+          160.68,
+          184.78,
+          409.73,
+          455.26
         ]
       }
     ],
@@ -159,71 +159,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.75,
-          13,
-          14.95,
-          26,
-          28.6
+          10.04,
+          13.39,
+          15.4,
+          26.78,
+          29.46
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.6,
-          20.8,
-          23.9,
-          46.8,
-          52
+          16.07,
+          21.42,
+          24.62,
+          48.2,
+          53.56
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          21.45,
-          28.6,
-          32.9,
-          59.8,
-          66.3
+          22.09,
+          29.46,
+          33.89,
+          61.59,
+          68.29
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.2,
-          42.9,
-          49.4,
-          96.2,
-          106.6
+          33.17,
+          44.19,
+          50.88,
+          99.09,
+          109.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          53.6,
-          71.5,
-          82.2,
-          157.3,
-          174.2
+          55.21,
+          73.65,
+          84.67,
+          162.02,
+          179.43
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          84.8,
-          113.1,
-          130,
-          278.2,
-          309.4
+          87.34,
+          116.49,
+          133.9,
+          286.55,
+          318.68
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          117,
-          156,
-          179.4,
-          397.8,
-          442
+          120.51,
+          160.68,
+          184.78,
+          409.73,
+          455.26
         ]
       }
     ]

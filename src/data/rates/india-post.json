@@ -1,7 +1,7 @@
 {
   "carrier_id": "india-post",
-  "effective_date": "2026-03-23",
-  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -92,22 +92,148 @@
   ],
   "rates": {
     "india-post-ems": [
-      {"weight_kg": 0.5, "prices_by_zone": [12, 18, 15, 22, 25]},
-      {"weight_kg": 1, "prices_by_zone": [16, 24, 23, 33, 37]},
-      {"weight_kg": 2, "prices_by_zone": [22, 32, 33, 46, 53]},
-      {"weight_kg": 5, "prices_by_zone": [38, 55, 62, 90, 102]},
-      {"weight_kg": 10, "prices_by_zone": [60, 90, 106, 155, 181]},
-      {"weight_kg": 20, "prices_by_zone": [100, 155, 180, 270, 320]},
-      {"weight_kg": 30, "prices_by_zone": [138, 215, 250, 375, 450]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          12.42,
+          18.63,
+          15.52,
+          22.77,
+          25.87
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          16.56,
+          24.84,
+          23.81,
+          34.15,
+          38.29
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          22.77,
+          33.12,
+          34.15,
+          47.61,
+          54.86
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          39.33,
+          56.93,
+          64.17,
+          93.15,
+          105.57
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          62.1,
+          93.15,
+          109.71,
+          160.42,
+          187.33
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          103.5,
+          160.42,
+          186.3,
+          279.45,
+          331.2
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          142.83,
+          222.52,
+          258.75,
+          388.12,
+          465.75
+        ]
+      }
     ],
     "india-post-air-parcel": [
-      {"weight_kg": 0.5, "prices_by_zone": [6, 9, 11, 16, 18]},
-      {"weight_kg": 1, "prices_by_zone": [8, 12, 17, 24, 27]},
-      {"weight_kg": 2, "prices_by_zone": [12, 18, 24, 34, 39]},
-      {"weight_kg": 5, "prices_by_zone": [22, 32, 46, 66, 75]},
-      {"weight_kg": 10, "prices_by_zone": [38, 55, 78, 114, 133]},
-      {"weight_kg": 20, "prices_by_zone": [65, 98, 135, 200, 235]},
-      {"weight_kg": 30, "prices_by_zone": [null, null, null, null, null]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          6.21,
+          9.32,
+          11.39,
+          16.56,
+          18.63
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          8.28,
+          12.42,
+          17.6,
+          24.84,
+          27.94
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          12.42,
+          18.63,
+          24.84,
+          35.19,
+          40.36
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.77,
+          33.12,
+          47.61,
+          68.31,
+          77.63
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          39.33,
+          56.93,
+          80.73,
+          117.99,
+          137.66
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          67.27,
+          101.43,
+          139.73,
+          207,
+          243.23
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "boxberry-regional",
-  "effective_date": "2026-03-23",
-  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -77,57 +77,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.18,
-          18.54,
-          29.36
+          6.37,
+          19.1,
+          30.24
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.24,
-          24.72,
-          39.14
+          8.49,
+          25.46,
+          40.31
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.95,
-          35.84,
-          56.75
+          12.31,
+          36.92,
+          58.45
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20.6,
-          61.8,
-          97.85
+          21.22,
+          63.65,
+          100.79
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          34.61,
-          103.82,
-          164.39
+          35.65,
+          106.93,
+          169.32
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          59.33,
-          177.98,
-          281.81
+          61.11,
+          183.32,
+          290.26
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          82.4,
-          247.2,
-          391.4
+          84.87,
+          254.62,
+          403.14
         ]
       }
     ]

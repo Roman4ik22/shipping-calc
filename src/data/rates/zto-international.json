@@ -66,61 +66,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.62,
-          6.0,
-          13.5
+          2.7,
+          6.18,
+          13.91
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.5,
-          8.0,
-          18.0
+          3.61,
+          8.24,
+          18.54
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.08,
-          11.6,
-          26.1
+          5.23,
+          11.95,
+          26.88
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          8.75,
-          20.0,
-          45.0
+          9.01,
+          20.6,
+          46.35
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          14.7,
-          33.6,
-          75.6
+          15.14,
+          34.61,
+          77.87
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          25.2,
-          57.6,
-          129.6
+          25.96,
+          59.33,
+          133.49
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          35.0,
-          80.0,
-          180.0
+          36.05,
+          82.4,
+          185.4
         ]
       }
     ]
   },
-  "effective_date": "2026-03-23",
-  "note": "[Updated from ZTO International published rates March 2026]"
+  "effective_date": "2026-03-30",
+  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30]"
 }

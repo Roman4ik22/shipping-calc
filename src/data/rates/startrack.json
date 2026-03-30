@@ -1,7 +1,7 @@
 {
   "carrier_id": "startrack",
-  "effective_date": "2026-03-23",
-  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -81,91 +81,91 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.0,
-          16.5,
-          24.0,
-          28.5,
-          35.0
+          9.27,
+          17,
+          24.72,
+          29.36,
+          36.05
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.0,
-          22.0,
-          32.0,
-          38.0,
-          46.67
+          12.36,
+          22.66,
+          32.96,
+          39.14,
+          48.07
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.4,
-          31.9,
-          46.4,
-          55.1,
-          67.67
+          17.92,
+          32.86,
+          47.79,
+          56.75,
+          69.7
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.0,
-          55.0,
-          80.0,
-          95.0,
-          116.68
+          30.9,
+          56.65,
+          82.4,
+          97.85,
+          120.18
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          50.4,
-          92.4,
-          134.4,
-          159.6,
-          196.01
+          51.91,
+          95.17,
+          138.43,
+          164.39,
+          201.89
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          86.4,
-          158.4,
-          230.4,
-          273.6,
-          336.02
+          88.99,
+          163.15,
+          237.31,
+          281.81,
+          346.1
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          120.0,
-          220.0,
-          320.0,
-          380.0,
-          466.7
+          123.6,
+          226.6,
+          329.6,
+          391.4,
+          480.7
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          510.0,
-          935.0,
-          1360.0,
-          1615.0,
-          1983.48
+          525.3,
+          963.05,
+          1400.8,
+          1663.45,
+          2042.98
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          714.0,
-          1309.0,
-          1904.0,
-          2261.0,
-          2776.87
+          735.42,
+          1348.27,
+          1961.12,
+          2328.83,
+          2860.18
         ]
       }
     ]

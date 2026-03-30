@@ -1,7 +1,7 @@
 {
   "carrier_id": "dhl-africa-ecommerce",
-  "effective_date": "2026-03-23",
-  "note": "Estimated DHL Africa eCommerce rates. Affordable cross-border ecommerce delivery across Africa. [Calibrated from industry benchmarks March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Estimated DHL Africa eCommerce rates. Affordable cross-border ecommerce delivery across Africa. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -83,71 +83,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.75,
-          8.44,
-          13.12,
-          17.81,
-          22.5
+          3.94,
+          8.86,
+          13.78,
+          18.7,
+          23.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.0,
-          11.25,
-          17.5,
-          23.75,
-          30.0
+          5.25,
+          11.81,
+          18.38,
+          24.94,
+          31.5
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.25,
-          16.31,
-          25.38,
-          34.44,
-          43.5
+          7.61,
+          17.13,
+          26.65,
+          36.16,
+          45.68
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.5,
-          28.12,
-          43.75,
-          59.38,
-          75.0
+          13.13,
+          29.53,
+          45.94,
+          62.35,
+          78.75
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.0,
-          47.25,
-          73.5,
-          99.75,
-          126.0
+          22.05,
+          49.61,
+          77.18,
+          104.74,
+          132.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          36.0,
-          81.0,
-          126.0,
-          171.0,
-          216.0
+          37.8,
+          85.05,
+          132.3,
+          179.55,
+          226.8
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          50.0,
-          112.5,
-          175.0,
-          237.5,
-          300.0
+          52.5,
+          118.13,
+          183.75,
+          249.38,
+          315
         ]
       }
     ],
@@ -155,71 +155,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.75,
-          8.44,
-          13.12,
-          17.81,
-          22.5
+          3.94,
+          8.86,
+          13.78,
+          18.7,
+          23.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.0,
-          11.25,
-          17.5,
-          23.75,
-          30.0
+          5.25,
+          11.81,
+          18.38,
+          24.94,
+          31.5
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.25,
-          16.31,
-          25.38,
-          34.44,
-          43.5
+          7.61,
+          17.13,
+          26.65,
+          36.16,
+          45.68
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.5,
-          28.12,
-          43.75,
-          59.38,
-          75.0
+          13.13,
+          29.53,
+          45.94,
+          62.35,
+          78.75
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.0,
-          47.25,
-          73.5,
-          99.75,
-          126.0
+          22.05,
+          49.61,
+          77.18,
+          104.74,
+          132.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          36.0,
-          81.0,
-          126.0,
-          171.0,
-          216.0
+          37.8,
+          85.05,
+          132.3,
+          179.55,
+          226.8
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          50.0,
-          112.5,
-          175.0,
-          237.5,
-          300.0
+          52.5,
+          118.13,
+          183.75,
+          249.38,
+          315
         ]
       }
     ]

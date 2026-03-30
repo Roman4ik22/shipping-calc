@@ -1,7 +1,7 @@
 {
   "carrier_id": "pochta-rossii",
-  "effective_date": "2026-03-23",
-  "note": "Pochta Rossii international rates from Russia. [Updated from public calculator data March 2026]",
+  "effective_date": "2026-03-30",
+  "note": "Pochta Rossii international rates from Russia. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30]",
   "zones": [
     {
       "zone": 1,
@@ -111,21 +111,138 @@
   ],
   "rates": {
     "pochta-ems": [
-      {"weight_kg": 0.5, "prices_by_zone": [8, 16, 28, 32, 38]},
-      {"weight_kg": 1, "prices_by_zone": [12, 24, 35, 42, 48]},
-      {"weight_kg": 2, "prices_by_zone": [18, 32, 50, 58, 68]},
-      {"weight_kg": 5, "prices_by_zone": [32, 55, 88, 100, 118]},
-      {"weight_kg": 10, "prices_by_zone": [55, 95, 148, 170, 200]},
-      {"weight_kg": 20, "prices_by_zone": [95, 160, 265, 305, 362]},
-      {"weight_kg": 30, "prices_by_zone": [135, 230, 382, 440, 525]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          8.24,
+          16.48,
+          28.84,
+          32.96,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          12.36,
+          24.72,
+          36.05,
+          43.26,
+          49.44
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          18.54,
+          32.96,
+          51.5,
+          59.74,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          32.96,
+          56.65,
+          90.64,
+          103,
+          121.54
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          56.65,
+          97.85,
+          152.44,
+          175.1,
+          206
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          97.85,
+          164.8,
+          272.95,
+          314.15,
+          372.86
+        ]
+      },
+      {
+        "weight_kg": 30,
+        "prices_by_zone": [
+          139.05,
+          236.9,
+          393.46,
+          453.2,
+          540.75
+        ]
+      }
     ],
     "pochta-parcel": [
-      {"weight_kg": 0.5, "prices_by_zone": [5, 10, 14, 16, 20]},
-      {"weight_kg": 1, "prices_by_zone": [9, 16, 18, 22, 26]},
-      {"weight_kg": 2, "prices_by_zone": [13, 22, 26, 30, 38]},
-      {"weight_kg": 5, "prices_by_zone": [22, 38, 48, 55, 68]},
-      {"weight_kg": 10, "prices_by_zone": [38, 65, 82, 98, 120]},
-      {"weight_kg": 20, "prices_by_zone": [65, 109, 152, 180, 222]}
+      {
+        "weight_kg": 0.5,
+        "prices_by_zone": [
+          5.15,
+          10.3,
+          14.42,
+          16.48,
+          20.6
+        ]
+      },
+      {
+        "weight_kg": 1,
+        "prices_by_zone": [
+          9.27,
+          16.48,
+          18.54,
+          22.66,
+          26.78
+        ]
+      },
+      {
+        "weight_kg": 2,
+        "prices_by_zone": [
+          13.39,
+          22.66,
+          26.78,
+          30.9,
+          39.14
+        ]
+      },
+      {
+        "weight_kg": 5,
+        "prices_by_zone": [
+          22.66,
+          39.14,
+          49.44,
+          56.65,
+          70.04
+        ]
+      },
+      {
+        "weight_kg": 10,
+        "prices_by_zone": [
+          39.14,
+          66.95,
+          84.46,
+          100.94,
+          123.6
+        ]
+      },
+      {
+        "weight_kg": 20,
+        "prices_by_zone": [
+          66.95,
+          112.27,
+          156.56,
+          185.4,
+          228.66
+        ]
+      }
     ]
   }
 }

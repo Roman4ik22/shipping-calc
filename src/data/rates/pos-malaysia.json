@@ -78,64 +78,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.2,
-          4.7,
-          9.2,
-          13.8
+          1.24,
+          4.84,
+          9.48,
+          14.21
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.6,
-          8.5,
-          15,
-          21.3
+          1.65,
+          8.76,
+          15.45,
+          21.94
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          2.5,
-          14,
-          24,
-          34
+          2.58,
+          14.42,
+          24.72,
+          35.02
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          5,
-          28,
-          46,
-          65
+          5.15,
+          28.84,
+          47.38,
+          66.95
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          8.5,
-          48,
-          78,
-          112
+          8.76,
+          49.44,
+          80.34,
+          115.36
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          15,
-          85,
-          140,
-          200
+          15.45,
+          87.55,
+          144.2,
+          206
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          21,
-          120,
-          200,
-          285
+          21.63,
+          123.6,
+          206,
+          293.55
         ]
       }
     ],
@@ -143,59 +143,59 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.9,
-          3.5,
-          6.9,
-          10.4
+          0.93,
+          3.61,
+          7.11,
+          10.71
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.2,
-          6.4,
-          11.3,
-          16
+          1.24,
+          6.59,
+          11.64,
+          16.48
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.9,
-          10.5,
-          18,
-          25.5
+          1.96,
+          10.82,
+          18.54,
+          26.27
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          3.8,
-          21,
-          34.5,
-          49
+          3.91,
+          21.63,
+          35.54,
+          50.47
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          6.4,
-          36,
-          58.5,
-          84
+          6.59,
+          37.08,
+          60.26,
+          86.52
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          11.3,
-          64,
-          105,
-          150
+          11.64,
+          65.92,
+          108.15,
+          154.5
         ]
       }
     ]
   },
-  "effective_date": "2026-03-23",
-  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026]"
+  "effective_date": "2026-03-30",
+  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30]"
 }
