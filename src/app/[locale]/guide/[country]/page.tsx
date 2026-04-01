@@ -11,6 +11,7 @@ import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
 import { t, locales } from "@/lib/i18n";
 import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
+import { getCorridorLocales } from "@/lib/country-locale";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -18,9 +19,12 @@ export const dynamicParams = true;
 export function generateStaticParams() {
   const params: { locale: string; country: string }[] = [];
   const popularCodes = new Set(["US","GB","DE","CN","JP","AU","CA","RU","FR","KR","IN","AE","SG","BR","IT","ES"]);
-  for (const locale of locales) {
-    for (const c of countries) {
-      if (popularCodes.has(c.code)) params.push({ locale, country: c.slug_en });
+  // Only generate in en + the country's own language
+  for (const c of countries) {
+    if (!popularCodes.has(c.code)) continue;
+    const countryLocales = getCorridorLocales(c.code, c.code);
+    for (const locale of countryLocales) {
+      params.push({ locale, country: c.slug_en });
     }
   }
   return params;

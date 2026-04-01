@@ -18,9 +18,12 @@ const localeConfig: Record<string, { label: string; flag: string }> = {
   it: { label: "Italiano", flag: "🇮🇹" },
 };
 
-const locales = Object.keys(localeConfig);
+const allLocales = Object.keys(localeConfig);
 
-export default function LanguageSwitcher({ locale }: { locale: string }) {
+// Reduced set for non-corridor pages: only major languages
+const majorLocales = ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
+
+export default function LanguageSwitcher({ locale, validLocales }: { locale: string; validLocales?: string[] }) {
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -37,24 +40,23 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
 
   const handleSelect = (newLocale: string) => {
     setOpen(false);
-    // For corridor pages with locale-specific slugs, redirect to homepage of new locale
-    // to avoid 404 on slug mismatch
-    const localeRegex = new RegExp(`^/(${locales.join("|")})`);
+    const localeRegex = new RegExp(`^/(${allLocales.join("|")})`);
     const pathWithoutLocale = pathname.replace(localeRegex, "") || "";
 
-    // If on a corridor page (contains /shipping/ but not /shipping/from or /shipping/to)
+    // Corridor pages have locale-dependent slugs — redirect to homepage
     const isCorridorPage = /\/shipping\/[^/]+$/.test(pathWithoutLocale) &&
       !pathWithoutLocale.includes("/shipping/from/") &&
       !pathWithoutLocale.includes("/shipping/to/");
 
     if (isCorridorPage) {
-      // Corridor slugs are locale-dependent, redirect to homepage
       router.push(`/${newLocale}`);
     } else {
       router.push(`/${newLocale}${pathWithoutLocale}`);
     }
   };
 
+  // Use validLocales if provided, otherwise show all
+  const availableLocales = validLocales || majorLocales;
   const current = localeConfig[locale] || localeConfig.en;
 
   return (
@@ -73,7 +75,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
 
       {open && (
         <div className="absolute right-0 mt-1 w-44 bg-dark-700 border border-white/20 rounded-lg shadow-xl z-50 overflow-hidden">
-          {locales.map((loc) => (
+          {availableLocales.map((loc) => (
             <button
               key={loc}
               onClick={() => handleSelect(loc)}
@@ -83,8 +85,8 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
                   : "text-gray-300 hover:bg-dark-600"
               }`}
             >
-              <span>{localeConfig[loc].flag}</span>
-              <span>{localeConfig[loc].label}</span>
+              <span>{localeConfig[loc]?.flag}</span>
+              <span>{localeConfig[loc]?.label}</span>
             </button>
           ))}
         </div>

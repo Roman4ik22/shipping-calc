@@ -34,44 +34,21 @@ export const dynamicParams = true;
 export function generateStaticParams() {
   const params: { locale: string; corridor: string }[] = [];
 
-  // Top 20 countries for high-traffic locales (en, ru)
   const topCodes = [
     "US", "GB", "DE", "FR", "CN", "JP", "KR", "AU", "CA", "RU",
     "IN", "AE", "SG", "TH", "MY", "BR", "IT", "ES", "NL", "TR",
   ];
 
-  // Top 10 for other locales
-  const basicCodes = [
-    "US", "GB", "DE", "CN", "JP", "AU", "CA", "RU", "FR", "KR",
-  ];
-
-  // Pre-generate top 20 x 19 = 380 corridors for en and ru (most traffic)
-  for (const locale of ["en", "ru"] as const) {
-    const loc = locale as Locale;
-    for (const fromCode of topCodes) {
-      for (const toCode of topCodes) {
-        if (fromCode === toCode) continue;
-        const from = countries.find((c) => c.code === fromCode);
-        const to = countries.find((c) => c.code === toCode);
-        if (!from || !to) continue;
-        params.push({
-          locale,
-          corridor: makeCorridorSlug(from, to, loc),
-        });
-      }
-    }
-  }
-
-  // For other locales, only top 10 corridors
-  for (const locale of locales) {
-    if (locale === "en" || locale === "ru") continue;
-    const loc = locale as Locale;
-    for (const fromCode of basicCodes) {
-      for (const toCode of basicCodes) {
-        if (fromCode === toCode) continue;
-        const from = countries.find((c) => c.code === fromCode);
-        const to = countries.find((c) => c.code === toCode);
-        if (!from || !to) continue;
+  // Only generate corridors in VALID locales for each pair
+  for (const fromCode of topCodes) {
+    for (const toCode of topCodes) {
+      if (fromCode === toCode) continue;
+      const from = countries.find((c) => c.code === fromCode);
+      const to = countries.find((c) => c.code === toCode);
+      if (!from || !to) continue;
+      const validLocales = getCorridorLocales(fromCode, toCode);
+      for (const locale of validLocales) {
+        const loc = locale as Locale;
         params.push({
           locale,
           corridor: makeCorridorSlug(from, to, loc),

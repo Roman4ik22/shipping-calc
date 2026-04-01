@@ -73,8 +73,8 @@ const countryLocales: Record<string, Locale[]> = {
 export function getCorridorLocales(originCode: string, destCode: string): Locale[] {
   const originLangs = countryLocales[originCode] || ["en"];
   const destLangs = countryLocales[destCode] || ["en"];
-  // Always include en and ru (high-traffic universal languages)
-  const combined = new Set<Locale>([...originLangs, ...destLangs, "en" as Locale, "ru" as Locale]);
+  // Always include English only
+  const combined = new Set<Locale>([...originLangs, ...destLangs, "en" as Locale]);
   return [...combined];
 }
 
