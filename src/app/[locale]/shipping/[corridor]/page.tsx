@@ -382,72 +382,169 @@ export default async function CorridorPage({
         if (!corridorInfo) return null;
         const isRu = locale === "ru";
         return (
-          <section className="mt-10 space-y-6">
-            {/* Customs & Import Rules */}
-            {corridorInfo.prohibited_section && (
-              <div className="bg-surface border border-white/10 rounded-lg p-6">
-                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-red-400">&#9888;</span>
+          <section className="mt-12 space-y-0">
+
+            {/* 1. Import Duty Rates */}
+            {corridorInfo.duty_table.length > 0 && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-1">
+                  {isRu ? `Импортные пошлины: ${destName}` : `Import Duty Rates: ${destName}`}
+                </h2>
+                <p className="text-sm text-gray-500 mb-5">
+                  {isRu ? "Ориентировочные ставки по основным категориям товаров" : "Indicative rates for common product categories"}
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-gray-500 text-xs uppercase tracking-wider">
+                        <th className="pb-3 pr-4">{isRu ? "Категория" : "Category"}</th>
+                        <th className="pb-3 pr-4">{isRu ? "Код HS" : "HS Code"}</th>
+                        <th className="pb-3">{isRu ? "Ставка" : "Rate"}</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5">
+                      {corridorInfo.duty_table.map((row, i) => (
+                        <tr key={i} className="text-gray-300">
+                          <td className="py-3 pr-4">{row.category}</td>
+                          <td className="py-3 pr-4 text-gray-500 font-mono text-xs">{row.hs}</td>
+                          <td className="py-3 font-medium text-white">{row.rate}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* 2. Customs Clearance */}
+            {(corridorInfo.clearance_info || corridorInfo.customs_reality) && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {isRu ? "Таможенное оформление" : "Customs Clearance"}
+                </h2>
+                {corridorInfo.clearance_info && (
+                  <p className="text-sm text-gray-300 leading-relaxed mb-4">{corridorInfo.clearance_info}</p>
+                )}
+                <div className="flex flex-wrap gap-x-10 gap-y-3 mt-4">
+                  {corridorInfo.clearance_time && (
+                    <div>
+                      <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                        {isRu ? "Время оформления" : "Processing time"}
+                      </span>
+                      <span className="text-white font-medium">
+                        {corridorInfo.clearance_time} {isRu ? "дней" : "days"}
+                      </span>
+                    </div>
+                  )}
+                  {corridorInfo.de_minimis_info && (
+                    <div>
+                      <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                        De minimis
+                      </span>
+                      <span className="text-white font-medium text-sm">{corridorInfo.de_minimis_info}</span>
+                    </div>
+                  )}
+                </div>
+                {corridorInfo.customs_reality && (
+                  <div className="mt-5 p-4 bg-white/[0.02] rounded-lg">
+                    <span className="block text-xs text-gray-500 uppercase tracking-wider mb-2">
+                      {isRu ? "Как это работает на практике" : "What to actually expect"}
+                    </span>
+                    <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.customs_reality}</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* 3. Required Documents */}
+            {corridorInfo.docs_section && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {isRu ? "Необходимые документы" : "Required Documents"}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.docs_section}</p>
+                {corridorInfo.documents_where && (
+                  <div className="mt-4 p-4 bg-white/[0.02] rounded-lg">
+                    <span className="block text-xs text-gray-500 uppercase tracking-wider mb-2">
+                      {isRu ? "Где получить" : "Where to obtain"}
+                    </span>
+                    <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.documents_where}</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* 4. Trade Between Countries */}
+            {corridorInfo.trade_volume && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   {isRu
-                    ? `Таможенные и импортные правила: ${originName} → ${destName}`
-                    : `Customs & Import Rules: ${originName} → ${destName}`}
+                    ? `Торговля: ${originName} и ${destName}`
+                    : `Trade: ${originName} & ${destName}`}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed mb-4">{corridorInfo.trade_volume}</p>
+                {corridorInfo.customs_section && (
+                  <p className="text-sm text-gray-400 leading-relaxed">{corridorInfo.customs_section}</p>
+                )}
+              </div>
+            )}
+
+            {/* 5. Shipper Experience */}
+            {corridorInfo.shipper_reviews && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {isRu ? "Опыт отправителей" : "Shipper Experience"}
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.shipper_reviews}</p>
+              </div>
+            )}
+
+            {/* 6. Prohibited Items */}
+            {corridorInfo.prohibited_section && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {isRu ? "Запрещённые товары" : "Prohibited Items"}
                 </h2>
                 <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.prohibited_section}</p>
               </div>
             )}
 
-            {/* Required Documents */}
-            {corridorInfo.docs_section && (
-              <div className="bg-surface border border-white/10 rounded-lg p-6">
-                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-blue-400">&#128196;</span>
-                  {isRu ? "Необходимые документы" : "Required Documents"}
-                </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.docs_section}</p>
-              </div>
-            )}
-
-            {/* Trade Agreements */}
+            {/* 7. Trade Agreements */}
             {corridorInfo.trade_section && (
-              <div className="bg-surface border border-white/10 rounded-lg p-6">
-                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-green-400">&#128101;</span>
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   {isRu ? "Торговые соглашения" : "Trade Agreements"}
                 </h2>
                 <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.trade_section}</p>
               </div>
             )}
 
-            {/* Customs Overview */}
-            {corridorInfo.customs_section && (
-              <div className="bg-surface border border-white/10 rounded-lg p-6">
-                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-yellow-400">&#128230;</span>
-                  {isRu
-                    ? `Обзор торговли: ${originName} → ${destName}`
-                    : `Trade Overview: ${originName} → ${destName}`}
+            {/* 8. VAT/GST */}
+            {corridorInfo.vat_info && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  {isRu ? "НДС / GST" : "VAT / GST"}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.customs_section}</p>
+                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.vat_info}</p>
               </div>
             )}
 
-            {/* Useful Links */}
-            {corridorInfo.trade_links.length > 0 && (
-              <div className="bg-surface border border-white/10 rounded-lg p-6">
-                <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <span className="text-accent-light">&#128279;</span>
+            {/* 9. Useful Links */}
+            {corridorInfo.useful_links.length > 0 && (
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   {isRu ? "Полезные ссылки" : "Useful Links"}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {corridorInfo.trade_links.map((link, i) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {corridorInfo.useful_links.map((link, i) => (
                     <a
                       key={i}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-accent-light hover:text-white transition-colors bg-surface-light rounded-lg p-3 border border-white/5 hover:border-accent/30"
+                      className="flex items-center gap-2 text-sm text-accent-light hover:text-white transition-colors py-2"
                     >
-                      <span className="text-gray-500">&#8599;</span>
+                      <span className="text-gray-600">&#8599;</span>
                       {link.name}
                     </a>
                   ))}
@@ -455,28 +552,46 @@ export default async function CorridorPage({
               </div>
             )}
 
-            {/* Route-specific FAQ with JSON-LD */}
+            {/* 10. Route-specific FAQ with JSON-LD */}
             {corridorInfo.faq.length > 0 && (
-              <div>
-                <h2 className="text-lg font-bold text-white mb-3">
+              <div className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-5">
                   {isRu
                     ? `Часто задаваемые вопросы: ${originName} → ${destName}`
                     : `FAQ: Shipping from ${originName} to ${destName}`}
                 </h2>
-                <div className="space-y-3">
+                <div className="divide-y divide-white/5">
                   {corridorInfo.faq.map((item, i) => (
                     <details
                       key={`corridor-faq-${i}`}
-                      className="bg-surface border border-white/10 rounded-lg"
+                      className="group"
                     >
-                      <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light text-sm">
+                      <summary className="py-4 font-medium text-white cursor-pointer hover:text-accent-light text-sm flex items-center justify-between">
                         {item.q}
+                        <span className="text-gray-600 group-open:rotate-45 transition-transform text-lg ml-4">+</span>
                       </summary>
-                      <p className="px-4 pb-4 text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                      <p className="pb-4 text-gray-400 text-sm leading-relaxed">{item.a}</p>
                     </details>
                   ))}
                 </div>
-                {/* FAQPage schema moved to main FAQ section to avoid duplicates */}
+                {/* FAQ JSON-LD */}
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: corridorInfo.faq.map((item) => ({
+                        "@type": "Question",
+                        name: item.q,
+                        acceptedAnswer: {
+                          "@type": "Answer",
+                          text: item.a,
+                        },
+                      })),
+                    }),
+                  }}
+                />
               </div>
             )}
           </section>
