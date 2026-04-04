@@ -21,7 +21,10 @@ export async function generateMetadata({
       : "RateShips Privacy Policy — how we collect and use data.",
     alternates: {
       canonical: `/${locale}/privacy`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/privacy`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/privacy`])),
+        "x-default": "/en/privacy",
+      },
     },
   };
 }

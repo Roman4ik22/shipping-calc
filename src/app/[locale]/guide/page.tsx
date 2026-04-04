@@ -21,7 +21,10 @@ export async function generateMetadata({
     description: t(loc, "guides_desc"),
     alternates: {
       canonical: `/${locale}/guide`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/guide`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/guide`])),
+        "x-default": "/en/guide",
+      },
     },
   };
 }

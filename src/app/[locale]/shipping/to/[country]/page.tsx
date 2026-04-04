@@ -42,7 +42,10 @@ export async function generateMetadata({
       t(loc, "meta_country_to_desc", { country: getCountryName(country, loc) }),
     alternates: {
       canonical: `/${locale}/shipping/to/${slug}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/shipping/to/${slug}`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/shipping/to/${slug}`])),
+        "x-default": `/en/shipping/to/${slug}`,
+      },
     },
   };
 }

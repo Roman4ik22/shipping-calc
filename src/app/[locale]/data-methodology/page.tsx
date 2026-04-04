@@ -23,9 +23,12 @@ export async function generateMetadata({
       : "Detailed explanation of RateShips data methodology: carrier rate sources, customs duty data, exchange rates, update frequency, and our accuracy commitment.",
     alternates: {
       canonical: `/${locale}/data-methodology`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/data-methodology`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((l) => [l, `/${l}/data-methodology`])
+        ),
+        "x-default": "/en/data-methodology",
+      },
     },
   };
 }

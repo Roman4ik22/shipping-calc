@@ -132,9 +132,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/blog/${slug}`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((l) => [l, `/${l}/blog/${slug}`])
+        ),
+        "x-default": `/en/blog/${slug}`,
+      },
     },
     openGraph: {
       title,

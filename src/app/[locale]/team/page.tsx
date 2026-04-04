@@ -23,7 +23,10 @@ export async function generateMetadata({
       : "RateShips is an independent shipping data platform. Learn about our team, data collection processes, and quality commitments.",
     alternates: {
       canonical: `/${locale}/team`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/team`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/team`])),
+        "x-default": "/en/team",
+      },
     },
   };
 }

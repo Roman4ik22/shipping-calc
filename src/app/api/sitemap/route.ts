@@ -7,6 +7,35 @@ import type { Locale } from "@/lib/types";
 
 const BASE_URL = "https://rateships.com";
 
+const LASTMOD = "2026-04-04";
+
+// Static pages that must ALWAYS be in sitemap regardless of gradual rollout
+const STATIC_PAGE_PATHS = [
+  "", // homepage
+  "/about",
+  "/data-methodology",
+  "/sources",
+  "/team",
+  "/carriers",
+  "/guide",
+  "/blog",
+  "/platforms",
+  "/tools",
+  "/customs",
+  "/terms",
+  "/privacy",
+];
+
+function getAlwaysIncludedUrls(): string[] {
+  const urls: string[] = [];
+  for (const locale of locales) {
+    for (const path of STATIC_PAGE_PATHS) {
+      urls.push(`${BASE_URL}/${locale}${path}`);
+    }
+  }
+  return urls;
+}
+
 // Priority-based gradual rollout start date
 const START_DATE = new Date("2026-03-19");
 
@@ -27,7 +56,7 @@ function getWeekNumber(): number {
  */
 function getGradualUrls(): string[] {
   const week = getWeekNumber();
-  if (week <= 0) return [];
+  if (week <= 0) return getAlwaysIncludedUrls();
 
   const allPages = getAllPagesByPriority();
 
@@ -47,7 +76,12 @@ function getGradualUrls(): string[] {
   // Cap at total pages
   maxPages = Math.min(maxPages, allPages.length);
 
-  return allPages.slice(0, maxPages).map((p) => p.url);
+  const gradualUrls = allPages.slice(0, maxPages).map((p) => p.url);
+
+  // Always include static pages regardless of gradual rollout
+  const alwaysUrls = getAlwaysIncludedUrls();
+  const urlSet = new Set([...alwaysUrls, ...gradualUrls]);
+  return Array.from(urlSet);
 }
 
 // Full sitemap with everything (for manual scanning)
@@ -57,7 +91,7 @@ function getFullUrls(): string[] {
 
 function buildUrlset(urls: string[]): string {
   const entries = urls.map(
-    (u) => `  <url><loc>${u}</loc></url>`
+    (u) => `  <url><loc>${u}</loc><lastmod>${LASTMOD}</lastmod></url>`
   );
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>`;
 }

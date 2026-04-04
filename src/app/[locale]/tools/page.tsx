@@ -25,6 +25,12 @@ export async function generateMetadata({
       : "Free customs duty calculator, import tax calculator, and delivery time estimator for international shipments",
     alternates: {
       canonical: `/${locale}/tools`,
+      languages: {
+        ...Object.fromEntries(
+          ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"].map((l) => [l, `/${l}/tools`])
+        ),
+        "x-default": "/en/tools",
+      },
     },
   };
 }

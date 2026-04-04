@@ -48,7 +48,10 @@ export async function generateMetadata({
     description: t(loc, "guide_meta_description", { country: name }),
     alternates: {
       canonical: `/${locale}/guide/${slug}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/guide/${slug}`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/guide/${slug}`])),
+        "x-default": `/en/guide/${slug}`,
+      },
     },
     openGraph: {
       title: t(loc, "guide_title", { country: name }),

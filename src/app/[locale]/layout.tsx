@@ -44,7 +44,10 @@ export async function generateMetadata({
       card: "summary_large_image",
     },
     alternates: {
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+        "x-default": "/en",
+      },
     },
     icons: {
       icon: "/favicon.svg",

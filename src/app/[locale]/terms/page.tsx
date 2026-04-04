@@ -21,7 +21,10 @@ export async function generateMetadata({
       : "Terms of Service for RateShips — a free international shipping cost comparison tool.",
     alternates: {
       canonical: `/${locale}/terms`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/terms`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/terms`])),
+        "x-default": "/en/terms",
+      },
     },
   };
 }

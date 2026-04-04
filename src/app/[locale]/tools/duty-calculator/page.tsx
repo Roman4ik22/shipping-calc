@@ -25,6 +25,12 @@ export async function generateMetadata({
       : "Free customs duty calculator and import tax calculator. Calculate duties, VAT, and total import costs for any destination country.",
     alternates: {
       canonical: `/${locale}/tools/duty-calculator`,
+      languages: {
+        ...Object.fromEntries(
+          ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"].map((l) => [l, `/${l}/tools/duty-calculator`])
+        ),
+        "x-default": "/en/tools/duty-calculator",
+      },
     },
     keywords: isRu
       ? ["калькулятор пошлин", "таможенный калькулятор", "импортный налог", "НДС калькулятор"]

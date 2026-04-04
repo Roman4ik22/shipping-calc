@@ -22,9 +22,12 @@ export async function generateMetadata({
     description: t(loc, "blog_description"),
     alternates: {
       canonical: `/${locale}/blog`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/blog`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((l) => [l, `/${l}/blog`])
+        ),
+        "x-default": "/en/blog",
+      },
     },
     openGraph: {
       title: t(loc, "blog_title"),

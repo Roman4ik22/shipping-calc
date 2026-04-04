@@ -91,9 +91,12 @@ export async function generateMetadata({
     }),
     alternates: {
       canonical: `/${locale}/shipping/${corridor}`,
-      languages: Object.fromEntries(
-        getCorridorLocales(parsed.origin.code, parsed.destination.code).map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          getCorridorLocales(parsed.origin.code, parsed.destination.code).map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
+        ),
+        "x-default": `/en/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, "en")}`,
+      },
     },
     openGraph: {
       title: t(loc, "meta_corridor_title", { origin: originName, destination: destName }),

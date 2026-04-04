@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /api/sitemap
+Disallow: /api/rates
+Disallow: /_next/
+
+Sitemap: https://rateships.com/api/sitemap

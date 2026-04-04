@@ -19,7 +19,10 @@ export async function generateMetadata({
     description: t(loc, "hero_subtitle", { count: "134" }),
     alternates: {
       canonical: `/${locale}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+        "x-default": "/en",
+      },
     },
     openGraph: {
       title: t(loc, "compare_shipping_rates"),

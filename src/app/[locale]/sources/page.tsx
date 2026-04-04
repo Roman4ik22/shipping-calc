@@ -23,9 +23,12 @@ export async function generateMetadata({
       : "Complete list of RateShips data sources: links to official rates from 40+ carriers, customs authorities for 40+ countries, exchange rates, and reviews.",
     alternates: {
       canonical: `/${locale}/sources`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/sources`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((l) => [l, `/${l}/sources`])
+        ),
+        "x-default": "/en/sources",
+      },
     },
   };
 }

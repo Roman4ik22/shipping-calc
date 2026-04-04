@@ -35,7 +35,10 @@ export async function generateMetadata({
     description: desc,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/carriers/${carrierId}`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/carriers/${carrierId}`])),
+        "x-default": `/en/carriers/${carrierId}`,
+      },
     },
     openGraph: {
       title: `${carrier.name} — International Shipping Rates`,

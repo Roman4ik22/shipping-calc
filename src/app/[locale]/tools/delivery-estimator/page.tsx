@@ -25,6 +25,12 @@ export async function generateMetadata({
       : "Free shipping time calculator and delivery date estimator. Estimate delivery times for express, standard, and economy international shipments.",
     alternates: {
       canonical: `/${locale}/tools/delivery-estimator`,
+      languages: {
+        ...Object.fromEntries(
+          ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"].map((l) => [l, `/${l}/tools/delivery-estimator`])
+        ),
+        "x-default": "/en/tools/delivery-estimator",
+      },
     },
     keywords: isRu
       ? ["калькулятор доставки", "сроки доставки", "дата доставки", "время доставки"]

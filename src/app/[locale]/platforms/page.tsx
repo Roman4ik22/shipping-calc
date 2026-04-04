@@ -20,7 +20,10 @@ export async function generateMetadata({
     description: t(loc, "platforms_description"),
     alternates: {
       canonical: `/${locale}/platforms`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/platforms`])),
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/platforms`])),
+        "x-default": "/en/platforms",
+      },
     },
   };
 }

@@ -62,9 +62,12 @@ export async function generateMetadata({
     description: `Complete guide to importing goods into ${getCountryName(country, "en")}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by category, required documents, clearance process, and prohibited items.`,
     alternates: {
       canonical: `/${locale}/customs/${slug}`,
-      languages: Object.fromEntries(
-        getCorridorLocales(country.code, country.code).map((l) => [l, `/${l}/customs/${slug}`])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          getCorridorLocales(country.code, country.code).map((l) => [l, `/${l}/customs/${slug}`])
+        ),
+        "x-default": `/en/customs/${slug}`,
+      },
     },
     openGraph: {
       title: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
