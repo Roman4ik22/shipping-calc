@@ -241,6 +241,9 @@ export default async function CorridorPage({
                 <p className="text-xs text-gray-500">{locale === "ru" ? "НДС" : "VAT"}: {customs.vat_rate}%</p>
               </div>
             </div>
+            <p className="text-xs text-gray-500 mt-3">
+              {locale === "ru" ? "↓ Прокрутите вниз для полного сравнения всех перевозчиков" : "↓ Scroll down for full carrier comparison"}
+            </p>
           </div>
         );
       })()}
@@ -440,6 +443,16 @@ export default async function CorridorPage({
           />
         </div>
       )}
+
+      {/* Trust bar */}
+      <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 py-4 border-t border-white/5">
+        <span>{locale === "ru" ? "✓ 134+ перевозчика" : "✓ 134+ carriers compared"}</span>
+        <span>{locale === "ru" ? "✓ Обновлено еженедельно" : "✓ Updated weekly"}</span>
+        <span>{locale === "ru" ? "✓ Источники данных проверены" : "✓ Data sources verified"}</span>
+        <Link href={`/${locale}/data-methodology`} className="text-accent-light hover:text-white">
+          {locale === "ru" ? "Наша методология →" : "Our methodology →"}
+        </Link>
+      </div>
 
       {/* Duty Calculator */}
       <div className="mt-8">
@@ -1110,6 +1123,10 @@ export default async function CorridorPage({
             a: t(loc, "faq_customs_a", { destination: destName, de_minimis: String(customs.de_minimis_usd), vat: String(customs.vat_rate), duty: String(customs.avg_duty_rate) }),
           },
           ...(corridorInfo2?.faq || []),
+          {
+            q: t(loc, "faq_how_rateships_q"),
+            a: t(loc, "faq_how_rateships_a"),
+          },
         ];
 
         const faqJsonLd = {

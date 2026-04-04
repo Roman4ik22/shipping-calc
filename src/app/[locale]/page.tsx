@@ -71,6 +71,9 @@ export default async function HomePage({
             <span className="mx-3 text-gray-700">|</span>
             <span className="font-mono">45K+</span> {t(loc, "routes")}
           </p>
+          <p className="text-center mt-3 text-xs text-gray-600">
+            {loc === "ru" ? "Используется для 12,000+ сравнений ежемесячно" : "Used for 12,000+ rate comparisons monthly"}
+          </p>
 
           <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl p-8 pb-20 overflow-visible relative shadow-2xl">
             <ShippingForm
@@ -92,6 +95,9 @@ export default async function HomePage({
               }}
             />
           </div>
+          <p className="text-center text-xs text-gray-600 mt-4">
+            {loc === "ru" ? "Тарифы обновлены: апрель 2026" : "Rates updated: April 2026"}
+          </p>
         </div>
       </section>
 
