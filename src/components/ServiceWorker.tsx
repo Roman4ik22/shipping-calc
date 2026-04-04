@@ -1,12 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function ServiceWorker() {
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {});
-    }
-  }, []);
-  return null;
+  return null; // Disabled: SW caching conflicts with ISR page updates
 }

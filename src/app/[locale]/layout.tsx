@@ -77,6 +77,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
+        <link rel="alternate" type="application/rss+xml" title="RateShips Blog" href="/feed.xml" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         {/* Google Tag Manager */}

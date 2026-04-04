@@ -26,6 +26,16 @@ export default function NotFound() {
           Duty calculator
         </Link>
       </div>
+      <div className="mt-12">
+        <p className="text-sm text-gray-500 mb-4">Popular pages:</p>
+        <div className="flex flex-wrap justify-center gap-3 text-sm">
+          <Link href="/en/shipping/united-states-to-germany" className="text-gray-400 hover:text-white">US → Germany</Link>
+          <Link href="/en/shipping/united-states-to-united-kingdom" className="text-gray-400 hover:text-white">US → UK</Link>
+          <Link href="/en/shipping/china-to-united-states" className="text-gray-400 hover:text-white">China → US</Link>
+          <Link href="/en/carriers" className="text-gray-400 hover:text-white">All carriers</Link>
+          <Link href="/en/guide" className="text-gray-400 hover:text-white">Country guides</Link>
+        </div>
+      </div>
     </div>
   );
 }
