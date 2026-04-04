@@ -211,28 +211,59 @@ export default async function CorridorPage({
 
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
-        <div className="flex flex-wrap gap-4 mb-8 text-sm text-gray-300">
-          <span>
-            {corridorData.carriers.length}{" "}
-            {t(loc, "shipping_options")}
-          </span>
-          <span>
-            {t(loc, "from_price")} $
-            {Math.min(
-              ...corridorData.carriers
-                .map((c) => c.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 999)
-            )}{" "}
-            {t(loc, "for_1_kg")}
-          </span>
-          <span>
-            {t(loc, "from_price")}{" "}
-            {Math.min(...corridorData.carriers.map((c) => c.estimated_days_min))}{" "}
-            {t(loc, "days")}
-          </span>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          <div className="py-3">
+            <p className="text-xs text-gray-500 uppercase tracking-wider">
+              {locale === "ru" ? "Минимальная цена" : "Cheapest rate"}
+            </p>
+            <p className="text-2xl font-light text-white mt-1">
+              ${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}
+              <span className="text-sm text-gray-500 ml-1">/kg</span>
+            </p>
+          </div>
+          <div className="py-3">
+            <p className="text-xs text-gray-500 uppercase tracking-wider">
+              {locale === "ru" ? "Быстрая доставка" : "Fastest delivery"}
+            </p>
+            <p className="text-2xl font-light text-white mt-1">
+              {Math.min(...corridorData.carriers.map(c => c.estimated_days_min))}
+              <span className="text-sm text-gray-500 ml-1">{locale === "ru" ? "дней" : "days"}</span>
+            </p>
+          </div>
+          <div className="py-3">
+            <p className="text-xs text-gray-500 uppercase tracking-wider">
+              {locale === "ru" ? "Перевозчиков" : "Carriers available"}
+            </p>
+            <p className="text-2xl font-light text-white mt-1">{corridorData.carriers.length}</p>
+          </div>
+          <div className="py-3">
+            <p className="text-xs text-gray-500 uppercase tracking-wider">
+              {locale === "ru" ? "Порог de minimis" : "De minimis threshold"}
+            </p>
+            <p className="text-2xl font-light text-white mt-1">
+              ${getCustomsInfo(destination.code).de_minimis_usd}
+            </p>
+          </div>
         </div>
       )}
 
+      {/* Table of Contents */}
+      <nav className="mb-8 py-4 border-y border-white/5">
+        <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+          {locale === "ru" ? "На этой странице" : "On this page"}
+        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a href="#rates" className="text-gray-400 hover:text-white">{locale === "ru" ? "Тарифы" : "Rates"}</a>
+          <a href="#duties" className="text-gray-400 hover:text-white">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
+          <a href="#documents" className="text-gray-400 hover:text-white">{locale === "ru" ? "Документы" : "Documents"}</a>
+          <a href="#customs" className="text-gray-400 hover:text-white">{locale === "ru" ? "Таможня" : "Customs"}</a>
+          <a href="#prohibited" className="text-gray-400 hover:text-white">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
+          <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
+        </div>
+      </nav>
+
       {/* Rate comparison table */}
+      <div id="rates">
       <RateTable
         corridorRates={
           corridorData?.carriers.map((cr) => {
@@ -299,6 +330,7 @@ export default async function CorridorPage({
           track_package: t(loc, "track_package"),
         }}
       />
+      </div>
 
       {/* Delivery Date Estimator */}
       {corridorData && corridorData.carriers.length > 0 && (
@@ -386,7 +418,7 @@ export default async function CorridorPage({
 
             {/* 1. Import Duty Rates */}
             {corridorInfo.duty_table.length > 0 && (
-              <div className="py-8 border-t border-white/5">
+              <div id="duties" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-1">
                   {isRu ? `Импортные пошлины: ${destName}` : `Import Duty Rates: ${destName}`}
                 </h2>
@@ -413,12 +445,17 @@ export default async function CorridorPage({
                     </tbody>
                   </table>
                 </div>
+                <p className="mt-4 text-xs text-gray-500">
+                  {isRu
+                    ? "Ставки указаны для стандартных товаров. Точная ставка зависит от HS-кода товара. Используйте калькулятор ниже для расчёта."
+                    : "Rates shown are for standard goods. Exact rate depends on HS code. Use the calculator below for your specific item."}
+                </p>
               </div>
             )}
 
             {/* 2. Customs Clearance */}
             {(corridorInfo.clearance_info || corridorInfo.customs_reality) && (
-              <div className="py-8 border-t border-white/5">
+              <div id="customs" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   {isRu ? "Таможенное оформление" : "Customs Clearance"}
                 </h2>
@@ -458,16 +495,23 @@ export default async function CorridorPage({
 
             {/* 3. Required Documents */}
             {corridorInfo.docs_section && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div id="documents" className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-6">
                   {isRu ? "Необходимые документы" : "Required Documents"}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.docs_section}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {corridorInfo.docs_section.split(/[.,;]/).filter(d => d.trim()).map((doc, i) => (
+                    <div key={i} className="flex items-start gap-3 py-2">
+                      <span className="text-green-400 mt-0.5">&#10003;</span>
+                      <span className="text-sm text-gray-300">{doc.trim()}</span>
+                    </div>
+                  ))}
+                </div>
                 {corridorInfo.documents_where && (
-                  <div className="mt-4 p-4 bg-white/[0.02] rounded-lg">
-                    <span className="block text-xs text-gray-500 uppercase tracking-wider mb-2">
-                      {isRu ? "Где получить" : "Where to obtain"}
-                    </span>
+                  <div className="mt-6 p-4 bg-white/[0.02] rounded-lg">
+                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+                      {isRu ? "Где получить документы" : "Where to obtain documents"}
+                    </p>
                     <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.documents_where}</p>
                   </div>
                 )}
@@ -476,7 +520,7 @@ export default async function CorridorPage({
 
             {/* 4. Trade Between Countries */}
             {corridorInfo.trade_volume && (
-              <div className="py-8 border-t border-white/5">
+              <div id="trade" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   {isRu
                     ? `Торговля: ${originName} и ${destName}`
@@ -501,11 +545,18 @@ export default async function CorridorPage({
 
             {/* 6. Prohibited Items */}
             {corridorInfo.prohibited_section && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  {isRu ? "Запрещённые товары" : "Prohibited Items"}
+              <div id="prohibited" className="py-8 border-t border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  {isRu ? "Запрещённые и ограниченные товары" : "Prohibited & Restricted Items"}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.prohibited_section}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {corridorInfo.prohibited_section.split(/[.,;]/).filter(d => d.trim().length > 3).map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 py-2">
+                      <span className="text-red-400 mt-0.5 text-xs">&#9888;</span>
+                      <span className="text-sm text-gray-300">{item.trim()}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -554,7 +605,7 @@ export default async function CorridorPage({
 
             {/* 10. Route-specific FAQ with JSON-LD */}
             {corridorInfo.faq.length > 0 && (
-              <div className="py-8 border-t border-white/5">
+              <div id="faq-corridor" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-5">
                   {isRu
                     ? `Часто задаваемые вопросы: ${originName} → ${destName}`
@@ -896,7 +947,7 @@ export default async function CorridorPage({
         };
 
         return (
-          <section className="mt-12">
+          <section id="faq" className="mt-12">
             <h2 className="text-xl font-bold text-white mb-4">
               {t(loc, "faq_title")}
             </h2>
