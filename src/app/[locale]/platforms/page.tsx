@@ -262,6 +262,21 @@ export default async function PlatformsPage({
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: t(loc, "platforms_title"),
+            description: t(loc, "platforms_description"),
+            url: `${BASE_URL}/${locale}/platforms`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
     </div>
   );
 }

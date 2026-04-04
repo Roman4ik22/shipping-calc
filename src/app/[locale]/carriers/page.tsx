@@ -135,6 +135,21 @@ export default async function CarriersPage({
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: t(loc, "carriers_title"),
+            description: t(loc, "carriers_desc"),
+            url: `https://rateships.com/${locale}/carriers`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
     </div>
   );
 }

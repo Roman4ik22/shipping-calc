@@ -162,6 +162,21 @@ export default async function ToCountryPage({
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: t(loc, "meta_country_to_title", { country: name }),
+            description: t(loc, "meta_country_to_desc", { country: name }),
+            url: `https://rateships.com/${locale}/shipping/to/${slug}`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
     </div>
   );
 }

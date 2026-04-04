@@ -96,26 +96,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AdSense />
         <WebVitals />
         <ServiceWorker />
-        {/* Organization JSON-LD */}
+        {/* WebSite + Organization JSON-LD (on every page) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "RateShips",
-              url: "https://rateships.com",
-              description: t(loc, "site_description"),
-              inLanguage: locale,
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: `${"https://rateships.com"}/${locale}/shipping/{search_term}`,
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "RateShips",
+                url: "https://rateships.com",
+                description: t(loc, "site_description"),
+                inLanguage: locale,
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: `https://rateships.com/${locale}/shipping/{search_term}`,
+                  },
+                  "query-input": "required name=search_term",
                 },
-                "query-input": "required name=search_term",
               },
-            }),
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "RateShips",
+                url: "https://rateships.com",
+                logo: "https://rateships.com/favicon.svg",
+                description: t(loc, "site_description"),
+                foundingDate: "2026",
+                sameAs: [],
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "customer support",
+                  url: "https://rateships.com/en/about",
+                  availableLanguage: ["English", "Russian", "Spanish", "German", "French", "Portuguese", "Chinese", "Japanese", "Korean", "Arabic", "Turkish", "Italian"],
+                },
+              },
+            ]),
           }}
         />
         {/* Header */}

@@ -574,24 +574,7 @@ export default async function CorridorPage({
                     </details>
                   ))}
                 </div>
-                {/* FAQ JSON-LD */}
-                <script
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      mainEntity: corridorInfo.faq.map((item) => ({
-                        "@type": "Question",
-                        name: item.q,
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: item.a,
-                        },
-                      })),
-                    }),
-                  }}
-                />
+                {/* FAQ items included in main FAQPage schema below */}
               </div>
             )}
           </section>
@@ -878,6 +861,7 @@ export default async function CorridorPage({
         const economyDays = Math.max(...corridorData.carriers.filter((c) => c.carrier.type === "postal").map((c) => c.estimated_days_min).concat([10]));
         const customs = getCustomsInfo(destination.code);
 
+        const corridorInfo2 = generateCorridorInfo(origin.code, destination.code, locale);
         const faqs = [
           {
             q: t(loc, "faq_cheapest_q", { origin: originName, destination: destName }),
@@ -895,6 +879,7 @@ export default async function CorridorPage({
             q: t(loc, "faq_customs_q", { destination: destName }),
             a: t(loc, "faq_customs_a", { destination: destName, de_minimis: String(customs.de_minimis_usd), vat: String(customs.vat_rate), duty: String(customs.avg_duty_rate) }),
           },
+          ...(corridorInfo2?.faq || []),
         ];
 
         const faqJsonLd = {

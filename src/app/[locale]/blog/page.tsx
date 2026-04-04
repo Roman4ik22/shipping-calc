@@ -129,6 +129,23 @@ export default async function BlogPage({
           ))}
         </div>
       </div>
+
+      {/* CollectionPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: t(loc, "blog_title"),
+            description: t(loc, "blog_description"),
+            url: `https://rateships.com/${locale}/blog`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
     </div>
   );
 }

@@ -252,15 +252,15 @@ export default async function BlogPostPage({
     headline: title,
     description: isRu ? post.excerpt_ru : post.excerpt_en,
     datePublished: post.date,
+    dateModified: post.date,
     author: {
       "@type": "Organization",
       name: "RateShips",
-      url: BASE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "RateShips",
-      url: BASE_URL,
+      logo: { "@type": "ImageObject", url: "https://rateships.com/favicon.svg" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

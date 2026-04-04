@@ -473,6 +473,21 @@ export default async function GuidePage({
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: t(loc, "guide_title", { country: name }) + " — " + t(loc, "customs_info"),
+            description: t(loc, "guide_meta_description", { country: name }),
+            url: `https://rateships.com/${locale}/guide/${slug}`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
     </div>
   );
 }

@@ -256,6 +256,22 @@ export default async function CarrierPage({
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: `${carrier.name} — ${t(loc, "shipping")}`,
+            description: getCarrierDescription(carrier, loc),
+            url: `https://rateships.com/${locale}/carriers/${carrierId}`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            dateModified: "2026-04-03",
+          }),
+        }}
+      />
+
       {/* Back to carriers */}
       <Link
         href={`/${locale}/carriers`}
