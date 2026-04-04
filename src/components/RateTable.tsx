@@ -201,7 +201,7 @@ function CurrencySelector({
 
   return (
     <div className="flex items-center gap-2 mb-6">
-      <span className="text-sm text-gray-500">{labels.currency}:</span>
+      <span className="text-sm text-gray-300">{labels.currency}:</span>
       <div className="relative" ref={ref}>
         <button
           onClick={() => setOpen(!open)}
@@ -408,11 +408,12 @@ export default function RateTable({
   return (
     <div>
       {/* Weight input section */}
-      <div className="mb-8">
+      <div className="mb-6">
+        <label className="block text-xs text-gray-200 mb-3 uppercase tracking-wide">
+          {labels.select_weight}
+        </label>
+        <div className="bg-card rounded-2xl p-5">
         <div className="mb-4">
-          <label className="block text-xs text-gray-500 mb-3 uppercase tracking-wide">
-            {labels.select_weight}
-          </label>
           <div className="flex flex-wrap gap-2">
             {weightPresets.map((w) => (
               <button
@@ -423,7 +424,7 @@ export default function RateTable({
                 className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
                     ? "bg-accent text-white font-medium"
-                    : "bg-card text-gray-400 hover:bg-card-hover hover:text-gray-300"
+                    : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
                 }`}
               >
                 {w} {labels.kg}
@@ -434,7 +435,7 @@ export default function RateTable({
 
         <div className="flex flex-wrap items-end gap-4">
           <div>
-            <label className="block text-xs text-gray-600 mb-1">
+            <label className="block text-xs text-gray-400 mb-1">
               {labels.or_enter_weight}
             </label>
             <div className="flex items-center gap-1">
@@ -446,15 +447,15 @@ export default function RateTable({
                 min="0.1"
                 max="70"
                 step="0.1"
-                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-500"
               />
-              <span className="text-sm text-gray-600">{labels.kg}</span>
+              <span className="text-sm text-gray-400">{labels.kg}</span>
             </div>
           </div>
 
           <button
             onClick={() => setShowDimensions(!showDimensions)}
-            className="px-3 py-2 text-sm text-gray-500 hover:text-white transition-colors"
+            className="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors"
           >
             {showDimensions ? labels.hide_dimensions : labels.enter_dimensions}
           </button>
@@ -515,15 +516,16 @@ export default function RateTable({
 
         {effectiveWeight > 0 && (
           <div className="mt-4 pt-4 border-t border-white/5 text-sm">
-            <span className="text-gray-500">{labels.billed_at}: </span>
-            <span className="font-medium text-white">{billingWeight} {labels.kg}</span>
+            <span className="text-gray-400">{labels.billed_at}: </span>
+            <span className="font-bold text-white">{billingWeight} {labels.kg}</span>
             {billingWeight !== effectiveWeight && (
-              <span className="text-xs text-gray-600 ml-1">
+              <span className="text-xs text-gray-500 ml-1">
                 ({labels.nearest_bracket})
               </span>
             )}
           </div>
         )}
+        </div>
       </div>
 
       {/* Currency selector */}
@@ -535,15 +537,16 @@ export default function RateTable({
         currencyAutoDetected={currencyAutoDetected}
       />
       {/* Sort & filter controls */}
-      <div className="flex flex-wrap items-center gap-4 mb-6">
+      <div className="bg-card rounded-2xl p-4 mb-6">
+        <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
-          <span className="text-sm text-gray-600 mr-1">{labels.sort}:</span>
+          <span className="text-sm text-gray-300 mr-1">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "price" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "price" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.price}
@@ -553,7 +556,7 @@ export default function RateTable({
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "speed" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "speed" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.delivery_time}
@@ -562,33 +565,34 @@ export default function RateTable({
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.route_reliability || "Route"}
           </button>
         </div>
-        <div className="h-4 w-px bg-white/5 hidden sm:block" />
+        <div className="h-4 w-px bg-white/10 hidden sm:block" />
         <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
-          <span className="text-sm text-gray-600 mr-1">{labels.type_label}:</span>
+          <span className="text-sm text-gray-300 mr-1">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-                filterType === opt.value ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
+                filterType === opt.value ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
               }`}
             >
               {opt.label}
             </button>
           ))}
         </div>
+        </div>
       </div>
 
       {/* Results count */}
-      <div className="flex items-center justify-between mb-4">
-        <p className="text-sm text-gray-600">
+      <div className="flex items-center justify-between mb-6">
+        <p className="text-sm font-medium text-gray-300">
           {ratesAtWeight.length} {labels.results}
         </p>
       </div>
@@ -644,13 +648,13 @@ export default function RateTable({
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1 flex-wrap">
-                    <span className="font-medium text-white">
+                    <span className="font-semibold text-white">
                       {rate.carrier_name}
                     </span>
                     {rate.rate_verified ? (
                       <span className="text-xs text-green-500" title="Verified from official carrier rates">&#10003; Verified</span>
                     ) : (
-                      <span className="text-xs text-gray-600" title="Estimated based on carrier type and region">~ Estimated</span>
+                      <span className="text-xs text-gray-400" title="Estimated based on carrier type and region">~ Estimated</span>
                     )}
                     {isCheapest && (
                       <span className="text-xs text-green-400">
@@ -675,12 +679,12 @@ export default function RateTable({
                         {rate.route_score.toFixed(1)} ★
                       </span>
                     )}
-                    <span className="text-xs text-gray-600">
+                    <span className="text-xs text-gray-500">
                       {rate.carrier_type}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <p className="text-sm text-gray-500">{rate.service_name}</p>
+                    <p className="text-sm text-gray-300">{rate.service_name}</p>
                     {rate.review && (
                       <a
                         href={rate.review.url}
@@ -702,18 +706,18 @@ export default function RateTable({
 
                 <div className="flex items-center gap-6 sm:gap-8">
                   <div className="text-center">
-                    <p className="text-xs text-gray-600 mb-1">
+                    <p className="text-xs text-gray-400 mb-1">
                       {labels.delivery_time}
                     </p>
                     <p className="text-gray-300">
                       {rate.estimated_days_min}–{rate.estimated_days_max}{" "}
-                      <span className="text-sm text-gray-600">
+                      <span className="text-sm text-gray-500">
                         {labels.days}
                       </span>
                     </p>
                   </div>
                   <div className="text-center hidden sm:block">
-                    <p className="text-xs text-gray-600 mb-1">
+                    <p className="text-xs text-gray-400 mb-1">
                       {labels.tracking}
                     </p>
                     <p className="text-gray-300">
@@ -721,7 +725,7 @@ export default function RateTable({
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-600 mb-1">
+                    <p className="text-xs text-gray-400 mb-1">
                       {labels.price}
                     </p>
                     <p className="text-3xl font-light text-white">
@@ -757,7 +761,7 @@ export default function RateTable({
                   </a>
                 )}
               </div>
-              <div className="sm:hidden mt-2 text-xs text-gray-600">
+              <div className="sm:hidden mt-2 text-xs text-gray-400">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
               </div>
             </div>
