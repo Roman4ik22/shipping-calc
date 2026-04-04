@@ -215,7 +215,7 @@ export default async function CorridorPage({
         const fastest = corridorData.carriers.reduce((a, b) => a.estimated_days_min < b.estimated_days_min ? a : b);
         const customs = getCustomsInfo(destination.code);
         return (
-          <div className="my-6 p-5 bg-white/[0.03] rounded-xl">
+          <div className="my-6 p-5 bg-white/[0.03] rounded-xl border-l-4 border-blue-500/30">
             <p className="text-sm text-gray-400 uppercase tracking-wider mb-3">
               {locale === "ru" ? "Быстрый ответ" : "Quick Answer"}
             </p>
@@ -465,6 +465,7 @@ export default async function CorridorPage({
             {corridorInfo.duty_table.length > 0 && (
               <div id="duties" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-1">
+                  <span className="mr-2 opacity-60">&#x1F4CA;</span>
                   {isRu ? `Импортные пошлины: ${destName}` : `Import Duty Rates: ${destName}`}
                 </h2>
                 <p className="text-sm text-gray-500 mb-5">
@@ -481,7 +482,7 @@ export default async function CorridorPage({
                     </thead>
                     <tbody className="divide-y divide-white/5">
                       {corridorInfo.duty_table.map((row, i) => (
-                        <tr key={i} className="text-gray-300">
+                        <tr key={i} className="text-gray-300 hover:bg-white/[0.02] transition-colors">
                           <td className="py-3 pr-4">{row.category}</td>
                           <td className="py-3 pr-4 text-gray-500 font-mono text-xs">{row.hs}</td>
                           <td className="py-3 font-medium text-white">{row.rate}</td>
@@ -502,6 +503,7 @@ export default async function CorridorPage({
             {(corridorInfo.clearance_info || corridorInfo.customs_reality) && (
               <div id="customs" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
+                  <span className="mr-2 opacity-60">&#x1F6C3;</span>
                   {isRu ? "Таможенное оформление" : "Customs Clearance"}
                 </h2>
                 {corridorInfo.clearance_info && (
@@ -550,6 +552,7 @@ export default async function CorridorPage({
             {corridorInfo.docs_section && (
               <div id="documents" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-6">
+                  <span className="mr-2 opacity-60">&#x1F4CB;</span>
                   {isRu ? "Необходимые документы" : "Required Documents"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -575,6 +578,7 @@ export default async function CorridorPage({
             {corridorInfo.trade_volume && (
               <div id="trade" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
+                  <span className="mr-2 opacity-60">&#x1F91D;</span>
                   {isRu
                     ? `Торговля: ${originName} и ${destName}`
                     : `Trade: ${originName} & ${destName}`}
@@ -600,6 +604,7 @@ export default async function CorridorPage({
             {corridorInfo.prohibited_section && (
               <div id="prohibited" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-6">
+                  <span className="mr-2 opacity-60">&#x26D4;</span>
                   {isRu ? "Запрещённые и ограниченные товары" : "Prohibited & Restricted Items"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -617,6 +622,7 @@ export default async function CorridorPage({
             {corridorInfo.trade_section && (
               <div className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
+                  <span className="mr-2 opacity-60">&#x1F91D;</span>
                   {isRu ? "Торговые соглашения" : "Trade Agreements"}
                 </h2>
                 <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.trade_section}</p>
@@ -660,6 +666,7 @@ export default async function CorridorPage({
             {corridorInfo.faq.length > 0 && (
               <div id="faq-corridor" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-5">
+                  <span className="mr-2 opacity-60">&#x2753;</span>
                   {isRu
                     ? `Часто задаваемые вопросы: ${originName} → ${destName}`
                     : `FAQ: Shipping from ${originName} to ${destName}`}
@@ -762,42 +769,46 @@ export default async function CorridorPage({
         );
       })()}
 
-      {/* Related corridors */}
+      {/* Related corridors — asymmetric 2-column layout */}
       <section className="mt-12">
-        <h2 className="text-xl font-bold text-white mb-4">
-          {t(loc, "also_ships_to", { origin: originName })}
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-          {relatedFrom.map((c) => (
-            <Link
-              key={c.code}
-              href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-              className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 text-sm"
-            >
-              {getCountryName(c, loc)}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Ships to destination from other origins */}
-      <section className="mt-8">
-        <h2 className="text-xl font-bold text-white mb-4">
-          {t(loc, "ship_to", { country: destName })}
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-          {popular
-            .filter((c) => c.code !== origin.code && c.code !== destination.code)
-            .slice(0, 6)
-            .map((c) => (
-              <Link
-                key={c.code}
-                href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
-                className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 text-sm"
-              >
-                {getCountryName(c, loc)}
-              </Link>
-            ))}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          {/* From same origin — larger left column */}
+          <div className="lg:col-span-3">
+            <h2 className="text-xl font-bold text-white mb-4">
+              {t(loc, "also_ships_to", { origin: originName })}
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {relatedFrom.map((c) => (
+                <Link
+                  key={c.code}
+                  href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
+                  className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:translate-y-[-1px] transition-all text-sm"
+                >
+                  {countryFlag(c.code)} {getCountryName(c, loc)}
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* To same destination — smaller right column */}
+          <div className="lg:col-span-2">
+            <h2 className="text-xl font-bold text-white mb-4">
+              {t(loc, "ship_to", { country: destName })}
+            </h2>
+            <div className="grid grid-cols-2 gap-2">
+              {popular
+                .filter((c) => c.code !== origin.code && c.code !== destination.code)
+                .slice(0, 6)
+                .map((c) => (
+                  <Link
+                    key={c.code}
+                    href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
+                    className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:translate-y-[-1px] transition-all text-sm"
+                  >
+                    {countryFlag(c.code)} {getCountryName(c, loc)}
+                  </Link>
+                ))}
+            </div>
+          </div>
         </div>
       </section>
 

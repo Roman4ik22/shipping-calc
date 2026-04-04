@@ -48,8 +48,12 @@ export default async function HomePage({
   return (
     <div>
       {/* Hero */}
-      <section className="bg-dark-900 py-24 sm:py-32">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-dark-900 py-24 sm:py-32 relative">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/2 -left-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px]" />
+          <div className="absolute -bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]" />
+        </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-center">
             {t(loc, "compare_shipping_rates")}
           </h1>
@@ -95,7 +99,7 @@ export default async function HomePage({
             {t(loc, "popular_destinations")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8">
-            {popularCorridors.map(([fromCode, toCode]) => {
+            {popularCorridors.slice(0, 4).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
               if (!from || !to) return null;
@@ -105,7 +109,25 @@ export default async function HomePage({
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="text-gray-300 hover:opacity-60 transition-opacity py-1"
+                  className="text-base text-gray-300 hover:border-l-2 hover:border-white/20 hover:pl-3 transition-all py-2 border-l-2 border-transparent"
+                >
+                  <span className="text-lg">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-lg">{countryFlag(toCode)}</span>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-6 mt-4">
+            {popularCorridors.slice(4).map(([fromCode, toCode]) => {
+              const from = countries.find((c) => c.code === fromCode);
+              const to = countries.find((c) => c.code === toCode);
+              if (!from || !to) return null;
+              const slug = makeCorridorSlug(from, to, loc);
+              return (
+                <Link
+                  key={`${fromCode}-${toCode}`}
+                  href={`/${locale}/shipping/${slug}`}
+                  prefetch={false}
+                  className="text-sm text-gray-400 hover:border-l-2 hover:border-white/20 hover:pl-3 transition-all py-1 border-l-2 border-transparent"
                 >
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                 </Link>
@@ -163,8 +185,18 @@ export default async function HomePage({
           <p className="text-sm text-gray-600 uppercase tracking-widest mb-6">
             {t(loc, "comparing_carriers")}
           </p>
-          <p className="text-gray-400 text-lg leading-loose">
-            {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].join(" · ")}
+          <p className="text-gray-400 leading-loose">
+            {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name, i) => {
+              const isPrimary = ["DHL Express", "FedEx", "UPS"].includes(name);
+              return (
+                <span key={name}>
+                  {i > 0 && <span className="mx-2 text-gray-600">&middot;</span>}
+                  <span className={`${isPrimary ? "text-lg font-semibold" : "text-base"} opacity-60 hover:opacity-100 transition-opacity inline-block`}>
+                    {name}
+                  </span>
+                </span>
+              );
+            })}
           </p>
           <Link
             href={`/${locale}/carriers`}
@@ -183,7 +215,12 @@ export default async function HomePage({
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             <div>
-              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">1.</p>
+              <div className="flex items-end gap-3 mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                  <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                <span className="font-mono text-2xl font-bold text-gray-700">1.</span>
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "choose_route")}
               </h3>
@@ -192,7 +229,12 @@ export default async function HomePage({
               </p>
             </div>
             <div>
-              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">2.</p>
+              <div className="flex items-end gap-3 mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                  <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" />
+                </svg>
+                <span className="font-mono text-2xl font-bold text-gray-700">2.</span>
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "compare_rates")}
               </h3>
@@ -201,7 +243,12 @@ export default async function HomePage({
               </p>
             </div>
             <div>
-              <p className="font-mono text-5xl font-bold text-gray-700 mb-4">3.</p>
+              <div className="flex items-end gap-3 mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path d="M3.27 6.96 12 12.01l8.73-5.05" /><path d="M12 22.08V12" />
+                </svg>
+                <span className="font-mono text-2xl font-bold text-gray-700">3.</span>
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "ship_package")}
               </h3>
@@ -257,9 +304,9 @@ export default async function HomePage({
                 key={c.code}
                 href={`/${locale}/shipping/from/${c.slug_en}`}
                 prefetch={false}
-                className="text-xs text-gray-600 hover:opacity-60 transition-opacity py-0.5 truncate"
+                className="text-xs text-gray-600 hover:opacity-60 transition-all py-0.5 truncate group"
               >
-                {getCountryName(c, loc)}
+                <span className="inline-block hover:scale-110 transition-transform text-sm mr-0.5">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
               </Link>
             ))}
           </div>
@@ -278,9 +325,9 @@ export default async function HomePage({
                 key={c.code}
                 href={`/${locale}/guide/${c.slug_en}`}
                 prefetch={false}
-                className="text-gray-400 hover:opacity-60 transition-opacity text-sm py-1"
+                className="text-gray-400 hover:opacity-60 transition-all text-sm py-1"
               >
-                {countryFlag(c.code)} {getCountryName(c, loc)}
+                <span className="inline-block hover:scale-110 transition-transform text-base">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
               </Link>
             ))}
           </div>
@@ -296,6 +343,13 @@ export default async function HomePage({
       {/* Newsletter */}
       <section className="border-t border-white/5">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <div className="flex justify-center mb-6">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
+              <rect x="8" y="14" width="24" height="20" rx="2" />
+              <path d="M32 24h6" /><path d="M35 20l4 4-4 4" />
+              <path d="M14 20h8" /><path d="M14 26h6" />
+            </svg>
+          </div>
           <h2 className="text-3xl font-bold text-white mb-3">
             {t(loc, "newsletter_title")}
           </h2>
@@ -334,11 +388,11 @@ export default async function HomePage({
               </h2>
               <div>
                 {faqs.map((faq, i) => (
-                  <details key={i} className="border-b border-white/5 group">
-                    <summary className="py-5 font-medium text-gray-300 cursor-pointer hover:opacity-60 transition-opacity select-none">
+                  <details key={i} className={`border-b border-white/5 group ${i % 2 === 0 ? "bg-white/[0.02]" : ""}`}>
+                    <summary className="py-5 px-4 font-medium text-gray-300 cursor-pointer hover:opacity-60 transition-opacity select-none">
                       {faq.q}
                     </summary>
-                    <p className="pb-6 text-gray-500 text-sm leading-relaxed">
+                    <p className="pb-6 px-4 text-gray-500 text-sm leading-relaxed">
                       {faq.a}
                     </p>
                   </details>

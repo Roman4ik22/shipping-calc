@@ -92,41 +92,58 @@ export default async function BlogPage({
       {/* Posts Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedPosts.map((post) => (
-            <Link
-              key={post.id}
-              href={`/${locale}/blog/${post.id}`}
-              className="group bg-surface rounded-xl border border-white/10 p-6 hover:border-accent-light/30 transition-all duration-200"
-            >
-              <div className="flex flex-wrap gap-2 mb-3">
-                {post.tags.slice(0, 3).map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 rounded-full bg-surface-light text-gray-300 border border-white/10"
+          {sortedPosts.map((post, index) => {
+            const tagColors = [
+              "bg-blue-500/10 text-blue-300 border-blue-500/20",
+              "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+              "bg-amber-500/10 text-amber-300 border-amber-500/20",
+              "bg-purple-500/10 text-purple-300 border-purple-500/20",
+            ];
+            return (
+              <Link
+                key={post.id}
+                href={`/${locale}/blog/${post.id}`}
+                className={`group bg-surface rounded-xl border border-white/10 p-6 hover:border-accent-light/30 hover:translate-y-[-2px] transition-all duration-200 ${
+                  index === 0 ? "md:col-span-2 lg:col-span-2" : ""
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <time
+                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent-light" : "text-xs text-gray-500"}`}
+                    dateTime={post.date}
                   >
-                    {tag}
+                    {new Date(post.date).toLocaleDateString(
+                      isRu ? "ru-RU" : "en-US",
+                      { year: "numeric", month: "long", day: "numeric" }
+                    )}
+                  </time>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {post.tags.slice(0, 3).map((tag, tagIdx) => (
+                    <span
+                      key={tag}
+                      className={`text-xs px-2 py-1 rounded-full border ${tagColors[tagIdx % tagColors.length]}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h2 className={`font-semibold text-white mb-2 group-hover:text-accent-light transition-colors ${
+                  index === 0 ? "text-xl" : "text-lg"
+                }`}>
+                  {isRu ? post.title_ru : post.title_en}
+                </h2>
+                <p className={`text-sm text-gray-400 mb-4 ${index === 0 ? "line-clamp-4" : "line-clamp-3"}`}>
+                  {isRu ? post.excerpt_ru : post.excerpt_en}
+                </p>
+                <div className="flex items-center justify-end">
+                  <span className="text-sm text-accent-light group-hover:text-white transition-colors">
+                    {t(loc, "read_more")} &rarr;
                   </span>
-                ))}
-              </div>
-              <h2 className="text-lg font-semibold text-white mb-2 group-hover:text-accent-light transition-colors">
-                {isRu ? post.title_ru : post.title_en}
-              </h2>
-              <p className="text-sm text-gray-400 mb-4 line-clamp-3">
-                {isRu ? post.excerpt_ru : post.excerpt_en}
-              </p>
-              <div className="flex items-center justify-between">
-                <time className="text-xs text-gray-500" dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString(
-                    isRu ? "ru-RU" : "en-US",
-                    { year: "numeric", month: "long", day: "numeric" }
-                  )}
-                </time>
-                <span className="text-sm text-accent-light group-hover:text-white transition-colors">
-                  {t(loc, "read_more")} &rarr;
-                </span>
-              </div>
-            </Link>
-          ))}
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 

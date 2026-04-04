@@ -63,9 +63,9 @@ export default async function GuidesPage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all"
+              className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 hover:translate-y-[-2px] transition-all duration-200"
             >
-              <span className="text-2xl">{countryFlag(c.code)}</span>
+              <span className="text-3xl">{countryFlag(c.code)}</span>
               <div>
                 <p className="font-medium text-white">
                   {getCountryName(c, loc)}
@@ -82,7 +82,8 @@ export default async function GuidesPage({
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([continent, list]) => (
           <section key={continent} className="mb-8">
-            <h2 className="text-lg font-bold text-white mb-3">
+            <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+              <span className="inline-block w-8 h-0.5 bg-accent/40 rounded-full" />
               {continent}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
@@ -95,9 +96,9 @@ export default async function GuidesPage({
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:text-accent-light py-1"
+                    className="text-sm text-gray-400 hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
                   >
-                    {countryFlag(c.code)} {getCountryName(c, loc)}
+                    <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
                   </Link>
                 ))}
             </div>

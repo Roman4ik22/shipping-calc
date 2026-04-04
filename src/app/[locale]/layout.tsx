@@ -206,10 +206,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="border-t border-white/5 mt-16">
+        <footer className="mt-16">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div>
+              <div className="pt-0">
                 <h3 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "site_name")}
                 </h3>
@@ -224,7 +225,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <Link href={`/${locale}/customs/united-states`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
                 </div>
               </div>
-              <div>
+              <div className="pt-2">
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_destinations")}
                 </h4>
@@ -247,7 +248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   })}
                 </div>
               </div>
-              <div>
+              <div className="pt-4">
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_origins")}
                 </h4>
@@ -270,7 +271,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   })}
                 </div>
               </div>
-              <div>
+              <div className="pt-1">
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "information")}
                 </h4>
