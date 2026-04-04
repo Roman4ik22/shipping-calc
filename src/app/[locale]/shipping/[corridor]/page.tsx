@@ -27,6 +27,7 @@ import { redirect } from "next/navigation";
 import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
+import { isCarrierVerified } from "@/lib/verified-carriers";
 
 // Pre-generate popular corridors; rest generated on-demand via ISR
 export const dynamicParams = true;
@@ -324,6 +325,7 @@ export default async function CorridorPage({
               route_score: routeScore,
               route_score_label: getScoreLabel(routeScore, locale),
               carrier_website: cr.carrier.website,
+              rate_verified: isCarrierVerified(cr.carrier.id),
               tracking_url: cr.carrier.tracking_url,
             };
           }) ?? []

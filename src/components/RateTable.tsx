@@ -28,6 +28,7 @@ interface CorridorRateData {
   route_score?: number;
   route_score_label?: string;
   carrier_website?: string;
+  rate_verified?: boolean;
   tracking_url?: string;
 }
 
@@ -646,6 +647,11 @@ export default function RateTable({
                     <span className="font-medium text-white">
                       {rate.carrier_name}
                     </span>
+                    {rate.rate_verified ? (
+                      <span className="text-xs text-green-500" title="Verified from official carrier rates">&#10003; Verified</span>
+                    ) : (
+                      <span className="text-xs text-gray-600" title="Estimated based on carrier type and region">~ Estimated</span>
+                    )}
                     {isCheapest && (
                       <span className="text-xs text-green-400">
                         {labels.cheapest}

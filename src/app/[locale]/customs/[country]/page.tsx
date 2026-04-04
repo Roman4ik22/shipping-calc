@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import {
   countries,
   getCountryBySlug,
-  getCountryByCode,
   getCountryName,
   getPopularCountries,
   makeCorridorSlug,
