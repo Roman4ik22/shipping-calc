@@ -215,11 +215,11 @@ export default async function CorridorPage({
         const fastest = corridorData.carriers.reduce((a, b) => a.estimated_days_min < b.estimated_days_min ? a : b);
         const customs = getCustomsInfo(destination.code);
         return (
-          <div className="my-6 p-5 bg-white/[0.03] rounded-xl border-l-4 border-blue-500/30">
-            <p className="text-sm text-gray-400 uppercase tracking-wider mb-3">
+          <div className="my-6 p-8 bg-card rounded-3xl">
+            <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
               {locale === "ru" ? "Быстрый ответ" : "Quick Answer"}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div>
                 <p className="text-xs text-gray-500">{locale === "ru" ? "Самый дешёвый" : "Cheapest option"}</p>
                 <p className="text-white font-medium">{cheapest.carrier.name}</p>
@@ -273,19 +273,19 @@ export default async function CorridorPage({
               {isRu ? "💡 Примеры стоимости доставки" : "💡 Shipping Cost Examples"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-3 bg-white/[0.02] rounded-lg">
+              <div className="p-4 bg-card rounded-2xl">
                 <p className="text-sm text-white">{isRu ? "📱 Телефон / документы" : "📱 Phone / documents"} <span className="text-gray-500">(0.5 kg)</span></p>
                 <p className="text-lg font-light text-white mt-1">${r05.price} <span className="text-xs text-gray-500">via {r05.carrier}, {r05.days} {isRu ? "дней" : "days"}</span></p>
               </div>
-              <div className="p-3 bg-white/[0.02] rounded-lg">
+              <div className="p-4 bg-card rounded-2xl">
                 <p className="text-sm text-white">{isRu ? "👟 Обувь / одежда" : "👟 Shoes / clothing"} <span className="text-gray-500">(2 kg)</span></p>
                 <p className="text-lg font-light text-white mt-1">${r2.price} <span className="text-xs text-gray-500">via {r2.carrier}, {r2.days} {isRu ? "дней" : "days"}</span></p>
               </div>
-              <div className="p-3 bg-white/[0.02] rounded-lg">
+              <div className="p-4 bg-card rounded-2xl">
                 <p className="text-sm text-white">{isRu ? "📦 Средняя коробка" : "📦 Medium box"} <span className="text-gray-500">(5 kg)</span></p>
                 <p className="text-lg font-light text-white mt-1">${r5.price} <span className="text-xs text-gray-500">via {r5.carrier}, {r5.days} {isRu ? "дней" : "days"}</span></p>
               </div>
-              <div className="p-3 bg-white/[0.02] rounded-lg">
+              <div className="p-4 bg-card rounded-2xl">
                 <p className="text-sm text-white">{isRu ? "🖥 Электроника / тяжёлое" : "🖥 Electronics / heavy"} <span className="text-gray-500">(10 kg)</span></p>
                 <p className="text-lg font-light text-white mt-1">${r10.price} <span className="text-xs text-gray-500">via {r10.carrier}, {r10.days} {isRu ? "дней" : "days"}</span></p>
               </div>
@@ -296,8 +296,8 @@ export default async function CorridorPage({
 
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <div className="py-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+          <div className="bg-card rounded-2xl p-4">
             <p className="text-xs text-gray-500 uppercase tracking-wider">
               {locale === "ru" ? "Минимальная цена" : "Cheapest rate"}
             </p>
@@ -306,7 +306,7 @@ export default async function CorridorPage({
               <span className="text-sm text-gray-500 ml-1">/kg</span>
             </p>
           </div>
-          <div className="py-3">
+          <div className="bg-card rounded-2xl p-4">
             <p className="text-xs text-gray-500 uppercase tracking-wider">
               {locale === "ru" ? "Быстрая доставка" : "Fastest delivery"}
             </p>
@@ -315,13 +315,13 @@ export default async function CorridorPage({
               <span className="text-sm text-gray-500 ml-1">{locale === "ru" ? "дней" : "days"}</span>
             </p>
           </div>
-          <div className="py-3">
+          <div className="bg-card rounded-2xl p-4">
             <p className="text-xs text-gray-500 uppercase tracking-wider">
               {locale === "ru" ? "Перевозчиков" : "Carriers available"}
             </p>
             <p className="text-2xl font-light text-white mt-1">{corridorData.carriers.length}</p>
           </div>
-          <div className="py-3">
+          <div className="bg-card rounded-2xl p-4">
             <p className="text-xs text-gray-500 uppercase tracking-wider">
               {locale === "ru" ? "Порог de minimis" : "De minimis threshold"}
             </p>
@@ -333,20 +333,20 @@ export default async function CorridorPage({
       )}
 
       {/* Table of Contents */}
-      <nav className="mb-8 py-4 border-y border-white/5">
+      <nav className="mb-8 bg-card rounded-2xl p-5">
         <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
           {locale === "ru" ? "На этой странице" : "On this page"}
         </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-          <a href="#examples" className="text-gray-400 hover:text-white">{locale === "ru" ? "Примеры" : "Examples"}</a>
-          <a href="#rates" className="text-gray-400 hover:text-white">{locale === "ru" ? "Тарифы" : "Rates"}</a>
-          <a href="#duties" className="text-gray-400 hover:text-white">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
-          <a href="#documents" className="text-gray-400 hover:text-white">{locale === "ru" ? "Документы" : "Documents"}</a>
-          <a href="#customs" className="text-gray-400 hover:text-white">{locale === "ru" ? "Таможня" : "Customs"}</a>
-          <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-400 hover:text-white">{locale === "ru" ? "Подробнее о таможне" : "Full Customs Guide"}</Link>
-          <a href="#prohibited" className="text-gray-400 hover:text-white">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
-          <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
-          <a href="#tracking" className="text-gray-400 hover:text-white">{locale === "ru" ? "Отслеживание" : "Tracking"}</a>
+        <div className="flex flex-wrap gap-2 text-sm">
+          <a href="#examples" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Примеры" : "Examples"}</a>
+          <a href="#rates" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Тарифы" : "Rates"}</a>
+          <a href="#duties" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
+          <a href="#documents" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Документы" : "Documents"}</a>
+          <a href="#customs" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Таможня" : "Customs"}</a>
+          <Link href={`/${locale}/customs/${destination.slug_en}`} className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Подробнее о таможне" : "Full Customs Guide"}</Link>
+          <a href="#prohibited" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
+          <a href="#faq" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">FAQ</a>
+          <a href="#tracking" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Отслеживание" : "Tracking"}</a>
         </div>
       </nav>
 
@@ -783,17 +783,17 @@ export default async function CorridorPage({
                     ? `Часто задаваемые вопросы: ${originName} → ${destName}`
                     : `FAQ: Shipping from ${originName} to ${destName}`}
                 </h2>
-                <div className="divide-y divide-white/5">
+                <div className="space-y-3">
                   {corridorInfo.faq.map((item, i) => (
                     <details
                       key={`corridor-faq-${i}`}
-                      className="group"
+                      className="bg-card rounded-2xl group"
                     >
-                      <summary className="py-4 font-medium text-white cursor-pointer hover:text-accent-light text-sm flex items-center justify-between">
+                      <summary className="py-4 px-5 font-medium text-white cursor-pointer hover:text-accent-light text-sm flex items-center justify-between">
                         {item.q}
                         <span className="text-gray-600 group-open:rotate-45 transition-transform text-lg ml-4">+</span>
                       </summary>
-                      <p className="pb-4 text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                      <p className="pb-4 px-5 text-gray-400 text-sm leading-relaxed">{item.a}</p>
                     </details>
                   ))}
                 </div>
@@ -813,13 +813,13 @@ export default async function CorridorPage({
         const tips = isRu ? corridorContent.tips_ru : corridorContent.tips_en;
         return (
           <section className="mt-8 space-y-6">
-            <div className="bg-surface border border-white/10 rounded-lg p-6">
+            <div className="bg-card rounded-2xl p-6">
               <h2 className="text-lg font-bold text-white mb-3">
                 {isRu ? "Торговая информация" : "Trade Information"}
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed">{tradeInfo}</p>
             </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-6">
+            <div className="bg-card rounded-2xl p-6">
               <h2 className="text-lg font-bold text-white mb-3">
                 {isRu ? "Советы по доставке" : "Shipping Tips"}
               </h2>
@@ -834,7 +834,7 @@ export default async function CorridorPage({
                   {corridorContent.reviews.map((review, i) => (
                     <div
                       key={i}
-                      className="bg-surface border border-white/10 rounded-lg p-5"
+                      className="bg-card rounded-2xl p-5"
                     >
                       <p className="text-sm text-gray-300 italic leading-relaxed mb-3">
                         &ldquo;{isRu ? review.text_ru : review.text_en}&rdquo;
@@ -860,7 +860,7 @@ export default async function CorridorPage({
         const cheapestPrice = cheapestRate.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0;
         const fastestCarrier = [...corridorData.carriers].sort((a, b) => a.estimated_days_min - b.estimated_days_min)[0];
         return (
-          <section className="mt-8 bg-surface-light rounded-lg p-6">
+          <section className="mt-8 bg-card rounded-2xl p-8">
             <h2 className="text-lg font-bold text-white mb-3">
               {t(loc, "shipping_from_to", { origin: originName, destination: destName })}: {t(loc, "overview")}
             </h2>
@@ -894,7 +894,7 @@ export default async function CorridorPage({
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-                  className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:translate-y-[-1px] transition-all text-sm"
+                  className="block bg-card hover:bg-card-hover rounded-2xl p-4 transition-all text-sm"
                 >
                   {countryFlag(c.code)} {getCountryName(c, loc)}
                 </Link>
@@ -914,7 +914,7 @@ export default async function CorridorPage({
                   <Link
                     key={c.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
-                    className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 hover:translate-y-[-1px] transition-all text-sm"
+                    className="block bg-card hover:bg-card-hover rounded-2xl p-4 transition-all text-sm"
                   >
                     {countryFlag(c.code)} {getCountryName(c, loc)}
                   </Link>
@@ -938,7 +938,7 @@ export default async function CorridorPage({
                 <Link
                   key={carrierId}
                   href={`/${locale}/carriers/${carrierId}`}
-                  className="text-sm bg-surface border border-white/10 rounded-full px-4 py-2 hover:border-accent/50 hover:text-accent-light"
+                  className="text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 hover:text-accent-light transition-colors"
                 >
                   {carrier.name}
                 </Link>
@@ -1049,7 +1049,7 @@ export default async function CorridorPage({
             <h2 className="text-xl font-bold text-white mb-4">
               {t(loc, "customs_for", { country: destName })}
             </h2>
-            <div className="bg-surface border border-white/10 rounded-lg p-6">
+            <div className="bg-card rounded-2xl p-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div>
                   <p className="text-sm text-gray-400">{t(loc, "de_minimis")}</p>

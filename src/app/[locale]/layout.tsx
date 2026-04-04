@@ -137,52 +137,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* Header */}
-        <header className="sticky top-0 z-50 bg-[#0a0a0a]">
+        <header className="sticky top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-12">
+            <div className="flex justify-between items-center h-14">
               <Link
                 href={`/${locale}`}
-                className="text-lg font-semibold tracking-tight text-white"
+                className="text-xl font-bold tracking-tight text-white"
               >
                 {t(loc, "site_name")}
               </Link>
-              <div className="flex items-center gap-4">
-                <nav className="hidden sm:flex items-center gap-6">
+              <div className="flex items-center gap-5">
+                <nav className="hidden sm:flex items-center gap-5">
                   <Link
                     href={`/${locale}`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "home")}
                   </Link>
                   <Link
                     href={`/${locale}/carriers`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "carriers_page")}
                   </Link>
                   <Link
                     href={`/${locale}/guide`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "guides")}
                   </Link>
                   <Link
                     href={`/${locale}/about`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "about")}
                   </Link>
                   <Link
                     href={`/${locale}/blog`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "blog")}
                   </Link>
                   <Link
                     href={`/${locale}/platforms`}
-                    className="text-sm text-gray-500 hover:text-white transition-opacity"
+                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
                   >
                     {t(loc, "platforms")}
+                  </Link>
+                  <Link
+                    href={`/${locale}`}
+                    className="px-5 py-2 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+                  >
+                    {t(loc, "compare_rates")}
                   </Link>
                 </nav>
                 <LanguageSwitcher locale={locale} />
@@ -206,11 +212,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="mt-16">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <footer className="mt-16 px-4 sm:px-6 lg:px-8 pb-8">
+          <div className="max-w-7xl mx-auto bg-card rounded-2xl p-8 sm:p-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="pt-0">
+              <div>
                 <h3 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "site_name")}
                 </h3>
@@ -225,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <Link href={`/${locale}/customs/united-states`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
                 </div>
               </div>
-              <div className="pt-2">
+              <div>
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_destinations")}
                 </h4>
@@ -248,7 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   })}
                 </div>
               </div>
-              <div className="pt-4">
+              <div>
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "popular_origins")}
                 </h4>
@@ -271,7 +276,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   })}
                 </div>
               </div>
-              <div className="pt-1">
+              <div>
                 <h4 className="text-white font-semibold text-sm mb-3">
                   {t(loc, "information")}
                 </h4>
@@ -295,7 +300,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div className="border-t border-white/5 mt-8 pt-6 text-xs text-center text-gray-600">
+            <div className="mt-8 pt-6 text-xs text-center text-gray-600">
               &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
               {t(loc, "all_rights")}
             </div>

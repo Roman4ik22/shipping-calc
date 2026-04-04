@@ -83,7 +83,7 @@ export default function CountrySelector({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-3 text-left bg-transparent text-white border-b border-white/10 hover:border-white/20 focus:outline-none focus:border-white/30 transition-colors"
+        className="w-full py-4 px-4 text-left bg-[#1a1a1a] text-white rounded-xl hover:bg-[#1e1e1e] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors"
       >
         {selected ? (
           <span>
@@ -95,14 +95,14 @@ export default function CountrySelector({
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-2 w-full bg-[#1a1a1a] rounded-xl shadow-2xl max-h-72 overflow-hidden">
+        <div className="absolute z-50 mt-2 w-full bg-card rounded-2xl shadow-2xl max-h-72 overflow-hidden">
           <div className="p-3">
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={label}
-              className="w-full px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
+              className="w-full px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               autoFocus
             />
           </div>

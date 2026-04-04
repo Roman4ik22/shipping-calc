@@ -69,7 +69,7 @@ export default async function HomePage({
             <span className="font-mono">45K+</span> {t(loc, "routes")}
           </p>
 
-          <div className="max-w-4xl mx-auto mt-14 bg-dark-800 rounded-2xl p-8 pb-20 overflow-visible relative">
+          <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl p-8 pb-20 overflow-visible relative shadow-2xl">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
@@ -93,12 +93,12 @@ export default async function HomePage({
       </section>
 
       {/* Popular corridors */}
-      <section className="border-t border-white/5">
+      <section className="mt-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-10">
             {t(loc, "popular_destinations")}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {popularCorridors.slice(0, 4).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
@@ -109,14 +109,14 @@ export default async function HomePage({
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="text-base text-gray-300 hover:border-l-2 hover:border-white/20 hover:pl-3 transition-all py-2 border-l-2 border-transparent"
+                  className="bg-card hover:bg-card-hover rounded-2xl p-4 text-base text-gray-300 transition-colors"
                 >
                   <span className="text-lg">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-lg">{countryFlag(toCode)}</span>
                 </Link>
               );
             })}
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-6 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-3">
             {popularCorridors.slice(4).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
@@ -127,7 +127,7 @@ export default async function HomePage({
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="text-sm text-gray-400 hover:border-l-2 hover:border-white/20 hover:pl-3 transition-all py-1 border-l-2 border-transparent"
+                  className="bg-card hover:bg-card-hover rounded-2xl p-4 text-sm text-gray-400 transition-colors"
                 >
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                 </Link>
@@ -138,7 +138,7 @@ export default async function HomePage({
       </section>
 
       {/* Ship from / Ship to */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
@@ -180,7 +180,7 @@ export default async function HomePage({
       </section>
 
       {/* Carriers */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <p className="text-sm text-gray-600 uppercase tracking-widest mb-6">
             {t(loc, "comparing_carriers")}
@@ -208,18 +208,18 @@ export default async function HomePage({
       </section>
 
       {/* How it works */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <h2 className="text-3xl font-bold text-white mb-16 text-center">
             {t(loc, "how_it_works")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-card rounded-2xl p-6">
               <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
                   <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                 </svg>
-                <span className="font-mono text-2xl font-bold text-gray-700">1.</span>
+                <span className="font-mono text-2xl font-bold text-gray-600">1.</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "choose_route")}
@@ -228,12 +228,12 @@ export default async function HomePage({
                 {t(loc, "choose_route_desc")}
               </p>
             </div>
-            <div>
+            <div className="bg-card rounded-2xl p-6">
               <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
                   <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" />
                 </svg>
-                <span className="font-mono text-2xl font-bold text-gray-700">2.</span>
+                <span className="font-mono text-2xl font-bold text-gray-600">2.</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "compare_rates")}
@@ -242,12 +242,12 @@ export default async function HomePage({
                 {t(loc, "compare_rates_desc")}
               </p>
             </div>
-            <div>
+            <div className="bg-card rounded-2xl p-6">
               <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path d="M3.27 6.96 12 12.01l8.73-5.05" /><path d="M12 22.08V12" />
                 </svg>
-                <span className="font-mono text-2xl font-bold text-gray-700">3.</span>
+                <span className="font-mono text-2xl font-bold text-gray-600">3.</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {t(loc, "ship_package")}
@@ -293,7 +293,7 @@ export default async function HomePage({
       />
 
       {/* All countries */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-8">
             {t(loc, "all_countries")}
@@ -314,7 +314,7 @@ export default async function HomePage({
       </section>
 
       {/* Popular guides */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-8">
             {t(loc, "popular_guides")}
@@ -341,7 +341,7 @@ export default async function HomePage({
       </section>
 
       {/* Newsletter */}
-      <section className="border-t border-white/5">
+      <section>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <div className="flex justify-center mb-6">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
@@ -381,18 +381,18 @@ export default async function HomePage({
         ];
 
         return (
-          <section className="border-t border-white/5">
+          <section>
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
               <h2 className="text-3xl font-bold text-white mb-10">
                 {t(loc, "faq_title")}
               </h2>
-              <div>
+              <div className="space-y-3">
                 {faqs.map((faq, i) => (
-                  <details key={i} className={`border-b border-white/5 group ${i % 2 === 0 ? "bg-white/[0.02]" : ""}`}>
-                    <summary className="py-5 px-4 font-medium text-gray-300 cursor-pointer hover:opacity-60 transition-opacity select-none">
+                  <details key={i} className="bg-card rounded-2xl group">
+                    <summary className="py-5 px-6 font-medium text-gray-300 cursor-pointer hover:text-white transition-colors select-none">
                       {faq.q}
                     </summary>
-                    <p className="pb-6 px-4 text-gray-500 text-sm leading-relaxed">
+                    <p className="pb-6 px-6 text-gray-500 text-sm leading-relaxed">
                       {faq.a}
                     </p>
                   </details>

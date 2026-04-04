@@ -215,14 +215,14 @@ function CurrencySelector({
         </button>
 
         {open && (
-          <div className="absolute left-0 mt-1 w-64 bg-[#1a1a1a] rounded-xl shadow-2xl z-50 overflow-hidden">
+          <div className="absolute left-0 mt-1 w-64 bg-card rounded-2xl shadow-2xl z-50 overflow-hidden">
             <div className="p-3">
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search currency..."
-                className="w-full px-3 py-1.5 text-sm bg-transparent border-b border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-white/30"
+                className="w-full px-3 py-2 text-sm bg-[#1a1a1a] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-accent/50"
                 autoFocus
               />
             </div>
@@ -413,17 +413,17 @@ export default function RateTable({
           <label className="block text-xs text-gray-500 mb-3 uppercase tracking-wide">
             {labels.select_weight}
           </label>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-2">
             {weightPresets.map((w) => (
               <button
                 key={w}
                 onClick={() => { setSelectedPreset(w); setCustomWeight(""); }}
                 aria-label={`${w} ${labels.kg}`}
                 aria-pressed={selectedPreset === w && !customWeight}
-                className={`px-3 py-2 text-sm transition-colors ${
+                className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
-                    ? "text-white font-medium border-b-2 border-white"
-                    : "text-gray-500 hover:text-gray-300"
+                    ? "bg-accent text-white font-medium"
+                    : "bg-card text-gray-400 hover:bg-card-hover hover:text-gray-300"
                 }`}
               >
                 {w} {labels.kg}
@@ -446,7 +446,7 @@ export default function RateTable({
                 min="0.1"
                 max="70"
                 step="0.1"
-                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
+                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
               <span className="text-sm text-gray-600">{labels.kg}</span>
             </div>
@@ -472,7 +472,7 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
                 placeholder="L"
                 min="1"
-                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
               <span className="text-gray-600">\u00d7</span>
               <input
@@ -481,7 +481,7 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
                 placeholder="W"
                 min="1"
-                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
               <span className="text-gray-600">\u00d7</span>
               <input
@@ -490,7 +490,7 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
                 placeholder="H"
                 min="1"
-                className="w-20 px-3 py-2 bg-transparent border-b border-white/10 text-sm text-white focus:outline-none focus:border-white/30 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
               <span className="text-sm text-gray-600">cm</span>
             </div>
@@ -536,14 +536,14 @@ export default function RateTable({
       />
       {/* Sort & filter controls */}
       <div className="flex flex-wrap items-center gap-4 mb-6">
-        <div className="flex items-center gap-1" role="group" aria-label={labels.sort}>
+        <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
           <span className="text-sm text-gray-600 mr-1">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
-            className={`px-3 py-1.5 text-sm transition-colors ${
-              sortBy === "price" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
+            className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
+              sortBy === "price" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.price}
@@ -552,8 +552,8 @@ export default function RateTable({
             onClick={() => setSortBy("speed")}
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
-            className={`px-3 py-1.5 text-sm transition-colors ${
-              sortBy === "speed" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
+            className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
+              sortBy === "speed" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.delivery_time}
@@ -561,23 +561,23 @@ export default function RateTable({
           <button
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
-            className={`px-3 py-1.5 text-sm transition-colors ${
-              sortBy === "reliability" ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
+            className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
             }`}
           >
             {labels.route_reliability || "Route"}
           </button>
         </div>
         <div className="h-4 w-px bg-white/5 hidden sm:block" />
-        <div className="flex items-center gap-1" role="group" aria-label={labels.type_label}>
+        <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
           <span className="text-sm text-gray-600 mr-1">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
-              className={`px-3 py-1.5 text-sm transition-colors ${
-                filterType === opt.value ? "text-white border-b border-white" : "text-gray-500 hover:text-gray-300"
+              className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
+                filterType === opt.value ? "bg-accent text-white" : "bg-card text-gray-500 hover:bg-card-hover hover:text-gray-300"
               }`}
             >
               {opt.label}
@@ -631,7 +631,7 @@ export default function RateTable({
       )}
 
       {/* Rate cards */}
-      <div className="divide-y divide-white/5">
+      <div className="space-y-3">
         {ratesAtWeight.map((rate) => {
           const isCheapest = rate === cheapest;
           const isFastest = rate === fastest && !isCheapest;
@@ -639,7 +639,7 @@ export default function RateTable({
           return (
             <div
               key={rate.id}
-              className="py-5 sm:py-6 transition-colors"
+              className="bg-card hover:bg-card-hover rounded-2xl p-5 transition-colors"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
@@ -741,7 +741,7 @@ export default function RateTable({
                     href={rate.carrier_website}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="px-5 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-gray-200 transition-colors"
+                    className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
                   >
                     {labels.ship_now || "Ship Now"}
                   </a>
