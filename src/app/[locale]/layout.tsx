@@ -284,6 +284,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
                     {locale === "ru" ? "Методология" : "Data Methodology"}
                   </Link>
+                  <Link href={`/${locale}/sources`} className="text-gray-500 hover:text-white transition-colors">
+                    {locale === "ru" ? "Источники данных" : "Data Sources"}
+                  </Link>
+                  <Link href={`/${locale}/team`} className="text-gray-500 hover:text-white transition-colors">
+                    {locale === "ru" ? "Команда" : "Team"}
+                  </Link>
                 </div>
               </div>
             </div>
