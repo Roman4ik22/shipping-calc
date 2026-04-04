@@ -344,6 +344,28 @@ export default async function BlogPostPage({
           )}
         </time>
 
+        {/* Language notice for non-EN/RU locales */}
+        {locale !== "en" && locale !== "ru" && (
+          <p className="text-sm text-gray-500 mb-6 italic">
+            This article is available in English. Content in{" "}
+            {
+              ({
+                es: "Español",
+                de: "Deutsch",
+                fr: "Français",
+                pt: "Português",
+                zh: "中文",
+                ja: "日本語",
+                ko: "한국어",
+                ar: "العربية",
+                tr: "Türkçe",
+                it: "Italiano",
+              } as Record<string, string>)[locale] ?? locale
+            }{" "}
+            coming soon.
+          </p>
+        )}
+
         {/* Content */}
         <div className="prose-dark">{renderMarkdown(content)}</div>
       </article>
