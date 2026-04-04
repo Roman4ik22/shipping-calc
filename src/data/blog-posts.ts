@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     title_en: "The Cheapest Way to Ship Internationally in 2026",
     title_ru: "Самый дешёвый способ отправить посылку за границу в 2026 году",
     excerpt_en: "Discover the most affordable international shipping methods, from postal services to freight forwarders, and learn how to cut costs on every package.",
-    excerpt_ru: "Узнайте о самых доступных способах международной доставки — от почтовых служб до грузовых экспедиторов — и как сэкономить на каждой посылке.",
+    excerpt_ru: "Узнайте о самых доступных способах международной доставки, от почтовых служб до грузовых экспедиторов, и как сэкономить на каждой посылке.",
     date: "2026-02-15",
     tags: ["cost-saving", "tips", "carriers"],
     content_en: `## Finding the Cheapest International Shipping Option
@@ -25,7 +25,7 @@ Shipping packages internationally doesn't have to break the bank. Whether you're
 
 ### Postal Services: The Budget-Friendly Choice
 
-National postal services like USPS, Royal Mail, and China Post remain among the cheapest options for lightweight packages. USPS Priority Mail International, for example, offers competitive rates for packages under 4 lbs. The trade-off is usually longer delivery times — expect 7 to 21 business days depending on the destination.
+National postal services like USPS, Royal Mail, and China Post remain among the cheapest options for lightweight packages. USPS Priority Mail International, for example, offers competitive rates for packages under 4 lbs. The trade-off is usually longer delivery times, expect 7 to 21 business days depending on the destination.
 
 ### Regional Carriers and Consolidators
 
@@ -48,14 +48,14 @@ USPS offers flat-rate international boxes where the price is the same regardless
 
 ### The Bottom Line
 
-There's no single "cheapest" carrier — it depends on the origin, destination, weight, and speed you need. The best approach is to compare rates for every shipment using RateShips and pick the option that balances cost and reliability for your needs.`,
+There's no single "cheapest" carrier, it depends on the origin, destination, weight, and speed you need. The best approach is to compare rates for every shipment using RateShips and pick the option that balances cost and reliability for your needs.`,
     content_ru: `## Как найти самый дешёвый способ международной доставки
 
 Отправка посылок за границу не обязательно должна стоить целое состояние. Независимо от того, отправляете ли вы подарки родственникам или ведёте интернет-магазин, существует множество способов снизить расходы.
 
 ### Почтовые службы: бюджетный вариант
 
-Национальные почтовые службы — USPS, Royal Mail, Почта России, China Post — остаются одними из самых дешёвых вариантов для лёгких посылок. Например, USPS Priority Mail International предлагает конкурентные тарифы для посылок до 2 кг. Компромисс — более длительные сроки доставки: от 7 до 21 рабочего дня в зависимости от направления.
+Национальные почтовые службы, USPS, Royal Mail, Почта России, China Post, остаются одними из самых дешёвых вариантов для лёгких посылок. Например, USPS Priority Mail International предлагает конкурентные тарифы для посылок до 2 кг. Компромисс, более длительные сроки доставки: от 7 до 21 рабочего дня в зависимости от направления.
 
 ### Региональные перевозчики и консолидаторы
 
@@ -63,11 +63,11 @@ There's no single "cheapest" carrier — it depends on the origin, destination, 
 
 ### Используйте сервис сравнения тарифов
 
-Один из лучших шагов — сравнить тарифы разных перевозчиков перед отправкой. RateShips позволяет сравнить цены от DHL, FedEx, UPS, EMS и более 100 других перевозчиков за считанные секунды. Вы удивитесь, насколько цены различаются для одного и того же маршрута и веса.
+Один из лучших шагов, сравнить тарифы разных перевозчиков перед отправкой. RateShips позволяет сравнить цены от DHL, FedEx, UPS, EMS и более 100 других перевозчиков за считанные секунды. Вы удивитесь, насколько цены различаются для одного и того же маршрута и веса.
 
 ### Советы по снижению стоимости доставки
 
-- **Выбирайте правильный размер коробки.** Перевозчики рассчитывают стоимость по объёмному весу, если он превышает фактический. Меньшая коробка — меньше расходов.
+- **Выбирайте правильный размер коробки.** Перевозчики рассчитывают стоимость по объёмному весу, если он превышает фактический. Меньшая коробка, меньше расходов.
 - **Объединяйте отправления.** Если вы отправляете несколько товаров в один регион, соберите их в одну посылку.
 - **Избегайте пиковых сезонов.** Доставка в январе–феврале обычно дешевле, чем в праздничный период ноября–декабря.
 - **Предоплата пошлин.** Доставка DDP (с оплатой пошлин) иногда дешевле, чем оплата получателем при получении, так как перевозчики добавляют комиссию за обработку.
@@ -78,7 +78,7 @@ USPS предлагает международные коробки с фикс�
 
 ### Итог
 
-Не существует одного «самого дешёвого» перевозчика — всё зависит от страны отправления, назначения, веса и нужной скорости. Лучший подход — сравнивать тарифы для каждой отправки через RateShips и выбирать вариант, который сочетает стоимость и надёжность.`,
+Не существует одного «самого дешёвого» перевозчика, всё зависит от страны отправления, назначения, веса и нужной скорости. Лучший подход, сравнивать тарифы для каждой отправки через RateShips и выбирать вариант, который сочетает стоимость и надёжность.`,
   },
   {
     id: "how-to-reduce-customs-duties",
@@ -90,7 +90,7 @@ USPS предлагает международные коробки с фикс�
     tags: ["customs", "duties", "cost-saving"],
     content_en: `## How to Reduce Customs Duties on International Shipments
 
-Customs duties can add a significant amount to your shipping costs. Understanding how they work — and how to legally reduce them — can save you hundreds of dollars per year.
+Customs duties can add a significant amount to your shipping costs. Understanding how they work, and how to legally reduce them, can save you hundreds of dollars per year.
 
 ### Understand De Minimis Thresholds
 
@@ -106,7 +106,7 @@ Many countries participate in free trade agreements (FTAs) that reduce or elimin
 
 ### Declare Accurate Values
 
-Always declare the true transaction value. Under-declaring to avoid duties is illegal and can result in fines, seizure of goods, and bans from future importing. However, you can legally exclude certain costs from the declared value — such as inland freight in some jurisdictions.
+Always declare the true transaction value. Under-declaring to avoid duties is illegal and can result in fines, seizure of goods, and bans from future importing. However, you can legally exclude certain costs from the declared value, such as inland freight in some jurisdictions.
 
 ### Consider Bonded Warehouses
 
@@ -121,7 +121,7 @@ RateShips provides customs information for most shipping corridors, including de
 - Know the de minimis threshold for your destination country
 - Use the correct HS code for lower duty rates
 - Leverage free trade agreements when possible
-- Declare values accurately — never under-declare
+- Declare values accurately, never under-declare
 - Check customs rules on RateShips before shipping`,
     content_ru: `## Как уменьшить таможенные пошлины на международные отправления
 
@@ -141,7 +141,7 @@ RateShips provides customs information for most shipping corridors, including de
 
 ### Декларируйте точные значения
 
-Всегда указывайте реальную стоимость сделки. Занижение стоимости для избежания пошлин незаконно и может привести к штрафам, конфискации товаров и запрету на будущий импорт. Однако некоторые расходы можно легально исключить из декларируемой стоимости — например, внутренний фрахт в некоторых юрисдикциях.
+Всегда указывайте реальную стоимость сделки. Занижение стоимости для избежания пошлин незаконно и может привести к штрафам, конфискации товаров и запрету на будущий импорт. Однако некоторые расходы можно легально исключить из декларируемой стоимости, например, внутренний фрахт в некоторых юрисдикциях.
 
 ### Рассмотрите таможенные склады
 
@@ -156,15 +156,15 @@ RateShips предоставляет таможенную информацию �
 - Знайте порог беспошлинного ввоза для страны назначения
 - Используйте правильный код HS для снижения пошлин
 - Пользуйтесь соглашениями о свободной торговле
-- Декларируйте стоимость точно — никогда не занижайте
+- Декларируйте стоимость точно, никогда не занижайте
 - Проверяйте таможенные правила на RateShips перед отправкой`,
   },
   {
     id: "dhl-vs-fedex-vs-ups-comparison",
     title_en: "DHL vs FedEx vs UPS: Which Carrier Is Best for International Shipping?",
     title_ru: "DHL vs FedEx vs UPS: какой перевозчик лучше для международной доставки?",
-    excerpt_en: "A detailed comparison of the three biggest international carriers — pricing, speed, coverage, and reliability.",
-    excerpt_ru: "Подробное сравнение трёх крупнейших международных перевозчиков — цены, скорость, покрытие и надёжность.",
+    excerpt_en: "A detailed comparison of the three biggest international carriers, pricing, speed, coverage, and reliability.",
+    excerpt_ru: "Подробное сравнение трёх крупнейших международных перевозчиков, цены, скорость, покрытие и надёжность.",
     date: "2026-03-05",
     tags: ["carriers", "comparison", "dhl", "fedex", "ups"],
     content_en: `## DHL vs FedEx vs UPS: A Comprehensive Comparison
@@ -213,13 +213,13 @@ DHL has a reputation for the smoothest customs clearance, partly because they ha
 There's no universally "best" carrier. Each excels in different areas. Compare rates on RateShips for every shipment to ensure you're getting the best deal.`,
     content_ru: `## DHL vs FedEx vs UPS: подробное сравнение
 
-Когда дело касается международной доставки, DHL, FedEx и UPS — три гиганта. Но какой из них выбрать? Ответ зависит от того, куда вы отправляете, как быстро нужна доставка и какой у вас бюджет.
+Когда дело касается международной доставки, DHL, FedEx и UPS, три гиганта. Но какой из них выбрать? Ответ зависит от того, куда вы отправляете, как быстро нужна доставка и какой у вас бюджет.
 
 ### Глобальное покрытие
 
 **DHL Express** работает в более чем 220 странах и особенно силён в Европе, Азии и на Ближнем Востоке. Если вы отправляете в эти регионы или из них, DHL часто является самым быстрым и надёжным выбором.
 
-**FedEx** охватывает 220+ стран с особой силой в Америке. FedEx International Priority — один из самых быстрых сервисов для отправок из США.
+**FedEx** охватывает 220+ стран с особой силой в Америке. FedEx International Priority, один из самых быстрых сервисов для отправок из США.
 
 **UPS** обслуживает 220+ стран и является предпочтительным перевозчиком для многих американских компаний благодаря обширной внутренней сети, которая бесшовно подключается к международным маршрутам.
 
@@ -231,7 +231,7 @@ There's no universally "best" carrier. Each excels in different areas. Compare r
 - **FedEx** часто выигрывает по цене на американских маршрутах
 - **UPS** конкурентоспособен для тяжёлых посылок (свыше 10 кг)
 
-Лучший способ сравнить реальные тарифы — использовать RateShips, который показывает актуальные расценки от всех трёх перевозчиков рядом.
+Лучший способ сравнить реальные тарифы, использовать RateShips, который показывает актуальные расценки от всех трёх перевозчиков рядом.
 
 ### Скорость
 
@@ -260,8 +260,8 @@ DHL известен наиболее гладким таможенным офо
     id: "shipping-from-china-guide",
     title_en: "Complete Guide to Shipping from China in 2026",
     title_ru: "Полное руководство по доставке из Китая в 2026 году",
-    excerpt_en: "Everything you need to know about shipping goods from China — carriers, costs, customs, and common pitfalls to avoid.",
-    excerpt_ru: "Всё, что нужно знать о доставке товаров из Китая — перевозчики, стоимость, таможня и типичные ошибки.",
+    excerpt_en: "Everything you need to know about shipping goods from China, carriers, costs, customs, and common pitfalls to avoid.",
+    excerpt_ru: "Всё, что нужно знать о доставке товаров из Китая, перевозчики, стоимость, таможня и типичные ошибки.",
     date: "2026-03-01",
     tags: ["china", "guide", "ecommerce", "customs"],
     content_en: `## Complete Guide to Shipping from China
@@ -307,21 +307,21 @@ Be prepared for customs duties at the receiving end. Many countries charge impor
 - Factor in customs duties when calculating total costs`,
     content_ru: `## Полное руководство по доставке из Китая
 
-Китай — крупнейший экспортёр в мире, и миллионы посылок покидают страну ежедневно. Независимо от того, импортируете ли вы товары для бизнеса или покупаете на Taobao, вот что вам нужно знать.
+Китай, крупнейший экспортёр в мире, и миллионы посылок покидают страну ежедневно. Независимо от того, импортируете ли вы товары для бизнеса или покупаете на Taobao, вот что вам нужно знать.
 
 ### Основные способы доставки
 
-**Экспресс-курьеры (DHL, FedEx, UPS, TNT):** Самый быстрый вариант — 3-7 дней, но и самый дорогой. Лучше всего для срочных или ценных отправлений до 30 кг.
+**Экспресс-курьеры (DHL, FedEx, UPS, TNT):** Самый быстрый вариант, 3-7 дней, но и самый дорогой. Лучше всего для срочных или ценных отправлений до 30 кг.
 
 **China Post / ePacket:** Самый доступный вариант для лёгких посылок. Доставка занимает 10-30 дней. ePacket субсидируется China Post и предлагает отслеживание для посылок до 2 кг.
 
-**Морской фрахт:** Самый дешёвый для больших объёмов (свыше 100 кг). Время транзита — 15-45 дней в зависимости от порта назначения. Вам понадобится грузовой экспедитор.
+**Морской фрахт:** Самый дешёвый для больших объёмов (свыше 100 кг). Время транзита, 15-45 дней в зависимости от порта назначения. Вам понадобится грузовой экспедитор.
 
 **Авиафрахт:** Золотая середина между экспрессом и морским фрахтом. Занимает 5-10 дней и экономически эффективен для отправлений 30-500 кг.
 
 ### Выбор перевозчика
 
-Используйте RateShips для сравнения тарифов китайских перевозчиков — SF Express, ZTO, YTO — и международных, таких как DHL и FedEx. Тарифы из Китая сильно различаются, поэтому сравнение обязательно.
+Используйте RateShips для сравнения тарифов китайских перевозчиков, SF Express, ZTO, YTO, и международных, таких как DHL и FedEx. Тарифы из Китая сильно различаются, поэтому сравнение обязательно.
 
 ### Китайские правила экспорта
 
@@ -373,12 +373,12 @@ When a package crosses borders, it typically passes through multiple carrier sys
 
 ### Common Tracking Statuses Explained
 
-- **"Shipment information received"** — The carrier has the label data but hasn't physically received the package yet
-- **"In transit"** — The package is moving between facilities
-- **"Customs clearance"** — The package is being processed by customs. This can take 1-7 days
-- **"Held by customs"** — Additional documentation or duties may be required
-- **"Out for delivery"** — The package is on the delivery vehicle and should arrive today
-- **"Delivery attempted"** — The carrier tried to deliver but couldn't. Check for a notice
+- **"Shipment information received"**, The carrier has the label data but hasn't physically received the package yet
+- **"In transit"**, The package is moving between facilities
+- **"Customs clearance"**, The package is being processed by customs. This can take 1-7 days
+- **"Held by customs"**, Additional documentation or duties may be required
+- **"Out for delivery"**, The package is on the delivery vehicle and should arrive today
+- **"Delivery attempted"**, The carrier tried to deliver but couldn't. Check for a notice
 
 ### When Tracking Stops Updating
 
@@ -386,7 +386,7 @@ International tracking often has gaps. Common reasons include:
 
 - The package is on an airplane or ship with no scanning points
 - It's transferring between carriers (e.g., from DHL to the local postal service)
-- Customs processing — packages can sit in customs for several days without updates
+- Customs processing, packages can sit in customs for several days without updates
 - Weekends and holidays in either country
 
 ### What to Do if Your Package Is Lost
@@ -394,7 +394,7 @@ International tracking often has gaps. Common reasons include:
 1. Wait at least 30 days for standard mail or 14 days for express services
 2. Contact the shipping carrier with your tracking number
 3. File a claim with the carrier or the seller
-4. Check with your local customs office — packages are sometimes held there
+4. Check with your local customs office, packages are sometimes held there
 
 ### Pro Tips
 
@@ -420,12 +420,12 @@ International tracking often has gaps. Common reasons include:
 
 ### Расшифровка типичных статусов
 
-- **«Информация об отправлении получена»** — перевозчик получил данные этикетки, но ещё не получил посылку физически
-- **«В пути»** — посылка перемещается между объектами
-- **«Таможенное оформление»** — посылка обрабатывается таможней. Это может занять 1-7 дней
-- **«Задержана таможней»** — могут потребоваться дополнительные документы или оплата пошлин
-- **«Передана курьеру»** — посылка на автомобиле доставки и должна прибыть сегодня
-- **«Попытка доставки»** — курьер пытался доставить, но не смог. Проверьте извещение
+- **«Информация об отправлении получена»**, перевозчик получил данные этикетки, но ещё не получил посылку физически
+- **«В пути»**, посылка перемещается между объектами
+- **«Таможенное оформление»**, посылка обрабатывается таможней. Это может занять 1-7 дней
+- **«Задержана таможней»**, могут потребоваться дополнительные документы или оплата пошлин
+- **«Передана курьеру»**, посылка на автомобиле доставки и должна прибыть сегодня
+- **«Попытка доставки»**, курьер пытался доставить, но не смог. Проверьте извещение
 
 ### Когда отслеживание прекращает обновляться
 
@@ -433,7 +433,7 @@ International tracking often has gaps. Common reasons include:
 
 - Посылка находится в самолёте или на корабле без точек сканирования
 - Передача между перевозчиками (например, от DHL к местной почте)
-- Таможенная обработка — посылки могут находиться на таможне несколько дней без обновлений
+- Таможенная обработка, посылки могут находиться на таможне несколько дней без обновлений
 - Выходные и праздники в одной из стран
 
 ### Что делать, если посылка потерялась
@@ -441,7 +441,7 @@ International tracking often has gaps. Common reasons include:
 1. Подождите минимум 30 дней для обычной почты или 14 дней для экспресс-сервисов
 2. Свяжитесь с перевозчиком, указав трек-номер
 3. Подайте претензию перевозчику или продавцу
-4. Проверьте в местном таможенном отделении — посылки иногда задерживаются там
+4. Проверьте в местном таможенном отделении, посылки иногда задерживаются там
 
 ### Полезные советы
 
@@ -466,21 +466,21 @@ Before you ship anything internationally, it's critical to know what you can and
 
 These items are banned by virtually all carriers and countries:
 
-- **Explosives and fireworks** — Including party poppers and sparklers
-- **Flammable liquids and gases** — Gasoline, lighter fluid, propane
-- **Narcotics and illegal drugs** — Zero tolerance worldwide
-- **Counterfeit goods** — Fake branded products will be seized
-- **Human remains** — Special permits required through specific channels
+- **Explosives and fireworks**, Including party poppers and sparklers
+- **Flammable liquids and gases**, Gasoline, lighter fluid, propane
+- **Narcotics and illegal drugs**, Zero tolerance worldwide
+- **Counterfeit goods**, Fake branded products will be seized
+- **Human remains**, Special permits required through specific channels
 
 ### Commonly Restricted Items
 
 These items may be shipped with restrictions or special documentation:
 
-- **Lithium batteries** — Must meet IATA regulations. Most carriers accept them only when installed in devices, not as standalone items.
-- **Alcohol** — Some countries prohibit import entirely (e.g., Saudi Arabia). Others require import licenses.
-- **Tobacco products** — Usually allowed in limited quantities for personal use, but heavily taxed.
-- **Medications** — Prescription drugs often require documentation. Some common medications in one country may be illegal in another.
-- **Food products** — Fresh food is usually prohibited. Packaged foods may require inspection certificates.
+- **Lithium batteries**, Must meet IATA regulations. Most carriers accept them only when installed in devices, not as standalone items.
+- **Alcohol**, Some countries prohibit import entirely (e.g., Saudi Arabia). Others require import licenses.
+- **Tobacco products**, Usually allowed in limited quantities for personal use, but heavily taxed.
+- **Medications**, Prescription drugs often require documentation. Some common medications in one country may be illegal in another.
+- **Food products**, Fresh food is usually prohibited. Packaged foods may require inspection certificates.
 
 ### Country-Specific Restrictions
 
@@ -520,21 +520,21 @@ Every country has unique import rules:
 
 Эти предметы запрещены практически всеми перевозчиками и странами:
 
-- **Взрывчатые вещества и фейерверки** — включая хлопушки и бенгальские огни
-- **Легковоспламеняющиеся жидкости и газы** — бензин, жидкость для зажигалок, пропан
-- **Наркотики и нелегальные препараты** — нулевая терпимость по всему миру
-- **Контрафактные товары** — поддельные брендовые товары будут конфискованы
-- **Останки человека** — требуются специальные разрешения через определённые каналы
+- **Взрывчатые вещества и фейерверки**, включая хлопушки и бенгальские огни
+- **Легковоспламеняющиеся жидкости и газы**, бензин, жидкость для зажигалок, пропан
+- **Наркотики и нелегальные препараты**, нулевая терпимость по всему миру
+- **Контрафактные товары**, поддельные брендовые товары будут конфискованы
+- **Останки человека**, требуются специальные разрешения через определённые каналы
 
 ### Часто ограничиваемые товары
 
 Эти предметы могут быть отправлены с ограничениями или специальной документацией:
 
-- **Литиевые батареи** — должны соответствовать правилам IATA. Большинство перевозчиков принимают их только установленными в устройства, не отдельно.
-- **Алкоголь** — некоторые страны полностью запрещают импорт (напр., Саудовская Аравия). Другие требуют лицензию на импорт.
-- **Табачные изделия** — обычно разрешены в ограниченных количествах для личного использования, но облагаются высокими налогами.
-- **Лекарства** — рецептурные препараты часто требуют документацию. Некоторые обычные лекарства в одной стране могут быть нелегальны в другой.
-- **Продукты питания** — свежие продукты обычно запрещены. Упакованные продукты могут требовать сертификаты проверки.
+- **Литиевые батареи**, должны соответствовать правилам IATA. Большинство перевозчиков принимают их только установленными в устройства, не отдельно.
+- **Алкоголь**, некоторые страны полностью запрещают импорт (напр., Саудовская Аравия). Другие требуют лицензию на импорт.
+- **Табачные изделия**, обычно разрешены в ограниченных количествах для личного использования, но облагаются высокими налогами.
+- **Лекарства**, рецептурные препараты часто требуют документацию. Некоторые обычные лекарства в одной стране могут быть нелегальны в другой.
+- **Продукты питания**, свежие продукты обычно запрещены. Упакованные продукты могут требовать сертификаты проверки.
 
 ### Ограничения по странам
 
@@ -577,7 +577,7 @@ Every country has unique import rules:
     tags: ["volumetric-weight", "tips", "cost-saving"],
     content_en: `## Volumetric Weight Explained
 
-Ever been surprised by a shipping quote for a light but bulky package? That's because carriers don't just charge by actual weight — they also consider the space your package takes up. This is called volumetric weight (also known as dimensional weight or DIM weight).
+Ever been surprised by a shipping quote for a light but bulky package? That's because carriers don't just charge by actual weight, they also consider the space your package takes up. This is called volumetric weight (also known as dimensional weight or DIM weight).
 
 ### How Volumetric Weight Is Calculated
 
@@ -616,7 +616,7 @@ Carriers compare the actual weight and volumetric weight, then charge based on w
 Volumetric weight can dramatically increase costs. Consider this example:
 
 - A box of pillows: actual weight 2 kg, volumetric weight 12 kg
-- You'd be charged for 12 kg — potentially 6x more than expected
+- You'd be charged for 12 kg, potentially 6x more than expected
 
 ### Check Your Rates on RateShips
 
@@ -638,7 +638,7 @@ When comparing shipping rates on RateShips, enter your package dimensions along 
 
 **Объёмный вес = (Длина x Ширина x Высота) / DIM-фактор**
 
-Измерения обычно в сантиметрах, результат — в килограммах. DIM-фактор различается у перевозчиков:
+Измерения обычно в сантиметрах, результат, в килограммах. DIM-фактор различается у перевозчиков:
 
 - **DHL Express:** 5 000
 - **FedEx:** 5 000
@@ -669,7 +669,7 @@ When comparing shipping rates on RateShips, enter your package dimensions along 
 Объёмный вес может кардинально увеличить расходы. Пример:
 
 - Коробка подушек: фактический вес 2 кг, объёмный вес 12 кг
-- С вас возьмут за 12 кг — потенциально в 6 раз больше ожидаемого
+- С вас возьмут за 12 кг, потенциально в 6 раз больше ожидаемого
 
 ### Проверяйте тарифы на RateShips
 
@@ -687,7 +687,7 @@ When comparing shipping rates on RateShips, enter your package dimensions along 
     title_en: "Shipping to Europe from the USA: Everything You Need to Know",
     title_ru: "Доставка в Европу из США: всё, что нужно знать",
     excerpt_en: "A practical guide to shipping packages from the United States to European countries, including costs, customs, and carrier recommendations.",
-    excerpt_ru: "Практическое руководство по отправке посылок из США в европейские страны — стоимость, таможня и рекомендации по перевозчикам.",
+    excerpt_ru: "Практическое руководство по отправке посылок из США в европейские страны, стоимость, таможня и рекомендации по перевозчикам.",
     date: "2026-03-10",
     tags: ["usa", "europe", "guide", "customs"],
     content_en: `## Shipping to Europe from the USA
@@ -741,7 +741,7 @@ If you're an e-commerce seller, you can register for the EU's Import One-Stop Sh
 Rates between carriers can differ by 50% or more for the same route. Always compare rates on RateShips before choosing a carrier to ensure you're getting the best price for your needs.`,
     content_ru: `## Доставка в Европу из США
 
-Маршрут из США в Европу — один из самых загруженных международных коридоров доставки. Отправляете ли вы подарок другу в Париже или заказы клиентам в Берлине — вот ваше полное руководство.
+Маршрут из США в Европу, один из самых загруженных международных коридоров доставки. Отправляете ли вы подарок другу в Париже или заказы клиентам в Берлине, вот ваше полное руководство.
 
 ### Варианты перевозчиков и цены
 
@@ -767,7 +767,7 @@ Rates between carriers can differ by 50% or more for the same route. Always comp
 
 ### Особенности по странам
 
-- **Великобритания (после Brexit):** Отдельные таможенные правила от ЕС. Порог для пошлин — 135 фунтов. НДС 20% применяется ко всем товарам.
+- **Великобритания (после Brexit):** Отдельные таможенные правила от ЕС. Порог для пошлин, 135 фунтов. НДС 20% применяется ко всем товарам.
 - **Швейцария:** Не входит в ЕС. Свои таможенные правила с обычно более низкими пошлинами.
 - **Норвегия:** Не входит в ЕС. Порог беспошлинного ввоза периодически меняется.
 
@@ -846,7 +846,7 @@ International returns are expensive and complicated. Consider offering store cre
 RateShips helps e-commerce businesses compare shipping rates across 100+ carriers worldwide. Whether you're shipping one package or a thousand, comparing rates before every shipment ensures you're never overpaying.`,
     content_ru: `## 10 важных советов по доставке для интернет-магазинов
 
-Доставка может определить успех или неудачу интернет-магазина. Высокая стоимость доставки ведёт к брошенным корзинам, а медленная доставка — к негативным отзывам. Вот 10 советов для оптимизации стратегии доставки.
+Доставка может определить успех или неудачу интернет-магазина. Высокая стоимость доставки ведёт к брошенным корзинам, а медленная доставка, к негативным отзывам. Вот 10 советов для оптимизации стратегии доставки.
 
 ### 1. Предлагайте несколько вариантов доставки
 
@@ -874,7 +874,7 @@ RateShips helps e-commerce businesses compare shipping rates across 100+ carrier
 
 ### 7. Установите чёткую политику доставки
 
-Размещайте стоимость доставки, сроки и политику возврата на видном месте на сайте. Неожиданная стоимость доставки — причина номер один для брошенных корзин.
+Размещайте стоимость доставки, сроки и политику возврата на видном месте на сайте. Неожиданная стоимость доставки, причина номер один для брошенных корзин.
 
 ### 8. Рассмотрите фулфилмент-центры
 
@@ -927,7 +927,7 @@ Carriers have different strengths for different package profiles:
 
 ### Factor 4: Tracking and Visibility
 
-If you or your customers need real-time visibility, choose carriers with comprehensive tracking. DHL, FedEx, and UPS offer excellent tracking with notifications at every step. Some economy services provide limited or no tracking.
+If you or your customers need real-time visibility, choose carriers with full tracking. DHL, FedEx, and UPS offer excellent tracking with notifications at every step. Some economy services provide limited or no tracking.
 
 ### Factor 5: Customs Expertise
 
@@ -993,11 +993,11 @@ The best approach is to use RateShips to compare rates from multiple carriers fo
 
 ### Фактор 7: Цена
 
-Цена важна, но не должна быть единственным фактором. Самый дешёвый перевозчик, который теряет вашу посылку или доставляет 6 недель, — не лучшая сделка. Балансируйте стоимость с другими факторами.
+Цена важна, но не должна быть единственным фактором. Самый дешёвый перевозчик, который теряет вашу посылку или доставляет 6 недель,, не лучшая сделка. Балансируйте стоимость с другими факторами.
 
 ### Как эффективно сравнивать
 
-Лучший подход — использовать RateShips для сравнения тарифов от нескольких перевозчиков для вашего конкретного маршрута, веса и требований к скорости. RateShips показывает цены, ожидаемые сроки доставки и информацию о перевозчиках рядом, облегчая осознанный выбор.
+Лучший подход, использовать RateShips для сравнения тарифов от нескольких перевозчиков для вашего конкретного маршрута, веса и требований к скорости. RateShips показывает цены, ожидаемые сроки доставки и информацию о перевозчиках рядом, облегчая осознанный выбор.
 
 ### Контрольный список
 
@@ -1013,8 +1013,8 @@ The best approach is to use RateShips to compare rates from multiple carriers fo
     id: "shipping-from-usa-to-uk",
     title_en: "Shipping from USA to UK: Complete Guide for 2026",
     title_ru: "Доставка из США в Великобританию: полное руководство на 2026 год",
-    excerpt_en: "Everything you need to know about shipping packages from the United States to the United Kingdom — carriers, costs, customs, and delivery times.",
-    excerpt_ru: "Всё, что нужно знать об отправке посылок из США в Великобританию — перевозчики, стоимость, таможня и сроки доставки.",
+    excerpt_en: "Everything you need to know about shipping packages from the United States to the United Kingdom, carriers, costs, customs, and delivery times.",
+    excerpt_ru: "Всё, что нужно знать об отправке посылок из США в Великобританию, перевозчики, стоимость, таможня и сроки доставки.",
     date: "2026-03-01",
     tags: ["usa", "uk", "guide", "carriers"],
     content_en: `## Shipping from USA to UK: What You Need to Know
@@ -1043,7 +1043,7 @@ Shipping costs vary dramatically between carriers for the same package. Use [Rat
 
 ### Tracking and Insurance
 
-All major carriers provide end-to-end tracking for US to UK shipments. For valuable items, consider purchasing additional insurance — most carriers include only limited liability coverage by default.
+All major carriers provide end-to-end tracking for US to UK shipments. For valuable items, consider purchasing additional insurance, most carriers include only limited liability coverage by default.
 
 ### Delivery Times Summary
 
@@ -1057,11 +1057,11 @@ All major carriers provide end-to-end tracking for US to UK shipments. For valua
 Compare all these options side by side on RateShips to find the best deal for your next US to UK shipment.`,
     content_ru: `## Доставка из США в Великобританию: что нужно знать
 
-Доставка из Соединённых Штатов в Великобританию — один из самых популярных международных маршрутов. Независимо от того, отправляете ли вы личные подарки или выполняете заказы интернет-магазина, понимание доступных вариантов поможет сэкономить деньги и избежать задержек.
+Доставка из Соединённых Штатов в Великобританию, один из самых популярных международных маршрутов. Независимо от того, отправляете ли вы личные подарки или выполняете заказы интернет-магазина, понимание доступных вариантов поможет сэкономить деньги и избежать задержек.
 
 ### Лучшие перевозчики на маршруте США–Великобритания
 
-Основные перевозчики на этом маршруте — USPS, FedEx, UPS и DHL. USPS Priority Mail International обычно самый дешёвый вариант для посылок до 2 кг с доставкой за 6–10 рабочих дней. FedEx International Economy и UPS Worldwide Saver предлагают более быструю доставку (3–5 рабочих дней) по более высокой цене. DHL Express — самый быстрый, часто доставляет за 2–3 рабочих дня.
+Основные перевозчики на этом маршруте, USPS, FedEx, UPS и DHL. USPS Priority Mail International обычно самый дешёвый вариант для посылок до 2 кг с доставкой за 6–10 рабочих дней. FedEx International Economy и UPS Worldwide Saver предлагают более быструю доставку (3–5 рабочих дней) по более высокой цене. DHL Express, самый быстрый, часто доставляет за 2–3 рабочих дня.
 
 ### Таможня и пошлины
 
@@ -1138,7 +1138,7 @@ Most carriers provide tracking from pickup in China to delivery in the US. For e
 Shipping from China to the US in 2026 requires careful attention to tariffs and customs compliance. Use RateShips to compare rates and find the most cost-effective carrier for every shipment.`,
     content_ru: `## Доставка из Китая в США в 2026 году
 
-Маршрут доставки из Китая в США остаётся самым загруженным международным торговым коридором в мире. Однако ситуация существенно изменилась с введением новых тарифных структур в конце 2025 — начале 2026 года.
+Маршрут доставки из Китая в США остаётся самым загруженным международным торговым коридором в мире. Однако ситуация существенно изменилась с введением новых тарифных структур в конце 2025, начале 2026 года.
 
 ### Обновлённая тарифная ситуация в 2026 году
 
@@ -1146,11 +1146,11 @@ Shipping from China to the US in 2026 requires careful attention to tariffs and 
 
 ### Популярные перевозчики и способы доставки
 
-**Экспресс-доставка (3–7 дней):** DHL Express, FedEx International Priority и UPS Express Saver — самые быстрые варианты. Ожидайте стоимость $30–80 за посылку весом 1 кг.
+**Экспресс-доставка (3–7 дней):** DHL Express, FedEx International Priority и UPS Express Saver, самые быстрые варианты. Ожидайте стоимость $30–80 за посылку весом 1 кг.
 
 **Стандартная доставка (10–20 дней):** China Post EMS, Yanwen и 4PX предлагают средние варианты, балансирующие цену и скорость.
 
-**Эконом-доставка (20–45 дней):** China Post Registered Air Mail и ePacket — самые дешёвые варианты для лёгких товаров. Морской фрахт наиболее выгоден для тяжёлых отправлений свыше 20 кг.
+**Эконом-доставка (20–45 дней):** China Post Registered Air Mail и ePacket, самые дешёвые варианты для лёгких товаров. Морской фрахт наиболее выгоден для тяжёлых отправлений свыше 20 кг.
 
 ### Как снизить расходы
 
@@ -1175,8 +1175,8 @@ Shipping from China to the US in 2026 requires careful attention to tariffs and 
     id: "how-to-ship-packages-to-europe",
     title_en: "How to Ship Packages to Europe: Rates, Customs & Carrier Guide",
     title_ru: "Как отправить посылку в Европу: тарифы, таможня и выбор перевозчика",
-    excerpt_en: "A comprehensive guide to shipping packages to European countries, covering EU customs rules, VAT, carrier options, and cost-saving tips.",
-    excerpt_ru: "Подробное руководство по отправке посылок в страны Европы — таможенные правила ЕС, НДС, перевозчики и советы по экономии.",
+    excerpt_en: "A complete guide to shipping packages to European countries, covering EU customs rules, VAT, carrier options, and cost-saving tips.",
+    excerpt_ru: "Подробное руководство по отправке посылок в страны Европы, таможенные правила ЕС, НДС, перевозчики и советы по экономии.",
     date: "2026-03-03",
     tags: ["europe", "eu", "customs", "guide"],
     content_en: `## How to Ship Packages to Europe
@@ -1220,7 +1220,7 @@ Each EU country has its own list of prohibited imports. Generally, counterfeit g
 Shipping to Europe is straightforward once you understand VAT and customs rules. Compare carrier rates on RateShips to find the cheapest and fastest option for your specific shipment.`,
     content_ru: `## Как отправить посылку в Европу
 
-Европа — одно из главных направлений международных отправлений, но разобраться в таможенных правилах ЕС, НДС и различных тарифах перевозчиков бывает непросто. Это руководство поможет во всём разобраться.
+Европа, одно из главных направлений международных отправлений, но разобраться в таможенных правилах ЕС, НДС и различных тарифах перевозчиков бывает непросто. Это руководство поможет во всём разобраться.
 
 ### Таможня ЕС и НДС
 
@@ -1228,7 +1228,7 @@ Shipping to Europe is straightforward once you understand VAT and customs rules.
 
 ### Лучшие перевозчики для доставки в Европу
 
-**DHL Express** — доминирующий перевозчик для европейских доставок с самой большой сетью и быстрыми сроками (1–3 рабочих дня). **FedEx International** и **UPS** также обеспечивают отличное покрытие. Для бюджетных отправлений национальные почтовые службы и региональные перевозчики — GLS, DPD, Hermes — предлагают более дешёвую доставку внутри Европы.
+**DHL Express**, доминирующий перевозчик для европейских доставок с самой большой сетью и быстрыми сроками (1–3 рабочих дня). **FedEx International** и **UPS** также обеспечивают отличное покрытие. Для бюджетных отправлений национальные почтовые службы и региональные перевозчики, GLS, DPD, Hermes, предлагают более дешёвую доставку внутри Европы.
 
 ### Особенности по странам
 
@@ -1262,8 +1262,8 @@ Shipping to Europe is straightforward once you understand VAT and customs rules.
     id: "best-shipping-carrier-for-etsy-sellers",
     title_en: "Best Shipping Carriers for Etsy Sellers in 2026",
     title_ru: "Лучшие службы доставки для продавцов Etsy в 2026 году",
-    excerpt_en: "Find the best shipping carriers for your Etsy shop — comparing rates, tracking, and reliability for handmade and vintage item sellers.",
-    excerpt_ru: "Найдите лучших перевозчиков для вашего магазина на Etsy — сравнение тарифов, отслеживания и надёжности для продавцов handmade товаров.",
+    excerpt_en: "Find the best shipping carriers for your Etsy shop, comparing rates, tracking, and reliability for handmade and vintage item sellers.",
+    excerpt_ru: "Найдите лучших перевозчиков для вашего магазина на Etsy, сравнение тарифов, отслеживания и надёжности для продавцов handmade товаров.",
     date: "2026-03-04",
     tags: ["etsy", "ecommerce", "carriers", "small-business"],
     content_en: `## Best Shipping Carriers for Etsy Sellers
@@ -1296,7 +1296,7 @@ Many Etsy sellers avoid international shipping because of complexity. But intern
 2. **Use calculated shipping** instead of flat rates when possible.
 3. **Compare international rates** on RateShips before setting prices in your Etsy shipping profiles.
 4. **Include customs forms** with accurate descriptions and values.
-5. **Offer tracking** — international buyers especially value it.
+5. **Offer tracking**, international buyers especially value it.
 
 ### Packaging Tips for Handmade Items
 
@@ -1314,7 +1314,7 @@ Use the [RateShips calculator](/) to estimate shipping costs before listing item
 The best carrier depends on your product type, typical package size, and where your customers are located. Test multiple carriers and always compare rates on RateShips to maximize your Etsy profits.`,
     content_ru: `## Лучшие службы доставки для продавцов Etsy
 
-Для продавца на Etsy доставка — одна из главных статей расходов и ключевой фактор удовлетворённости покупателей. Выбор правильного перевозчика может существенно влиять на вашу прибыль.
+Для продавца на Etsy доставка, одна из главных статей расходов и ключевой фактор удовлетворённости покупателей. Выбор правильного перевозчика может существенно влиять на вашу прибыль.
 
 ### Почему доставка важна на Etsy
 
@@ -1329,20 +1329,20 @@ USPS остаётся основным выбором для американс�
 Royal Mail предлагает конкурентные тарифы для продавцов из Великобритании, особенно для маленьких лёгких предметов.
 
 **DHL eCommerce**
-Идеален для международных отправлений — предлагает отслеживание и конкурентные тарифы для мелких посылок. Сроки доставки умеренные (7–15 дней).
+Идеален для международных отправлений, предлагает отслеживание и конкурентные тарифы для мелких посылок. Сроки доставки умеренные (7–15 дней).
 
 **Pirate Ship и сторонние платформы**
 Сервисы вроде Pirate Ship предлагают скидки на тарифы USPS и UPS. Однако для международных отправлений сравнивайте тарифы всех перевозчиков через [RateShips](/).
 
 ### Стратегия международной доставки для Etsy
 
-Многие продавцы на Etsy избегают международной доставки из-за сложности. Но международные покупатели — огромный рынок. Как это организовать:
+Многие продавцы на Etsy избегают международной доставки из-за сложности. Но международные покупатели, огромный рынок. Как это организовать:
 
 1. **Настройте профили доставки** для основных направлений (США, Великобритания, ЕС, Канада, Австралия).
 2. **Используйте расчётную доставку** вместо фиксированных тарифов.
 3. **Сравнивайте международные тарифы** на RateShips перед установкой цен в профилях доставки Etsy.
 4. **Включайте таможенные декларации** с точным описанием и стоимостью.
-5. **Предлагайте отслеживание** — международные покупатели особенно это ценят.
+5. **Предлагайте отслеживание**, международные покупатели особенно это ценят.
 
 ### Советы по упаковке для handmade товаров
 
@@ -1363,8 +1363,8 @@ Royal Mail предлагает конкурентные тарифы для п�
     id: "amazon-fba-international-shipping-guide",
     title_en: "Amazon FBA International Shipping Guide: Send Inventory Globally",
     title_ru: "Руководство по международной доставке для Amazon FBA: отправка товаров по всему миру",
-    excerpt_en: "Learn how to ship inventory to Amazon FBA warehouses internationally — freight options, labeling requirements, and cost optimization.",
-    excerpt_ru: "Узнайте, как отправлять товары на склады Amazon FBA по всему миру — варианты фрахта, требования к маркировке и оптимизация расходов.",
+    excerpt_en: "Learn how to ship inventory to Amazon FBA warehouses internationally, freight options, labeling requirements, and cost optimization.",
+    excerpt_ru: "Узнайте, как отправлять товары на склады Amazon FBA по всему миру, варианты фрахта, требования к маркировке и оптимизация расходов.",
     date: "2026-03-04",
     tags: ["amazon", "fba", "ecommerce", "guide"],
     content_en: `## Amazon FBA International Shipping Guide
@@ -1407,7 +1407,7 @@ When shipping FBA inventory internationally, you are the importer of record. You
 ### Cost Optimization Strategies
 
 1. **Compare freight forwarders** and carrier rates using [RateShips](/) for the parcel leg of your shipment.
-2. **Ship during off-peak seasons** — rates drop significantly after Chinese New Year and before Q4 peak.
+2. **Ship during off-peak seasons**, rates drop significantly after Chinese New Year and before Q4 peak.
 3. **Optimize carton dimensions** to maximize container utilization.
 4. **Use Amazon's partnered carriers** when available for discounted last-mile delivery to fulfillment centers.
 
@@ -1432,7 +1432,7 @@ Amazon управляет фулфилмент-центрами в Северн�
 ### Способы доставки товаров для FBA
 
 **Морской фрахт (FCL/LCL)**
-Для крупных отправлений (свыше 500 кг) морской фрахт — самый экономичный вариант. Полная загрузка контейнера (FCL) дешевле за единицу, чем частичная (LCL). Сроки транзита — 15–40 дней. Работайте с экспедитором, имеющим опыт отправок для Amazon FBA.
+Для крупных отправлений (свыше 500 кг) морской фрахт, самый экономичный вариант. Полная загрузка контейнера (FCL) дешевле за единицу, чем частичная (LCL). Сроки транзита, 15–40 дней. Работайте с экспедитором, имеющим опыт отправок для Amazon FBA.
 
 **Авиафрахт**
 Для срочных товаров или небольших партий (100–500 кг) авиафрахт занимает 5–10 дней. Стоит в 4–8 раз дороже морского, но товары начинают продаваться быстрее.
@@ -1442,7 +1442,7 @@ Amazon управляет фулфилмент-центрами в Северн�
 
 ### Требования FBA к маркировке и упаковке
 
-Amazon строго относится к маркировке. Каждая единица должна иметь штрихкод FNSKU, а коробки — этикетки отправления Amazon. Несоблюдение ведёт к задержкам и дополнительным сборам:
+Amazon строго относится к маркировке. Каждая единица должна иметь штрихкод FNSKU, а коробки, этикетки отправления Amazon. Несоблюдение ведёт к задержкам и дополнительным сборам:
 
 - Каждый товар должен быть сканируемым с этикеткой FNSKU
 - Коробки не должны превышать 23 кг для стандартных товаров
@@ -1461,7 +1461,7 @@ Amazon строго относится к маркировке. Каждая е�
 ### Стратегии оптимизации расходов
 
 1. **Сравнивайте тарифы** экспедиторов и перевозчиков через [RateShips](/).
-2. **Отправляйте в несезон** — тарифы снижаются после китайского Нового года и перед пиком Q4.
+2. **Отправляйте в несезон**, тарифы снижаются после китайского Нового года и перед пиком Q4.
 3. **Оптимизируйте размеры коробок** для максимальной загрузки контейнера.
 4. **Используйте партнёрских перевозчиков Amazon** для скидок на доставку до фулфилмент-центров.
 
@@ -1481,7 +1481,7 @@ Amazon строго относится к маркировке. Каждая е�
     title_en: "How to Ship Electronics Internationally: Batteries, Regulations & Tips",
     title_ru: "Как отправить электронику за границу: батареи, правила и советы",
     excerpt_en: "Navigate the complex regulations for shipping electronics with lithium batteries internationally, including packaging, labeling, and carrier restrictions.",
-    excerpt_ru: "Разберитесь в сложных правилах международной отправки электроники с литиевыми батареями — упаковка, маркировка и ограничения перевозчиков.",
+    excerpt_ru: "Разберитесь в сложных правилах международной отправки электроники с литиевыми батареями, упаковка, маркировка и ограничения перевозчиков.",
     date: "2026-03-05",
     tags: ["electronics", "regulations", "batteries", "guide"],
     content_en: `## How to Ship Electronics Internationally
@@ -1518,7 +1518,7 @@ All major carriers (DHL, FedEx, UPS) accept electronics with lithium-ion batteri
 
 ### Packaging Electronics for International Shipping
 
-1. **Original packaging is best** — manufacturer boxes are designed for transit
+1. **Original packaging is best**, manufacturer boxes are designed for transit
 2. **Anti-static bags** for circuit boards and sensitive components
 3. **Bubble wrap** generously around screens and glass elements
 4. **Fill all void space** to prevent movement during transit
@@ -1542,7 +1542,7 @@ Always insure electronics shipments for their full value. Carrier liability limi
 Electronics tend to be lightweight but bulky, meaning dimensional weight often exceeds actual weight. Compare rates on RateShips using your exact package dimensions to avoid surprises.`,
     content_ru: `## Как отправить электронику за границу
 
-Международная отправка электроники связана с уникальными сложностями — от правил перевозки литиевых батарей до ограничений на импорт в разных странах. Вот всё, что нужно знать для безопасной и легальной отправки электроники.
+Международная отправка электроники связана с уникальными сложностями, от правил перевозки литиевых батарей до ограничений на импорт в разных странах. Вот всё, что нужно знать для безопасной и легальной отправки электроники.
 
 ### Правила перевозки литиевых батарей
 
@@ -1568,13 +1568,13 @@ Electronics tend to be lightweight but bulky, meaning dimensional weight often e
 
 **FedEx:** Аналогично DHL, но требует декларацию грузоотправителя для отдельных батарей.
 
-**UPS:** Принимает установленные батареи; отдельные — только через сервис UPS Dangerous Goods.
+**UPS:** Принимает установленные батареи; отдельные, только через сервис UPS Dangerous Goods.
 
 **Почтовые службы:** Многие почтовые службы (USPS, Royal Mail) имеют значительные ограничения на литиевые батареи.
 
 ### Упаковка электроники
 
-1. **Оригинальная упаковка лучше всего** — заводские коробки рассчитаны на транспортировку
+1. **Оригинальная упаковка лучше всего**, заводские коробки рассчитаны на транспортировку
 2. **Антистатические пакеты** для плат и чувствительных компонентов
 3. **Пузырчатая плёнка** щедро вокруг экранов и стеклянных элементов
 4. **Заполните всё свободное пространство** для предотвращения перемещений
@@ -1593,14 +1593,14 @@ Electronics tend to be lightweight but bulky, meaning dimensional weight often e
 
 ### Сравнение стоимости
 
-Электроника обычно лёгкая, но объёмная — объёмный вес часто превышает фактический. Сравнивайте тарифы на RateShips, указывая точные размеры посылки, чтобы избежать сюрпризов.`,
+Электроника обычно лёгкая, но объёмная, объёмный вес часто превышает фактический. Сравнивайте тарифы на RateShips, указывая точные размеры посылки, чтобы избежать сюрпризов.`,
   },
   {
     id: "how-customs-duties-work",
     title_en: "How Customs Duties Work: A Beginner's Guide",
     title_ru: "Как работают таможенные пошлины: руководство для начинающих",
-    excerpt_en: "Understand customs duties from scratch — what they are, how they are calculated, who pays them, and how to minimize them on international shipments.",
-    excerpt_ru: "Разберитесь в таможенных пошлинах с нуля — что это, как рассчитываются, кто платит и как минимизировать их при международных отправках.",
+    excerpt_en: "Understand customs duties from scratch, what they are, how they are calculated, who pays them, and how to minimize them on international shipments.",
+    excerpt_ru: "Разберитесь в таможенных пошлинах с нуля, что это, как рассчитываются, кто платит и как минимизировать их при международных отправках.",
     date: "2026-03-06",
     tags: ["customs", "duties", "beginners", "guide"],
     content_en: `## How Customs Duties Work: A Beginner's Guide
@@ -1615,9 +1615,9 @@ Customs duties are taxes imposed by a country's government on goods imported fro
 
 Customs duties are typically calculated as a percentage of the declared value of the goods (called "ad valorem" duties). The percentage depends on:
 
-1. **The type of product** — identified by HS (Harmonized System) codes, a universal classification system
-2. **The country of origin** — trade agreements can reduce or eliminate duties between certain countries
-3. **The declared value** — the price paid for the goods, including shipping in some countries
+1. **The type of product**, identified by HS (Harmonized System) codes, a universal classification system
+2. **The country of origin**, trade agreements can reduce or eliminate duties between certain countries
+3. **The declared value**, the price paid for the goods, including shipping in some countries
 
 For example, importing a leather handbag (HS code 4202) into the US from China might attract a duty of 8–20%, while the same item from a country with a free trade agreement might enter duty-free.
 
@@ -1630,7 +1630,7 @@ In addition to customs duties, most countries charge Value Added Tax (VAT) or Go
 Many countries exempt low-value shipments from duties and sometimes VAT. These thresholds include:
 
 - **United States:** $800 (duty-free)
-- **European Union:** EUR 150 (duty), EUR 0 (VAT — all imports subject to VAT)
+- **European Union:** EUR 150 (duty), EUR 0 (VAT, all imports subject to VAT)
 - **United Kingdom:** GBP 135 (duty)
 - **Canada:** CAD 20 (duty and tax)
 - **Australia:** AUD 1,000 (duty and GST)
@@ -1648,7 +1648,7 @@ Use [RateShips](/) to get shipping rate estimates that factor in typical duty ra
 ### Tips to Minimize Duties
 
 - Ship to countries with high de minimis thresholds when possible
-- Classify goods accurately — wrong HS codes can mean overpaying
+- Classify goods accurately, wrong HS codes can mean overpaying
 - Use free trade agreements where applicable
 - Consider the country of manufacture, not just the country of shipping
 
@@ -1657,19 +1657,19 @@ Use [RateShips](/) to get shipping rate estimates that factor in typical duty ra
 Customs duties are a normal part of international shipping. Understanding how they work helps you plan costs, set accurate prices for international customers, and avoid unpleasant surprises. Use RateShips to factor shipping and duty costs into your pricing strategy.`,
     content_ru: `## Как работают таможенные пошлины: руководство для начинающих
 
-Если вы когда-либо получали международную посылку и вас просили оплатить неожиданный сбор перед получением — вы столкнулись с таможенными пошлинами. Это руководство объяснит всё, что нужно знать.
+Если вы когда-либо получали международную посылку и вас просили оплатить неожиданный сбор перед получением, вы столкнулись с таможенными пошлинами. Это руководство объяснит всё, что нужно знать.
 
 ### Что такое таможенные пошлины?
 
-Таможенные пошлины — это налоги, которые правительство страны взимает с товаров, импортируемых из-за рубежа. Они служат двум целям: пополнение бюджета и защита отечественных производителей. Почти каждая страна взимает пошлины, хотя ставки и правила сильно различаются.
+Таможенные пошлины, это налоги, которые правительство страны взимает с товаров, импортируемых из-за рубежа. Они служат двум целям: пополнение бюджета и защита отечественных производителей. Почти каждая страна взимает пошлины, хотя ставки и правила сильно различаются.
 
 ### Как рассчитываются пошлины?
 
 Таможенные пошлины обычно рассчитываются как процент от объявленной стоимости товаров (адвалорные пошлины). Процент зависит от:
 
-1. **Типа товара** — определяется кодами ТН ВЭД (Гармонизированная система), универсальной системой классификации
-2. **Страны происхождения** — торговые соглашения могут снизить или отменить пошлины
-3. **Объявленной стоимости** — цена товаров, иногда включая стоимость доставки
+1. **Типа товара**, определяется кодами ТН ВЭД (Гармонизированная система), универсальной системой классификации
+2. **Страны происхождения**, торговые соглашения могут снизить или отменить пошлины
+3. **Объявленной стоимости**, цена товаров, иногда включая стоимость доставки
 
 Например, импорт кожаной сумки в США из Китая может облагаться пошлиной 8–20%, тогда как тот же товар из страны с соглашением о свободной торговле может ввозиться беспошлинно.
 
@@ -1682,7 +1682,7 @@ Customs duties are a normal part of international shipping. Understanding how th
 Многие страны освобождают недорогие отправления от пошлин:
 
 - **США:** $800 (беспошлинно)
-- **ЕС:** 150 евро (пошлины), 0 евро (НДС — все импортные товары облагаются)
+- **ЕС:** 150 евро (пошлины), 0 евро (НДС, все импортные товары облагаются)
 - **Великобритания:** 135 фунтов (пошлины)
 - **Канада:** 20 CAD (пошлины и налоги)
 - **Австралия:** 1,000 AUD (пошлины и GST)
@@ -1700,20 +1700,20 @@ Customs duties are a normal part of international shipping. Understanding how th
 ### Советы по минимизации пошлин
 
 - Отправляйте в страны с высокими порогами де-минимис
-- Правильно классифицируйте товары — неверные коды ТН ВЭД могут означать переплату
+- Правильно классифицируйте товары, неверные коды ТН ВЭД могут означать переплату
 - Используйте соглашения о свободной торговле
 - Учитывайте страну производства, а не только страну отправки
 
 ### Заключение
 
-Таможенные пошлины — нормальная часть международной доставки. Понимание их работы помогает планировать расходы и устанавливать точные цены. Используйте RateShips для учёта стоимости доставки и пошлин в ценовой стратегии.`,
+Таможенные пошлины, нормальная часть международной доставки. Понимание их работы помогает планировать расходы и устанавливать точные цены. Используйте RateShips для учёта стоимости доставки и пошлин в ценовой стратегии.`,
   },
   {
     id: "shipping-from-turkey-guide",
     title_en: "Shipping from Turkey: Guide for Clothing & Textile Exports",
     title_ru: "Доставка из Турции: руководство по экспорту одежды и текстиля",
-    excerpt_en: "Everything you need to know about shipping from Turkey, especially for clothing, textiles, and leather goods — carriers, customs, and costs.",
-    excerpt_ru: "Всё о доставке из Турции, особенно для одежды, текстиля и кожаных изделий — перевозчики, таможня и стоимость.",
+    excerpt_en: "Everything you need to know about shipping from Turkey, especially for clothing, textiles, and leather goods, carriers, customs, and costs.",
+    excerpt_ru: "Всё о доставке из Турции, особенно для одежды, текстиля и кожаных изделий, перевозчики, таможня и стоимость.",
     date: "2026-03-07",
     tags: ["turkey", "clothing", "textiles", "guide"],
     content_en: `## Shipping from Turkey: A Complete Guide
@@ -1780,7 +1780,7 @@ Turkey offers excellent products at competitive prices, and shipping internation
 
 ### Почему Турция?
 
-Турция — шестой крупнейший экспортёр одежды в мире. Турецкий текстиль известен качественным хлопком, конкурентными ценами и близостью к европейскому и ближневосточному рынкам. Стамбульский Гранд-Базар и онлайн-платформы сделали турецкие товары доступными по всему миру.
+Турция, шестой крупнейший экспортёр одежды в мире. Турецкий текстиль известен качественным хлопком, конкурентными ценами и близостью к европейскому и ближневосточному рынкам. Стамбульский Гранд-Базар и онлайн-платформы сделали турецкие товары доступными по всему миру.
 
 ### Лучшие перевозчики из Турции
 
@@ -1788,7 +1788,7 @@ Turkey offers excellent products at competitive prices, and shipping internation
 
 **Yurtici Kargo и Aras Kargo:** Крупные внутренние перевозчики, партнёрствующие с международными сетями.
 
-**DHL Express:** Самый надёжный вариант из Турции — доставка в Европу за 1–2 дня, по всему миру за 2–5 дней.
+**DHL Express:** Самый надёжный вариант из Турции, доставка в Европу за 1–2 дня, по всему миру за 2–5 дней.
 
 **UPS и FedEx:** Оба работают в Турции, предлагая экспресс и эконом-сервисы.
 
@@ -1803,7 +1803,7 @@ Turkey offers excellent products at competitive prices, and shipping internation
 - Сертификат EUR.1 для беспошлинного доступа на рынки ЕС
 - Упаковочный лист для многопозиционных отправлений
 
-У Турции таможенный союз с ЕС для промышленных товаров — многие турецкие товары ввозятся в ЕС беспошлинно. Это значительное преимущество для экспорта одежды и текстиля.
+У Турции таможенный союз с ЕС для промышленных товаров, многие турецкие товары ввозятся в ЕС беспошлинно. Это значительное преимущество для экспорта одежды и текстиля.
 
 ### Стоимость доставки из Турции
 
@@ -1837,8 +1837,8 @@ Turkey offers excellent products at competitive prices, and shipping internation
     id: "shipping-to-russia-sanctions-2026",
     title_en: "Shipping to Russia in 2026: Sanctions, Restrictions & What Still Works",
     title_ru: "Доставка в Россию в 2026 году: санкции, ограничения и что ещё работает",
-    excerpt_en: "An honest overview of the current shipping situation to Russia — which carriers still operate, what is restricted, and alternative routes.",
-    excerpt_ru: "Честный обзор текущей ситуации с доставкой в Россию — какие перевозчики работают, что ограничено и альтернативные маршруты.",
+    excerpt_en: "An honest overview of the current shipping situation to Russia, which carriers still operate, what is restricted, and alternative routes.",
+    excerpt_ru: "Честный обзор текущей ситуации с доставкой в Россию, какие перевозчики работают, что ограничено и альтернативные маршруты.",
     date: "2026-03-08",
     tags: ["russia", "sanctions", "restrictions", "guide"],
     content_en: `## Shipping to Russia in 2026: Current Situation
@@ -1877,10 +1877,10 @@ Always verify current sanctions lists before shipping. Rules change frequently a
 
 ### Practical Tips
 
-1. **Check carrier availability** for your specific origin country — some routes that are closed from the US may still be open from other countries.
-2. **Allow extra time** — delivery times to Russia are 2–4x longer than pre-2022.
+1. **Check carrier availability** for your specific origin country, some routes that are closed from the US may still be open from other countries.
+2. **Allow extra time**, delivery times to Russia are 2–4x longer than pre-2022.
 3. **Use simple customs declarations** with accurate descriptions.
-4. **Consider insurance** — the risk of delays and returns is higher.
+4. **Consider insurance**, the risk of delays and returns is higher.
 
 ### Costs
 
@@ -1932,13 +1932,13 @@ The situation remains fluid. Monitor sanctions updates and carrier announcements
 ### Практические советы
 
 1. **Проверяйте доступность перевозчиков** для вашей конкретной страны отправления.
-2. **Закладывайте дополнительное время** — сроки доставки в 2–4 раза длиннее, чем до 2022 года.
+2. **Закладывайте дополнительное время**, сроки доставки в 2–4 раза длиннее, чем до 2022 года.
 3. **Используйте простые таможенные декларации** с точными описаниями.
-4. **Рассмотрите страхование** — риск задержек и возвратов выше.
+4. **Рассмотрите страхование**, риск задержек и возвратов выше.
 
 ### Стоимость
 
-Стоимость доставки в Россию значительно выросла. Если экспресс-посылка 1 кг стоила $30–50 до 2022 года, то сейчас — часто $50–100+ через доступных перевозчиков. Эконом-варианты через почту остаются доступнее, но медленнее.
+Стоимость доставки в Россию значительно выросла. Если экспресс-посылка 1 кг стоила $30–50 до 2022 года, то сейчас, часто $50–100+ через доступных перевозчиков. Эконом-варианты через почту остаются доступнее, но медленнее.
 
 Используйте [RateShips](/) для проверки доступных перевозчиков на вашем маршруте в Россию и сравнения тарифов.
 
@@ -1954,8 +1954,8 @@ The situation remains fluid. Monitor sanctions updates and carrier announcements
     id: "cheapest-shipping-from-japan",
     title_en: "Cheapest Shipping from Japan: Anime, Electronics & More",
     title_ru: "Самая дешёвая доставка из Японии: аниме, электроника и не только",
-    excerpt_en: "Find the cheapest ways to ship from Japan — whether you are buying anime figures, electronics, or Japanese snacks online.",
-    excerpt_ru: "Найдите самые дешёвые способы доставки из Японии — аниме-фигурки, электроника или японские сладости.",
+    excerpt_en: "Find the cheapest ways to ship from Japan, whether you are buying anime figures, electronics, or Japanese snacks online.",
+    excerpt_ru: "Найдите самые дешёвые способы доставки из Японии, аниме-фигурки, электроника или японские сладости.",
     date: "2026-03-09",
     tags: ["japan", "anime", "electronics", "cost-saving"],
     content_en: `## Cheapest Shipping from Japan
@@ -1976,7 +1976,7 @@ Japan Post remains the cheapest option for most shipments from Japan:
 If you are buying from Japanese retailers that do not ship internationally, proxy buying and forwarding services are essential:
 
 - **Tenso, Buyee, ZenMarket:** These services provide a Japanese address for your purchases and then forward packages to you internationally.
-- **Consolidation:** Most services offer package consolidation — combining multiple purchases into one shipment to save on shipping.
+- **Consolidation:** Most services offer package consolidation, combining multiple purchases into one shipment to save on shipping.
 
 Compare forwarding service shipping rates or check individual carrier rates on [RateShips](/) for the best deal.
 
@@ -1986,14 +1986,14 @@ Anime figures are often large but lightweight, meaning dimensional weight can be
 
 - **Request minimal packaging** if buying from stores that offer the option
 - **Remove original packaging** if you do not need it for collection value (reduces size significantly)
-- **Use surface mail** for non-urgent shipments — the cost difference is dramatic for bulky items
+- **Use surface mail** for non-urgent shipments, the cost difference is dramatic for bulky items
 
 ### Shipping Electronics from Japan
 
 Japanese electronics (cameras, audio equipment, game consoles) are popular exports. Keep in mind:
 
 - Lithium battery regulations apply (see carrier restrictions)
-- Voltage differences — Japanese electronics run on 100V, which may not work in your country without a converter
+- Voltage differences, Japanese electronics run on 100V, which may not work in your country without a converter
 - Warranty is typically only valid in Japan
 
 ### Cost Comparison Table
@@ -2016,16 +2016,16 @@ Most countries have de minimis thresholds that allow low-value Japanese goods to
 Always compare rates across carriers and services on [RateShips](/) before shipping from Japan. The cheapest option depends on weight, dimensions, destination, and urgency. A 2-minute rate comparison can easily save you $20–50 per package.`,
     content_ru: `## Самая дешёвая доставка из Японии
 
-Япония — рай для покупателей аниме-товаров, электроники, косметики и уникальных культурных товаров. Но стоимость доставки иногда может соперничать с ценой самих товаров. Вот как отправлять из Японии доступно.
+Япония, рай для покупателей аниме-товаров, электроники, косметики и уникальных культурных товаров. Но стоимость доставки иногда может соперничать с ценой самих товаров. Вот как отправлять из Японии доступно.
 
 ### Japan Post: бюджетный лидер
 
 Japan Post остаётся самым дешёвым вариантом для большинства отправлений:
 
-- **Наземная почта (SAL):** Самый дешёвый вариант — около $10–15 за 1 кг. Доставка 4–12 недель. Доступность зависит от страны назначения.
+- **Наземная почта (SAL):** Самый дешёвый вариант, около $10–15 за 1 кг. Доставка 4–12 недель. Доступность зависит от страны назначения.
 - **Авиапочта:** Умеренные цены ($15–25 за 1 кг) с доставкой 7–14 дней.
 - **EMS:** Быстрее (3–7 дней) за $20–40 за 1 кг. Включает отслеживание и базовое страхование.
-- **Small Packet:** Для товаров до 2 кг — часто самый дешёвый вариант авиапочты.
+- **Small Packet:** Для товаров до 2 кг, часто самый дешёвый вариант авиапочты.
 
 ### Прокси-сервисы и форвардинг
 
@@ -2038,18 +2038,18 @@ Japan Post остаётся самым дешёвым вариантом для 
 
 ### Доставка аниме-фигурок и коллекционных товаров
 
-Аниме-фигурки часто большие, но лёгкие — объёмный вес может стать ловушкой. Советы:
+Аниме-фигурки часто большие, но лёгкие, объёмный вес может стать ловушкой. Советы:
 
 - **Попросите минимальную упаковку**, если магазин предлагает такую опцию
 - **Уберите оригинальную упаковку**, если она не нужна для коллекционной ценности
-- **Используйте наземную почту** для несрочных отправлений — разница в цене для объёмных товаров значительна
+- **Используйте наземную почту** для несрочных отправлений, разница в цене для объёмных товаров значительна
 
 ### Доставка электроники из Японии
 
-Японская электроника (камеры, аудиотехника, игровые консоли) — популярный экспорт. Учтите:
+Японская электроника (камеры, аудиотехника, игровые консоли), популярный экспорт. Учтите:
 
 - Правила перевозки литиевых батарей
-- Разница напряжения — японская электроника работает на 100В
+- Разница напряжения, японская электроника работает на 100В
 - Гарантия обычно действует только в Японии
 
 ### Сравнение стоимости
@@ -2108,7 +2108,7 @@ Every country has different food import regulations:
 
 - **USA:** The FDA and USDA regulate food imports. Many fresh and animal products are prohibited.
 - **EU:** Very strict rules on animal products; most meat and dairy from non-EU countries are banned for personal imports.
-- **Australia:** Extremely strict biosecurity laws — many food items are prohibited or require declaration.
+- **Australia:** Extremely strict biosecurity laws, many food items are prohibited or require declaration.
 - **Japan:** Restrictions on meat, fresh produce, and items containing certain additives.
 
 Always check the destination country's customs website before shipping food.
@@ -2120,7 +2120,7 @@ Proper packaging is critical to prevent spoilage, leakage, and customs issues:
 1. **Vacuum-seal** items when possible to prevent moisture damage
 2. **Use insulated packaging** with ice packs for perishables (express shipping only)
 3. **Double-bag liquids** in leak-proof containers inside zip-lock bags
-4. **Pad generously** — jars and cans can break during transit
+4. **Pad generously**, jars and cans can break during transit
 5. **Include a packing list** with all food items clearly described
 
 ### Which Carriers Accept Food Shipments?
@@ -2133,7 +2133,7 @@ Proper packaging is critical to prevent spoilage, leakage, and customs issues:
 
 **Postal Services:** Most accept non-perishable, commercially packaged food. Weight and size limits apply.
 
-Compare carrier rates for food shipments on [RateShips](/) — some carriers charge premiums for food items while others treat them as standard packages.
+Compare carrier rates for food shipments on [RateShips](/), some carriers charge premiums for food items while others treat them as standard packages.
 
 ### Tips for Success
 
@@ -2148,7 +2148,7 @@ Compare carrier rates for food shipments on [RateShips](/) — some carriers cha
 Food shipments are often heavier than expected. A box of snacks can easily weigh 3–5 kg. Use [RateShips](/) to compare rates by actual weight and find the most affordable carrier for your food care package.`,
     content_ru: `## Как отправить еду за границу
 
-Международная отправка продуктов питания возможна, но строго регулируется. Будь то посылка для родных за рубежом или бизнес по экспорту продуктов — понимание правил поможет избежать конфискации и потери денег.
+Международная отправка продуктов питания возможна, но строго регулируется. Будь то посылка для родных за рубежом или бизнес по экспорту продуктов, понимание правил поможет избежать конфискации и потери денег.
 
 ### Какие продукты можно отправлять?
 
@@ -2175,7 +2175,7 @@ Food shipments are often heavier than expected. A box of snacks can easily weigh
 
 - **США:** FDA и USDA регулируют импорт продуктов. Многие свежие и животные продукты запрещены.
 - **ЕС:** Очень строгие правила для продуктов животного происхождения; большинство мяса и молочных продуктов из стран вне ЕС запрещены.
-- **Австралия:** Крайне строгие законы биобезопасности — многие продукты запрещены.
+- **Австралия:** Крайне строгие законы биобезопасности, многие продукты запрещены.
 - **Япония:** Ограничения на мясо, свежие продукты и товары с определёнными добавками.
 
 Всегда проверяйте сайт таможни страны назначения перед отправкой.
@@ -2187,7 +2187,7 @@ Food shipments are often heavier than expected. A box of snacks can easily weigh
 1. **Вакуумируйте** продукты для предотвращения повреждений от влаги
 2. **Используйте изотермическую упаковку** с хладагентами для скоропортящихся (только экспресс-доставка)
 3. **Двойная упаковка жидкостей** в герметичных контейнерах внутри пакетов с застёжкой
-4. **Обильная амортизация** — банки могут разбиться при транспортировке
+4. **Обильная амортизация**, банки могут разбиться при транспортировке
 5. **Вложите упаковочный лист** с описанием всех продуктов
 
 ### Какие перевозчики принимают продукты?
@@ -2205,7 +2205,7 @@ Food shipments are often heavier than expected. A box of snacks can easily weigh
 - Маркируйте посылки как «Food Products» для таможни
 - Включите список ингредиентов на английском и языке страны назначения
 - Отправляйте в начале недели, чтобы избежать задержек на выходных
-- Для скоропортящихся — только экспресс с изотермической упаковкой
+- Для скоропортящихся, только экспресс с изотермической упаковкой
 - Учтите, что таможенный досмотр может добавить 1–3 дня
 
 ### Стоимость
@@ -2216,8 +2216,8 @@ Food shipments are often heavier than expected. A box of snacks can easily weigh
     id: "international-shipping-for-small-business",
     title_en: "International Shipping for Small Business: Complete Starter Guide",
     title_ru: "Международная доставка для малого бизнеса: полное руководство для начинающих",
-    excerpt_en: "Start shipping internationally with confidence — a practical guide for small business owners covering carriers, costs, customs, and scaling strategies.",
-    excerpt_ru: "Начните международную доставку уверенно — практическое руководство для владельцев малого бизнеса: перевозчики, расходы, таможня и масштабирование.",
+    excerpt_en: "Start shipping internationally with confidence, a practical guide for small business owners covering carriers, costs, customs, and scaling strategies.",
+    excerpt_ru: "Начните международную доставку уверенно, практическое руководство для владельцев малого бизнеса: перевозчики, расходы, таможня и масштабирование.",
     date: "2026-03-10",
     tags: ["small-business", "ecommerce", "guide", "beginners"],
     content_en: `## International Shipping for Small Business
@@ -2228,10 +2228,10 @@ Expanding your small business internationally can unlock massive growth. But int
 
 Start with 3–5 countries where demand for your products is highest. Consider:
 
-- **Language barriers** — English-speaking countries (UK, Australia, Canada) are easiest to start with
-- **Shipping costs** — nearby countries are cheaper to reach
-- **Customs complexity** — some countries have simpler import procedures
-- **Market size** — larger markets offer more potential customers
+- **Language barriers**, English-speaking countries (UK, Australia, Canada) are easiest to start with
+- **Shipping costs**, nearby countries are cheaper to reach
+- **Customs complexity**, some countries have simpler import procedures
+- **Market size**, larger markets offer more potential customers
 
 ### Step 2: Choose Your Carriers
 
@@ -2247,17 +2247,17 @@ Use [RateShips](/) to compare rates across all carriers for your typical package
 
 Three common pricing strategies:
 
-1. **Free shipping** — build shipping cost into product price. Best for conversion rates.
-2. **Flat rate** — charge a fixed amount per order regardless of destination. Simple but you may lose money on expensive routes.
-3. **Calculated shipping** — charge actual shipping cost. Most accurate but can lead to cart abandonment if rates are high.
+1. **Free shipping**, build shipping cost into product price. Best for conversion rates.
+2. **Flat rate**, charge a fixed amount per order regardless of destination. Simple but you may lose money on expensive routes.
+3. **Calculated shipping**, charge actual shipping cost. Most accurate but can lead to cart abandonment if rates are high.
 
 ### Step 4: Handle Customs Documentation
 
 Every international shipment needs:
 
-- **Commercial invoice** — description, quantity, value, HS code, country of origin
-- **Customs declaration** — CN22 (under 2 kg) or CN23 (over 2 kg) for postal shipments
-- **Packing list** — for multi-item shipments
+- **Commercial invoice**, description, quantity, value, HS code, country of origin
+- **Customs declaration**, CN22 (under 2 kg) or CN23 (over 2 kg) for postal shipments
+- **Packing list**, for multi-item shipments
 
 Most carriers generate these documents automatically when you create a shipping label.
 
@@ -2300,10 +2300,10 @@ International shipping is a learned skill, not a barrier. Start small, use RateS
 
 Начните с 3–5 стран с наибольшим спросом на ваши товары. Учитывайте:
 
-- **Языковые барьеры** — англоязычные страны проще для начала
-- **Стоимость доставки** — ближние страны дешевле
-- **Сложность таможни** — у некоторых стран процедуры проще
-- **Размер рынка** — крупные рынки дают больше потенциальных клиентов
+- **Языковые барьеры**, англоязычные страны проще для начала
+- **Стоимость доставки**, ближние страны дешевле
+- **Сложность таможни**, у некоторых стран процедуры проще
+- **Размер рынка**, крупные рынки дают больше потенциальных клиентов
 
 ### Шаг 2: Выберите перевозчиков
 
@@ -2319,17 +2319,17 @@ International shipping is a learned skill, not a barrier. Start small, use RateS
 
 Три стратегии ценообразования:
 
-1. **Бесплатная доставка** — включите стоимость в цену товара. Лучше для конверсии.
-2. **Фиксированная ставка** — одна цена за заказ независимо от направления. Просто, но можно потерять деньги на дорогих маршрутах.
-3. **Расчётная доставка** — фактическая стоимость. Точнее всего, но высокие тарифы могут привести к отказу от корзины.
+1. **Бесплатная доставка**, включите стоимость в цену товара. Лучше для конверсии.
+2. **Фиксированная ставка**, одна цена за заказ независимо от направления. Просто, но можно потерять деньги на дорогих маршрутах.
+3. **Расчётная доставка**, фактическая стоимость. Точнее всего, но высокие тарифы могут привести к отказу от корзины.
 
 ### Шаг 4: Оформите таможенные документы
 
 Каждое международное отправление требует:
 
-- **Коммерческий инвойс** — описание, количество, стоимость, код ТН ВЭД, страна происхождения
-- **Таможенная декларация** — CN22 (до 2 кг) или CN23 (свыше 2 кг)
-- **Упаковочный лист** — для многопозиционных отправлений
+- **Коммерческий инвойс**, описание, количество, стоимость, код ТН ВЭД, страна происхождения
+- **Таможенная декларация**, CN22 (до 2 кг) или CN23 (свыше 2 кг)
+- **Упаковочный лист**, для многопозиционных отправлений
 
 Большинство перевозчиков генерируют эти документы автоматически при создании этикетки.
 
@@ -2363,14 +2363,14 @@ International shipping is a learned skill, not a barrier. Start small, use RateS
 
 ### Заключение
 
-Международная доставка — навык, а не барьер. Начните с малого, используйте RateShips для поиска конкурентных тарифов и расширяйтесь по мере опыта.`,
+Международная доставка, навык, а не барьер. Начните с малого, используйте RateShips для поиска конкурентных тарифов и расширяйтесь по мере опыта.`,
   },
   {
     id: "shipping-fragile-items-guide",
     title_en: "How to Ship Fragile Items Internationally Without Damage",
     title_ru: "Как отправить хрупкие товары за границу без повреждений",
     excerpt_en: "Expert packaging techniques and carrier tips for shipping fragile items like ceramics, glass, and artwork internationally.",
-    excerpt_ru: "Экспертные техники упаковки и советы по выбору перевозчиков для международной отправки хрупких предметов — керамика, стекло, картины.",
+    excerpt_ru: "Экспертные техники упаковки и советы по выбору перевозчиков для международной отправки хрупких предметов, керамика, стекло, картины.",
     date: "2026-03-11",
     tags: ["fragile", "packaging", "tips", "guide"],
     content_en: `## How to Ship Fragile Items Internationally
@@ -2387,7 +2387,7 @@ Carriers handle millions of packages daily. Despite "Fragile" labels, packages g
 Use multiple layers of bubble wrap around the entire item. For glassware or ceramics, wrap each piece separately. Use at least 2–3 inches of bubble wrap on all sides.
 
 **2. Choose the right box**
-Use a new, double-walled corrugated box. The box should be large enough to allow at least 3 inches of cushioning on every side of the item. Never reuse old boxes — they lose structural integrity.
+Use a new, double-walled corrugated box. The box should be large enough to allow at least 3 inches of cushioning on every side of the item. Never reuse old boxes, they lose structural integrity.
 
 **3. Create a cushion base**
 Place 3+ inches of packing material at the bottom of the box before placing the item. Use packing peanuts, crumpled paper, or foam sheets.
@@ -2405,7 +2405,7 @@ Use high-quality packing tape. Apply tape in an H-pattern on both the top and bo
 
 - Apply "Fragile" and "This Side Up" labels on multiple sides
 - Include "Handle with Care" in the destination country's language if possible
-- Note that labels help but are not a guarantee — your packaging must do the real work
+- Note that labels help but are not a guarantee, your packaging must do the real work
 
 ### Choosing the Right Carrier
 
@@ -2419,7 +2419,7 @@ Compare rates and insurance options for fragile shipments on [RateShips](/).
 
 ### Insurance Is Essential
 
-For fragile items, always purchase shipping insurance for the full replacement value. Standard carrier liability is typically limited to $100 or less. Document your item's condition with photos before packing — you will need evidence if filing a claim.
+For fragile items, always purchase shipping insurance for the full replacement value. Standard carrier liability is typically limited to $100 or less. Document your item's condition with photos before packing, you will need evidence if filing a claim.
 
 ### Common Items and Special Considerations
 
@@ -2433,7 +2433,7 @@ For fragile items, always purchase shipping insurance for the full replacement v
 Proper packaging is 90% of the battle when shipping fragile items. Invest in quality materials, use the double-box method for valuables, and always insure your shipments. Compare carrier rates and insurance options on RateShips to find the best value.`,
     content_ru: `## Как отправить хрупкие товары за границу без повреждений
 
-Отправка хрупких предметов через границу — нервное занятие, но с правильной упаковкой и выбором перевозчика вещи могут прибыть целыми. Это руководство покрывает всё: от керамики и стекла до картин и музыкальных инструментов.
+Отправка хрупких предметов через границу, нервное занятие, но с правильной упаковкой и выбором перевозчика вещи могут прибыть целыми. Это руководство покрывает всё: от керамики и стекла до картин и музыкальных инструментов.
 
 ### Золотое правило: упаковывайте с расчётом на падение с 1,2 метра
 
@@ -2463,7 +2463,7 @@ Proper packaging is 90% of the battle when shipping fragile items. Invest in qua
 
 - Наклейте «Fragile» и «This Side Up» на нескольких сторонах
 - Включите «Осторожно, хрупкое» на языке страны назначения
-- Помните: маркировка помогает, но не гарантирует — вся защита в упаковке
+- Помните: маркировка помогает, но не гарантирует, вся защита в упаковке
 
 ### Выбор перевозчика
 
@@ -2477,7 +2477,7 @@ Proper packaging is 90% of the battle when shipping fragile items. Invest in qua
 
 ### Страхование обязательно
 
-Для хрупких предметов всегда приобретайте страховку на полную стоимость замены. Стандартная ответственность перевозчика обычно ограничена $100 или менее. Сфотографируйте состояние предмета перед упаковкой — понадобится при подаче претензии.
+Для хрупких предметов всегда приобретайте страховку на полную стоимость замены. Стандартная ответственность перевозчика обычно ограничена $100 или менее. Сфотографируйте состояние предмета перед упаковкой, понадобится при подаче претензии.
 
 ### Особые предметы
 
@@ -2488,7 +2488,7 @@ Proper packaging is 90% of the battle when shipping fragile items. Invest in qua
 
 ### Заключение
 
-Правильная упаковка — это 90% успеха при отправке хрупких предметов. Инвестируйте в качественные материалы и всегда страхуйте отправления. Сравнивайте тарифы на RateShips.`,
+Правильная упаковка, это 90% успеха при отправке хрупких предметов. Инвестируйте в качественные материалы и всегда страхуйте отправления. Сравнивайте тарифы на RateShips.`,
   },
   {
     id: "eu-customs-reform-2026",
@@ -2527,10 +2527,10 @@ The flat duty adds a predictable cost to every shipment entering the EU. While t
 ### How to Prepare
 
 1. **Update your pricing** to reflect new duty costs for EU-bound shipments
-2. **Register for IOSS** if you sell directly to EU consumers — this allows you to collect VAT at checkout
-3. **Ensure accurate customs declarations** — the reform comes with stricter enforcement
+2. **Register for IOSS** if you sell directly to EU consumers, this allows you to collect VAT at checkout
+3. **Ensure accurate customs declarations**, the reform comes with stricter enforcement
 4. **Use DDP shipping** to pre-pay duties and provide a smooth customer experience
-5. **Monitor updates** — the reform is being phased in and details may change
+5. **Monitor updates**, the reform is being phased in and details may change
 
 ### Timeline
 
@@ -2549,7 +2549,7 @@ If you sell a $20 product to the EU, you now need to factor in:
 The EU customs reform represents the biggest change to European import rules in years. While it adds costs for low-value shipments, it also brings predictability and simplicity. Use RateShips to model your total costs to EU destinations under the new framework.`,
     content_ru: `## Таможенная реформа ЕС 2026: что нужно знать
 
-Европейский союз проводит значительные таможенные реформы, затрагивающие каждого отправителя посылок в страны ЕС. Главное изменение — введение упрощённой системы фиксированных пошлин для товаров невысокой стоимости.
+Европейский союз проводит значительные таможенные реформы, затрагивающие каждого отправителя посылок в страны ЕС. Главное изменение, введение упрощённой системы фиксированных пошлин для товаров невысокой стоимости.
 
 ### Ключевые изменения
 
@@ -2564,7 +2564,7 @@ The EU customs reform represents the biggest change to European import rules in 
 
 ### Кого это затрагивает?
 
-- **Продавцов** отправляющих в ЕС — необходимо скорректировать цены с учётом пошлин
+- **Продавцов** отправляющих в ЕС, необходимо скорректировать цены с учётом пошлин
 - **Платформы-маркетплейсы** (Amazon, eBay, AliExpress) будут собирать пошлины за многих продавцов
 - **Потребители** могут увидеть несколько более высокие цены, но меньше неожиданных доплат
 - **Малый бизнес** вне ЕС должен разобраться в новой структуре расходов
@@ -2577,9 +2577,9 @@ The EU customs reform represents the biggest change to European import rules in 
 
 1. **Обновите цены** с учётом новых пошлин для отправлений в ЕС
 2. **Зарегистрируйтесь в IOSS**, если продаёте напрямую потребителям в ЕС
-3. **Обеспечьте точные таможенные декларации** — реформа сопровождается ужесточением контроля
+3. **Обеспечьте точные таможенные декларации**, реформа сопровождается ужесточением контроля
 4. **Используйте DDP** для предоплаты пошлин и комфорта покупателей
-5. **Следите за обновлениями** — реформа вводится поэтапно
+5. **Следите за обновлениями**, реформа вводится поэтапно
 
 ### Сроки
 
@@ -2595,7 +2595,7 @@ The EU customs reform represents the biggest change to European import rules in 
 
 ### Заключение
 
-Таможенная реформа ЕС — крупнейшее изменение правил импорта за последние годы. Хотя она увеличивает расходы на недорогие отправления, она приносит предсказуемость. Используйте RateShips для моделирования общих расходов в ЕС по новым правилам.`,
+Таможенная реформа ЕС, крупнейшее изменение правил импорта за последние годы. Хотя она увеличивает расходы на недорогие отправления, она приносит предсказуемость. Используйте RateShips для моделирования общих расходов в ЕС по новым правилам.`,
   },
   {
     id: "best-shipping-apps-for-shopify",
@@ -2740,8 +2740,8 @@ The best shipping app depends on your volume, budget, and how much you ship inte
     id: "how-to-calculate-shipping-costs",
     title_en: "How to Calculate Shipping Costs: The Complete Guide",
     title_ru: "Как рассчитать стоимость доставки: полное руководство",
-    excerpt_en: "Learn exactly how international shipping costs are calculated — weight, dimensions, zones, surcharges, and how to get the best rates.",
-    excerpt_ru: "Узнайте, как рассчитывается стоимость международной доставки — вес, размеры, зоны, надбавки и как получить лучшие тарифы.",
+    excerpt_en: "Learn exactly how international shipping costs are calculated, weight, dimensions, zones, surcharges, and how to get the best rates.",
+    excerpt_ru: "Узнайте, как рассчитывается стоимость международной доставки, вес, размеры, зоны, надбавки и как получить лучшие тарифы.",
     date: "2026-03-14",
     tags: ["cost-saving", "tips", "beginners", "guide"],
     content_en: `## How to Calculate Shipping Costs
@@ -2758,7 +2758,7 @@ There are two types of weight in shipping:
 
 \`Length x Width x Height (cm) / 5000 = Dimensional weight (kg)\`
 
-Carriers charge whichever is greater — actual weight or dimensional weight. This means a large, light package (like a pillow) can cost as much to ship as a smaller, heavier one.
+Carriers charge whichever is greater, actual weight or dimensional weight. This means a large, light package (like a pillow) can cost as much to ship as a smaller, heavier one.
 
 ### Factor 2: Destination and Zones
 
@@ -2793,9 +2793,9 @@ Basic carrier liability is limited ($100 or less for most carriers). Additional 
 
 ### How to Calculate: Step by Step
 
-1. **Measure your package** — length, width, and height in cm
-2. **Weigh your package** — in kg, with packaging materials
-3. **Calculate dimensional weight** — L x W x H / 5000
+1. **Measure your package**, length, width, and height in cm
+2. **Weigh your package**, in kg, with packaging materials
+3. **Calculate dimensional weight**, L x W x H / 5000
 4. **Use the higher weight** (actual vs dimensional) as your billable weight
 5. **Compare rates** across carriers using [RateShips](/) for your specific route, weight, and desired speed
 
@@ -2816,7 +2816,7 @@ Using RateShips to compare rates from the US to Germany for 3.0 kg:
 ### Tips to Reduce Costs
 
 - **Use the smallest possible box** to minimize dimensional weight
-- **Compare carriers on every shipment** — the cheapest carrier varies by route and weight
+- **Compare carriers on every shipment**, the cheapest carrier varies by route and weight
 - **Ship in bulk** when possible to spread fixed costs
 - **Avoid peak seasons** for non-urgent shipments
 - **Prepay duties (DDP)** to avoid carrier handling surcharges
@@ -2838,7 +2838,7 @@ Shipping costs depend on weight, dimensions, destination, speed, and various sur
 
 \`Длина x Ширина x Высота (см) / 5000 = Объёмный вес (кг)\`
 
-Перевозчики берут плату по большему из двух — фактическому или объёмному весу. Это значит, что большая лёгкая посылка может стоить столько же, сколько маленькая тяжёлая.
+Перевозчики берут плату по большему из двух, фактическому или объёмному весу. Это значит, что большая лёгкая посылка может стоить столько же, сколько маленькая тяжёлая.
 
 ### Фактор 2: Направление и зоны
 
@@ -2873,9 +2873,9 @@ Shipping costs depend on weight, dimensions, destination, speed, and various sur
 
 ### Пошаговый расчёт
 
-1. **Измерьте посылку** — длина, ширина, высота в см
-2. **Взвесьте посылку** — в кг, с упаковочными материалами
-3. **Рассчитайте объёмный вес** — Д x Ш x В / 5000
+1. **Измерьте посылку**, длина, ширина, высота в см
+2. **Взвесьте посылку**, в кг, с упаковочными материалами
+3. **Рассчитайте объёмный вес**, Д x Ш x В / 5000
 4. **Используйте больший вес** как расчётный
 5. **Сравните тарифы** через [RateShips](/) для вашего маршрута и веса
 
@@ -2896,21 +2896,21 @@ Shipping costs depend on weight, dimensions, destination, speed, and various sur
 ### Советы по снижению расходов
 
 - **Используйте минимально возможную коробку** для уменьшения объёмного веса
-- **Сравнивайте перевозчиков для каждой отправки** — самый дешёвый вариант зависит от маршрута
+- **Сравнивайте перевозчиков для каждой отправки**, самый дешёвый вариант зависит от маршрута
 - **Отправляйте оптом** для распределения фиксированных расходов
 - **Избегайте пиковых сезонов** для несрочных отправлений
 - **Предоплачивайте пошлины (DDP)** для избежания надбавок перевозчика
 
 ### Заключение
 
-Стоимость доставки зависит от веса, размеров, направления, скорости и надбавок. Самый эффективный способ сэкономить — сравнивать тарифы через [RateShips](/) для каждой отправки.`,
+Стоимость доставки зависит от веса, размеров, направления, скорости и надбавок. Самый эффективный способ сэкономить, сравнивать тарифы через [RateShips](/) для каждой отправки.`,
   },
   {
     id: "shipping-to-australia-guide",
     title_en: "Shipping to Australia: Costs, Customs & Delivery Times",
     title_ru: "Доставка в Австралию: стоимость, таможня и сроки",
-    excerpt_en: "Everything you need to know about shipping packages to Australia — quarantine rules, carrier options, GST, and delivery estimates.",
-    excerpt_ru: "Всё о доставке посылок в Австралию — карантинные правила, перевозчики, GST и сроки доставки.",
+    excerpt_en: "Everything you need to know about shipping packages to Australia, quarantine rules, carrier options, GST, and delivery estimates.",
+    excerpt_ru: "Всё о доставке посылок в Австралию, карантинные правила, перевозчики, GST и сроки доставки.",
     date: "2026-03-15",
     tags: ["australia", "customs", "guide", "carriers"],
     content_en: `## Shipping to Australia: What You Need to Know
@@ -2978,7 +2978,7 @@ Beyond biosecurity items, Australia prohibits:
 Use [RateShips](/) to compare carrier rates and delivery times for your specific package. Factor in GST and potential biosecurity inspection delays. For business shipments, consider working with a customs broker familiar with Australian import requirements.`,
     content_ru: `## Доставка в Австралию: что нужно знать
 
-Австралия — важное направление международной доставки, но её удалённое расположение и строгие биобезопасностные законы создают уникальные сложности.
+Австралия, важное направление международной доставки, но её удалённое расположение и строгие биобезопасностные законы создают уникальные сложности.
 
 ### Таможня и GST Австралии
 
@@ -2986,7 +2986,7 @@ Use [RateShips](/) to compare carrier rates and delivery times for your specific
 
 ### Биобезопасность: строжайшие правила Австралии
 
-Законы биобезопасности Австралии — одни из самых строгих в мире. Пограничная служба проверяет посылки на:
+Законы биобезопасности Австралии, одни из самых строгих в мире. Пограничная служба проверяет посылки на:
 
 - **Продукты питания:** Многие запрещены, включая свежие продукты, мясо и молочные
 - **Растительные материалы:** Семена, сухоцветы, деревянные изделия
@@ -2997,15 +2997,15 @@ Use [RateShips](/) to compare carrier rates and delivery times for your specific
 
 ### Лучшие перевозчики для доставки в Австралию
 
-**Australia Post** — доминирующий внутренний перевозчик. Международные отправления через почтовые службы часто передаются Australia Post для последней мили.
+**Australia Post**, доминирующий внутренний перевозчик. Международные отправления через почтовые службы часто передаются Australia Post для последней мили.
 
-**DHL Express:** Самый быстрый вариант — 2–4 рабочих дня. Премиальные цены.
+**DHL Express:** Самый быстрый вариант, 2–4 рабочих дня. Премиальные цены.
 
 **FedEx International:** Надёжный с доставкой за 3–5 дней.
 
-**UPS:** Аналогично FedEx — экспресс 3–5 дней, эконом 7–12 дней.
+**UPS:** Аналогично FedEx, экспресс 3–5 дней, эконом 7–12 дней.
 
-**USPS (из США):** Priority Mail International — 6–10 дней. First-Class — дешевле, но медленнее (2–6 недель).
+**USPS (из США):** Priority Mail International, 6–10 дней. First-Class, дешевле, но медленнее (2–6 недель).
 
 Сравните все тарифы в Австралию на [RateShips](/).
 
@@ -3040,8 +3040,8 @@ Use [RateShips](/) to compare carrier rates and delivery times for your specific
     id: "middle-east-ecommerce-shipping",
     title_en: "Shipping to the Middle East: E-Commerce Guide for 2026",
     title_ru: "Доставка на Ближний Восток: руководство по электронной коммерции на 2026 год",
-    excerpt_en: "Tap into the booming Middle East e-commerce market — shipping options, customs rules, COD preferences, and carrier recommendations.",
-    excerpt_ru: "Выйдите на растущий рынок электронной коммерции Ближнего Востока — варианты доставки, таможня, наложенный платёж и рекомендации перевозчиков.",
+    excerpt_en: "Tap into the booming Middle East e-commerce market, shipping options, customs rules, COD preferences, and carrier recommendations.",
+    excerpt_ru: "Выйдите на растущий рынок электронной коммерции Ближнего Востока, варианты доставки, таможня, наложенный платёж и рекомендации перевозчиков.",
     date: "2026-03-16",
     tags: ["middle-east", "ecommerce", "guide", "carriers"],
     content_en: `## Shipping to the Middle East: E-Commerce Guide
@@ -3089,7 +3089,7 @@ A unique aspect of Middle Eastern e-commerce is the strong preference for Cash o
 
 Middle Eastern addresses can be less standardized than Western countries. Tips:
 
-- Always collect a phone number — carriers use it for delivery coordination
+- Always collect a phone number, carriers use it for delivery coordination
 - Use both English and Arabic for address labels when possible
 - Include landmarks or area descriptions in the delivery address
 - Choose carriers with strong local knowledge (Aramex, SMSA)
@@ -3099,7 +3099,7 @@ Middle Eastern addresses can be less standardized than Western countries. Tips:
 The Middle East has extreme heat, especially during summer (May–September). Consider:
 
 - Heat-sensitive items (chocolate, cosmetics) need insulated packaging
-- Plastics can warp in extreme heat — use appropriate materials
+- Plastics can warp in extreme heat, use appropriate materials
 - Avoid shipping temperature-sensitive items during peak summer if possible
 
 ### Shipping Costs
@@ -3117,11 +3117,11 @@ Economy options are 40–60% cheaper. Compare exact rates on [RateShips](/).
 The Middle East offers tremendous e-commerce potential. Success depends on choosing the right carrier (Aramex is often the best regional option), understanding COD dynamics, and navigating customs correctly. Use RateShips to compare shipping options and find the best value for your Middle Eastern customers.`,
     content_ru: `## Доставка на Ближний Восток: руководство по электронной коммерции
 
-Ближний Восток — один из самых быстрорастущих рынков электронной коммерции в мире. ОАЭ, Саудовская Аравия и другие страны Залива имеют высокое проникновение интернета, молодое население и сильную покупательную способность.
+Ближний Восток, один из самых быстрорастущих рынков электронной коммерции в мире. ОАЭ, Саудовская Аравия и другие страны Залива имеют высокое проникновение интернета, молодое население и сильную покупательную способность.
 
 ### Обзор рынка
 
-- **ОАЭ:** Самый зрелый рынок электронной коммерции в регионе. Дубай — крупный логистический хаб.
+- **ОАЭ:** Самый зрелый рынок электронной коммерции в регионе. Дубай, крупный логистический хаб.
 - **Саудовская Аравия:** Крупнейший рынок по населению с быстрорастущими онлайн-покупками.
 - **Кувейт, Бахрейн, Катар, Оман:** Небольшие, но состоятельные рынки.
 - **Египет, Иордания, Ливан:** Растущие рынки с другими логистическими вызовами.
@@ -3142,7 +3142,7 @@ The Middle East offers tremendous e-commerce potential. Success depends on choos
 
 ### Наложенный платёж (COD)
 
-Уникальная особенность ближневосточной электронной коммерции — сильное предпочтение наложенного платежа. На некоторых рынках 50–70% заказов оплачиваются при получении. Если вы продаёте потребителям на Ближнем Востоке:
+Уникальная особенность ближневосточной электронной коммерции, сильное предпочтение наложенного платежа. На некоторых рынках 50–70% заказов оплачиваются при получении. Если вы продаёте потребителям на Ближнем Востоке:
 
 - Работайте с перевозчиками, поддерживающими COD (Aramex, SMSA)
 - Учитывайте комиссию COD (обычно 2–5% от суммы заказа)
@@ -3160,7 +3160,7 @@ The Middle East offers tremendous e-commerce potential. Success depends on choos
 
 Ближневосточные адреса менее стандартизированы:
 
-- Всегда собирайте номер телефона — перевозчики используют его для координации
+- Всегда собирайте номер телефона, перевозчики используют его для координации
 - Используйте английский и арабский для адресных этикеток
 - Включайте ориентиры в адрес доставки
 - Выбирайте перевозчиков с локальным знанием (Aramex, SMSA)
@@ -3170,7 +3170,7 @@ The Middle East offers tremendous e-commerce potential. Success depends on choos
 На Ближнем Востоке экстремальная жара, особенно летом (май–сентябрь):
 
 - Термочувствительные товары (шоколад, косметика) требуют изоляционной упаковки
-- Пластик может деформироваться — используйте подходящие материалы
+- Пластик может деформироваться, используйте подходящие материалы
 - По возможности избегайте отправки термочувствительных товаров в пик лета
 
 ### Стоимость доставки
@@ -3192,7 +3192,7 @@ The Middle East offers tremendous e-commerce potential. Success depends on choos
     title_en: "How to Handle International Shipping Returns Efficiently",
     title_ru: "Как эффективно обрабатывать международные возвраты",
     excerpt_en: "Managing international returns is complex and costly. Learn strategies to minimize return shipping costs and keep customers happy.",
-    excerpt_ru: "Управление международными возвратами — сложно и дорого. Узнайте стратегии минимизации расходов на возвратную доставку.",
+    excerpt_ru: "Управление международными возвратами, сложно и дорого. Узнайте стратегии минимизации расходов на возвратную доставку.",
     date: "2026-03-17",
     tags: ["returns", "ecommerce", "cost-saving", "tips"],
     content_en: `## How to Handle International Shipping Returns
@@ -3218,7 +3218,7 @@ The cheapest return is one that never happens:
 - **Clear communication** about colors, materials, and functionality
 - **Quality control** before shipping to reduce defective item returns
 
-### Strategy 2: Keep It — Refund Without Return
+### Strategy 2: Keep It, Refund Without Return
 
 For items under a certain value threshold (typically $20–30), it is often cheaper to refund the customer and let them keep the item rather than pay for return shipping. Calculate your threshold by comparing return shipping costs on [RateShips](/) against product cost.
 
@@ -3277,7 +3277,7 @@ Several platforms help manage international returns:
 International returns are unavoidable but manageable. Focus on preventing unnecessary returns, use smart strategies like local return centers and refund-without-return thresholds, and always compare return shipping rates on RateShips to minimize costs.`,
     content_ru: `## Как эффективно обрабатывать международные возвраты
 
-Международные возвраты — одна из главных проблем трансграничной электронной коммерции. Возвратная доставка может стоить столько же или больше первоначальной, плюс таможенные сложности. Вот как справиться эффективно.
+Международные возвраты, одна из главных проблем трансграничной электронной коммерции. Возвратная доставка может стоить столько же или больше первоначальной, плюс таможенные сложности. Вот как справиться эффективно.
 
 ### Проблема стоимости
 
@@ -3290,7 +3290,7 @@ International returns are unavoidable but manageable. Focus on preventing unnece
 
 ### Стратегия 1: Предотвращение возвратов
 
-Самый дешёвый возврат — тот, который не произошёл:
+Самый дешёвый возврат, тот, который не произошёл:
 
 - **Подробные описания** с точными размерами, фото с разных ракурсов и размерными сетками
 - **Отзывы покупателей** о посадке, качестве и точности
@@ -3298,7 +3298,7 @@ International returns are unavoidable but manageable. Focus on preventing unnece
 - **Чёткая коммуникация** о цветах, материалах и функциях
 - **Контроль качества** перед отправкой
 
-### Стратегия 2: Оставьте себе — возврат денег без возврата товара
+### Стратегия 2: Оставьте себе, возврат денег без возврата товара
 
 Для товаров ниже определённого порога (обычно $20–30) часто дешевле вернуть деньги и позволить клиенту оставить товар. Рассчитайте порог, сравнив стоимость возвратной доставки на [RateShips](/) со стоимостью товара.
 
@@ -3314,8 +3314,8 @@ International returns are unavoidable but manageable. Focus on preventing unnece
 
 Вместо возврата в вашу страну используйте региональные фулфилмент-центры:
 
-- Европейские возвраты — на европейский склад
-- Азиатско-тихоокеанские — в хаб в Гонконге или Сингапуре
+- Европейские возвраты, на европейский склад
+- Азиатско-тихоокеанские, в хаб в Гонконге или Сингапуре
 - Товары проверяются, возвращаются на склад и переотправляются из регионального хаба
 
 ### Стратегия 5: Предоплаченные возвратные этикетки
@@ -3356,8 +3356,8 @@ International returns are unavoidable but manageable. Focus on preventing unnece
     id: "shipping-from-korea-kpop-merch",
     title_en: "Shipping K-Pop Merch from South Korea: Fan's Complete Guide",
     title_ru: "Доставка K-Pop мерча из Южной Кореи: полное руководство для фанатов",
-    excerpt_en: "How to ship K-Pop albums, photocards, and merchandise from South Korea to anywhere in the world — cheapest carriers, packaging tips, and customs.",
-    excerpt_ru: "Как отправить K-Pop альбомы, фотокарточки и мерч из Южной Кореи в любую точку мира — дешёвые перевозчики, упаковка и таможня.",
+    excerpt_en: "How to ship K-Pop albums, photocards, and merchandise from South Korea to anywhere in the world, cheapest carriers, packaging tips, and customs.",
+    excerpt_ru: "Как отправить K-Pop альбомы, фотокарточки и мерч из Южной Кореи в любую точку мира, дешёвые перевозчики, упаковка и таможня.",
     date: "2026-03-18",
     tags: ["korea", "kpop", "guide", "cost-saving"],
     content_en: `## Shipping K-Pop Merch from South Korea
@@ -3420,7 +3420,7 @@ For GO managers, compare bulk shipping rates on [RateShips](/) to find the best 
 K-Pop merchandise is generally classified as books/media (albums) or toys/accessories (other merch):
 
 - Albums often qualify for lower duty rates or de minimis exemptions in many countries
-- Declare items accurately — marking albums as "book" or "CD" is generally acceptable
+- Declare items accurately, marking albums as "book" or "CD" is generally acceptable
 - Fan-made goods may be treated differently at customs than official merchandise
 
 ### Cost Example
@@ -3439,7 +3439,7 @@ Shipping 5 K-Pop albums (total weight ~2.5 kg) from Korea to the US:
 Shipping K-Pop merch from Korea does not have to be expensive. Use K-Packet for budget shipping, organize group orders to split costs, and compare rates on [RateShips](/) for the best deal. Your bias's merch is worth the smart shipping strategy.`,
     content_ru: `## Доставка K-Pop мерча из Южной Кореи
 
-Глобальный феномен K-Pop создал огромный спрос на доставку мерчандайза из Южной Кореи. Будь вы фанатом, заказывающим альбомы и фотокарточки, менеджером группового заказа или перекупщиком — это руководство охватывает всё необходимое.
+Глобальный феномен K-Pop создал огромный спрос на доставку мерчандайза из Южной Кореи. Будь вы фанатом, заказывающим альбомы и фотокарточки, менеджером группового заказа или перекупщиком, это руководство охватывает всё необходимое.
 
 ### Где купить K-Pop мерч онлайн
 
@@ -3490,14 +3490,14 @@ K-Pop фанаты часто организуют групповые заказ
 2. Посылка отправляется в страну менеджера самым дешёвым способом
 3. Менеджер раздаёт товары внутри страны (гораздо дешевле индивидуальной международной доставки)
 
-Для менеджеров GO — сравните тарифы оптовой доставки на [RateShips](/).
+Для менеджеров GO, сравните тарифы оптовой доставки на [RateShips](/).
 
 ### Таможня и пошлины
 
 K-Pop мерч обычно классифицируется как книги/медиа (альбомы) или игрушки/аксессуары:
 
 - Альбомы часто подпадают под более низкие тарифы или пороги де-минимис
-- Декларируйте точно — маркировка альбомов как «book» или «CD» обычно приемлема
+- Декларируйте точно, маркировка альбомов как «book» или «CD» обычно приемлема
 - Фанатские товары могут обрабатываться на таможне иначе, чем официальный мерч
 
 ### Пример стоимости

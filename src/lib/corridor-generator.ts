@@ -49,11 +49,11 @@ function findSharedAgreements(fromInfo: CountryShippingInfo, toInfo: CountryShip
 const tradeVolumeData: Record<string, { en: string; ru: string }> = {
   "US-CN": {
     en: "$700B+ annual bilateral trade. Main goods: electronics, machinery, consumer products, agricultural goods. China is the largest US trading partner by total goods trade.",
-    ru: "$700B+ ежегодного двустороннего товарооборота. Основные товары: электроника, машиностроение, потребительские товары, сельхозпродукция. Китай — крупнейший торговый партнёр США по общему объёму товарного оборота.",
+    ru: "$700B+ ежегодного двустороннего товарооборота. Основные товары: электроника, машиностроение, потребительские товары, сельхозпродукция. Китай, крупнейший торговый партнёр США по общему объёму товарного оборота.",
   },
   "US-DE": {
     en: "$250B+ annual trade. Major goods: vehicles, machinery, pharmaceuticals, medical instruments. Germany is the US's largest European trading partner.",
-    ru: "$250B+ ежегодного товарооборота. Основные товары: автомобили, машиностроение, фармацевтика, медицинские инструменты. Германия — крупнейший европейский торговый партнёр США.",
+    ru: "$250B+ ежегодного товарооборота. Основные товары: автомобили, машиностроение, фармацевтика, медицинские инструменты. Германия, крупнейший европейский торговый партнёр США.",
   },
   "US-JP": {
     en: "$220B+ annual trade. Key goods: vehicles, machinery, electronics, medical equipment. Japan is among the top 5 US trading partners.",
@@ -61,23 +61,23 @@ const tradeVolumeData: Record<string, { en: string; ru: string }> = {
   },
   "US-GB": {
     en: "$150B+ annual trade. Key goods: machinery, vehicles, pharmaceuticals, financial services equipment. The UK is one of the largest US trading partners.",
-    ru: "$150B+ ежегодного товарооборота. Основные товары: машиностроение, автомобили, фармацевтика, оборудование для финансовых услуг. Великобритания — один из крупнейших торговых партнёров США.",
+    ru: "$150B+ ежегодного товарооборота. Основные товары: машиностроение, автомобили, фармацевтика, оборудование для финансовых услуг. Великобритания, один из крупнейших торговых партнёров США.",
   },
   "US-KR": {
     en: "$170B+ annual trade. Key goods: semiconductors, vehicles, electronics, machinery. KORUS FTA eliminates tariffs on most goods.",
     ru: "$170B+ ежегодного товарооборота. Основные товары: полупроводники, автомобили, электроника, машиностроение. Соглашение KORUS FTA отменяет пошлины на большинство товаров.",
   },
   "US-CA": {
-    en: "$750B+ annual trade — the largest bilateral trade relationship in the world. Key goods: vehicles, machinery, energy, agricultural products. USMCA provides duty-free trade for most goods.",
-    ru: "$750B+ ежегодного товарооборота — крупнейшие двусторонние торговые отношения в мире. Основные товары: автомобили, машиностроение, энергоносители, сельхозпродукция. USMCA обеспечивает беспошлинную торговлю для большинства товаров.",
+    en: "$750B+ annual trade, the largest bilateral trade relationship in the world. Key goods: vehicles, machinery, energy, agricultural products. USMCA provides duty-free trade for most goods.",
+    ru: "$750B+ ежегодного товарооборота, крупнейшие двусторонние торговые отношения в мире. Основные товары: автомобили, машиностроение, энергоносители, сельхозпродукция. USMCA обеспечивает беспошлинную торговлю для большинства товаров.",
   },
   "CN-DE": {
     en: "$200B+ annual trade. Key goods: electronics, vehicles, machinery, chemicals. China is Germany's largest single-country trading partner.",
-    ru: "$200B+ ежегодного товарооборота. Основные товары: электроника, автомобили, машиностроение, химикаты. Китай — крупнейший торговый партнёр Германии по объёму.",
+    ru: "$200B+ ежегодного товарооборота. Основные товары: электроника, автомобили, машиностроение, химикаты. Китай, крупнейший торговый партнёр Германии по объёму.",
   },
   "CN-JP": {
     en: "$350B+ annual trade. Key goods: electronics, machinery, chemicals, textiles. China is Japan's largest trading partner.",
-    ru: "$350B+ ежегодного товарооборота. Основные товары: электроника, машиностроение, химикаты, текстиль. Китай — крупнейший торговый партнёр Японии.",
+    ru: "$350B+ ежегодного товарооборота. Основные товары: электроника, машиностроение, химикаты, текстиль. Китай, крупнейший торговый партнёр Японии.",
   },
   "DE-FR": {
     en: "$200B+ annual trade. Key goods: vehicles, machinery, pharmaceuticals, chemicals. Duty-free within EU single market.",
@@ -89,11 +89,11 @@ const tradeVolumeData: Record<string, { en: string; ru: string }> = {
   },
   "US-IN": {
     en: "$120B+ annual trade. Key goods: gems, pharmaceuticals, IT services, machinery, textiles. India is a major emerging trading partner for the US.",
-    ru: "$120B+ ежегодного товарооборота. Основные товары: драгоценные камни, фармацевтика, ИТ-услуги, машиностроение, текстиль. Индия — крупный развивающийся торговый партнёр США.",
+    ru: "$120B+ ежегодного товарооборота. Основные товары: драгоценные камни, фармацевтика, ИТ-услуги, машиностроение, текстиль. Индия, крупный развивающийся торговый партнёр США.",
   },
   "CN-AU": {
     en: "$200B+ annual trade. Key goods: iron ore, coal, LNG, agricultural products, education services. China is Australia's largest trading partner.",
-    ru: "$200B+ ежегодного товарооборота. Основные товары: железная руда, уголь, СПГ, сельхозпродукция, образовательные услуги. Китай — крупнейший торговый партнёр Австралии.",
+    ru: "$200B+ ежегодного товарооборота. Основные товары: железная руда, уголь, СПГ, сельхозпродукция, образовательные услуги. Китай, крупнейший торговый партнёр Австралии.",
   },
 };
 
@@ -132,7 +132,7 @@ function getShipperReviews(fromCode: string, toCode: string, locale: string): st
 
   if (hasEmerging) {
     if (isRu) {
-      return `По отзывам, доставка из ${fromCode} в ${toCode} может занять 10-21 день обычной почтой. Экспресс-службы (DHL, FedEx) — 5-8 дней. Таможенное оформление может добавить 2-5 дней. Рекомендуется использовать экспресс для ценных посылок и подготовить все документы заранее.`;
+      return `По отзывам, доставка из ${fromCode} в ${toCode} может занять 10-21 день обычной почтой. Экспресс-службы (DHL, FedEx), 5-8 дней. Таможенное оформление может добавить 2-5 дней. Рекомендуется использовать экспресс для ценных посылок и подготовить все документы заранее.`;
     }
     return `Based on user reports, shipping from ${fromCode} to ${toCode} typically takes 10-21 days via postal services. Express carriers (DHL, FedEx) deliver in 5-8 days. Customs clearance may add 2-5 days. Recommend using express for valuable shipments and preparing all documents in advance.`;
   }
