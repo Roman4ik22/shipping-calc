@@ -247,6 +247,53 @@ export default async function CorridorPage({
         {locale === "ru" ? "Тарифы проверены:" : "Rates last checked:"} March 2026
       </p>
 
+      {/* Common Shipment Examples */}
+      {corridorData && corridorData.carriers.length > 0 && (() => {
+        const getRate = (kg: number) => {
+          const cheapest = corridorData.carriers.reduce((a, b) => {
+            const aPrice = a.rates.find(r => r.weight_kg === kg)?.price_usd ?? 999;
+            const bPrice = b.rates.find(r => r.weight_kg === kg)?.price_usd ?? 999;
+            return aPrice < bPrice ? a : b;
+          });
+          return {
+            carrier: cheapest.carrier.name,
+            price: cheapest.rates.find(r => r.weight_kg === kg)?.price_usd ?? 0,
+            days: `${cheapest.estimated_days_min}-${cheapest.estimated_days_max}`
+          };
+        };
+        const r05 = getRate(0.5);
+        const r2 = getRate(2);
+        const r5 = getRate(5);
+        const r10 = getRate(10);
+        const isRu = locale === "ru";
+
+        return (
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-white mb-4" id="examples">
+              {isRu ? "💡 Примеры стоимости доставки" : "💡 Shipping Cost Examples"}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="p-3 bg-white/[0.02] rounded-lg">
+                <p className="text-sm text-white">{isRu ? "📱 Телефон / документы" : "📱 Phone / documents"} <span className="text-gray-500">(0.5 kg)</span></p>
+                <p className="text-lg font-light text-white mt-1">${r05.price} <span className="text-xs text-gray-500">via {r05.carrier}, {r05.days} {isRu ? "дней" : "days"}</span></p>
+              </div>
+              <div className="p-3 bg-white/[0.02] rounded-lg">
+                <p className="text-sm text-white">{isRu ? "👟 Обувь / одежда" : "👟 Shoes / clothing"} <span className="text-gray-500">(2 kg)</span></p>
+                <p className="text-lg font-light text-white mt-1">${r2.price} <span className="text-xs text-gray-500">via {r2.carrier}, {r2.days} {isRu ? "дней" : "days"}</span></p>
+              </div>
+              <div className="p-3 bg-white/[0.02] rounded-lg">
+                <p className="text-sm text-white">{isRu ? "📦 Средняя коробка" : "📦 Medium box"} <span className="text-gray-500">(5 kg)</span></p>
+                <p className="text-lg font-light text-white mt-1">${r5.price} <span className="text-xs text-gray-500">via {r5.carrier}, {r5.days} {isRu ? "дней" : "days"}</span></p>
+              </div>
+              <div className="p-3 bg-white/[0.02] rounded-lg">
+                <p className="text-sm text-white">{isRu ? "🖥 Электроника / тяжёлое" : "🖥 Electronics / heavy"} <span className="text-gray-500">(10 kg)</span></p>
+                <p className="text-lg font-light text-white mt-1">${r10.price} <span className="text-xs text-gray-500">via {r10.carrier}, {r10.days} {isRu ? "дней" : "days"}</span></p>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
@@ -291,6 +338,7 @@ export default async function CorridorPage({
           {locale === "ru" ? "На этой странице" : "On this page"}
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a href="#examples" className="text-gray-400 hover:text-white">{locale === "ru" ? "Примеры" : "Examples"}</a>
           <a href="#rates" className="text-gray-400 hover:text-white">{locale === "ru" ? "Тарифы" : "Rates"}</a>
           <a href="#duties" className="text-gray-400 hover:text-white">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
           <a href="#documents" className="text-gray-400 hover:text-white">{locale === "ru" ? "Документы" : "Documents"}</a>
@@ -298,6 +346,7 @@ export default async function CorridorPage({
           <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-400 hover:text-white">{locale === "ru" ? "Подробнее о таможне" : "Full Customs Guide"}</Link>
           <a href="#prohibited" className="text-gray-400 hover:text-white">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
           <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
+          <a href="#tracking" className="text-gray-400 hover:text-white">{locale === "ru" ? "Отслеживание" : "Tracking"}</a>
         </div>
       </nav>
 
@@ -431,6 +480,36 @@ export default async function CorridorPage({
           }}
         />
       </div>
+
+      {/* Track Your Shipment */}
+      {corridorData && corridorData.carriers.length > 0 && (
+        <div className="mt-8 py-8 border-t border-white/5">
+          <h2 className="text-xl font-bold text-white mb-4" id="tracking">
+            {locale === "ru" ? "📍 Отслеживание посылки" : "📍 Track Your Shipment"}
+          </h2>
+          <p className="text-sm text-gray-400 mb-4">
+            {locale === "ru"
+              ? "После отправки используйте номер отслеживания на сайте перевозчика:"
+              : "After shipping, use your tracking number on the carrier's website:"}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            {corridorData.carriers.slice(0, 9).map((cr) => (
+              cr.carrier.tracking_url ? (
+                <a
+                  key={cr.carrier.id}
+                  href={cr.carrier.tracking_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-2 transition-colors"
+                >
+                  <span className="text-gray-600">↗</span>
+                  {cr.carrier.name} — {locale === "ru" ? "отследить" : "track"}
+                </a>
+              ) : null
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Price History */}
       {corridorData && corridorData.carriers.length > 0 && (
@@ -617,6 +696,39 @@ export default async function CorridorPage({
                 </div>
               </div>
             )}
+
+            {/* Special Items Guide */}
+            <div className="py-8 border-t border-white/5">
+              <h2 className="text-xl font-bold text-white mb-4" id="special-items">
+                {isRu ? "📋 Особые категории товаров" : "📋 Special Items Guide"}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "🔋 Литиевые батареи" : "🔋 Lithium Batteries"}</p>
+                  <p className="text-gray-400">{isRu ? "Только встроенные в устройство. Отдельные батареи запрещены большинством авиаперевозчиков." : "Only when installed in device. Standalone batteries prohibited by most air carriers."}</p>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "🍷 Алкоголь" : "🍷 Alcohol"}</p>
+                  <p className="text-gray-400">{isRu ? "Ограничен или запрещён в большинстве стран. Требуется лицензия импортёра." : "Restricted or prohibited in most countries. Import license typically required."}</p>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "🍫 Продукты питания" : "🍫 Food Products"}</p>
+                  <p className="text-gray-400">{isRu ? "Требуется фитосанитарный сертификат. Скоропортящиеся товары — только экспресс-доставка." : "Phytosanitary certificate may be required. Perishables require express shipping only."}</p>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "💊 Лекарства" : "💊 Medications"}</p>
+                  <p className="text-gray-400">{isRu ? "Личное использование — до 3 месяцев запаса с рецептом. Коммерческий импорт требует лицензию." : "Personal use: up to 3-month supply with prescription. Commercial import requires license."}</p>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "🎨 Предметы искусства" : "🎨 Art & Antiques"}</p>
+                  <p className="text-gray-400">{isRu ? "Может потребоваться экспортное разрешение. Страхование настоятельно рекомендуется." : "Export permit may be required. Insurance strongly recommended."}</p>
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">{isRu ? "💻 Электроника" : "💻 Electronics"}</p>
+                  <p className="text-gray-400">{isRu ? "Проверьте совместимость напряжения. Некоторые страны требуют сертификацию (CE, FCC)." : "Check voltage compatibility. Some countries require certification (CE, FCC, etc.)."}</p>
+                </div>
+              </div>
+            </div>
 
             {/* 7. Trade Agreements */}
             {corridorInfo.trade_section && (
