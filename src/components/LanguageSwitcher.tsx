@@ -3,24 +3,22 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
-const localeConfig: Record<string, { label: string; flag: string }> = {
-  en: { label: "English", flag: "🇬🇧" },
-  ru: { label: "Русский", flag: "🇷🇺" },
-  es: { label: "Español", flag: "🇪🇸" },
-  de: { label: "Deutsch", flag: "🇩🇪" },
-  fr: { label: "Français", flag: "🇫🇷" },
-  pt: { label: "Português", flag: "🇧🇷" },
-  zh: { label: "中文", flag: "🇨🇳" },
-  ja: { label: "日本語", flag: "🇯🇵" },
-  ko: { label: "한국어", flag: "🇰🇷" },
-  ar: { label: "العربية", flag: "🇸🇦" },
-  tr: { label: "Türkçe", flag: "🇹🇷" },
-  it: { label: "Italiano", flag: "🇮🇹" },
+const localeConfig: Record<string, { label: string; flag: string; short: string }> = {
+  en: { label: "English", flag: "🇬🇧", short: "EN" },
+  ru: { label: "Русский", flag: "🇷🇺", short: "RU" },
+  es: { label: "Español", flag: "🇪🇸", short: "ES" },
+  de: { label: "Deutsch", flag: "🇩🇪", short: "DE" },
+  fr: { label: "Français", flag: "🇫🇷", short: "FR" },
+  pt: { label: "Português", flag: "🇧🇷", short: "PT" },
+  zh: { label: "中文", flag: "🇨🇳", short: "中" },
+  ja: { label: "日本語", flag: "🇯🇵", short: "日" },
+  ko: { label: "한국어", flag: "🇰🇷", short: "한" },
+  ar: { label: "العربية", flag: "🇸🇦", short: "ع" },
+  tr: { label: "Türkçe", flag: "🇹🇷", short: "TR" },
+  it: { label: "Italiano", flag: "🇮🇹", short: "IT" },
 };
 
 const allLocales = Object.keys(localeConfig);
-
-// Reduced set for non-corridor pages: only major languages
 const majorLocales = ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
 
 export default function LanguageSwitcher({ locale, validLocales }: { locale: string; validLocales?: string[] }) {
@@ -42,12 +40,9 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
     setOpen(false);
     const localeRegex = new RegExp(`^/(${allLocales.join("|")})`);
     const pathWithoutLocale = pathname.replace(localeRegex, "") || "";
-
-    // Corridor pages have locale-dependent slugs — redirect to homepage
     const isCorridorPage = /\/shipping\/[^/]+$/.test(pathWithoutLocale) &&
       !pathWithoutLocale.includes("/shipping/from/") &&
       !pathWithoutLocale.includes("/shipping/to/");
-
     if (isCorridorPage) {
       router.push(`/${newLocale}`);
     } else {
@@ -55,7 +50,6 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
     }
   };
 
-  // Use validLocales if provided, otherwise show all
   const availableLocales = validLocales || majorLocales;
   const current = localeConfig[locale] || localeConfig.en;
 
@@ -63,32 +57,42 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-white/20 bg-dark-700 text-gray-200 hover:bg-dark-600 hover:border-white/30 transition-colors text-sm"
+        className="flex items-center gap-1 text-sm text-gray-500 hover:text-white transition-colors"
         aria-label="Language"
       >
-        <span>{current.flag}</span>
-        <span className="hidden sm:inline">{current.label}</span>
-        <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        <span className="text-base">{current.flag}</span>
+        <span className="hidden sm:inline">{current.short}</span>
+        <svg className={`w-3 h-3 transition-transform ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-1 w-44 bg-dark-700 border border-white/20 rounded-lg shadow-xl z-50 overflow-hidden">
-          {availableLocales.map((loc) => (
-            <button
-              key={loc}
-              onClick={() => handleSelect(loc)}
-              className={`w-full px-3 py-2 text-left text-sm flex items-center gap-2 transition-colors ${
-                loc === locale
-                  ? "bg-accent/20 text-accent-light"
-                  : "text-gray-300 hover:bg-dark-600"
-              }`}
-            >
-              <span>{localeConfig[loc]?.flag}</span>
-              <span>{localeConfig[loc]?.label}</span>
-            </button>
-          ))}
+        <div className="absolute right-0 mt-3 w-48 bg-[#141414] rounded-xl shadow-2xl overflow-hidden z-50">
+          <div className="py-1">
+            {availableLocales.map((loc) => {
+              const config = localeConfig[loc];
+              if (!config) return null;
+              const isActive = loc === locale;
+              return (
+                <button
+                  key={loc}
+                  onClick={() => handleSelect(loc)}
+                  className={`w-full px-4 py-2.5 text-left text-sm flex items-center gap-3 transition-colors ${
+                    isActive
+                      ? "text-white bg-white/[0.05]"
+                      : "text-gray-500 hover:text-white hover:bg-white/[0.03]"
+                  }`}
+                >
+                  <span className="text-base">{config.flag}</span>
+                  <span className="flex-1">{config.label}</span>
+                  {isActive && (
+                    <span className="text-xs text-gray-600">✓</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
