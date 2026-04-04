@@ -67,6 +67,11 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocales = ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
+  if (!validLocales.includes(locale)) {
+    const { notFound } = await import("next/navigation");
+    notFound();
+  }
   const loc = locale as Locale;
 
   return (

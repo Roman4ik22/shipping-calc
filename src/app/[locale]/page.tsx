@@ -308,17 +308,23 @@ export default async function HomePage({
             {t(loc, "all_countries")}
           </h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-y-1 gap-x-4">
-            {countries.map((c) => (
+            {countries.slice(0, 50).map((c) => (
               <Link
                 key={c.code}
                 href={`/${locale}/shipping/from/${c.slug_en}`}
                 prefetch={false}
-                className="text-xs text-gray-600 hover:opacity-60 transition-all py-0.5 truncate group"
+                className="text-xs text-gray-500 hover:text-gray-300 transition-colors py-0.5 truncate"
               >
-                <span className="inline-block hover:scale-110 transition-transform text-sm mr-0.5">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
+                {countryFlag(c.code)} {getCountryName(c, loc)}
               </Link>
             ))}
           </div>
+          <Link
+            href={`/${locale}/guide`}
+            className="inline-block mt-4 text-sm text-gray-500 hover:text-white transition-colors"
+          >
+            {locale === "ru" ? "Все 213 стран →" : "All 213 countries →"}
+          </Link>
         </div>
       </section>
 
