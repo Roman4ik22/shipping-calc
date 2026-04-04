@@ -209,6 +209,46 @@ export default async function CorridorPage({
         <SaveRoute corridorSlug={corridor} originName={originName} destName={destName} locale={locale} />
       </div>
 
+      {/* Quick Answer — featured snippet target */}
+      {corridorData && corridorData.carriers.length > 0 && (() => {
+        const cheapest = corridorData.carriers.reduce((a, b) =>
+          (a.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999) < (b.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999) ? a : b
+        );
+        const fastest = corridorData.carriers.reduce((a, b) => a.estimated_days_min < b.estimated_days_min ? a : b);
+        const customs = getCustomsInfo(destination.code);
+        return (
+          <div className="my-6 p-5 bg-white/[0.03] rounded-xl">
+            <p className="text-sm text-gray-400 uppercase tracking-wider mb-3">
+              {locale === "ru" ? "Быстрый ответ" : "Quick Answer"}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <p className="text-xs text-gray-500">{locale === "ru" ? "Самый дешёвый" : "Cheapest option"}</p>
+                <p className="text-white font-medium">{cheapest.carrier.name}</p>
+                <p className="text-lg text-white font-light">${cheapest.rates.find(r => r.weight_kg === 1)?.price_usd}/{locale === "ru" ? "кг" : "kg"}</p>
+                <p className="text-xs text-gray-500">{cheapest.estimated_days_min}-{cheapest.estimated_days_max} {locale === "ru" ? "дней" : "days"}</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">{locale === "ru" ? "Самый быстрый" : "Fastest option"}</p>
+                <p className="text-white font-medium">{fastest.carrier.name}</p>
+                <p className="text-lg text-white font-light">{fastest.estimated_days_min}-{fastest.estimated_days_max} {locale === "ru" ? "дней" : "days"}</p>
+                <p className="text-xs text-gray-500">${fastest.rates.find(r => r.weight_kg === 1)?.price_usd}/{locale === "ru" ? "кг" : "kg"}</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">{locale === "ru" ? "Без пошлин до" : "Duty-free under"}</p>
+                <p className="text-lg text-white font-light">${customs.de_minimis_usd}</p>
+                <p className="text-xs text-gray-500">{locale === "ru" ? "НДС" : "VAT"}: {customs.vat_rate}%</p>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Last updated */}
+      <p className="text-xs text-gray-600 mb-6">
+        {locale === "ru" ? "Тарифы проверены:" : "Rates last checked:"} March 2026
+      </p>
+
       {/* Quick stats */}
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
@@ -257,6 +297,7 @@ export default async function CorridorPage({
           <a href="#duties" className="text-gray-400 hover:text-white">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
           <a href="#documents" className="text-gray-400 hover:text-white">{locale === "ru" ? "Документы" : "Documents"}</a>
           <a href="#customs" className="text-gray-400 hover:text-white">{locale === "ru" ? "Таможня" : "Customs"}</a>
+          <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-400 hover:text-white">{locale === "ru" ? "Подробнее о таможне" : "Full Customs Guide"}</Link>
           <a href="#prohibited" className="text-gray-400 hover:text-white">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
           <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
         </div>
@@ -490,6 +531,14 @@ export default async function CorridorPage({
                     <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.customs_reality}</p>
                   </div>
                 )}
+                <Link
+                  href={`/${locale}/customs/${destination.slug_en}`}
+                  className="inline-block mt-4 text-sm text-accent-light hover:underline"
+                >
+                  {isRu
+                    ? `Полный таможенный гид: ${destName}`
+                    : `Full customs guide for ${destName}`} &rarr;
+                </Link>
               </div>
             )}
 

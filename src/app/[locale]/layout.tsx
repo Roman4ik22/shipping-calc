@@ -221,6 +221,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <Link href={`/${locale}/about`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "about")}</Link>
                   <Link href={`/${locale}/blog`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "blog")}</Link>
                   <Link href={`/${locale}/platforms`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "platforms")}</Link>
+                  <Link href={`/${locale}/customs/united-states`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
                 </div>
               </div>
               <div>

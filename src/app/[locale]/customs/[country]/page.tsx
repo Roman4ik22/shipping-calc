@@ -1,0 +1,698 @@
+import { Metadata } from "next";
+import {
+  countries,
+  getCountryBySlug,
+  getCountryByCode,
+  getCountryName,
+  getPopularCountries,
+  makeCorridorSlug,
+} from "@/lib/data";
+import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
+import { deepCustomsData, type DeepCustomsData } from "@/data/customs-deep";
+import { t, locales } from "@/lib/i18n";
+import type { Locale } from "@/lib/types";
+import { countryFlag } from "@/lib/flags";
+import { getCorridorLocales } from "@/lib/country-locale";
+import DutyCalculator from "@/components/DutyCalculator";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+
+const BASE_URL = "https://rateships.com";
+
+// Top 40 hand-crafted countries in deepCustomsData
+const TOP_40_CODES = [
+  "US","GB","DE","FR","CN","JP","KR","AU","CA","RU",
+  "IN","AE","SG","TH","MY","BR","IT","ES","NL","TR",
+  "MX","PL","SE","CH","SA","EG","IL","ZA","NG","KE",
+  "UA","KZ","VN","ID","PH","AR","CL","CO","NZ","UG",
+];
+
+export const dynamicParams = true;
+
+export function generateStaticParams() {
+  const params: { locale: string; country: string }[] = [];
+  for (const code of TOP_40_CODES) {
+    const c = countries.find((x) => x.code === code);
+    if (!c) continue;
+    // Only en for static generation
+    params.push({ locale: "en", country: c.slug_en });
+  }
+  return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; country: string }>;
+}): Promise<Metadata> {
+  const { locale, country: slug } = await params;
+  const loc = locale as Locale;
+  const country = getCountryBySlug(slug, "en");
+  if (!country) return { title: "Not Found" };
+
+  const name = getCountryName(country, loc);
+  const customs = getCustomsInfo(country.code);
+  const deep = deepCustomsData[country.code];
+
+  const deMinimisText = customs.de_minimis_usd > 0
+    ? `$${customs.de_minimis_usd} de minimis`
+    : "no de minimis exemption";
+
+  return {
+    title: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
+    description: `Complete guide to importing goods into ${getCountryName(country, "en")}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by category, required documents, clearance process, and prohibited items.`,
+    alternates: {
+      canonical: `/${locale}/customs/${slug}`,
+      languages: Object.fromEntries(
+        getCorridorLocales(country.code, country.code).map((l) => [l, `/${l}/customs/${slug}`])
+      ),
+    },
+    openGraph: {
+      title: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
+      description: `${getCountryName(country, "en")} customs: ${deMinimisText}, ${customs.vat_rate}% VAT, avg duty ${customs.avg_duty_rate}%.`,
+      type: "article",
+    },
+  };
+}
+
+function getLocalizedField(deep: DeepCustomsData, field: string, locale: string): string {
+  const ruKey = `${field}_ru` as keyof DeepCustomsData;
+  const enKey = `${field}_en` as keyof DeepCustomsData;
+  if (locale === "ru" && deep[ruKey]) return deep[ruKey] as string;
+  return (deep[enKey] as string) || "";
+}
+
+export default async function CustomsCountryPage({
+  params,
+}: {
+  params: Promise<{ locale: string; country: string }>;
+}) {
+  const { locale, country: slug } = await params;
+  const loc = locale as Locale;
+  const country = getCountryBySlug(slug, "en");
+
+  if (!country) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h1 className="text-2xl font-bold text-white">Country not found</h1>
+      </div>
+    );
+  }
+
+  // Smart locale: redirect if locale is not relevant for this country
+  const validLocales = getCorridorLocales(country.code, country.code);
+  if (!validLocales.includes(loc)) {
+    redirect(`/en/customs/${slug}`);
+  }
+
+  const name = getCountryName(country, loc);
+  const customs = getCustomsInfo(country.code);
+  const deep = deepCustomsData[country.code];
+  const isRu = locale === "ru";
+
+  // Popular countries for related links
+  const popular = getPopularCountries().filter((c) => c.code !== country.code);
+
+  // FAQ data
+  const faqs = [
+    {
+      q: isRu
+        ? `Какой беспошлинный порог в ${name}?`
+        : `What is the duty-free threshold for ${name}?`,
+      a: customs.de_minimis_usd > 0
+        ? (isRu
+          ? `Беспошлинный порог для импорта в ${name} составляет $${customs.de_minimis_usd}. Товары стоимостью ниже этого порога не облагаются пошлиной.`
+          : `The duty-free (de minimis) threshold for imports into ${name} is $${customs.de_minimis_usd}. Goods valued below this amount are exempt from customs duties.`)
+        : (isRu
+          ? `В ${name} нет беспошлинного порога. Все импортные товары облагаются пошлиной независимо от стоимости.`
+          : `${name} has no duty-free threshold. All imported goods are subject to duties regardless of their value.`),
+    },
+    {
+      q: isRu
+        ? `Какая ставка НДС при импорте в ${name}?`
+        : `What is the VAT rate on imports to ${name}?`,
+      a: isRu
+        ? `Ставка НДС на импорт в ${name} составляет ${customs.vat_rate}%. ${deep ? `НДС применяется к: ${deep.vat_applies_to}` : ""}`
+        : `The VAT/tax rate on imports to ${name} is ${customs.vat_rate}%. ${deep ? `VAT applies to: ${deep.vat_applies_to}` : ""}`,
+    },
+    {
+      q: isRu
+        ? `Сколько занимает таможенное оформление в ${name}?`
+        : `How long does customs clearance take in ${name}?`,
+      a: deep
+        ? (isRu
+          ? `Обычное время таможенного оформления в ${name} составляет ${deep.clearance_time_days} дней. Экспресс-отправления обычно оформляются быстрее.`
+          : `Typical customs clearance in ${name} takes ${deep.clearance_time_days} days. Express shipments usually clear faster.`)
+        : (isRu
+          ? `Время таможенного оформления зависит от перевозчика и типа товара.`
+          : `Clearance time depends on the carrier and type of goods.`),
+    },
+    {
+      q: isRu
+        ? `Какие документы нужны для импорта в ${name}?`
+        : `What documents are needed to import into ${name}?`,
+      a: isRu
+        ? `Для импорта в ${name} обычно требуются: коммерческий инвойс, упаковочный лист, транспортная накладная и таможенная декларация. Для некоторых товаров может потребоваться сертификат происхождения или импортная лицензия.`
+        : `To import into ${name}, you typically need: commercial invoice, packing list, bill of lading/airway bill, and customs declaration. Some goods may require a certificate of origin or import license.`,
+    },
+    {
+      q: isRu
+        ? `Какие товары запрещено ввозить в ${name}?`
+        : `What items are prohibited from import into ${name}?`,
+      a: isRu
+        ? `В ${name} запрещён ввоз наркотиков, оружия, поддельных товаров, некоторых продуктов животного происхождения и опасных материалов. Ограничения также могут касаться алкоголя, табака, фармацевтики и электроники.`
+        : `${name} prohibits the import of narcotics, weapons, counterfeit goods, certain animal products, and hazardous materials. Restrictions may also apply to alcohol, tobacco, pharmaceuticals, and certain electronics.`,
+    },
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Breadcrumbs */}
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
+          {t(loc, "home")}
+        </Link>
+        <span className="mx-2">/</span>
+        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
+          {t(loc, "guides")}
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-white">{isRu ? `Таможня: ${name}` : `Customs: ${name}`}</span>
+      </nav>
+
+      {/* H1 */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+        {countryFlag(country.code)}{" "}
+        {isRu
+          ? `Таможня и пошлины: ${name}`
+          : `Import Customs & Duties: ${name}`}
+      </h1>
+
+      {/* Quick links */}
+      <div className="flex flex-wrap gap-3 mb-8">
+        <Link
+          href={`/${locale}/guide/${country.slug_en}`}
+          className="px-4 py-2 bg-surface border border-white/10 rounded-lg text-sm hover:border-accent/50"
+        >
+          {isRu ? `Гид по доставке в ${name}` : `Shipping Guide: ${name}`}
+        </Link>
+        <Link
+          href={`/${locale}/shipping/to/${country.slug_en}`}
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
+        >
+          {t(loc, "ship_to", { country: name })}
+        </Link>
+      </div>
+
+      {/* Table of Contents */}
+      <nav className="mb-8 py-4 border-y border-white/5">
+        <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+          {isRu ? "На этой странице" : "On this page"}
+        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a href="#quick-facts" className="text-gray-400 hover:text-white">{isRu ? "Основные данные" : "Quick Facts"}</a>
+          {deep && <a href="#duty-rates" className="text-gray-400 hover:text-white">{isRu ? "Ставки пошлин" : "Duty Rates"}</a>}
+          <a href="#calculator" className="text-gray-400 hover:text-white">{isRu ? "Калькулятор" : "Calculator"}</a>
+          {deep && <a href="#clearance" className="text-gray-400 hover:text-white">{isRu ? "Оформление" : "Clearance"}</a>}
+          {deep && <a href="#reality" className="text-gray-400 hover:text-white">{isRu ? "На практике" : "What to Expect"}</a>}
+          <a href="#documents" className="text-gray-400 hover:text-white">{isRu ? "Документы" : "Documents"}</a>
+          {deep && <a href="#license" className="text-gray-400 hover:text-white">{isRu ? "Лицензии" : "Licenses"}</a>}
+          {deep && <a href="#origin" className="text-gray-400 hover:text-white">{isRu ? "Сертификат происхождения" : "Certificate of Origin"}</a>}
+          <a href="#prohibited" className="text-gray-400 hover:text-white">{isRu ? "Запрещённые товары" : "Prohibited Items"}</a>
+          {deep && <a href="#links" className="text-gray-400 hover:text-white">{isRu ? "Полезные ссылки" : "Useful Links"}</a>}
+          <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
+        </div>
+      </nav>
+
+      {/* Quick Facts */}
+      <section id="quick-facts" className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {isRu ? "Основные данные" : "Quick Facts"}
+        </h2>
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">{t(loc, "de_minimis")}</p>
+              <p className="text-2xl font-bold text-white">
+                {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : "$0"}
+              </p>
+              <p className="text-xs text-gray-400 mt-1">
+                {customs.de_minimis_usd > 0
+                  ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
+                  : t(loc, "duty_from_zero")}
+              </p>
+            </div>
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">{t(loc, "vat_rate")}</p>
+              <p className="text-2xl font-bold text-white">{customs.vat_rate}%</p>
+              <p className="text-xs text-gray-400 mt-1">
+                {deep ? deep.vat_applies_to : customs.currency}
+              </p>
+            </div>
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">
+                {isRu ? "Время оформления" : "Clearance Time"}
+              </p>
+              <p className="text-2xl font-bold text-white">
+                {deep ? `${deep.clearance_time_days}` : "2-5"}{" "}
+                <span className="text-base font-normal text-gray-400">{isRu ? "дней" : "days"}</span>
+              </p>
+              <p className="text-xs text-gray-400 mt-1">
+                {isRu ? "типичное время" : "typical processing"}
+              </p>
+            </div>
+          </div>
+          {getCustomsNotes(customs, loc) && (
+            <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
+              <p className="text-sm text-accent-light">
+                <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
+                {getCustomsNotes(customs, loc)}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Duty Rates Table */}
+      {deep && (
+        <section id="duty-rates" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Ставки пошлин по категориям" : "Duty Rates by Category"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-gray-400 border-b border-white/10">
+                    <th className="pb-3 pr-4">{isRu ? "Категория" : "Category"}</th>
+                    <th className="pb-3 pr-4">{isRu ? "Ставка пошлины" : "Duty Rate"}</th>
+                    <th className="pb-3">{isRu ? "Код HS" : "HS Chapter"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {deep.duty_rates.map((rate, i) => (
+                    <tr key={i} className="border-b border-white/5">
+                      <td className="py-3 pr-4 text-white font-medium">
+                        {isRu ? rate.category_ru : rate.category_en}
+                      </td>
+                      <td className="py-3 pr-4 text-accent-light font-semibold">{rate.rate}</td>
+                      <td className="py-3 text-gray-400">{rate.hs_chapter}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-500 mt-4">
+              {isRu
+                ? "Ставки указаны для стандартных товаров. Точная ставка зависит от HS-кода товара."
+                : "Rates shown are for standard goods. Exact rate depends on the HS code of your item."}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Duty Calculator */}
+      {hasCustomsData(country.code) && (
+        <section id="calculator" className="mb-10">
+          <DutyCalculator
+            destCode={country.code}
+            locale={loc}
+            labels={{
+              title: t(loc, "duty_calc_title"),
+              item_value: t(loc, "duty_calc_value"),
+              calculate: t(loc, "duty_calc_calculate"),
+              duty: t(loc, "duty_calc_duty"),
+              vat: t(loc, "duty_calc_vat"),
+              total_import_cost: t(loc, "duty_calc_total"),
+              de_minimis_note: t(loc, "duty_calc_below"),
+              below_threshold: t(loc, "duty_calc_below"),
+              currency_label: t(loc, "currency"),
+              result_title: t(loc, "duty_calc_result"),
+            }}
+          />
+        </section>
+      )}
+
+      {/* Clearance Process */}
+      {deep && (
+        <section id="clearance" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Процесс таможенного оформления" : "Customs Clearance Process"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
+              {getLocalizedField(deep, "clearance_process", locale)}
+            </p>
+            <div className="flex flex-wrap gap-x-10 gap-y-3 mt-5">
+              <div>
+                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                  {isRu ? "Время оформления" : "Processing Time"}
+                </span>
+                <span className="text-white font-medium">
+                  {deep.clearance_time_days} {isRu ? "дней" : "days"}
+                </span>
+              </div>
+              <div>
+                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                  {isRu ? "НДС" : "VAT Rate"}
+                </span>
+                <span className="text-white font-medium">{deep.vat_rate}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Customs Reality */}
+      {deep && (
+        <section id="reality" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Как это работает на практике" : "What to Actually Expect"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
+              {getLocalizedField(deep, "customs_reality", locale)}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Required Documents */}
+      <section id="documents" className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {t(loc, "required_documents")}
+        </h2>
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { doc: t(loc, "doc_invoice"), desc: t(loc, "doc_invoice_desc") },
+              { doc: t(loc, "doc_packing"), desc: t(loc, "doc_packing_desc") },
+              { doc: t(loc, "doc_customs"), desc: t(loc, "doc_customs_desc") },
+              { doc: t(loc, "doc_awb"), desc: t(loc, "doc_awb_desc") },
+              { doc: t(loc, "doc_origin"), desc: t(loc, "doc_origin_desc") },
+              { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-3 items-start p-3 bg-surface-light rounded-lg">
+                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent-light rounded-lg flex items-center justify-center text-xs font-bold">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="font-medium text-white text-sm">{item.doc}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Import License Info */}
+      {deep && (
+        <section id="license" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Импортные лицензии" : "Import License Requirements"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
+              {getLocalizedField(deep, "import_license_info", locale)}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Certificate of Origin */}
+      {deep && (
+        <section id="origin" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Сертификат происхождения" : "Certificate of Origin"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
+              {getLocalizedField(deep, "certificate_of_origin", locale)}
+            </p>
+            {deep.certificate_of_origin_url && (
+              <a
+                href={deep.certificate_of_origin_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-sm text-accent-light hover:underline"
+              >
+                {isRu ? "Подробнее" : "Learn more"} &rarr;
+              </a>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Prohibited & Restricted Items */}
+      <section id="prohibited" className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {t(loc, "prohibited_items")}
+        </h2>
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <h3 className="font-semibold text-red-400 mb-2 text-sm">
+                {t(loc, "prohibited")}
+              </h3>
+              <ul className="space-y-1 text-sm text-gray-300">
+                {[
+                  t(loc, "prohibited_1"),
+                  t(loc, "prohibited_2"),
+                  t(loc, "prohibited_3"),
+                  t(loc, "prohibited_4"),
+                  t(loc, "prohibited_5"),
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-red-500 flex-shrink-0">x</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-amber-400 mb-2 text-sm">
+                {t(loc, "restricted")}
+              </h3>
+              <ul className="space-y-1 text-sm text-gray-300">
+                {[
+                  t(loc, "restricted_1"),
+                  t(loc, "restricted_2"),
+                  t(loc, "restricted_3"),
+                  t(loc, "restricted_4"),
+                  t(loc, "restricted_5"),
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-amber-500 flex-shrink-0">!</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Useful Links */}
+      {deep && (
+        <section id="links" className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isRu ? "Полезные ссылки" : "Useful Links"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  label: isRu ? "Таможенный тариф" : "Customs Tariff Lookup",
+                  url: deep.customs_tariff_url,
+                },
+                {
+                  label: isRu ? "Статистика торговли" : "Trade Statistics",
+                  url: deep.trade_statistics_url,
+                },
+                {
+                  label: isRu ? "Сертификат происхождения" : "Certificate of Origin",
+                  url: deep.certificate_of_origin_url,
+                },
+                {
+                  label: isRu ? "Правила импорта" : "Import Regulations",
+                  url: deep.import_regulations_url,
+                },
+              ]
+                .filter((link) => link.url)
+                .map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 bg-surface-light rounded-lg hover:border-accent/50 border border-transparent transition-all"
+                  >
+                    <span className="text-sm text-white font-medium">{link.label}</span>
+                    <span className="text-gray-500 text-xs ml-auto">&rarr;</span>
+                  </a>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Import Duty Estimator Table */}
+      {hasCustomsData(country.code) && (
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {t(loc, "duty_tax_estimate")}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-400 mb-4">
+              {t(loc, "duty_estimate_intro", { country: name })}
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-gray-400 border-b border-white/10">
+                    <th className="pb-2 pr-4">{t(loc, "goods_value")}</th>
+                    <th className="pb-2 pr-4">{t(loc, "duty")}</th>
+                    <th className="pb-2 pr-4">{t(loc, "vat_tax")}</th>
+                    <th className="pb-2">{t(loc, "total_charges")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[50, 100, 200, 500, 1000].map((value) => {
+                    const dutiableValue = Math.max(0, value - customs.de_minimis_usd);
+                    const duty = (dutiableValue * customs.avg_duty_rate) / 100;
+                    const vatBase = value + duty;
+                    const vat =
+                      customs.de_minimis_usd > 0 && value <= customs.de_minimis_usd
+                        ? 0
+                        : (vatBase * customs.vat_rate) / 100;
+                    const total = duty + vat;
+                    return (
+                      <tr key={value} className="border-b border-white/5">
+                        <td className="py-2 pr-4 font-medium">${value}</td>
+                        <td className="py-2 pr-4">${duty.toFixed(0)}</td>
+                        <td className="py-2 pr-4">${vat.toFixed(0)}</td>
+                        <td className="py-2 font-bold text-white">
+                          {total > 0 ? `$${total.toFixed(0)}` : t(loc, "free")}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-400 mt-3">
+              {t(loc, "duty_estimate_note")}
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Popular routes to this country */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {t(loc, "popular_routes_to", { country: name })}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {popular.slice(0, 8).map((from) => (
+            <Link
+              key={from.code}
+              href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
+              prefetch={false}
+              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
+            >
+              <span>{countryFlag(from.code)}</span>
+              <span>
+                {getCountryName(from, loc)} &rarr; {name}
+              </span>
+              <span>{countryFlag(country.code)}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {t(loc, "faq_title")}
+        </h2>
+        <div className="space-y-3">
+          {faqs.map((faq, i) => (
+            <details key={i} className="bg-surface border border-white/10 rounded-lg">
+              <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light">
+                {faq.q}
+              </summary>
+              <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: { "@type": "Answer", text: faq.a },
+              })),
+            }),
+          }}
+        />
+      </section>
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: t(loc, "home"),
+                item: `${BASE_URL}/${locale}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: t(loc, "guides"),
+                item: `${BASE_URL}/${locale}/guide`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: isRu ? `Таможня: ${name}` : `Customs: ${name}`,
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* WebPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
+            description: `Complete customs guide for ${getCountryName(country, "en")}: de minimis $${customs.de_minimis_usd}, VAT ${customs.vat_rate}%, duty rates, documents, clearance.`,
+            url: `${BASE_URL}/${locale}/customs/${slug}`,
+            inLanguage: locale,
+            isPartOf: {
+              "@type": "WebSite",
+              name: "RateShips",
+              url: BASE_URL,
+            },
+            dateModified: "2026-04-01",
+          }),
+        }}
+      />
+    </div>
+  );
+}
