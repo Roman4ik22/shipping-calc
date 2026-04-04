@@ -157,22 +157,26 @@ export function getAllPagesByPriority(): PagePriority[] {
     }
   }
 
-  // --- Carrier pages ---
+  // --- Carrier pages (top-10 all locales, rest en only) ---
   for (const locale of locales) {
-    // Carrier index
+    // Carrier index on all locales
     pages.push({
       url: `${BASE_URL}/${locale}/carriers`,
       locale,
       type: "carrier",
-      priority: locale === "en" ? 0.35 : 0.15,
-      estimated_monthly_searches: estimateSearches(locale === "en" ? 0.35 : 0.15),
+      priority: locale === "en" ? 0.35 : 0.1,
+      estimated_monthly_searches: estimateSearches(locale === "en" ? 0.35 : 0.1),
     });
     for (const carrier of carriers) {
       const isTop10Carrier = TOP_10_CARRIERS.includes(carrier.id);
+      // Top-10 carriers: all locales. Others: en only
+      if (!isTop10Carrier && locale !== "en") continue;
       const priority =
         locale === "en" && isTop10Carrier
           ? 0.35
-          : 0.15;
+          : isTop10Carrier
+            ? 0.15
+            : 0.1;
       pages.push({
         url: `${BASE_URL}/${locale}/carriers/${carrier.id}`,
         locale,
@@ -183,24 +187,27 @@ export function getAllPagesByPriority(): PagePriority[] {
     }
   }
 
-  // --- Guide pages ---
+  // --- Guide pages (only country's language + en) ---
   for (const locale of locales) {
-    // Guide index
+    // Guide index on all locales
     pages.push({
       url: `${BASE_URL}/${locale}/guide`,
       locale,
       type: "guide",
-      priority: locale === "en" ? 0.6 : 0.2,
-      estimated_monthly_searches: estimateSearches(locale === "en" ? 0.6 : 0.2),
+      priority: locale === "en" ? 0.6 : 0.15,
+      estimated_monthly_searches: estimateSearches(locale === "en" ? 0.6 : 0.15),
     });
-    for (const country of countries) {
-      const isTop20Country = isTop20(country.code);
+  }
+  for (const country of countries) {
+    const validLocales = getCorridorLocales(country.code, country.code);
+    const isTop20Country = isTop20(country.code);
+    for (const locale of validLocales) {
       const priority =
         locale === "en" && isTop20Country
           ? 0.6
           : isTop20Country
-            ? 0.2
-            : 0.2;
+            ? 0.3
+            : 0.15;
       pages.push({
         url: `${BASE_URL}/${locale}/guide/${country.slug_en}`,
         locale,
@@ -211,10 +218,11 @@ export function getAllPagesByPriority(): PagePriority[] {
     }
   }
 
-  // --- From/To hub pages ---
-  for (const locale of locales) {
-    for (const country of countries) {
-      const isTop20Country = isTop20(country.code);
+  // --- From/To hub pages (only country's language + en) ---
+  for (const country of countries) {
+    const validLocales = getCorridorLocales(country.code, country.code);
+    const isTop20Country = isTop20(country.code);
+    for (const locale of validLocales) {
       const priority =
         locale === "en" && isTop20Country
           ? 0.5
