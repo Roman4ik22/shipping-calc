@@ -60,16 +60,16 @@ export default async function HomePage({
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-center">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-xl text-gray-500 text-center max-w-2xl mx-auto mt-6">
+          <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto mt-6">
             {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
-          <p className="text-center mt-8 text-sm text-gray-600 tracking-wide">
-            <span className="font-mono">213</span> {t(loc, "all_countries")}
-            <span className="mx-3 text-gray-700">|</span>
-            <span className="font-mono">134</span> {t(loc, "carriers_page")}
-            <span className="mx-3 text-gray-700">|</span>
-            <span className="font-mono">45K+</span> {t(loc, "routes")}
+          <p className="text-center mt-8 text-sm text-gray-400 tracking-wide">
+            <span className="font-mono text-white">213</span> {t(loc, "all_countries")}
+            <span className="mx-3 text-gray-600">|</span>
+            <span className="font-mono text-white">134</span> {t(loc, "carriers_page")}
+            <span className="mx-3 text-gray-600">|</span>
+            <span className="font-mono text-white">45K+</span> {t(loc, "routes")}
           </p>
           <p className="text-center mt-3 text-xs text-gray-600">
             {loc === "ru" ? "Используется для 12,000+ сравнений ежемесячно" : "Used for 12,000+ rate comparisons monthly"}

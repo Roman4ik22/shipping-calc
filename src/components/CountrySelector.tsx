@@ -77,7 +77,7 @@ export default function CountrySelector({
 
   return (
     <div className="relative" ref={ref}>
-      <label className="block text-xs text-gray-500 mb-2 uppercase tracking-wide">
+      <label className="block text-xs text-gray-300 mb-2 uppercase tracking-wide">
         {label}
       </label>
       <button
@@ -90,7 +90,7 @@ export default function CountrySelector({
             {countryFlag(selected.code)} {getName(selected)}
           </span>
         ) : (
-          <span className="text-gray-600">—</span>
+          <span className="text-gray-400">—</span>
         )}
       </button>
 
