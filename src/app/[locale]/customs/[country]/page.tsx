@@ -14,7 +14,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
 import DutyCalculator from "@/components/DutyCalculator";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { redirect, notFound } from "next/navigation";
 
 const BASE_URL = "https://rateships.com";
 
@@ -91,11 +91,7 @@ export default async function CustomsCountryPage({
   const country = getCountryBySlug(slug, "en");
 
   if (!country) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-white">Country not found</h1>
-      </div>
-    );
+    notFound();
   }
 
   // Smart locale: redirect if locale is not relevant for this country
@@ -328,6 +324,11 @@ export default async function CustomsCountryPage({
               currency_label: t(loc, "currency"),
               result_title: t(loc, "duty_calc_result"),
             }}
+            dutyRates={deep?.duty_rates.map((r) => ({
+              category: loc === "ru" ? r.category_ru : r.category_en,
+              rate: r.rate,
+              hs: r.hs_chapter.replace("HS ", ""),
+            }))}
           />
         </section>
       )}

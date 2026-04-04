@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { countries } from "@/lib/data";
 import { getCustomsInfo } from "@/lib/customs";
+import { deepCustomsData } from "@/data/customs-deep";
 import DutyCalculator from "@/components/DutyCalculator";
 
 // Duty rates table for common categories
@@ -35,6 +36,16 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
   }, [isRu]);
 
   const selectedName = sortedCountries.find((c) => c.code === selectedCountry);
+
+  const dutyRates = useMemo(() => {
+    const deep = deepCustomsData[selectedCountry];
+    if (!deep) return undefined;
+    return deep.duty_rates.map((r) => ({
+      category: isRu ? r.category_ru : r.category_en,
+      rate: r.rate,
+      hs: r.hs_chapter.replace("HS ", ""),
+    }));
+  }, [selectedCountry, isRu]);
 
   const labels = {
     title: isRu ? "Калькулятор пошлин" : "Duty Calculator",
@@ -77,6 +88,7 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
           destCode={selectedCountry}
           locale={locale as "en" | "ru"}
           labels={labels}
+          dutyRates={dutyRates}
         />
       </div>
 
@@ -144,15 +156,23 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
               </tr>
             </thead>
             <tbody>
-              {dutyCategories.map((cat) => (
-                <tr key={cat.hs} className="border-b border-white/5">
-                  <td className="text-gray-200 py-3 pr-4">
-                    {isRu ? cat.category_ru : cat.category_en}
-                  </td>
-                  <td className="text-gray-400 py-3 pr-4 font-mono text-xs">{cat.hs}</td>
-                  <td className="text-right text-gray-200 py-3">{customs.avg_duty_rate}%</td>
-                </tr>
-              ))}
+              {dutyRates
+                ? dutyRates.map((r) => (
+                    <tr key={r.hs} className="border-b border-white/5">
+                      <td className="text-gray-200 py-3 pr-4">{r.category}</td>
+                      <td className="text-gray-400 py-3 pr-4 font-mono text-xs">HS {r.hs}</td>
+                      <td className="text-right text-gray-200 py-3">{r.rate}</td>
+                    </tr>
+                  ))
+                : dutyCategories.map((cat) => (
+                    <tr key={cat.hs} className="border-b border-white/5">
+                      <td className="text-gray-200 py-3 pr-4">
+                        {isRu ? cat.category_ru : cat.category_en}
+                      </td>
+                      <td className="text-gray-400 py-3 pr-4 font-mono text-xs">{cat.hs}</td>
+                      <td className="text-right text-gray-200 py-3">{customs.avg_duty_rate}%</td>
+                    </tr>
+                  ))}
             </tbody>
           </table>
         </div>

@@ -12,6 +12,8 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
+import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -66,11 +68,12 @@ export default async function GuidePage({
   const country = getCountryBySlug(slug, "en");
 
   if (!country) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold">Country not found</h1>
-      </div>
-    );
+    notFound();
+  }
+
+  const validLocales = getCorridorLocales(country.code, country.code);
+  if (!validLocales.includes(loc)) {
+    redirect(`/en/guide/${country.slug_en}`);
   }
 
   const name = getCountryName(country, loc);

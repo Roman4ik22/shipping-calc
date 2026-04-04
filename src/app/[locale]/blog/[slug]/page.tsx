@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
@@ -235,11 +236,7 @@ export default async function BlogPostPage({
   const BASE_URL = "https://rateships.com";
 
   if (!post) {
-    return (
-      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
-        <p className="text-white text-xl">Post not found</p>
-      </div>
-    );
+    notFound();
   }
 
   const title = isRu ? post.title_ru : post.title_en;

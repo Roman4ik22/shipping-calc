@@ -4,6 +4,12 @@ import { useState } from "react";
 import { getCustomsInfo, getCustomsNotes } from "@/lib/customs";
 import type { Locale } from "@/lib/types";
 
+interface DutyRate {
+  category: string;
+  rate: string;
+  hs: string;
+}
+
 interface DutyCalculatorProps {
   destCode: string;
   locale: Locale;
@@ -19,6 +25,17 @@ interface DutyCalculatorProps {
     currency_label: string;
     result_title: string;
   };
+  dutyRates?: DutyRate[];
+}
+
+function parseDutyRate(rate: string): number {
+  const cleaned = rate.replace('%', '').trim();
+  if (cleaned === 'N/A' || cleaned === '0') return 0;
+  if (cleaned.includes('-')) {
+    const [low, high] = cleaned.split('-').map(Number);
+    return (low + high) / 2;
+  }
+  return parseFloat(cleaned) || 0;
 }
 
 interface CalcResult {
@@ -33,8 +50,10 @@ export default function DutyCalculator({
   destCode,
   locale,
   labels,
+  dutyRates,
 }: DutyCalculatorProps) {
   const [inputValue, setInputValue] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [result, setResult] = useState<CalcResult | null>(null);
 
   const customs = getCustomsInfo(destCode);
@@ -50,6 +69,15 @@ export default function DutyCalculator({
     let duty: number;
     let vat: number;
 
+    // Determine duty rate: category-specific or average
+    let effectiveDutyRate = customs.avg_duty_rate;
+    if (selectedCategory && dutyRates) {
+      const matched = dutyRates.find((r) => r.hs === selectedCategory);
+      if (matched) {
+        effectiveDutyRate = parseDutyRate(matched.rate);
+      }
+    }
+
     if (belowThreshold) {
       duty = 0;
       vat = 0;
@@ -58,7 +86,7 @@ export default function DutyCalculator({
         customs.de_minimis_usd > 0
           ? Math.max(0, value - customs.de_minimis_usd)
           : value;
-      duty = (dutiableValue * customs.avg_duty_rate) / 100;
+      duty = (dutiableValue * effectiveDutyRate) / 100;
       vat = ((value + duty) * customs.vat_rate) / 100;
     }
 
@@ -80,6 +108,34 @@ export default function DutyCalculator({
   return (
     <div className="bg-surface border border-white/10 rounded-xl p-6">
       <h3 className="text-lg font-bold text-white mb-4">{labels.title}</h3>
+
+      {/* Product category selector */}
+      {dutyRates && dutyRates.length > 0 && (
+        <div className="mb-4">
+          <label className="block text-sm text-gray-400 mb-1">
+            {locale === "ru" ? "Категория товара" : "Product category"}
+          </label>
+          <select
+            value={selectedCategory}
+            onChange={(e) => {
+              setSelectedCategory(e.target.value);
+              setResult(null);
+            }}
+            className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+          >
+            <option value="">
+              {locale === "ru"
+                ? "Любая категория (средняя ставка)"
+                : "Any category (average rate)"}
+            </option>
+            {dutyRates.map((r) => (
+              <option key={r.hs} value={r.hs}>
+                {r.category} (HS {r.hs}) — {r.rate}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {/* Input row */}
       <div className="flex flex-col sm:flex-row gap-3 mb-4">
@@ -144,7 +200,13 @@ export default function DutyCalculator({
             </div>
             <div className="flex justify-between">
               <span className="text-gray-300">
-                {labels.duty} ({customs.avg_duty_rate}%)
+                {labels.duty} (
+                {selectedCategory && dutyRates
+                  ? `${parseDutyRate(
+                      dutyRates.find((r) => r.hs === selectedCategory)?.rate ?? "0%"
+                    ).toFixed(1)}%`
+                  : `${customs.avg_duty_rate}%`}
+                )
               </span>
               <span className="text-gray-100 font-medium">
                 ${result.duty.toFixed(2)}

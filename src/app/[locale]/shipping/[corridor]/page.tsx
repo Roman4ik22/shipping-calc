@@ -9,6 +9,7 @@ import {
   getCarrierDescription,
 } from "@/lib/data";
 import { getCustomsInfo, getCustomsNotes, hasCustomsData } from "@/lib/customs";
+import { deepCustomsData } from "@/data/customs-deep";
 import { getCarrierReview } from "@/lib/reviews";
 import { getRouteScore, getScoreLabel } from "@/lib/route-scoring";
 import { t, locales } from "@/lib/i18n";
@@ -23,7 +24,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorContent } from "@/data/corridor-content";
 import { generateCorridorInfo } from "@/lib/corridor-generator";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { redirect, notFound } from "next/navigation";
 import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
@@ -116,11 +117,7 @@ export default async function CorridorPage({
   const parsed = parseCorridorSlug(corridor, loc);
 
   if (!parsed) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold">Route not found</h1>
-      </div>
-    );
+    notFound();
   }
 
   const { origin, destination } = parsed;
@@ -409,6 +406,11 @@ export default async function CorridorPage({
             currency_label: t(loc, "currency"),
             result_title: t(loc, "duty_calc_result"),
           }}
+          dutyRates={deepCustomsData[destination.code]?.duty_rates.map((r) => ({
+            category: loc === "ru" ? r.category_ru : r.category_en,
+            rate: r.rate,
+            hs: r.hs_chapter.replace("HS ", ""),
+          }))}
         />
       </div>
 

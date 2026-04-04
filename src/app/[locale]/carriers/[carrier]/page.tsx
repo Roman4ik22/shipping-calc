@@ -4,6 +4,7 @@ import { getCarrierReview } from "@/lib/reviews";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -54,11 +55,7 @@ export default async function CarrierPage({
   const carrier = getCarrierById(carrierId);
 
   if (!carrier) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold">Carrier not found</h1>
-      </div>
-    );
+    notFound();
   }
 
   return (
