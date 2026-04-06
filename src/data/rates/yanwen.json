@@ -1,7 +1,7 @@
 {
   "carrier_id": "yanwen",
-  "effective_date": "2026-03-30",
-  "note": "Real rates from nextsmartship.com. Premium ~$9-15/kg. Zone 3 (Americas/Oceania) anchored to real CN→US data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30]",
+  "effective_date": "2026-04-06",
+  "note": "Real rates from nextsmartship.com. Premium ~$9-15/kg. Zone 3 (Americas/Oceania) anchored to real CN→US data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]",
   "zones": [
     {
       "zone": 1,
@@ -85,64 +85,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.86,
-          10.3,
-          16.74,
-          23.18
+          3.98,
+          10.61,
+          17.24,
+          23.88
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          13.73,
-          22.32,
-          30.9
+          5.3,
+          14.14,
+          22.99,
+          31.83
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.47,
-          19.91,
-          32.36,
-          44.81
+          7.69,
+          20.51,
+          33.33,
+          46.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.88,
-          34.33,
-          55.81,
-          77.25
+          13.27,
+          35.36,
+          57.48,
+          79.57
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.63,
-          57.67,
-          93.74,
-          129.78
+          22.28,
+          59.4,
+          96.55,
+          133.67
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          37.08,
-          98.86,
-          160.7,
-          222.48
+          38.19,
+          101.83,
+          165.52,
+          229.15
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          51.5,
-          137.3,
-          223.2,
-          309
+          53.05,
+          141.42,
+          229.9,
+          318.27
         ]
       }
     ],
@@ -150,64 +150,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.86,
-          10.3,
-          16.74,
-          23.18
+          3.98,
+          10.61,
+          17.24,
+          23.88
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          13.73,
-          22.32,
-          30.9
+          5.3,
+          14.14,
+          22.99,
+          31.83
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.47,
-          19.91,
-          32.36,
-          44.81
+          7.69,
+          20.51,
+          33.33,
+          46.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.88,
-          34.33,
-          55.81,
-          77.25
+          13.27,
+          35.36,
+          57.48,
+          79.57
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.63,
-          57.67,
-          93.74,
-          129.78
+          22.28,
+          59.4,
+          96.55,
+          133.67
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          37.08,
-          98.86,
-          160.7,
-          222.48
+          38.19,
+          101.83,
+          165.52,
+          229.15
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          51.5,
-          137.3,
-          223.2,
-          309
+          53.05,
+          141.42,
+          229.9,
+          318.27
         ]
       }
     ]

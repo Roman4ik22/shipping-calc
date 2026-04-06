@@ -1,7 +1,7 @@
 {
   "carrier_id": "asendia",
-  "effective_date": "2026-03-30",
-  "note": "Estimated rates for Asendia e-PAQ international mail and parcel service. Alliance between La Poste and Swiss Post. Actual rates vary by contract. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30]",
+  "effective_date": "2026-04-06",
+  "note": "Estimated rates for Asendia e-PAQ international mail and parcel service. Alliance between La Poste and Swiss Post. Actual rates vary by contract. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]",
   "zones": [
     {
       "zone": 1,
@@ -145,109 +145,109 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.86,
-          7.47,
-          11.07,
-          14.68,
-          18.28,
-          21.89,
-          25.49
+          3.98,
+          7.69,
+          11.4,
+          15.12,
+          18.83,
+          22.55,
+          26.25
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          9.96,
-          14.76,
-          19.57,
-          24.38,
-          29.18,
-          33.99
+          5.3,
+          10.26,
+          15.2,
+          20.16,
+          25.11,
+          30.06,
+          35.01
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.47,
-          14.44,
-          21.4,
-          28.38,
-          35.35,
-          42.31,
-          49.29
+          7.69,
+          14.87,
+          22.04,
+          29.23,
+          36.41,
+          43.58,
+          50.77
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          9.53,
-          18.43,
-          27.31,
-          36.2,
-          45.1,
-          53.98,
-          62.88
+          9.82,
+          18.98,
+          28.13,
+          37.29,
+          46.45,
+          55.6,
+          64.77
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.88,
-          24.91,
-          36.9,
-          48.93,
-          60.96,
-          72.94,
-          84.98
+          13.27,
+          25.66,
+          38.01,
+          50.4,
+          62.79,
+          75.13,
+          87.53
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.63,
-          41.83,
-          62,
-          82.19,
-          102.39,
-          122.56,
-          142.76
+          22.28,
+          43.08,
+          63.86,
+          84.66,
+          105.46,
+          126.24,
+          147.04
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          29.87,
-          57.77,
-          85.6,
-          113.51,
-          141.41,
-          169.24,
-          197.14
+          30.77,
+          59.5,
+          88.17,
+          116.92,
+          145.65,
+          174.32,
+          203.05
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          37.08,
-          71.71,
-          106.28,
-          140.9,
-          175.53,
-          210.1,
-          244.73
+          38.19,
+          73.86,
+          109.47,
+          145.13,
+          180.8,
+          216.4,
+          252.07
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          51.5,
-          99.6,
-          147.6,
-          195.7,
-          243.8,
-          291.8,
-          339.9
+          53.05,
+          102.59,
+          152.03,
+          201.57,
+          251.11,
+          300.55,
+          350.1
         ]
       }
     ]

@@ -75,61 +75,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.37,
-          19.1,
-          30.24
+          6.56,
+          19.67,
+          31.15
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.49,
-          25.46,
-          40.31
+          8.74,
+          26.22,
+          41.52
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.31,
-          36.92,
-          58.45
+          12.68,
+          38.03,
+          60.2
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          21.22,
-          63.65,
-          100.79
+          21.86,
+          65.56,
+          103.81
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          35.65,
-          106.93,
-          169.32
+          36.72,
+          110.14,
+          174.4
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          61.11,
-          183.32,
-          290.26
+          62.94,
+          188.82,
+          298.97
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          84.87,
-          254.62,
-          403.14
+          87.42,
+          262.26,
+          415.23
         ]
       }
     ]
   },
-  "effective_date": "2026-03-30",
-  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30]"
+  "effective_date": "2026-04-06",
+  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]"
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex-australia-formerly-fastway",
-  "effective_date": "2026-03-30",
-  "note": "Estimated Aramex Australia (formerly Fastway Couriers) rates. Franchise-based courier network with domestic and international delivery. Part of Aramex global network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30]",
+  "effective_date": "2026-04-06",
+  "note": "Estimated Aramex Australia (formerly Fastway Couriers) rates. Franchise-based courier network with domestic and international delivery. Part of Aramex global network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]",
   "zones": [
     {
       "zone": 1,
@@ -89,71 +89,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.86,
-          8.69,
-          13.51,
-          18.34,
-          23.18
+          3.98,
+          8.95,
+          13.92,
+          18.89,
+          23.88
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.15,
-          11.59,
-          18.03,
-          24.46,
-          30.9
+          5.3,
+          11.94,
+          18.57,
+          25.19,
+          31.83
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.47,
-          16.8,
-          26.14,
-          35.47,
-          44.81
+          7.69,
+          17.3,
+          26.92,
+          36.53,
+          46.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          12.88,
-          28.96,
-          45.06,
-          61.16,
-          77.25
+          13.27,
+          29.83,
+          46.41,
+          62.99,
+          79.57
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.63,
-          48.67,
-          75.71,
-          102.74,
-          129.78
+          22.28,
+          50.13,
+          77.98,
+          105.82,
+          133.67
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          37.08,
-          83.43,
-          129.78,
-          176.13,
-          222.48
+          38.19,
+          85.93,
+          133.67,
+          181.41,
+          229.15
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          109.44,
-          246.23,
-          383.04,
-          519.83,
-          656.63
+          112.72,
+          253.62,
+          394.53,
+          535.42,
+          676.33
         ]
       }
     ]
