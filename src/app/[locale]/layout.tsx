@@ -306,6 +306,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <Link href={`/${locale}/team`} className="text-gray-500 hover:text-white transition-colors">
                     {locale === "ru" ? "Команда" : "Team"}
                   </Link>
+                  <Link href={`/${locale}/updates`} className="text-gray-500 hover:text-white transition-colors">
+                    {locale === "ru" ? "Обновления" : "Updates"}
+                  </Link>
                 </div>
               </div>
             </div>
