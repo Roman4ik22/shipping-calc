@@ -72,7 +72,7 @@ export default async function HomePage({
             <span className="font-mono text-white">45K+</span> {t(loc, "routes")}
           </p>
           <p className="text-center mt-3 text-xs text-gray-600">
-            {loc === "ru" ? "Используется для 12,000+ сравнений ежемесячно" : "Used for 12,000+ rate comparisons monthly"}
+            {loc === "ru" ? "Открытые тарифы перевозчиков, обновляемые еженедельно" : "Open carrier rate data, updated weekly"}
           </p>
 
           <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl p-8 pb-20 overflow-visible relative shadow-2xl">
@@ -226,7 +226,7 @@ export default async function HomePage({
           <div className="flex flex-col sm:flex-row gap-4 items-stretch">
             <Link href={`/${locale}/tools/duty-calculator`}
               className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
-              <span className="text-3xl">🧮</span>
+              <span className="text-lg text-gray-600">/</span>
               <div>
                 <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</h3>
                 <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "НДС, пошлины, полная стоимость ввоза" : "VAT, duties, total landed cost"}</p>
@@ -234,7 +234,7 @@ export default async function HomePage({
             </Link>
             <Link href={`/${locale}/tools/delivery-estimator`}
               className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
-              <span className="text-3xl">📅</span>
+              <span className="text-lg text-gray-600">/</span>
               <div>
                 <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}</h3>
                 <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "С учётом выходных и праздников" : "Accounts for weekends & holidays"}</p>

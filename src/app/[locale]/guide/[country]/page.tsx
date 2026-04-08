@@ -345,7 +345,7 @@ export default async function GuidePage({
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href={`/${locale}/tools/duty-calculator`}
             className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
-            <span className="text-xl">🧮</span>
+            <span className="text-sm text-gray-600">/</span>
             <div>
               <p className="font-medium text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</p>
               <p className="text-xs text-gray-500">{locale === "ru" ? `Пошлины для ${name}` : `Duties for ${name}`}</p>
@@ -353,7 +353,7 @@ export default async function GuidePage({
           </Link>
           <Link href={`/${locale}/tools/delivery-estimator`}
             className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
-            <span className="text-xl">📅</span>
+            <span className="text-sm text-gray-600">/</span>
             <div>
               <p className="font-medium text-white text-sm">{locale === "ru" ? "Сроки доставки" : "Delivery Estimator"}</p>
               <p className="text-xs text-gray-500">{locale === "ru" ? "Дата доставки" : "Delivery date"}</p>

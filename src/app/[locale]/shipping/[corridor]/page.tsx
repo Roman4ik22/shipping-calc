@@ -259,7 +259,7 @@ export default async function CorridorPage({
 
       {/* Last updated */}
       <p className="text-xs text-gray-600 mb-6">
-        {locale === "ru" ? "Тарифы проверены:" : "Rates last checked:"} March 2026
+        {locale === "ru" ? "Данные на апрель 2026" : "Data as of April 2026"}
       </p>
 
       {/* Common Shipment Examples */}
@@ -433,35 +433,26 @@ export default async function CorridorPage({
         </div>
       )}
 
-      {/* Trust bar */}
-      <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 py-4 border-t border-white/5">
-        <span>{locale === "ru" ? "✓ 134+ перевозчика" : "✓ 134+ carriers compared"}</span>
-        <span>{locale === "ru" ? "✓ Обновлено еженедельно" : "✓ Updated weekly"}</span>
-        <span>{locale === "ru" ? "✓ Источники данных проверены" : "✓ Data sources verified"}</span>
-        <Link href={`/${locale}/data-methodology`} className="text-accent-light hover:text-white">
-          {locale === "ru" ? "Наша методология →" : "Our methodology →"}
+      {/* Source note */}
+      <p className="text-xs text-gray-600 py-3 border-t border-white/5">
+        {locale === "ru"
+          ? "Тарифы собраны из открытых источников и обновляются еженедельно. "
+          : "Rates aggregated from public carrier data, updated weekly. "}
+        <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
+          {locale === "ru" ? "Как мы собираем данные" : "How we collect data"}
         </Link>
-      </div>
+      </p>
 
-      {/* Shipping Tools — cross-link */}
-      <div className="flex flex-wrap gap-3 mt-4 mb-4">
-        <Link
-          href={`/${locale}/tools/duty-calculator`}
-          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
-        >
-          <span>🧮</span> {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
+      {/* Related tools */}
+      <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 mb-4 text-sm">
+        <Link href={`/${locale}/tools/duty-calculator`} className="text-gray-500 hover:text-white transition-colors">
+          {locale === "ru" ? "Калькулятор пошлин" : "Duty calculator"} &rarr;
         </Link>
-        <Link
-          href={`/${locale}/tools/delivery-estimator`}
-          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
-        >
-          <span>📅</span> {locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}
+        <Link href={`/${locale}/tools/delivery-estimator`} className="text-gray-500 hover:text-white transition-colors">
+          {locale === "ru" ? "Сроки доставки" : "Delivery estimator"} &rarr;
         </Link>
-        <Link
-          href={`/${locale}/customs/${destination.slug_en}`}
-          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
-        >
-          <span>📋</span> {locale === "ru" ? `Таможня: ${destName}` : `${destName} Customs`}
+        <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-500 hover:text-white transition-colors">
+          {locale === "ru" ? `Таможня ${destName}` : `${destName} customs`} &rarr;
         </Link>
       </div>
 
@@ -529,7 +520,7 @@ export default async function CorridorPage({
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="mt-8 py-8 border-t border-white/5">
           <h2 className="text-xl font-bold text-white mb-4" id="tracking">
-            {locale === "ru" ? "📍 Отслеживание посылки" : "📍 Track Your Shipment"}
+            {locale === "ru" ? "Отслеживание посылки" : "Track Your Shipment"}
           </h2>
           <p className="text-sm text-gray-400 mb-4">
             {locale === "ru"
@@ -588,7 +579,7 @@ export default async function CorridorPage({
             {corridorInfo.duty_table.length > 0 && (
               <div id="duties" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-1">
-                  <span className="mr-2 opacity-60">&#x1F4CA;</span>
+                  
                   {isRu ? `Импортные пошлины: ${destName}` : `Import Duty Rates: ${destName}`}
                 </h2>
                 <p className="text-sm text-gray-500 mb-5">
@@ -626,7 +617,7 @@ export default async function CorridorPage({
             {(corridorInfo.clearance_info || corridorInfo.customs_reality) && (
               <div id="customs" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  <span className="mr-2 opacity-60">&#x1F6C3;</span>
+                  
                   {isRu ? "Таможенное оформление" : "Customs Clearance"}
                 </h2>
                 {corridorInfo.clearance_info && (
@@ -675,7 +666,7 @@ export default async function CorridorPage({
             {corridorInfo.docs_section && (
               <div id="documents" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-6">
-                  <span className="mr-2 opacity-60">&#x1F4CB;</span>
+                  
                   {isRu ? "Необходимые документы" : "Required Documents"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -701,7 +692,7 @@ export default async function CorridorPage({
             {corridorInfo.trade_volume && (
               <div id="trade" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  <span className="mr-2 opacity-60">&#x1F91D;</span>
+                  
                   {isRu
                     ? `Торговля: ${originName} и ${destName}`
                     : `Trade: ${originName} & ${destName}`}
@@ -727,7 +718,7 @@ export default async function CorridorPage({
             {corridorInfo.prohibited_section && (
               <div id="prohibited" className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-6">
-                  <span className="mr-2 opacity-60">&#x26D4;</span>
+                  
                   {isRu ? "Запрещённые и ограниченные товары" : "Prohibited & Restricted Items"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -741,36 +732,28 @@ export default async function CorridorPage({
               </div>
             )}
 
-            {/* Special Items Guide */}
+            {/* Special Items Guide — table format, not 6 identical cards */}
             <div className="py-8 border-t border-white/5">
               <h2 className="text-xl font-bold text-white mb-4" id="special-items">
-                {isRu ? "📋 Особые категории товаров" : "📋 Special Items Guide"}
+                {isRu ? "Особые категории товаров" : "Special Items Guide"}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "🔋 Литиевые батареи" : "🔋 Lithium Batteries"}</p>
-                  <p className="text-gray-400">{isRu ? "Только встроенные в устройство. Отдельные батареи запрещены большинством авиаперевозчиков." : "Only when installed in device. Standalone batteries prohibited by most air carriers."}</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "🍷 Алкоголь" : "🍷 Alcohol"}</p>
-                  <p className="text-gray-400">{isRu ? "Ограничен или запрещён в большинстве стран. Требуется лицензия импортёра." : "Restricted or prohibited in most countries. Import license typically required."}</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "🍫 Продукты питания" : "🍫 Food Products"}</p>
-                  <p className="text-gray-400">{isRu ? "Требуется фитосанитарный сертификат. Скоропортящиеся товары — только экспресс-доставка." : "Phytosanitary certificate may be required. Perishables require express shipping only."}</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "💊 Лекарства" : "💊 Medications"}</p>
-                  <p className="text-gray-400">{isRu ? "Личное использование — до 3 месяцев запаса с рецептом. Коммерческий импорт требует лицензию." : "Personal use: up to 3-month supply with prescription. Commercial import requires license."}</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "🎨 Предметы искусства" : "🎨 Art & Antiques"}</p>
-                  <p className="text-gray-400">{isRu ? "Может потребоваться экспортное разрешение. Страхование настоятельно рекомендуется." : "Export permit may be required. Insurance strongly recommended."}</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{isRu ? "💻 Электроника" : "💻 Electronics"}</p>
-                  <p className="text-gray-400">{isRu ? "Проверьте совместимость напряжения. Некоторые страны требуют сертификацию (CE, FCC)." : "Check voltage compatibility. Some countries require certification (CE, FCC, etc.)."}</p>
-                </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-xs text-gray-500 uppercase tracking-wider">
+                      <th className="pb-3 pr-6">{isRu ? "Категория" : "Category"}</th>
+                      <th className="pb-3">{isRu ? "Ограничения" : "Restrictions"}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Литиевые батареи" : "Lithium batteries"}</td><td className="py-3 text-gray-400">{isRu ? "Только встроенные в устройство. Отдельные запрещены авиаперевозчиками." : "Only installed in device. Standalone prohibited by air carriers."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Алкоголь" : "Alcohol"}</td><td className="py-3 text-gray-400">{isRu ? "Ограничен или запрещён. Требуется лицензия импортёра." : "Restricted or prohibited. Import license typically required."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Продукты питания" : "Food"}</td><td className="py-3 text-gray-400">{isRu ? "Фитосанитарный сертификат. Скоропортящееся — только экспресс." : "Phytosanitary certificate may be required. Perishables: express only."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Лекарства" : "Medications"}</td><td className="py-3 text-gray-400">{isRu ? "До 3 месяцев запаса с рецептом. Коммерческий импорт — лицензия." : "Up to 3-month supply with prescription. Commercial import needs license."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Искусство" : "Art & antiques"}</td><td className="py-3 text-gray-400">{isRu ? "Может требоваться экспортное разрешение. Страхование рекомендуется." : "Export permit may be needed. Insurance strongly recommended."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Электроника" : "Electronics"}</td><td className="py-3 text-gray-400">{isRu ? "Проверьте напряжение. Некоторые страны требуют сертификацию (CE, FCC)." : "Check voltage. Some countries require CE/FCC certification."}</td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
@@ -778,7 +761,7 @@ export default async function CorridorPage({
             {corridorInfo.trade_section && (
               <div className="py-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  <span className="mr-2 opacity-60">&#x1F91D;</span>
+                  
                   {isRu ? "Торговые соглашения" : "Trade Agreements"}
                 </h2>
                 <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.trade_section}</p>
