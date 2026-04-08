@@ -101,32 +101,41 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Popular corridors */}
-      <section className="mt-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-white mb-10">
+      {/* Popular corridors — featured 4 + compact rest */}
+      <section className="mt-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+          <h2 className="text-3xl font-bold text-white mb-8">
             {t(loc, "popular_destinations")}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {popularCorridors.slice(0, 4).map(([fromCode, toCode]) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            {popularCorridors.slice(0, 2).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
               if (!from || !to) return null;
               const slug = makeCorridorSlug(from, to, loc);
+              const data = getCorridorData(fromCode, toCode);
+              const cheapest = data?.carriers.length
+                ? Math.min(...data.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))
+                : null;
               return (
                 <Link
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="bg-card hover:bg-card-hover rounded-2xl p-4 text-base text-gray-300 transition-colors"
+                  className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
                 >
-                  <span className="text-lg">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-lg">{countryFlag(toCode)}</span>
+                  <p className="text-base text-gray-300">
+                    <span className="text-xl mr-1">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-xl ml-1">{countryFlag(toCode)}</span>
+                  </p>
+                  {cheapest && cheapest < 999 && (
+                    <p className="text-sm text-gray-500 mt-2">{locale === "ru" ? "от" : "from"} <span className="text-white font-medium">${cheapest}/kg</span></p>
+                  )}
                 </Link>
               );
             })}
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-3">
-            {popularCorridors.slice(4).map(([fromCode, toCode]) => {
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+            {popularCorridors.slice(2).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
               if (!from || !to) return null;
@@ -136,9 +145,9 @@ export default async function HomePage({
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="bg-card hover:bg-card-hover rounded-2xl p-4 text-sm text-gray-400 transition-colors"
+                  className="bg-card hover:bg-card-hover rounded-xl px-3 py-3 text-sm text-gray-400 transition-colors"
                 >
-                  {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
+                  {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)}
                 </Link>
               );
             })}
@@ -146,17 +155,17 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Sample prices — show value immediately */}
+      {/* Sample prices — asymmetric: 3 featured + 5 compact */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-white mb-3">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="text-2xl font-bold text-white mb-2">
             {locale === "ru" ? "Примеры стоимости доставки" : "Sample Shipping Prices"}
           </h2>
-          <p className="text-gray-500 mb-8 text-sm">
+          <p className="text-gray-500 mb-6 text-sm">
             {locale === "ru" ? "Самые дешёвые тарифы за 1 кг на популярных маршрутах" : "Cheapest rates per 1 kg on popular routes"}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {[["US", "GB"], ["CN", "US"], ["DE", "FR"], ["US", "JP"], ["GB", "AU"], ["KR", "US"], ["FR", "IT"], ["US", "CA"]].map(([fromCode, toCode]) => {
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+            {[["US", "GB"], ["CN", "US"], ["DE", "FR"]].map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
               if (!from || !to) return null;
@@ -169,25 +178,40 @@ export default async function HomePage({
                 : null;
               const slug = makeCorridorSlug(from, to, loc);
               return (
-                <Link
-                  key={`${fromCode}-${toCode}`}
-                  href={`/${locale}/shipping/${slug}`}
-                  prefetch={false}
-                  className="bg-card hover:bg-card-hover rounded-2xl p-5 transition-colors group"
-                >
-                  <p className="text-sm text-gray-400 mb-2">
+                <Link key={`${fromCode}-${toCode}`} href={`/${locale}/shipping/${slug}`} prefetch={false}
+                  className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors">
+                  <p className="text-sm text-gray-400 mb-3">
                     {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                   </p>
                   {cheapest && cheapest < 999 ? (
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-2xl font-light text-white">${cheapest}</span>
-                      <span className="text-xs text-gray-500">/kg</span>
-                      {fastest && (
-                        <span className="text-xs text-gray-600 ml-auto">{fastest}+ {locale === "ru" ? "дней" : "days"}</span>
-                      )}
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-light text-white">${cheapest}</span>
+                      <span className="text-sm text-gray-500">/kg</span>
+                      {fastest && <span className="text-xs text-gray-600 ml-auto">{fastest}+ {locale === "ru" ? "дн" : "d"}</span>}
                     </div>
                   ) : (
-                    <span className="text-sm text-gray-600">{locale === "ru" ? "Посмотреть тарифы →" : "View rates →"}</span>
+                    <span className="text-sm text-gray-600">{locale === "ru" ? "Тарифы →" : "View rates →"}</span>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+            {[["US", "JP"], ["GB", "AU"], ["KR", "US"], ["FR", "IT"], ["US", "CA"]].map(([fromCode, toCode]) => {
+              const from = countries.find((c) => c.code === fromCode);
+              const to = countries.find((c) => c.code === toCode);
+              if (!from || !to) return null;
+              const data = getCorridorData(fromCode, toCode);
+              const cheapest = data?.carriers.length
+                ? Math.min(...data.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))
+                : null;
+              const slug = makeCorridorSlug(from, to, loc);
+              return (
+                <Link key={`${fromCode}-${toCode}`} href={`/${locale}/shipping/${slug}`} prefetch={false}
+                  className="bg-surface hover:bg-card rounded-lg px-3 py-3 transition-colors text-center">
+                  <p className="text-xs text-gray-500">{countryFlag(fromCode)} → {countryFlag(toCode)}</p>
+                  {cheapest && cheapest < 999 && (
+                    <p className="text-lg font-light text-white mt-1">${cheapest}<span className="text-xs text-gray-600">/kg</span></p>
                   )}
                 </Link>
               );
@@ -196,98 +220,79 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Tools */}
+      {/* Tools — horizontal layout, not card grid */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-white mb-8">
-            {locale === "ru" ? "Инструменты" : "Shipping Tools"}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link
-              href={`/${locale}/tools/duty-calculator`}
-              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
-            >
-              <p className="text-2xl mb-3">🧮</p>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
-              </h3>
-              <p className="text-sm text-gray-500">
-                {locale === "ru" ? "Рассчитайте импортные пошлины, НДС и общую стоимость ввоза товара" : "Calculate import duties, VAT, and total landed cost for your shipment"}
-              </p>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch">
+            <Link href={`/${locale}/tools/duty-calculator`}
+              className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
+              <span className="text-3xl">🧮</span>
+              <div>
+                <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "НДС, пошлины, полная стоимость ввоза" : "VAT, duties, total landed cost"}</p>
+              </div>
             </Link>
-            <Link
-              href={`/${locale}/tools/delivery-estimator`}
-              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
-            >
-              <p className="text-2xl mb-3">📅</p>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}
-              </h3>
-              <p className="text-sm text-gray-500">
-                {locale === "ru" ? "Узнайте ориентировочную дату доставки с учётом выходных и праздников" : "Estimate delivery date accounting for weekends and holidays"}
-              </p>
+            <Link href={`/${locale}/tools/delivery-estimator`}
+              className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
+              <span className="text-3xl">📅</span>
+              <div>
+                <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "С учётом выходных и праздников" : "Accounts for weekends & holidays"}</p>
+              </div>
             </Link>
-            <Link
-              href={`/${locale}/tools`}
-              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
-            >
-              <p className="text-2xl mb-3">🛠</p>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {locale === "ru" ? "Все инструменты" : "All Tools"}
-              </h3>
-              <p className="text-sm text-gray-500">
-                {locale === "ru" ? "Полный набор инструментов для международной доставки" : "Complete toolkit for international shipping"}
-              </p>
+            <Link href={`/${locale}/tools`}
+              className="flex items-center gap-3 text-sm text-gray-500 hover:text-white transition-colors px-4">
+              {locale === "ru" ? "Все инструменты →" : "All tools →"}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Ship from / Ship to */}
+      {/* Ship from / Ship to — asymmetric: destinations bigger */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
-                {t(loc, "popular_origins")}
-              </h2>
-              <div className="grid grid-cols-2 gap-y-2">
-                {popular.slice(0, 16).map((c) => (
-                  <Link
-                    key={c.code}
-                    href={`/${locale}/shipping/from/${c.slug_en}`}
-                    prefetch={false}
-                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity py-1"
-                  >
-                    {t(loc, "ship_from", { country: getCountryName(c, loc) })}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+            <div className="md:col-span-3">
+              <h2 className="text-2xl font-bold text-white mb-5">
                 {t(loc, "popular_destinations")}
               </h2>
-              <div className="grid grid-cols-2 gap-y-2">
-                {popular.slice(0, 16).map((c) => (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2">
+                {popular.slice(0, 18).map((c) => (
                   <Link
                     key={c.code}
                     href={`/${locale}/shipping/to/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity py-1"
+                    className="text-sm text-gray-400 hover:text-white transition-colors py-1"
                   >
                     {t(loc, "ship_to", { country: getCountryName(c, loc) })}
                   </Link>
                 ))}
               </div>
             </div>
+            <div className="md:col-span-2">
+              <h2 className="text-xl font-bold text-white mb-5">
+                {t(loc, "popular_origins")}
+              </h2>
+              <div className="grid grid-cols-1 gap-y-2">
+                {popular.slice(0, 10).map((c) => (
+                  <Link
+                    key={c.code}
+                    href={`/${locale}/shipping/from/${c.slug_en}`}
+                    prefetch={false}
+                    className="text-sm text-gray-400 hover:text-white transition-colors py-1"
+                  >
+                    {t(loc, "ship_from", { country: getCountryName(c, loc) })}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Carriers */}
+      {/* Carriers — text flow, not centered block */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <p className="text-sm text-gray-600 uppercase tracking-widest mb-6">
             {t(loc, "comparing_carriers")}
           </p>
@@ -313,54 +318,33 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* How it works */}
+      {/* How it works — horizontal numbered list, not 3 identical cards */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <h2 className="text-3xl font-bold text-white mb-16 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+          <h2 className="text-2xl font-bold text-white mb-10">
             {t(loc, "how_it_works")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-card rounded-2xl p-6">
-              <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
-                  <circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                <span className="font-mono text-2xl font-bold text-gray-600">1.</span>
+          <div className="space-y-6">
+            <div className="flex gap-5 items-start">
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">1</span>
+              <div>
+                <h3 className="font-semibold text-white">{t(loc, "choose_route")}</h3>
+                <p className="text-sm text-gray-500 mt-1">{t(loc, "choose_route_desc")}</p>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {t(loc, "choose_route")}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {t(loc, "choose_route_desc")}
-              </p>
             </div>
-            <div className="bg-card rounded-2xl p-6">
-              <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
-                  <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" />
-                </svg>
-                <span className="font-mono text-2xl font-bold text-gray-600">2.</span>
+            <div className="flex gap-5 items-start">
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">2</span>
+              <div>
+                <h3 className="font-semibold text-white">{t(loc, "compare_rates")}</h3>
+                <p className="text-sm text-gray-500 mt-1">{t(loc, "compare_rates_desc")}</p>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {t(loc, "compare_rates")}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {t(loc, "compare_rates_desc")}
-              </p>
             </div>
-            <div className="bg-card rounded-2xl p-6">
-              <div className="flex items-end gap-3 mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-light">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path d="M3.27 6.96 12 12.01l8.73-5.05" /><path d="M12 22.08V12" />
-                </svg>
-                <span className="font-mono text-2xl font-bold text-gray-600">3.</span>
+            <div className="flex gap-5 items-start">
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">3</span>
+              <div>
+                <h3 className="font-semibold text-white">{t(loc, "ship_package")}</h3>
+                <p className="text-sm text-gray-500 mt-1">{t(loc, "ship_package_desc")}</p>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {t(loc, "ship_package")}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {t(loc, "ship_package_desc")}
-              </p>
             </div>
           </div>
         </div>
@@ -400,8 +384,8 @@ export default async function HomePage({
 
       {/* All countries */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-white mb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+          <h2 className="text-xl font-bold text-white mb-6">
             {t(loc, "all_countries")}
           </h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-y-1 gap-x-4">
@@ -427,11 +411,11 @@ export default async function HomePage({
 
       {/* Popular guides */}
       <section>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-white mb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+          <h2 className="text-2xl font-bold text-white mb-6">
             {t(loc, "popular_guides")}
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-3 gap-x-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-2 gap-x-4">
             {popular.slice(0, 12).map((c) => (
               <Link
                 key={c.code}
@@ -454,15 +438,8 @@ export default async function HomePage({
 
       {/* Newsletter */}
       <section>
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <div className="flex justify-center mb-6">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
-              <rect x="8" y="14" width="24" height="20" rx="2" />
-              <path d="M32 24h6" /><path d="M35 20l4 4-4 4" />
-              <path d="M14 20h8" /><path d="M14 26h6" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold text-white mb-3">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 text-center">
+          <h2 className="text-2xl font-bold text-white mb-3">
             {t(loc, "newsletter_title")}
           </h2>
           <p className="text-gray-500 mb-8 text-sm">

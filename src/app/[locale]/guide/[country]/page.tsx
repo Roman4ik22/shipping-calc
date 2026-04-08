@@ -337,96 +337,74 @@ export default async function GuidePage({
         </div>
       </section>
 
-      {/* Useful tools */}
+      {/* Useful tools — horizontal list, not 3 identical cards */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-white mb-4">
           {locale === "ru" ? "Инструменты" : "Useful Tools"}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <Link
-            href={`/${locale}/tools/duty-calculator`}
-            className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
-          >
-            <p className="text-xl mb-2">🧮</p>
-            <p className="font-medium text-white text-sm">
-              {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">
-              {locale === "ru" ? `Рассчитайте пошлины для ${name}` : `Calculate duties for ${name}`}
-            </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href={`/${locale}/tools/duty-calculator`}
+            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
+            <span className="text-xl">🧮</span>
+            <div>
+              <p className="font-medium text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</p>
+              <p className="text-xs text-gray-500">{locale === "ru" ? `Пошлины для ${name}` : `Duties for ${name}`}</p>
+            </div>
           </Link>
-          <Link
-            href={`/${locale}/tools/delivery-estimator`}
-            className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
-          >
-            <p className="text-xl mb-2">📅</p>
-            <p className="font-medium text-white text-sm">
-              {locale === "ru" ? "Сроки доставки" : "Delivery Estimator"}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">
-              {locale === "ru" ? "Узнайте дату доставки" : "Estimate delivery date"}
-            </p>
+          <Link href={`/${locale}/tools/delivery-estimator`}
+            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
+            <span className="text-xl">📅</span>
+            <div>
+              <p className="font-medium text-white text-sm">{locale === "ru" ? "Сроки доставки" : "Delivery Estimator"}</p>
+              <p className="text-xs text-gray-500">{locale === "ru" ? "Дата доставки" : "Delivery date"}</p>
+            </div>
           </Link>
           {hasCustoms && (
-            <Link
-              href={`/${locale}/customs/${country.slug_en}`}
-              className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
-            >
-              <p className="text-xl mb-2">📋</p>
-              <p className="font-medium text-white text-sm">
-                {locale === "ru" ? `Таможня ${name}` : `${name} Customs`}
-              </p>
-              <p className="text-xs text-gray-500 mt-1">
-                {locale === "ru" ? "Подробный таможенный гид" : "Detailed customs guide"}
-              </p>
+            <Link href={`/${locale}/customs/${country.slug_en}`}
+              className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors px-2">
+              {locale === "ru" ? `Таможня ${name} →` : `${name} Customs →`}
             </Link>
           )}
         </div>
       </section>
 
-      {/* Popular routes */}
+      {/* Popular routes — combined, asymmetric layout */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
-          {t(loc, "popular_routes_to", { country: name })}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {popular.slice(0, 8).map((from) => (
-            <Link
-              key={from.code}
-              href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
-              prefetch={false}
-              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
-            >
-              <span>{countryFlag(from.code)}</span>
-              <span>
-                {getCountryName(from, loc)} → {name}
-              </span>
-              <span>{countryFlag(country.code)}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Popular routes FROM this country */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
-          {t(loc, "popular_routes_from", { country: name })}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {popular.slice(0, 8).map((to) => (
-            <Link
-              key={to.code}
-              href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
-              prefetch={false}
-              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
-            >
-              <span>{countryFlag(country.code)}</span>
-              <span>
-                {name} → {getCountryName(to, loc)}
-              </span>
-              <span>{countryFlag(to.code)}</span>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="md:col-span-3">
+            <h2 className="text-xl font-bold text-white mb-4">
+              {t(loc, "popular_routes_to", { country: name })}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {popular.slice(0, 10).map((from) => (
+                <Link
+                  key={from.code}
+                  href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
+                  prefetch={false}
+                  className="bg-surface hover:bg-card rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  {countryFlag(from.code)} {getCountryName(from, loc)} → {name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-2">
+            <h2 className="text-lg font-bold text-white mb-4">
+              {t(loc, "popular_routes_from", { country: name })}
+            </h2>
+            <div className="space-y-1">
+              {popular.slice(0, 6).map((to) => (
+                <Link
+                  key={to.code}
+                  href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
+                  prefetch={false}
+                  className="block text-sm text-gray-400 hover:text-white transition-colors py-1"
+                >
+                  {name} → {getCountryName(to, loc)} {countryFlag(to.code)}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

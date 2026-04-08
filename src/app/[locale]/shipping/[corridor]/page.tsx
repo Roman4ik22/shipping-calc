@@ -285,65 +285,57 @@ export default async function CorridorPage({
         return (
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-white mb-4" id="examples">
-              {isRu ? "💡 Примеры стоимости доставки" : "💡 Shipping Cost Examples"}
+              {isRu ? "Примеры стоимости доставки" : "Shipping Cost Examples"}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-4 bg-card rounded-2xl">
-                <p className="text-sm text-white">{isRu ? "📱 Телефон / документы" : "📱 Phone / documents"} <span className="text-gray-500">(0.5 kg)</span></p>
-                <p className="text-lg font-light text-white mt-1">${r05.price} <span className="text-xs text-gray-500">via {r05.carrier}, {r05.days} {isRu ? "дней" : "days"}</span></p>
+            {/* Featured item + compact row — not 4 identical cards */}
+            <div className="bg-card rounded-2xl p-5 mb-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-400">{isRu ? "Телефон / документы" : "Phone / documents"} <span className="text-gray-600">(0.5 kg)</span></p>
+                  <p className="text-2xl font-light text-white mt-1">${r05.price}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-gray-500">{r05.carrier}</p>
+                  <p className="text-xs text-gray-600">{r05.days} {isRu ? "дн" : "days"}</p>
+                </div>
               </div>
-              <div className="p-4 bg-card rounded-2xl">
-                <p className="text-sm text-white">{isRu ? "👟 Обувь / одежда" : "👟 Shoes / clothing"} <span className="text-gray-500">(2 kg)</span></p>
-                <p className="text-lg font-light text-white mt-1">${r2.price} <span className="text-xs text-gray-500">via {r2.carrier}, {r2.days} {isRu ? "дней" : "days"}</span></p>
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="bg-surface rounded-xl px-4 py-3">
+                <p className="text-xs text-gray-500">{isRu ? "Одежда" : "Clothing"} <span className="text-gray-600">2kg</span></p>
+                <p className="text-lg font-light text-white">${r2.price}</p>
+                <p className="text-[10px] text-gray-600">{r2.carrier}</p>
               </div>
-              <div className="p-4 bg-card rounded-2xl">
-                <p className="text-sm text-white">{isRu ? "📦 Средняя коробка" : "📦 Medium box"} <span className="text-gray-500">(5 kg)</span></p>
-                <p className="text-lg font-light text-white mt-1">${r5.price} <span className="text-xs text-gray-500">via {r5.carrier}, {r5.days} {isRu ? "дней" : "days"}</span></p>
+              <div className="bg-surface rounded-xl px-4 py-3">
+                <p className="text-xs text-gray-500">{isRu ? "Коробка" : "Box"} <span className="text-gray-600">5kg</span></p>
+                <p className="text-lg font-light text-white">${r5.price}</p>
+                <p className="text-[10px] text-gray-600">{r5.carrier}</p>
               </div>
-              <div className="p-4 bg-card rounded-2xl">
-                <p className="text-sm text-white">{isRu ? "🖥 Электроника / тяжёлое" : "🖥 Electronics / heavy"} <span className="text-gray-500">(10 kg)</span></p>
-                <p className="text-lg font-light text-white mt-1">${r10.price} <span className="text-xs text-gray-500">via {r10.carrier}, {r10.days} {isRu ? "дней" : "days"}</span></p>
+              <div className="bg-surface rounded-xl px-4 py-3">
+                <p className="text-xs text-gray-500">{isRu ? "Тяжёлое" : "Heavy"} <span className="text-gray-600">10kg</span></p>
+                <p className="text-lg font-light text-white">${r10.price}</p>
+                <p className="text-[10px] text-gray-600">{r10.carrier}</p>
               </div>
             </div>
           </div>
         );
       })()}
 
-      {/* Quick stats */}
+      {/* Quick stats — inline, not 4 identical cards */}
       {corridorData && corridorData.carriers.length > 0 && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-          <div className="bg-card rounded-2xl p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
-              {locale === "ru" ? "Минимальная цена" : "Cheapest rate"}
-            </p>
-            <p className="text-2xl font-light text-white mt-1">
-              ${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}
-              <span className="text-sm text-gray-500 ml-1">/kg</span>
-            </p>
-          </div>
-          <div className="bg-card rounded-2xl p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
-              {locale === "ru" ? "Быстрая доставка" : "Fastest delivery"}
-            </p>
-            <p className="text-2xl font-light text-white mt-1">
-              {Math.min(...corridorData.carriers.map(c => c.estimated_days_min))}
-              <span className="text-sm text-gray-500 ml-1">{locale === "ru" ? "дней" : "days"}</span>
-            </p>
-          </div>
-          <div className="bg-card rounded-2xl p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
-              {locale === "ru" ? "Перевозчиков" : "Carriers available"}
-            </p>
-            <p className="text-2xl font-light text-white mt-1">{corridorData.carriers.length}</p>
-          </div>
-          <div className="bg-card rounded-2xl p-4">
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
-              {locale === "ru" ? "Порог de minimis" : "De minimis threshold"}
-            </p>
-            <p className="text-2xl font-light text-white mt-1">
-              ${getCustomsInfo(destination.code).de_minimis_usd}
-            </p>
-          </div>
+        <div className="flex flex-wrap gap-x-8 gap-y-2 mb-8 text-sm">
+          <span className="text-gray-500">
+            {locale === "ru" ? "от" : "from"} <span className="text-white font-medium text-base">${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}/kg</span>
+          </span>
+          <span className="text-gray-500">
+            {locale === "ru" ? "от" : "from"} <span className="text-white font-medium text-base">{Math.min(...corridorData.carriers.map(c => c.estimated_days_min))} {locale === "ru" ? "дней" : "days"}</span>
+          </span>
+          <span className="text-gray-500">
+            <span className="text-white font-medium text-base">{corridorData.carriers.length}</span> {locale === "ru" ? "перевозчиков" : "carriers"}
+          </span>
+          <span className="text-gray-500">
+            de minimis <span className="text-white font-medium text-base">${getCustomsInfo(destination.code).de_minimis_usd}</span>
+          </span>
         </div>
       )}
 
@@ -916,12 +908,12 @@ export default async function CorridorPage({
             <h2 className="text-xl font-bold text-white mb-4">
               {t(loc, "also_ships_to", { origin: originName })}
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="flex flex-wrap gap-2">
               {relatedFrom.map((c) => (
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-                  className="block bg-card hover:bg-card-hover rounded-2xl p-4 transition-all text-sm"
+                  className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 transition-colors text-sm text-gray-400 hover:text-white"
                 >
                   {countryFlag(c.code)} {getCountryName(c, loc)}
                 </Link>
@@ -933,7 +925,7 @@ export default async function CorridorPage({
             <h2 className="text-xl font-bold text-white mb-4">
               {t(loc, "ship_to", { country: destName })}
             </h2>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-wrap gap-2">
               {popular
                 .filter((c) => c.code !== origin.code && c.code !== destination.code)
                 .slice(0, 6)
@@ -941,7 +933,7 @@ export default async function CorridorPage({
                   <Link
                     key={c.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
-                    className="block bg-card hover:bg-card-hover rounded-2xl p-4 transition-all text-sm"
+                    className="bg-surface hover:bg-card rounded-lg px-3 py-2 transition-colors text-sm text-gray-400 hover:text-white"
                   >
                     {countryFlag(c.code)} {getCountryName(c, loc)}
                   </Link>
