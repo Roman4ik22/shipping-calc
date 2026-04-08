@@ -11,6 +11,7 @@ import { getCountryByCode, getCountryName } from "@/lib/data";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import MobileMenu from "@/components/MobileMenu";
+import NavLink from "@/components/NavLink";
 import Analytics from "@/components/Analytics";
 import AdSense from "@/components/AdSense";
 import WebVitals from "@/components/WebVitals";
@@ -149,56 +150,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <header className="sticky top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14">
-              <Link
+              <NavLink
                 href={`/${locale}`}
                 className="text-xl font-bold tracking-tight text-white"
+                activeClassName="text-xl font-bold tracking-tight text-white"
               >
                 {t(loc, "site_name")}
-              </Link>
+              </NavLink>
               <div className="flex items-center gap-5">
                 <nav className="hidden sm:flex items-center gap-5">
-                  <Link
+                  <NavLink
                     href={`/${locale}`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "home")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/carriers`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "carriers_page")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/guide`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "guides")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/about`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "about")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/blog`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "blog")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/platforms`}
                     className="text-[15px] text-gray-400 hover:text-white transition-colors"
+                    activeClassName="text-[15px] text-white transition-colors"
                   >
                     {t(loc, "platforms")}
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}`}
                     className="px-5 py-2 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+                    activeClassName="px-5 py-2 bg-accent text-white text-sm font-medium rounded-full opacity-70"
                   >
                     {t(loc, "compare_rates")}
-                  </Link>
+                  </NavLink>
                 </nav>
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
@@ -230,12 +239,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </h3>
                 <p className="text-xs text-gray-500 mb-4">{t(loc, "site_description")}</p>
                 <div className="flex flex-wrap gap-3 text-xs">
-                  <Link href={`/${locale}`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "home")}</Link>
-                  <Link href={`/${locale}/carriers`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "carriers_page")}</Link>
-                  <Link href={`/${locale}/guide`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "guides")}</Link>
-                  <Link href={`/${locale}/about`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "about")}</Link>
-                  <Link href={`/${locale}/blog`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "blog")}</Link>
-                  <Link href={`/${locale}/platforms`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "platforms")}</Link>
+                  <NavLink href={`/${locale}`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "home")}</NavLink>
+                  <NavLink href={`/${locale}/carriers`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "carriers_page")}</NavLink>
+                  <NavLink href={`/${locale}/guide`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "guides")}</NavLink>
+                  <NavLink href={`/${locale}/about`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "about")}</NavLink>
+                  <NavLink href={`/${locale}/blog`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "blog")}</NavLink>
+                  <NavLink href={`/${locale}/platforms`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "platforms")}</NavLink>
                   <Link href={`/${locale}/customs/united-states`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
                 </div>
               </div>
@@ -248,16 +257,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     const country = getCountryByCode(code);
                     if (!country) return null;
                     return (
-                      <Link
+                      <NavLink
                         key={code}
                         href={`/${locale}/shipping/to/${country.slug_en}`}
-                        prefetch={false}
                         className="text-gray-500 hover:text-white transition-colors"
+                        activeClassName="text-white"
                       >
                         {t(loc, "ship_to", {
                           country: getCountryName(country, loc),
                         })}
-                      </Link>
+                      </NavLink>
                     );
                   })}
                 </div>
@@ -271,16 +280,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     const country = getCountryByCode(code);
                     if (!country) return null;
                     return (
-                      <Link
+                      <NavLink
                         key={code}
                         href={`/${locale}/shipping/from/${country.slug_en}`}
-                        prefetch={false}
                         className="text-gray-500 hover:text-white transition-colors"
+                        activeClassName="text-white"
                       >
                         {t(loc, "ship_from", {
                           country: getCountryName(country, loc),
                         })}
-                      </Link>
+                      </NavLink>
                     );
                   })}
                 </div>

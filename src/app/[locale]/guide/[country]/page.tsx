@@ -337,6 +337,53 @@ export default async function GuidePage({
         </div>
       </section>
 
+      {/* Useful tools */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {locale === "ru" ? "Инструменты" : "Useful Tools"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link
+            href={`/${locale}/tools/duty-calculator`}
+            className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
+          >
+            <p className="text-xl mb-2">🧮</p>
+            <p className="font-medium text-white text-sm">
+              {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {locale === "ru" ? `Рассчитайте пошлины для ${name}` : `Calculate duties for ${name}`}
+            </p>
+          </Link>
+          <Link
+            href={`/${locale}/tools/delivery-estimator`}
+            className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
+          >
+            <p className="text-xl mb-2">📅</p>
+            <p className="font-medium text-white text-sm">
+              {locale === "ru" ? "Сроки доставки" : "Delivery Estimator"}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {locale === "ru" ? "Узнайте дату доставки" : "Estimate delivery date"}
+            </p>
+          </Link>
+          {hasCustoms && (
+            <Link
+              href={`/${locale}/customs/${country.slug_en}`}
+              className="bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/50 transition-all"
+            >
+              <p className="text-xl mb-2">📋</p>
+              <p className="font-medium text-white text-sm">
+                {locale === "ru" ? `Таможня ${name}` : `${name} Customs`}
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                {locale === "ru" ? "Подробный таможенный гид" : "Detailed customs guide"}
+              </p>
+            </Link>
+          )}
+        </div>
+      </section>
+
       {/* Popular routes */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-4">
@@ -437,6 +484,24 @@ export default async function GuidePage({
           </section>
         );
       })()}
+
+      {/* Compare rates CTA */}
+      <section className="mb-10 bg-card rounded-3xl p-8 text-center">
+        <h2 className="text-xl font-bold text-white mb-2">
+          {locale === "ru" ? `Сравните тарифы доставки в ${name}` : `Compare Shipping Rates to ${name}`}
+        </h2>
+        <p className="text-sm text-gray-500 mb-5">
+          {locale === "ru"
+            ? `134+ перевозчиков, актуальные цены, доставка из любой страны`
+            : `134+ carriers, real-time prices, ship from any country`}
+        </p>
+        <Link
+          href={`/${locale}`}
+          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+        >
+          {locale === "ru" ? "Сравнить тарифы" : "Compare Rates"}
+        </Link>
+      </section>
 
       {/* JSON-LD */}
       <script

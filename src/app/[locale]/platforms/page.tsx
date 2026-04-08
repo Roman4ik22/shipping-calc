@@ -83,7 +83,7 @@ function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
       <a
         href={`https://${platform.website}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         className="inline-flex items-center gap-1.5 text-sm text-accent-light hover:text-accent transition-colors mt-auto"
       >
         {platform.website}

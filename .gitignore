@@ -42,3 +42,8 @@ next-env.d.ts
 
 # URL submission tracking
 .url-submissions.json
+
+# Google API credentials
+scripts/gsc-credentials.json
+gsc-report.json
+ga-report.json

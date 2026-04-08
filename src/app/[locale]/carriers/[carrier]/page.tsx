@@ -29,10 +29,20 @@ export async function generateMetadata({
   const carrier = getCarrierById(carrierId);
   if (!carrier) return { title: "Not Found" };
 
-  const desc = getCarrierDescription(carrier, locale as Locale);
+  const loc = locale as Locale;
+  const desc = getCarrierDescription(carrier, loc);
+  const review = getCarrierReview(carrier.id);
+  const serviceCount = carrier.services.length;
+  const ratingStr = review ? ` ★ ${review.trustpilot.rating.toFixed(1)}` : "";
+  const titleSuffix = loc === "ru" ? "Тарифы и отзывы [2026]"
+    : loc === "de" ? "Tarife & Bewertungen [2026]"
+    : loc === "es" ? "Tarifas y opiniones [2026]"
+    : loc === "fr" ? "Tarifs et avis [2026]"
+    : "Rates & Reviews [2026]";
+
   return {
-    title: `${carrier.name} — ${t(locale as Locale, "shipping")}`,
-    description: desc,
+    title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
+    description: `${desc} Compare ${serviceCount} services, delivery times and prices.`,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
       languages: {
@@ -41,8 +51,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `${carrier.name} — International Shipping Rates`,
-      description: desc,
+      title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
+      description: `${desc} Compare ${serviceCount} services, delivery times and prices.`,
       type: "website",
     },
   };

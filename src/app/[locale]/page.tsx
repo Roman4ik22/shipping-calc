@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { countries, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
+import { countries, getPopularCountries, getCountryName, makeCorridorSlug, getCorridorData } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
@@ -142,6 +142,103 @@ export default async function HomePage({
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Sample prices — show value immediately */}
+      <section>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-3">
+            {locale === "ru" ? "Примеры стоимости доставки" : "Sample Shipping Prices"}
+          </h2>
+          <p className="text-gray-500 mb-8 text-sm">
+            {locale === "ru" ? "Самые дешёвые тарифы за 1 кг на популярных маршрутах" : "Cheapest rates per 1 kg on popular routes"}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {[["US", "GB"], ["CN", "US"], ["DE", "FR"], ["US", "JP"], ["GB", "AU"], ["KR", "US"], ["FR", "IT"], ["US", "CA"]].map(([fromCode, toCode]) => {
+              const from = countries.find((c) => c.code === fromCode);
+              const to = countries.find((c) => c.code === toCode);
+              if (!from || !to) return null;
+              const data = getCorridorData(fromCode, toCode);
+              const cheapest = data?.carriers.length
+                ? Math.min(...data.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))
+                : null;
+              const fastest = data?.carriers.length
+                ? Math.min(...data.carriers.map(c => c.estimated_days_min))
+                : null;
+              const slug = makeCorridorSlug(from, to, loc);
+              return (
+                <Link
+                  key={`${fromCode}-${toCode}`}
+                  href={`/${locale}/shipping/${slug}`}
+                  prefetch={false}
+                  className="bg-card hover:bg-card-hover rounded-2xl p-5 transition-colors group"
+                >
+                  <p className="text-sm text-gray-400 mb-2">
+                    {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
+                  </p>
+                  {cheapest && cheapest < 999 ? (
+                    <div className="flex items-baseline gap-3">
+                      <span className="text-2xl font-light text-white">${cheapest}</span>
+                      <span className="text-xs text-gray-500">/kg</span>
+                      {fastest && (
+                        <span className="text-xs text-gray-600 ml-auto">{fastest}+ {locale === "ru" ? "дней" : "days"}</span>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="text-sm text-gray-600">{locale === "ru" ? "Посмотреть тарифы →" : "View rates →"}</span>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools */}
+      <section>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            {locale === "ru" ? "Инструменты" : "Shipping Tools"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              href={`/${locale}/tools/duty-calculator`}
+              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
+            >
+              <p className="text-2xl mb-3">🧮</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
+              </h3>
+              <p className="text-sm text-gray-500">
+                {locale === "ru" ? "Рассчитайте импортные пошлины, НДС и общую стоимость ввоза товара" : "Calculate import duties, VAT, and total landed cost for your shipment"}
+              </p>
+            </Link>
+            <Link
+              href={`/${locale}/tools/delivery-estimator`}
+              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
+            >
+              <p className="text-2xl mb-3">📅</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}
+              </h3>
+              <p className="text-sm text-gray-500">
+                {locale === "ru" ? "Узнайте ориентировочную дату доставки с учётом выходных и праздников" : "Estimate delivery date accounting for weekends and holidays"}
+              </p>
+            </Link>
+            <Link
+              href={`/${locale}/tools`}
+              className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
+            >
+              <p className="text-2xl mb-3">🛠</p>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {locale === "ru" ? "Все инструменты" : "All Tools"}
+              </h3>
+              <p className="text-sm text-gray-500">
+                {locale === "ru" ? "Полный набор инструментов для международной доставки" : "Complete toolkit for international shipping"}
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -404,7 +501,7 @@ export default async function HomePage({
               <div className="space-y-3">
                 {faqs.map((faq, i) => (
                   <details key={i} className="bg-card rounded-2xl group">
-                    <summary className="py-5 px-6 font-medium text-gray-300 cursor-pointer hover:text-white transition-colors select-none">
+                    <summary className="py-5 px-6 font-medium text-gray-300 cursor-pointer hover:text-white transition-colors">
                       {faq.q}
                     </summary>
                     <p className="pb-6 px-6 text-gray-500 text-sm leading-relaxed">

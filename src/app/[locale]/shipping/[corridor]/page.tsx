@@ -29,6 +29,8 @@ import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale"
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
 import { isCarrierVerified } from "@/lib/verified-carriers";
+import TableOfContents from "@/components/TableOfContents";
+import StickyCorridorCTA from "@/components/StickyCorridorCTA";
 
 // Pre-generate popular corridors; rest generated on-demand via ISR
 export const dynamicParams = true;
@@ -79,16 +81,27 @@ export async function generateMetadata({
   const destName = getCountryName(parsed.destination, loc);
   const corridorData = getCorridorData(parsed.origin.code, parsed.destination.code);
 
+  const cheapestPrice = corridorData?.carriers.length
+    ? Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))
+    : 0;
+  const fastestDays = corridorData?.carriers.length
+    ? Math.min(...corridorData.carriers.map(c => c.estimated_days_min))
+    : 0;
+  const slowestDays = corridorData?.carriers.length
+    ? Math.max(...corridorData.carriers.map(c => c.estimated_days_max))
+    : 0;
+
+  const metaVars = {
+    origin: originName,
+    destination: destName,
+    count: String(corridorData?.carriers.length ?? 30),
+    cheapest: String(cheapestPrice),
+    days: fastestDays > 0 ? `${fastestDays}–${slowestDays}` : "5–30",
+  };
+
   return {
-    title: t(loc, "meta_corridor_title", {
-      origin: originName,
-      destination: destName,
-    }),
-    description: t(loc, "meta_corridor_description", {
-      origin: originName,
-      destination: destName,
-      count: String(corridorData?.carriers.length ?? 30),
-    }),
+    title: t(loc, "meta_corridor_title", metaVars),
+    description: t(loc, "meta_corridor_description", metaVars),
     alternates: {
       canonical: `/${locale}/shipping/${corridor}`,
       languages: {
@@ -99,12 +112,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t(loc, "meta_corridor_title", { origin: originName, destination: destName }),
-      description: t(loc, "meta_corridor_description", {
-        origin: originName,
-        destination: destName,
-        count: String(corridorData?.carriers.length ?? 30),
-      }),
+      title: t(loc, "meta_corridor_title", metaVars),
+      description: t(loc, "meta_corridor_description", metaVars),
       type: "website",
     },
   };
@@ -170,20 +179,20 @@ export default async function CorridorPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumbs */}
+      {/* Breadcrumbs: Shipping Rates → to {dest} → from {origin} */}
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
+          {locale === "ru" ? "Тарифы доставки" : "Shipping Rates"}
         </Link>
         <span className="mx-2">/</span>
         <Link
-          href={`/${locale}/shipping/from/${origin.slug_en}`}
+          href={`/${locale}/shipping/to/${destination.slug_en}`}
           className="hover:text-accent-light"
         >
-          {originName}
+          {t(loc, "ship_to", { country: destName })}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">{destName}</span>
+        <span className="text-white">{t(loc, "ship_from", { country: originName })}</span>
       </nav>
 
       {/* Language suggestion based on corridor countries */}
@@ -339,22 +348,10 @@ export default async function CorridorPage({
       )}
 
       {/* Table of Contents */}
-      <nav className="mb-8 bg-card rounded-2xl p-5">
-        <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
-          {locale === "ru" ? "На этой странице" : "On this page"}
-        </p>
-        <div className="flex flex-wrap gap-2 text-sm">
-          <a href="#examples" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Примеры" : "Examples"}</a>
-          <a href="#rates" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Тарифы" : "Rates"}</a>
-          <a href="#duties" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Пошлины и налоги" : "Duties & Taxes"}</a>
-          <a href="#documents" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Документы" : "Documents"}</a>
-          <a href="#customs" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Таможня" : "Customs"}</a>
-          <Link href={`/${locale}/customs/${destination.slug_en}`} className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Подробнее о таможне" : "Full Customs Guide"}</Link>
-          <a href="#prohibited" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Запрещённые товары" : "Prohibited Items"}</a>
-          <a href="#faq" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">FAQ</a>
-          <a href="#tracking" className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors">{locale === "ru" ? "Отслеживание" : "Tracking"}</a>
-        </div>
-      </nav>
+      <TableOfContents
+        locale={locale}
+        customsGuideHref={`/${locale}/customs/${destination.slug_en}`}
+      />
 
       {/* Rate comparison table */}
       <div id="rates">
@@ -454,6 +451,45 @@ export default async function CorridorPage({
         </Link>
       </div>
 
+      {/* Shipping Tools — cross-link */}
+      <div className="flex flex-wrap gap-3 mt-4 mb-4">
+        <Link
+          href={`/${locale}/tools/duty-calculator`}
+          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
+        >
+          <span>🧮</span> {locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}
+        </Link>
+        <Link
+          href={`/${locale}/tools/delivery-estimator`}
+          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
+        >
+          <span>📅</span> {locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}
+        </Link>
+        <Link
+          href={`/${locale}/customs/${destination.slug_en}`}
+          className="flex items-center gap-2 text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 text-gray-400 hover:text-white transition-colors"
+        >
+          <span>📋</span> {locale === "ru" ? `Таможня: ${destName}` : `${destName} Customs`}
+        </Link>
+      </div>
+
+      {/* Sticky mobile CTA */}
+      {corridorData && corridorData.carriers.length > 0 && (() => {
+        const cheapest = Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999));
+        const fastest = Math.min(...corridorData.carriers.map(c => c.estimated_days_min));
+        const cheapestCarrier = corridorData.carriers.reduce((a, b) =>
+          (a.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999) < (b.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999) ? a : b
+        );
+        return (
+          <StickyCorridorCTA
+            cheapestPrice={cheapest}
+            fastestDays={fastest}
+            carrierName={cheapestCarrier.carrier.name}
+            locale={locale}
+          />
+        );
+      })()}
+
       {/* Duty Calculator */}
       <div className="mt-8">
         <DutyCalculator
@@ -509,13 +545,13 @@ export default async function CorridorPage({
               : "After shipping, use your tracking number on the carrier's website:"}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-            {corridorData.carriers.slice(0, 9).map((cr) => (
+            {corridorData.carriers.slice(0, 5).map((cr) => (
               cr.carrier.tracking_url ? (
                 <a
                   key={cr.carrier.id}
                   href={cr.carrier.tracking_url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-2 transition-colors"
                 >
                   <span className="text-gray-600">↗</span>
@@ -774,12 +810,12 @@ export default async function CorridorPage({
                   {isRu ? "Полезные ссылки" : "Useful Links"}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {corridorInfo.useful_links.map((link, i) => (
+                  {corridorInfo.useful_links.slice(0, 5).map((link, i) => (
                     <a
                       key={i}
                       href={link.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="flex items-center gap-2 text-sm text-accent-light hover:text-white transition-colors py-2"
                     >
                       <span className="text-gray-600">&#8599;</span>
@@ -790,32 +826,7 @@ export default async function CorridorPage({
               </div>
             )}
 
-            {/* 10. Route-specific FAQ with JSON-LD */}
-            {corridorInfo.faq.length > 0 && (
-              <div id="faq-corridor" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-5">
-                  <span className="mr-2 opacity-60">&#x2753;</span>
-                  {isRu
-                    ? `Часто задаваемые вопросы: ${originName} → ${destName}`
-                    : `FAQ: Shipping from ${originName} to ${destName}`}
-                </h2>
-                <div className="space-y-3">
-                  {corridorInfo.faq.map((item, i) => (
-                    <details
-                      key={`corridor-faq-${i}`}
-                      className="bg-card rounded-2xl group"
-                    >
-                      <summary className="py-4 px-5 font-medium text-white cursor-pointer hover:text-accent-light text-sm flex items-center justify-between">
-                        {item.q}
-                        <span className="text-gray-600 group-open:rotate-45 transition-transform text-lg ml-4">+</span>
-                      </summary>
-                      <p className="pb-4 px-5 text-gray-400 text-sm leading-relaxed">{item.a}</p>
-                    </details>
-                  ))}
-                </div>
-                {/* FAQ items included in main FAQPage schema below */}
-              </div>
-            )}
+            {/* Route-specific FAQ merged into main FAQ section below */}
           </section>
         );
       })()}
@@ -947,7 +958,7 @@ export default async function CorridorPage({
             {t(loc, "carriers_page")}
           </h2>
           <div className="flex flex-wrap gap-2">
-            {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 12).map((carrierId) => {
+            {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 6).map((carrierId) => {
               const carrier = corridorData.carriers.find((cr) => cr.carrier.id === carrierId)?.carrier;
               if (!carrier) return null;
               return (
@@ -979,7 +990,7 @@ export default async function CorridorPage({
               {popular
                 .filter((c) => c.code !== origin.code && c.code !== destination.code)
                 .filter((c) => !relatedFrom.some((rf) => rf.code === c.code))
-                .slice(0, 6)
+                .slice(0, 4)
                 .map((c) => (
                   <Link
                     key={`from-${c.code}`}
@@ -999,7 +1010,7 @@ export default async function CorridorPage({
             <div className="flex flex-wrap gap-2">
               {popular
                 .filter((c) => c.code !== origin.code && c.code !== destination.code)
-                .slice(6, 12)
+                .slice(6, 10)
                 .map((c) => (
                   <Link
                     key={`to-${c.code}`}
@@ -1038,7 +1049,7 @@ export default async function CorridorPage({
                 {locale === "ru" ? "Перевозчики на маршруте" : "Carriers on This Route"}
               </h3>
               <div className="flex flex-wrap gap-3">
-                {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 8).map((carrierId) => {
+                {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 4).map((carrierId) => {
                   const carrier = corridorData.carriers.find((cr) => cr.carrier.id === carrierId)?.carrier;
                   if (!carrier) return null;
                   return (
@@ -1216,6 +1227,24 @@ export default async function CorridorPage({
         </Link>
       </section>
 
+      {/* Try another route CTA */}
+      <section className="mt-12 mb-8 bg-card rounded-3xl p-8 text-center">
+        <h2 className="text-xl font-bold text-white mb-2">
+          {locale === "ru" ? "Ищете другой маршрут?" : "Looking for a different route?"}
+        </h2>
+        <p className="text-sm text-gray-500 mb-5">
+          {locale === "ru"
+            ? "Сравните тарифы для 45,000+ маршрутов между 213 странами"
+            : "Compare rates for 45,000+ routes between 213 countries"}
+        </p>
+        <Link
+          href={`/${locale}`}
+          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+        >
+          {locale === "ru" ? "Найти маршрут" : "Find a Route"}
+        </Link>
+      </section>
+
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -1263,19 +1292,19 @@ export default async function CorridorPage({
               {
                 "@type": "ListItem",
                 position: 1,
-                name: t(loc, "home"),
+                name: locale === "ru" ? "Тарифы доставки" : "Shipping Rates",
                 item: `${"https://rateships.com"}/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: t(loc, "ship_from", { country: originName }),
-                item: `${"https://rateships.com"}/${locale}/shipping/from/${origin.slug_en}`,
+                name: t(loc, "ship_to", { country: destName }),
+                item: `${"https://rateships.com"}/${locale}/shipping/to/${destination.slug_en}`,
               },
               {
                 "@type": "ListItem",
                 position: 3,
-                name: destName,
+                name: t(loc, "ship_from", { country: originName }),
               },
             ],
           }),

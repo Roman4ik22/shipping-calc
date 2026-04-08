@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
+import NavLink from "@/components/NavLink";
 
 export default function MobileMenu({
   locale,
@@ -12,12 +12,22 @@ export default function MobileMenu({
 }) {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [open]);
+
   return (
     <div className="sm:hidden">
       <button
         onClick={() => setOpen(!open)}
         className="p-2 text-gray-400 hover:text-white"
-        aria-label="Menu"
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
       >
         <svg
           className="w-6 h-6"
@@ -45,48 +55,54 @@ export default function MobileMenu({
       {open && (
         <div className="absolute top-16 left-0 right-0 bg-dark-800 border-b border-white/10 shadow-lg z-50">
           <nav className="flex flex-col p-4 gap-3">
-            <Link
+            <NavLink
               href={`/${locale}`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.home}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               href={`/${locale}/carriers`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.carriers}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               href={`/${locale}/guide`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.guides}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               href={`/${locale}/about`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.about || "About"}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               href={`/${locale}/blog`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.blog || "Blog"}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               href={`/${locale}/platforms`}
               className="text-gray-300 hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-white py-2"
               onClick={() => setOpen(false)}
             >
               {labels.platforms || "Platforms"}
-            </Link>
+            </NavLink>
           </nav>
         </div>
       )}

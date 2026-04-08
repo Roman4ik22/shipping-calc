@@ -57,9 +57,9 @@ export default function ShippingForm({
         onClick={handleSwap}
         disabled={!origin && !dest}
         className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 text-gray-300 hover:text-white disabled:opacity-20 transition-colors"
-        title={labels.swap}
+        aria-label={labels.swap}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M7 16l-4-4 4-4" />
           <path d="M17 8l4 4-4 4" />
           <line x1="3" y1="12" x2="21" y2="12" />
@@ -70,7 +70,8 @@ export default function ShippingForm({
         type="button"
         onClick={handleSwap}
         disabled={!origin && !dest}
-        className="md:hidden flex items-center justify-center w-full py-2 text-gray-500 hover:opacity-70 disabled:opacity-20 text-sm transition-opacity"
+        className="md:hidden flex items-center justify-center w-full py-3 text-gray-500 hover:opacity-70 disabled:opacity-20 text-sm transition-opacity"
+        aria-label={labels.swap}
       >
         {labels.swap}
       </button>

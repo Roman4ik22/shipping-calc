@@ -21,6 +21,26 @@ const localeConfig: Record<string, { label: string; flag: string; short: string 
 const allLocales = Object.keys(localeConfig);
 const majorLocales = ["en", "ru", "es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
 
+function getAlternateUrls(): Record<string, string> {
+  const map: Record<string, string> = {};
+  if (typeof document === "undefined") return map;
+  const links = document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]');
+  links.forEach((link) => {
+    const lang = link.getAttribute("hreflang");
+    const href = link.getAttribute("href");
+    if (lang && href && lang !== "x-default") {
+      // Extract path from full URL or relative URL
+      try {
+        const url = new URL(href, window.location.origin);
+        map[lang] = url.pathname;
+      } catch {
+        map[lang] = href;
+      }
+    }
+  });
+  return map;
+}
+
 export default function LanguageSwitcher({ locale, validLocales }: { locale: string; validLocales?: string[] }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -38,16 +58,18 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
 
   const handleSelect = (newLocale: string) => {
     setOpen(false);
+
+    // Try to use hreflang alternate links (works for corridor pages with locale-specific slugs)
+    const alternates = getAlternateUrls();
+    if (alternates[newLocale]) {
+      router.push(alternates[newLocale]);
+      return;
+    }
+
+    // Fallback: replace locale prefix in current path
     const localeRegex = new RegExp(`^/(${allLocales.join("|")})`);
     const pathWithoutLocale = pathname.replace(localeRegex, "") || "";
-    const isCorridorPage = /\/shipping\/[^/]+$/.test(pathWithoutLocale) &&
-      !pathWithoutLocale.includes("/shipping/from/") &&
-      !pathWithoutLocale.includes("/shipping/to/");
-    if (isCorridorPage) {
-      router.push(`/${newLocale}`);
-    } else {
-      router.push(`/${newLocale}${pathWithoutLocale}`);
-    }
+    router.push(`/${newLocale}${pathWithoutLocale}`);
   };
 
   const availableLocales = validLocales || majorLocales;
@@ -59,6 +81,7 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1 text-sm text-gray-500 hover:text-white transition-colors"
         aria-label="Language"
+        aria-expanded={open}
       >
         <span className="text-base">{current.flag}</span>
         <span className="hidden sm:inline">{current.short}</span>

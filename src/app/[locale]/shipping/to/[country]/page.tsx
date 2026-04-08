@@ -7,6 +7,7 @@ import { getCorridorLocales } from "@/lib/country-locale";
 import { notFound } from "next/navigation";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import ExpandableGrid from "@/components/ExpandableGrid";
 
 export const dynamicParams = true;
 
@@ -122,17 +123,22 @@ export default async function ToCountryPage({
 
       {Array.from(continents.entries())
         .sort(([a], [b]) => a.localeCompare(b))
-        .map(([continent, origs]) => (
-          <section key={continent} className="mb-8">
-            <h2 className="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">
-              {continent}
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-              {origs
-                .sort((a, b) =>
-                  getCountryName(a, loc).localeCompare(getCountryName(b, loc))
-                )
-                .map((orig) => (
+        .map(([continent, origs]) => {
+          const sorted = origs.sort((a, b) =>
+            getCountryName(a, loc).localeCompare(getCountryName(b, loc))
+          );
+          return (
+            <section key={continent} className="mb-8">
+              <h2 className="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">
+                {continent}
+              </h2>
+              <ExpandableGrid
+                visibleCount={12}
+                showMoreLabel={locale === "ru" ? "Показать все" : "Show all"}
+                showLessLabel={locale === "ru" ? "Свернуть" : "Show less"}
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2"
+              >
+                {sorted.map((orig) => (
                   <Link
                     key={orig.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`}
@@ -142,9 +148,10 @@ export default async function ToCountryPage({
                     {getCountryName(orig, loc)}
                   </Link>
                 ))}
-            </div>
-          </section>
-        ))}
+              </ExpandableGrid>
+            </section>
+          );
+        })}
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"

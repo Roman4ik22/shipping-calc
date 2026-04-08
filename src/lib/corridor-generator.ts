@@ -295,12 +295,12 @@ export function generateCorridorInfo(
   // --- NEW: Useful links (expanded) ---
   const useful_links: { name: string; url: string }[] = [];
   if (fromInfo) {
-    useful_links.push(fromInfo.trade_chamber);
-    useful_links.push(fromInfo.customs_authority);
+    if (fromInfo.trade_chamber?.url) useful_links.push(fromInfo.trade_chamber);
+    if (fromInfo.customs_authority?.url) useful_links.push(fromInfo.customs_authority);
   }
   if (toInfo) {
-    useful_links.push(toInfo.trade_chamber);
-    useful_links.push(toInfo.customs_authority);
+    if (toInfo.trade_chamber?.url) useful_links.push(toInfo.trade_chamber);
+    if (toInfo.customs_authority?.url) useful_links.push(toInfo.customs_authority);
   }
   if (toDeep) {
     if (toDeep.customs_tariff_url) {

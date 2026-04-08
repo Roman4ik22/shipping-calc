@@ -57,9 +57,16 @@ export async function generateMetadata({
     ? `$${customs.de_minimis_usd} de minimis`
     : "no de minimis exemption";
 
+  const countryEn = getCountryName(country, "en");
+  const titleLocalized = loc === "ru"
+    ? `Пошлины и таможня ${name} [2026] — НДС ${customs.vat_rate}%, de minimis $${customs.de_minimis_usd}`
+    : loc === "de"
+    ? `Zoll & Einfuhrregeln ${countryEn} [2026] — ${customs.vat_rate}% MwSt, de minimis $${customs.de_minimis_usd}`
+    : `${countryEn} Import Duties & Customs [2026] — ${customs.vat_rate}% VAT, $${customs.de_minimis_usd} Threshold`;
+
   return {
-    title: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
-    description: `Complete guide to importing goods into ${getCountryName(country, "en")}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by category, required documents, clearance process, and prohibited items.`,
+    title: titleLocalized,
+    description: `Complete guide to importing goods into ${countryEn}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by category, required documents, clearance process, and prohibited items.`,
     alternates: {
       canonical: `/${locale}/customs/${slug}`,
       languages: {

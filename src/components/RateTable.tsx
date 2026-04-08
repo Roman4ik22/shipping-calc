@@ -447,6 +447,7 @@ export default function RateTable({
                 min="0.1"
                 max="70"
                 step="0.1"
+                aria-label={labels.or_enter_weight}
                 className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-500"
               />
               <span className="text-sm text-gray-400">{labels.kg}</span>
@@ -473,24 +474,27 @@ export default function RateTable({
                 onChange={(e) => setDimensions({ ...dimensions, l: e.target.value })}
                 placeholder="L"
                 min="1"
+                aria-label="Length (cm)"
                 className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
-              <span className="text-gray-600">\u00d7</span>
+              <span className="text-gray-600" aria-hidden="true">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.w}
                 onChange={(e) => setDimensions({ ...dimensions, w: e.target.value })}
                 placeholder="W"
                 min="1"
+                aria-label="Width (cm)"
                 className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
-              <span className="text-gray-600">\u00d7</span>
+              <span className="text-gray-600" aria-hidden="true">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.h}
                 onChange={(e) => setDimensions({ ...dimensions, h: e.target.value })}
                 placeholder="H"
                 min="1"
+                aria-label="Height (cm)"
                 className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
               <span className="text-sm text-gray-600">cm</span>
@@ -689,7 +693,7 @@ export default function RateTable({
                       <a
                         href={rate.review.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer nofollow"
                         className={`text-xs flex items-center gap-1 ${
                           rate.review.rating >= 3.5 ? "text-green-400" :
                           rate.review.rating >= 2.5 ? "text-yellow-400" :
@@ -744,7 +748,7 @@ export default function RateTable({
                   <a
                     href={rate.carrier_website}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="noopener noreferrer nofollow sponsored"
                     className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
                   >
                     {labels.ship_now || "Ship Now"}
@@ -754,7 +758,7 @@ export default function RateTable({
                   <a
                     href={rate.tracking_url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="px-4 py-2 text-gray-500 text-sm hover:text-white transition-colors"
                   >
                     {labels.track_package || "Track Package"}

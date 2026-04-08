@@ -4,6 +4,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
+import ExpandableGrid from "@/components/ExpandableGrid";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -83,18 +84,23 @@ export default async function GuidesPage({
       {/* All countries by continent */}
       {[...continents.entries()]
         .sort(([a], [b]) => a.localeCompare(b))
-        .map(([continent, list]) => (
-          <section key={continent} className="mb-8">
-            <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-              <span className="inline-block w-8 h-0.5 bg-accent/40 rounded-full" />
-              {continent}
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-              {list
-                .sort((a, b) =>
-                  getCountryName(a, loc).localeCompare(getCountryName(b, loc))
-                )
-                .map((c) => (
+        .map(([continent, list]) => {
+          const sorted = list.sort((a, b) =>
+            getCountryName(a, loc).localeCompare(getCountryName(b, loc))
+          );
+          return (
+            <section key={continent} className="mb-8">
+              <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <span className="inline-block w-8 h-0.5 bg-accent/40 rounded-full" />
+                {continent}
+              </h2>
+              <ExpandableGrid
+                visibleCount={12}
+                showMoreLabel={locale === "ru" ? "Показать все" : "Show all"}
+                showLessLabel={locale === "ru" ? "Свернуть" : "Show less"}
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2"
+              >
+                {sorted.map((c) => (
                   <Link
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
@@ -104,9 +110,10 @@ export default async function GuidesPage({
                     <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
                   </Link>
                 ))}
-            </div>
-          </section>
-        ))}
+              </ExpandableGrid>
+            </section>
+          );
+        })}
 
       {/* BreadcrumbList JSON-LD */}
       <script
