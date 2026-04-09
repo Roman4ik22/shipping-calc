@@ -56,26 +56,35 @@ export default async function GuidesPage({
         {t(loc, "guides_subtitle")}
       </p>
 
-      {/* Popular guides */}
+      {/* Popular guides — mixed layout: 3 featured + rest compact */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_guides")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {popular.slice(0, 12).map((c) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+          {popular.slice(0, 3).map((c) => (
             <Link
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 hover:translate-y-[-2px] transition-all duration-200"
+              className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all"
             >
               <span className="text-3xl">{countryFlag(c.code)}</span>
-              <div>
-                <p className="font-medium text-white">
-                  {getCountryName(c, loc)}
-                </p>
-                <p className="text-xs text-gray-400">{c.continent}</p>
-              </div>
+              <p className="font-medium text-white mt-2">{getCountryName(c, loc)}</p>
+              <p className="text-xs text-gray-500">{c.continent}</p>
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {popular.slice(3, 12).map((c) => (
+            <Link
+              key={c.code}
+              href={`/${locale}/guide/${c.slug_en}`}
+              prefetch={false}
+              className="flex items-center gap-2 bg-card hover:bg-card-hover rounded-lg px-3 py-2 transition-colors text-sm"
+            >
+              <span className="text-lg">{countryFlag(c.code)}</span>
+              <span className="text-gray-300">{getCountryName(c, loc)}</span>
             </Link>
           ))}
         </div>

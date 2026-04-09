@@ -102,20 +102,25 @@ export default async function ToCountryPage({
         <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_origins")}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
           {getPopularCountries()
             .filter((c) => c.code !== country.code)
-            .slice(0, 12)
+            .slice(0, 3)
             .map((orig) => (
-              <Link
-                key={orig.code}
-                href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`}
-                prefetch={false}
-                className="block bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50"
-              >
-                <p className="font-medium">
-                  {countryFlag(orig.code)} {getCountryName(orig, loc)} → {name} {countryFlag(country.code)}
-                </p>
+              <Link key={orig.code} href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`} prefetch={false}
+                className="bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all">
+                <p className="font-medium text-white">{countryFlag(orig.code)} {getCountryName(orig, loc)} → {name} {countryFlag(country.code)}</p>
+              </Link>
+            ))}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {getPopularCountries()
+            .filter((c) => c.code !== country.code)
+            .slice(3, 12)
+            .map((orig) => (
+              <Link key={orig.code} href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`} prefetch={false}
+                className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors">
+                {countryFlag(orig.code)} {getCountryName(orig, loc)} → {name}
               </Link>
             ))}
         </div>

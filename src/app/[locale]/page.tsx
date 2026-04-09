@@ -53,8 +53,7 @@ export default async function HomePage({
       {/* Hero */}
       <section className="bg-dark-900 py-24 sm:py-32 relative">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 -left-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px]" />
-          <div className="absolute -bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]" />
+          <img src="/img/routes-map.svg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-center">
@@ -321,6 +320,7 @@ export default async function HomePage({
       {/* How it works — horizontal numbered list, not 3 identical cards */}
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+          <img src="/img/package-journey.svg" alt="" aria-hidden="true" className="w-full max-w-lg mx-auto mb-8 opacity-60" />
           <h2 className="text-2xl font-bold text-white mb-10">
             {t(loc, "how_it_works")}
           </h2>

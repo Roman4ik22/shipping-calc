@@ -47,9 +47,14 @@ export default async function AboutPage({
         </span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-        {t(loc, "about_title")}
-      </h1>
+      <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
+        <div className="flex-1">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            {t(loc, "about_title")}
+          </h1>
+        </div>
+        <img src="/img/data-network.svg" alt="" aria-hidden="true" className="w-48 md:w-64 opacity-50 shrink-0 hidden md:block" />
+      </div>
 
       <div className="prose max-w-none">
         <section className="mb-8">

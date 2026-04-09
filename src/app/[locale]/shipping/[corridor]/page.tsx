@@ -219,6 +219,9 @@ export default async function CorridorPage({
         <SaveRoute corridorSlug={corridor} originName={originName} destName={destName} locale={locale} />
       </div>
 
+      {/* Route visual */}
+      <img src="/img/route-line.svg" alt="" aria-hidden="true" className="w-full max-w-md mb-6 opacity-50" />
+
       {/* Quick Answer — featured snippet target */}
       {corridorData && corridorData.carriers.length > 0 && (() => {
         const cheapest = corridorData.carriers.reduce((a, b) =>

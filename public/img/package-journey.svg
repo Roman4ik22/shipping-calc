@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" fill="none">
+  <!-- Origin dot -->
+  <circle cx="60" cy="60" r="8" fill="#2997ff" opacity="0.2"/>
+  <circle cx="60" cy="60" r="4" fill="#2997ff" opacity="0.6"/>
+
+  <!-- Dashed path -->
+  <path d="M80 60 Q200 20 300 60 Q400 100 520 60" stroke="#2997ff" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.2"/>
+
+  <!-- Package icon in middle -->
+  <rect x="283" y="43" width="34" height="34" rx="4" stroke="#2997ff" stroke-width="1.5" opacity="0.3"/>
+  <line x1="283" y1="55" x2="317" y2="55" stroke="#2997ff" stroke-width="1" opacity="0.2"/>
+  <line x1="300" y1="43" x2="300" y2="77" stroke="#2997ff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Destination dot -->
+  <circle cx="540" cy="60" r="8" fill="#2997ff" opacity="0.2"/>
+  <circle cx="540" cy="60" r="4" fill="#2997ff" opacity="0.6"/>
+
+  <!-- Small airplane along path -->
+  <polygon points="420,48 430,52 420,56 422,52" fill="#2997ff" opacity="0.25"/>
+</svg>

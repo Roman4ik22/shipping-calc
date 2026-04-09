@@ -103,20 +103,26 @@ export default async function FromCountryPage({
         <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_destinations")}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        {/* Top 3 featured + rest as compact links */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
           {getPopularCountries()
             .filter((c) => c.code !== country.code)
-            .slice(0, 12)
+            .slice(0, 3)
             .map((dest) => (
-              <Link
-                key={dest.code}
-                href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
-                prefetch={false}
-                className="block bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50"
-              >
-                <p className="font-medium">
-                  {countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}
-                </p>
+              <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
+                className="bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all">
+                <p className="font-medium text-white">{countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}</p>
+              </Link>
+            ))}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {getPopularCountries()
+            .filter((c) => c.code !== country.code)
+            .slice(3, 12)
+            .map((dest) => (
+              <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
+                className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors">
+                {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}
               </Link>
             ))}
         </div>
