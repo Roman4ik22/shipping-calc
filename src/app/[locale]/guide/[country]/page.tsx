@@ -340,29 +340,29 @@ export default async function GuidePage({
       {/* Useful tools — horizontal list, not 3 identical cards */}
       <section className="mb-10">
         <h2 className="text-xl font-bold text-white mb-4">
-          {locale === "ru" ? "Инструменты" : "Useful Tools"}
+          {t(loc, "useful_tools")}
         </h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href={`/${locale}/tools/duty-calculator`}
             className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
             <span className="text-sm text-gray-600">/</span>
             <div>
-              <p className="font-medium text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</p>
-              <p className="text-xs text-gray-500">{locale === "ru" ? `Пошлины для ${name}` : `Duties for ${name}`}</p>
+              <p className="font-medium text-white text-sm">{t(loc, "duty_calculator_link")}</p>
+              <p className="text-xs text-gray-500">{t(loc, "duties_for", { country: name })}</p>
             </div>
           </Link>
           <Link href={`/${locale}/tools/delivery-estimator`}
             className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
             <span className="text-sm text-gray-600">/</span>
             <div>
-              <p className="font-medium text-white text-sm">{locale === "ru" ? "Сроки доставки" : "Delivery Estimator"}</p>
-              <p className="text-xs text-gray-500">{locale === "ru" ? "Дата доставки" : "Delivery date"}</p>
+              <p className="font-medium text-white text-sm">{t(loc, "delivery_estimator_link")}</p>
+              <p className="text-xs text-gray-500">{t(loc, "delivery_date")}</p>
             </div>
           </Link>
           {hasCustoms && (
             <Link href={`/${locale}/customs/${country.slug_en}`}
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors px-2">
-              {locale === "ru" ? `Таможня ${name} →` : `${name} Customs →`}
+              {t(loc, "customs_link", { country: name })} →
             </Link>
           )}
         </div>
@@ -466,18 +466,16 @@ export default async function GuidePage({
       {/* Compare rates CTA */}
       <section className="mb-10 bg-card rounded-3xl p-8 text-center">
         <h2 className="text-xl font-bold text-white mb-2">
-          {locale === "ru" ? `Сравните тарифы доставки в ${name}` : `Compare Shipping Rates to ${name}`}
+          {t(loc, "compare_shipping_to", { country: name })}
         </h2>
         <p className="text-sm text-gray-500 mb-5">
-          {locale === "ru"
-            ? `134+ перевозчиков, актуальные цены, доставка из любой страны`
-            : `134+ carriers, real-time prices, ship from any country`}
+          {t(loc, "carriers_realtime")}
         </p>
         <Link
           href={`/${locale}`}
           className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
-          {locale === "ru" ? "Сравнить тарифы" : "Compare Rates"}
+          {t(loc, "compare_rates_cta")}
         </Link>
       </section>
 

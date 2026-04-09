@@ -71,7 +71,7 @@ export default async function HomePage({
             <span className="font-mono text-white">45K+</span> {t(loc, "routes")}
           </p>
           <p className="text-center mt-3 text-xs text-gray-600">
-            {loc === "ru" ? "Открытые тарифы перевозчиков, обновляемые еженедельно" : "Open carrier rate data, updated weekly"}
+            {t(loc, "open_carrier_data")}
           </p>
 
           <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl p-8 pb-20 overflow-visible relative shadow-2xl">
@@ -95,7 +95,7 @@ export default async function HomePage({
             />
           </div>
           <p className="text-center text-xs text-gray-600 mt-4">
-            {loc === "ru" ? "Тарифы обновлены: апрель 2026" : "Rates updated: April 2026"}
+            {t(loc, "rates_updated")}
           </p>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default async function HomePage({
                     <span className="text-xl mr-1">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-xl ml-1">{countryFlag(toCode)}</span>
                   </p>
                   {cheapest && cheapest < 999 && (
-                    <p className="text-sm text-gray-500 mt-2">{locale === "ru" ? "от" : "from"} <span className="text-white font-medium">${cheapest}/kg</span></p>
+                    <p className="text-sm text-gray-500 mt-2">{t(loc, "from_price")} <span className="text-white font-medium">${cheapest}/kg</span></p>
                   )}
                 </Link>
               );
@@ -158,10 +158,10 @@ export default async function HomePage({
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <h2 className="text-2xl font-bold text-white mb-2">
-            {locale === "ru" ? "Примеры стоимости доставки" : "Sample Shipping Prices"}
+            {t(loc, "shipping_cost_examples")}
           </h2>
           <p className="text-gray-500 mb-6 text-sm">
-            {locale === "ru" ? "Самые дешёвые тарифы за 1 кг на популярных маршрутах" : "Cheapest rates per 1 kg on popular routes"}
+            {t(loc, "sample_prices_subtitle")}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
             {[["US", "GB"], ["CN", "US"], ["DE", "FR"]].map(([fromCode, toCode]) => {
@@ -186,10 +186,10 @@ export default async function HomePage({
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl font-light text-white">${cheapest}</span>
                       <span className="text-sm text-gray-500">/kg</span>
-                      {fastest && <span className="text-xs text-gray-600 ml-auto">{fastest}+ {locale === "ru" ? "дн" : "d"}</span>}
+                      {fastest && <span className="text-xs text-gray-600 ml-auto">{fastest}+ {t(loc, "days_short")}</span>}
                     </div>
                   ) : (
-                    <span className="text-sm text-gray-600">{locale === "ru" ? "Тарифы →" : "View rates →"}</span>
+                    <span className="text-sm text-gray-600">{t(loc, "compare_rates_cta")} →</span>
                   )}
                 </Link>
               );
@@ -227,21 +227,21 @@ export default async function HomePage({
               className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
               <span className="text-lg text-gray-600">/</span>
               <div>
-                <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор пошлин" : "Duty Calculator"}</h3>
-                <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "НДС, пошлины, полная стоимость ввоза" : "VAT, duties, total landed cost"}</p>
+                <h3 className="font-semibold text-white text-sm">{t(loc, "duty_calculator_link")}</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{t(loc, "vat_duties_cost")}</p>
               </div>
             </Link>
             <Link href={`/${locale}/tools/delivery-estimator`}
               className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
               <span className="text-lg text-gray-600">/</span>
               <div>
-                <h3 className="font-semibold text-white text-sm">{locale === "ru" ? "Калькулятор сроков" : "Delivery Estimator"}</h3>
-                <p className="text-xs text-gray-500 mt-0.5">{locale === "ru" ? "С учётом выходных и праздников" : "Accounts for weekends & holidays"}</p>
+                <h3 className="font-semibold text-white text-sm">{t(loc, "delivery_estimator")}</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{t(loc, "delivery_weekends")}</p>
               </div>
             </Link>
             <Link href={`/${locale}/tools`}
               className="flex items-center gap-3 text-sm text-gray-500 hover:text-white transition-colors px-4">
-              {locale === "ru" ? "Все инструменты →" : "All tools →"}
+              {t(loc, "all_tools_link")} →
             </Link>
           </div>
         </div>
@@ -404,7 +404,7 @@ export default async function HomePage({
             href={`/${locale}/guide`}
             className="inline-block mt-4 text-sm text-gray-500 hover:text-white transition-colors"
           >
-            {locale === "ru" ? "Все 213 стран →" : "All 213 countries →"}
+            {t(loc, "all_countries_link")} →
           </Link>
         </div>
       </section>

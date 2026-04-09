@@ -182,7 +182,7 @@ export default async function CorridorPage({
       {/* Breadcrumbs: Shipping Rates → to {dest} → from {origin} */}
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
-          {locale === "ru" ? "Тарифы доставки" : "Shipping Rates"}
+          {t(loc, "shipping_rates")}
         </Link>
         <span className="mx-2">/</span>
         <Link
@@ -232,29 +232,29 @@ export default async function CorridorPage({
         return (
           <div className="my-6 p-8 bg-card rounded-3xl">
             <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
-              {locale === "ru" ? "Быстрый ответ" : "Quick Answer"}
+              {t(loc, "quick_answer")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div>
-                <p className="text-xs text-gray-500">{locale === "ru" ? "Самый дешёвый" : "Cheapest option"}</p>
+                <p className="text-xs text-gray-500">{t(loc, "cheapest_option")}</p>
                 <p className="text-white font-medium">{cheapest.carrier.name}</p>
-                <p className="text-lg text-white font-light">${cheapest.rates.find(r => r.weight_kg === 1)?.price_usd}/{locale === "ru" ? "кг" : "kg"}</p>
-                <p className="text-xs text-gray-500">{cheapest.estimated_days_min}-{cheapest.estimated_days_max} {locale === "ru" ? "дней" : "days"}</p>
+                <p className="text-lg text-white font-light">${cheapest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
+                <p className="text-xs text-gray-500">{cheapest.estimated_days_min}-{cheapest.estimated_days_max} {t(loc, "days_unit")}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500">{locale === "ru" ? "Самый быстрый" : "Fastest option"}</p>
+                <p className="text-xs text-gray-500">{t(loc, "fastest_option")}</p>
                 <p className="text-white font-medium">{fastest.carrier.name}</p>
-                <p className="text-lg text-white font-light">{fastest.estimated_days_min}-{fastest.estimated_days_max} {locale === "ru" ? "дней" : "days"}</p>
-                <p className="text-xs text-gray-500">${fastest.rates.find(r => r.weight_kg === 1)?.price_usd}/{locale === "ru" ? "кг" : "kg"}</p>
+                <p className="text-lg text-white font-light">{fastest.estimated_days_min}-{fastest.estimated_days_max} {t(loc, "days_unit")}</p>
+                <p className="text-xs text-gray-500">${fastest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500">{locale === "ru" ? "Без пошлин до" : "Duty-free under"}</p>
+                <p className="text-xs text-gray-500">{t(loc, "duty_free_under")}</p>
                 <p className="text-lg text-white font-light">${customs.de_minimis_usd}</p>
                 <p className="text-xs text-gray-500">{locale === "ru" ? "НДС" : "VAT"}: {customs.vat_rate}%</p>
               </div>
             </div>
             <p className="text-xs text-gray-500 mt-3">
-              {locale === "ru" ? "↓ Прокрутите вниз для полного сравнения всех перевозчиков" : "↓ Scroll down for full carrier comparison"}
+              {"↓ " + t(loc, "scroll_compare")}
             </p>
           </div>
         );
@@ -262,7 +262,7 @@ export default async function CorridorPage({
 
       {/* Last updated */}
       <p className="text-xs text-gray-600 mb-6">
-        {locale === "ru" ? "Данные на апрель 2026" : "Data as of April 2026"}
+        {t(loc, "data_as_of")}
       </p>
 
       {/* Common Shipment Examples */}
@@ -288,34 +288,34 @@ export default async function CorridorPage({
         return (
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-white mb-4" id="examples">
-              {isRu ? "Примеры стоимости доставки" : "Shipping Cost Examples"}
+              {t(loc, "shipping_cost_examples")}
             </h2>
             {/* Featured item + compact row — not 4 identical cards */}
             <div className="bg-card rounded-2xl p-5 mb-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-400">{isRu ? "Телефон / документы" : "Phone / documents"} <span className="text-gray-600">(0.5 kg)</span></p>
+                  <p className="text-sm text-gray-400">{t(loc, "example_phone")} <span className="text-gray-600">(0.5 kg)</span></p>
                   <p className="text-2xl font-light text-white mt-1">${r05.price}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-xs text-gray-500">{r05.carrier}</p>
-                  <p className="text-xs text-gray-600">{r05.days} {isRu ? "дн" : "days"}</p>
+                  <p className="text-xs text-gray-600">{r05.days} {t(loc, "days_short")}</p>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{isRu ? "Одежда" : "Clothing"} <span className="text-gray-600">2kg</span></p>
+                <p className="text-xs text-gray-500">{t(loc, "example_clothing")} <span className="text-gray-600">2kg</span></p>
                 <p className="text-lg font-light text-white">${r2.price}</p>
                 <p className="text-[10px] text-gray-600">{r2.carrier}</p>
               </div>
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{isRu ? "Коробка" : "Box"} <span className="text-gray-600">5kg</span></p>
+                <p className="text-xs text-gray-500">{t(loc, "example_box")} <span className="text-gray-600">5kg</span></p>
                 <p className="text-lg font-light text-white">${r5.price}</p>
                 <p className="text-[10px] text-gray-600">{r5.carrier}</p>
               </div>
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{isRu ? "Тяжёлое" : "Heavy"} <span className="text-gray-600">10kg</span></p>
+                <p className="text-xs text-gray-500">{t(loc, "example_heavy")} <span className="text-gray-600">10kg</span></p>
                 <p className="text-lg font-light text-white">${r10.price}</p>
                 <p className="text-[10px] text-gray-600">{r10.carrier}</p>
               </div>
@@ -328,13 +328,13 @@ export default async function CorridorPage({
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="flex flex-wrap gap-x-8 gap-y-2 mb-8 text-sm">
           <span className="text-gray-500">
-            {locale === "ru" ? "от" : "from"} <span className="text-white font-medium text-base">${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}/kg</span>
+            {t(loc, "from_price")} <span className="text-white font-medium text-base">${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}/kg</span>
           </span>
           <span className="text-gray-500">
-            {locale === "ru" ? "от" : "from"} <span className="text-white font-medium text-base">{Math.min(...corridorData.carriers.map(c => c.estimated_days_min))} {locale === "ru" ? "дней" : "days"}</span>
+            {t(loc, "from_price")} <span className="text-white font-medium text-base">{Math.min(...corridorData.carriers.map(c => c.estimated_days_min))} {t(loc, "days_unit")}</span>
           </span>
           <span className="text-gray-500">
-            <span className="text-white font-medium text-base">{corridorData.carriers.length}</span> {locale === "ru" ? "перевозчиков" : "carriers"}
+            <span className="text-white font-medium text-base">{corridorData.carriers.length}</span> {t(loc, "carriers_count")}
           </span>
           <span className="text-gray-500">
             de minimis <span className="text-white font-medium text-base">${getCustomsInfo(destination.code).de_minimis_usd}</span>
@@ -438,24 +438,22 @@ export default async function CorridorPage({
 
       {/* Source note */}
       <p className="text-xs text-gray-600 py-3 border-t border-white/5">
-        {locale === "ru"
-          ? "Тарифы собраны из открытых источников и обновляются еженедельно. "
-          : "Rates aggregated from public carrier data, updated weekly. "}
+        {t(loc, "source_note") + " "}
         <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
-          {locale === "ru" ? "Как мы собираем данные" : "How we collect data"}
+          {t(loc, "how_we_collect")}
         </Link>
       </p>
 
       {/* Related tools */}
       <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 mb-4 text-sm">
         <Link href={`/${locale}/tools/duty-calculator`} className="text-gray-500 hover:text-white transition-colors">
-          {locale === "ru" ? "Калькулятор пошлин" : "Duty calculator"} &rarr;
+          {t(loc, "duty_calculator_link")} &rarr;
         </Link>
         <Link href={`/${locale}/tools/delivery-estimator`} className="text-gray-500 hover:text-white transition-colors">
-          {locale === "ru" ? "Сроки доставки" : "Delivery estimator"} &rarr;
+          {t(loc, "delivery_estimator_link")} &rarr;
         </Link>
         <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-500 hover:text-white transition-colors">
-          {locale === "ru" ? `Таможня ${destName}` : `${destName} customs`} &rarr;
+          {t(loc, "customs_link", { country: destName })} &rarr;
         </Link>
       </div>
 
@@ -505,16 +503,16 @@ export default async function CorridorPage({
       <div className="mt-8">
         <InsuranceComparison
           labels={{
-            title: locale === "ru" ? "Сравнение страхования посылок" : "Shipping Insurance Comparison",
-            item_value: locale === "ru" ? "Стоимость товара" : "Item value",
+            title: t(loc, "insurance_title"),
+            item_value: t(loc, "insurance_item_value"),
             calculate: t(loc, "duty_calc_calculate"),
             carrier: t(loc, "carrier"),
-            included: locale === "ru" ? "Включено" : "Included",
-            premium: locale === "ru" ? "Премия" : "Premium",
-            payout: locale === "ru" ? "Выплата" : "Payout",
+            included: t(loc, "insurance_included"),
+            premium: t(loc, "insurance_premium"),
+            payout: t(loc, "insurance_payout"),
             yes: t(loc, "yes"),
             no: t(loc, "no"),
-            note: locale === "ru" ? "Примечание" : "Note",
+            note: t(loc, "insurance_note"),
           }}
         />
       </div>
@@ -523,12 +521,10 @@ export default async function CorridorPage({
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="mt-8 py-8 border-t border-white/5">
           <h2 className="text-xl font-bold text-white mb-4" id="tracking">
-            {locale === "ru" ? "Отслеживание посылки" : "Track Your Shipment"}
+            {t(loc, "track_shipment")}
           </h2>
           <p className="text-sm text-gray-400 mb-4">
-            {locale === "ru"
-              ? "После отправки используйте номер отслеживания на сайте перевозчика:"
-              : "After shipping, use your tracking number on the carrier's website:"}
+            {t(loc, "track_after")}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {corridorData.carriers.slice(0, 5).map((cr) => (
@@ -541,7 +537,7 @@ export default async function CorridorPage({
                   className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-2 transition-colors"
                 >
                   <span className="text-gray-600">↗</span>
-                  {cr.carrier.name} — {locale === "ru" ? "отследить" : "track"}
+                  {cr.carrier.name} — {t(loc, "track_link")}
                 </a>
               ) : null
             ))}
@@ -559,12 +555,12 @@ export default async function CorridorPage({
               price: cr.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0,
             }))}
             labels={{
-              title: locale === "ru" ? "Изменение цен за 30 дней" : "Price Changes (30 days)",
+              title: t(loc, "price_changes"),
               carrier: t(loc, "carrier"),
-              current: locale === "ru" ? "Сейчас" : "Current",
-              previous: locale === "ru" ? "Было" : "Previous",
-              change: locale === "ru" ? "Изменение" : "Change",
-              no_changes: locale === "ru" ? "Нет данных об изменениях" : "No price change data available",
+              current: t(loc, "current_price"),
+              previous: t(loc, "previous_price"),
+              change: t(loc, "price_change"),
+              no_changes: t(loc, "no_price_data"),
             }}
           />
         </div>
@@ -738,23 +734,23 @@ export default async function CorridorPage({
             {/* Special Items Guide — table format, not 6 identical cards */}
             <div className="py-8 border-t border-white/5">
               <h2 className="text-xl font-bold text-white mb-4" id="special-items">
-                {isRu ? "Особые категории товаров" : "Special Items Guide"}
+                {t(loc, "special_items")}
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="text-left text-xs text-gray-500 uppercase tracking-wider">
-                      <th className="pb-3 pr-6">{isRu ? "Категория" : "Category"}</th>
-                      <th className="pb-3">{isRu ? "Ограничения" : "Restrictions"}</th>
+                      <th className="pb-3 pr-6">{t(loc, "category_label")}</th>
+                      <th className="pb-3">{t(loc, "restrictions_label")}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Литиевые батареи" : "Lithium batteries"}</td><td className="py-3 text-gray-400">{isRu ? "Только встроенные в устройство. Отдельные запрещены авиаперевозчиками." : "Only installed in device. Standalone prohibited by air carriers."}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Алкоголь" : "Alcohol"}</td><td className="py-3 text-gray-400">{isRu ? "Ограничен или запрещён. Требуется лицензия импортёра." : "Restricted or prohibited. Import license typically required."}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Продукты питания" : "Food"}</td><td className="py-3 text-gray-400">{isRu ? "Фитосанитарный сертификат. Скоропортящееся — только экспресс." : "Phytosanitary certificate may be required. Perishables: express only."}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Лекарства" : "Medications"}</td><td className="py-3 text-gray-400">{isRu ? "До 3 месяцев запаса с рецептом. Коммерческий импорт — лицензия." : "Up to 3-month supply with prescription. Commercial import needs license."}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Искусство" : "Art & antiques"}</td><td className="py-3 text-gray-400">{isRu ? "Может требоваться экспортное разрешение. Страхование рекомендуется." : "Export permit may be needed. Insurance strongly recommended."}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{isRu ? "Электроника" : "Electronics"}</td><td className="py-3 text-gray-400">{isRu ? "Проверьте напряжение. Некоторые страны требуют сертификацию (CE, FCC)." : "Check voltage. Some countries require CE/FCC certification."}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_lithium")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_lithium")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_alcohol")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_alcohol")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_food")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_food")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_meds")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_meds")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_art")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_art")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_electronics")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_electronics")}</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -956,7 +952,7 @@ export default async function CorridorPage({
       {/* More shipping routes — dense internal link network */}
       <section className="mt-12">
         <h2 className="text-xl font-bold text-white mb-4">
-          {locale === "ru" ? "Ещё маршруты доставки" : "More Shipping Routes"}
+          {t(loc, "more_routes")}
         </h2>
         <div className="space-y-6">
           {/* From same origin to other destinations */}
@@ -1003,7 +999,7 @@ export default async function CorridorPage({
           {/* Country guide links */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 mb-2">
-              {locale === "ru" ? "Руководства по странам" : "Country Guides"}
+              {t(loc, "country_guides")}
             </h3>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -1024,7 +1020,7 @@ export default async function CorridorPage({
           {corridorData && corridorData.carriers.length > 0 && (
             <div>
               <h3 className="text-sm font-semibold text-gray-400 mb-2">
-                {locale === "ru" ? "Перевозчики на маршруте" : "Carriers on This Route"}
+                {t(loc, "carriers_on_route")}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[...new Set(corridorData.carriers.map((cr) => cr.carrier.id))].slice(0, 4).map((carrierId) => {
@@ -1208,18 +1204,16 @@ export default async function CorridorPage({
       {/* Try another route CTA */}
       <section className="mt-12 mb-8 bg-card rounded-3xl p-8 text-center">
         <h2 className="text-xl font-bold text-white mb-2">
-          {locale === "ru" ? "Ищете другой маршрут?" : "Looking for a different route?"}
+          {t(loc, "looking_different")}
         </h2>
         <p className="text-sm text-gray-500 mb-5">
-          {locale === "ru"
-            ? "Сравните тарифы для 45,000+ маршрутов между 213 странами"
-            : "Compare rates for 45,000+ routes between 213 countries"}
+          {t(loc, "compare_45k")}
         </p>
         <Link
           href={`/${locale}`}
           className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
-          {locale === "ru" ? "Найти маршрут" : "Find a Route"}
+          {t(loc, "find_route")}
         </Link>
       </section>
 
