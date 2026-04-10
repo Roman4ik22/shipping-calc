@@ -301,22 +301,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p className="text-xs text-gray-600 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
                 <div className="flex flex-wrap gap-3 text-xs">
                   <Link href={`/${locale}/terms`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Условия" : "Terms"}
+                    {t(loc, "terms_link")}
                   </Link>
                   <Link href={`/${locale}/privacy`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Конфиденциальность" : "Privacy"}
+                    {t(loc, "privacy_link")}
                   </Link>
                   <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Методология" : "Data Methodology"}
+                    {t(loc, "methodology_link")}
                   </Link>
                   <Link href={`/${locale}/sources`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Источники данных" : "Data Sources"}
+                    {t(loc, "sources_link")}
                   </Link>
                   <Link href={`/${locale}/team`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Команда" : "Team"}
+                    {t(loc, "team_link")}
                   </Link>
                   <Link href={`/${locale}/updates`} className="text-gray-500 hover:text-white transition-colors">
-                    {locale === "ru" ? "Обновления" : "Updates"}
+                    {t(loc, "updates_link")}
                   </Link>
                 </div>
               </div>

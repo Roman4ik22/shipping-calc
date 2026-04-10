@@ -247,7 +247,7 @@ export default async function UpdatesPage({
                 className="text-sm font-medium text-gray-500"
               >
                 {new Date(entry.date + "T00:00:00").toLocaleDateString(
-                  locale === "ru" ? "ru-RU" : "en-US",
+                  locale,
                   {
                     year: "numeric",
                     month: "short",

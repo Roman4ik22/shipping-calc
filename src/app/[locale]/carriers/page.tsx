@@ -85,8 +85,8 @@ export default async function CarriersPage({
       <h2 className="text-xl font-bold text-white mb-4">{title} <span className="text-sm font-normal text-gray-600">({items.length})</span></h2>
       <ExpandableGrid
         visibleCount={12}
-        showMoreLabel={locale === "ru" ? "Показать все" : "Show all"}
-        showLessLabel={locale === "ru" ? "Свернуть" : "Show less"}
+        showMoreLabel={t(loc, "show_all")}
+        showLessLabel={t(loc, "show_less")}
         className="flex flex-wrap gap-2"
       >
         {items.map((carrier) => (
@@ -97,7 +97,7 @@ export default async function CarriersPage({
             className="flex items-center gap-2 bg-card hover:bg-card-hover rounded-lg px-4 py-3 transition-colors"
           >
             <span className="font-medium text-white text-sm">{carrier.name}</span>
-            <span className="text-xs text-gray-600">{carrier.services.length} {locale === "ru" ? "усл." : "svc"}</span>
+            <span className="text-xs text-gray-600">{carrier.services.length} {t(loc, "svc_short")}</span>
           </Link>
         ))}
       </ExpandableGrid>

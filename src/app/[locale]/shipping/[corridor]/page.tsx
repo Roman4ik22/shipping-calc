@@ -250,7 +250,7 @@ export default async function CorridorPage({
               <div>
                 <p className="text-xs text-gray-500">{t(loc, "duty_free_under")}</p>
                 <p className="text-lg text-white font-light">${customs.de_minimis_usd}</p>
-                <p className="text-xs text-gray-500">{locale === "ru" ? "НДС" : "VAT"}: {customs.vat_rate}%</p>
+                <p className="text-xs text-gray-500">{t(loc, "vat_rate")}: {customs.vat_rate}%</p>
               </div>
             </div>
             <p className="text-xs text-gray-500 mt-3">
@@ -958,7 +958,7 @@ export default async function CorridorPage({
           {/* From same origin to other destinations */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 mb-2">
-              {locale === "ru" ? `Доставка из ${originName}` : `Ship from ${originName}`}
+              {t(loc, "ship_from", { country: originName })}
             </h3>
             <div className="flex flex-wrap gap-2">
               {popular
@@ -979,7 +979,7 @@ export default async function CorridorPage({
           {/* To same destination from other origins */}
           <div>
             <h3 className="text-sm font-semibold text-gray-400 mb-2">
-              {locale === "ru" ? `Доставка в ${destName}` : `Ship to ${destName}`}
+              {t(loc, "ship_to", { country: destName })}
             </h3>
             <div className="flex flex-wrap gap-2">
               {popular
@@ -1006,13 +1006,13 @@ export default async function CorridorPage({
                 href={`/${locale}/guide/${origin.slug_en}`}
                 className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
               >
-                {locale === "ru" ? `Руководство: ${originName}` : `${originName} Shipping Guide`}
+                {t(loc, "guide_title", { country: originName })}
               </Link>
               <Link
                 href={`/${locale}/guide/${destination.slug_en}`}
                 className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
               >
-                {locale === "ru" ? `Руководство: ${destName}` : `${destName} Shipping Guide`}
+                {t(loc, "guide_title", { country: destName })}
               </Link>
             </div>
           </div>
@@ -1264,7 +1264,7 @@ export default async function CorridorPage({
               {
                 "@type": "ListItem",
                 position: 1,
-                name: locale === "ru" ? "Тарифы доставки" : "Shipping Rates",
+                name: t(loc, "shipping_rates"),
                 item: `${"https://rateships.com"}/${locale}`,
               },
               {
