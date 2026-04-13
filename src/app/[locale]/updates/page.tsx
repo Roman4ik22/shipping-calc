@@ -169,8 +169,6 @@ export default async function UpdatesPage({
 }) {
   const { locale } = await params;
   const loc = locale as Locale;
-  const isRu = locale === "ru";
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -228,9 +226,7 @@ export default async function UpdatesPage({
         {t(loc, "updates_title")}
       </h1>
       <p className="text-gray-400 text-lg mb-10">
-        {isRu
-          ? "Мы регулярно обновляем тарифы и таможенные данные. Вот что изменилось."
-          : "We update our shipping rates and customs data regularly. Here\u2019s what changed."}
+        {t(loc, "updates_subtitle")}
       </p>
 
       {/* Entries */}
@@ -260,10 +256,10 @@ export default async function UpdatesPage({
             {/* Content */}
             <div className="flex-1 min-w-0">
               <h2 className="text-white font-semibold text-base mb-1">
-                {isRu ? entry.title_ru : entry.title_en}
+                {loc === "ru" ? entry.title_ru : entry.title_en}
               </h2>
               <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                {isRu ? entry.desc_ru : entry.desc_en}
+                {loc === "ru" ? entry.desc_ru : entry.desc_en}
               </p>
               <div className="flex flex-wrap gap-2">
                 {entry.tags.map((tag) => (

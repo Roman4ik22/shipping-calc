@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 import DutyCalculatorStandalone from "@/components/DutyCalculatorStandalone";
@@ -15,14 +16,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
   return {
-    title: isRu
-      ? "Калькулятор таможенных пошлин и импортных налогов — RateShips"
-      : "Customs Duty Calculator & Import Tax Calculator — RateShips",
-    description: isRu
-      ? "Бесплатный калькулятор таможенных пошлин и импортных налогов. Рассчитайте пошлины, НДС и общую стоимость импорта для любой страны."
-      : "Free customs duty calculator and import tax calculator. Calculate duties, VAT, and total import costs for any destination country.",
+    title: t(loc, "duty_calc_meta_title"),
+    description: t(loc, "duty_calc_meta_desc"),
     alternates: {
       canonical: `/${locale}/tools/duty-calculator`,
       languages: {
@@ -32,9 +29,7 @@ export async function generateMetadata({
         "x-default": "/en/tools/duty-calculator",
       },
     },
-    keywords: isRu
-      ? ["калькулятор пошлин", "таможенный калькулятор", "импортный налог", "НДС калькулятор"]
-      : ["customs duty calculator", "import tax calculator", "duty calculator", "VAT calculator"],
+    keywords: t(loc, "duty_calc_kw").split(","),
   };
 }
 
@@ -44,17 +39,15 @@ export default async function DutyCalculatorPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        name: isRu ? "Калькулятор таможенных пошлин" : "Customs Duty Calculator",
-        description: isRu
-          ? "Рассчитайте импортные пошлины и налоги для любой страны"
-          : "Calculate import duties and taxes for any country",
+        name: t(loc, "duty_calc_name"),
+        description: t(loc, "duty_calc_page_desc"),
         url: `https://rateships.com/${locale}/tools/duty-calculator`,
       },
       {
@@ -63,19 +56,19 @@ export default async function DutyCalculatorPage({
           {
             "@type": "ListItem",
             position: 1,
-            name: isRu ? "Главная" : "Home",
+            name: t(loc, "home"),
             item: `https://rateships.com/${locale}`,
           },
           {
             "@type": "ListItem",
             position: 2,
-            name: isRu ? "Инструменты" : "Tools",
+            name: t(loc, "tools_label"),
             item: `https://rateships.com/${locale}/tools`,
           },
           {
             "@type": "ListItem",
             position: 3,
-            name: isRu ? "Калькулятор пошлин" : "Duty Calculator",
+            name: t(loc, "duty_calc_breadcrumb"),
           },
         ],
       },
@@ -91,25 +84,23 @@ export default async function DutyCalculatorPage({
 
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
-          {isRu ? "Главная" : "Home"}
+          {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
         <Link href={`/${locale}/tools`} className="hover:text-accent-light">
-          {isRu ? "Инструменты" : "Tools"}
+          {t(loc, "tools_label")}
         </Link>
         <span className="mx-2">/</span>
         <span className="text-white">
-          {isRu ? "Калькулятор пошлин" : "Duty Calculator"}
+          {t(loc, "duty_calc_breadcrumb")}
         </span>
       </nav>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {isRu ? "Калькулятор таможенных пошлин" : "Customs Duty Calculator"}
+        {t(loc, "duty_calc_name")}
       </h1>
       <p className="text-gray-400 mb-8 max-w-2xl">
-        {isRu
-          ? "Рассчитайте импортные пошлины, НДС и общую стоимость импорта для товаров, отправляемых в любую страну"
-          : "Calculate import duties, VAT, and total import costs for goods shipped to any country"}
+        {t(loc, "duty_calc_page_body")}
       </p>
 
       <DutyCalculatorStandalone locale={locale} />

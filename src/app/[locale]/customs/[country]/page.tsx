@@ -113,7 +113,7 @@ export default async function CustomsCountryPage({
   const name = getCountryName(country, loc);
   const customs = getCustomsInfo(country.code);
   const deep = deepCustomsData[country.code];
-  const isRu = locale === "ru";
+  const isRu = loc === "ru";
 
   // Popular countries for related links
   const popular = getPopularCountries().filter((c) => c.code !== country.code);
@@ -182,15 +182,13 @@ export default async function CustomsCountryPage({
           {t(loc, "guides")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">{isRu ? `Таможня: ${name}` : `Customs: ${name}`}</span>
+        <span className="text-white">{t(loc, "customs_breadcrumb", { country: name })}</span>
       </nav>
 
       {/* H1 */}
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
         {countryFlag(country.code)}{" "}
-        {isRu
-          ? `Таможня и пошлины: ${name}`
-          : `Import Customs & Duties: ${name}`}
+        {t(loc, "customs_h1", { country: name })}
       </h1>
 
       {/* Quick links */}
@@ -199,7 +197,7 @@ export default async function CustomsCountryPage({
           href={`/${locale}/guide/${country.slug_en}`}
           className="px-4 py-2 bg-surface border border-white/10 rounded-lg text-sm hover:border-accent/50"
         >
-          {isRu ? `Гид по доставке в ${name}` : `Shipping Guide: ${name}`}
+          {t(loc, "customs_shipping_guide", { country: name })}
         </Link>
         <Link
           href={`/${locale}/shipping/to/${country.slug_en}`}
@@ -212,19 +210,19 @@ export default async function CustomsCountryPage({
       {/* Table of Contents */}
       <nav className="mb-8 py-4 border-y border-white/5">
         <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
-          {isRu ? "На этой странице" : "On this page"}
+          {t(loc, "customs_on_this_page")}
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-          <a href="#quick-facts" className="text-gray-400 hover:text-white">{isRu ? "Основные данные" : "Quick Facts"}</a>
-          {deep && <a href="#duty-rates" className="text-gray-400 hover:text-white">{isRu ? "Ставки пошлин" : "Duty Rates"}</a>}
-          <a href="#calculator" className="text-gray-400 hover:text-white">{isRu ? "Калькулятор" : "Calculator"}</a>
-          {deep && <a href="#clearance" className="text-gray-400 hover:text-white">{isRu ? "Оформление" : "Clearance"}</a>}
-          {deep && <a href="#reality" className="text-gray-400 hover:text-white">{isRu ? "На практике" : "What to Expect"}</a>}
-          <a href="#documents" className="text-gray-400 hover:text-white">{isRu ? "Документы" : "Documents"}</a>
-          {deep && <a href="#license" className="text-gray-400 hover:text-white">{isRu ? "Лицензии" : "Licenses"}</a>}
-          {deep && <a href="#origin" className="text-gray-400 hover:text-white">{isRu ? "Сертификат происхождения" : "Certificate of Origin"}</a>}
-          <a href="#prohibited" className="text-gray-400 hover:text-white">{isRu ? "Запрещённые товары" : "Prohibited Items"}</a>
-          {deep && <a href="#links" className="text-gray-400 hover:text-white">{isRu ? "Полезные ссылки" : "Useful Links"}</a>}
+          <a href="#quick-facts" className="text-gray-400 hover:text-white">{t(loc, "customs_quick_facts")}</a>
+          {deep && <a href="#duty-rates" className="text-gray-400 hover:text-white">{t(loc, "customs_duty_rates_link")}</a>}
+          <a href="#calculator" className="text-gray-400 hover:text-white">{t(loc, "customs_calculator_link")}</a>
+          {deep && <a href="#clearance" className="text-gray-400 hover:text-white">{t(loc, "customs_clearance_link")}</a>}
+          {deep && <a href="#reality" className="text-gray-400 hover:text-white">{t(loc, "customs_reality_link")}</a>}
+          <a href="#documents" className="text-gray-400 hover:text-white">{t(loc, "customs_documents_link")}</a>
+          {deep && <a href="#license" className="text-gray-400 hover:text-white">{t(loc, "customs_licenses_link")}</a>}
+          {deep && <a href="#origin" className="text-gray-400 hover:text-white">{t(loc, "customs_cert_origin_link")}</a>}
+          <a href="#prohibited" className="text-gray-400 hover:text-white">{t(loc, "customs_prohibited_link")}</a>
+          {deep && <a href="#links" className="text-gray-400 hover:text-white">{t(loc, "customs_useful_links")}</a>}
           <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
         </div>
       </nav>
@@ -232,7 +230,7 @@ export default async function CustomsCountryPage({
       {/* Quick Facts */}
       <section id="quick-facts" className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-4">
-          {isRu ? "Основные данные" : "Quick Facts"}
+          {t(loc, "customs_quick_facts")}
         </h2>
         <div className="bg-surface border border-white/10 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
@@ -256,14 +254,14 @@ export default async function CustomsCountryPage({
             </div>
             <div className="text-center p-4 bg-surface-light rounded-lg">
               <p className="text-sm text-gray-400 mb-1">
-                {isRu ? "Время оформления" : "Clearance Time"}
+                {t(loc, "customs_clearance_time")}
               </p>
               <p className="text-2xl font-bold text-white">
                 {deep ? `${deep.clearance_time_days}` : "2-5"}{" "}
-                <span className="text-base font-normal text-gray-400">{isRu ? "дней" : "days"}</span>
+                <span className="text-base font-normal text-gray-400">{t(loc, "customs_days")}</span>
               </p>
               <p className="text-xs text-gray-400 mt-1">
-                {isRu ? "типичное время" : "typical processing"}
+                {t(loc, "customs_typical")}
               </p>
             </div>
           </div>
@@ -282,23 +280,23 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="duty-rates" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Ставки пошлин по категориям" : "Duty Rates by Category"}
+            {t(loc, "customs_duty_rates_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-gray-400 border-b border-white/10">
-                    <th className="pb-3 pr-4">{isRu ? "Категория" : "Category"}</th>
-                    <th className="pb-3 pr-4">{isRu ? "Ставка пошлины" : "Duty Rate"}</th>
-                    <th className="pb-3">{isRu ? "Код HS" : "HS Chapter"}</th>
+                    <th className="pb-3 pr-4">{t(loc, "customs_category_col")}</th>
+                    <th className="pb-3 pr-4">{t(loc, "customs_duty_rate_col")}</th>
+                    <th className="pb-3">{t(loc, "customs_hs_col")}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {deep.duty_rates.map((rate, i) => (
                     <tr key={i} className="border-b border-white/5">
                       <td className="py-3 pr-4 text-white font-medium">
-                        {isRu ? rate.category_ru : rate.category_en}
+                        {loc === "ru" ? rate.category_ru : rate.category_en}
                       </td>
                       <td className="py-3 pr-4 text-accent-light font-semibold">{rate.rate}</td>
                       <td className="py-3 text-gray-400">{rate.hs_chapter}</td>
@@ -308,9 +306,7 @@ export default async function CustomsCountryPage({
               </table>
             </div>
             <p className="text-xs text-gray-500 mt-4">
-              {isRu
-                ? "Ставки указаны для стандартных товаров. Точная ставка зависит от HS-кода товара."
-                : "Rates shown are for standard goods. Exact rate depends on the HS code of your item."}
+              {t(loc, "customs_rates_note")}
             </p>
           </div>
         </section>
@@ -347,7 +343,7 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="clearance" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Процесс таможенного оформления" : "Customs Clearance Process"}
+            {t(loc, "customs_clearance_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <p className="text-sm text-gray-300 leading-relaxed">
@@ -356,15 +352,15 @@ export default async function CustomsCountryPage({
             <div className="flex flex-wrap gap-x-10 gap-y-3 mt-5">
               <div>
                 <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
-                  {isRu ? "Время оформления" : "Processing Time"}
+                  {t(loc, "customs_processing_time")}
                 </span>
                 <span className="text-white font-medium">
-                  {deep.clearance_time_days} {isRu ? "дней" : "days"}
+                  {deep.clearance_time_days} {t(loc, "customs_days")}
                 </span>
               </div>
               <div>
                 <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
-                  {isRu ? "НДС" : "VAT Rate"}
+                  {t(loc, "customs_vat_rate_label")}
                 </span>
                 <span className="text-white font-medium">{deep.vat_rate}</span>
               </div>
@@ -377,7 +373,7 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="reality" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Как это работает на практике" : "What to Actually Expect"}
+            {t(loc, "customs_reality_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <p className="text-sm text-gray-300 leading-relaxed">
@@ -420,7 +416,7 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="license" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Импортные лицензии" : "Import License Requirements"}
+            {t(loc, "customs_license_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <p className="text-sm text-gray-300 leading-relaxed">
@@ -434,7 +430,7 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="origin" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Сертификат происхождения" : "Certificate of Origin"}
+            {t(loc, "customs_cert_origin_link")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <p className="text-sm text-gray-300 leading-relaxed">
@@ -447,7 +443,7 @@ export default async function CustomsCountryPage({
                 rel="noopener noreferrer"
                 className="inline-block mt-3 text-sm text-accent-light hover:underline"
               >
-                {isRu ? "Подробнее" : "Learn more"} &rarr;
+                {t(loc, "customs_learn_more")} &rarr;
               </a>
             )}
           </div>
@@ -507,25 +503,25 @@ export default async function CustomsCountryPage({
       {deep && (
         <section id="links" className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Полезные ссылки" : "Useful Links"}
+            {t(loc, "customs_useful_links")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
-                  label: isRu ? "Таможенный тариф" : "Customs Tariff Lookup",
+                  label: t(loc, "customs_tariff_lookup"),
                   url: deep.customs_tariff_url,
                 },
                 {
-                  label: isRu ? "Статистика торговли" : "Trade Statistics",
+                  label: t(loc, "customs_trade_stats"),
                   url: deep.trade_statistics_url,
                 },
                 {
-                  label: isRu ? "Сертификат происхождения" : "Certificate of Origin",
+                  label: t(loc, "customs_cert_origin"),
                   url: deep.certificate_of_origin_url,
                 },
                 {
-                  label: isRu ? "Правила импорта" : "Import Regulations",
+                  label: t(loc, "customs_import_regs"),
                   url: deep.import_regulations_url,
                 },
               ]
@@ -676,7 +672,7 @@ export default async function CustomsCountryPage({
               {
                 "@type": "ListItem",
                 position: 3,
-                name: isRu ? `Таможня: ${name}` : `Customs: ${name}`,
+                name: t(loc, "customs_breadcrumb", { country: name }),
               },
             ],
           }),

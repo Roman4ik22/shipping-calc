@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { locales } from "@/lib/i18n";
+import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 
@@ -13,14 +13,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
   return {
-    title: isRu
-      ? "Команда RateShips — о платформе и процессах"
-      : "About the RateShips Team",
-    description: isRu
-      ? "RateShips — независимая платформа данных о доставке. Узнайте о нашей команде, процессах сбора данных и обязательствах по качеству."
-      : "RateShips is an independent shipping data platform. Learn about our team, data collection processes, and quality commitments.",
+    title: t(loc, "team_meta_title"),
+    description: t(loc, "team_meta_desc"),
     alternates: {
       canonical: `/${locale}/team`,
       languages: {
@@ -37,14 +33,12 @@ export default async function TeamPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
 
   const teams = [
     {
-      title: isRu ? "Аналитики тарифов" : "Rate Analysts",
-      description: isRu
-        ? "Еженедельно проверяют опубликованные тарифы перевозчиков, отслеживают повышения тарифов (GRI) и обновляют нашу базу данных из 143 перевозчиков."
-        : "Verify published carrier tariffs weekly, track General Rate Increases (GRI), and update our database of 143 carriers.",
+      title: t(loc, "team_rate_analysts"),
+      description: t(loc, "team_rate_analysts_desc"),
       icon: (
         <svg
           className="w-8 h-8 text-accent-light"
@@ -62,10 +56,8 @@ export default async function TeamPage({
       ),
     },
     {
-      title: isRu ? "Специалисты по таможне" : "Customs Specialists",
-      description: isRu
-        ? "Отслеживают изменения в таможенном законодательстве 213 стран, обновляют пороги de minimis, ставки пошлин и НДС/GST."
-        : "Monitor regulatory changes across 213 countries, update de minimis thresholds, duty rates, and VAT/GST information.",
+      title: t(loc, "team_customs_specialists"),
+      description: t(loc, "team_customs_specialists_desc"),
       icon: (
         <svg
           className="w-8 h-8 text-accent-light"
@@ -83,10 +75,8 @@ export default async function TeamPage({
       ),
     },
     {
-      title: isRu ? "Инженерия" : "Engineering",
-      description: isRu
-        ? "Поддерживают конвейеры обработки данных, инфраструктуру платформы и системы автоматизированного сбора тарифов."
-        : "Maintain data pipelines, platform infrastructure, and automated rate collection systems.",
+      title: t(loc, "team_engineering"),
+      description: t(loc, "team_engineering_desc"),
       icon: (
         <svg
           className="w-8 h-8 text-accent-light"
@@ -104,10 +94,8 @@ export default async function TeamPage({
       ),
     },
     {
-      title: isRu ? "Контент" : "Content",
-      description: isRu
-        ? "Создают путеводители по доставке, образовательные ресурсы и страновые обзоры для помощи пользователям."
-        : "Produce shipping guides, educational resources, and country-specific overviews to help users ship internationally.",
+      title: t(loc, "team_content"),
+      description: t(loc, "team_content_desc"),
       icon: (
         <svg
           className="w-8 h-8 text-accent-light"
@@ -140,13 +128,13 @@ export default async function TeamPage({
                 {
                   "@type": "ListItem",
                   position: 1,
-                  name: isRu ? "Главная" : "Home",
+                  name: t(loc, "home"),
                   item: `https://rateships.com/${locale}`,
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: isRu ? "Команда" : "Team",
+                  name: t(loc, "team_breadcrumb"),
                 },
               ],
             },
@@ -156,9 +144,7 @@ export default async function TeamPage({
               name: "RateShips",
               url: "https://rateships.com",
               logo: "https://rateships.com/favicon.svg",
-              description: isRu
-                ? "Независимая платформа данных о международной доставке"
-                : "Independent international shipping data platform",
+              description: t(loc, "team_meta_desc"),
               foundingDate: "2026",
               knowsAbout: [
                 "International shipping rates",
@@ -171,18 +157,9 @@ export default async function TeamPage({
                 contactType: "customer support",
                 url: "https://rateships.com/en/about",
                 availableLanguage: [
-                  "English",
-                  "Russian",
-                  "Spanish",
-                  "German",
-                  "French",
-                  "Portuguese",
-                  "Chinese",
-                  "Japanese",
-                  "Korean",
-                  "Arabic",
-                  "Turkish",
-                  "Italian",
+                  "English", "Russian", "Spanish", "German", "French",
+                  "Portuguese", "Chinese", "Japanese", "Korean",
+                  "Arabic", "Turkish", "Italian",
                 ],
               },
             },
@@ -192,32 +169,30 @@ export default async function TeamPage({
 
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
-          {isRu ? "Главная" : "Home"}
+          {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
         <span className="text-white">
-          {isRu ? "Команда" : "Team"}
+          {t(loc, "team_breadcrumb")}
         </span>
       </nav>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {isRu ? "О команде RateShips" : "About the RateShips Team"}
+        {t(loc, "team_h1")}
       </h1>
 
       <div className="space-y-8 text-gray-300 leading-relaxed">
-        {/* ── Mission Statement ── */}
+        {/* Mission Statement */}
         <section className="bg-surface border border-white/10 rounded-lg p-6">
           <p className="text-lg">
-            {isRu
-              ? "RateShips — это независимая платформа данных о доставке. Мы используем комбинацию автоматизированного сбора данных, ручной проверки и анализа с помощью ИИ для поддержания наиболее полной базы данных тарифов на международную доставку."
-              : "RateShips is an independent shipping data platform. We use a combination of automated data collection, manual verification, and AI-assisted analysis to maintain the most comprehensive international shipping rate database available."}
+            {t(loc, "team_mission")}
           </p>
         </section>
 
-        {/* ── Our Data Team ── */}
+        {/* Our Data Team */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">
-            {isRu ? "Наша команда" : "Our Data Team"}
+            {t(loc, "team_our_team")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {teams.map((team) => (
@@ -235,118 +210,64 @@ export default async function TeamPage({
           </div>
         </section>
 
-        {/* ── What We Do ── */}
+        {/* What We Do */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Что мы делаем" : "What We Do"}
+            {t(loc, "team_what_we_do")}
           </h2>
           <div className="space-y-4">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
-                1
+            {[
+              { step: "1", title: t(loc, "team_step_collect"), desc: t(loc, "team_step_collect_desc") },
+              { step: "2", title: t(loc, "team_step_verify"), desc: t(loc, "team_step_verify_desc") },
+              { step: "3", title: t(loc, "team_step_normalize"), desc: t(loc, "team_step_normalize_desc") },
+              { step: "4", title: t(loc, "team_step_publish"), desc: t(loc, "team_step_publish_desc") },
+            ].map((item) => (
+              <div key={item.step} className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
+                  {item.step}
+                </div>
+                <div>
+                  <p className="text-white font-semibold">{item.title}</p>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-white font-semibold">
-                  {isRu ? "Собираем" : "Collect"}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {isRu
-                    ? "Ежедневно собираем данные с сайтов 143 перевозчиков и 40+ таможенных органов."
-                    : "Gather data daily from 143 carrier websites and 40+ customs authority sites."}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
-                2
-              </div>
-              <div>
-                <p className="text-white font-semibold">
-                  {isRu ? "Проверяем" : "Verify"}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {isRu
-                    ? "Сверяем данные с официальными тарифными таблицами и прайс-листами."
-                    : "Cross-reference data against official tariff schedules and published price lists."}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
-                3
-              </div>
-              <div>
-                <p className="text-white font-semibold">
-                  {isRu ? "Нормализуем" : "Normalize"}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {isRu
-                    ? "Приводим все тарифы к единому формату: USD, килограммы, стандартные зоны доставки."
-                    : "Convert all rates to a unified format: USD, kilograms, standardized delivery zones."}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
-                4
-              </div>
-              <div>
-                <p className="text-white font-semibold">
-                  {isRu ? "Публикуем" : "Publish"}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {isRu
-                    ? "Предоставляем сравнительные данные с прозрачной маркировкой верифицированных и оценочных тарифов."
-                    : "Present comparative data with transparent labeling of verified vs. estimated rates."}
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* ── Our Commitment ── */}
+        {/* Our Commitment */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu
-              ? "Наши обязательства"
-              : "Our Commitment to Accuracy"}
+            {t(loc, "team_commitment_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-lg p-6 space-y-3">
             <p className="text-gray-300">
-              {isRu
-                ? "Мы стремимся к точности и прозрачности. Каждый тариф в нашей базе данных имеет маркировку: проверенный из официального источника или оценочный."
-                : "We are committed to accuracy and transparency. Every rate in our database is labeled as either verified from an official source or estimated."}
+              {t(loc, "team_commitment_body")}
             </p>
             <p className="text-gray-300">
-              {isRu
-                ? "Если вы обнаружили неточность в наших данных, пожалуйста, сообщите нам через "
-                : "If you find any inaccuracy in our data, please contact us through our "}
+              {t(loc, "team_commitment_contact_pre")}
               <Link
                 href={`/${locale}/about`}
                 className="text-accent-light hover:underline"
               >
-                {isRu ? "страницу контактов" : "contact page"}
+                {t(loc, "team_commitment_contact_link")}
               </Link>
-              {isRu
-                ? ". Мы исправим информацию в кратчайшие сроки."
-                : ". We will correct the information as quickly as possible."}
+              {t(loc, "team_commitment_contact_post")}
             </p>
           </div>
         </section>
 
-        {/* ── Related Pages ── */}
+        {/* Related Pages */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             href={`/${locale}/data-methodology`}
             className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
           >
             <p className="text-white font-semibold mb-1">
-              {isRu ? "Методология данных" : "Data Methodology"}
+              {t(loc, "team_data_methodology")}
             </p>
             <p className="text-sm text-gray-400">
-              {isRu
-                ? "Как мы собираем и проверяем данные"
-                : "How we collect and verify our data"}
+              {t(loc, "team_data_methodology_desc")}
             </p>
           </Link>
           <Link
@@ -354,20 +275,16 @@ export default async function TeamPage({
             className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
           >
             <p className="text-white font-semibold mb-1">
-              {isRu ? "Источники данных" : "Data Sources"}
+              {t(loc, "team_data_sources")}
             </p>
             <p className="text-sm text-gray-400">
-              {isRu
-                ? "Полный перечень всех наших источников"
-                : "Complete list of all our data sources"}
+              {t(loc, "team_data_sources_desc")}
             </p>
           </Link>
         </section>
 
         <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {isRu
-            ? "Последнее обновление: март 2026"
-            : "Last updated: March 2026"}
+          {t(loc, "last_updated_march")}
         </p>
       </div>
     </div>

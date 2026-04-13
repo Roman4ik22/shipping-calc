@@ -45,8 +45,6 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   const loc = locale as Locale;
-  const isRu = loc === "ru";
-
   const sortedPosts = [...blogPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
@@ -116,7 +114,7 @@ export default async function BlogPage({
                     dateTime={post.date}
                   >
                     {new Date(post.date).toLocaleDateString(
-                      isRu ? "ru-RU" : "en-US",
+                      loc === "ru" ? "ru-RU" : "en-US",
                       { year: "numeric", month: "long", day: "numeric" }
                     )}
                   </time>
@@ -134,10 +132,10 @@ export default async function BlogPage({
                 <h2 className={`font-semibold text-white mb-2 group-hover:text-accent-light transition-colors ${
                   index === 0 ? "text-xl" : "text-lg"
                 }`}>
-                  {isRu ? post.title_ru : post.title_en}
+                  {loc === "ru" ? post.title_ru : post.title_en}
                 </h2>
                 <p className={`text-sm text-gray-400 mb-4 ${index === 0 ? "line-clamp-4" : "line-clamp-3"}`}>
-                  {isRu ? post.excerpt_ru : post.excerpt_en}
+                  {loc === "ru" ? post.excerpt_ru : post.excerpt_en}
                 </p>
                 <div className="flex items-center justify-end">
                   <span className="text-sm text-accent-light group-hover:text-white transition-colors">

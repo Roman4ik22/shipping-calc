@@ -117,7 +117,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const loc = locale as Locale;
-  const isRu = loc === "ru";
   const post = getPostBySlug(slug);
   const BASE_URL = "https://rateships.com";
 
@@ -125,8 +124,8 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
-  const title = isRu ? post.title_ru : post.title_en;
-  const description = isRu ? post.excerpt_ru : post.excerpt_en;
+  const title = loc === "ru" ? post.title_ru : post.title_en;
+  const description = loc === "ru" ? post.excerpt_ru : post.excerpt_en;
 
   return {
     title,
@@ -234,7 +233,6 @@ export default async function BlogPostPage({
 }) {
   const { locale, slug } = await params;
   const loc = locale as Locale;
-  const isRu = loc === "ru";
   const post = getPostBySlug(slug);
   const BASE_URL = "https://rateships.com";
 
@@ -242,15 +240,15 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const title = isRu ? post.title_ru : post.title_en;
-  const content = isRu ? post.content_ru : post.content_en;
+  const title = loc === "ru" ? post.title_ru : post.title_en;
+  const content = loc === "ru" ? post.content_ru : post.content_en;
   const relatedPosts = getRelatedPosts(slug, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
-    description: isRu ? post.excerpt_ru : post.excerpt_en,
+    description: loc === "ru" ? post.excerpt_ru : post.excerpt_en,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -339,7 +337,7 @@ export default async function BlogPostPage({
           dateTime={post.date}
         >
           {new Date(post.date).toLocaleDateString(
-            isRu ? "ru-RU" : "en-US",
+            loc === "ru" ? "ru-RU" : "en-US",
             { year: "numeric", month: "long", day: "numeric" }
           )}
         </time>
@@ -385,17 +383,17 @@ export default async function BlogPostPage({
                   className="group bg-surface rounded-xl border border-white/10 p-5 hover:border-accent-light/30 transition-all duration-200"
                 >
                   <h3 className="text-base font-semibold text-white mb-2 group-hover:text-accent-light transition-colors">
-                    {isRu ? related.title_ru : related.title_en}
+                    {loc === "ru" ? related.title_ru : related.title_en}
                   </h3>
                   <p className="text-sm text-gray-400 line-clamp-2 mb-3">
-                    {isRu ? related.excerpt_ru : related.excerpt_en}
+                    {loc === "ru" ? related.excerpt_ru : related.excerpt_en}
                   </p>
                   <time
                     className="text-xs text-gray-500"
                     dateTime={related.date}
                   >
                     {new Date(related.date).toLocaleDateString(
-                      isRu ? "ru-RU" : "en-US",
+                      loc === "ru" ? "ru-RU" : "en-US",
                       { year: "numeric", month: "short", day: "numeric" }
                     )}
                   </time>
@@ -414,7 +412,7 @@ export default async function BlogPostPage({
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
             <div className="border-t border-white/10 pt-10">
               <h2 className="text-2xl font-bold text-white mb-6">
-                {isRu ? "Сравните тарифы доставки" : "Compare Shipping Rates"}
+                {t(loc, "compare_shipping_rates_cta")}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {corridors.map((c) => {
@@ -433,7 +431,7 @@ export default async function BlogPostPage({
                         {oName} → {dName}
                       </p>
                       <p className="text-sm text-gray-400 mt-1">
-                        {isRu ? "Сравнить перевозчиков и цены" : "Compare carriers & prices"}
+                        {t(loc, "compare_carriers_prices")}
                       </p>
                     </Link>
                   );

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { locales } from "@/lib/i18n";
+import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 
@@ -13,14 +13,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
   return {
-    title: isRu
-      ? "Источники данных — все источники тарифов и таможенных данных"
-      : "Data Sources — All Rate & Customs Data Sources",
-    description: isRu
-      ? "Полный список источников данных RateShips: ссылки на официальные тарифы 40+ перевозчиков, таможенные органы 40+ стран, курсы валют и отзывы."
-      : "Complete list of RateShips data sources: links to official rates from 40+ carriers, customs authorities for 40+ countries, exchange rates, and reviews.",
+    title: t(loc, "sources_meta_title"),
+    description: t(loc, "sources_meta_desc"),
     alternates: {
       canonical: `/${locale}/sources`,
       languages: {
@@ -139,7 +135,7 @@ export default async function SourcesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isRu = locale === "ru";
+  const loc = locale as Locale;
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -154,13 +150,13 @@ export default async function SourcesPage({
               {
                 "@type": "ListItem",
                 position: 1,
-                name: isRu ? "Главная" : "Home",
+                name: t(loc, "home"),
                 item: `https://rateships.com/${locale}`,
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: isRu ? "Источники данных" : "Data Sources",
+                name: t(loc, "sources_breadcrumb"),
               },
             ],
           }),
@@ -169,49 +165,45 @@ export default async function SourcesPage({
 
       <nav className="text-sm text-gray-400 mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
-          {isRu ? "Главная" : "Home"}
+          {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
         <span className="text-white">
-          {isRu ? "Источники данных" : "Data Sources"}
+          {t(loc, "sources_breadcrumb")}
         </span>
       </nav>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {isRu ? "Источники данных" : "Data Sources"}
+        {t(loc, "sources_h1")}
       </h1>
       <p className="text-gray-400 mb-8 text-lg">
-        {isRu
-          ? "Полный перечень источников, на которых основаны наши данные о тарифах, таможенных пошлинах и курсах валют. Все ссылки ведут на официальные сайты."
-          : "Complete list of sources behind our shipping rate, customs duty, and exchange rate data. All links point to official websites."}
+        {t(loc, "sources_intro")}
       </p>
 
       <div className="space-y-12 text-gray-300 leading-relaxed">
-        {/* ── Carrier Rate Sources ── */}
+        {/* Carrier Rate Sources */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Источники тарифов перевозчиков" : "Carrier Rate Sources"}
+            {t(loc, "sources_carrier_title")}
           </h2>
           <p className="mb-4 text-sm text-gray-400">
-            {isRu
-              ? `${CARRIER_SOURCES.length} перевозчиков с прямыми ссылками на официальные страницы тарифов.`
-              : `${CARRIER_SOURCES.length} carriers with direct links to official rate pages.`}
+            {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Перевозчик" : "Carrier"}
+                    {t(loc, "sources_carrier_col")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Источник" : "Source URL"}
+                    {t(loc, "sources_url_col")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Проверено" : "Last Verified"}
+                    {t(loc, "sources_verified_col")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Статус" : "Status"}
+                    {t(loc, "sources_status_col")}
                   </th>
                 </tr>
               </thead>
@@ -252,11 +244,9 @@ export default async function SourcesPage({
                               : "bg-yellow-500"
                           }`}
                         />
-                        {isRu
-                          ? c.status === "Verified"
-                            ? "Проверено"
-                            : "Оценка"
-                          : c.status}
+                        {c.status === "Verified"
+                          ? t(loc, "sources_verified")
+                          : t(loc, "sources_estimated")}
                       </span>
                     </td>
                   </tr>
@@ -266,15 +256,13 @@ export default async function SourcesPage({
           </div>
         </section>
 
-        {/* ── Customs & Trade Data Sources ── */}
+        {/* Customs & Trade Data Sources */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu
-              ? "Источники таможенных и торговых данных"
-              : "Customs & Trade Data Sources"}
+            {t(loc, "sources_customs_title")}
           </h2>
           <p className="mb-4 text-sm text-gray-400">
-            {isRu
+            {loc === "ru"
               ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
               : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
           </p>
@@ -283,16 +271,16 @@ export default async function SourcesPage({
               <thead>
                 <tr className="bg-white/5">
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Страна" : "Country"}
+                    {t(loc, "sources_country_col")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Таможенный орган" : "Customs Authority"}
+                    {t(loc, "sources_authority_col")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Сайт" : "URL"}
+                    {t(loc, "sources_url_col2")}
                   </th>
                   <th className="text-left p-3 text-gray-400 font-medium">
-                    {isRu ? "Торговые соглашения" : "Trade Agreements"}
+                    {t(loc, "sources_trade_col")}
                   </th>
                 </tr>
               </thead>
@@ -326,18 +314,16 @@ export default async function SourcesPage({
           </div>
         </section>
 
-        {/* ── Exchange Rate Source ── */}
+        {/* Exchange Rate Source */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Источник курсов валют" : "Exchange Rate Source"}
+            {t(loc, "sources_exchange_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-lg p-5">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
                 <p className="text-white font-semibold">
-                  {isRu
-                    ? "Европейский Центральный Банк (ECB)"
-                    : "European Central Bank (ECB)"}
+                  {t(loc, "sources_ecb")}
                 </p>
                 <a
                   href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
@@ -350,15 +336,15 @@ export default async function SourcesPage({
               </div>
               <div className="text-sm text-gray-400">
                 <p>
-                  {isRu ? "Частота обновления:" : "Update frequency:"}{" "}
+                  {t(loc, "sources_update_freq")}{" "}
                   <span className="text-white">
-                    {isRu ? "ежедневно" : "Daily"}
+                    {t(loc, "sources_daily")}
                   </span>
                 </p>
                 <p>
-                  {isRu ? "Валюты:" : "Currencies:"}{" "}
+                  {t(loc, "sources_currencies")}{" "}
                   <span className="text-white">
-                    {isRu ? "30+ основных валют" : "30+ major currencies"}
+                    {t(loc, "sources_currencies_val")}
                   </span>
                 </p>
               </div>
@@ -366,10 +352,10 @@ export default async function SourcesPage({
           </div>
         </section>
 
-        {/* ── Review Data Sources ── */}
+        {/* Review Data Sources */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
-            {isRu ? "Источники отзывов" : "Review Data Sources"}
+            {t(loc, "sources_reviews_title")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-lg p-5">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
@@ -385,36 +371,28 @@ export default async function SourcesPage({
                 </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>
-                  {isRu
-                    ? "Рейтинги перевозчиков со ссылками на профили Trustpilot"
-                    : "Carrier ratings linked to individual Trustpilot profiles"}
-                </p>
+                <p>{t(loc, "sources_reviews_desc")}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Methodology Link ── */}
+        {/* Methodology Link */}
         <section className="bg-surface border border-white/10 rounded-lg p-6">
           <p className="text-gray-400">
-            {isRu
-              ? "Подробнее о нашей методологии сбора и проверки данных читайте на странице "
-              : "For more details on how we collect and verify this data, see our "}
+            {t(loc, "sources_methodology_pre")}
             <Link
               href={`/${locale}/data-methodology`}
               className="text-accent-light hover:underline"
             >
-              {isRu ? "Методология данных" : "Data Methodology"}
+              {t(loc, "sources_methodology_link")}
             </Link>
             .
           </p>
         </section>
 
         <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {isRu
-            ? "Последнее обновление: март 2026"
-            : "Last updated: March 2026"}
+          {t(loc, "last_updated_march")}
         </p>
       </div>
     </div>
