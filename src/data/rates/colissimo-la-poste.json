@@ -1,7 +1,7 @@
 {
   "carrier_id": "colissimo-la-poste",
-  "effective_date": "2026-04-06",
-  "note": "Colissimo (La Poste France) international rates from France based on real tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A=EU neighbors, Zone C=Americas/Asia. Source: https://tarif-lettre.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]",
+  "effective_date": "2026-04-13",
+  "note": "Colissimo (La Poste France) international rates from France based on real tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A=EU neighbors, Zone C=Americas/Asia. Source: https://tarif-lettre.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13]",
   "zones": [
     {
       "zone": 1,
@@ -96,58 +96,58 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.02,
-          9.05,
-          14.06,
-          19.08,
-          24.11
+          4.16,
+          9.37,
+          14.55,
+          19.75,
+          24.95
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.36,
-          12.05,
-          18.74,
-          25.44,
-          32.14
+          5.55,
+          12.47,
+          19.4,
+          26.33,
+          33.26
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.76,
-          17.47,
-          27.19,
-          36.9,
-          46.6
+          8.03,
+          18.08,
+          28.14,
+          38.19,
+          48.23
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.39,
-          30.12,
-          46.86,
-          63.61,
-          80.35
+          13.86,
+          31.17,
+          48.5,
+          65.84,
+          83.16
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          22.5,
-          50.61,
-          78.73,
-          106.85,
-          134.97
+          23.29,
+          52.38,
+          81.49,
+          110.59,
+          139.69
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          38.56,
-          86.77,
+          39.91,
+          89.81,
           null,
           null,
           null

@@ -1,7 +1,7 @@
 {
   "carrier_id": "india-post",
-  "effective_date": "2026-04-06",
-  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06]",
+  "effective_date": "2026-04-13",
+  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13]",
   "zones": [
     {
       "zone": 1,
@@ -95,71 +95,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.85,
-          19.28,
-          16.06,
-          23.57,
-          26.78
+          13.3,
+          19.95,
+          16.62,
+          24.39,
+          27.72
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.14,
-          25.71,
-          24.64,
-          35.35,
-          39.63
+          17.74,
+          26.61,
+          25.5,
+          36.59,
+          41.02
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          23.57,
-          34.28,
-          35.35,
-          49.28,
-          56.78
+          24.39,
+          35.48,
+          36.59,
+          51,
+          58.77
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          40.71,
-          58.92,
-          66.42,
-          96.41,
-          109.26
+          42.13,
+          60.98,
+          68.74,
+          99.78,
+          113.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          64.27,
-          96.41,
-          113.55,
-          166.03,
-          193.89
+          66.52,
+          99.78,
+          117.52,
+          171.84,
+          200.68
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          107.12,
-          166.03,
-          192.82,
-          289.23,
-          342.79
+          110.87,
+          171.84,
+          199.57,
+          299.35,
+          354.79
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          147.83,
-          230.31,
-          267.81,
-          401.7,
-          482.05
+          153,
+          238.37,
+          277.18,
+          415.76,
+          498.92
         ]
       }
     ],
@@ -167,61 +167,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.43,
-          9.65,
-          11.79,
-          17.14,
-          19.28
+          6.66,
+          9.99,
+          12.2,
+          17.74,
+          19.95
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.57,
-          12.85,
-          18.22,
-          25.71,
-          28.92
+          8.87,
+          13.3,
+          18.86,
+          26.61,
+          29.93
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.85,
-          19.28,
-          25.71,
-          36.42,
-          41.77
+          13.3,
+          19.95,
+          26.61,
+          37.69,
+          43.23
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          23.57,
-          34.28,
-          49.28,
-          70.7,
-          80.35
+          24.39,
+          35.48,
+          51,
+          73.17,
+          83.16
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          40.71,
-          58.92,
-          83.56,
-          122.12,
-          142.48
+          42.13,
+          60.98,
+          86.48,
+          126.39,
+          147.47
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          69.62,
-          104.98,
-          144.62,
-          214.24,
-          251.74
+          72.06,
+          108.65,
+          149.68,
+          221.74,
+          260.55
         ]
       },
       {
