@@ -113,6 +113,41 @@ export default async function AboutPage({
             {t(loc, "about_contact_text")} <span className="font-medium">info@rateships.com</span>
           </p>
         </section>
+
+        {/* Legal entity */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {loc === "ru" ? "Юридическая информация" : "Legal Entity"}
+          </h2>
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm">
+              <div>
+                <p className="text-gray-500 mb-1">{loc === "ru" ? "Компания" : "Company"}</p>
+                <p className="text-white font-medium">Global Supply KFT</p>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-1">{loc === "ru" ? "Адрес" : "Address"}</p>
+                <p className="text-white">Toldi utca 4, 3066 Kutasó, Hungary</p>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-1">{loc === "ru" ? "Налоговый номер" : "Tax number"}</p>
+                <p className="text-white font-mono">26179030-2-12</p>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-1">VAT</p>
+                <p className="text-white font-mono">HU26179030</p>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-1">IBAN</p>
+                <p className="text-white font-mono">BE14 9672 5993 2983</p>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-1">SWIFT</p>
+                <p className="text-white font-mono">TRWIBEB1XXX</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* JSON-LD */}
@@ -127,7 +162,19 @@ export default async function AboutPage({
             mainEntity: {
               "@type": "Organization",
               name: "RateShips",
+              legalName: "Global Supply KFT",
               url: "https://rateships.com",
+              logo: "https://rateships.com/favicon.svg",
+              email: "info@rateships.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Toldi utca 4",
+                addressLocality: "Kutasó",
+                postalCode: "3066",
+                addressCountry: "HU",
+              },
+              vatID: "HU26179030",
+              taxID: "26179030-2-12",
             },
           }),
         }}
