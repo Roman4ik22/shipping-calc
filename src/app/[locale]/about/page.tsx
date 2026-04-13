@@ -148,6 +148,36 @@ export default async function AboutPage({
             </div>
           </div>
         </section>
+
+        {/* Team */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {loc === "ru" ? "Команда" : "Team"}
+          </h2>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">RK</div>
+              <div>
+                <p className="text-white font-medium">Roman Kolosovskiy</p>
+                <p className="text-sm text-gray-500">{loc === "ru" ? "Руководитель технического отдела, разработка" : "Head of Engineering & Development"}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">DK</div>
+              <div>
+                <p className="text-white font-medium">Dmytro Kolosovskiy</p>
+                <p className="text-sm text-gray-500">{loc === "ru" ? "Менеджер проекта" : "Project Manager"}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">ZY</div>
+              <div>
+                <p className="text-white font-medium">Zhenya Yakovenko</p>
+                <p className="text-sm text-gray-500">{loc === "ru" ? "Маркетолог" : "Marketing Lead"}</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* JSON-LD */}
@@ -175,6 +205,23 @@ export default async function AboutPage({
               },
               vatID: "HU26179030",
               taxID: "26179030-2-12",
+              employee: [
+                {
+                  "@type": "Person",
+                  name: "Roman Kolosovskiy",
+                  jobTitle: "Head of Engineering & Development",
+                },
+                {
+                  "@type": "Person",
+                  name: "Dmytro Kolosovskiy",
+                  jobTitle: "Project Manager",
+                },
+                {
+                  "@type": "Person",
+                  name: "Zhenya Yakovenko",
+                  jobTitle: "Marketing Lead",
+                },
+              ],
             },
           }),
         }}
