@@ -991,7 +991,6 @@ export default function App(){
   return (
     <>
       <ResponsiveCSS/>
-      <Nav/>
       <Hero/>
       <OriginStory/>
       <Mission/>
@@ -1002,7 +1001,6 @@ export default function App(){
       <Press/>
       <Careers/>
       <FinalCTA/>
-      <Footer/>
     </>
   );
 }

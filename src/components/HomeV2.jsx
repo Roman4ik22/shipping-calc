@@ -1618,7 +1618,6 @@ export default function App(){
   return (
     <>
       <ResponsiveCSS/>
-      <Nav/>
       <Hero/>
       <TrustStrip/>
       <ResultsTable/>
@@ -1632,7 +1631,6 @@ export default function App(){
       <FAQ/>
       <Transparency/>
       <FinalCTA/>
-      <Footer/>
       <MobileStickyCTA/>
     </>
   );

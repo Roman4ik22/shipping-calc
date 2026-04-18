@@ -778,7 +778,6 @@ function Footer(){
 export default function App(){
   return (
     <>
-      <Nav/>
       <Hero/>
       <Features/>
       <CoverageMap/>
@@ -788,7 +787,6 @@ export default function App(){
       <Disclaimer/>
       <FAQ/>
       <CTA/>
-      <Footer/>
       <style>{`
         @media (max-width: 960px){
           .desktop-only{display:none !important}

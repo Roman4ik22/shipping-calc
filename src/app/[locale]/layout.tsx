@@ -164,9 +164,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div className="flex justify-between items-center h-14">
               <NavLink
                 href={`/${locale}`}
-                className="text-lg font-extrabold tracking-tight text-ink"
-                activeClassName="text-lg font-extrabold tracking-tight text-ink"
+                className="flex items-center gap-2.5 text-lg font-extrabold tracking-tight text-ink"
+                activeClassName="flex items-center gap-2.5 text-lg font-extrabold tracking-tight text-ink"
               >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1A73E8] to-[#2F88FF] inline-grid place-items-center text-white shadow-[0_4px_10px_rgba(26,115,232,.28)]">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="16" height="16"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1"/><path d="M4 18L3 12h18l-1 6"/><path d="M12 4v8M8 8h8"/></svg>
+                </span>
                 {t(loc, "site_name")}
               </NavLink>
               <div className="flex items-center gap-5">
@@ -239,9 +242,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div className="max-w-[1240px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-white font-bold text-sm mb-3">
-                  {t(loc, "site_name")}
-                </h3>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1A73E8] to-[#2F88FF] inline-grid place-items-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="16" height="16"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1"/><path d="M4 18L3 12h18l-1 6"/><path d="M12 4v8M8 8h8"/></svg>
+                  </span>
+                  <h3 className="text-white font-extrabold text-base tracking-tight">
+                    {t(loc, "site_name")}
+                  </h3>
+                </div>
                 <p className="text-xs text-white/55 mb-4 leading-relaxed">{t(loc, "site_description")}</p>
                 <div className="flex flex-wrap gap-3 text-xs">
                   <NavLink href={`/${locale}`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "home")}</NavLink>
