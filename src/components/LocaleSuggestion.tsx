@@ -133,7 +133,7 @@ export default function LocaleSuggestion({
       </div>
       <button
         onClick={() => setDismissed(true)}
-        className="text-gray-500 hover:text-gray-300 text-lg leading-none"
+        className="text-muted hover:text-body text-lg leading-none"
         aria-label="Dismiss"
       >
         ×

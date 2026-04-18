@@ -25,7 +25,7 @@ export default function MobileMenu({
     <div className="sm:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 text-gray-400 hover:text-white"
+        className="p-2 text-body hover:text-ink"
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
       >
@@ -53,52 +53,52 @@ export default function MobileMenu({
         </svg>
       </button>
       {open && (
-        <div className="absolute top-16 left-0 right-0 bg-dark-800 border-b border-white/10 shadow-lg z-50">
+        <div className="absolute top-16 left-0 right-0 bg-white border-b border-line shadow-lg z-50">
           <nav className="flex flex-col p-4 gap-3">
             <NavLink
               href={`/${locale}`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.home}
             </NavLink>
             <NavLink
               href={`/${locale}/carriers`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.carriers}
             </NavLink>
             <NavLink
               href={`/${locale}/guide`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.guides}
             </NavLink>
             <NavLink
               href={`/${locale}/about`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.about || "About"}
             </NavLink>
             <NavLink
               href={`/${locale}/blog`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.blog || "Blog"}
             </NavLink>
             <NavLink
               href={`/${locale}/platforms`}
-              className="text-gray-300 hover:text-accent-light py-2 transition-colors"
-              activeClassName="text-white py-2"
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
               {labels.platforms || "Platforms"}

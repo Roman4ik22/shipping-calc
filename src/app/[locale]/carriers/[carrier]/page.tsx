@@ -73,7 +73,7 @@ export default async function CarrierPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
@@ -82,13 +82,13 @@ export default async function CarrierPage({
           {t(loc, "carriers_page")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">{carrier.name}</span>
+        <span className="text-ink">{carrier.name}</span>
       </nav>
 
-      <div className="bg-surface rounded-xl border border-white/10 p-6 sm:p-8 mb-8">
+      <div className="bg-surface rounded-xl border border-line p-6 sm:p-8 mb-8">
         <div className="flex items-start gap-4 mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-ink">
               {carrier.name}
             </h1>
             <span
@@ -105,7 +105,7 @@ export default async function CarrierPage({
           </div>
         </div>
 
-        <p className="text-gray-400 text-lg mb-6">
+        <p className="text-body text-lg mb-6">
           {getCarrierDescription(carrier, loc)}
         </p>
 
@@ -119,12 +119,12 @@ export default async function CarrierPage({
             rating >= 1.5 ? "text-orange-400" : "text-red-400";
           const barWidth = (rating / 5) * 100;
           return (
-            <div className="mb-6 p-4 bg-dark-700 rounded-lg border border-white/10">
+            <div className="mb-6 p-4 bg-dark-700 rounded-lg border border-line">
               <div className="flex items-center gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-400">Trustpilot</span>
+                  <span className="text-sm text-body">Trustpilot</span>
                   <span className={`text-lg font-bold ${ratingColor}`}>★ {rating.toFixed(1)}</span>
-                  <span className="text-sm text-gray-500">/ 5.0</span>
+                  <span className="text-sm text-muted">/ 5.0</span>
                 </div>
                 <div className="flex-1 min-w-[120px] max-w-[200px]">
                   <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
@@ -135,7 +135,7 @@ export default async function CarrierPage({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-accent-light hover:text-white transition-colors"
+                  className="text-sm text-accent-light hover:text-ink transition-colors"
                 >
                   {reviews >= 1000 ? `${(reviews / 1000).toFixed(1)}K` : reviews} reviews →
                 </a>
@@ -156,21 +156,21 @@ export default async function CarrierPage({
         </div>
       </div>
 
-      <h2 className="text-xl font-bold text-white mb-4">
+      <h2 className="text-xl font-bold text-ink mb-4">
         {t(loc, "available_services")}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         {carrier.services.map((service) => (
           <div
             key={service.id}
-            className="bg-surface border border-white/10 rounded-lg p-5"
+            className="bg-surface border border-line rounded-lg p-5"
           >
-            <h3 className="font-semibold text-white mb-2">
+            <h3 className="font-semibold text-ink mb-2">
               {service.name}
             </h3>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <div>
-                <span className="text-gray-400">
+                <span className="text-body">
                   {t(loc, "delivery_time")}:
                 </span>
                 <p className="font-medium">
@@ -179,13 +179,13 @@ export default async function CarrierPage({
                 </p>
               </div>
               <div>
-                <span className="text-gray-400">
+                <span className="text-body">
                   {t(loc, "max_weight")}:
                 </span>
                 <p className="font-medium">{service.max_weight_kg} {t(loc, "kg")}</p>
               </div>
               <div>
-                <span className="text-gray-400">{t(loc, "tracking")}:</span>
+                <span className="text-body">{t(loc, "tracking")}:</span>
                 <p className="font-medium">
                   {service.tracking ? t(loc, "yes") : t(loc, "no")}
                 </p>
@@ -196,7 +196,7 @@ export default async function CarrierPage({
       </div>
 
       {/* Popular corridors for this carrier */}
-      <h2 className="text-xl font-bold text-white mb-4">
+      <h2 className="text-xl font-bold text-ink mb-4">
         {t(loc, "popular_routes_carrier", { carrier: carrier.name })}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
@@ -212,7 +212,7 @@ export default async function CarrierPage({
             <Link
               key={`${from.code}-${to.code}`}
               href={`/${locale}/shipping/${makeCorridorSlug(from, to, loc)}`}
-              className="block bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
+              className="block bg-surface border border-line rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
             >
               {countryFlag(from.code)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(to.code)}
             </Link>
@@ -221,7 +221,7 @@ export default async function CarrierPage({
       </div>
 
       {/* Shipping guides */}
-      <h2 className="text-xl font-bold text-white mb-4">
+      <h2 className="text-xl font-bold text-ink mb-4">
         {t(loc, "guides_heading")}
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-8">
@@ -229,7 +229,7 @@ export default async function CarrierPage({
           <Link
             key={c.code}
             href={`/${locale}/guide/${c.slug_en}`}
-            className="text-sm text-accent-light hover:text-white py-1"
+            className="text-sm text-accent-light hover:text-ink py-1"
           >
             {countryFlag(c.code)} {getCountryName(c, loc)}
           </Link>
@@ -285,7 +285,7 @@ export default async function CarrierPage({
       {/* Back to carriers */}
       <Link
         href={`/${locale}/carriers`}
-        className="text-accent-light hover:text-white text-sm"
+        className="text-accent-light hover:text-ink text-sm"
       >
         ← {t(loc, "all_carriers")}
       </Link>

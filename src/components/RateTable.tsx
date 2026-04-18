@@ -201,28 +201,28 @@ function CurrencySelector({
 
   return (
     <div className="flex items-center gap-2 mb-6">
-      <span className="text-sm text-gray-300">{labels.currency}:</span>
+      <span className="text-sm text-body">{labels.currency}:</span>
       <div className="relative" ref={ref}>
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 px-3 py-1.5 text-gray-400 hover:text-white transition-colors text-sm"
+          className="flex items-center gap-2 px-3 py-1.5 text-body hover:text-ink transition-colors text-sm"
         >
           <span className="font-medium">{current?.symbol}</span>
           <span>{currency}</span>
-          <svg className="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
 
         {open && (
-          <div className="absolute left-0 mt-1 w-64 bg-card rounded-2xl shadow-2xl z-50 overflow-hidden">
+          <div className="absolute left-0 mt-1 w-64 bg-white rounded-2xl shadow-lg z-50 overflow-hidden">
             <div className="p-3">
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search currency..."
-                className="w-full px-3 py-2 text-sm bg-[#1a1a1a] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                className="w-full px-3 py-2 text-sm bg-[#1a1a1a] rounded-xl text-ink placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-accent/50"
                 autoFocus
               />
             </div>
@@ -232,14 +232,14 @@ function CurrencySelector({
                   key={code}
                   onClick={() => { setCurrency(code); setOpen(false); setSearch(""); }}
                   className={`w-full px-4 py-2.5 text-left text-sm flex items-center justify-between transition-colors hover:bg-white/5 ${
-                    code === currency ? "text-white font-medium" : "text-gray-400"
+                    code === currency ? "text-ink font-medium" : "text-body"
                   }`}
                 >
                   <span className="flex items-center gap-2">
                     <span className="font-medium w-6">{info.symbol}</span>
                     <span>{code}</span>
                   </span>
-                  <span className="text-xs text-gray-600">{info.name}</span>
+                  <span className="text-xs text-muted">{info.name}</span>
                 </button>
               ))}
             </div>
@@ -247,7 +247,7 @@ function CurrencySelector({
         )}
       </div>
       {currency !== "USD" && (
-        <span className="text-xs text-gray-600">
+        <span className="text-xs text-muted">
           1 USD = {current?.rate} {currency}
           {currencyAutoDetected && <span className="ml-1">— {labels.auto_detected}</span>}
         </span>
@@ -359,7 +359,7 @@ export default function RateTable({
 
   if (corridorRates.length === 0) {
     return (
-      <div className="text-center py-12 text-gray-600">
+      <div className="text-center py-12 text-muted">
         <p className="text-lg">{labels.no_rates}</p>
       </div>
     );
@@ -412,7 +412,7 @@ export default function RateTable({
         <label className="block text-xs text-gray-200 mb-3 uppercase tracking-wide">
           {labels.select_weight}
         </label>
-        <div className="bg-card rounded-2xl p-5">
+        <div className="bg-white rounded-2xl p-5">
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {weightPresets.map((w) => (
@@ -424,7 +424,7 @@ export default function RateTable({
                 className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
                     ? "bg-accent text-white font-medium"
-                    : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
+                    : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
                 }`}
               >
                 {w} {labels.kg}
@@ -435,7 +435,7 @@ export default function RateTable({
 
         <div className="flex flex-wrap items-end gap-4">
           <div>
-            <label className="block text-xs text-gray-400 mb-1">
+            <label className="block text-xs text-body mb-1">
               {labels.or_enter_weight}
             </label>
             <div className="flex items-center gap-1">
@@ -448,23 +448,23 @@ export default function RateTable({
                 max="70"
                 step="0.1"
                 aria-label={labels.or_enter_weight}
-                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-500"
+                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-500"
               />
-              <span className="text-sm text-gray-400">{labels.kg}</span>
+              <span className="text-sm text-body">{labels.kg}</span>
             </div>
           </div>
 
           <button
             onClick={() => setShowDimensions(!showDimensions)}
-            className="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+            className="px-3 py-2 text-sm text-body hover:text-ink transition-colors"
           >
             {showDimensions ? labels.hide_dimensions : labels.enter_dimensions}
           </button>
         </div>
 
         {showDimensions && (
-          <div className="mt-4 pt-4 border-t border-white/5">
-            <label className="block text-xs text-gray-600 mb-2">
+          <div className="mt-4 pt-4 border-t border-line">
+            <label className="block text-xs text-muted mb-2">
               {labels.package_dimensions}
             </label>
             <div className="flex items-center gap-2">
@@ -475,9 +475,9 @@ export default function RateTable({
                 placeholder="L"
                 min="1"
                 aria-label="Length (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
-              <span className="text-gray-600" aria-hidden="true">\u00d7</span>
+              <span className="text-muted" aria-hidden="true">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.w}
@@ -485,9 +485,9 @@ export default function RateTable({
                 placeholder="W"
                 min="1"
                 aria-label="Width (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
-              <span className="text-gray-600" aria-hidden="true">\u00d7</span>
+              <span className="text-muted" aria-hidden="true">\u00d7</span>
               <input
                 type="number"
                 value={dimensions.h}
@@ -495,16 +495,16 @@ export default function RateTable({
                 placeholder="H"
                 min="1"
                 aria-label="Height (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               />
-              <span className="text-sm text-gray-600">cm</span>
+              <span className="text-sm text-muted">cm</span>
             </div>
             {volumetricWeight > 0 && (
               <div className="mt-2 text-sm">
-                <span className="text-gray-500">
+                <span className="text-muted">
                   {labels.volumetric_weight}:{" "}
                 </span>
-                <span className="font-medium text-white">{volumetricWeight.toFixed(1)} {labels.kg}</span>
+                <span className="font-medium text-ink">{volumetricWeight.toFixed(1)} {labels.kg}</span>
                 {effectiveWeight > ((selectedPreset ?? parseFloat(customWeight)) || 0) && (
                   <span className="ml-2 text-orange-400 text-xs">
                     {labels.volumetric_exceeds}
@@ -512,18 +512,18 @@ export default function RateTable({
                 )}
               </div>
             )}
-            <p className="text-xs text-gray-600 mt-1">
+            <p className="text-xs text-muted mt-1">
               {labels.volumetric_formula}
             </p>
           </div>
         )}
 
         {effectiveWeight > 0 && (
-          <div className="mt-4 pt-4 border-t border-white/5 text-sm">
-            <span className="text-gray-400">{labels.billed_at}: </span>
-            <span className="font-bold text-white">{billingWeight} {labels.kg}</span>
+          <div className="mt-4 pt-4 border-t border-line text-sm">
+            <span className="text-body">{labels.billed_at}: </span>
+            <span className="font-bold text-ink">{billingWeight} {labels.kg}</span>
             {billingWeight !== effectiveWeight && (
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-muted ml-1">
                 ({labels.nearest_bracket})
               </span>
             )}
@@ -541,16 +541,16 @@ export default function RateTable({
         currencyAutoDetected={currencyAutoDetected}
       />
       {/* Sort & filter controls */}
-      <div className="bg-card rounded-2xl p-4 mb-6">
+      <div className="bg-white rounded-2xl p-4 mb-6">
         <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
-          <span className="text-sm text-gray-300 mr-1">{labels.sort}:</span>
+          <span className="text-sm text-body mr-1">{labels.sort}:</span>
           <button
             onClick={() => setSortBy("price")}
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "price" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "price" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.price}
@@ -560,7 +560,7 @@ export default function RateTable({
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "speed" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "speed" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.delivery_time}
@@ -569,7 +569,7 @@ export default function RateTable({
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.route_reliability || "Route"}
@@ -577,14 +577,14 @@ export default function RateTable({
         </div>
         <div className="h-4 w-px bg-white/10 hidden sm:block" />
         <div className="flex items-center gap-2" role="group" aria-label={labels.type_label}>
-          <span className="text-sm text-gray-300 mr-1">{labels.type_label}:</span>
+          <span className="text-sm text-body mr-1">{labels.type_label}:</span>
           {typeOptions.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-                filterType === opt.value ? "bg-accent text-white" : "bg-[#1a1a1a] text-gray-400 hover:bg-card-hover hover:text-gray-300"
+                filterType === opt.value ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
               }`}
             >
               {opt.label}
@@ -596,20 +596,20 @@ export default function RateTable({
 
       {/* Results count */}
       <div className="flex items-center justify-between mb-6">
-        <p className="text-sm font-medium text-gray-300">
+        <p className="text-sm font-medium text-body">
           {ratesAtWeight.length} {labels.results}
         </p>
       </div>
 
       {/* Comparison table */}
       {showCompare && comparedRates.length >= 2 && (
-        <div className="mb-6 border-b border-white/5 pb-6 overflow-x-auto">
-          <h3 className="font-medium text-white mb-3 text-sm">
+        <div className="mb-6 border-b border-line pb-6 overflow-x-auto">
+          <h3 className="font-medium text-ink mb-3 text-sm">
             {labels.comparison}
           </h3>
           <table className="w-full text-sm" role="table">
             <thead>
-              <tr className="text-left text-gray-600">
+              <tr className="text-left text-muted">
                 <th className="pb-2 font-normal" scope="col">{labels.carrier}</th>
                 <th className="pb-2 font-normal" scope="col">{labels.service}</th>
                 <th className="pb-2 font-normal" scope="col">{labels.price}</th>
@@ -619,19 +619,19 @@ export default function RateTable({
             </thead>
             <tbody>
               {comparedRates.map((rate) => (
-                <tr key={rate.id} className="border-t border-white/5">
-                  <td className="py-2 font-medium text-white">{rate.carrier_name}</td>
-                  <td className="py-2 text-gray-400">{rate.service_name}</td>
-                  <td className="py-2 font-light text-white">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
-                  <td className="py-2 text-gray-400">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
-                  <td className="py-2 text-gray-400">{rate.tracking ? labels.yes : labels.no}</td>
+                <tr key={rate.id} className="border-t border-line">
+                  <td className="py-2 font-medium text-ink">{rate.carrier_name}</td>
+                  <td className="py-2 text-body">{rate.service_name}</td>
+                  <td className="py-2 font-light text-ink">${rate.price}{currency !== "USD" && rate.price ? ` (${convertPrice(rate.price, currency)})` : ""}</td>
+                  <td className="py-2 text-body">{rate.estimated_days_min}–{rate.estimated_days_max} {labels.days}</td>
+                  <td className="py-2 text-body">{rate.tracking ? labels.yes : labels.no}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <button
             onClick={() => setShowCompare(false)}
-            className="mt-2 text-sm text-gray-500 hover:text-white transition-colors"
+            className="mt-2 text-sm text-muted hover:text-ink transition-colors"
           >
             {labels.close}
           </button>
@@ -647,18 +647,18 @@ export default function RateTable({
           return (
             <div
               key={rate.id}
-              className="bg-card hover:bg-card-hover rounded-2xl p-5 transition-colors"
+              className="bg-white hover:bg-[#F8F5EF] rounded-2xl p-5 transition-colors"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1 flex-wrap">
-                    <span className="font-semibold text-white">
+                    <span className="font-semibold text-ink">
                       {rate.carrier_name}
                     </span>
                     {rate.rate_verified ? (
                       <span className="text-xs text-green-500" title="Verified from official carrier rates">&#10003; Verified</span>
                     ) : (
-                      <span className="text-xs text-gray-400" title="Estimated based on carrier type and region">~ Estimated</span>
+                      <span className="text-xs text-body" title="Estimated based on carrier type and region">~ Estimated</span>
                     )}
                     {isCheapest && (
                       <span className="text-xs text-green-400">
@@ -683,12 +683,12 @@ export default function RateTable({
                         {rate.route_score.toFixed(1)} ★
                       </span>
                     )}
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-muted">
                       {rate.carrier_type}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <p className="text-sm text-gray-300">{rate.service_name}</p>
+                    <p className="text-sm text-body">{rate.service_name}</p>
                     {rate.review && (
                       <a
                         href={rate.review.url}
@@ -702,7 +702,7 @@ export default function RateTable({
                         title="Trustpilot"
                       >
                         <span>★ {rate.review.rating.toFixed(1)}</span>
-                        <span className="text-gray-600">({rate.review.reviews >= 1000 ? `${(rate.review.reviews / 1000).toFixed(1)}K` : rate.review.reviews})</span>
+                        <span className="text-muted">({rate.review.reviews >= 1000 ? `${(rate.review.reviews / 1000).toFixed(1)}K` : rate.review.reviews})</span>
                       </a>
                     )}
                   </div>
@@ -710,33 +710,33 @@ export default function RateTable({
 
                 <div className="flex items-center gap-6 sm:gap-8">
                   <div className="text-center">
-                    <p className="text-xs text-gray-400 mb-1">
+                    <p className="text-xs text-body mb-1">
                       {labels.delivery_time}
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-body">
                       {rate.estimated_days_min}–{rate.estimated_days_max}{" "}
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-muted">
                         {labels.days}
                       </span>
                     </p>
                   </div>
                   <div className="text-center hidden sm:block">
-                    <p className="text-xs text-gray-400 mb-1">
+                    <p className="text-xs text-body mb-1">
                       {labels.tracking}
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-body">
                       {rate.tracking ? labels.yes : labels.no}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-400 mb-1">
+                    <p className="text-xs text-body mb-1">
                       {labels.price}
                     </p>
-                    <p className="text-3xl font-light text-white">
+                    <p className="text-3xl font-light text-ink">
                       ${rate.price}
                     </p>
                     {currency !== "USD" && rate.price && (
-                      <p className="text-xs text-gray-600">
+                      <p className="text-xs text-muted">
                         {convertPrice(rate.price, currency)}
                       </p>
                     )}
@@ -749,7 +749,7 @@ export default function RateTable({
                     href={rate.carrier_website}
                     target="_blank"
                     rel="noopener noreferrer nofollow sponsored"
-                    className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+                    className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-[#1558B8] transition-colors"
                   >
                     {labels.ship_now || "Ship Now"}
                   </a>
@@ -759,13 +759,13 @@ export default function RateTable({
                     href={rate.tracking_url}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="px-4 py-2 text-gray-500 text-sm hover:text-white transition-colors"
+                    className="px-4 py-2 text-muted text-sm hover:text-ink transition-colors"
                   >
                     {labels.track_package || "Track Package"}
                   </a>
                 )}
               </div>
-              <div className="sm:hidden mt-2 text-xs text-gray-400">
+              <div className="sm:hidden mt-2 text-xs text-body">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
               </div>
             </div>
@@ -774,12 +774,12 @@ export default function RateTable({
       </div>
 
       {ratesAtWeight.length === 0 && (
-        <div className="text-center py-8 text-gray-600">
+        <div className="text-center py-8 text-muted">
           <p>{labels.no_filter_results}</p>
         </div>
       )}
 
-      <p className="mt-8 text-xs text-gray-600 leading-relaxed">
+      <p className="mt-8 text-xs text-muted leading-relaxed">
         {labels.disclaimer}
       </p>
     </div>

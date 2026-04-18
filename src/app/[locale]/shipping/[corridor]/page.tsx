@@ -180,7 +180,7 @@ export default async function CorridorPage({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs: Shipping Rates → to {dest} → from {origin} */}
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "shipping_rates")}
         </Link>
@@ -192,7 +192,7 @@ export default async function CorridorPage({
           {t(loc, "ship_to", { country: destName })}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">{t(loc, "ship_from", { country: originName })}</span>
+        <span className="text-ink">{t(loc, "ship_from", { country: originName })}</span>
       </nav>
 
       {/* Language suggestion based on corridor countries */}
@@ -204,7 +204,7 @@ export default async function CorridorPage({
       />
 
       {/* Title */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-2">
         <span className="inline-block mr-2">{countryFlag(origin.code)}</span>
         {t(loc, "shipping_from_to", {
           origin: originName,
@@ -230,30 +230,30 @@ export default async function CorridorPage({
         const fastest = corridorData.carriers.reduce((a, b) => a.estimated_days_min < b.estimated_days_min ? a : b);
         const customs = getCustomsInfo(destination.code);
         return (
-          <div className="my-6 p-8 bg-card rounded-3xl">
-            <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">
+          <div className="my-6 p-8 bg-white rounded-3xl">
+            <p className="text-sm text-body uppercase tracking-wider mb-4">
               {t(loc, "quick_answer")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div>
-                <p className="text-xs text-gray-500">{t(loc, "cheapest_option")}</p>
-                <p className="text-white font-medium">{cheapest.carrier.name}</p>
-                <p className="text-lg text-white font-light">${cheapest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
-                <p className="text-xs text-gray-500">{cheapest.estimated_days_min}-{cheapest.estimated_days_max} {t(loc, "days_unit")}</p>
+                <p className="text-xs text-muted">{t(loc, "cheapest_option")}</p>
+                <p className="text-ink font-medium">{cheapest.carrier.name}</p>
+                <p className="text-lg text-ink font-light">${cheapest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
+                <p className="text-xs text-muted">{cheapest.estimated_days_min}-{cheapest.estimated_days_max} {t(loc, "days_unit")}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500">{t(loc, "fastest_option")}</p>
-                <p className="text-white font-medium">{fastest.carrier.name}</p>
-                <p className="text-lg text-white font-light">{fastest.estimated_days_min}-{fastest.estimated_days_max} {t(loc, "days_unit")}</p>
-                <p className="text-xs text-gray-500">${fastest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
+                <p className="text-xs text-muted">{t(loc, "fastest_option")}</p>
+                <p className="text-ink font-medium">{fastest.carrier.name}</p>
+                <p className="text-lg text-ink font-light">{fastest.estimated_days_min}-{fastest.estimated_days_max} {t(loc, "days_unit")}</p>
+                <p className="text-xs text-muted">${fastest.rates.find(r => r.weight_kg === 1)?.price_usd}/{t(loc, "kg_unit")}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500">{t(loc, "duty_free_under")}</p>
-                <p className="text-lg text-white font-light">${customs.de_minimis_usd}</p>
-                <p className="text-xs text-gray-500">{t(loc, "vat_rate")}: {customs.vat_rate}%</p>
+                <p className="text-xs text-muted">{t(loc, "duty_free_under")}</p>
+                <p className="text-lg text-ink font-light">${customs.de_minimis_usd}</p>
+                <p className="text-xs text-muted">{t(loc, "vat_rate")}: {customs.vat_rate}%</p>
               </div>
             </div>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="text-xs text-muted mt-3">
               {"↓ " + t(loc, "scroll_compare")}
             </p>
           </div>
@@ -261,7 +261,7 @@ export default async function CorridorPage({
       })()}
 
       {/* Last updated */}
-      <p className="text-xs text-gray-600 mb-6">
+      <p className="text-xs text-muted mb-6">
         {t(loc, "data_as_of")}
       </p>
 
@@ -286,37 +286,37 @@ export default async function CorridorPage({
 
         return (
           <div className="mb-8">
-            <h2 className="text-lg font-semibold text-white mb-4" id="examples">
+            <h2 className="text-lg font-semibold text-ink mb-4" id="examples">
               {t(loc, "shipping_cost_examples")}
             </h2>
             {/* Featured item + compact row — not 4 identical cards */}
-            <div className="bg-card rounded-2xl p-5 mb-3">
+            <div className="bg-white rounded-2xl p-5 mb-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-400">{t(loc, "example_phone")} <span className="text-gray-600">(0.5 kg)</span></p>
-                  <p className="text-2xl font-light text-white mt-1">${r05.price}</p>
+                  <p className="text-sm text-body">{t(loc, "example_phone")} <span className="text-muted">(0.5 kg)</span></p>
+                  <p className="text-2xl font-light text-ink mt-1">${r05.price}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs text-gray-500">{r05.carrier}</p>
-                  <p className="text-xs text-gray-600">{r05.days} {t(loc, "days_short")}</p>
+                  <p className="text-xs text-muted">{r05.carrier}</p>
+                  <p className="text-xs text-muted">{r05.days} {t(loc, "days_short")}</p>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{t(loc, "example_clothing")} <span className="text-gray-600">2kg</span></p>
-                <p className="text-lg font-light text-white">${r2.price}</p>
-                <p className="text-[10px] text-gray-600">{r2.carrier}</p>
+                <p className="text-xs text-muted">{t(loc, "example_clothing")} <span className="text-muted">2kg</span></p>
+                <p className="text-lg font-light text-ink">${r2.price}</p>
+                <p className="text-[10px] text-muted">{r2.carrier}</p>
               </div>
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{t(loc, "example_box")} <span className="text-gray-600">5kg</span></p>
-                <p className="text-lg font-light text-white">${r5.price}</p>
-                <p className="text-[10px] text-gray-600">{r5.carrier}</p>
+                <p className="text-xs text-muted">{t(loc, "example_box")} <span className="text-muted">5kg</span></p>
+                <p className="text-lg font-light text-ink">${r5.price}</p>
+                <p className="text-[10px] text-muted">{r5.carrier}</p>
               </div>
               <div className="bg-surface rounded-xl px-4 py-3">
-                <p className="text-xs text-gray-500">{t(loc, "example_heavy")} <span className="text-gray-600">10kg</span></p>
-                <p className="text-lg font-light text-white">${r10.price}</p>
-                <p className="text-[10px] text-gray-600">{r10.carrier}</p>
+                <p className="text-xs text-muted">{t(loc, "example_heavy")} <span className="text-muted">10kg</span></p>
+                <p className="text-lg font-light text-ink">${r10.price}</p>
+                <p className="text-[10px] text-muted">{r10.carrier}</p>
               </div>
             </div>
           </div>
@@ -326,17 +326,17 @@ export default async function CorridorPage({
       {/* Quick stats — inline, not 4 identical cards */}
       {corridorData && corridorData.carriers.length > 0 && (
         <div className="flex flex-wrap gap-x-8 gap-y-2 mb-8 text-sm">
-          <span className="text-gray-500">
-            {t(loc, "from_price")} <span className="text-white font-medium text-base">${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}/kg</span>
+          <span className="text-muted">
+            {t(loc, "from_price")} <span className="text-ink font-medium text-base">${Math.min(...corridorData.carriers.map(c => c.rates.find(r => r.weight_kg === 1)?.price_usd ?? 999))}/kg</span>
           </span>
-          <span className="text-gray-500">
-            {t(loc, "from_price")} <span className="text-white font-medium text-base">{Math.min(...corridorData.carriers.map(c => c.estimated_days_min))} {t(loc, "days_unit")}</span>
+          <span className="text-muted">
+            {t(loc, "from_price")} <span className="text-ink font-medium text-base">{Math.min(...corridorData.carriers.map(c => c.estimated_days_min))} {t(loc, "days_unit")}</span>
           </span>
-          <span className="text-gray-500">
-            <span className="text-white font-medium text-base">{corridorData.carriers.length}</span> {t(loc, "carriers_count")}
+          <span className="text-muted">
+            <span className="text-ink font-medium text-base">{corridorData.carriers.length}</span> {t(loc, "carriers_count")}
           </span>
-          <span className="text-gray-500">
-            de minimis <span className="text-white font-medium text-base">${getCustomsInfo(destination.code).de_minimis_usd}</span>
+          <span className="text-muted">
+            de minimis <span className="text-ink font-medium text-base">${getCustomsInfo(destination.code).de_minimis_usd}</span>
           </span>
         </div>
       )}
@@ -436,22 +436,22 @@ export default async function CorridorPage({
       )}
 
       {/* Source note */}
-      <p className="text-xs text-gray-600 py-3 border-t border-white/5">
+      <p className="text-xs text-muted py-3 border-t border-line">
         {t(loc, "source_note") + " "}
-        <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
+        <Link href={`/${locale}/data-methodology`} className="text-muted hover:text-ink transition-colors">
           {t(loc, "how_we_collect")}
         </Link>
       </p>
 
       {/* Related tools */}
       <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 mb-4 text-sm">
-        <Link href={`/${locale}/tools/duty-calculator`} className="text-gray-500 hover:text-white transition-colors">
+        <Link href={`/${locale}/tools/duty-calculator`} className="text-muted hover:text-ink transition-colors">
           {t(loc, "duty_calculator_link")} &rarr;
         </Link>
-        <Link href={`/${locale}/tools/delivery-estimator`} className="text-gray-500 hover:text-white transition-colors">
+        <Link href={`/${locale}/tools/delivery-estimator`} className="text-muted hover:text-ink transition-colors">
           {t(loc, "delivery_estimator_link")} &rarr;
         </Link>
-        <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-gray-500 hover:text-white transition-colors">
+        <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-muted hover:text-ink transition-colors">
           {t(loc, "customs_link", { country: destName })} &rarr;
         </Link>
       </div>
@@ -518,11 +518,11 @@ export default async function CorridorPage({
 
       {/* Track Your Shipment */}
       {corridorData && corridorData.carriers.length > 0 && (
-        <div className="mt-8 py-8 border-t border-white/5">
-          <h2 className="text-xl font-bold text-white mb-4" id="tracking">
+        <div className="mt-8 py-8 border-t border-line">
+          <h2 className="text-xl font-bold text-ink mb-4" id="tracking">
             {t(loc, "track_shipment")}
           </h2>
-          <p className="text-sm text-gray-400 mb-4">
+          <p className="text-sm text-body mb-4">
             {t(loc, "track_after")}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -533,9 +533,9 @@ export default async function CorridorPage({
                   href={cr.carrier.tracking_url}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-2 transition-colors"
+                  className="flex items-center gap-2 text-sm text-body hover:text-ink py-2 transition-colors"
                 >
-                  <span className="text-gray-600">↗</span>
+                  <span className="text-muted">↗</span>
                   {cr.carrier.name} — {t(loc, "track_link")}
                 </a>
               ) : null
@@ -574,18 +574,18 @@ export default async function CorridorPage({
 
             {/* 1. Import Duty Rates */}
             {corridorInfo.duty_table.length > 0 && (
-              <div id="duties" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-1">
+              <div id="duties" className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-1">
                   
                   {t(loc, "corridor_import_duties", { dest: destName })}
                 </h2>
-                <p className="text-sm text-gray-500 mb-5">
+                <p className="text-sm text-muted mb-5">
                   {t(loc, "corridor_duty_indicative")}
                 </p>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="text-left text-gray-500 text-xs uppercase tracking-wider">
+                      <tr className="text-left text-muted text-xs uppercase tracking-wider">
                         <th className="pb-3 pr-4">{t(loc, "corridor_category")}</th>
                         <th className="pb-3 pr-4">{t(loc, "corridor_hs_code")}</th>
                         <th className="pb-3">{t(loc, "corridor_rate")}</th>
@@ -593,16 +593,16 @@ export default async function CorridorPage({
                     </thead>
                     <tbody className="divide-y divide-white/5">
                       {corridorInfo.duty_table.map((row, i) => (
-                        <tr key={i} className="text-gray-300 hover:bg-white/[0.02] transition-colors">
+                        <tr key={i} className="text-body hover:bg-white/[0.02] transition-colors">
                           <td className="py-3 pr-4">{row.category}</td>
-                          <td className="py-3 pr-4 text-gray-500 font-mono text-xs">{row.hs}</td>
-                          <td className="py-3 font-medium text-white">{row.rate}</td>
+                          <td className="py-3 pr-4 text-muted font-mono text-xs">{row.hs}</td>
+                          <td className="py-3 font-medium text-ink">{row.rate}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-4 text-xs text-gray-500">
+                <p className="mt-4 text-xs text-muted">
                   {t(loc, "corridor_rates_note")}
                 </p>
               </div>
@@ -610,40 +610,40 @@ export default async function CorridorPage({
 
             {/* 2. Customs Clearance */}
             {(corridorInfo.clearance_info || corridorInfo.customs_reality) && (
-              <div id="customs" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div id="customs" className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   
                   {t(loc, "corridor_customs_clearance")}
                 </h2>
                 {corridorInfo.clearance_info && (
-                  <p className="text-sm text-gray-300 leading-relaxed mb-4">{corridorInfo.clearance_info}</p>
+                  <p className="text-sm text-body leading-relaxed mb-4">{corridorInfo.clearance_info}</p>
                 )}
                 <div className="flex flex-wrap gap-x-10 gap-y-3 mt-4">
                   {corridorInfo.clearance_time && (
                     <div>
-                      <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                      <span className="block text-xs text-muted uppercase tracking-wider mb-1">
                         {t(loc, "corridor_processing_time")}
                       </span>
-                      <span className="text-white font-medium">
+                      <span className="text-ink font-medium">
                         {corridorInfo.clearance_time} {t(loc, "corridor_days")}
                       </span>
                     </div>
                   )}
                   {corridorInfo.de_minimis_info && (
                     <div>
-                      <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
+                      <span className="block text-xs text-muted uppercase tracking-wider mb-1">
                         De minimis
                       </span>
-                      <span className="text-white font-medium text-sm">{corridorInfo.de_minimis_info}</span>
+                      <span className="text-ink font-medium text-sm">{corridorInfo.de_minimis_info}</span>
                     </div>
                   )}
                 </div>
                 {corridorInfo.customs_reality && (
                   <div className="mt-5 p-4 bg-white/[0.02] rounded-lg">
-                    <span className="block text-xs text-gray-500 uppercase tracking-wider mb-2">
+                    <span className="block text-xs text-muted uppercase tracking-wider mb-2">
                       {t(loc, "corridor_what_to_expect")}
                     </span>
-                    <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.customs_reality}</p>
+                    <p className="text-sm text-body leading-relaxed">{corridorInfo.customs_reality}</p>
                   </div>
                 )}
                 <Link
@@ -657,8 +657,8 @@ export default async function CorridorPage({
 
             {/* 3. Required Documents */}
             {corridorInfo.docs_section && (
-              <div id="documents" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-6">
+              <div id="documents" className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-6">
                   
                   {t(loc, "corridor_required_docs")}
                 </h2>
@@ -666,16 +666,16 @@ export default async function CorridorPage({
                   {corridorInfo.docs_section.split(/[.,;]/).filter(d => d.trim()).map((doc, i) => (
                     <div key={i} className="flex items-start gap-3 py-2">
                       <span className="text-green-400 mt-0.5">&#10003;</span>
-                      <span className="text-sm text-gray-300">{doc.trim()}</span>
+                      <span className="text-sm text-body">{doc.trim()}</span>
                     </div>
                   ))}
                 </div>
                 {corridorInfo.documents_where && (
                   <div className="mt-6 p-4 bg-white/[0.02] rounded-lg">
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+                    <p className="text-xs text-muted uppercase tracking-wider mb-2">
                       {t(loc, "corridor_where_docs")}
                     </p>
-                    <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.documents_where}</p>
+                    <p className="text-sm text-body leading-relaxed">{corridorInfo.documents_where}</p>
                   </div>
                 )}
               </div>
@@ -683,32 +683,32 @@ export default async function CorridorPage({
 
             {/* 4. Trade Between Countries */}
             {corridorInfo.trade_volume && (
-              <div id="trade" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div id="trade" className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   
                   {t(loc, "corridor_trade_between", { origin: originName, dest: destName })}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed mb-4">{corridorInfo.trade_volume}</p>
+                <p className="text-sm text-body leading-relaxed mb-4">{corridorInfo.trade_volume}</p>
                 {corridorInfo.customs_section && (
-                  <p className="text-sm text-gray-400 leading-relaxed">{corridorInfo.customs_section}</p>
+                  <p className="text-sm text-body leading-relaxed">{corridorInfo.customs_section}</p>
                 )}
               </div>
             )}
 
             {/* 5. Shipper Experience */}
             {corridorInfo.shipper_reviews && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   {t(loc, "corridor_shipper_exp")}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.shipper_reviews}</p>
+                <p className="text-sm text-body leading-relaxed">{corridorInfo.shipper_reviews}</p>
               </div>
             )}
 
             {/* 6. Prohibited Items */}
             {corridorInfo.prohibited_section && (
-              <div id="prohibited" className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-6">
+              <div id="prohibited" className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-6">
                   
                   {t(loc, "corridor_prohibited")}
                 </h2>
@@ -716,7 +716,7 @@ export default async function CorridorPage({
                   {corridorInfo.prohibited_section.split(/[.,;]/).filter(d => d.trim().length > 3).map((item, i) => (
                     <div key={i} className="flex items-start gap-3 py-2">
                       <span className="text-red-400 mt-0.5 text-xs">&#9888;</span>
-                      <span className="text-sm text-gray-300">{item.trim()}</span>
+                      <span className="text-sm text-body">{item.trim()}</span>
                     </div>
                   ))}
                 </div>
@@ -724,25 +724,25 @@ export default async function CorridorPage({
             )}
 
             {/* Special Items Guide — table format, not 6 identical cards */}
-            <div className="py-8 border-t border-white/5">
-              <h2 className="text-xl font-bold text-white mb-4" id="special-items">
+            <div className="py-8 border-t border-line">
+              <h2 className="text-xl font-bold text-ink mb-4" id="special-items">
                 {t(loc, "special_items")}
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="text-left text-xs text-gray-500 uppercase tracking-wider">
+                    <tr className="text-left text-xs text-muted uppercase tracking-wider">
                       <th className="pb-3 pr-6">{t(loc, "category_label")}</th>
                       <th className="pb-3">{t(loc, "restrictions_label")}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_lithium")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_lithium")}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_alcohol")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_alcohol")}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_food")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_food")}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_meds")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_meds")}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_art")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_art")}</td></tr>
-                    <tr><td className="py-3 pr-6 text-white whitespace-nowrap">{t(loc, "cat_electronics")}</td><td className="py-3 text-gray-400">{t(loc, "restriction_electronics")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_lithium")}</td><td className="py-3 text-body">{t(loc, "restriction_lithium")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_alcohol")}</td><td className="py-3 text-body">{t(loc, "restriction_alcohol")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_food")}</td><td className="py-3 text-body">{t(loc, "restriction_food")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_meds")}</td><td className="py-3 text-body">{t(loc, "restriction_meds")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_art")}</td><td className="py-3 text-body">{t(loc, "restriction_art")}</td></tr>
+                    <tr><td className="py-3 pr-6 text-ink whitespace-nowrap">{t(loc, "cat_electronics")}</td><td className="py-3 text-body">{t(loc, "restriction_electronics")}</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -750,29 +750,29 @@ export default async function CorridorPage({
 
             {/* 7. Trade Agreements */}
             {corridorInfo.trade_section && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   
                   {t(loc, "corridor_trade_agreements")}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.trade_section}</p>
+                <p className="text-sm text-body leading-relaxed">{corridorInfo.trade_section}</p>
               </div>
             )}
 
             {/* 8. VAT/GST */}
             {corridorInfo.vat_info && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   {t(loc, "corridor_vat_gst")}
                 </h2>
-                <p className="text-sm text-gray-300 leading-relaxed">{corridorInfo.vat_info}</p>
+                <p className="text-sm text-body leading-relaxed">{corridorInfo.vat_info}</p>
               </div>
             )}
 
             {/* 9. Useful Links */}
             {corridorInfo.useful_links.length > 0 && (
-              <div className="py-8 border-t border-white/5">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="py-8 border-t border-line">
+                <h2 className="text-2xl font-bold text-ink mb-4">
                   {t(loc, "corridor_useful_links")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -782,9 +782,9 @@ export default async function CorridorPage({
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
-                      className="flex items-center gap-2 text-sm text-accent-light hover:text-white transition-colors py-2"
+                      className="flex items-center gap-2 text-sm text-accent-light hover:text-ink transition-colors py-2"
                     >
-                      <span className="text-gray-600">&#8599;</span>
+                      <span className="text-muted">&#8599;</span>
                       {link.name}
                     </a>
                   ))}
@@ -805,33 +805,33 @@ export default async function CorridorPage({
         const tips = locale === "ru" ? corridorContent.tips_ru : corridorContent.tips_en;
         return (
           <section className="mt-8 space-y-6">
-            <div className="bg-card rounded-2xl p-6">
-              <h2 className="text-lg font-bold text-white mb-3">
+            <div className="bg-white rounded-2xl p-6">
+              <h2 className="text-lg font-bold text-ink mb-3">
                 {t(loc, "corridor_trade_info")}
               </h2>
-              <p className="text-sm text-gray-300 leading-relaxed">{tradeInfo}</p>
+              <p className="text-sm text-body leading-relaxed">{tradeInfo}</p>
             </div>
-            <div className="bg-card rounded-2xl p-6">
-              <h2 className="text-lg font-bold text-white mb-3">
+            <div className="bg-white rounded-2xl p-6">
+              <h2 className="text-lg font-bold text-ink mb-3">
                 {t(loc, "corridor_shipping_tips")}
               </h2>
-              <p className="text-sm text-gray-300 leading-relaxed">{tips}</p>
+              <p className="text-sm text-body leading-relaxed">{tips}</p>
             </div>
             {corridorContent.reviews.length > 0 && (
               <div>
-                <h2 className="text-lg font-bold text-white mb-3">
+                <h2 className="text-lg font-bold text-ink mb-3">
                   {t(loc, "corridor_user_reviews")}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {corridorContent.reviews.map((review, i) => (
                     <div
                       key={i}
-                      className="bg-card rounded-2xl p-5"
+                      className="bg-white rounded-2xl p-5"
                     >
-                      <p className="text-sm text-gray-300 italic leading-relaxed mb-3">
+                      <p className="text-sm text-body italic leading-relaxed mb-3">
                         &ldquo;{locale === "ru" ? review.text_ru : review.text_en}&rdquo;
                       </p>
-                      <div className="flex items-center justify-between text-xs text-gray-500">
+                      <div className="flex items-center justify-between text-xs text-muted">
                         <span className="font-medium text-accent-light">{review.carrier}</span>
                         <span>
                           {review.days} {t(loc, "corridor_days")}
@@ -852,11 +852,11 @@ export default async function CorridorPage({
         const cheapestPrice = cheapestRate.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0;
         const fastestCarrier = [...corridorData.carriers].sort((a, b) => a.estimated_days_min - b.estimated_days_min)[0];
         return (
-          <section className="mt-8 bg-card rounded-2xl p-8">
-            <h2 className="text-lg font-bold text-white mb-3">
+          <section className="mt-8 bg-white rounded-2xl p-8">
+            <h2 className="text-lg font-bold text-ink mb-3">
               {t(loc, "shipping_from_to", { origin: originName, destination: destName })}: {t(loc, "overview")}
             </h2>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <p className="text-sm text-body leading-relaxed">
               {t(loc, "corridor_overview", {
                 count: String(corridorData.carriers.length),
                 origin: originName,
@@ -878,7 +878,7 @@ export default async function CorridorPage({
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* From same origin — larger left column */}
           <div className="lg:col-span-3">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-ink mb-4">
               {t(loc, "also_ships_to", { origin: originName })}
             </h2>
             <div className="flex flex-wrap gap-2">
@@ -886,7 +886,7 @@ export default async function CorridorPage({
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-                  className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 transition-colors text-sm text-gray-400 hover:text-white"
+                  className="bg-white hover:bg-[#F8F5EF] rounded-lg px-3 py-2 transition-colors text-sm text-body hover:text-ink"
                 >
                   {countryFlag(c.code)} {getCountryName(c, loc)}
                 </Link>
@@ -895,7 +895,7 @@ export default async function CorridorPage({
           </div>
           {/* To same destination — smaller right column */}
           <div className="lg:col-span-2">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-ink mb-4">
               {t(loc, "ship_to", { country: destName })}
             </h2>
             <div className="flex flex-wrap gap-2">
@@ -906,7 +906,7 @@ export default async function CorridorPage({
                   <Link
                     key={c.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
-                    className="bg-surface hover:bg-card rounded-lg px-3 py-2 transition-colors text-sm text-gray-400 hover:text-white"
+                    className="bg-surface hover:bg-white rounded-lg px-3 py-2 transition-colors text-sm text-body hover:text-ink"
                   >
                     {countryFlag(c.code)} {getCountryName(c, loc)}
                   </Link>
@@ -919,7 +919,7 @@ export default async function CorridorPage({
       {/* Carrier links */}
       {corridorData && corridorData.carriers.length > 0 && (
         <section className="mt-8">
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-xl font-bold text-ink mb-4">
             {t(loc, "carriers_page")}
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -930,7 +930,7 @@ export default async function CorridorPage({
                 <Link
                   key={carrierId}
                   href={`/${locale}/carriers/${carrierId}`}
-                  className="text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 hover:text-accent-light transition-colors"
+                  className="text-sm bg-white hover:bg-[#F8F5EF] rounded-full px-4 py-2 hover:text-accent-light transition-colors"
                 >
                   {carrier.name}
                 </Link>
@@ -942,13 +942,13 @@ export default async function CorridorPage({
 
       {/* More shipping routes — dense internal link network */}
       <section className="mt-12">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {t(loc, "more_routes")}
         </h2>
         <div className="space-y-6">
           {/* From same origin to other destinations */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+            <h3 className="text-sm font-semibold text-body mb-2">
               {t(loc, "ship_from", { country: originName })}
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -960,7 +960,7 @@ export default async function CorridorPage({
                   <Link
                     key={`from-${c.code}`}
                     href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                    className="text-sm text-body hover:opacity-60 transition-opacity"
                   >
                     {originName} → {getCountryName(c, loc)}
                   </Link>
@@ -969,7 +969,7 @@ export default async function CorridorPage({
           </div>
           {/* To same destination from other origins */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+            <h3 className="text-sm font-semibold text-body mb-2">
               {t(loc, "ship_to", { country: destName })}
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -980,7 +980,7 @@ export default async function CorridorPage({
                   <Link
                     key={`to-${c.code}`}
                     href={`/${locale}/shipping/${makeCorridorSlug(c, destination, loc)}`}
-                    className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                    className="text-sm text-body hover:opacity-60 transition-opacity"
                   >
                     {getCountryName(c, loc)} → {destName}
                   </Link>
@@ -989,19 +989,19 @@ export default async function CorridorPage({
           </div>
           {/* Country guide links */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 mb-2">
+            <h3 className="text-sm font-semibold text-body mb-2">
               {t(loc, "country_guides")}
             </h3>
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/${locale}/guide/${origin.slug_en}`}
-                className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                className="text-sm text-body hover:opacity-60 transition-opacity"
               >
                 {t(loc, "guide_title", { country: originName })}
               </Link>
               <Link
                 href={`/${locale}/guide/${destination.slug_en}`}
-                className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                className="text-sm text-body hover:opacity-60 transition-opacity"
               >
                 {t(loc, "guide_title", { country: destName })}
               </Link>
@@ -1010,7 +1010,7 @@ export default async function CorridorPage({
           {/* Carrier page links */}
           {corridorData && corridorData.carriers.length > 0 && (
             <div>
-              <h3 className="text-sm font-semibold text-gray-400 mb-2">
+              <h3 className="text-sm font-semibold text-body mb-2">
                 {t(loc, "carriers_on_route")}
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -1021,7 +1021,7 @@ export default async function CorridorPage({
                     <Link
                       key={`more-${carrierId}`}
                       href={`/${locale}/carriers/${carrierId}`}
-                      className="text-sm text-gray-400 hover:opacity-60 transition-opacity"
+                      className="text-sm text-body hover:opacity-60 transition-opacity"
                     >
                       {carrier.name}
                     </Link>
@@ -1038,33 +1038,33 @@ export default async function CorridorPage({
         const customs = getCustomsInfo(destination.code);
         return (
           <section className="mt-12">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-ink mb-4">
               {t(loc, "customs_for", { country: destName })}
             </h2>
-            <div className="bg-card rounded-2xl p-6">
+            <div className="bg-white rounded-2xl p-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div>
-                  <p className="text-sm text-gray-400">{t(loc, "de_minimis")}</p>
+                  <p className="text-sm text-body">{t(loc, "de_minimis")}</p>
                   <p className="text-lg font-semibold">
                     {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : t(loc, "duty_from_zero")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">{t(loc, "vat_rate")}</p>
+                  <p className="text-sm text-body">{t(loc, "vat_rate")}</p>
                   <p className="text-lg font-semibold">{customs.vat_rate}%</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400">{t(loc, "avg_duty")}</p>
+                  <p className="text-sm text-body">{t(loc, "avg_duty")}</p>
                   <p className="text-lg font-semibold">{customs.avg_duty_rate}%</p>
                 </div>
               </div>
               {getCustomsNotes(customs, loc) && (
-                <p className="text-sm text-gray-400 mb-3">
+                <p className="text-sm text-body mb-3">
                   <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
                   {getCustomsNotes(customs, loc)}
                 </p>
               )}
-              <p className="text-xs text-gray-400">{t(loc, "customs_disclaimer")}</p>
+              <p className="text-xs text-body">{t(loc, "customs_disclaimer")}</p>
             </div>
           </section>
         );
@@ -1120,16 +1120,16 @@ export default async function CorridorPage({
 
         return (
           <section id="faq" className="mt-12">
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-ink mb-4">
               {t(loc, "faq_title")}
             </h2>
             <div className="space-y-4">
               {faqs.map((faq, i) => (
-                <details key={i} className="bg-surface border border-white/10 rounded-lg">
-                  <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light">
+                <details key={i} className="bg-surface border border-line rounded-lg">
+                  <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent-light">
                     {faq.q}
                   </summary>
-                  <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
+                  <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
                 </details>
               ))}
             </div>
@@ -1143,34 +1143,34 @@ export default async function CorridorPage({
 
       {/* Shipping guide links */}
       <section className="mt-12">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {t(loc, "learn_more_shipping")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
             href={`/${locale}/guide/${destination.slug_en}`}
-            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all"
+            className="flex items-center gap-3 bg-surface border border-line rounded-lg p-4 hover:border-accent/50 transition-all"
           >
             <span className="text-2xl">{countryFlag(destination.code)}</span>
             <div>
-              <p className="font-medium text-white text-sm">
+              <p className="font-medium text-ink text-sm">
                 {t(loc, "guide_title", { country: destName })}
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-muted">
                 {t(loc, "customs_duties_tips")}
               </p>
             </div>
           </Link>
           <Link
             href={`/${locale}/guide/${origin.slug_en}`}
-            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all"
+            className="flex items-center gap-3 bg-surface border border-line rounded-lg p-4 hover:border-accent/50 transition-all"
           >
             <span className="text-2xl">{countryFlag(origin.code)}</span>
             <div>
-              <p className="font-medium text-white text-sm">
+              <p className="font-medium text-ink text-sm">
                 {t(loc, "guide_title", { country: originName })}
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-muted">
                 {t(loc, "customs_duties_tips")}
               </p>
             </div>
@@ -1182,7 +1182,7 @@ export default async function CorridorPage({
       <section className="mt-6">
         <Link
           href={`/${locale}/shipping/${makeCorridorSlug(destination, origin, loc)}`}
-          className="text-accent-light hover:text-white text-sm"
+          className="text-accent-light hover:text-ink text-sm"
         >
           {t(loc, "shipping_from_to", {
             origin: destName,
@@ -1193,11 +1193,11 @@ export default async function CorridorPage({
       </section>
 
       {/* Try another route CTA */}
-      <section className="mt-12 mb-8 bg-card rounded-3xl p-8 text-center">
-        <h2 className="text-xl font-bold text-white mb-2">
+      <section className="mt-12 mb-8 bg-white rounded-3xl p-8 text-center">
+        <h2 className="text-xl font-bold text-ink mb-2">
           {t(loc, "looking_different")}
         </h2>
-        <p className="text-sm text-gray-500 mb-5">
+        <p className="text-sm text-muted mb-5">
           {t(loc, "compare_45k")}
         </p>
         <Link
