@@ -92,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-screen bg-[#0a0a0a] text-gray-400 antialiased font-sans">
+      <body className="min-h-screen bg-bg text-body antialiased font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -159,64 +159,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* Header */}
-        <header className="sticky top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-50 bg-bg/85 backdrop-blur-lg backdrop-saturate-[1.2] border-b border-line">
+          <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-14">
               <NavLink
                 href={`/${locale}`}
-                className="text-xl font-bold tracking-tight text-white"
-                activeClassName="text-xl font-bold tracking-tight text-white"
+                className="text-lg font-extrabold tracking-tight text-ink"
+                activeClassName="text-lg font-extrabold tracking-tight text-ink"
               >
                 {t(loc, "site_name")}
               </NavLink>
               <div className="flex items-center gap-5">
-                <nav className="hidden sm:flex items-center gap-5">
+                <nav className="hidden sm:flex items-center gap-6">
                   <NavLink
                     href={`/${locale}`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
                   >
                     {t(loc, "home")}
                   </NavLink>
                   <NavLink
                     href={`/${locale}/carriers`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
                   >
                     {t(loc, "carriers_page")}
                   </NavLink>
                   <NavLink
                     href={`/${locale}/guide`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
                   >
                     {t(loc, "guides")}
                   </NavLink>
                   <NavLink
                     href={`/${locale}/about`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
                   >
                     {t(loc, "about")}
                   </NavLink>
                   <NavLink
                     href={`/${locale}/blog`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
                   >
                     {t(loc, "blog")}
                   </NavLink>
                   <NavLink
-                    href={`/${locale}/platforms`}
-                    className="text-[15px] text-gray-400 hover:text-white transition-colors"
-                    activeClassName="text-[15px] text-white transition-colors"
-                  >
-                    {t(loc, "platforms")}
-                  </NavLink>
-                  <NavLink
                     href={`/${locale}`}
-                    className="px-5 py-2 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
-                    activeClassName="px-5 py-2 bg-accent text-white text-sm font-medium rounded-full opacity-70"
+                    className="px-4 py-2 bg-ink text-white text-sm font-semibold rounded-full hover:bg-ink/90 transition-colors"
+                    activeClassName="px-4 py-2 bg-ink text-white text-sm font-semibold rounded-full opacity-70"
                   >
                     {t(loc, "compare_rates")}
                   </NavLink>
@@ -242,29 +235,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="mt-16 px-4 sm:px-6 lg:px-8 pb-8">
-          <div className="max-w-7xl mx-auto bg-card rounded-2xl p-8 sm:p-10">
+        <footer className="mt-16 bg-ink text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="max-w-[1240px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-white font-semibold text-sm mb-3">
+                <h3 className="text-white font-bold text-sm mb-3">
                   {t(loc, "site_name")}
                 </h3>
-                <p className="text-xs text-gray-500 mb-4">{t(loc, "site_description")}</p>
+                <p className="text-xs text-white/55 mb-4 leading-relaxed">{t(loc, "site_description")}</p>
                 <div className="flex flex-wrap gap-3 text-xs">
-                  <NavLink href={`/${locale}`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "home")}</NavLink>
-                  <NavLink href={`/${locale}/carriers`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "carriers_page")}</NavLink>
-                  <NavLink href={`/${locale}/guide`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "guides")}</NavLink>
-                  <NavLink href={`/${locale}/about`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "about")}</NavLink>
-                  <NavLink href={`/${locale}/blog`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "blog")}</NavLink>
-                  <NavLink href={`/${locale}/platforms`} className="text-gray-500 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "platforms")}</NavLink>
-                  <Link href={`/${locale}/customs/united-states`} className="text-gray-500 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
+                  <NavLink href={`/${locale}`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "home")}</NavLink>
+                  <NavLink href={`/${locale}/carriers`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "carriers_page")}</NavLink>
+                  <NavLink href={`/${locale}/guide`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "guides")}</NavLink>
+                  <NavLink href={`/${locale}/about`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "about")}</NavLink>
+                  <NavLink href={`/${locale}/blog`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "blog")}</NavLink>
+                  <NavLink href={`/${locale}/platforms`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "platforms")}</NavLink>
+                  <Link href={`/${locale}/customs/united-states`} className="text-white/55 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold text-sm mb-3">
+                <h4 className="text-white font-bold text-sm mb-3">
                   {t(loc, "popular_destinations")}
                 </h4>
-                <div className="grid grid-cols-1 gap-1 text-xs">
+                <div className="grid grid-cols-1 gap-1.5 text-xs">
                   {["US", "GB", "DE", "CN", "JP", "AU", "CA", "FR"].map((code) => {
                     const country = getCountryByCode(code);
                     if (!country) return null;
@@ -272,7 +265,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <NavLink
                         key={code}
                         href={`/${locale}/shipping/to/${country.slug_en}`}
-                        className="text-gray-500 hover:text-white transition-colors"
+                        className="text-white/55 hover:text-white transition-colors"
                         activeClassName="text-white"
                       >
                         {t(loc, "ship_to", {
@@ -284,10 +277,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold text-sm mb-3">
+                <h4 className="text-white font-bold text-sm mb-3">
                   {t(loc, "popular_origins")}
                 </h4>
-                <div className="grid grid-cols-1 gap-1 text-xs">
+                <div className="grid grid-cols-1 gap-1.5 text-xs">
                   {["US", "CN", "GB", "DE", "JP", "KR", "IN", "RU"].map((code) => {
                     const country = getCountryByCode(code);
                     if (!country) return null;
@@ -295,7 +288,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <NavLink
                         key={code}
                         href={`/${locale}/shipping/from/${country.slug_en}`}
-                        className="text-gray-500 hover:text-white transition-colors"
+                        className="text-white/55 hover:text-white transition-colors"
                         activeClassName="text-white"
                       >
                         {t(loc, "ship_from", {
@@ -307,35 +300,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
               <div>
-                <h4 className="text-white font-semibold text-sm mb-3">
+                <h4 className="text-white font-bold text-sm mb-3">
                   {t(loc, "information")}
                 </h4>
-                <p className="text-xs text-gray-600 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
+                <p className="text-xs text-white/40 leading-relaxed mb-4">{t(loc, "disclaimer")}</p>
                 <div className="flex flex-wrap gap-3 text-xs">
-                  <Link href={`/${locale}/terms`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/terms`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "terms_link")}
                   </Link>
-                  <Link href={`/${locale}/privacy`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/privacy`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "privacy_link")}
                   </Link>
-                  <Link href={`/${locale}/data-methodology`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/data-methodology`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "methodology_link")}
                   </Link>
-                  <Link href={`/${locale}/sources`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/sources`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "sources_link")}
                   </Link>
-                  <Link href={`/${locale}/team`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/team`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "team_link")}
                   </Link>
-                  <Link href={`/${locale}/updates`} className="text-gray-500 hover:text-white transition-colors">
+                  <Link href={`/${locale}/updates`} className="text-white/55 hover:text-white transition-colors">
                     {t(loc, "updates_link")}
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="mt-8 pt-6 text-xs text-center text-gray-600">
-              &copy; {new Date().getFullYear()} {t(loc, "site_name")}.{" "}
-              {t(loc, "all_rights")}
+            <div className="mt-10 pt-6 border-t border-white/10 text-xs text-center text-white/40">
+              &copy; {new Date().getFullYear()} Global Supply KFT · 134 carriers · 213 countries · Updated weekly
             </div>
           </div>
         </footer>
