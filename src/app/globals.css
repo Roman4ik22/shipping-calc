@@ -10,25 +10,64 @@
   textarea:focus-visible,
   summary:focus-visible,
   details:focus-visible > summary {
-    outline: 2px solid #2997ff;
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-feature-settings: "cv11","ss01","ss03";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --color-dark-900: #0a0a0a;
-  --color-dark-800: #111111;
-  --color-dark-700: #1a1a1a;
-  --color-dark-600: #222222;
-  --color-dark-500: #333333;
-  --color-dark-400: #444444;
-  --color-accent: #0071e3;
-  --color-accent-light: #2997ff;
-  --color-accent-dark: #0059b3;
-  --color-surface: #111111;
-  --color-surface-light: #1a1a1a;
-  --color-card: #161616;
-  --color-card-hover: #1c1c1c;
+
+  /* v2 warm ivory palette */
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #EFEAE2;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F8F5EF;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #FAF7F2;
+
+  --color-ink: #0F172A;
+  --color-ink-2: #1E293B;
+  --color-body: #3F4A5C;
+  --color-muted: #6B7280;
+  --color-line: #E6E1DA;
+  --color-line-2: #EFEAE2;
+
+  --color-accent: #1A73E8;
+  --color-accent-light: #2F88FF;
+  --color-accent-dark: #1558B8;
+  --color-accent-50: #E8F0FE;
+  --color-accent-100: #D2E3FC;
+
+  --color-warm: #F2C94C;
+  --color-warm-50: #FDF6DF;
+  --color-red: #E85C3A;
+  --color-red-50: #FDECE6;
+  --color-good: #118A54;
+  --color-good-50: #E4F4ED;
+
+  /* Legacy dark tokens mapped to warm equivalents for backward compat */
+  --color-dark-900: #FAF7F2;
+  --color-dark-800: #FFFFFF;
+  --color-dark-700: #F8F5EF;
+  --color-dark-600: #EFEAE2;
+  --color-dark-500: #E6E1DA;
+  --color-dark-400: #D4CFC6;
 }
+
+/* Utility classes for v2 design */
+.tnum { font-variant-numeric: tabular-nums; }
+
+@keyframes float-a { 0%,100%{transform:rotate(-8deg) translateY(0)} 50%{transform:rotate(-8deg) translateY(-12px)} }
+@keyframes float-b { 0%,100%{transform:rotate(12deg) translateY(0)} 50%{transform:rotate(12deg) translateY(-8px)} }
+.hero-shape-a { animation: float-a 6s ease-in-out infinite; }
+.hero-shape-b { animation: float-b 5s ease-in-out infinite 1s; }
