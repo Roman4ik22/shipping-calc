@@ -27,44 +27,6 @@ export async function generateMetadata({
   };
 }
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  const loc = locale as Locale;
-
-  return (
-    <div>
-      <AboutV2 />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            name: t(loc, "about_title"),
-            description: t(loc, "about_desc"),
-            mainEntity: {
-              "@type": "Organization",
-              name: "RateShips",
-              legalName: "Global Supply KFT",
-              url: "https://rateships.com",
-              foundingDate: "2026",
-              email: "info@rateships.com",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Toldi utca 4",
-                addressLocality: "Kutasó",
-                postalCode: "3066",
-                addressCountry: "HU",
-              },
-              vatID: "HU26179030",
-            },
-          }),
-        }}
-      />
-    </div>
-  );
+export default async function Page() {
+  return <AboutV2 />;
 }
