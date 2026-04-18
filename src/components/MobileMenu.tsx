@@ -53,11 +53,11 @@ export default function MobileMenu({
         </svg>
       </button>
       {open && (
-        <div className="absolute top-16 left-0 right-0 bg-dark-800 border-b border-line shadow-lg z-50">
+        <div className="absolute top-16 left-0 right-0 bg-card border-b border-line shadow-lg z-50">
           <nav className="flex flex-col p-4 gap-3">
             <NavLink
               href={`/${locale}`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
@@ -65,7 +65,7 @@ export default function MobileMenu({
             </NavLink>
             <NavLink
               href={`/${locale}/carriers`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
@@ -73,7 +73,7 @@ export default function MobileMenu({
             </NavLink>
             <NavLink
               href={`/${locale}/guide`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
@@ -81,7 +81,7 @@ export default function MobileMenu({
             </NavLink>
             <NavLink
               href={`/${locale}/about`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
@@ -89,7 +89,7 @@ export default function MobileMenu({
             </NavLink>
             <NavLink
               href={`/${locale}/blog`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >
@@ -97,7 +97,7 @@ export default function MobileMenu({
             </NavLink>
             <NavLink
               href={`/${locale}/platforms`}
-              className="text-body hover:text-accent-light py-2 transition-colors"
+              className="text-body hover:text-accent py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
             >

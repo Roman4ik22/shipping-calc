@@ -50,7 +50,7 @@ export default async function BlogPage({
   );
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-bg">
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -110,7 +110,7 @@ export default async function BlogPage({
               >
                 <div className="flex items-center gap-3 mb-3">
                   <time
-                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent-light" : "text-xs text-muted"}`}
+                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent" : "text-xs text-muted"}`}
                     dateTime={post.date}
                   >
                     {new Date(post.date).toLocaleDateString(
@@ -129,7 +129,7 @@ export default async function BlogPage({
                     </span>
                   ))}
                 </div>
-                <h2 className={`font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors ${
+                <h2 className={`font-semibold text-ink mb-2 group-hover:text-accent transition-colors ${
                   index === 0 ? "text-xl" : "text-lg"
                 }`}>
                   {loc === "ru" ? post.title_ru : post.title_en}
@@ -138,7 +138,7 @@ export default async function BlogPage({
                   {loc === "ru" ? post.excerpt_ru : post.excerpt_en}
                 </p>
                 <div className="flex items-center justify-end">
-                  <span className="text-sm text-accent-light group-hover:text-ink transition-colors">
+                  <span className="text-sm text-accent group-hover:text-ink transition-colors">
                     {t(loc, "read_more")} &rarr;
                   </span>
                 </div>

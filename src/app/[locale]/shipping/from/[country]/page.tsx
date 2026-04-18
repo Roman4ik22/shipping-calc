@@ -83,7 +83,7 @@ export default async function FromCountryPage({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -150,7 +150,7 @@ export default async function FromCountryPage({
                     key={dest.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
                     prefetch={false}
-                    className="text-sm text-accent-light hover:text-ink py-1"
+                    className="text-sm text-accent hover:text-ink py-1"
                   >
                     {getCountryName(dest, loc)}
                   </Link>

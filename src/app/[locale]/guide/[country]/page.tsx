@@ -93,11 +93,11 @@ export default async function GuidePage({
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
+        <Link href={`/${locale}/guide`} className="hover:text-accent">
           {t(loc, "guides")}
         </Link>
         <span className="mx-2">/</span>
@@ -177,7 +177,7 @@ export default async function GuidePage({
             </div>
             {getCustomsNotes(customs, loc) && (
               <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
-                <p className="text-sm text-accent-light">
+                <p className="text-sm text-accent">
                   <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
                   {getCustomsNotes(customs, loc)}
                 </p>
@@ -203,7 +203,7 @@ export default async function GuidePage({
               { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
             ].map((item, i) => (
               <div key={i} className="flex gap-3 items-start p-3 bg-bg rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent-light rounded-lg flex items-center justify-center text-xs font-bold">
+                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent rounded-lg flex items-center justify-center text-xs font-bold">
                   {i + 1}
                 </span>
                 <div>
@@ -279,7 +279,7 @@ export default async function GuidePage({
             t(loc, "tip_6"),
           ].map((tip, i) => (
             <div key={i} className="flex gap-3 items-start">
-              <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-accent-light rounded-full flex items-center justify-center text-sm font-medium">
+              <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-accent rounded-full flex items-center justify-center text-sm font-medium">
                 {i + 1}
               </span>
               <p className="text-body text-sm">{tip}</p>
@@ -438,7 +438,7 @@ export default async function GuidePage({
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <details key={i} className="bg-surface border border-line rounded-lg">
-                  <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent-light">
+                  <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent">
                     {faq.q}
                   </summary>
                   <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
@@ -473,7 +473,7 @@ export default async function GuidePage({
         </p>
         <Link
           href={`/${locale}`}
-          className="inline-block px-8 py-3 bg-accent text-ink text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
           {t(loc, "compare_rates_cta")}
         </Link>

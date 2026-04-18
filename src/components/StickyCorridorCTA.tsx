@@ -42,7 +42,7 @@ export default function StickyCorridorCTA({
         <button
           type="button"
           onClick={() => document.getElementById("rates")?.scrollIntoView({ behavior: "smooth" })}
-          className="shrink-0 px-5 py-2.5 bg-accent text-ink text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="shrink-0 px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
           {isRu ? "Сравнить" : "Compare"}
         </button>

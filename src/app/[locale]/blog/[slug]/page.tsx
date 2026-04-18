@@ -268,7 +268,7 @@ export default async function BlogPostPage({
   };
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-bg">
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -382,7 +382,7 @@ export default async function BlogPostPage({
                   href={`/${locale}/blog/${related.id}`}
                   className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
                 >
-                  <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors">
+                  <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent transition-colors">
                     {loc === "ru" ? related.title_ru : related.title_en}
                   </h3>
                   <p className="text-sm text-body line-clamp-2 mb-3">
@@ -427,7 +427,7 @@ export default async function BlogPostPage({
                       href={`/${locale}/shipping/${makeCorridorSlug(originCountry, destCountry, loc)}`}
                       className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
                     >
-                      <p className="text-base font-semibold text-ink group-hover:text-accent-light transition-colors">
+                      <p className="text-base font-semibold text-ink group-hover:text-accent transition-colors">
                         {oName} → {dName}
                       </p>
                       <p className="text-sm text-body mt-1">

@@ -41,7 +41,7 @@ export default async function TeamPage({
       description: t(loc, "team_rate_analysts_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent-light"
+          className="w-8 h-8 text-accent"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -60,7 +60,7 @@ export default async function TeamPage({
       description: t(loc, "team_customs_specialists_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent-light"
+          className="w-8 h-8 text-accent"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -79,7 +79,7 @@ export default async function TeamPage({
       description: t(loc, "team_engineering_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent-light"
+          className="w-8 h-8 text-accent"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -98,7 +98,7 @@ export default async function TeamPage({
       description: t(loc, "team_content_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent-light"
+          className="w-8 h-8 text-accent"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -168,7 +168,7 @@ export default async function TeamPage({
       />
 
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -223,7 +223,7 @@ export default async function TeamPage({
               { step: "4", title: t(loc, "team_step_publish"), desc: t(loc, "team_step_publish_desc") },
             ].map((item) => (
               <div key={item.step} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">
                   {item.step}
                 </div>
                 <div>
@@ -248,7 +248,7 @@ export default async function TeamPage({
               {t(loc, "team_commitment_contact_pre")}
               <Link
                 href={`/${locale}/about`}
-                className="text-accent-light hover:underline"
+                className="text-accent hover:underline"
               >
                 {t(loc, "team_commitment_contact_link")}
               </Link>

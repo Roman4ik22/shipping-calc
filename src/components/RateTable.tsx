@@ -215,7 +215,7 @@ function CurrencySelector({
         </button>
 
         {open && (
-          <div className="absolute left-0 mt-1 w-64 bg-card rounded-2xl shadow-2xl z-50 overflow-hidden">
+          <div className="absolute left-0 mt-1 w-64 bg-card rounded-2xl shadow-lg z-50 overflow-hidden">
             <div className="p-3">
               <input
                 type="text"
@@ -412,7 +412,7 @@ export default function RateTable({
         <label className="block text-xs text-gray-200 mb-3 uppercase tracking-wide">
           {labels.select_weight}
         </label>
-        <div className="bg-card rounded-2xl p-5">
+        <div className="bg-card rounded-2xl border border-line p-5">
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {weightPresets.map((w) => (
@@ -423,7 +423,7 @@ export default function RateTable({
                 aria-pressed={selectedPreset === w && !customWeight}
                 className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
-                    ? "bg-accent text-ink font-medium"
+                    ? "bg-accent text-white font-medium"
                     : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
                 }`}
               >
@@ -541,7 +541,7 @@ export default function RateTable({
         currencyAutoDetected={currencyAutoDetected}
       />
       {/* Sort & filter controls */}
-      <div className="bg-card rounded-2xl p-4 mb-6">
+      <div className="bg-card rounded-2xl border border-line p-4 mb-6">
         <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2" role="group" aria-label={labels.sort}>
           <span className="text-sm text-body mr-1">{labels.sort}:</span>
@@ -550,7 +550,7 @@ export default function RateTable({
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "price" ? "bg-accent text-ink" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
+              sortBy === "price" ? "bg-accent text-white" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
             }`}
           >
             {labels.price}
@@ -560,7 +560,7 @@ export default function RateTable({
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "speed" ? "bg-accent text-ink" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
+              sortBy === "speed" ? "bg-accent text-white" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
             }`}
           >
             {labels.delivery_time}
@@ -569,7 +569,7 @@ export default function RateTable({
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-ink" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
             }`}
           >
             {labels.route_reliability || "Route"}
@@ -584,7 +584,7 @@ export default function RateTable({
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-                filterType === opt.value ? "bg-accent text-ink" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
+                filterType === opt.value ? "bg-accent text-white" : "bg-card-hover text-body hover:bg-card-hover hover:text-body"
               }`}
             >
               {opt.label}
@@ -749,7 +749,7 @@ export default function RateTable({
                     href={rate.carrier_website}
                     target="_blank"
                     rel="noopener noreferrer nofollow sponsored"
-                    className="px-6 py-2.5 bg-accent text-ink text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+                    className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
                   >
                     {labels.ship_now || "Ship Now"}
                   </a>

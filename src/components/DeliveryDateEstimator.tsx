@@ -108,7 +108,7 @@ export default function DeliveryDateEstimator({
             type="date"
             value={toInputValue(shipDate)}
             onChange={handleDateChange}
-            className="px-3 py-1.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30 text-sm [color-scheme:dark]"
+            className="px-3 py-1.5 bg-card-hover border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30 text-sm [color-scheme:dark]"
           />
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function DeliveryDateEstimator({
       {/* Estimated arrival */}
       <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
         <p className="text-sm text-body mb-1">{labels.estimated_arrival}</p>
-        <p className="text-lg font-semibold text-accent-light">
+        <p className="text-lg font-semibold text-accent">
           {formatRange(arrivalMin, arrivalMax, locale)}
         </p>
         <p className="text-xs text-body mt-2">

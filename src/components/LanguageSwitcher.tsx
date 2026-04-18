@@ -91,7 +91,7 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-3 w-48 bg-[#141414] rounded-xl shadow-2xl overflow-hidden z-50">
+        <div className="absolute right-0 mt-3 w-48 bg-[#141414] rounded-xl shadow-lg overflow-hidden z-50">
           <div className="py-1">
             {availableLocales.map((loc) => {
               const config = localeConfig[loc];

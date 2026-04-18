@@ -214,7 +214,7 @@ export default async function UpdatesPage({
 
       {/* Breadcrumb */}
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -234,7 +234,7 @@ export default async function UpdatesPage({
         {updates.map((entry, i) => (
           <article
             key={i}
-            className="bg-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4"
+            className="bg-card rounded-2xl border border-line p-5 sm:p-6 flex flex-col sm:flex-row gap-4"
           >
             {/* Date */}
             <div className="sm:w-32 shrink-0">

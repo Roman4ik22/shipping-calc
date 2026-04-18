@@ -43,11 +43,11 @@ export default function NewsletterForm({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={labels.placeholder}
-        className="flex-1 px-4 py-3 rounded-lg bg-dark-700 border border-white/20 text-gray-100 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+        className="flex-1 px-4 py-3 rounded-lg bg-card-hover border border-white/20 text-gray-100 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-accent text-ink font-semibold rounded-lg text-sm hover:bg-accent-dark transition-colors"
+        className="px-6 py-3 bg-accent text-white font-semibold rounded-lg text-sm hover:bg-accent-dark transition-colors"
       >
         {labels.subscribe}
       </button>

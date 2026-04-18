@@ -181,13 +181,13 @@ export default async function CorridorPage({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs: Shipping Rates → to {dest} → from {origin} */}
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "shipping_rates")}
         </Link>
         <span className="mx-2">/</span>
         <Link
           href={`/${locale}/shipping/to/${destination.slug_en}`}
-          className="hover:text-accent-light"
+          className="hover:text-accent"
         >
           {t(loc, "ship_to", { country: destName })}
         </Link>
@@ -290,7 +290,7 @@ export default async function CorridorPage({
               {t(loc, "shipping_cost_examples")}
             </h2>
             {/* Featured item + compact row — not 4 identical cards */}
-            <div className="bg-card rounded-2xl p-5 mb-3">
+            <div className="bg-card rounded-2xl border border-line p-5 mb-3">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-body">{t(loc, "example_phone")} <span className="text-muted">(0.5 kg)</span></p>
@@ -648,7 +648,7 @@ export default async function CorridorPage({
                 )}
                 <Link
                   href={`/${locale}/customs/${destination.slug_en}`}
-                  className="inline-block mt-4 text-sm text-accent-light hover:underline"
+                  className="inline-block mt-4 text-sm text-accent hover:underline"
                 >
                   {t(loc, "corridor_full_customs_guide", { dest: destName })} &rarr;
                 </Link>
@@ -782,7 +782,7 @@ export default async function CorridorPage({
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
-                      className="flex items-center gap-2 text-sm text-accent-light hover:text-ink transition-colors py-2"
+                      className="flex items-center gap-2 text-sm text-accent hover:text-ink transition-colors py-2"
                     >
                       <span className="text-muted">&#8599;</span>
                       {link.name}
@@ -805,13 +805,13 @@ export default async function CorridorPage({
         const tips = locale === "ru" ? corridorContent.tips_ru : corridorContent.tips_en;
         return (
           <section className="mt-8 space-y-6">
-            <div className="bg-card rounded-2xl p-6">
+            <div className="bg-card rounded-2xl border border-line p-6">
               <h2 className="text-lg font-bold text-ink mb-3">
                 {t(loc, "corridor_trade_info")}
               </h2>
               <p className="text-sm text-body leading-relaxed">{tradeInfo}</p>
             </div>
-            <div className="bg-card rounded-2xl p-6">
+            <div className="bg-card rounded-2xl border border-line p-6">
               <h2 className="text-lg font-bold text-ink mb-3">
                 {t(loc, "corridor_shipping_tips")}
               </h2>
@@ -826,13 +826,13 @@ export default async function CorridorPage({
                   {corridorContent.reviews.map((review, i) => (
                     <div
                       key={i}
-                      className="bg-card rounded-2xl p-5"
+                      className="bg-card rounded-2xl border border-line p-5"
                     >
                       <p className="text-sm text-body italic leading-relaxed mb-3">
                         &ldquo;{locale === "ru" ? review.text_ru : review.text_en}&rdquo;
                       </p>
                       <div className="flex items-center justify-between text-xs text-muted">
-                        <span className="font-medium text-accent-light">{review.carrier}</span>
+                        <span className="font-medium text-accent">{review.carrier}</span>
                         <span>
                           {review.days} {t(loc, "corridor_days")}
                         </span>
@@ -852,7 +852,7 @@ export default async function CorridorPage({
         const cheapestPrice = cheapestRate.rates.find((r) => r.weight_kg === 1)?.price_usd ?? 0;
         const fastestCarrier = [...corridorData.carriers].sort((a, b) => a.estimated_days_min - b.estimated_days_min)[0];
         return (
-          <section className="mt-8 bg-card rounded-2xl p-8">
+          <section className="mt-8 bg-card rounded-2xl border border-line p-8">
             <h2 className="text-lg font-bold text-ink mb-3">
               {t(loc, "shipping_from_to", { origin: originName, destination: destName })}: {t(loc, "overview")}
             </h2>
@@ -930,7 +930,7 @@ export default async function CorridorPage({
                 <Link
                   key={carrierId}
                   href={`/${locale}/carriers/${carrierId}`}
-                  className="text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 hover:text-accent-light transition-colors"
+                  className="text-sm bg-card hover:bg-card-hover rounded-full px-4 py-2 hover:text-accent transition-colors"
                 >
                   {carrier.name}
                 </Link>
@@ -1041,7 +1041,7 @@ export default async function CorridorPage({
             <h2 className="text-xl font-bold text-ink mb-4">
               {t(loc, "customs_for", { country: destName })}
             </h2>
-            <div className="bg-card rounded-2xl p-6">
+            <div className="bg-card rounded-2xl border border-line p-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div>
                   <p className="text-sm text-body">{t(loc, "de_minimis")}</p>
@@ -1126,7 +1126,7 @@ export default async function CorridorPage({
             <div className="space-y-4">
               {faqs.map((faq, i) => (
                 <details key={i} className="bg-surface border border-line rounded-lg">
-                  <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent-light">
+                  <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent">
                     {faq.q}
                   </summary>
                   <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
@@ -1182,7 +1182,7 @@ export default async function CorridorPage({
       <section className="mt-6">
         <Link
           href={`/${locale}/shipping/${makeCorridorSlug(destination, origin, loc)}`}
-          className="text-accent-light hover:text-ink text-sm"
+          className="text-accent hover:text-ink text-sm"
         >
           {t(loc, "shipping_from_to", {
             origin: destName,
@@ -1202,7 +1202,7 @@ export default async function CorridorPage({
         </p>
         <Link
           href={`/${locale}`}
-          className="inline-block px-8 py-3 bg-accent text-ink text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
           {t(loc, "find_route")}
         </Link>

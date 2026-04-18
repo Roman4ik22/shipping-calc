@@ -15,7 +15,7 @@ export default function NotFound() {
       <div className="flex flex-wrap justify-center gap-4">
         <Link
           href="/en"
-          className="px-8 py-3 bg-accent text-ink font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="px-8 py-3 bg-accent text-white font-medium rounded-full hover:bg-accent-dark transition-colors"
         >
           Go to homepage
         </Link>

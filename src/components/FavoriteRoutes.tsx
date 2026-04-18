@@ -79,7 +79,7 @@ export default function FavoriteRoutes({ locale }: { locale: string }) {
         >
           <a
             href={`/${fav.locale}/shipping/${fav.corridorSlug}`}
-            className="flex-1 text-gray-100 hover:text-accent-light transition-colors"
+            className="flex-1 text-gray-100 hover:text-accent transition-colors"
           >
             <span className="font-medium">{fav.originName}</span>
             <span className="text-muted mx-2">&rarr;</span>

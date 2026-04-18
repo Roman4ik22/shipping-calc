@@ -164,7 +164,7 @@ export default async function SourcesPage({
       />
 
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -218,7 +218,7 @@ export default async function SourcesPage({
                         href={c.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
+                        className="text-accent hover:underline break-all text-xs"
                       >
                         {c.url
                           .replace("https://www.", "")
@@ -296,7 +296,7 @@ export default async function SourcesPage({
                         href={c.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
+                        className="text-accent hover:underline break-all text-xs"
                       >
                         {c.url
                           .replace("https://www.", "")
@@ -329,7 +329,7 @@ export default async function SourcesPage({
                   href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
+                  className="text-accent hover:underline text-sm"
                 >
                   ecb.europa.eu/stats/exchange/eurofxref
                 </a>
@@ -365,7 +365,7 @@ export default async function SourcesPage({
                   href="https://www.trustpilot.com"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
+                  className="text-accent hover:underline text-sm"
                 >
                   trustpilot.com
                 </a>
@@ -383,7 +383,7 @@ export default async function SourcesPage({
             {t(loc, "sources_methodology_pre")}
             <Link
               href={`/${locale}/data-methodology`}
-              className="text-accent-light hover:underline"
+              className="text-accent hover:underline"
             >
               {t(loc, "sources_methodology_link")}
             </Link>

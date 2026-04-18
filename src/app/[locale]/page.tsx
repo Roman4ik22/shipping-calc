@@ -51,7 +51,7 @@ export default async function HomePage({
   return (
     <div>
       {/* Hero */}
-      <section className="bg-dark-900 py-24 sm:py-32 relative">
+      <section className="bg-bg py-20 sm:py-28 relative">
         <div className="absolute inset-0 overflow-hidden">
           <img src="/img/routes-map.svg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         </div>
@@ -74,7 +74,7 @@ export default async function HomePage({
             {t(loc, "open_carrier_data")}
           </p>
 
-          <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl p-8 pb-20 overflow-visible relative shadow-2xl">
+          <div className="max-w-4xl mx-auto mt-14 bg-card rounded-3xl border border-line p-8 pb-20 overflow-visible relative shadow-lg border border-line">
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
@@ -326,21 +326,21 @@ export default async function HomePage({
           </h2>
           <div className="space-y-6">
             <div className="flex gap-5 items-start">
-              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">1</span>
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center font-bold text-sm">1</span>
               <div>
                 <h3 className="font-semibold text-ink">{t(loc, "choose_route")}</h3>
                 <p className="text-sm text-muted mt-1">{t(loc, "choose_route_desc")}</p>
               </div>
             </div>
             <div className="flex gap-5 items-start">
-              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">2</span>
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center font-bold text-sm">2</span>
               <div>
                 <h3 className="font-semibold text-ink">{t(loc, "compare_rates")}</h3>
                 <p className="text-sm text-muted mt-1">{t(loc, "compare_rates_desc")}</p>
               </div>
             </div>
             <div className="flex gap-5 items-start">
-              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">3</span>
+              <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center font-bold text-sm">3</span>
               <div>
                 <h3 className="font-semibold text-ink">{t(loc, "ship_package")}</h3>
                 <p className="text-sm text-muted mt-1">{t(loc, "ship_package_desc")}</p>

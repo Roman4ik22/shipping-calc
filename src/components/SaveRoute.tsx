@@ -70,7 +70,7 @@ export default function SaveRoute({ corridorSlug, originName, destName, locale }
   return (
     <button
       onClick={toggle}
-      className="flex items-center gap-1.5 px-3 py-1.5 text-sm bg-dark-700 border border-line rounded-lg hover:bg-dark-600 transition-colors"
+      className="flex items-center gap-1.5 px-3 py-1.5 text-sm bg-card-hover border border-line rounded-lg hover:bg-bg-alt transition-colors"
       aria-label={saved ? "Remove from favorites" : "Save to favorites"}
       aria-pressed={saved}
       title={

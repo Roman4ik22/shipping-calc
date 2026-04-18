@@ -23,7 +23,7 @@ export default function TableOfContents({
   ];
 
   return (
-    <nav className="mb-8 bg-card rounded-2xl p-5" aria-label="Table of contents">
+    <nav className="mb-8 bg-card rounded-2xl border border-line p-5" aria-label="Table of contents">
       <p className="text-xs text-muted uppercase tracking-wider mb-3">
         {isRu ? "На этой странице" : "On this page"}
       </p>

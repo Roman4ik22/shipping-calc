@@ -83,7 +83,7 @@ export default async function ToolsIndexPage({
       />
 
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -104,7 +104,7 @@ export default async function ToolsIndexPage({
             href={tool.href}
             className="group block bg-surface border border-line rounded-xl p-6 hover:border-accent/40 transition-colors"
           >
-            <h2 className="text-xl font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors">
+            <h2 className="text-xl font-semibold text-ink mb-2 group-hover:text-accent transition-colors">
               {tool.title}
             </h2>
             <p className="text-sm text-body">{tool.description}</p>

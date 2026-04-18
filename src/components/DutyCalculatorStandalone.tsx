@@ -72,7 +72,7 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
         <select
           value={selectedCountry}
           onChange={(e) => setSelectedCountry(e.target.value)}
-          className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+          className="w-full sm:w-80 px-4 py-2.5 bg-card-hover border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
         >
           {sortedCountries.map((c) => (
             <option key={c.code} value={c.code}>

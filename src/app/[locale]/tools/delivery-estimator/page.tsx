@@ -83,11 +83,11 @@ export default async function DeliveryEstimatorPage({
       />
 
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/${locale}/tools`} className="hover:text-accent-light">
+        <Link href={`/${locale}/tools`} className="hover:text-accent">
           {t(loc, "tools_label")}
         </Link>
         <span className="mx-2">/</span>

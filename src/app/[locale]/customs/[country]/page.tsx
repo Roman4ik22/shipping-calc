@@ -174,11 +174,11 @@ export default async function CustomsCountryPage({
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
+        <Link href={`/${locale}/guide`} className="hover:text-accent">
           {t(loc, "guides")}
         </Link>
         <span className="mx-2">/</span>
@@ -267,7 +267,7 @@ export default async function CustomsCountryPage({
           </div>
           {getCustomsNotes(customs, loc) && (
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
-              <p className="text-sm text-accent-light">
+              <p className="text-sm text-accent">
                 <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
                 {getCustomsNotes(customs, loc)}
               </p>
@@ -298,7 +298,7 @@ export default async function CustomsCountryPage({
                       <td className="py-3 pr-4 text-ink font-medium">
                         {loc === "ru" ? rate.category_ru : rate.category_en}
                       </td>
-                      <td className="py-3 pr-4 text-accent-light font-semibold">{rate.rate}</td>
+                      <td className="py-3 pr-4 text-accent font-semibold">{rate.rate}</td>
                       <td className="py-3 text-body">{rate.hs_chapter}</td>
                     </tr>
                   ))}
@@ -399,7 +399,7 @@ export default async function CustomsCountryPage({
               { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
             ].map((item, i) => (
               <div key={i} className="flex gap-3 items-start p-3 bg-bg rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent-light rounded-lg flex items-center justify-center text-xs font-bold">
+                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent rounded-lg flex items-center justify-center text-xs font-bold">
                   {i + 1}
                 </span>
                 <div>
@@ -441,7 +441,7 @@ export default async function CustomsCountryPage({
                 href={deep.certificate_of_origin_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-sm text-accent-light hover:underline"
+                className="inline-block mt-3 text-sm text-accent hover:underline"
               >
                 {t(loc, "customs_learn_more")} &rarr;
               </a>
@@ -625,7 +625,7 @@ export default async function CustomsCountryPage({
         <div className="space-y-3">
           {faqs.map((faq, i) => (
             <details key={i} className="bg-surface border border-line rounded-lg">
-              <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent-light">
+              <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent">
                 {faq.q}
               </summary>
               <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>

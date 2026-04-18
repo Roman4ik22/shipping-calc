@@ -38,7 +38,7 @@ export default async function AboutPage({
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -156,21 +156,21 @@ export default async function AboutPage({
           </h2>
           <div className="space-y-4">
             <div className="flex items-start gap-4">
-              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">RK</div>
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-bold text-sm">RK</div>
               <div>
                 <p className="text-ink font-medium">Roman Kolosovskiy</p>
                 <p className="text-sm text-muted">{loc === "ru" ? "Руководитель технического отдела, разработка" : "Head of Engineering & Development"}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">DK</div>
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-bold text-sm">DK</div>
               <div>
                 <p className="text-ink font-medium">Dmytro Kolosovskiy</p>
                 <p className="text-sm text-muted">{loc === "ru" ? "Менеджер проекта" : "Project Manager"}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent-light font-bold text-sm">ZY</div>
+              <div className="shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-bold text-sm">ZY</div>
               <div>
                 <p className="text-ink font-medium">Zhenya Yakovenko</p>
                 <p className="text-sm text-muted">{loc === "ru" ? "Маркетолог" : "Marketing Lead"}</p>

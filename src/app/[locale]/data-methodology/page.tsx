@@ -124,7 +124,7 @@ export default async function DataMethodologyPage({
       />
 
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
@@ -174,7 +174,7 @@ export default async function DataMethodologyPage({
                         href={c.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
+                        className="text-accent hover:underline break-all text-xs"
                       >
                         {c.url.replace("https://www.", "").replace("https://", "")}
                       </a>
@@ -188,7 +188,7 @@ export default async function DataMethodologyPage({
             {t(loc, "data_method_full_list_pre")}
             <Link
               href={`/${locale}/sources`}
-              className="text-accent-light hover:underline"
+              className="text-accent hover:underline"
             >
               {t(loc, "data_method_full_list_link")}
             </Link>
@@ -227,7 +227,7 @@ export default async function DataMethodologyPage({
                 {GRI_2026.map((g) => (
                   <tr key={g.carrier} className="border-t border-line">
                     <td className="p-3 text-ink">{g.carrier}</td>
-                    <td className="p-3 text-accent-light font-medium">
+                    <td className="p-3 text-accent font-medium">
                       +{g.increase}
                     </td>
                     <td className="p-3 text-body">{g.effective}</td>
@@ -338,7 +338,7 @@ export default async function DataMethodologyPage({
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline"
+                        className="text-accent hover:underline"
                       >
                         {s.name}
                       </a>
@@ -359,7 +359,7 @@ export default async function DataMethodologyPage({
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
+              <p className="text-2xl font-bold text-accent">
                 {t(loc, "data_method_weekly")}
               </p>
               <p className="text-xs text-body mt-1">
@@ -367,7 +367,7 @@ export default async function DataMethodologyPage({
               </p>
             </div>
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
+              <p className="text-2xl font-bold text-accent">
                 {t(loc, "data_method_monthly")}
               </p>
               <p className="text-xs text-body mt-1">
@@ -375,7 +375,7 @@ export default async function DataMethodologyPage({
               </p>
             </div>
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
+              <p className="text-2xl font-bold text-accent">
                 {t(loc, "data_method_daily")}
               </p>
               <p className="text-xs text-body mt-1">
@@ -393,7 +393,7 @@ export default async function DataMethodologyPage({
                 key={i}
                 className="flex gap-4 items-start border-l-2 border-accent-light/30 pl-4 py-1"
               >
-                <span className="text-sm text-accent-light font-medium whitespace-nowrap min-w-[100px]">
+                <span className="text-sm text-accent font-medium whitespace-nowrap min-w-[100px]">
                   {u.date}
                 </span>
                 <span className="text-sm text-body">{u.description}</span>
@@ -418,25 +418,25 @@ export default async function DataMethodologyPage({
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">143</p>
+              <p className="text-3xl font-bold text-accent">143</p>
               <p className="text-sm text-body mt-1">
                 {t(loc, "data_method_carriers_label")}
               </p>
             </div>
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">213</p>
+              <p className="text-3xl font-bold text-accent">213</p>
               <p className="text-sm text-body mt-1">
                 {t(loc, "data_method_countries_label")}
               </p>
             </div>
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">80+</p>
+              <p className="text-3xl font-bold text-accent">80+</p>
               <p className="text-sm text-body mt-1">
                 {t(loc, "data_method_verified_count")}
               </p>
             </div>
             <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">40+</p>
+              <p className="text-3xl font-bold text-accent">40+</p>
               <p className="text-sm text-body mt-1">
                 {t(loc, "data_method_customs_count")}
               </p>
@@ -502,7 +502,7 @@ export default async function DataMethodologyPage({
               {t(loc, "data_method_s6_contact_pre")}
               <Link
                 href={`/${locale}/about`}
-                className="text-accent-light hover:underline"
+                className="text-accent hover:underline"
               >
                 {t(loc, "data_method_s6_contact_link")}
               </Link>

@@ -95,7 +95,7 @@ export default function CountrySelector({
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-2 w-full bg-card rounded-2xl shadow-2xl max-h-72 overflow-hidden">
+        <div className="absolute z-50 mt-2 w-full bg-card rounded-2xl shadow-lg max-h-72 overflow-hidden">
           <div className="p-3">
             <input
               type="text"

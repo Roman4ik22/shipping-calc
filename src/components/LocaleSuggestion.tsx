@@ -119,12 +119,12 @@ export default function LocaleSuggestion({
   return (
     <div className="bg-accent/10 border border-accent/30 rounded-lg px-4 py-3 mb-6 flex items-center justify-between flex-wrap gap-2">
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-sm text-accent-light">{viewInLabel}:</span>
+        <span className="text-sm text-accent">{viewInLabel}:</span>
         {display.map((loc) => (
           <button
             key={loc}
             onClick={() => switchTo(loc)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-dark-700 border border-accent/30 rounded-full text-sm font-medium text-accent-light hover:bg-accent/20 hover:border-accent/50 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-card-hover border border-accent/30 rounded-full text-sm font-medium text-accent hover:bg-accent/20 hover:border-accent/50 transition-colors"
           >
             <span>{localeFlags[loc]}</span>
             <span>{localeLabels[loc]}</span>

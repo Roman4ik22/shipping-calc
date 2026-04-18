@@ -114,7 +114,7 @@ export default async function GuidesPage({
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-body hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
+                    className="text-sm text-body hover:text-accent hover:translate-x-1 transition-all duration-150 py-1"
                   >
                     <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
                   </Link>

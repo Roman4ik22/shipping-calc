@@ -74,11 +74,11 @@ export default async function CarrierPage({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
+        <Link href={`/${locale}`} className="hover:text-accent">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/${locale}/carriers`} className="hover:text-accent-light">
+        <Link href={`/${locale}/carriers`} className="hover:text-accent">
           {t(loc, "carriers_page")}
         </Link>
         <span className="mx-2">/</span>
@@ -119,7 +119,7 @@ export default async function CarrierPage({
             rating >= 1.5 ? "text-orange-400" : "text-red-400";
           const barWidth = (rating / 5) * 100;
           return (
-            <div className="mb-6 p-4 bg-dark-700 rounded-lg border border-line">
+            <div className="mb-6 p-4 bg-card-hover rounded-lg border border-line">
               <div className="flex items-center gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-body">Trustpilot</span>
@@ -127,7 +127,7 @@ export default async function CarrierPage({
                   <span className="text-sm text-muted">/ 5.0</span>
                 </div>
                 <div className="flex-1 min-w-[120px] max-w-[200px]">
-                  <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
+                  <div className="h-2 bg-bg-alt rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${rating >= 3.5 ? "bg-green-500" : rating >= 2.5 ? "bg-yellow-500" : rating >= 1.5 ? "bg-orange-500" : "bg-red-500"}`} style={{ width: `${barWidth}%` }} />
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default async function CarrierPage({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-accent-light hover:text-ink transition-colors"
+                  className="text-sm text-accent hover:text-ink transition-colors"
                 >
                   {reviews >= 1000 ? `${(reviews / 1000).toFixed(1)}K` : reviews} reviews →
                 </a>
@@ -149,7 +149,7 @@ export default async function CarrierPage({
             href={carrier.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-accent text-ink rounded-lg text-sm hover:bg-accent-dark transition-colors"
+            className="px-4 py-2 bg-accent text-white rounded-lg text-sm hover:bg-accent-dark transition-colors"
           >
             {t(loc, "official_website")}
           </a>
@@ -229,7 +229,7 @@ export default async function CarrierPage({
           <Link
             key={c.code}
             href={`/${locale}/guide/${c.slug_en}`}
-            className="text-sm text-accent-light hover:text-ink py-1"
+            className="text-sm text-accent hover:text-ink py-1"
           >
             {countryFlag(c.code)} {getCountryName(c, loc)}
           </Link>
@@ -285,7 +285,7 @@ export default async function CarrierPage({
       {/* Back to carriers */}
       <Link
         href={`/${locale}/carriers`}
-        className="text-accent-light hover:text-ink text-sm"
+        className="text-accent hover:text-ink text-sm"
       >
         ← {t(loc, "all_carriers")}
       </Link>
