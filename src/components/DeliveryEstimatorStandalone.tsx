@@ -78,13 +78,13 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
       {/* Country selectors */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         <div>
-          <label className="block text-sm text-body mb-2">
+          <label className="block text-sm text-gray-400 mb-2">
             {isRu ? "Страна отправления" : "Origin country"}
           </label>
           <select
             value={originCode}
             onChange={(e) => setOriginCode(e.target.value)}
-            className="w-full px-4 py-2.5 bg-card-hover border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+            className="w-full px-4 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
           >
             {sortedCountries.map((c) => (
               <option key={c.code} value={c.code}>
@@ -94,13 +94,13 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
           </select>
         </div>
         <div>
-          <label className="block text-sm text-body mb-2">
+          <label className="block text-sm text-gray-400 mb-2">
             {isRu ? "Страна назначения" : "Destination country"}
           </label>
           <select
             value={destCode}
             onChange={(e) => setDestCode(e.target.value)}
-            className="w-full px-4 py-2.5 bg-card-hover border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+            className="w-full px-4 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
           >
             {sortedCountries.map((c) => (
               <option key={c.code} value={c.code}>
@@ -112,11 +112,11 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
       </div>
 
       {/* Delivery time summary */}
-      <div className="mb-10 bg-surface border border-line rounded-xl p-6">
-        <h2 className="text-xl font-semibold text-ink mb-4">
+      <div className="mb-10 bg-surface border border-white/10 rounded-xl p-6">
+        <h2 className="text-xl font-semibold text-white mb-4">
           {isRu ? "Ориентировочные сроки" : "Estimated Delivery Times"}
           {originName && destName && (
-            <span className="text-body font-normal text-base ml-2">
+            <span className="text-gray-400 font-normal text-base ml-2">
               {isRu ? originName.name_ru : originName.name_en} → {isRu ? destName.name_ru : destName.name_en}
             </span>
           )}
@@ -127,12 +127,12 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
             const profile = serviceProfiles[service];
             return (
               <div key={service} className="bg-accent/5 border border-accent/20 rounded-lg p-4">
-                <p className="text-xs text-muted uppercase tracking-wider mb-1">
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
                   {isRu ? profile.label_ru : profile.label_en}
                 </p>
-                <p className="text-2xl font-light text-ink">
+                <p className="text-2xl font-light text-white">
                   {est.min}–{est.max}
-                  <span className="text-sm text-body ml-1">{isRu ? "дней" : "days"}</span>
+                  <span className="text-sm text-gray-400 ml-1">{isRu ? "дней" : "days"}</span>
                 </p>
               </div>
             );
@@ -142,7 +142,7 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
 
       {/* Detailed date estimator */}
       <div className="mb-10">
-        <h2 className="text-xl font-semibold text-ink mb-4">
+        <h2 className="text-xl font-semibold text-white mb-4">
           {isRu ? "Рассчитать дату доставки" : "Calculate Delivery Date"}
         </h2>
         <div className="space-y-6">
@@ -151,7 +151,7 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
             const profile = serviceProfiles[service];
             return (
               <div key={service}>
-                <p className="text-sm text-body mb-2 font-medium">
+                <p className="text-sm text-gray-400 mb-2 font-medium">
                   {isRu ? profile.label_ru : profile.label_en}
                 </p>
                 <DeliveryDateEstimator
@@ -166,7 +166,7 @@ export default function DeliveryEstimatorStandalone({ locale }: Props) {
         </div>
       </div>
 
-      <p className="text-xs text-muted">
+      <p className="text-xs text-gray-500">
         {isRu
           ? "* Сроки являются ориентировочными и могут меняться в зависимости от перевозчика, таможенного оформления и праздников"
           : "* Times are estimates and may vary depending on carrier, customs clearance, and holidays"}

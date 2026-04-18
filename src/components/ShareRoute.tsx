@@ -66,7 +66,7 @@ export default function ShareRoute({ originName, destName, locale }: ShareRouteP
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-body bg-card-hover border border-line rounded-lg hover:bg-bg-alt transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-300 bg-dark-700 border border-white/10 rounded-lg hover:bg-dark-600 transition-colors"
         aria-label="Share route"
         aria-expanded={open}
       >
@@ -91,10 +91,10 @@ export default function ShareRoute({ originName, destName, locale }: ShareRouteP
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-48 bg-card-hover border border-line rounded-lg shadow-xl z-50 overflow-hidden">
+        <div className="absolute right-0 top-full mt-1 w-48 bg-dark-700 border border-white/10 rounded-lg shadow-xl z-50 overflow-hidden">
           <button
             onClick={handleCopyLink}
-            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-body hover:bg-bg-alt transition-colors text-left"
+            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-gray-300 hover:bg-dark-600 transition-colors text-left"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ export default function ShareRoute({ originName, destName, locale }: ShareRouteP
 
           <button
             onClick={handleWhatsApp}
-            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-body hover:bg-bg-alt transition-colors text-left"
+            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-gray-300 hover:bg-dark-600 transition-colors text-left"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ export default function ShareRoute({ originName, destName, locale }: ShareRouteP
 
           <button
             onClick={handleTelegram}
-            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-body hover:bg-bg-alt transition-colors text-left"
+            className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-gray-300 hover:bg-dark-600 transition-colors text-left"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

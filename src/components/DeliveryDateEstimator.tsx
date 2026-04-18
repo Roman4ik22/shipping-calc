@@ -92,12 +92,12 @@ export default function DeliveryDateEstimator({
   }
 
   return (
-    <div className="bg-surface border border-line rounded-xl p-6">
-      <h3 className="text-lg font-bold text-ink mb-4">{labels.title}</h3>
+    <div className="bg-surface border border-white/10 rounded-xl p-6">
+      <h3 className="text-lg font-bold text-white mb-4">{labels.title}</h3>
 
       {/* Ship date picker */}
       <div className="mb-4">
-        <label className="block text-sm text-body mb-1">
+        <label className="block text-sm text-gray-400 mb-1">
           {labels.ship_today}
         </label>
         <div className="flex items-center gap-3">
@@ -108,18 +108,18 @@ export default function DeliveryDateEstimator({
             type="date"
             value={toInputValue(shipDate)}
             onChange={handleDateChange}
-            className="px-3 py-1.5 bg-card-hover border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30 text-sm [color-scheme:dark]"
+            className="px-3 py-1.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30 text-sm [color-scheme:dark]"
           />
         </div>
       </div>
 
       {/* Estimated arrival */}
       <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
-        <p className="text-sm text-body mb-1">{labels.estimated_arrival}</p>
-        <p className="text-lg font-semibold text-accent">
+        <p className="text-sm text-gray-400 mb-1">{labels.estimated_arrival}</p>
+        <p className="text-lg font-semibold text-accent-light">
           {formatRange(arrivalMin, arrivalMax, locale)}
         </p>
-        <p className="text-xs text-body mt-2">
+        <p className="text-xs text-gray-400 mt-2">
           {labels.business_days_note}
         </p>
       </div>

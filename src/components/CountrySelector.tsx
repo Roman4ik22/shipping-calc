@@ -77,32 +77,32 @@ export default function CountrySelector({
 
   return (
     <div className="relative" ref={ref}>
-      <label className="block text-xs text-body mb-2 uppercase tracking-wide">
+      <label className="block text-xs text-gray-300 mb-2 uppercase tracking-wide">
         {label}
       </label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 px-4 text-left bg-card-hover text-ink rounded-xl hover:bg-[#1e1e1e] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors"
+        className="w-full py-4 px-4 text-left bg-[#1a1a1a] text-white rounded-xl hover:bg-[#1e1e1e] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors"
       >
         {selected ? (
           <span>
             {countryFlag(selected.code)} {getName(selected)}
           </span>
         ) : (
-          <span className="text-body">—</span>
+          <span className="text-gray-400">—</span>
         )}
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-2 w-full bg-card rounded-2xl shadow-lg max-h-72 overflow-hidden">
+        <div className="absolute z-50 mt-2 w-full bg-card rounded-2xl shadow-2xl max-h-72 overflow-hidden">
           <div className="p-3">
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={label}
-              className="w-full px-4 py-3 bg-card-hover rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+              className="w-full px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
               autoFocus
             />
           </div>
@@ -117,14 +117,14 @@ export default function CountrySelector({
                   setSearch("");
                 }}
                 className={`w-full px-4 py-3 text-left text-sm hover:bg-white/5 transition-colors ${
-                  c.code === value ? "text-ink font-medium" : "text-body"
+                  c.code === value ? "text-white font-medium" : "text-gray-400"
                 }`}
               >
                 {countryFlag(c.code)} {getName(c)}
               </button>
             ))}
             {filtered.length === 0 && (
-              <div className="px-4 py-3 text-sm text-muted">
+              <div className="px-4 py-3 text-sm text-gray-600">
                 {"—"}
               </div>
             )}

@@ -82,18 +82,18 @@ export default async function ToolsIndexPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">{t(loc, "tools_label")}</span>
+        <span className="text-white">{t(loc, "tools_label")}</span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         {t(loc, "tools_page_title")}
       </h1>
-      <p className="text-body mb-10 max-w-2xl">
+      <p className="text-gray-400 mb-10 max-w-2xl">
         {t(loc, "tools_subtitle")}
       </p>
 
@@ -102,12 +102,12 @@ export default async function ToolsIndexPage({
           <Link
             key={tool.href}
             href={tool.href}
-            className="group block bg-surface border border-line rounded-xl p-6 hover:border-accent/40 transition-colors"
+            className="group block bg-surface border border-white/10 rounded-xl p-6 hover:border-accent/40 transition-colors"
           >
-            <h2 className="text-xl font-semibold text-ink mb-2 group-hover:text-accent transition-colors">
+            <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-light transition-colors">
               {tool.title}
             </h2>
-            <p className="text-sm text-body">{tool.description}</p>
+            <p className="text-sm text-gray-400">{tool.description}</p>
           </Link>
         ))}
       </div>

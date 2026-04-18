@@ -40,20 +40,20 @@ export default function PriceHistory({
 
   if (changes.length === 0) {
     return (
-      <div className="bg-surface border border-line rounded-xl p-6">
-        <h3 className="text-lg font-bold text-ink mb-2">{labels.title}</h3>
-        <p className="text-muted">{labels.no_changes}</p>
+      <div className="bg-surface border border-white/10 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-white mb-2">{labels.title}</h3>
+        <p className="text-gray-500">{labels.no_changes}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-surface border border-line rounded-xl p-6">
-      <h3 className="text-lg font-bold text-ink mb-4">{labels.title}</h3>
+    <div className="bg-surface border border-white/10 rounded-xl p-6">
+      <h3 className="text-lg font-bold text-white mb-4">{labels.title}</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-left text-body border-b border-line">
+            <tr className="text-left text-gray-400 border-b border-white/10">
               <th className="pb-2 pr-4">{labels.carrier}</th>
               <th className="pb-2 pr-4">{labels.previous}</th>
               <th className="pb-2 pr-4">{labels.current}</th>
@@ -62,13 +62,13 @@ export default function PriceHistory({
           </thead>
           <tbody>
             {changes.map((c) => (
-              <tr key={`${c.carrier}-${c.service}`} className="border-b border-line">
+              <tr key={`${c.carrier}-${c.service}`} className="border-b border-white/5">
                 <td className="py-2.5 pr-4">
                   <span className="font-medium text-gray-200">{c.carrier}</span>
-                  <span className="text-muted text-xs ml-2">{c.service}</span>
+                  <span className="text-gray-500 text-xs ml-2">{c.service}</span>
                 </td>
-                <td className="py-2.5 pr-4 text-body">${c.oldPrice}</td>
-                <td className="py-2.5 pr-4 text-ink font-medium">${c.newPrice}</td>
+                <td className="py-2.5 pr-4 text-gray-400">${c.oldPrice}</td>
+                <td className="py-2.5 pr-4 text-white font-medium">${c.newPrice}</td>
                 <td className="py-2.5">
                   <span
                     className={`px-2 py-0.5 rounded-full text-xs font-medium ${
@@ -76,7 +76,7 @@ export default function PriceHistory({
                         ? "bg-green-500/20 text-green-400"
                         : c.change > 0
                         ? "bg-red-500/20 text-red-400"
-                        : "bg-gray-500/20 text-body"
+                        : "bg-gray-500/20 text-gray-400"
                     }`}
                   >
                     {c.change > 0 ? "+" : ""}{c.change}%
@@ -87,7 +87,7 @@ export default function PriceHistory({
           </tbody>
         </table>
       </div>
-      <p className="mt-3 text-xs text-muted">
+      <p className="mt-3 text-xs text-gray-500">
         Compared to rates from 30 days ago
       </p>
     </div>

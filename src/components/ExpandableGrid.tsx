@@ -26,7 +26,7 @@ export default function ExpandableGrid({
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="mt-3 text-sm text-accent hover:text-ink transition-colors cursor-pointer"
+          className="mt-3 text-sm text-accent-light hover:text-white transition-colors cursor-pointer"
         >
           {expanded ? showLessLabel : `${showMoreLabel} (${children.length - visibleCount} more)`}
         </button>

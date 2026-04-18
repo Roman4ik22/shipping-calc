@@ -32,30 +32,30 @@ type FilterTab = "all" | "global" | "regional";
 
 function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
   return (
-    <div className="bg-surface border border-line rounded-lg p-5 hover:border-accent/50 transition-all flex flex-col">
+    <div className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all flex flex-col">
       <div className="flex items-start justify-between mb-3">
         <div>
-          <h3 className="font-semibold text-ink text-lg leading-tight">
+          <h3 className="font-semibold text-white text-lg leading-tight">
             {platform.company}
           </h3>
-          <p className="text-sm text-body mt-0.5">{platform.countryHQ}</p>
+          <p className="text-sm text-gray-400 mt-0.5">{platform.countryHQ}</p>
         </div>
-        <span className="shrink-0 ml-2 px-2 py-0.5 text-xs font-medium rounded bg-white/5 text-body border border-line">
+        <span className="shrink-0 ml-2 px-2 py-0.5 text-xs font-medium rounded bg-white/5 text-gray-300 border border-white/10">
           {platform.category}
         </span>
       </div>
 
-      <p className="text-sm text-body mb-3">{platform.type}</p>
+      <p className="text-sm text-gray-300 mb-3">{platform.type}</p>
 
-      <div className="space-y-1.5 text-sm text-body mb-4 flex-1">
+      <div className="space-y-1.5 text-sm text-gray-400 mb-4 flex-1">
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 shrink-0 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span>{platform.coverage}</span>
         </div>
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 shrink-0 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
           <span>{platform.carriers}</span>
@@ -84,7 +84,7 @@ function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
         href={`https://${platform.website}`}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent transition-colors mt-auto"
+        className="inline-flex items-center gap-1.5 text-sm text-accent-light hover:text-accent transition-colors mt-auto"
       >
         {platform.website}
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ function FilterTabs({ locale }: { locale: string }) {
         <a
           key={tab.key}
           href={tab.href}
-          className="px-4 py-2 text-sm font-medium rounded-lg border border-line text-body hover:text-ink hover:border-accent/50 bg-surface transition-all"
+          className="px-4 py-2 text-sm font-medium rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-accent/50 bg-surface transition-all"
         >
           {tab.label}
         </a>
@@ -166,23 +166,23 @@ export default async function PlatformsPage({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-ink transition-colors">
+      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-white transition-colors">
           {t(loc, "home")}
         </Link>
         <span>/</span>
-        <span className="text-ink">{t(loc, "platforms")}</span>
+        <span className="text-white">{t(loc, "platforms")}</span>
       </nav>
 
       {/* Hero */}
       <section className="mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
           {t(loc, "platforms_title")}
         </h1>
-        <p className="text-lg text-body max-w-3xl">
+        <p className="text-lg text-gray-400 max-w-3xl">
           {t(loc, "platforms_description")}
         </p>
-        <div className="flex items-center gap-4 mt-4 text-sm text-muted">
+        <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
           <span>{platforms.length} platforms</span>
           <span>{platforms.filter((p) => p.category === "Global").length} global</span>
           <span>{platforms.filter((p) => p.category === "Regional").length} regional</span>
@@ -195,8 +195,8 @@ export default async function PlatformsPage({
       {/* Global Platforms */}
       {globalPlatforms.length > 0 && (
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <svg className="w-5 h-5 text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Global Platforms ({globalPlatforms.length})
@@ -214,7 +214,7 @@ export default async function PlatformsPage({
         .filter((region) => regionalByRegion[region]?.length)
         .map((region) => (
           <section key={region} className="mb-12">
-            <h2 className="text-xl font-bold text-ink mb-4">{region} ({regionalByRegion[region].length})</h2>
+            <h2 className="text-xl font-bold text-white mb-4">{region} ({regionalByRegion[region].length})</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {regionalByRegion[region].map((p) => (
                 <PlatformCard key={p.id} platform={p} />

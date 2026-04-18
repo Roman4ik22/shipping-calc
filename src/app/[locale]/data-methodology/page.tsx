@@ -123,58 +123,58 @@ export default async function DataMethodologyPage({
         }}
       />
 
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">
+        <span className="text-white">
           {t(loc, "data_method_breadcrumb")}
         </span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         {t(loc, "data_method_h1")}
       </h1>
-      <p className="text-body mb-8 text-lg">
+      <p className="text-gray-400 mb-8 text-lg">
         {t(loc, "data_method_intro")}
       </p>
 
-      <div className="space-y-10 text-body leading-relaxed">
+      <div className="space-y-10 text-gray-300 leading-relaxed">
         {/* Section 1: Carrier Rate Data */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s1_title")}
           </h2>
           <p className="mb-4">
             {t(loc, "data_method_s1_body")}
           </p>
 
-          <h3 className="text-lg font-semibold text-ink mb-3">
+          <h3 className="text-lg font-semibold text-white mb-3">
             {t(loc, "data_method_top10")}
           </h3>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
+            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_carrier_col")}
                   </th>
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_source_col")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {TOP_CARRIERS.map((c) => (
-                  <tr key={c.name} className="border-t border-line">
-                    <td className="p-3 text-ink font-medium">{c.name}</td>
+                  <tr key={c.name} className="border-t border-white/5">
+                    <td className="p-3 text-white font-medium">{c.name}</td>
                     <td className="p-3">
                       <a
                         href={c.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent hover:underline break-all text-xs"
+                        className="text-accent-light hover:underline break-all text-xs"
                       >
                         {c.url.replace("https://www.", "").replace("https://", "")}
                       </a>
@@ -184,83 +184,83 @@ export default async function DataMethodologyPage({
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted mt-2">
+          <p className="text-sm text-gray-500 mt-2">
             {t(loc, "data_method_full_list_pre")}
             <Link
               href={`/${locale}/sources`}
-              className="text-accent hover:underline"
+              className="text-accent-light hover:underline"
             >
               {t(loc, "data_method_full_list_link")}
             </Link>
             {t(loc, "data_method_full_list_post")}
           </p>
 
-          <h3 className="text-lg font-semibold text-ink mt-6 mb-3">
+          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
             {t(loc, "data_method_currency_title")}
           </h3>
           <p>
             {t(loc, "data_method_currency_body")}
           </p>
 
-          <h3 className="text-lg font-semibold text-ink mt-6 mb-3">
+          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
             {t(loc, "data_method_gri_title")}
           </h3>
           <p className="mb-3">
             {t(loc, "data_method_gri_body")}
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
+            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_carrier_col")}
                   </th>
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_increase_col")}
                   </th>
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_effective_col")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {GRI_2026.map((g) => (
-                  <tr key={g.carrier} className="border-t border-line">
-                    <td className="p-3 text-ink">{g.carrier}</td>
-                    <td className="p-3 text-accent font-medium">
+                  <tr key={g.carrier} className="border-t border-white/5">
+                    <td className="p-3 text-white">{g.carrier}</td>
+                    <td className="p-3 text-accent-light font-medium">
                       +{g.increase}
                     </td>
-                    <td className="p-3 text-body">{g.effective}</td>
+                    <td className="p-3 text-gray-400">{g.effective}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <h3 className="text-lg font-semibold text-ink mt-6 mb-3">
+          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
             {t(loc, "data_method_verified_title")}
           </h3>
-          <div className="bg-surface border border-line rounded-lg p-5">
+          <div className="bg-surface border border-white/10 rounded-lg p-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="inline-block w-3 h-3 rounded-full bg-green-500" />
-                  <span className="text-ink font-semibold">
+                  <span className="text-white font-semibold">
                     {t(loc, "data_method_verified_label")}
                   </span>
                 </div>
-                <p className="text-sm text-body">
+                <p className="text-sm text-gray-400">
                   {t(loc, "data_method_verified_desc")}
                 </p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="inline-block w-3 h-3 rounded-full bg-yellow-500" />
-                  <span className="text-ink font-semibold">
+                  <span className="text-white font-semibold">
                     {t(loc, "data_method_estimated_label")}
                   </span>
                 </div>
-                <p className="text-sm text-body">
+                <p className="text-sm text-gray-400">
                   {t(loc, "data_method_estimated_desc")}
                 </p>
               </div>
@@ -270,80 +270,80 @@ export default async function DataMethodologyPage({
 
         {/* Section 2: Customs Data */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s2_title")}
           </h2>
           <p className="mb-4">
             {t(loc, "data_method_s2_body")}
           </p>
 
-          <h3 className="text-lg font-semibold text-ink mb-3">
+          <h3 className="text-lg font-semibold text-white mb-3">
             {t(loc, "data_method_what_track")}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div className="bg-surface border border-line rounded-lg p-4">
-              <p className="text-ink font-semibold mb-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-4">
+              <p className="text-white font-semibold mb-1">
                 {t(loc, "data_method_deminimis_title")}
               </p>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_deminimis_desc")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-4">
-              <p className="text-ink font-semibold mb-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-4">
+              <p className="text-white font-semibold mb-1">
                 {t(loc, "data_method_duty_title")}
               </p>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_duty_desc")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-4">
-              <p className="text-ink font-semibold mb-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-4">
+              <p className="text-white font-semibold mb-1">
                 {t(loc, "data_method_vat_title")}
               </p>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_vat_desc")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-4">
-              <p className="text-ink font-semibold mb-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-4">
+              <p className="text-white font-semibold mb-1">
                 {t(loc, "data_method_prohibited_title")}
               </p>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_prohibited_desc")}
               </p>
             </div>
           </div>
 
-          <h3 className="text-lg font-semibold text-ink mb-3">
+          <h3 className="text-lg font-semibold text-white mb-3">
             {t(loc, "data_method_customs_sources")}
           </h3>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
+            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_source_name")}
                   </th>
-                  <th className="text-left p-3 text-body font-medium">
+                  <th className="text-left p-3 text-gray-400 font-medium">
                     {t(loc, "data_method_source_purpose")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {CUSTOMS_SOURCES.map((s) => (
-                  <tr key={s.name} className="border-t border-line">
+                  <tr key={s.name} className="border-t border-white/5">
                     <td className="p-3">
                       <a
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-accent hover:underline"
+                        className="text-accent-light hover:underline"
                       >
                         {s.name}
                       </a>
                     </td>
-                    <td className="p-3 text-body">{s.purpose}</td>
+                    <td className="p-3 text-gray-400">{s.purpose}</td>
                   </tr>
                 ))}
               </tbody>
@@ -353,38 +353,38 @@ export default async function DataMethodologyPage({
 
         {/* Section 3: Update Frequency */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s3_title")}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-2xl font-bold text-accent-light">
                 {t(loc, "data_method_weekly")}
               </p>
-              <p className="text-xs text-body mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {t(loc, "data_method_weekly_desc")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-2xl font-bold text-accent-light">
                 {t(loc, "data_method_monthly")}
               </p>
-              <p className="text-xs text-body mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {t(loc, "data_method_monthly_desc")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-2xl font-bold text-accent-light">
                 {t(loc, "data_method_daily")}
               </p>
-              <p className="text-xs text-body mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {t(loc, "data_method_daily_desc")}
               </p>
             </div>
           </div>
 
-          <h3 className="text-lg font-semibold text-ink mb-3">
+          <h3 className="text-lg font-semibold text-white mb-3">
             {t(loc, "data_method_recent_updates")}
           </h3>
           <div className="space-y-2">
@@ -393,19 +393,19 @@ export default async function DataMethodologyPage({
                 key={i}
                 className="flex gap-4 items-start border-l-2 border-accent-light/30 pl-4 py-1"
               >
-                <span className="text-sm text-accent font-medium whitespace-nowrap min-w-[100px]">
+                <span className="text-sm text-accent-light font-medium whitespace-nowrap min-w-[100px]">
                   {u.date}
                 </span>
-                <span className="text-sm text-body">{u.description}</span>
+                <span className="text-sm text-gray-400">{u.description}</span>
               </div>
             ))}
           </div>
 
-          <div className="bg-surface border border-line rounded-lg p-5 mt-6">
-            <p className="text-ink font-semibold mb-1">
+          <div className="bg-surface border border-white/10 rounded-lg p-5 mt-6">
+            <p className="text-white font-semibold mb-1">
               {t(loc, "data_method_last_audit_title")}
             </p>
-            <p className="text-sm text-body">
+            <p className="text-sm text-gray-400">
               {t(loc, "data_method_last_audit_body")}
             </p>
           </div>
@@ -413,31 +413,31 @@ export default async function DataMethodologyPage({
 
         {/* Section 4: Coverage */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s4_title")}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent">143</p>
-              <p className="text-sm text-body mt-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-3xl font-bold text-accent-light">143</p>
+              <p className="text-sm text-gray-400 mt-1">
                 {t(loc, "data_method_carriers_label")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent">213</p>
-              <p className="text-sm text-body mt-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-3xl font-bold text-accent-light">213</p>
+              <p className="text-sm text-gray-400 mt-1">
                 {t(loc, "data_method_countries_label")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent">80+</p>
-              <p className="text-sm text-body mt-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-3xl font-bold text-accent-light">80+</p>
+              <p className="text-sm text-gray-400 mt-1">
                 {t(loc, "data_method_verified_count")}
               </p>
             </div>
-            <div className="bg-surface border border-line rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent">40+</p>
-              <p className="text-sm text-body mt-1">
+            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
+              <p className="text-3xl font-bold text-accent-light">40+</p>
+              <p className="text-sm text-gray-400 mt-1">
                 {t(loc, "data_method_customs_count")}
               </p>
             </div>
@@ -446,7 +446,7 @@ export default async function DataMethodologyPage({
 
         {/* Section 5: Accuracy Commitment */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s5_title")}
           </h2>
 
@@ -454,11 +454,11 @@ export default async function DataMethodologyPage({
             <div className="bg-surface border border-green-500/20 rounded-lg p-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-ink font-semibold">
+                <span className="text-white font-semibold">
                   {t(loc, "data_method_verified_accuracy")}
                 </span>
               </div>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_verified_acc_desc")}
               </p>
             </div>
@@ -466,21 +466,21 @@ export default async function DataMethodologyPage({
             <div className="bg-surface border border-yellow-500/20 rounded-lg p-5">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-yellow-500" />
-                <span className="text-ink font-semibold">
+                <span className="text-white font-semibold">
                   {t(loc, "data_method_estimated_accuracy")}
                 </span>
               </div>
-              <p className="text-sm text-body">
+              <p className="text-sm text-gray-400">
                 {t(loc, "data_method_estimated_acc_desc")}
               </p>
             </div>
           </div>
 
-          <div className="bg-surface border border-line rounded-lg p-5 mt-6">
-            <h3 className="text-ink font-semibold mb-2">
+          <div className="bg-surface border border-white/10 rounded-lg p-5 mt-6">
+            <h3 className="text-white font-semibold mb-2">
               {t(loc, "data_method_disclaimer_title")}
             </h3>
-            <ul className="list-disc list-inside text-sm text-body space-y-2">
+            <ul className="list-disc list-inside text-sm text-gray-400 space-y-2">
               <li>{t(loc, "data_method_disclaimer_1")}</li>
               <li>{t(loc, "data_method_disclaimer_2")}</li>
               <li>{t(loc, "data_method_disclaimer_3")}</li>
@@ -491,18 +491,18 @@ export default async function DataMethodologyPage({
 
         {/* Section 6: Report Inaccuracies */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "data_method_s6_title")}
           </h2>
           <p className="mb-4">
             {t(loc, "data_method_s6_body")}
           </p>
-          <div className="bg-surface border border-line rounded-lg p-5">
-            <p className="text-body text-sm">
+          <div className="bg-surface border border-white/10 rounded-lg p-5">
+            <p className="text-gray-400 text-sm">
               {t(loc, "data_method_s6_contact_pre")}
               <Link
                 href={`/${locale}/about`}
-                className="text-accent hover:underline"
+                className="text-accent-light hover:underline"
               >
                 {t(loc, "data_method_s6_contact_link")}
               </Link>
@@ -511,7 +511,7 @@ export default async function DataMethodologyPage({
           </div>
         </section>
 
-        <p className="text-sm text-muted pt-4 border-t border-line">
+        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
           {t(loc, "last_updated_march")}
         </p>
       </div>

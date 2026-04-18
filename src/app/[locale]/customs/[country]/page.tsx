@@ -173,20 +173,20 @@ export default async function CustomsCountryPage({
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <Link href={`/${locale}/guide`} className="hover:text-accent">
+        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
           {t(loc, "guides")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">{t(loc, "customs_breadcrumb", { country: name })}</span>
+        <span className="text-white">{t(loc, "customs_breadcrumb", { country: name })}</span>
       </nav>
 
       {/* H1 */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
         {countryFlag(country.code)}{" "}
         {t(loc, "customs_h1", { country: name })}
       </h1>
@@ -195,79 +195,79 @@ export default async function CustomsCountryPage({
       <div className="flex flex-wrap gap-3 mb-8">
         <Link
           href={`/${locale}/guide/${country.slug_en}`}
-          className="px-4 py-2 bg-surface border border-line rounded-lg text-sm hover:border-accent/50"
+          className="px-4 py-2 bg-surface border border-white/10 rounded-lg text-sm hover:border-accent/50"
         >
           {t(loc, "customs_shipping_guide", { country: name })}
         </Link>
         <Link
           href={`/${locale}/shipping/to/${country.slug_en}`}
-          className="px-4 py-2 bg-blue-600 text-ink rounded-lg text-sm hover:bg-blue-700"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
         >
           {t(loc, "ship_to", { country: name })}
         </Link>
       </div>
 
       {/* Table of Contents */}
-      <nav className="mb-8 py-4 border-y border-line">
-        <p className="text-xs text-muted uppercase tracking-wider mb-3">
+      <nav className="mb-8 py-4 border-y border-white/5">
+        <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
           {t(loc, "customs_on_this_page")}
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-          <a href="#quick-facts" className="text-body hover:text-ink">{t(loc, "customs_quick_facts")}</a>
-          {deep && <a href="#duty-rates" className="text-body hover:text-ink">{t(loc, "customs_duty_rates_link")}</a>}
-          <a href="#calculator" className="text-body hover:text-ink">{t(loc, "customs_calculator_link")}</a>
-          {deep && <a href="#clearance" className="text-body hover:text-ink">{t(loc, "customs_clearance_link")}</a>}
-          {deep && <a href="#reality" className="text-body hover:text-ink">{t(loc, "customs_reality_link")}</a>}
-          <a href="#documents" className="text-body hover:text-ink">{t(loc, "customs_documents_link")}</a>
-          {deep && <a href="#license" className="text-body hover:text-ink">{t(loc, "customs_licenses_link")}</a>}
-          {deep && <a href="#origin" className="text-body hover:text-ink">{t(loc, "customs_cert_origin_link")}</a>}
-          <a href="#prohibited" className="text-body hover:text-ink">{t(loc, "customs_prohibited_link")}</a>
-          {deep && <a href="#links" className="text-body hover:text-ink">{t(loc, "customs_useful_links")}</a>}
-          <a href="#faq" className="text-body hover:text-ink">FAQ</a>
+          <a href="#quick-facts" className="text-gray-400 hover:text-white">{t(loc, "customs_quick_facts")}</a>
+          {deep && <a href="#duty-rates" className="text-gray-400 hover:text-white">{t(loc, "customs_duty_rates_link")}</a>}
+          <a href="#calculator" className="text-gray-400 hover:text-white">{t(loc, "customs_calculator_link")}</a>
+          {deep && <a href="#clearance" className="text-gray-400 hover:text-white">{t(loc, "customs_clearance_link")}</a>}
+          {deep && <a href="#reality" className="text-gray-400 hover:text-white">{t(loc, "customs_reality_link")}</a>}
+          <a href="#documents" className="text-gray-400 hover:text-white">{t(loc, "customs_documents_link")}</a>
+          {deep && <a href="#license" className="text-gray-400 hover:text-white">{t(loc, "customs_licenses_link")}</a>}
+          {deep && <a href="#origin" className="text-gray-400 hover:text-white">{t(loc, "customs_cert_origin_link")}</a>}
+          <a href="#prohibited" className="text-gray-400 hover:text-white">{t(loc, "customs_prohibited_link")}</a>
+          {deep && <a href="#links" className="text-gray-400 hover:text-white">{t(loc, "customs_useful_links")}</a>}
+          <a href="#faq" className="text-gray-400 hover:text-white">FAQ</a>
         </div>
       </nav>
 
       {/* Quick Facts */}
       <section id="quick-facts" className="mb-10">
-        <h2 className="text-2xl font-bold text-ink mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           {t(loc, "customs_quick_facts")}
         </h2>
-        <div className="bg-surface border border-line rounded-xl p-6">
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
-            <div className="text-center p-4 bg-bg rounded-lg">
-              <p className="text-sm text-body mb-1">{t(loc, "de_minimis")}</p>
-              <p className="text-2xl font-bold text-ink">
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">{t(loc, "de_minimis")}</p>
+              <p className="text-2xl font-bold text-white">
                 {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : "$0"}
               </p>
-              <p className="text-xs text-body mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {customs.de_minimis_usd > 0
                   ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
                   : t(loc, "duty_from_zero")}
               </p>
             </div>
-            <div className="text-center p-4 bg-bg rounded-lg">
-              <p className="text-sm text-body mb-1">{t(loc, "vat_rate")}</p>
-              <p className="text-2xl font-bold text-ink">{customs.vat_rate}%</p>
-              <p className="text-xs text-body mt-1">
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">{t(loc, "vat_rate")}</p>
+              <p className="text-2xl font-bold text-white">{customs.vat_rate}%</p>
+              <p className="text-xs text-gray-400 mt-1">
                 {deep ? deep.vat_applies_to : customs.currency}
               </p>
             </div>
-            <div className="text-center p-4 bg-bg rounded-lg">
-              <p className="text-sm text-body mb-1">
+            <div className="text-center p-4 bg-surface-light rounded-lg">
+              <p className="text-sm text-gray-400 mb-1">
                 {t(loc, "customs_clearance_time")}
               </p>
-              <p className="text-2xl font-bold text-ink">
+              <p className="text-2xl font-bold text-white">
                 {deep ? `${deep.clearance_time_days}` : "2-5"}{" "}
-                <span className="text-base font-normal text-body">{t(loc, "customs_days")}</span>
+                <span className="text-base font-normal text-gray-400">{t(loc, "customs_days")}</span>
               </p>
-              <p className="text-xs text-body mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {t(loc, "customs_typical")}
               </p>
             </div>
           </div>
           {getCustomsNotes(customs, loc) && (
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
-              <p className="text-sm text-accent">
+              <p className="text-sm text-accent-light">
                 <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
                 {getCustomsNotes(customs, loc)}
               </p>
@@ -279,14 +279,14 @@ export default async function CustomsCountryPage({
       {/* Duty Rates Table */}
       {deep && (
         <section id="duty-rates" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_duty_rates_title")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-left text-body border-b border-line">
+                  <tr className="text-left text-gray-400 border-b border-white/10">
                     <th className="pb-3 pr-4">{t(loc, "customs_category_col")}</th>
                     <th className="pb-3 pr-4">{t(loc, "customs_duty_rate_col")}</th>
                     <th className="pb-3">{t(loc, "customs_hs_col")}</th>
@@ -294,18 +294,18 @@ export default async function CustomsCountryPage({
                 </thead>
                 <tbody>
                   {deep.duty_rates.map((rate, i) => (
-                    <tr key={i} className="border-b border-line">
-                      <td className="py-3 pr-4 text-ink font-medium">
+                    <tr key={i} className="border-b border-white/5">
+                      <td className="py-3 pr-4 text-white font-medium">
                         {loc === "ru" ? rate.category_ru : rate.category_en}
                       </td>
-                      <td className="py-3 pr-4 text-accent font-semibold">{rate.rate}</td>
-                      <td className="py-3 text-body">{rate.hs_chapter}</td>
+                      <td className="py-3 pr-4 text-accent-light font-semibold">{rate.rate}</td>
+                      <td className="py-3 text-gray-400">{rate.hs_chapter}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-muted mt-4">
+            <p className="text-xs text-gray-500 mt-4">
               {t(loc, "customs_rates_note")}
             </p>
           </div>
@@ -342,27 +342,27 @@ export default async function CustomsCountryPage({
       {/* Clearance Process */}
       {deep && (
         <section id="clearance" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_clearance_title")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
-            <p className="text-sm text-body leading-relaxed">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
               {getLocalizedField(deep, "clearance_process", locale)}
             </p>
             <div className="flex flex-wrap gap-x-10 gap-y-3 mt-5">
               <div>
-                <span className="block text-xs text-muted uppercase tracking-wider mb-1">
+                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
                   {t(loc, "customs_processing_time")}
                 </span>
-                <span className="text-ink font-medium">
+                <span className="text-white font-medium">
                   {deep.clearance_time_days} {t(loc, "customs_days")}
                 </span>
               </div>
               <div>
-                <span className="block text-xs text-muted uppercase tracking-wider mb-1">
+                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">
                   {t(loc, "customs_vat_rate_label")}
                 </span>
-                <span className="text-ink font-medium">{deep.vat_rate}</span>
+                <span className="text-white font-medium">{deep.vat_rate}</span>
               </div>
             </div>
           </div>
@@ -372,11 +372,11 @@ export default async function CustomsCountryPage({
       {/* Customs Reality */}
       {deep && (
         <section id="reality" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_reality_title")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
-            <p className="text-sm text-body leading-relaxed">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
               {getLocalizedField(deep, "customs_reality", locale)}
             </p>
           </div>
@@ -385,10 +385,10 @@ export default async function CustomsCountryPage({
 
       {/* Required Documents */}
       <section id="documents" className="mb-10">
-        <h2 className="text-2xl font-bold text-ink mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           {t(loc, "required_documents")}
         </h2>
-        <div className="bg-surface border border-line rounded-xl p-6">
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { doc: t(loc, "doc_invoice"), desc: t(loc, "doc_invoice_desc") },
@@ -398,13 +398,13 @@ export default async function CustomsCountryPage({
               { doc: t(loc, "doc_origin"), desc: t(loc, "doc_origin_desc") },
               { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
             ].map((item, i) => (
-              <div key={i} className="flex gap-3 items-start p-3 bg-bg rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent rounded-lg flex items-center justify-center text-xs font-bold">
+              <div key={i} className="flex gap-3 items-start p-3 bg-surface-light rounded-lg">
+                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent-light rounded-lg flex items-center justify-center text-xs font-bold">
                   {i + 1}
                 </span>
                 <div>
-                  <p className="font-medium text-ink text-sm">{item.doc}</p>
-                  <p className="text-xs text-muted mt-0.5">{item.desc}</p>
+                  <p className="font-medium text-white text-sm">{item.doc}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -415,11 +415,11 @@ export default async function CustomsCountryPage({
       {/* Import License Info */}
       {deep && (
         <section id="license" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_license_title")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
-            <p className="text-sm text-body leading-relaxed">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
               {getLocalizedField(deep, "import_license_info", locale)}
             </p>
           </div>
@@ -429,11 +429,11 @@ export default async function CustomsCountryPage({
       {/* Certificate of Origin */}
       {deep && (
         <section id="origin" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_cert_origin_link")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
-            <p className="text-sm text-body leading-relaxed">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-300 leading-relaxed">
               {getLocalizedField(deep, "certificate_of_origin", locale)}
             </p>
             {deep.certificate_of_origin_url && (
@@ -441,7 +441,7 @@ export default async function CustomsCountryPage({
                 href={deep.certificate_of_origin_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-sm text-accent hover:underline"
+                className="inline-block mt-3 text-sm text-accent-light hover:underline"
               >
                 {t(loc, "customs_learn_more")} &rarr;
               </a>
@@ -452,16 +452,16 @@ export default async function CustomsCountryPage({
 
       {/* Prohibited & Restricted Items */}
       <section id="prohibited" className="mb-10">
-        <h2 className="text-2xl font-bold text-ink mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           {t(loc, "prohibited_items")}
         </h2>
-        <div className="bg-surface border border-line rounded-xl p-6">
+        <div className="bg-surface border border-white/10 rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <h3 className="font-semibold text-red-400 mb-2 text-sm">
                 {t(loc, "prohibited")}
               </h3>
-              <ul className="space-y-1 text-sm text-body">
+              <ul className="space-y-1 text-sm text-gray-300">
                 {[
                   t(loc, "prohibited_1"),
                   t(loc, "prohibited_2"),
@@ -480,7 +480,7 @@ export default async function CustomsCountryPage({
               <h3 className="font-semibold text-amber-400 mb-2 text-sm">
                 {t(loc, "restricted")}
               </h3>
-              <ul className="space-y-1 text-sm text-body">
+              <ul className="space-y-1 text-sm text-gray-300">
                 {[
                   t(loc, "restricted_1"),
                   t(loc, "restricted_2"),
@@ -502,10 +502,10 @@ export default async function CustomsCountryPage({
       {/* Useful Links */}
       {deep && (
         <section id="links" className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "customs_useful_links")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
@@ -532,10 +532,10 @@ export default async function CustomsCountryPage({
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 bg-bg rounded-lg hover:border-accent/50 border border-transparent transition-all"
+                    className="flex items-center gap-3 p-3 bg-surface-light rounded-lg hover:border-accent/50 border border-transparent transition-all"
                   >
-                    <span className="text-sm text-ink font-medium">{link.label}</span>
-                    <span className="text-muted text-xs ml-auto">&rarr;</span>
+                    <span className="text-sm text-white font-medium">{link.label}</span>
+                    <span className="text-gray-500 text-xs ml-auto">&rarr;</span>
                   </a>
                 ))}
             </div>
@@ -546,17 +546,17 @@ export default async function CustomsCountryPage({
       {/* Import Duty Estimator Table */}
       {hasCustomsData(country.code) && (
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "duty_tax_estimate")}
           </h2>
-          <div className="bg-surface border border-line rounded-xl p-6">
-            <p className="text-sm text-body mb-4">
+          <div className="bg-surface border border-white/10 rounded-xl p-6">
+            <p className="text-sm text-gray-400 mb-4">
               {t(loc, "duty_estimate_intro", { country: name })}
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-left text-body border-b border-line">
+                  <tr className="text-left text-gray-400 border-b border-white/10">
                     <th className="pb-2 pr-4">{t(loc, "goods_value")}</th>
                     <th className="pb-2 pr-4">{t(loc, "duty")}</th>
                     <th className="pb-2 pr-4">{t(loc, "vat_tax")}</th>
@@ -574,11 +574,11 @@ export default async function CustomsCountryPage({
                         : (vatBase * customs.vat_rate) / 100;
                     const total = duty + vat;
                     return (
-                      <tr key={value} className="border-b border-line">
+                      <tr key={value} className="border-b border-white/5">
                         <td className="py-2 pr-4 font-medium">${value}</td>
                         <td className="py-2 pr-4">${duty.toFixed(0)}</td>
                         <td className="py-2 pr-4">${vat.toFixed(0)}</td>
-                        <td className="py-2 font-bold text-ink">
+                        <td className="py-2 font-bold text-white">
                           {total > 0 ? `$${total.toFixed(0)}` : t(loc, "free")}
                         </td>
                       </tr>
@@ -587,7 +587,7 @@ export default async function CustomsCountryPage({
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-body mt-3">
+            <p className="text-xs text-gray-400 mt-3">
               {t(loc, "duty_estimate_note")}
             </p>
           </div>
@@ -596,7 +596,7 @@ export default async function CustomsCountryPage({
 
       {/* Popular routes to this country */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-ink mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           {t(loc, "popular_routes_to", { country: name })}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -605,7 +605,7 @@ export default async function CustomsCountryPage({
               key={from.code}
               href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
               prefetch={false}
-              className="flex items-center gap-2 bg-surface border border-line rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
+              className="flex items-center gap-2 bg-surface border border-white/10 rounded-lg p-3 hover:border-accent/50 transition-all text-sm"
             >
               <span>{countryFlag(from.code)}</span>
               <span>
@@ -619,16 +619,16 @@ export default async function CustomsCountryPage({
 
       {/* FAQ */}
       <section id="faq" className="mb-10">
-        <h2 className="text-2xl font-bold text-ink mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           {t(loc, "faq_title")}
         </h2>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <details key={i} className="bg-surface border border-line rounded-lg">
-              <summary className="p-4 font-medium text-ink cursor-pointer hover:text-accent">
+            <details key={i} className="bg-surface border border-white/10 rounded-lg">
+              <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light">
                 {faq.q}
               </summary>
-              <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
+              <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
             </details>
           ))}
         </div>

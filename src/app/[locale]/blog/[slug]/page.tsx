@@ -159,7 +159,7 @@ function renderMarkdown(content: string) {
       return (
         <h2
           key={i}
-          className="text-2xl font-bold text-ink mt-8 mb-4"
+          className="text-2xl font-bold text-white mt-8 mb-4"
         >
           {trimmed.slice(3)}
         </h2>
@@ -171,7 +171,7 @@ function renderMarkdown(content: string) {
       return (
         <h3
           key={i}
-          className="text-xl font-semibold text-ink mt-6 mb-3"
+          className="text-xl font-semibold text-white mt-6 mb-3"
         >
           {trimmed.slice(4)}
         </h3>
@@ -182,7 +182,7 @@ function renderMarkdown(content: string) {
     if (trimmed.startsWith("- ")) {
       const items = trimmed.split("\n").filter((line) => line.startsWith("- "));
       return (
-        <ul key={i} className="list-disc list-inside space-y-2 mb-4 text-body">
+        <ul key={i} className="list-disc list-inside space-y-2 mb-4 text-gray-300">
           {items.map((item, j) => (
             <li key={j}>{renderInline(item.slice(2))}</li>
           ))}
@@ -194,7 +194,7 @@ function renderMarkdown(content: string) {
     if (/^\d+\.\s/.test(trimmed)) {
       const items = trimmed.split("\n").filter((line) => /^\d+\.\s/.test(line));
       return (
-        <ol key={i} className="list-decimal list-inside space-y-2 mb-4 text-body">
+        <ol key={i} className="list-decimal list-inside space-y-2 mb-4 text-gray-300">
           {items.map((item, j) => (
             <li key={j}>{renderInline(item.replace(/^\d+\.\s/, ""))}</li>
           ))}
@@ -204,7 +204,7 @@ function renderMarkdown(content: string) {
 
     // Paragraph
     return (
-      <p key={i} className="text-body leading-relaxed mb-4">
+      <p key={i} className="text-gray-300 leading-relaxed mb-4">
         {renderInline(trimmed)}
       </p>
     );
@@ -217,7 +217,7 @@ function renderInline(text: string): React.ReactNode {
   return parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={i} className="text-ink font-semibold">
+        <strong key={i} className="text-white font-semibold">
           {part.slice(2, -2)}
         </strong>
       );
@@ -268,7 +268,7 @@ export default async function BlogPostPage({
   };
 
   return (
-    <div className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-dark-900">
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -293,22 +293,22 @@ export default async function BlogPostPage({
 
       {/* Breadcrumbs */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <nav className="flex items-center gap-2 text-sm text-body">
+        <nav className="flex items-center gap-2 text-sm text-gray-400">
           <Link
             href={`/${locale}`}
-            className="hover:text-ink transition-colors"
+            className="hover:text-white transition-colors"
           >
             {t(loc, "home")}
           </Link>
           <span>/</span>
           <Link
             href={`/${locale}/blog`}
-            className="hover:text-ink transition-colors"
+            className="hover:text-white transition-colors"
           >
             {t(loc, "blog")}
           </Link>
           <span>/</span>
-          <span className="text-ink truncate max-w-[200px]">{title}</span>
+          <span className="text-white truncate max-w-[200px]">{title}</span>
         </nav>
       </div>
 
@@ -319,7 +319,7 @@ export default async function BlogPostPage({
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2 py-1 rounded-full bg-bg text-body border border-line"
+              className="text-xs px-2 py-1 rounded-full bg-surface-light text-gray-300 border border-white/10"
             >
               {tag}
             </span>
@@ -327,13 +327,13 @@ export default async function BlogPostPage({
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
           {title}
         </h1>
 
         {/* Date */}
         <time
-          className="block text-sm text-muted mb-8"
+          className="block text-sm text-gray-500 mb-8"
           dateTime={post.date}
         >
           {new Date(post.date).toLocaleDateString(
@@ -344,7 +344,7 @@ export default async function BlogPostPage({
 
         {/* Language notice for non-EN/RU locales */}
         {locale !== "en" && locale !== "ru" && (
-          <p className="text-sm text-muted mb-6 italic">
+          <p className="text-sm text-gray-500 mb-6 italic">
             This article is available in English. Content in{" "}
             {
               ({
@@ -371,8 +371,8 @@ export default async function BlogPostPage({
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <div className="border-t border-line pt-10">
-            <h2 className="text-2xl font-bold text-ink mb-6">
+          <div className="border-t border-white/10 pt-10">
+            <h2 className="text-2xl font-bold text-white mb-6">
               {t(loc, "related_posts")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -380,16 +380,16 @@ export default async function BlogPostPage({
                 <Link
                   key={related.id}
                   href={`/${locale}/blog/${related.id}`}
-                  className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
+                  className="group bg-surface rounded-xl border border-white/10 p-5 hover:border-accent-light/30 transition-all duration-200"
                 >
-                  <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-base font-semibold text-white mb-2 group-hover:text-accent-light transition-colors">
                     {loc === "ru" ? related.title_ru : related.title_en}
                   </h3>
-                  <p className="text-sm text-body line-clamp-2 mb-3">
+                  <p className="text-sm text-gray-400 line-clamp-2 mb-3">
                     {loc === "ru" ? related.excerpt_ru : related.excerpt_en}
                   </p>
                   <time
-                    className="text-xs text-muted"
+                    className="text-xs text-gray-500"
                     dateTime={related.date}
                   >
                     {new Date(related.date).toLocaleDateString(
@@ -410,8 +410,8 @@ export default async function BlogPostPage({
         if (corridors.length === 0) return null;
         return (
           <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            <div className="border-t border-line pt-10">
-              <h2 className="text-2xl font-bold text-ink mb-6">
+            <div className="border-t border-white/10 pt-10">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 {t(loc, "compare_shipping_rates_cta")}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -425,12 +425,12 @@ export default async function BlogPostPage({
                     <Link
                       key={`${c.from}-${c.to}`}
                       href={`/${locale}/shipping/${makeCorridorSlug(originCountry, destCountry, loc)}`}
-                      className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
+                      className="group bg-surface rounded-xl border border-white/10 p-5 hover:border-accent-light/30 transition-all duration-200"
                     >
-                      <p className="text-base font-semibold text-ink group-hover:text-accent transition-colors">
+                      <p className="text-base font-semibold text-white group-hover:text-accent-light transition-colors">
                         {oName} → {dName}
                       </p>
-                      <p className="text-sm text-body mt-1">
+                      <p className="text-sm text-gray-400 mt-1">
                         {t(loc, "compare_carriers_prices")}
                       </p>
                     </Link>

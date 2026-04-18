@@ -41,7 +41,7 @@ export default async function TeamPage({
       description: t(loc, "team_rate_analysts_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent"
+          className="w-8 h-8 text-accent-light"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -60,7 +60,7 @@ export default async function TeamPage({
       description: t(loc, "team_customs_specialists_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent"
+          className="w-8 h-8 text-accent-light"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -79,7 +79,7 @@ export default async function TeamPage({
       description: t(loc, "team_engineering_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent"
+          className="w-8 h-8 text-accent-light"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -98,7 +98,7 @@ export default async function TeamPage({
       description: t(loc, "team_content_desc"),
       icon: (
         <svg
-          className="w-8 h-8 text-accent"
+          className="w-8 h-8 text-accent-light"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -167,23 +167,23 @@ export default async function TeamPage({
         }}
       />
 
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">
+        <span className="text-white">
           {t(loc, "team_breadcrumb")}
         </span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         {t(loc, "team_h1")}
       </h1>
 
-      <div className="space-y-8 text-body leading-relaxed">
+      <div className="space-y-8 text-gray-300 leading-relaxed">
         {/* Mission Statement */}
-        <section className="bg-surface border border-line rounded-lg p-6">
+        <section className="bg-surface border border-white/10 rounded-lg p-6">
           <p className="text-lg">
             {t(loc, "team_mission")}
           </p>
@@ -191,20 +191,20 @@ export default async function TeamPage({
 
         {/* Our Data Team */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-6">
+          <h2 className="text-2xl font-bold text-white mb-6">
             {t(loc, "team_our_team")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {teams.map((team) => (
               <div
                 key={team.title}
-                className="bg-surface border border-line rounded-lg p-6"
+                className="bg-surface border border-white/10 rounded-lg p-6"
               >
                 <div className="mb-4">{team.icon}</div>
-                <h3 className="text-ink font-semibold text-lg mb-2">
+                <h3 className="text-white font-semibold text-lg mb-2">
                   {team.title}
                 </h3>
-                <p className="text-sm text-body">{team.description}</p>
+                <p className="text-sm text-gray-400">{team.description}</p>
               </div>
             ))}
           </div>
@@ -212,7 +212,7 @@ export default async function TeamPage({
 
         {/* What We Do */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "team_what_we_do")}
           </h2>
           <div className="space-y-4">
@@ -223,12 +223,12 @@ export default async function TeamPage({
               { step: "4", title: t(loc, "team_step_publish"), desc: t(loc, "team_step_publish_desc") },
             ].map((item) => (
               <div key={item.step} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
                   {item.step}
                 </div>
                 <div>
-                  <p className="text-ink font-semibold">{item.title}</p>
-                  <p className="text-sm text-body">{item.desc}</p>
+                  <p className="text-white font-semibold">{item.title}</p>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -237,18 +237,18 @@ export default async function TeamPage({
 
         {/* Our Commitment */}
         <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             {t(loc, "team_commitment_title")}
           </h2>
-          <div className="bg-surface border border-line rounded-lg p-6 space-y-3">
-            <p className="text-body">
+          <div className="bg-surface border border-white/10 rounded-lg p-6 space-y-3">
+            <p className="text-gray-300">
               {t(loc, "team_commitment_body")}
             </p>
-            <p className="text-body">
+            <p className="text-gray-300">
               {t(loc, "team_commitment_contact_pre")}
               <Link
                 href={`/${locale}/about`}
-                className="text-accent hover:underline"
+                className="text-accent-light hover:underline"
               >
                 {t(loc, "team_commitment_contact_link")}
               </Link>
@@ -261,29 +261,29 @@ export default async function TeamPage({
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             href={`/${locale}/data-methodology`}
-            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors"
+            className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
           >
-            <p className="text-ink font-semibold mb-1">
+            <p className="text-white font-semibold mb-1">
               {t(loc, "team_data_methodology")}
             </p>
-            <p className="text-sm text-body">
+            <p className="text-sm text-gray-400">
               {t(loc, "team_data_methodology_desc")}
             </p>
           </Link>
           <Link
             href={`/${locale}/sources`}
-            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors"
+            className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
           >
-            <p className="text-ink font-semibold mb-1">
+            <p className="text-white font-semibold mb-1">
               {t(loc, "team_data_sources")}
             </p>
-            <p className="text-sm text-body">
+            <p className="text-sm text-gray-400">
               {t(loc, "team_data_sources_desc")}
             </p>
           </Link>
         </section>
 
-        <p className="text-sm text-muted pt-4 border-t border-line">
+        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
           {t(loc, "last_updated_march")}
         </p>
       </div>

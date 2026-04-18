@@ -79,7 +79,7 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 text-sm text-muted hover:text-ink transition-colors"
+        className="flex items-center gap-1 text-sm text-gray-500 hover:text-white transition-colors"
         aria-label="Language"
         aria-expanded={open}
       >
@@ -91,7 +91,7 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-3 w-48 bg-[#141414] rounded-xl shadow-lg overflow-hidden z-50">
+        <div className="absolute right-0 mt-3 w-48 bg-[#141414] rounded-xl shadow-2xl overflow-hidden z-50">
           <div className="py-1">
             {availableLocales.map((loc) => {
               const config = localeConfig[loc];
@@ -103,14 +103,14 @@ export default function LanguageSwitcher({ locale, validLocales }: { locale: str
                   onClick={() => handleSelect(loc)}
                   className={`w-full px-4 py-2.5 text-left text-sm flex items-center gap-3 transition-colors ${
                     isActive
-                      ? "text-ink bg-white/[0.05]"
-                      : "text-muted hover:text-ink hover:bg-white/[0.03]"
+                      ? "text-white bg-white/[0.05]"
+                      : "text-gray-500 hover:text-white hover:bg-white/[0.03]"
                   }`}
                 >
                   <span className="text-base">{config.flag}</span>
                   <span className="flex-1">{config.label}</span>
                   {isActive && (
-                    <span className="text-xs text-muted">✓</span>
+                    <span className="text-xs text-gray-600">✓</span>
                   )}
                 </button>
               );

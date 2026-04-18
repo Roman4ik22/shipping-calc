@@ -29,7 +29,7 @@ export default function NewsletterForm({
 
   if (submitted) {
     return (
-      <p className="text-ink font-medium py-3">
+      <p className="text-white font-medium py-3">
         {labels.thanks}
       </p>
     );
@@ -43,7 +43,7 @@ export default function NewsletterForm({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={labels.placeholder}
-        className="flex-1 px-4 py-3 rounded-lg bg-card-hover border border-white/20 text-gray-100 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+        className="flex-1 px-4 py-3 rounded-lg bg-dark-700 border border-white/20 text-gray-100 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
       />
       <button
         type="submit"

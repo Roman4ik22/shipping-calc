@@ -82,25 +82,25 @@ export default async function FromCountryPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent">
+      <nav className="text-sm text-gray-400 mb-6">
+        <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">
+        <span className="text-white">
           {t(loc, "ship_from", { country: name })}
         </span>
       </nav>
 
-      <h1 className="text-3xl font-bold text-ink mb-2">
+      <h1 className="text-3xl font-bold text-white mb-2">
         {countryFlag(country.code)} {t(loc, "ship_from", { country: name })}
       </h1>
-      <p className="text-body mb-8">
+      <p className="text-gray-400 mb-8">
         {t(loc, "meta_country_from_desc", { country: name })}
       </p>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold text-ink mb-4">
+        <h2 className="text-xl font-bold text-white mb-4">
           {t(loc, "popular_destinations")}
         </h2>
         {/* Top 3 featured + rest as compact links */}
@@ -110,8 +110,8 @@ export default async function FromCountryPage({
             .slice(0, 3)
             .map((dest) => (
               <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
-                className="bg-surface border border-line rounded-lg p-4 hover:border-accent/50 transition-all">
-                <p className="font-medium text-ink">{countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}</p>
+                className="bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all">
+                <p className="font-medium text-white">{countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}</p>
               </Link>
             ))}
         </div>
@@ -121,7 +121,7 @@ export default async function FromCountryPage({
             .slice(3, 12)
             .map((dest) => (
               <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
-                className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors">
+                className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors">
                 {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}
               </Link>
             ))}
@@ -150,7 +150,7 @@ export default async function FromCountryPage({
                     key={dest.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
                     prefetch={false}
-                    className="text-sm text-accent hover:text-ink py-1"
+                    className="text-sm text-accent-light hover:text-white py-1"
                   >
                     {getCountryName(dest, loc)}
                   </Link>
