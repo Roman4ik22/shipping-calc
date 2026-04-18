@@ -291,56 +291,68 @@ export default async function BlogPostPage({
         }}
       />
 
-      {/* Breadcrumbs */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <nav className="flex items-center gap-2 text-sm text-body">
-          <Link
-            href={`/${locale}`}
-            className="hover:text-ink transition-colors"
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-line" style={{
+        backgroundImage: `
+          radial-gradient(900px 400px at 70% -10%, rgba(26,115,232,.08), transparent 60%),
+          radial-gradient(600px 300px at -5% 50%, rgba(232,92,58,.05), transparent 60%),
+          linear-gradient(var(--line-2) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line-2) 1px, transparent 1px)`,
+        backgroundSize: 'auto, auto, 48px 48px, 48px 48px',
+        maskImage: 'linear-gradient(180deg, #000 60%, transparent 100%)'
+      }}>
+        <div aria-hidden className="hero-shape-a absolute hidden md:block" style={{top:'20%', right:'8%', width:60, height:60, borderRadius:14, background:'linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)', transform:'rotate(-8deg)', boxShadow:'0 14px 30px -8px rgba(242,201,76,.4)', opacity:0.7}} />
+        <div aria-hidden className="hero-shape-b absolute hidden md:block" style={{bottom:'25%', right:'18%', width:40, height:40, borderRadius:10, background:'var(--accent)', transform:'rotate(12deg)', opacity:0.6, boxShadow:'0 10px 20px -6px rgba(232,92,58,.4)'}} />
+
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <nav className="flex items-center gap-2 text-sm text-body mb-6">
+            <Link
+              href={`/${locale}`}
+              className="hover:text-ink transition-colors"
+            >
+              {t(loc, "home")}
+            </Link>
+            <span>/</span>
+            <Link
+              href={`/${locale}/blog`}
+              className="hover:text-ink transition-colors"
+            >
+              {t(loc, "blog")}
+            </Link>
+            <span>/</span>
+            <span className="text-ink truncate max-w-[200px]">{title}</span>
+          </nav>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-xs px-2 py-1 rounded-full bg-surface-light text-body border border-line"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+            {title}
+          </h1>
+
+          <time
+            className="block text-sm text-muted"
+            dateTime={post.date}
           >
-            {t(loc, "home")}
-          </Link>
-          <span>/</span>
-          <Link
-            href={`/${locale}/blog`}
-            className="hover:text-ink transition-colors"
-          >
-            {t(loc, "blog")}
-          </Link>
-          <span>/</span>
-          <span className="text-ink truncate max-w-[200px]">{title}</span>
-        </nav>
-      </div>
+            {new Date(post.date).toLocaleDateString(
+              loc === "ru" ? "ru-RU" : "en-US",
+              { year: "numeric", month: "long", day: "numeric" }
+            )}
+          </time>
+        </div>
+      </section>
 
       {/* Article */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs px-2 py-1 rounded-full bg-surface-light text-body border border-line"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
-          {title}
-        </h1>
-
-        {/* Date */}
-        <time
-          className="block text-sm text-muted mb-8"
-          dateTime={post.date}
-        >
-          {new Date(post.date).toLocaleDateString(
-            loc === "ru" ? "ru-RU" : "en-US",
-            { year: "numeric", month: "long", day: "numeric" }
-          )}
-        </time>
 
         {/* Language notice for non-EN/RU locales */}
         {locale !== "en" && locale !== "ru" && (
@@ -380,7 +392,8 @@ export default async function BlogPostPage({
                 <Link
                   key={related.id}
                   href={`/${locale}/blog/${related.id}`}
-                  className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
+                  className="group bg-white rounded-xl p-5 hover:border-accent-light/30 transition-all duration-200"
+                  style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}
                 >
                   <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors">
                     {loc === "ru" ? related.title_ru : related.title_en}
@@ -425,7 +438,8 @@ export default async function BlogPostPage({
                     <Link
                       key={`${c.from}-${c.to}`}
                       href={`/${locale}/shipping/${makeCorridorSlug(originCountry, destCountry, loc)}`}
-                      className="group bg-surface rounded-xl border border-line p-5 hover:border-accent-light/30 transition-all duration-200"
+                      className="group bg-white rounded-xl p-5 hover:border-accent-light/30 transition-all duration-200"
+                      style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}
                     >
                       <p className="text-base font-semibold text-ink group-hover:text-accent-light transition-colors">
                         {oName} → {dName}

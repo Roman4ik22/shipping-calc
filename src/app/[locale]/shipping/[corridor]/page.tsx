@@ -178,49 +178,62 @@ export default async function CorridorPage({
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumbs: Shipping Rates → to {dest} → from {origin} */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "shipping_rates")}
-        </Link>
-        <span className="mx-2">/</span>
-        <Link
-          href={`/${locale}/shipping/to/${destination.slug_en}`}
-          className="hover:text-accent-light"
-        >
-          {t(loc, "ship_to", { country: destName })}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">{t(loc, "ship_from", { country: originName })}</span>
-      </nav>
+    <div>
+      {/* V2 Hero with gradient background */}
+      <section className="relative overflow-hidden" style={{borderBottom:'1px solid var(--line)'}}>
+        <div aria-hidden className="absolute inset-0 z-0" style={{
+          backgroundImage: `
+            radial-gradient(900px 400px at 70% -10%, rgba(26,115,232,.08), transparent 60%),
+            radial-gradient(600px 300px at -5% 50%, rgba(232,92,58,.05), transparent 60%),
+            linear-gradient(var(--line-2) 1px, transparent 1px),
+            linear-gradient(90deg, var(--line-2) 1px, transparent 1px)`,
+          backgroundSize: 'auto, auto, 48px 48px, 48px 48px',
+          maskImage: 'linear-gradient(180deg, #000 60%, transparent 100%)'
+        }} />
+        {/* Floating shapes */}
+        <div aria-hidden className="hero-shape-a absolute hidden md:block" style={{top:'20%', right:'8%', width:60, height:60, borderRadius:14, background:'linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)', transform:'rotate(-8deg)', boxShadow:'0 14px 30px -8px rgba(242,201,76,.4)', opacity:0.7}} />
+        <div aria-hidden className="hero-shape-b absolute hidden md:block" style={{bottom:'25%', right:'18%', width:40, height:40, borderRadius:10, background:'var(--accent)', transform:'rotate(12deg)', opacity:0.6, boxShadow:'0 10px 20px -6px rgba(232,92,58,.4)'}} />
 
-      {/* Language suggestion based on corridor countries */}
-      <LocaleSuggestion
-        currentLocale={locale}
-        originCode={origin.code}
-        destCode={destination.code}
-        viewInLabel={t(loc, "view_in")}
-      />
+        <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+          {/* Breadcrumbs */}
+          <nav className="text-sm text-body mb-6" style={{fontSize:13}}>
+            <Link href={`/${locale}`} className="hover:text-accent" style={{color:'var(--blue)'}}>
+              {t(loc, "shipping_rates")}
+            </Link>
+            <span className="mx-2" style={{color:'var(--muted)'}}>/</span>
+            <Link href={`/${locale}/shipping/to/${destination.slug_en}`} className="hover:text-accent" style={{color:'var(--blue)'}}>
+              {t(loc, "ship_to", { country: destName })}
+            </Link>
+            <span className="mx-2" style={{color:'var(--muted)'}}>/</span>
+            <span style={{color:'var(--ink)', fontWeight:600}}>{t(loc, "ship_from", { country: originName })}</span>
+          </nav>
 
-      {/* Title */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-2">
-        <span className="inline-block mr-2">{countryFlag(origin.code)}</span>
-        {t(loc, "shipping_from_to", {
-          origin: originName,
-          destination: destName,
-        })}
-        <span className="inline-block ml-2">{countryFlag(destination.code)}</span>
-      </h1>
+          <LocaleSuggestion
+            currentLocale={locale}
+            originCode={origin.code}
+            destCode={destination.code}
+            viewInLabel={t(loc, "view_in")}
+          />
 
-      {/* Share & Save */}
-      <div className="flex items-center gap-3 mb-4">
-        <ShareRoute originName={originName} destName={destName} locale={locale} />
-        <SaveRoute corridorSlug={corridor} originName={originName} destName={destName} locale={locale} />
-      </div>
+          {/* Flags + Title */}
+          <div className="flex items-center gap-3 mb-4" style={{fontSize:32}}>
+            <span>{countryFlag(origin.code)}</span>
+            <span style={{color:'var(--muted)', fontSize:20}}>→</span>
+            <span>{countryFlag(destination.code)}</span>
+          </div>
+          <h1 style={{margin:'0 0 12px', fontSize:'clamp(32px,4vw,48px)', fontWeight:800, letterSpacing:'-.02em', lineHeight:1.05, color:'var(--ink)'}}>
+            {t(loc, "shipping_from_to", { origin: originName, destination: destName })}
+          </h1>
 
-      {/* Route visual */}
-      <img src="/img/route-line.svg" alt="" aria-hidden="true" className="w-full max-w-md mb-6 opacity-50" />
+          {/* Share & Save */}
+          <div className="flex items-center gap-3 mb-3">
+            <ShareRoute originName={originName} destName={destName} locale={locale} />
+            <SaveRoute corridorSlug={corridor} originName={originName} destName={destName} locale={locale} />
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
       {/* Quick Answer — featured snippet target */}
       {corridorData && corridorData.carriers.length > 0 && (() => {
@@ -230,7 +243,7 @@ export default async function CorridorPage({
         const fastest = corridorData.carriers.reduce((a, b) => a.estimated_days_min < b.estimated_days_min ? a : b);
         const customs = getCustomsInfo(destination.code);
         return (
-          <div className="my-6 p-8 bg-white rounded-3xl">
+          <div className="my-6 p-8 bg-white rounded-3xl" style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-md)'}}>
             <p className="text-sm text-body uppercase tracking-wider mb-4">
               {t(loc, "quick_answer")}
             </p>
@@ -1273,6 +1286,7 @@ export default async function CorridorPage({
           }),
         }}
       />
+    </div>
     </div>
   );
 }

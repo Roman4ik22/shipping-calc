@@ -171,42 +171,56 @@ export default async function CustomsCountryPage({
   ];
 
   return (
+    <div>
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-line" style={{
+        backgroundImage: `
+          radial-gradient(900px 400px at 70% -10%, rgba(26,115,232,.08), transparent 60%),
+          radial-gradient(600px 300px at -5% 50%, rgba(232,92,58,.05), transparent 60%),
+          linear-gradient(var(--line-2) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line-2) 1px, transparent 1px)`,
+        backgroundSize: 'auto, auto, 48px 48px, 48px 48px',
+        maskImage: 'linear-gradient(180deg, #000 60%, transparent 100%)'
+      }}>
+        <div aria-hidden className="hero-shape-a absolute hidden md:block" style={{top:'20%', right:'8%', width:60, height:60, borderRadius:14, background:'linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)', transform:'rotate(-8deg)', boxShadow:'0 14px 30px -8px rgba(242,201,76,.4)', opacity:0.7}} />
+        <div aria-hidden className="hero-shape-b absolute hidden md:block" style={{bottom:'25%', right:'18%', width:40, height:40, borderRadius:10, background:'var(--accent)', transform:'rotate(12deg)', opacity:0.6, boxShadow:'0 10px 20px -6px rgba(232,92,58,.4)'}} />
+
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <nav className="text-sm text-body mb-6">
+            <Link href={`/${locale}`} className="hover:text-accent-light">
+              {t(loc, "home")}
+            </Link>
+            <span className="mx-2">/</span>
+            <Link href={`/${locale}/guide`} className="hover:text-accent-light">
+              {t(loc, "guides")}
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-ink">{t(loc, "customs_breadcrumb", { country: name })}</span>
+          </nav>
+
+          <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
+            {countryFlag(country.code)}{" "}
+            {t(loc, "customs_h1", { country: name })}
+          </h1>
+
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href={`/${locale}/guide/${country.slug_en}`}
+              className="px-4 py-2 bg-surface border border-line rounded-lg text-sm hover:border-accent/50"
+            >
+              {t(loc, "customs_shipping_guide", { country: name })}
+            </Link>
+            <Link
+              href={`/${locale}/shipping/to/${country.slug_en}`}
+              className="px-4 py-2 bg-blue-600 text-ink rounded-lg text-sm hover:bg-blue-700"
+            >
+              {t(loc, "ship_to", { country: name })}
+            </Link>
+          </div>
+        </div>
+      </section>
+
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumbs */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
-          {t(loc, "guides")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">{t(loc, "customs_breadcrumb", { country: name })}</span>
-      </nav>
-
-      {/* H1 */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
-        {countryFlag(country.code)}{" "}
-        {t(loc, "customs_h1", { country: name })}
-      </h1>
-
-      {/* Quick links */}
-      <div className="flex flex-wrap gap-3 mb-8">
-        <Link
-          href={`/${locale}/guide/${country.slug_en}`}
-          className="px-4 py-2 bg-surface border border-line rounded-lg text-sm hover:border-accent/50"
-        >
-          {t(loc, "customs_shipping_guide", { country: name })}
-        </Link>
-        <Link
-          href={`/${locale}/shipping/to/${country.slug_en}`}
-          className="px-4 py-2 bg-blue-600 text-ink rounded-lg text-sm hover:bg-blue-700"
-        >
-          {t(loc, "ship_to", { country: name })}
-        </Link>
-      </div>
-
       {/* Table of Contents */}
       <nav className="mb-8 py-4 border-y border-line">
         <p className="text-xs text-muted uppercase tracking-wider mb-3">
@@ -234,7 +248,7 @@ export default async function CustomsCountryPage({
         </h2>
         <div className="bg-surface border border-line rounded-xl p-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
-            <div className="text-center p-4 bg-surface-light rounded-lg">
+            <div className="text-center p-4 bg-white rounded-lg" style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}>
               <p className="text-sm text-body mb-1">{t(loc, "de_minimis")}</p>
               <p className="text-2xl font-bold text-ink">
                 {customs.de_minimis_usd > 0 ? `$${customs.de_minimis_usd}` : "$0"}
@@ -245,14 +259,14 @@ export default async function CustomsCountryPage({
                   : t(loc, "duty_from_zero")}
               </p>
             </div>
-            <div className="text-center p-4 bg-surface-light rounded-lg">
+            <div className="text-center p-4 bg-white rounded-lg" style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}>
               <p className="text-sm text-body mb-1">{t(loc, "vat_rate")}</p>
               <p className="text-2xl font-bold text-ink">{customs.vat_rate}%</p>
               <p className="text-xs text-body mt-1">
                 {deep ? deep.vat_applies_to : customs.currency}
               </p>
             </div>
-            <div className="text-center p-4 bg-surface-light rounded-lg">
+            <div className="text-center p-4 bg-white rounded-lg" style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}>
               <p className="text-sm text-body mb-1">
                 {t(loc, "customs_clearance_time")}
               </p>
@@ -699,6 +713,7 @@ export default async function CustomsCountryPage({
           }),
         }}
       />
+    </div>
     </div>
   );
 }

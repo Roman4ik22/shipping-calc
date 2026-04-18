@@ -83,7 +83,7 @@ export default function CountrySelector({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 px-4 text-left bg-[#1a1a1a] text-ink rounded-xl hover:bg-[#1e1e1e] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors"
+        className="w-full py-4 px-4 text-left bg-white border border-line text-ink rounded-xl hover:bg-[#1e1e1e] focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors"
       >
         {selected ? (
           <span>
@@ -102,7 +102,7 @@ export default function CountrySelector({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={label}
-              className="w-full px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+              className="w-full px-4 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
               autoFocus
             />
           </div>
@@ -116,7 +116,7 @@ export default function CountrySelector({
                   setIsOpen(false);
                   setSearch("");
                 }}
-                className={`w-full px-4 py-3 text-left text-sm hover:bg-white/5 transition-colors ${
+                className={`w-full px-4 py-3 text-left text-sm hover:bg-gray-50 transition-colors ${
                   c.code === value ? "text-ink font-medium" : "text-body"
                 }`}
               >

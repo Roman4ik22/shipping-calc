@@ -29,7 +29,7 @@ export default function StickyCorridorCTA({
   const isRu = locale === "ru";
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-line px-4 py-3 safe-area-bottom">
+    <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-bg/95 backdrop-blur-xl border-t border-line px-4 py-3 safe-area-bottom">
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="text-ink text-sm font-medium truncate">

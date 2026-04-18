@@ -222,7 +222,7 @@ function CurrencySelector({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search currency..."
-                className="w-full px-3 py-2 text-sm bg-[#1a1a1a] rounded-xl text-ink placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                className="w-full px-3 py-2 text-sm bg-white border border-line rounded-xl text-ink placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/50"
                 autoFocus
               />
             </div>
@@ -231,7 +231,7 @@ function CurrencySelector({
                 <button
                   key={code}
                   onClick={() => { setCurrency(code); setOpen(false); setSearch(""); }}
-                  className={`w-full px-4 py-2.5 text-left text-sm flex items-center justify-between transition-colors hover:bg-white/5 ${
+                  className={`w-full px-4 py-2.5 text-left text-sm flex items-center justify-between transition-colors hover:bg-gray-50 ${
                     code === currency ? "text-ink font-medium" : "text-body"
                   }`}
                 >
@@ -424,7 +424,7 @@ export default function RateTable({
                 className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
                     ? "bg-accent text-white font-medium"
-                    : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
+                    : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
                 }`}
               >
                 {w} {labels.kg}
@@ -448,7 +448,7 @@ export default function RateTable({
                 max="70"
                 step="0.1"
                 aria-label={labels.or_enter_weight}
-                className="w-24 px-4 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-500"
+                className="w-24 px-4 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
               />
               <span className="text-sm text-body">{labels.kg}</span>
             </div>
@@ -475,7 +475,7 @@ export default function RateTable({
                 placeholder="L"
                 min="1"
                 aria-label="Length (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
               />
               <span className="text-muted" aria-hidden="true">\u00d7</span>
               <input
@@ -485,7 +485,7 @@ export default function RateTable({
                 placeholder="W"
                 min="1"
                 aria-label="Width (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
               />
               <span className="text-muted" aria-hidden="true">\u00d7</span>
               <input
@@ -495,7 +495,7 @@ export default function RateTable({
                 placeholder="H"
                 min="1"
                 aria-label="Height (cm)"
-                className="w-20 px-3 py-3 bg-[#1a1a1a] rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-600"
+                className="w-20 px-3 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
               />
               <span className="text-sm text-muted">cm</span>
             </div>
@@ -550,7 +550,7 @@ export default function RateTable({
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "price" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "price" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.price}
@@ -560,7 +560,7 @@ export default function RateTable({
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "speed" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "speed" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.delivery_time}
@@ -569,7 +569,7 @@ export default function RateTable({
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "reliability" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.route_reliability || "Route"}
@@ -584,7 +584,7 @@ export default function RateTable({
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-                filterType === opt.value ? "bg-accent text-white" : "bg-[#1a1a1a] text-body hover:bg-[#F8F5EF] hover:text-body"
+                filterType === opt.value ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
               }`}
             >
               {opt.label}

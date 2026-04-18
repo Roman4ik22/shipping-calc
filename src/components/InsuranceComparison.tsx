@@ -56,7 +56,7 @@ export default function InsuranceComparison({
             onChange={(e) => setItemValue(e.target.value)}
             placeholder="0"
             min="0"
-            className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50"
+            className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:border-accent/50"
           />
         </div>
         <span className="text-body self-center text-sm">{labels.item_value}</span>
