@@ -49,16 +49,16 @@ export default async function GuidesPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
         {t(loc, "guides_heading")}
       </h1>
-      <p className="text-gray-400 mb-8 max-w-3xl">
+      <p className="text-body mb-8 max-w-3xl">
         {t(loc, "guides_subtitle")}
       </p>
 
       {/* Popular guides — mixed layout: 3 featured + rest compact */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {t(loc, "popular_guides")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
@@ -67,11 +67,11 @@ export default async function GuidesPage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all"
+              className="bg-surface border border-line rounded-lg p-5 hover:border-accent/50 transition-all"
             >
               <span className="text-3xl">{countryFlag(c.code)}</span>
-              <p className="font-medium text-white mt-2">{getCountryName(c, loc)}</p>
-              <p className="text-xs text-gray-500">{c.continent}</p>
+              <p className="font-medium text-ink mt-2">{getCountryName(c, loc)}</p>
+              <p className="text-xs text-muted">{c.continent}</p>
             </Link>
           ))}
         </div>
@@ -84,7 +84,7 @@ export default async function GuidesPage({
               className="flex items-center gap-2 bg-card hover:bg-card-hover rounded-lg px-3 py-2 transition-colors text-sm"
             >
               <span className="text-lg">{countryFlag(c.code)}</span>
-              <span className="text-gray-300">{getCountryName(c, loc)}</span>
+              <span className="text-body">{getCountryName(c, loc)}</span>
             </Link>
           ))}
         </div>
@@ -99,7 +99,7 @@ export default async function GuidesPage({
           );
           return (
             <section key={continent} className="mb-8">
-              <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+              <h2 className="text-lg font-bold text-ink mb-3 flex items-center gap-2">
                 <span className="inline-block w-8 h-0.5 bg-accent/40 rounded-full" />
                 {continent}
               </h2>
@@ -114,7 +114,7 @@ export default async function GuidesPage({
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
+                    className="text-sm text-body hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
                   >
                     <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
                   </Link>

@@ -66,13 +66,13 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
     <>
       {/* Country selector */}
       <div className="mb-8">
-        <label className="block text-sm text-gray-400 mb-2">
+        <label className="block text-sm text-body mb-2">
           {isRu ? "Страна назначения" : "Destination country"}
         </label>
         <select
           value={selectedCountry}
           onChange={(e) => setSelectedCountry(e.target.value)}
-          className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+          className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
         >
           {sortedCountries.map((c) => (
             <option key={c.code} value={c.code}>
@@ -93,12 +93,12 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
       </div>
 
       {/* De minimis threshold info */}
-      <div className="mb-10 bg-surface border border-white/10 rounded-xl p-6">
-        <h2 className="text-xl font-semibold text-white mb-3">
+      <div className="mb-10 bg-surface border border-line rounded-xl p-6">
+        <h2 className="text-xl font-semibold text-ink mb-3">
           {isRu ? "Порог де минимис" : "De Minimis Threshold"}
           {selectedName && ` — ${isRu ? selectedName.name_ru : selectedName.name_en}`}
         </h2>
-        <p className="text-gray-300 mb-2">
+        <p className="text-body mb-2">
           {customs.de_minimis_usd > 0 ? (
             <>
               {isRu
@@ -115,42 +115,42 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
           <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
+            <p className="text-xs text-muted uppercase tracking-wider">
               {isRu ? "Средняя пошлина" : "Average Duty Rate"}
             </p>
-            <p className="text-xl font-light text-white mt-1">{customs.avg_duty_rate}%</p>
+            <p className="text-xl font-light text-ink mt-1">{customs.avg_duty_rate}%</p>
           </div>
           <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
+            <p className="text-xs text-muted uppercase tracking-wider">
               {isRu ? "Ставка НДС" : "VAT Rate"}
             </p>
-            <p className="text-xl font-light text-white mt-1">{customs.vat_rate}%</p>
+            <p className="text-xl font-light text-ink mt-1">{customs.vat_rate}%</p>
           </div>
           <div>
-            <p className="text-xs text-gray-500 uppercase tracking-wider">
+            <p className="text-xs text-muted uppercase tracking-wider">
               {isRu ? "Валюта" : "Currency"}
             </p>
-            <p className="text-xl font-light text-white mt-1">{customs.currency}</p>
+            <p className="text-xl font-light text-ink mt-1">{customs.currency}</p>
           </div>
         </div>
       </div>
 
       {/* Duty rates table */}
       <div className="mb-10">
-        <h2 className="text-xl font-semibold text-white mb-4">
+        <h2 className="text-xl font-semibold text-ink mb-4">
           {isRu ? "Ориентировочные ставки пошлин по категориям" : "Estimated Duty Rates by Category"}
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left text-gray-400 py-3 pr-4">
+              <tr className="border-b border-line">
+                <th className="text-left text-body py-3 pr-4">
                   {isRu ? "Категория" : "Category"}
                 </th>
-                <th className="text-left text-gray-400 py-3 pr-4">
+                <th className="text-left text-body py-3 pr-4">
                   {isRu ? "Код ТН ВЭД" : "HS Code"}
                 </th>
-                <th className="text-right text-gray-400 py-3">
+                <th className="text-right text-body py-3">
                   {isRu ? "Пошлина (прим.)" : "Duty (est.)"}
                 </th>
               </tr>
@@ -158,25 +158,25 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
             <tbody>
               {dutyRates
                 ? dutyRates.map((r) => (
-                    <tr key={r.hs} className="border-b border-white/5">
+                    <tr key={r.hs} className="border-b border-line">
                       <td className="text-gray-200 py-3 pr-4">{r.category}</td>
-                      <td className="text-gray-400 py-3 pr-4 font-mono text-xs">HS {r.hs}</td>
+                      <td className="text-body py-3 pr-4 font-mono text-xs">HS {r.hs}</td>
                       <td className="text-right text-gray-200 py-3">{r.rate}</td>
                     </tr>
                   ))
                 : dutyCategories.map((cat) => (
-                    <tr key={cat.hs} className="border-b border-white/5">
+                    <tr key={cat.hs} className="border-b border-line">
                       <td className="text-gray-200 py-3 pr-4">
                         {isRu ? cat.category_ru : cat.category_en}
                       </td>
-                      <td className="text-gray-400 py-3 pr-4 font-mono text-xs">{cat.hs}</td>
+                      <td className="text-body py-3 pr-4 font-mono text-xs">{cat.hs}</td>
                       <td className="text-right text-gray-200 py-3">{customs.avg_duty_rate}%</td>
                     </tr>
                   ))}
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">
+        <p className="text-xs text-muted mt-3">
           {isRu
             ? "* Фактические ставки зависят от конкретного товара и кода ТН ВЭД. Указаны средние значения."
             : "* Actual rates depend on the specific product and HS code. Averages shown."}

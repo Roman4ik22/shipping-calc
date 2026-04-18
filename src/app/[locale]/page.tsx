@@ -56,21 +56,21 @@ export default async function HomePage({
           <img src="/img/routes-map.svg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-center">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-ink text-center">
             {t(loc, "compare_shipping_rates")}
           </h1>
-          <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto mt-6">
+          <p className="text-xl text-body text-center max-w-2xl mx-auto mt-6">
             {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
-          <p className="text-center mt-8 text-sm text-gray-400 tracking-wide">
-            <span className="font-mono text-white">213</span> {t(loc, "all_countries")}
-            <span className="mx-3 text-gray-600">|</span>
-            <span className="font-mono text-white">134</span> {t(loc, "carriers_page")}
-            <span className="mx-3 text-gray-600">|</span>
-            <span className="font-mono text-white">45K+</span> {t(loc, "routes")}
+          <p className="text-center mt-8 text-sm text-body tracking-wide">
+            <span className="font-mono text-ink">213</span> {t(loc, "all_countries")}
+            <span className="mx-3 text-muted">|</span>
+            <span className="font-mono text-ink">134</span> {t(loc, "carriers_page")}
+            <span className="mx-3 text-muted">|</span>
+            <span className="font-mono text-ink">45K+</span> {t(loc, "routes")}
           </p>
-          <p className="text-center mt-3 text-xs text-gray-600">
+          <p className="text-center mt-3 text-xs text-muted">
             {t(loc, "open_carrier_data")}
           </p>
 
@@ -94,7 +94,7 @@ export default async function HomePage({
               }}
             />
           </div>
-          <p className="text-center text-xs text-gray-600 mt-4">
+          <p className="text-center text-xs text-muted mt-4">
             {t(loc, "rates_updated")}
           </p>
         </div>
@@ -103,7 +103,7 @@ export default async function HomePage({
       {/* Popular corridors — featured 4 + compact rest */}
       <section className="mt-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-3xl font-bold text-ink mb-8">
             {t(loc, "popular_destinations")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
@@ -123,11 +123,11 @@ export default async function HomePage({
                   prefetch={false}
                   className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors"
                 >
-                  <p className="text-base text-gray-300">
+                  <p className="text-base text-body">
                     <span className="text-xl mr-1">{countryFlag(fromCode)}</span> {getCountryName(from, loc)} → {getCountryName(to, loc)} <span className="text-xl ml-1">{countryFlag(toCode)}</span>
                   </p>
                   {cheapest && cheapest < 999 && (
-                    <p className="text-sm text-gray-500 mt-2">{t(loc, "from_price")} <span className="text-white font-medium">${cheapest}/kg</span></p>
+                    <p className="text-sm text-muted mt-2">{t(loc, "from_price")} <span className="text-ink font-medium">${cheapest}/kg</span></p>
                   )}
                 </Link>
               );
@@ -144,7 +144,7 @@ export default async function HomePage({
                   key={`${fromCode}-${toCode}`}
                   href={`/${locale}/shipping/${slug}`}
                   prefetch={false}
-                  className="bg-card hover:bg-card-hover rounded-xl px-3 py-3 text-sm text-gray-400 transition-colors"
+                  className="bg-card hover:bg-card-hover rounded-xl px-3 py-3 text-sm text-body transition-colors"
                 >
                   {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)}
                 </Link>
@@ -157,10 +157,10 @@ export default async function HomePage({
       {/* Sample prices — asymmetric: 3 featured + 5 compact */}
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <h2 className="text-2xl font-bold text-white mb-2">
+          <h2 className="text-2xl font-bold text-ink mb-2">
             {t(loc, "shipping_cost_examples")}
           </h2>
-          <p className="text-gray-500 mb-6 text-sm">
+          <p className="text-muted mb-6 text-sm">
             {t(loc, "sample_prices_subtitle")}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
@@ -179,17 +179,17 @@ export default async function HomePage({
               return (
                 <Link key={`${fromCode}-${toCode}`} href={`/${locale}/shipping/${slug}`} prefetch={false}
                   className="bg-card hover:bg-card-hover rounded-2xl p-6 transition-colors">
-                  <p className="text-sm text-gray-400 mb-3">
+                  <p className="text-sm text-body mb-3">
                     {countryFlag(fromCode)} {getCountryName(from, loc)} → {getCountryName(to, loc)} {countryFlag(toCode)}
                   </p>
                   {cheapest && cheapest < 999 ? (
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-light text-white">${cheapest}</span>
-                      <span className="text-sm text-gray-500">/kg</span>
-                      {fastest && <span className="text-xs text-gray-600 ml-auto">{fastest}+ {t(loc, "days_short")}</span>}
+                      <span className="text-3xl font-light text-ink">${cheapest}</span>
+                      <span className="text-sm text-muted">/kg</span>
+                      {fastest && <span className="text-xs text-muted ml-auto">{fastest}+ {t(loc, "days_short")}</span>}
                     </div>
                   ) : (
-                    <span className="text-sm text-gray-600">{t(loc, "compare_rates_cta")} →</span>
+                    <span className="text-sm text-muted">{t(loc, "compare_rates_cta")} →</span>
                   )}
                 </Link>
               );
@@ -208,9 +208,9 @@ export default async function HomePage({
               return (
                 <Link key={`${fromCode}-${toCode}`} href={`/${locale}/shipping/${slug}`} prefetch={false}
                   className="bg-surface hover:bg-card rounded-lg px-3 py-3 transition-colors text-center">
-                  <p className="text-xs text-gray-500">{countryFlag(fromCode)} → {countryFlag(toCode)}</p>
+                  <p className="text-xs text-muted">{countryFlag(fromCode)} → {countryFlag(toCode)}</p>
                   {cheapest && cheapest < 999 && (
-                    <p className="text-lg font-light text-white mt-1">${cheapest}<span className="text-xs text-gray-600">/kg</span></p>
+                    <p className="text-lg font-light text-ink mt-1">${cheapest}<span className="text-xs text-muted">/kg</span></p>
                   )}
                 </Link>
               );
@@ -224,23 +224,23 @@ export default async function HomePage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex flex-col sm:flex-row gap-4 items-stretch">
             <Link href={`/${locale}/tools/duty-calculator`}
-              className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
-              <span className="text-lg text-gray-600">/</span>
+              className="flex-1 flex items-center gap-4 bg-surface border border-line rounded-xl p-5 hover:border-accent/30 transition-colors">
+              <span className="text-lg text-muted">/</span>
               <div>
-                <h3 className="font-semibold text-white text-sm">{t(loc, "duty_calculator_link")}</h3>
-                <p className="text-xs text-gray-500 mt-0.5">{t(loc, "vat_duties_cost")}</p>
+                <h3 className="font-semibold text-ink text-sm">{t(loc, "duty_calculator_link")}</h3>
+                <p className="text-xs text-muted mt-0.5">{t(loc, "vat_duties_cost")}</p>
               </div>
             </Link>
             <Link href={`/${locale}/tools/delivery-estimator`}
-              className="flex-1 flex items-center gap-4 bg-surface border border-white/10 rounded-xl p-5 hover:border-accent/30 transition-colors">
-              <span className="text-lg text-gray-600">/</span>
+              className="flex-1 flex items-center gap-4 bg-surface border border-line rounded-xl p-5 hover:border-accent/30 transition-colors">
+              <span className="text-lg text-muted">/</span>
               <div>
-                <h3 className="font-semibold text-white text-sm">{t(loc, "delivery_estimator")}</h3>
-                <p className="text-xs text-gray-500 mt-0.5">{t(loc, "delivery_weekends")}</p>
+                <h3 className="font-semibold text-ink text-sm">{t(loc, "delivery_estimator")}</h3>
+                <p className="text-xs text-muted mt-0.5">{t(loc, "delivery_weekends")}</p>
               </div>
             </Link>
             <Link href={`/${locale}/tools`}
-              className="flex items-center gap-3 text-sm text-gray-500 hover:text-white transition-colors px-4">
+              className="flex items-center gap-3 text-sm text-muted hover:text-ink transition-colors px-4">
               {t(loc, "all_tools_link")} →
             </Link>
           </div>
@@ -252,7 +252,7 @@ export default async function HomePage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
             <div className="md:col-span-3">
-              <h2 className="text-2xl font-bold text-white mb-5">
+              <h2 className="text-2xl font-bold text-ink mb-5">
                 {t(loc, "popular_destinations")}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2">
@@ -261,7 +261,7 @@ export default async function HomePage({
                     key={c.code}
                     href={`/${locale}/shipping/to/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:text-white transition-colors py-1"
+                    className="text-sm text-body hover:text-ink transition-colors py-1"
                   >
                     {t(loc, "ship_to", { country: getCountryName(c, loc) })}
                   </Link>
@@ -269,7 +269,7 @@ export default async function HomePage({
               </div>
             </div>
             <div className="md:col-span-2">
-              <h2 className="text-xl font-bold text-white mb-5">
+              <h2 className="text-xl font-bold text-ink mb-5">
                 {t(loc, "popular_origins")}
               </h2>
               <div className="grid grid-cols-1 gap-y-2">
@@ -278,7 +278,7 @@ export default async function HomePage({
                     key={c.code}
                     href={`/${locale}/shipping/from/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:text-white transition-colors py-1"
+                    className="text-sm text-body hover:text-ink transition-colors py-1"
                   >
                     {t(loc, "ship_from", { country: getCountryName(c, loc) })}
                   </Link>
@@ -292,15 +292,15 @@ export default async function HomePage({
       {/* Carriers — text flow, not centered block */}
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <p className="text-sm text-gray-600 uppercase tracking-widest mb-6">
+          <p className="text-sm text-muted uppercase tracking-widest mb-6">
             {t(loc, "comparing_carriers")}
           </p>
-          <p className="text-gray-400 leading-loose">
+          <p className="text-body leading-loose">
             {["DHL Express", "FedEx", "UPS", "EMS", "Aramex", "SF Express", "USPS", "Royal Mail", "Japan Post", "DPD"].map((name, i) => {
               const isPrimary = ["DHL Express", "FedEx", "UPS"].includes(name);
               return (
                 <span key={name}>
-                  {i > 0 && <span className="mx-2 text-gray-600">&middot;</span>}
+                  {i > 0 && <span className="mx-2 text-muted">&middot;</span>}
                   <span className={`${isPrimary ? "text-lg font-semibold" : "text-base"} opacity-60 hover:opacity-100 transition-opacity inline-block`}>
                     {name}
                   </span>
@@ -310,7 +310,7 @@ export default async function HomePage({
           </p>
           <Link
             href={`/${locale}/carriers`}
-            className="inline-block mt-6 text-sm text-gray-500 hover:opacity-60 transition-opacity"
+            className="inline-block mt-6 text-sm text-muted hover:opacity-60 transition-opacity"
           >
             {t(loc, "view_all_carriers")} →
           </Link>
@@ -321,29 +321,29 @@ export default async function HomePage({
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
           <img src="/img/package-journey.svg" alt="" aria-hidden="true" className="w-full max-w-lg mx-auto mb-8 opacity-60" />
-          <h2 className="text-2xl font-bold text-white mb-10">
+          <h2 className="text-2xl font-bold text-ink mb-10">
             {t(loc, "how_it_works")}
           </h2>
           <div className="space-y-6">
             <div className="flex gap-5 items-start">
               <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">1</span>
               <div>
-                <h3 className="font-semibold text-white">{t(loc, "choose_route")}</h3>
-                <p className="text-sm text-gray-500 mt-1">{t(loc, "choose_route_desc")}</p>
+                <h3 className="font-semibold text-ink">{t(loc, "choose_route")}</h3>
+                <p className="text-sm text-muted mt-1">{t(loc, "choose_route_desc")}</p>
               </div>
             </div>
             <div className="flex gap-5 items-start">
               <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">2</span>
               <div>
-                <h3 className="font-semibold text-white">{t(loc, "compare_rates")}</h3>
-                <p className="text-sm text-gray-500 mt-1">{t(loc, "compare_rates_desc")}</p>
+                <h3 className="font-semibold text-ink">{t(loc, "compare_rates")}</h3>
+                <p className="text-sm text-muted mt-1">{t(loc, "compare_rates_desc")}</p>
               </div>
             </div>
             <div className="flex gap-5 items-start">
               <span className="shrink-0 w-10 h-10 rounded-full bg-accent/10 text-accent-light flex items-center justify-center font-bold text-sm">3</span>
               <div>
-                <h3 className="font-semibold text-white">{t(loc, "ship_package")}</h3>
-                <p className="text-sm text-gray-500 mt-1">{t(loc, "ship_package_desc")}</p>
+                <h3 className="font-semibold text-ink">{t(loc, "ship_package")}</h3>
+                <p className="text-sm text-muted mt-1">{t(loc, "ship_package_desc")}</p>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default async function HomePage({
       {/* All countries */}
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
-          <h2 className="text-xl font-bold text-white mb-6">
+          <h2 className="text-xl font-bold text-ink mb-6">
             {t(loc, "all_countries")}
           </h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-y-1 gap-x-4">
@@ -394,7 +394,7 @@ export default async function HomePage({
                 key={c.code}
                 href={`/${locale}/shipping/from/${c.slug_en}`}
                 prefetch={false}
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors py-0.5 truncate"
+                className="text-xs text-muted hover:text-body transition-colors py-0.5 truncate"
               >
                 {countryFlag(c.code)} {getCountryName(c, loc)}
               </Link>
@@ -402,7 +402,7 @@ export default async function HomePage({
           </div>
           <Link
             href={`/${locale}/guide`}
-            className="inline-block mt-4 text-sm text-gray-500 hover:text-white transition-colors"
+            className="inline-block mt-4 text-sm text-muted hover:text-ink transition-colors"
           >
             {t(loc, "all_countries_link")} →
           </Link>
@@ -412,7 +412,7 @@ export default async function HomePage({
       {/* Popular guides */}
       <section>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
-          <h2 className="text-2xl font-bold text-white mb-6">
+          <h2 className="text-2xl font-bold text-ink mb-6">
             {t(loc, "popular_guides")}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-2 gap-x-4">
@@ -421,7 +421,7 @@ export default async function HomePage({
                 key={c.code}
                 href={`/${locale}/guide/${c.slug_en}`}
                 prefetch={false}
-                className="text-gray-400 hover:opacity-60 transition-all text-sm py-1"
+                className="text-body hover:opacity-60 transition-all text-sm py-1"
               >
                 <span className="inline-block hover:scale-110 transition-transform text-base">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
               </Link>
@@ -429,7 +429,7 @@ export default async function HomePage({
           </div>
           <Link
             href={`/${locale}/guide`}
-            className="inline-block mt-8 text-sm text-gray-500 hover:opacity-60 transition-opacity"
+            className="inline-block mt-8 text-sm text-muted hover:opacity-60 transition-opacity"
           >
             {t(loc, "all_guides")} →
           </Link>
@@ -439,10 +439,10 @@ export default async function HomePage({
       {/* Newsletter */}
       <section>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">
+          <h2 className="text-2xl font-bold text-ink mb-3">
             {t(loc, "newsletter_title")}
           </h2>
-          <p className="text-gray-500 mb-8 text-sm">
+          <p className="text-muted mb-8 text-sm">
             {t(loc, "newsletter_subtitle")}
           </p>
           <NewsletterForm
@@ -453,7 +453,7 @@ export default async function HomePage({
               subscribe: t(loc, "newsletter_subscribe"),
             }}
           />
-          <p className="text-xs text-gray-600 mt-4">
+          <p className="text-xs text-muted mt-4">
             {t(loc, "newsletter_privacy")}
           </p>
         </div>
@@ -472,16 +472,16 @@ export default async function HomePage({
         return (
           <section>
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-              <h2 className="text-3xl font-bold text-white mb-10">
+              <h2 className="text-3xl font-bold text-ink mb-10">
                 {t(loc, "faq_title")}
               </h2>
               <div className="space-y-3">
                 {faqs.map((faq, i) => (
                   <details key={i} className="bg-card rounded-2xl group">
-                    <summary className="py-5 px-6 font-medium text-gray-300 cursor-pointer hover:text-white transition-colors">
+                    <summary className="py-5 px-6 font-medium text-body cursor-pointer hover:text-ink transition-colors">
                       {faq.q}
                     </summary>
-                    <p className="pb-6 px-6 text-gray-500 text-sm leading-relaxed">
+                    <p className="pb-6 px-6 text-muted text-sm leading-relaxed">
                       {faq.a}
                     </p>
                   </details>

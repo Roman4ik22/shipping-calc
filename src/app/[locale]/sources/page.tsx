@@ -163,54 +163,54 @@ export default async function SourcesPage({
         }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">
+        <span className="text-ink">
           {t(loc, "sources_breadcrumb")}
         </span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
         {t(loc, "sources_h1")}
       </h1>
-      <p className="text-gray-400 mb-8 text-lg">
+      <p className="text-body mb-8 text-lg">
         {t(loc, "sources_intro")}
       </p>
 
-      <div className="space-y-12 text-gray-300 leading-relaxed">
+      <div className="space-y-12 text-body leading-relaxed">
         {/* Carrier Rate Sources */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-ink mb-4">
             {t(loc, "sources_carrier_title")}
           </h2>
-          <p className="mb-4 text-sm text-gray-400">
+          <p className="mb-4 text-sm text-body">
             {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
+            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_carrier_col")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_url_col")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_verified_col")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_status_col")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {CARRIER_SOURCES.map((c) => (
-                  <tr key={c.name} className="border-t border-white/5">
-                    <td className="p-3 text-white font-medium whitespace-nowrap">
+                  <tr key={c.name} className="border-t border-line">
+                    <td className="p-3 text-ink font-medium whitespace-nowrap">
                       {c.name}
                     </td>
                     <td className="p-3">
@@ -226,7 +226,7 @@ export default async function SourcesPage({
                           .replace("http://", "")}
                       </a>
                     </td>
-                    <td className="p-3 text-gray-400 whitespace-nowrap text-xs">
+                    <td className="p-3 text-body whitespace-nowrap text-xs">
                       {c.lastVerified}
                     </td>
                     <td className="p-3">
@@ -258,39 +258,39 @@ export default async function SourcesPage({
 
         {/* Customs & Trade Data Sources */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-ink mb-4">
             {t(loc, "sources_customs_title")}
           </h2>
-          <p className="mb-4 text-sm text-gray-400">
+          <p className="mb-4 text-sm text-body">
             {loc === "ru"
               ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
               : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
+            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_country_col")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_authority_col")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_url_col2")}
                   </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
+                  <th className="text-left p-3 text-body font-medium">
                     {t(loc, "sources_trade_col")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {CUSTOMS_SOURCES.map((c) => (
-                  <tr key={c.country} className="border-t border-white/5">
-                    <td className="p-3 text-white font-medium whitespace-nowrap">
+                  <tr key={c.country} className="border-t border-line">
+                    <td className="p-3 text-ink font-medium whitespace-nowrap">
                       {c.country}
                     </td>
-                    <td className="p-3 text-gray-400 text-xs">{c.authority}</td>
+                    <td className="p-3 text-body text-xs">{c.authority}</td>
                     <td className="p-3">
                       <a
                         href={c.url}
@@ -304,7 +304,7 @@ export default async function SourcesPage({
                           .replace("http://", "")}
                       </a>
                     </td>
-                    <td className="p-3 text-gray-500 text-xs whitespace-nowrap">
+                    <td className="p-3 text-muted text-xs whitespace-nowrap">
                       {c.tradeAgreement}
                     </td>
                   </tr>
@@ -316,13 +316,13 @@ export default async function SourcesPage({
 
         {/* Exchange Rate Source */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-ink mb-4">
             {t(loc, "sources_exchange_title")}
           </h2>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
+          <div className="bg-surface border border-line rounded-lg p-5">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
-                <p className="text-white font-semibold">
+                <p className="text-ink font-semibold">
                   {t(loc, "sources_ecb")}
                 </p>
                 <a
@@ -334,16 +334,16 @@ export default async function SourcesPage({
                   ecb.europa.eu/stats/exchange/eurofxref
                 </a>
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-body">
                 <p>
                   {t(loc, "sources_update_freq")}{" "}
-                  <span className="text-white">
+                  <span className="text-ink">
                     {t(loc, "sources_daily")}
                   </span>
                 </p>
                 <p>
                   {t(loc, "sources_currencies")}{" "}
-                  <span className="text-white">
+                  <span className="text-ink">
                     {t(loc, "sources_currencies_val")}
                   </span>
                 </p>
@@ -354,13 +354,13 @@ export default async function SourcesPage({
 
         {/* Review Data Sources */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-ink mb-4">
             {t(loc, "sources_reviews_title")}
           </h2>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
+          <div className="bg-surface border border-line rounded-lg p-5">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
-                <p className="text-white font-semibold">Trustpilot</p>
+                <p className="text-ink font-semibold">Trustpilot</p>
                 <a
                   href="https://www.trustpilot.com"
                   target="_blank"
@@ -370,7 +370,7 @@ export default async function SourcesPage({
                   trustpilot.com
                 </a>
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-body">
                 <p>{t(loc, "sources_reviews_desc")}</p>
               </div>
             </div>
@@ -378,8 +378,8 @@ export default async function SourcesPage({
         </section>
 
         {/* Methodology Link */}
-        <section className="bg-surface border border-white/10 rounded-lg p-6">
-          <p className="text-gray-400">
+        <section className="bg-surface border border-line rounded-lg p-6">
+          <p className="text-body">
             {t(loc, "sources_methodology_pre")}
             <Link
               href={`/${locale}/data-methodology`}
@@ -391,7 +391,7 @@ export default async function SourcesPage({
           </p>
         </section>
 
-        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
+        <p className="text-sm text-muted pt-4 border-t border-line">
           {t(loc, "last_updated_march")}
         </p>
       </div>

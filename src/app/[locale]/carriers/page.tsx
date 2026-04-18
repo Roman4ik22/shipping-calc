@@ -50,27 +50,27 @@ export default async function CarriersPage({
   // Featured layout for international carriers (few, important)
   const FeaturedCarrierSection = ({ title, items }: { title: string; items: typeof carriers }) => (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold text-white mb-5">{title}</h2>
+      <h2 className="text-2xl font-bold text-ink mb-5">{title}</h2>
       <div className="space-y-3">
         {items.map((carrier) => (
           <Link
             key={carrier.id}
             href={`/${locale}/carriers/${carrier.id}`}
             prefetch={false}
-            className="flex items-start gap-5 bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all"
+            className="flex items-start gap-5 bg-surface border border-line rounded-lg p-5 hover:border-accent/50 transition-all"
           >
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="font-semibold text-white text-lg">{carrier.name}</h3>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full border ${typeBadgeColor[carrier.type] ?? "bg-gray-500/20 text-gray-300 border-gray-500/30"}`}>
+                <h3 className="font-semibold text-ink text-lg">{carrier.name}</h3>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full border ${typeBadgeColor[carrier.type] ?? "bg-gray-500/20 text-body border-gray-500/30"}`}>
                   {carrier.type}
                 </span>
               </div>
-              <p className="text-sm text-gray-400">{getCarrierDescription(carrier, loc)}</p>
+              <p className="text-sm text-body">{getCarrierDescription(carrier, loc)}</p>
             </div>
             <div className="flex flex-wrap gap-1 max-w-xs shrink-0">
               {carrier.services.map((s) => (
-                <span key={s.id} className="px-2 py-0.5 bg-white/5 text-gray-500 text-xs rounded">{s.name}</span>
+                <span key={s.id} className="px-2 py-0.5 bg-white/5 text-muted text-xs rounded">{s.name}</span>
               ))}
             </div>
           </Link>
@@ -82,7 +82,7 @@ export default async function CarriersPage({
   // Compact layout for regional/postal (many, less detail needed)
   const CompactCarrierSection = ({ title, items }: { title: string; items: typeof carriers }) => (
     <section className="mb-10">
-      <h2 className="text-xl font-bold text-white mb-4">{title} <span className="text-sm font-normal text-gray-600">({items.length})</span></h2>
+      <h2 className="text-xl font-bold text-ink mb-4">{title} <span className="text-sm font-normal text-muted">({items.length})</span></h2>
       <ExpandableGrid
         visibleCount={12}
         showMoreLabel={t(loc, "show_all")}
@@ -96,8 +96,8 @@ export default async function CarriersPage({
             prefetch={false}
             className="flex items-center gap-2 bg-card hover:bg-card-hover rounded-lg px-4 py-3 transition-colors"
           >
-            <span className="font-medium text-white text-sm">{carrier.name}</span>
-            <span className="text-xs text-gray-600">{carrier.services.length} {t(loc, "svc_short")}</span>
+            <span className="font-medium text-ink text-sm">{carrier.name}</span>
+            <span className="text-xs text-muted">{carrier.services.length} {t(loc, "svc_short")}</span>
           </Link>
         ))}
       </ExpandableGrid>
@@ -106,7 +106,7 @@ export default async function CarriersPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-white mb-8">
+      <h1 className="text-3xl font-bold text-ink mb-8">
         {t(loc, "all_carriers")}
       </h1>
 

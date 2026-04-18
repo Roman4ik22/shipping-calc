@@ -68,24 +68,24 @@ export default async function BlogPage({
 
       {/* Breadcrumbs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <nav className="flex items-center gap-2 text-sm text-gray-400">
+        <nav className="flex items-center gap-2 text-sm text-body">
           <Link
             href={`/${locale}`}
-            className="hover:text-white transition-colors"
+            className="hover:text-ink transition-colors"
           >
             {t(loc, "home")}
           </Link>
           <span>/</span>
-          <span className="text-white">{t(loc, "blog")}</span>
+          <span className="text-ink">{t(loc, "blog")}</span>
         </nav>
       </div>
 
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-3">
           {t(loc, "blog_title")}
         </h1>
-        <p className="text-lg text-gray-400 max-w-2xl">
+        <p className="text-lg text-body max-w-2xl">
           {t(loc, "blog_description")}
         </p>
       </div>
@@ -104,13 +104,13 @@ export default async function BlogPage({
               <Link
                 key={post.id}
                 href={`/${locale}/blog/${post.id}`}
-                className={`group bg-surface rounded-xl border border-white/10 p-6 hover:border-accent-light/30 hover:translate-y-[-2px] transition-all duration-200 ${
+                className={`group bg-surface rounded-xl border border-line p-6 hover:border-accent-light/30 hover:translate-y-[-2px] transition-all duration-200 ${
                   index === 0 ? "md:col-span-2 lg:col-span-2" : ""
                 }`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <time
-                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent-light" : "text-xs text-gray-500"}`}
+                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent-light" : "text-xs text-muted"}`}
                     dateTime={post.date}
                   >
                     {new Date(post.date).toLocaleDateString(
@@ -129,16 +129,16 @@ export default async function BlogPage({
                     </span>
                   ))}
                 </div>
-                <h2 className={`font-semibold text-white mb-2 group-hover:text-accent-light transition-colors ${
+                <h2 className={`font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors ${
                   index === 0 ? "text-xl" : "text-lg"
                 }`}>
                   {loc === "ru" ? post.title_ru : post.title_en}
                 </h2>
-                <p className={`text-sm text-gray-400 mb-4 ${index === 0 ? "line-clamp-4" : "line-clamp-3"}`}>
+                <p className={`text-sm text-body mb-4 ${index === 0 ? "line-clamp-4" : "line-clamp-3"}`}>
                   {loc === "ru" ? post.excerpt_ru : post.excerpt_en}
                 </p>
                 <div className="flex items-center justify-end">
-                  <span className="text-sm text-accent-light group-hover:text-white transition-colors">
+                  <span className="text-sm text-accent-light group-hover:text-ink transition-colors">
                     {t(loc, "read_more")} &rarr;
                   </span>
                 </div>

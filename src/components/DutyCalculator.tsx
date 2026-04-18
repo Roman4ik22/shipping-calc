@@ -106,13 +106,13 @@ export default function DutyCalculator({
   }
 
   return (
-    <div className="bg-surface border border-white/10 rounded-xl p-6">
-      <h3 className="text-lg font-bold text-white mb-4">{labels.title}</h3>
+    <div className="bg-surface border border-line rounded-xl p-6">
+      <h3 className="text-lg font-bold text-ink mb-4">{labels.title}</h3>
 
       {/* Product category selector */}
       {dutyRates && dutyRates.length > 0 && (
         <div className="mb-4">
-          <label className="block text-sm text-gray-400 mb-1">
+          <label className="block text-sm text-body mb-1">
             {locale === "ru" ? "Категория товара" : "Product category"}
           </label>
           <select
@@ -121,7 +121,7 @@ export default function DutyCalculator({
               setSelectedCategory(e.target.value);
               setResult(null);
             }}
-            className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+            className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
           >
             <option value="">
               {locale === "ru"
@@ -140,11 +140,11 @@ export default function DutyCalculator({
       {/* Input row */}
       <div className="flex flex-col sm:flex-row gap-3 mb-4">
         <div className="flex-1">
-          <label className="block text-sm text-gray-400 mb-1">
+          <label className="block text-sm text-body mb-1">
             {labels.item_value} ({labels.currency_label}: USD)
           </label>
           <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-body">
               $
             </span>
             <input
@@ -155,14 +155,14 @@ export default function DutyCalculator({
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="0.00"
-              className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+              className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
             />
           </div>
         </div>
         <div className="flex items-end">
           <button
             onClick={handleCalculate}
-            className="w-full sm:w-auto px-6 py-2.5 bg-accent text-white font-medium rounded-lg hover:bg-accent/90 transition-colors"
+            className="w-full sm:w-auto px-6 py-2.5 bg-accent text-ink font-medium rounded-lg hover:bg-accent/90 transition-colors"
           >
             {labels.calculate}
           </button>
@@ -171,7 +171,7 @@ export default function DutyCalculator({
 
       {/* De minimis info */}
       {customs.de_minimis_usd > 0 && (
-        <p className="text-xs text-gray-400 mb-4">
+        <p className="text-xs text-body mb-4">
           {labels.de_minimis_note}: ${customs.de_minimis_usd} USD
         </p>
       )}
@@ -193,13 +193,13 @@ export default function DutyCalculator({
 
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-300">{labels.item_value}</span>
+              <span className="text-body">{labels.item_value}</span>
               <span className="text-gray-100 font-medium">
                 ${result.itemValue.toFixed(2)}
               </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-300">
+              <span className="text-body">
                 {labels.duty} (
                 {selectedCategory && dutyRates
                   ? `${parseDutyRate(
@@ -213,18 +213,18 @@ export default function DutyCalculator({
               </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-300">
+              <span className="text-body">
                 {labels.vat} ({customs.vat_rate}%)
               </span>
               <span className="text-gray-100 font-medium">
                 ${result.vat.toFixed(2)}
               </span>
             </div>
-            <div className="border-t border-white/10 pt-2 flex justify-between">
-              <span className="text-white font-semibold">
+            <div className="border-t border-line pt-2 flex justify-between">
+              <span className="text-ink font-semibold">
                 {labels.total_import_cost}
               </span>
-              <span className="text-white font-bold text-base">
+              <span className="text-ink font-bold text-base">
                 ${result.totalImportCost.toFixed(2)}
               </span>
             </div>
@@ -232,7 +232,7 @@ export default function DutyCalculator({
 
           {/* Country-specific notes */}
           {notes && (
-            <p className="mt-3 text-xs text-gray-400 italic">{notes}</p>
+            <p className="mt-3 text-xs text-body italic">{notes}</p>
           )}
         </div>
       )}

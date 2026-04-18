@@ -24,7 +24,7 @@ export default function TableOfContents({
 
   return (
     <nav className="mb-8 bg-card rounded-2xl p-5" aria-label="Table of contents">
-      <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+      <p className="text-xs text-muted uppercase tracking-wider mb-3">
         {isRu ? "На этой странице" : "On this page"}
       </p>
       <div className="flex flex-wrap gap-2 text-sm">
@@ -35,14 +35,14 @@ export default function TableOfContents({
             onClick={() =>
               document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })
             }
-            className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors cursor-pointer"
+            className="px-3 py-1.5 bg-card-hover rounded-full text-body hover:text-ink transition-colors cursor-pointer"
           >
             {item.label}
           </button>
         ))}
         <Link
           href={customsGuideHref}
-          className="px-3 py-1.5 bg-card-hover rounded-full text-gray-400 hover:text-white transition-colors"
+          className="px-3 py-1.5 bg-card-hover rounded-full text-body hover:text-ink transition-colors"
         >
           {isRu ? "Подробнее о таможне" : "Full Customs Guide"}
         </Link>

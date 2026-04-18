@@ -82,7 +82,7 @@ export default async function DeliveryEstimatorPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
@@ -91,15 +91,15 @@ export default async function DeliveryEstimatorPage({
           {t(loc, "tools_label")}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-white">
+        <span className="text-ink">
           {t(loc, "delivery_est_breadcrumb")}
         </span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
         {t(loc, "delivery_est_page_name")}
       </h1>
-      <p className="text-gray-400 mb-8 max-w-2xl">
+      <p className="text-body mb-8 max-w-2xl">
         {t(loc, "delivery_est_body")}
       </p>
 
