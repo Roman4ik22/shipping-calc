@@ -129,6 +129,29 @@ const CUSTOMS_SOURCES: CustomsSource[] = [
   { country: "Philippines", authority: "Bureau of Customs", url: "https://customs.gov.ph/", tradeAgreement: "RCEP, ASEAN" },
 ];
 
+const cardStyle: React.CSSProperties = {
+  background: "white",
+  border: "1px solid var(--line)",
+  borderRadius: 16,
+  padding: 24,
+};
+
+const thStyle: React.CSSProperties = {
+  textAlign: "left" as const,
+  padding: "12px 16px",
+  color: "var(--body)",
+  fontWeight: 500,
+  fontSize: 13,
+  borderBottom: "1px solid var(--line)",
+  background: "var(--bg)",
+};
+
+const tdStyle: React.CSSProperties = {
+  padding: "12px 16px",
+  borderBottom: "1px solid var(--line)",
+  fontSize: 14,
+};
+
 export default async function SourcesPage({
   params,
 }: {
@@ -138,7 +161,7 @@ export default async function SourcesPage({
   const loc = locale as Locale;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -163,238 +186,402 @@ export default async function SourcesPage({
         }}
       />
 
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">
-          {t(loc, "sources_breadcrumb")}
-        </span>
-      </nav>
+      {/* Hero Section */}
+      <section
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          background: "linear-gradient(140deg, #fef3c7 0%, #fefce8 35%, #ecfccb 100%)",
+          backgroundImage: `linear-gradient(140deg, #fef3c7 0%, #fefce8 35%, #ecfccb 100%),
+            linear-gradient(rgba(217,119,6,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(217,119,6,0.04) 1px, transparent 1px)`,
+          backgroundSize: "100% 100%, 30px 30px, 30px 30px",
+          padding: "80px 24px 60px",
+        }}
+      >
+        {/* Floating link/chain icon */}
+        <div
+          style={{
+            position: "absolute",
+            top: 38,
+            right: "14%",
+            animation: "floatSources 7s ease-in-out infinite",
+          }}
+        >
+          <div
+            style={{
+              width: 28,
+              height: 28,
+              borderRadius: "50%",
+              border: "3px solid rgba(217,119,6,0.2)",
+              background: "transparent",
+              position: "relative",
+            }}
+          />
+          <div
+            style={{
+              width: 28,
+              height: 28,
+              borderRadius: "50%",
+              border: "3px solid rgba(217,119,6,0.15)",
+              background: "transparent",
+              position: "relative",
+              top: -14,
+              left: 18,
+            }}
+          />
+        </div>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
-        {t(loc, "sources_h1")}
-      </h1>
-      <p className="text-body mb-8 text-lg">
-        {t(loc, "sources_intro")}
-      </p>
+        {/* Small globe */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 46,
+            left: "9%",
+            width: 36,
+            height: 36,
+            borderRadius: "50%",
+            background: "rgba(34,197,94,0.08)",
+            border: "2px solid rgba(34,197,94,0.15)",
+          }}
+        >
+          <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 2, background: "rgba(34,197,94,0.12)" }} />
+          <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: 2, background: "rgba(34,197,94,0.12)" }} />
+        </div>
 
-      <div className="space-y-12 text-body leading-relaxed">
-        {/* Carrier Rate Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
-            {t(loc, "sources_carrier_title")}
-          </h2>
-          <p className="mb-4 text-sm text-body">
-            {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
+        {/* Accent square */}
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: "5%",
+            width: 20,
+            height: 20,
+            borderRadius: 4,
+            background: "rgba(59,130,246,0.10)",
+            border: "2px solid rgba(59,130,246,0.14)",
+            transform: "rotate(45deg)",
+          }}
+        />
+
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 14, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--blue)", textDecoration: "none" }}>
+              {t(loc, "home")}
+            </Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>
+              {t(loc, "sources_breadcrumb")}
+            </span>
+          </nav>
+
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontWeight: 800,
+              color: "var(--ink)",
+              margin: "0 0 12px",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.15,
+            }}
+          >
+            {t(loc, "sources_h1")}
+          </h1>
+          <p style={{ fontSize: 18, color: "var(--body)", margin: 0, maxWidth: 640 }}>
+            {t(loc, "sources_intro")}
           </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_carrier_col")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_url_col")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_verified_col")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_status_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CARRIER_SOURCES.map((c) => (
-                  <tr key={c.name} className="border-t border-line">
-                    <td className="p-3 text-ink font-medium whitespace-nowrap">
-                      {c.name}
-                    </td>
-                    <td className="p-3">
-                      <a
-                        href={c.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
-                      >
-                        {c.url
-                          .replace("https://www.", "")
-                          .replace("https://", "")
-                          .replace("http://", "")}
-                      </a>
-                    </td>
-                    <td className="p-3 text-body whitespace-nowrap text-xs">
-                      {c.lastVerified}
-                    </td>
-                    <td className="p-3">
-                      <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-medium ${
-                          c.status === "Verified"
-                            ? "text-green-400"
-                            : "text-yellow-400"
-                        }`}
-                      >
-                        <span
-                          className={`w-2 h-2 rounded-full ${
-                            c.status === "Verified"
-                              ? "bg-green-500"
-                              : "bg-yellow-500"
-                          }`}
-                        />
-                        {c.status === "Verified"
-                          ? t(loc, "sources_verified")
-                          : t(loc, "sources_estimated")}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Customs & Trade Data Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
-            {t(loc, "sources_customs_title")}
-          </h2>
-          <p className="mb-4 text-sm text-body">
-            {loc === "ru"
-              ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
-              : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-line rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_country_col")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_authority_col")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_url_col2")}
-                  </th>
-                  <th className="text-left p-3 text-body font-medium">
-                    {t(loc, "sources_trade_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CUSTOMS_SOURCES.map((c) => (
-                  <tr key={c.country} className="border-t border-line">
-                    <td className="p-3 text-ink font-medium whitespace-nowrap">
-                      {c.country}
-                    </td>
-                    <td className="p-3 text-body text-xs">{c.authority}</td>
-                    <td className="p-3">
-                      <a
-                        href={c.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
-                      >
-                        {c.url
-                          .replace("https://www.", "")
-                          .replace("https://", "")
-                          .replace("http://", "")}
-                      </a>
-                    </td>
-                    <td className="p-3 text-muted text-xs whitespace-nowrap">
-                      {c.tradeAgreement}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Exchange Rate Source */}
-        <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
-            {t(loc, "sources_exchange_title")}
-          </h2>
-          <div className="bg-surface border border-line rounded-lg p-5">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="flex-1">
-                <p className="text-ink font-semibold">
-                  {t(loc, "sources_ecb")}
-                </p>
-                <a
-                  href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
-                >
-                  ecb.europa.eu/stats/exchange/eurofxref
-                </a>
+      {/* Content */}
+      <div
+        style={{
+          maxWidth: 1240,
+          margin: "0 auto",
+          padding: "48px 24px 80px",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+          {/* Carrier Rate Sources */}
+          <section className="fade-in" style={cardStyle}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: "linear-gradient(135deg, rgba(59,130,246,0.12), rgba(59,130,246,0.05))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
               </div>
-              <div className="text-sm text-body">
-                <p>
-                  {t(loc, "sources_update_freq")}{" "}
-                  <span className="text-ink">
-                    {t(loc, "sources_daily")}
-                  </span>
-                </p>
-                <p>
-                  {t(loc, "sources_currencies")}{" "}
-                  <span className="text-ink">
-                    {t(loc, "sources_currencies_val")}
-                  </span>
-                </p>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                {t(loc, "sources_carrier_title")}
+              </h2>
+            </div>
+            <p style={{ fontSize: 14, color: "var(--body)", marginBottom: 20 }}>
+              {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
+            </p>
+            <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid var(--line)" }}>
+              <table style={{ width: "100%", fontSize: 14, borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th style={thStyle}>{t(loc, "sources_carrier_col")}</th>
+                    <th style={thStyle}>{t(loc, "sources_url_col")}</th>
+                    <th style={thStyle}>{t(loc, "sources_verified_col")}</th>
+                    <th style={thStyle}>{t(loc, "sources_status_col")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CARRIER_SOURCES.map((c) => (
+                    <tr key={c.name}>
+                      <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 500, whiteSpace: "nowrap" as const }}>
+                        {c.name}
+                      </td>
+                      <td style={tdStyle}>
+                        <a
+                          href={c.url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          style={{ color: "var(--blue)", textDecoration: "none", fontSize: 12, wordBreak: "break-all" as const }}
+                        >
+                          {c.url.replace("https://www.", "").replace("https://", "").replace("http://", "")}
+                        </a>
+                      </td>
+                      <td style={{ ...tdStyle, color: "var(--body)", whiteSpace: "nowrap" as const, fontSize: 12 }}>
+                        {c.lastVerified}
+                      </td>
+                      <td style={tdStyle}>
+                        <span
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: 6,
+                            fontSize: 12,
+                            fontWeight: 500,
+                            color: c.status === "Verified" ? "#16a34a" : "#ca8a04",
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: 8,
+                              height: 8,
+                              borderRadius: "50%",
+                              background: c.status === "Verified" ? "#22c55e" : "#eab308",
+                            }}
+                          />
+                          {c.status === "Verified"
+                            ? t(loc, "sources_verified")
+                            : t(loc, "sources_estimated")}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Customs & Trade Data Sources */}
+          <section className="fade-in" style={cardStyle}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: "linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.05))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                {t(loc, "sources_customs_title")}
+              </h2>
+            </div>
+            <p style={{ fontSize: 14, color: "var(--body)", marginBottom: 20 }}>
+              {loc === "ru"
+                ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
+                : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
+            </p>
+            <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid var(--line)" }}>
+              <table style={{ width: "100%", fontSize: 14, borderCollapse: "collapse" }}>
+                <thead>
+                  <tr>
+                    <th style={thStyle}>{t(loc, "sources_country_col")}</th>
+                    <th style={thStyle}>{t(loc, "sources_authority_col")}</th>
+                    <th style={thStyle}>{t(loc, "sources_url_col2")}</th>
+                    <th style={thStyle}>{t(loc, "sources_trade_col")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CUSTOMS_SOURCES.map((c) => (
+                    <tr key={c.country}>
+                      <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 500, whiteSpace: "nowrap" as const }}>
+                        {c.country}
+                      </td>
+                      <td style={{ ...tdStyle, color: "var(--body)", fontSize: 12 }}>{c.authority}</td>
+                      <td style={tdStyle}>
+                        <a
+                          href={c.url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          style={{ color: "var(--blue)", textDecoration: "none", fontSize: 12, wordBreak: "break-all" as const }}
+                        >
+                          {c.url.replace("https://www.", "").replace("https://", "").replace("http://", "")}
+                        </a>
+                      </td>
+                      <td style={{ ...tdStyle, color: "var(--muted)", fontSize: 12, whiteSpace: "nowrap" as const }}>
+                        {c.tradeAgreement}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Exchange Rate Source */}
+          <section className="fade-in" style={cardStyle}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: "linear-gradient(135deg, rgba(16,185,129,0.12), rgba(16,185,129,0.05))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                {t(loc, "sources_exchange_title")}
+              </h2>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 12,
+              }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap" as const, alignItems: "center", gap: 24 }}>
+                <div style={{ flex: 1, minWidth: 200 }}>
+                  <p style={{ color: "var(--ink)", fontWeight: 600, margin: "0 0 4px" }}>
+                    {t(loc, "sources_ecb")}
+                  </p>
+                  <a
+                    href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    style={{ color: "var(--blue)", textDecoration: "none", fontSize: 14 }}
+                  >
+                    ecb.europa.eu/stats/exchange/eurofxref
+                  </a>
+                </div>
+                <div style={{ fontSize: 14, color: "var(--body)" }}>
+                  <p style={{ margin: "0 0 4px" }}>
+                    {t(loc, "sources_update_freq")}{" "}
+                    <span style={{ color: "var(--ink)", fontWeight: 500 }}>{t(loc, "sources_daily")}</span>
+                  </p>
+                  <p style={{ margin: 0 }}>
+                    {t(loc, "sources_currencies")}{" "}
+                    <span style={{ color: "var(--ink)", fontWeight: 500 }}>{t(loc, "sources_currencies_val")}</span>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Review Data Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-ink mb-4">
-            {t(loc, "sources_reviews_title")}
-          </h2>
-          <div className="bg-surface border border-line rounded-lg p-5">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="flex-1">
-                <p className="text-ink font-semibold">Trustpilot</p>
+          {/* Review Data Sources */}
+          <section className="fade-in" style={cardStyle}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: "linear-gradient(135deg, rgba(139,92,246,0.12), rgba(139,92,246,0.05))",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h2 style={{ fontSize: 22, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                {t(loc, "sources_reviews_title")}
+              </h2>
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap" as const, alignItems: "center", gap: 24 }}>
+              <div style={{ flex: 1, minWidth: 200 }}>
+                <p style={{ color: "var(--ink)", fontWeight: 600, margin: "0 0 4px" }}>Trustpilot</p>
                 <a
                   href="https://www.trustpilot.com"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
+                  style={{ color: "var(--blue)", textDecoration: "none", fontSize: 14 }}
                 >
                   trustpilot.com
                 </a>
               </div>
-              <div className="text-sm text-body">
-                <p>{t(loc, "sources_reviews_desc")}</p>
+              <div style={{ fontSize: 14, color: "var(--body)" }}>
+                <p style={{ margin: 0 }}>{t(loc, "sources_reviews_desc")}</p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Methodology Link */}
-        <section className="bg-surface border border-line rounded-lg p-6">
-          <p className="text-body">
-            {t(loc, "sources_methodology_pre")}
-            <Link
-              href={`/${locale}/data-methodology`}
-              className="text-accent-light hover:underline"
-            >
-              {t(loc, "sources_methodology_link")}
-            </Link>
-            .
-          </p>
-        </section>
+          {/* Methodology Link */}
+          <section
+            className="fade-in"
+            style={{
+              ...cardStyle,
+              background: "linear-gradient(135deg, rgba(59,130,246,0.04), rgba(139,92,246,0.04))",
+              borderColor: "var(--blue)",
+              borderWidth: 1,
+            }}
+          >
+            <p style={{ color: "var(--body)", margin: 0, fontSize: 15 }}>
+              {t(loc, "sources_methodology_pre")}
+              <Link
+                href={`/${locale}/data-methodology`}
+                style={{ color: "var(--blue)", textDecoration: "none", fontWeight: 500 }}
+              >
+                {t(loc, "sources_methodology_link")}
+              </Link>
+              .
+            </p>
+          </section>
+        </div>
 
-        <p className="text-sm text-muted pt-4 border-t border-line">
+        <div
+          style={{
+            marginTop: 48,
+            paddingTop: 20,
+            borderTop: "1px solid var(--line)",
+            fontSize: 13,
+            color: "var(--muted)",
+          }}
+        >
           {t(loc, "last_updated_march")}
-        </p>
+        </div>
       </div>
+
+      <style>{`
+        @keyframes floatSources {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
+        }
+      `}</style>
     </div>
   );
 }

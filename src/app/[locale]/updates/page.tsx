@@ -125,17 +125,17 @@ const updates = [
   },
 ];
 
-const tagColors: Record<string, string> = {
-  data: "bg-green-900/50 text-green-400",
-  seo: "bg-blue-900/50 text-blue-400",
-  design: "bg-purple-900/50 text-purple-400",
-  technical: "bg-gray-700/50 text-body",
-  feature: "bg-amber-900/50 text-amber-400",
-  i18n: "bg-teal-900/50 text-teal-400",
-  launch: "bg-red-900/50 text-red-400",
-  content: "bg-orange-900/50 text-orange-400",
-  rates: "bg-emerald-900/50 text-emerald-400",
-  customs: "bg-yellow-900/50 text-yellow-400",
+const tagColors: Record<string, { bg: string; text: string }> = {
+  data: { bg: "rgba(34,197,94,0.10)", text: "#16a34a" },
+  seo: { bg: "rgba(59,130,246,0.10)", text: "#2563eb" },
+  design: { bg: "rgba(139,92,246,0.10)", text: "#7c3aed" },
+  technical: { bg: "rgba(107,114,128,0.10)", text: "#6b7280" },
+  feature: { bg: "rgba(245,158,11,0.10)", text: "#d97706" },
+  i18n: { bg: "rgba(20,184,166,0.10)", text: "#0d9488" },
+  launch: { bg: "rgba(239,68,68,0.10)", text: "#dc2626" },
+  content: { bg: "rgba(249,115,22,0.10)", text: "#ea580c" },
+  rates: { bg: "rgba(16,185,129,0.10)", text: "#059669" },
+  customs: { bg: "rgba(234,179,8,0.10)", text: "#ca8a04" },
 };
 
 export function generateStaticParams() {
@@ -204,7 +204,7 @@ export default async function UpdatesPage({
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -212,69 +212,255 @@ export default async function UpdatesPage({
         }}
       />
 
-      {/* Breadcrumb */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">{t(loc, "updates")}</span>
-      </nav>
-
-      {/* Header */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-3">
-        {t(loc, "updates_title")}
-      </h1>
-      <p className="text-body text-lg mb-10">
-        {t(loc, "updates_subtitle")}
-      </p>
-
-      {/* Entries */}
-      <div className="space-y-4">
-        {updates.map((entry, i) => (
-          <article
-            key={i}
-            className="bg-white border border-line rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4"
+      {/* Hero Section */}
+      <section
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          background: "linear-gradient(155deg, #fce7f3 0%, #fdf2f8 30%, #ede9fe 100%)",
+          backgroundImage: `linear-gradient(155deg, #fce7f3 0%, #fdf2f8 30%, #ede9fe 100%),
+            linear-gradient(rgba(168,85,247,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(168,85,247,0.04) 1px, transparent 1px)`,
+          backgroundSize: "100% 100%, 34px 34px, 34px 34px",
+          padding: "80px 24px 60px",
+        }}
+      >
+        {/* Floating rocket icon */}
+        <div
+          style={{
+            position: "absolute",
+            top: 30,
+            right: "13%",
+            animation: "floatUpdates 5s ease-in-out infinite",
+          }}
+        >
+          <div
+            style={{
+              width: 32,
+              height: 56,
+              borderRadius: "16px 16px 6px 6px",
+              background: "rgba(139,92,246,0.10)",
+              border: "2px solid rgba(139,92,246,0.18)",
+              position: "relative",
+              transform: "rotate(-20deg)",
+            }}
           >
-            {/* Date */}
-            <div className="sm:w-32 shrink-0">
-              <time
-                dateTime={entry.date}
-                className="text-sm font-medium text-muted"
-              >
-                {new Date(entry.date + "T00:00:00").toLocaleDateString(
-                  locale,
-                  {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  }
-                )}
-              </time>
-            </div>
+            <div
+              style={{
+                position: "absolute",
+                bottom: -6,
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: 0,
+                height: 0,
+                borderLeft: "8px solid transparent",
+                borderRight: "8px solid transparent",
+                borderTop: "10px solid rgba(239,68,68,0.15)",
+              }}
+            />
+          </div>
+        </div>
 
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <h2 className="text-ink font-semibold text-base mb-1">
-                {loc === "ru" ? entry.title_ru : entry.title_en}
-              </h2>
-              <p className="text-body text-sm leading-relaxed mb-3">
-                {loc === "ru" ? entry.desc_ru : entry.desc_en}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {entry.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${tagColors[tag] || "bg-gray-700/50 text-body"}`}
+        {/* Small star */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 50,
+            left: "10%",
+            width: 24,
+            height: 24,
+            background: "rgba(245,158,11,0.12)",
+            clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+          }}
+        />
+
+        {/* Warm circle */}
+        <div
+          style={{
+            position: "absolute",
+            top: "55%",
+            right: "6%",
+            width: 22,
+            height: 22,
+            borderRadius: "50%",
+            background: "rgba(251,146,60,0.12)",
+            border: "2px solid rgba(251,146,60,0.18)",
+          }}
+        />
+
+        {/* Extra floating dot */}
+        <div
+          style={{
+            position: "absolute",
+            top: "30%",
+            left: "5%",
+            width: 12,
+            height: 12,
+            borderRadius: "50%",
+            background: "rgba(139,92,246,0.08)",
+          }}
+        />
+
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 14, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--blue)", textDecoration: "none" }}>
+              {t(loc, "home")}
+            </Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "updates")}</span>
+          </nav>
+
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontWeight: 800,
+              color: "var(--ink)",
+              margin: "0 0 12px",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.15,
+            }}
+          >
+            {t(loc, "updates_title")}
+          </h1>
+          <p style={{ fontSize: 18, color: "var(--body)", margin: 0, maxWidth: 640 }}>
+            {t(loc, "updates_subtitle")}
+          </p>
+        </div>
+      </section>
+
+      {/* Timeline Content */}
+      <div
+        style={{
+          maxWidth: 800,
+          margin: "0 auto",
+          padding: "48px 24px 80px",
+        }}
+      >
+        <div style={{ position: "relative" }}>
+          {/* Timeline vertical line */}
+          <div
+            style={{
+              position: "absolute",
+              left: 19,
+              top: 0,
+              bottom: 0,
+              width: 2,
+              background: "var(--line)",
+            }}
+          />
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            {updates.map((entry, i) => (
+              <article
+                key={i}
+                className="fade-in"
+                style={{
+                  position: "relative",
+                  paddingLeft: 52,
+                }}
+              >
+                {/* Timeline dot */}
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 12,
+                    top: 24,
+                    width: 16,
+                    height: 16,
+                    borderRadius: "50%",
+                    background: i === 0 ? "var(--blue)" : "white",
+                    border: `2px solid ${i === 0 ? "var(--blue)" : "var(--line)"}`,
+                    zIndex: 1,
+                  }}
+                />
+
+                <div
+                  style={{
+                    background: "white",
+                    border: "1px solid var(--line)",
+                    borderRadius: 16,
+                    padding: "20px 24px",
+                  }}
+                >
+                  {/* Date */}
+                  <time
+                    dateTime={entry.date}
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 500,
+                      color: "var(--muted)",
+                      display: "block",
+                      marginBottom: 6,
+                    }}
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </article>
-        ))}
+                    {new Date(entry.date + "T00:00:00").toLocaleDateString(
+                      locale,
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }
+                    )}
+                  </time>
+
+                  {/* Title */}
+                  <h2
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 700,
+                      color: "var(--ink)",
+                      margin: "0 0 8px",
+                    }}
+                  >
+                    {loc === "ru" ? entry.title_ru : entry.title_en}
+                  </h2>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontSize: 14,
+                      color: "var(--body)",
+                      lineHeight: 1.65,
+                      margin: "0 0 12px",
+                    }}
+                  >
+                    {loc === "ru" ? entry.desc_ru : entry.desc_en}
+                  </p>
+
+                  {/* Tags */}
+                  <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 6 }}>
+                    {entry.tags.map((tag) => {
+                      const colors = tagColors[tag] || { bg: "rgba(107,114,128,0.10)", text: "#6b7280" };
+                      return (
+                        <span
+                          key={tag}
+                          style={{
+                            fontSize: 11,
+                            fontWeight: 500,
+                            padding: "3px 10px",
+                            borderRadius: 20,
+                            background: colors.bg,
+                            color: colors.text,
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <style>{`
+        @keyframes floatUpdates {
+          0%, 100% { transform: translateY(0) rotate(-20deg); }
+          50% { transform: translateY(-14px) rotate(-15deg); }
+        }
+      `}</style>
     </div>
   );
 }

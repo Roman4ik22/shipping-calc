@@ -36,7 +36,7 @@ export default async function PrivacyPage({
   const loc = locale as Locale;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -52,77 +52,199 @@ export default async function PrivacyPage({
         }}
       />
 
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">
-          {t(loc, "privacy_title")}
-        </span>
-      </nav>
+      {/* Hero Section */}
+      <section
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          background: "linear-gradient(160deg, #eef2ff 0%, #f0f4ff 35%, #e8edf8 100%)",
+          backgroundImage: `linear-gradient(160deg, #eef2ff 0%, #f0f4ff 35%, #e8edf8 100%),
+            linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px)`,
+          backgroundSize: "100% 100%, 28px 28px, 28px 28px",
+          padding: "80px 24px 60px",
+        }}
+      >
+        {/* Floating shield/lock icon */}
+        <div
+          style={{
+            position: "absolute",
+            top: 36,
+            right: "14%",
+            width: 56,
+            height: 66,
+            borderRadius: "50% 50% 8px 8px",
+            background: "rgba(99,102,241,0.10)",
+            border: "2px solid rgba(99,102,241,0.18)",
+            transform: "rotate(-6deg)",
+            animation: "floatPrivacy 7s ease-in-out infinite",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 16,
+              height: 20,
+              borderRadius: "3px 3px 10px 10px",
+              background: "rgba(99,102,241,0.25)",
+            }}
+          />
+        </div>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-6">
-        {t(loc, "privacy_title")}
-      </h1>
+        {/* Small eye shape */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 44,
+            left: "10%",
+            width: 44,
+            height: 24,
+            borderRadius: "50%",
+            background: "rgba(16,185,129,0.10)",
+            border: "2px solid rgba(16,185,129,0.18)",
+            transform: "rotate(5deg)",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: "rgba(16,185,129,0.3)",
+            }}
+          />
+        </div>
 
-      <div className="space-y-6 text-body leading-relaxed">
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s1_title")}
-          </h2>
-          <p>{t(loc, "privacy_s1_body")}</p>
-        </section>
+        {/* Extra floating dot */}
+        <div
+          style={{
+            position: "absolute",
+            top: "60%",
+            right: "6%",
+            width: 18,
+            height: 18,
+            borderRadius: "50%",
+            background: "rgba(99,102,241,0.08)",
+          }}
+        />
 
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s2_title")}
-          </h2>
-          <p>{t(loc, "privacy_s2_body")}</p>
-        </section>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 14, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--blue)", textDecoration: "none" }}>
+              {t(loc, "home")}
+            </Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>
+              {t(loc, "privacy_title")}
+            </span>
+          </nav>
 
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s3_title")}
-          </h2>
-          <p>{t(loc, "privacy_s3_body")}</p>
-        </section>
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              fontWeight: 800,
+              color: "var(--ink)",
+              margin: 0,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.15,
+            }}
+          >
+            {t(loc, "privacy_title")}
+          </h1>
+        </div>
+      </section>
 
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s4_title")}
-          </h2>
-          <p>{t(loc, "privacy_s4_body")}</p>
-        </section>
+      {/* Content */}
+      <div
+        className="fade-in"
+        style={{
+          maxWidth: 800,
+          margin: "0 auto",
+          padding: "48px 24px 80px",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+          {([1, 2, 3, 4, 5, 6] as const).map((n) => (
+            <section key={n} className="fade-in">
+              <h2
+                style={{
+                  fontSize: 20,
+                  fontWeight: 700,
+                  color: "var(--ink)",
+                  marginBottom: 12,
+                  paddingBottom: 8,
+                  borderBottom: "1px solid var(--line)",
+                }}
+              >
+                {t(loc, `privacy_s${n}_title` as any)}
+              </h2>
+              <p
+                style={{
+                  color: "var(--body)",
+                  lineHeight: 1.75,
+                  fontSize: 15,
+                  margin: 0,
+                }}
+              >
+                {t(loc, `privacy_s${n}_body` as any)}
+              </p>
+            </section>
+          ))}
 
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s5_title")}
-          </h2>
-          <p>{t(loc, "privacy_s5_body")}</p>
-        </section>
+          {/* Section 7 with email */}
+          <section className="fade-in">
+            <h2
+              style={{
+                fontSize: 20,
+                fontWeight: 700,
+                color: "var(--ink)",
+                marginBottom: 12,
+                paddingBottom: 8,
+                borderBottom: "1px solid var(--line)",
+              }}
+            >
+              {t(loc, "privacy_s7_title")}
+            </h2>
+            <p
+              style={{
+                color: "var(--body)",
+                lineHeight: 1.75,
+                fontSize: 15,
+                margin: 0,
+              }}
+            >
+              {t(loc, "privacy_s7_body")}
+              <span style={{ fontWeight: 600, color: "var(--ink)" }}>privacy@rateships.com</span>
+            </p>
+          </section>
+        </div>
 
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s6_title")}
-          </h2>
-          <p>{t(loc, "privacy_s6_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-3">
-            {t(loc, "privacy_s7_title")}
-          </h2>
-          <p>
-            {t(loc, "privacy_s7_body")}
-            <span className="font-medium text-ink">privacy@rateships.com</span>
-          </p>
-        </section>
-
-        <p className="text-sm text-muted pt-4 border-t border-line">
+        <div
+          style={{
+            marginTop: 48,
+            paddingTop: 20,
+            borderTop: "1px solid var(--line)",
+            fontSize: 13,
+            color: "var(--muted)",
+          }}
+        >
           {t(loc, "last_updated_march")}
-        </p>
+        </div>
       </div>
+
+      <style>{`
+        @keyframes floatPrivacy {
+          0%, 100% { transform: rotate(-6deg) translateY(0); }
+          50% { transform: rotate(-6deg) translateY(-14px); }
+        }
+      `}</style>
     </div>
   );
 }
