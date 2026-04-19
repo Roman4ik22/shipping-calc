@@ -1153,82 +1153,104 @@ function Testimonials(){
 }
 
 /* =============================================================
-   PRICING TEASER
+   THREE WAYS TO USE RATESHIPS
 ============================================================= */
 
-function Pricing(){
-  const [annual, setAnnual] = useState(false);
-  const tiers = [
-    { name:'Free', priceM:'$0', priceA:'$0', sub:annual?'/ year':'for everyone',
-      desc:'Rate comparison for individual shipments.',
-      features:['Compare 134+ carriers','Up to 50 quotes/month','Standard delivery estimator','Community support'],
-      cta:'Start free', variant:'default'},
-    { name:'Pro', priceM:'$29', priceA:'$23', sub: annual?'/ mo, billed annually':'/ month',
-      billed: annual?'$276 / year':null,
-      desc:'For shops and small logistics teams.',
-      features:['Unlimited quotes','Rate tables + CSV export','Customs + duty calculator','Discounted carrier rates','Email + chat support'],
-      cta:'Start 14-day trial', variant:'featured'},
-    { name:'Enterprise', priceM:'Custom', priceA:'Custom', sub:'volume pricing',
-      desc:'API-first shipping for high-volume teams.',
-      features:['REST + GraphQL API','SLA-backed uptime','Negotiated carrier contracts','SSO + audit logs','Dedicated solutions engineer'],
-      cta:'Talk to sales', variant:'default'},
+function ThreeTools(){
+  const tools = [
+    {
+      icon: <I.search width="24" height="24"/>,
+      iconBg: 'var(--blue-50)', iconColor: 'var(--blue)',
+      badge: null,
+      title: 'Compare rates',
+      stat: '134+',
+      statLabel: 'carriers',
+      desc: 'Enter origin, destination and weight — see every carrier side by side with transit time, tracking, and all-in pricing.',
+      features: ['134+ carriers across 213 countries', 'Filter by price, speed, or carrier', 'Real published tariff data', 'Updated weekly from carrier rate cards'],
+      cta: 'Start comparing', ctaHref: '#calc',
+      variant: 'default',
+    },
+    {
+      icon: <I.shield width="24" height="24"/>,
+      iconBg: 'var(--accent-50)', iconColor: 'var(--accent)',
+      badge: 'MOST USED',
+      title: 'Calculate duties',
+      stat: '213',
+      statLabel: 'countries',
+      desc: 'Know the exact landed cost before you ship — duty, VAT/GST, broker fees, and de minimis thresholds for every destination.',
+      features: ['HS-code lookup for classification', 'VAT/GST rates for all countries', 'De minimis thresholds ($800 US, €150 EU, £135 UK)', 'Trade agreement preferences (USMCA, CPTPP, RCEP)'],
+      cta: 'Calculate duties', ctaHref: '/en/tools/duty-calculator',
+      variant: 'featured',
+    },
+    {
+      icon: <I.clock width="24" height="24"/>,
+      iconBg: 'var(--warm-50)', iconColor: '#A37A00',
+      badge: null,
+      title: 'Estimate delivery',
+      stat: '45K+',
+      statLabel: 'routes',
+      desc: 'Predict when your package will actually arrive — based on carrier transit data, not marketing promises.',
+      features: ['Transit times for express, standard, economy', 'Compare speed across carriers', 'Factor in customs clearance time', 'Coverage for all 213 countries'],
+      cta: 'Estimate delivery', ctaHref: '/en/tools/delivery-estimator',
+      variant: 'default',
+    },
   ];
+
   return (
     <section style={{padding:'80px 32px'}}>
       <div style={{maxWidth:1240, margin:'0 auto'}}>
-        <SectionHead eyebrow="Pricing" title={<>Free for most people. Pays for itself for everyone else.</>} desc="Cancel or downgrade whenever. No carrier markups."/>
-        {/* Billing toggle */}
-        <div style={{display:'flex', justifyContent:'center', marginBottom:28}}>
-          <div style={{display:'inline-flex', background:'#fff', border:'1px solid var(--line)', borderRadius:999, padding:4, gap:4, boxShadow:'var(--shadow-sm)'}}>
-            <button onClick={()=>setAnnual(false)} style={{
-              padding:'8px 16px', borderRadius:999, fontSize:13, fontWeight:600,
-              background: !annual?'var(--ink)':'transparent', color: !annual?'#fff':'var(--body)',
-            }}>Monthly</button>
-            <button onClick={()=>setAnnual(true)} style={{
-              padding:'8px 16px', borderRadius:999, fontSize:13, fontWeight:600,
-              background: annual?'var(--ink)':'transparent', color: annual?'#fff':'var(--body)',
-              display:'inline-flex', alignItems:'center', gap:8
-            }}>Annual <span style={{fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:4, background:'var(--good-50)', color:'var(--good)'}}>Save 20%</span></button>
-          </div>
-        </div>
+        <SectionHead eyebrow="Three tools, one platform" title={<>Everything you need to ship internationally.</>} desc="Free for everyone. No signup required. No carrier commissions."/>
         <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:20}} className="tools-grid">
-          {tiers.map((t,i)=>{
-            const price = annual? t.priceA : t.priceM;
-            return (
-              <div key={t.name} className="pricing-card" style={{
-                background: t.variant==='featured'?'var(--ink)':'#fff',
-                color: t.variant==='featured'?'#fff':'var(--ink)',
-                borderRadius:20, border:'1px solid '+(t.variant==='featured'?'var(--ink)':'var(--line)'),
-                padding:28, position:'relative',
-                boxShadow: t.variant==='featured'?'0 20px 40px -10px rgba(15,23,42,.3)':'var(--shadow-sm)',
-                transition:'transform .2s, box-shadow .2s'
-              }}>
-                {t.variant==='featured' && (
-                  <div style={{position:'absolute', top:-12, left:28, padding:'4px 10px', borderRadius:999, fontSize:11, fontWeight:700, background:'var(--warm)', color:'var(--ink)'}}>MOST POPULAR</div>
-                )}
-                <h3 style={{margin:0, fontSize:18, fontWeight:700}}>{t.name}</h3>
-                <div style={{margin:'12px 0 4px', display:'flex', alignItems:'baseline', gap:6}}>
-                  <span className="tnum" style={{fontSize:44, fontWeight:800, letterSpacing:'-.03em', lineHeight:1}}>{price}</span>
-                  <span style={{fontSize:14, color: t.variant==='featured'?'rgba(255,255,255,.6)':'var(--muted)'}}>{t.sub}</span>
+          {tools.map((t,i)=>(
+            <div key={t.title} className="card-hover" style={{
+              background: t.variant==='featured'?'var(--ink)':'#fff',
+              color: t.variant==='featured'?'#fff':'var(--ink)',
+              borderRadius:20, border:'1px solid '+(t.variant==='featured'?'var(--ink)':'var(--line)'),
+              padding:28, position:'relative',
+              boxShadow: t.variant==='featured'?'0 20px 40px -10px rgba(15,23,42,.3)':'var(--shadow-sm)',
+              display:'flex', flexDirection:'column', gap:16,
+              transition:'transform .25s, box-shadow .25s'
+            }}>
+              {t.badge && (
+                <div style={{position:'absolute', top:-12, left:28, padding:'4px 10px', borderRadius:999, fontSize:11, fontWeight:700, background:'var(--warm)', color:'var(--ink)', letterSpacing:'.04em'}}>{t.badge}</div>
+              )}
+
+              <div style={{display:'flex', alignItems:'center', gap:12}}>
+                <div style={{
+                  width:48, height:48, borderRadius:14,
+                  background: t.variant==='featured'?'rgba(255,255,255,.1)':t.iconBg,
+                  color: t.variant==='featured'?'var(--warm)':t.iconColor,
+                  display:'grid', placeItems:'center'
+                }}>{t.icon}</div>
+                <div>
+                  <h3 style={{margin:0, fontSize:20, fontWeight:700}}>{t.title}</h3>
                 </div>
-                {annual && t.billed && <div style={{fontSize:12, color: t.variant==='featured'?'rgba(255,255,255,.55)':'var(--muted)'}}>Billed annually · {t.billed}</div>}
-                <p style={{margin:'8px 0 20px', fontSize:14, color: t.variant==='featured'?'rgba(255,255,255,.7)':'var(--body)'}}>{t.desc}</p>
-                <div style={{display:'flex', flexDirection:'column', gap:10, marginBottom:22}}>
-                  {t.features.map(f=>(
-                    <div key={f} style={{display:'flex', gap:10, fontSize:14}}>
-                      <I.check width="16" height="16" style={{color: t.variant==='featured'?'var(--warm)':'var(--blue)', flex:'0 0 16px', marginTop:3}}/>
-                      <span>{f}</span>
-                    </div>
-                  ))}
-                </div>
-                <button style={{
-                  width:'100%', padding:'12px', borderRadius:12, fontWeight:600, fontSize:14,
-                  background: t.variant==='featured'?'var(--warm)':'var(--ink)',
-                  color: t.variant==='featured'?'var(--ink)':'#fff'
-                }}>{t.cta}</button>
               </div>
-            );
-          })}
+
+              <div style={{display:'flex', alignItems:'baseline', gap:6}}>
+                <span className="tnum" style={{fontSize:40, fontWeight:800, letterSpacing:'-.03em', lineHeight:1, color: t.variant==='featured'?'var(--warm)':'var(--blue)'}}>{t.stat}</span>
+                <span style={{fontSize:14, color: t.variant==='featured'?'rgba(255,255,255,.6)':'var(--muted)'}}>{t.statLabel}</span>
+              </div>
+
+              <p style={{margin:0, fontSize:14, color: t.variant==='featured'?'rgba(255,255,255,.7)':'var(--body)', lineHeight:1.55}}>{t.desc}</p>
+
+              <div style={{display:'flex', flexDirection:'column', gap:10, flex:1}}>
+                {t.features.map(f=>(
+                  <div key={f} style={{display:'flex', gap:10, fontSize:13}}>
+                    <I.check width="15" height="15" style={{color: t.variant==='featured'?'var(--warm)':'var(--blue)', flex:'0 0 15px', marginTop:2}}/>
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a href={t.ctaHref} className="btn-press" style={{
+                display:'block', width:'100%', padding:'12px', borderRadius:12, fontWeight:600, fontSize:14, textAlign:'center',
+                background: t.variant==='featured'?'var(--warm)':'var(--ink)',
+                color: t.variant==='featured'?'var(--ink)':'#fff',
+                textDecoration:'none'
+              }}>{t.cta}</a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -1627,7 +1649,7 @@ export default function App(){
       <HowItWorks/>
       <Comparison/>
       <Testimonials/>
-      <Pricing/>
+      <ThreeTools/>
       <FAQ/>
       <Transparency/>
       <FinalCTA/>
