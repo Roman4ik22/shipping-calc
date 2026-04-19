@@ -71,7 +71,7 @@ export default async function BlogPage({
         <nav className="flex items-center gap-2 text-sm text-body">
           <Link
             href={`/${locale}`}
-            className="hover:text-ink transition-colors"
+            className="hover:text-ink transition-colors card-hover"
           >
             {t(loc, "home")}
           </Link>
@@ -138,7 +138,7 @@ export default async function BlogPage({
                   {loc === "ru" ? post.excerpt_ru : post.excerpt_en}
                 </p>
                 <div className="flex items-center justify-end">
-                  <span className="text-sm text-accent-light group-hover:text-ink transition-colors">
+                  <span className="text-sm text-accent-light group-hover:text-ink transition-colors card-hover">
                     {t(loc, "read_more")} &rarr;
                   </span>
                 </div>

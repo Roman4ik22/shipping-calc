@@ -451,20 +451,20 @@ export default async function CorridorPage({
       {/* Source note */}
       <p className="text-xs text-muted py-3 border-t border-line">
         {t(loc, "source_note") + " "}
-        <Link href={`/${locale}/data-methodology`} className="text-muted hover:text-ink transition-colors">
+        <Link href={`/${locale}/data-methodology`} className="text-muted hover:text-ink transition-colors card-hover">
           {t(loc, "how_we_collect")}
         </Link>
       </p>
 
       {/* Related tools */}
       <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 mb-4 text-sm">
-        <Link href={`/${locale}/tools/duty-calculator`} className="text-muted hover:text-ink transition-colors">
+        <Link href={`/${locale}/tools/duty-calculator`} className="text-muted hover:text-ink transition-colors card-hover">
           {t(loc, "duty_calculator_link")} &rarr;
         </Link>
-        <Link href={`/${locale}/tools/delivery-estimator`} className="text-muted hover:text-ink transition-colors">
+        <Link href={`/${locale}/tools/delivery-estimator`} className="text-muted hover:text-ink transition-colors card-hover">
           {t(loc, "delivery_estimator_link")} &rarr;
         </Link>
-        <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-muted hover:text-ink transition-colors">
+        <Link href={`/${locale}/customs/${destination.slug_en}`} className="text-muted hover:text-ink transition-colors card-hover">
           {t(loc, "customs_link", { country: destName })} &rarr;
         </Link>
       </div>
@@ -546,7 +546,7 @@ export default async function CorridorPage({
                   href={cr.carrier.tracking_url}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="flex items-center gap-2 text-sm text-body hover:text-ink py-2 transition-colors"
+                  className="flex items-center gap-2 text-sm text-body hover:text-ink py-2 transition-colors card-hover"
                 >
                   <span className="text-muted">↗</span>
                   {cr.carrier.name} — {t(loc, "track_link")}
@@ -606,7 +606,7 @@ export default async function CorridorPage({
                     </thead>
                     <tbody className="divide-y divide-white/5">
                       {corridorInfo.duty_table.map((row, i) => (
-                        <tr key={i} className="text-body hover:bg-white/[0.02] transition-colors">
+                        <tr key={i} className="text-body hover:bg-white/[0.02] transition-colors card-hover">
                           <td className="py-3 pr-4">{row.category}</td>
                           <td className="py-3 pr-4 text-muted font-mono text-xs">{row.hs}</td>
                           <td className="py-3 font-medium text-ink">{row.rate}</td>
@@ -899,7 +899,7 @@ export default async function CorridorPage({
                 <Link
                   key={c.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(origin, c, loc)}`}
-                  className="bg-white hover:bg-[#F8F5EF] rounded-lg px-3 py-2 transition-colors text-sm text-body hover:text-ink"
+                  className="bg-white hover:bg-[#F8F5EF] card-hover rounded-lg px-3 py-2 transition-colors text-sm text-body hover:text-ink"
                 >
                   {countryFlag(c.code)} {getCountryName(c, loc)}
                 </Link>
@@ -943,7 +943,7 @@ export default async function CorridorPage({
                 <Link
                   key={carrierId}
                   href={`/${locale}/carriers/${carrierId}`}
-                  className="text-sm bg-white hover:bg-[#F8F5EF] rounded-full px-4 py-2 hover:text-accent-light transition-colors"
+                  className="text-sm bg-white hover:bg-[#F8F5EF] card-hover rounded-full px-4 py-2 hover:text-accent-light transition-colors card-hover"
                 >
                   {carrier.name}
                 </Link>
@@ -1215,7 +1215,7 @@ export default async function CorridorPage({
         </p>
         <Link
           href={`/${locale}`}
-          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="inline-block px-8 py-3 bg-accent text-white btn-press text-sm font-medium rounded-full hover:bg-accent-dark transition-colors card-hover"
         >
           {t(loc, "find_route")}
         </Link>

@@ -102,9 +102,9 @@ export default async function ToolsIndexPage({
           <Link
             key={tool.href}
             href={tool.href}
-            className="group block bg-surface border border-line rounded-xl p-6 hover:border-accent/40 transition-colors"
+            className="group block bg-surface border border-line rounded-xl p-6 hover:border-accent/40 transition-colors card-hover"
           >
-            <h2 className="text-xl font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors">
+            <h2 className="text-xl font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors card-hover">
               {tool.title}
             </h2>
             <p className="text-sm text-body">{tool.description}</p>

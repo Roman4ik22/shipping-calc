@@ -125,7 +125,7 @@ export default async function GuidePage({
           <div className="flex flex-wrap gap-3">
             <Link
               href={`/${locale}/shipping/to/${country.slug_en}`}
-              className="px-4 py-2 bg-[#1A73E8] text-white rounded-lg text-sm hover:brightness-110"
+              className="px-4 py-2 bg-[#1A73E8] text-white btn-press rounded-lg text-sm hover:brightness-110"
             >
               {t(loc, "ship_to", { country: name })}
             </Link>
@@ -396,7 +396,7 @@ export default async function GuidePage({
                   key={from.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
                   prefetch={false}
-                  className="bg-surface hover:bg-white rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors"
+                  className="bg-surface hover:bg-white rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors card-hover"
                 >
                   {countryFlag(from.code)} {getCountryName(from, loc)} → {name}
                 </Link>
@@ -488,7 +488,7 @@ export default async function GuidePage({
         </p>
         <Link
           href={`/${locale}`}
-          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="inline-block px-8 py-3 bg-accent text-white btn-press text-sm font-medium rounded-full hover:bg-accent-dark transition-colors card-hover"
         >
           {t(loc, "compare_rates_cta")}
         </Link>

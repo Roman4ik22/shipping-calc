@@ -212,7 +212,7 @@ export default async function CustomsCountryPage({
             </Link>
             <Link
               href={`/${locale}/shipping/to/${country.slug_en}`}
-              className="px-4 py-2 bg-[#1A73E8] text-white rounded-lg text-sm hover:brightness-110"
+              className="px-4 py-2 bg-[#1A73E8] text-white btn-press rounded-lg text-sm hover:brightness-110"
             >
               {t(loc, "ship_to", { country: name })}
             </Link>

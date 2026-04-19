@@ -15,13 +15,13 @@ export default function NotFound() {
       <div className="flex flex-wrap justify-center gap-4">
         <Link
           href="/en"
-          className="px-8 py-3 bg-accent text-white font-medium rounded-full hover:bg-accent-dark transition-colors"
+          className="px-8 py-3 bg-accent text-white btn-press font-medium rounded-full hover:bg-accent-dark transition-colors card-hover"
         >
           Go to homepage
         </Link>
         <Link
           href="/en/tools/duty-calculator"
-          className="px-8 py-3 bg-card text-gray-300 font-medium rounded-2xl hover:bg-card-hover transition-colors"
+          className="px-8 py-3 bg-card text-gray-300 font-medium rounded-2xl hover:bg-card-hover transition-colors card-hover"
         >
           Duty calculator
         </Link>

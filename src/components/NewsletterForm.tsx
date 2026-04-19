@@ -47,7 +47,7 @@ export default function NewsletterForm({
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-accent text-white font-semibold rounded-lg text-sm hover:bg-[#1558B8] transition-colors"
+        className="px-6 py-3 bg-accent text-white btn-press font-semibold rounded-lg text-sm hover:bg-[#1558B8] transition-colors"
       >
         {labels.subscribe}
       </button>

@@ -16,6 +16,7 @@ import Analytics from "@/components/Analytics";
 import AdSense from "@/components/AdSense";
 import WebVitals from "@/components/WebVitals";
 import ServiceWorker from "@/components/ServiceWorker";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -106,6 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AdSense />
         <WebVitals />
         <ServiceWorker />
+        <ScrollAnimations />
         {/* WebSite + Organization JSON-LD (on every page) */}
         <script
           type="application/ld+json"

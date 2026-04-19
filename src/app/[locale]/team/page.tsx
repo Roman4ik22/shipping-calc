@@ -261,7 +261,7 @@ export default async function TeamPage({
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             href={`/${locale}/data-methodology`}
-            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors"
+            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors card-hover"
           >
             <p className="text-ink font-semibold mb-1">
               {t(loc, "team_data_methodology")}
@@ -272,7 +272,7 @@ export default async function TeamPage({
           </Link>
           <Link
             href={`/${locale}/sources`}
-            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors"
+            className="bg-surface border border-line rounded-lg p-5 hover:border-accent-light/30 transition-colors card-hover"
           >
             <p className="text-ink font-semibold mb-1">
               {t(loc, "team_data_sources")}

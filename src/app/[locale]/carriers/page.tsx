@@ -94,7 +94,7 @@ export default async function CarriersPage({
             key={carrier.id}
             href={`/${locale}/carriers/${carrier.id}`}
             prefetch={false}
-            className="flex items-center gap-2 bg-white border border-line hover:bg-[#F8F5EF] rounded-lg px-4 py-3 transition-colors"
+            className="flex items-center gap-2 bg-white border border-line hover:bg-[#F8F5EF] card-hover rounded-lg px-4 py-3 transition-colors card-hover"
           >
             <span className="font-medium text-ink text-sm">{carrier.name}</span>
             <span className="text-xs text-muted">{carrier.services.length} {t(loc, "svc_short")}</span>

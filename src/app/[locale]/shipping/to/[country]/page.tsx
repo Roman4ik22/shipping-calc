@@ -136,7 +136,7 @@ export default async function ToCountryPage({
             .slice(3, 12)
             .map((orig) => (
               <Link key={orig.code} href={`/${locale}/shipping/${makeCorridorSlug(orig, country, loc)}`} prefetch={false}
-                className="bg-white hover:bg-[#F8F5EF] rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors">
+                className="bg-white hover:bg-[#F8F5EF] card-hover rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors card-hover">
                 {countryFlag(orig.code)} {getCountryName(orig, loc)} → {name}
               </Link>
             ))}

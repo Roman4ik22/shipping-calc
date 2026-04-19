@@ -423,7 +423,7 @@ export default function RateTable({
                 aria-pressed={selectedPreset === w && !customWeight}
                 className={`px-4 py-2.5 text-sm rounded-xl transition-colors ${
                   selectedPreset === w && !customWeight
-                    ? "bg-accent text-white font-medium"
+                    ? "bg-accent text-white btn-press font-medium"
                     : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
                 }`}
               >
@@ -550,7 +550,7 @@ export default function RateTable({
             aria-pressed={sortBy === "price"}
             aria-sort={sortBy === "price" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "price" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "price" ? "bg-accent text-white btn-press" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.price}
@@ -560,7 +560,7 @@ export default function RateTable({
             aria-pressed={sortBy === "speed"}
             aria-sort={sortBy === "speed" ? "ascending" : undefined}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "speed" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "speed" ? "bg-accent text-white btn-press" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.delivery_time}
@@ -569,7 +569,7 @@ export default function RateTable({
             onClick={() => setSortBy("reliability")}
             aria-pressed={sortBy === "reliability"}
             className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-              sortBy === "reliability" ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
+              sortBy === "reliability" ? "bg-accent text-white btn-press" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
             }`}
           >
             {labels.route_reliability || "Route"}
@@ -584,7 +584,7 @@ export default function RateTable({
               onClick={() => setFilterType(opt.value)}
               aria-pressed={filterType === opt.value}
               className={`px-3 py-1.5 text-sm rounded-xl transition-colors ${
-                filterType === opt.value ? "bg-accent text-white" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
+                filterType === opt.value ? "bg-accent text-white btn-press" : "bg-white border border-line text-body hover:bg-[#F8F5EF] hover:text-body"
               }`}
             >
               {opt.label}
@@ -749,7 +749,7 @@ export default function RateTable({
                     href={rate.carrier_website}
                     target="_blank"
                     rel="noopener noreferrer nofollow sponsored"
-                    className="px-6 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-[#1558B8] transition-colors"
+                    className="px-6 py-2.5 bg-accent text-white btn-press text-sm font-medium rounded-full hover:bg-[#1558B8] transition-colors"
                   >
                     {labels.ship_now || "Ship Now"}
                   </a>

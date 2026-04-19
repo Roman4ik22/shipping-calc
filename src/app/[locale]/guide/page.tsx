@@ -81,7 +81,7 @@ export default async function GuidesPage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-2 bg-white border border-line hover:bg-[#F8F5EF] rounded-lg px-3 py-2 transition-colors text-sm"
+              className="flex items-center gap-2 bg-white border border-line hover:bg-[#F8F5EF] card-hover rounded-lg px-3 py-2 transition-colors text-sm"
             >
               <span className="text-lg">{countryFlag(c.code)}</span>
               <span className="text-body">{getCountryName(c, loc)}</span>

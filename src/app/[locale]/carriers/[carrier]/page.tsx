@@ -148,7 +148,7 @@ export default async function CarrierPage({
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-accent-light hover:text-ink transition-colors"
+                    className="text-sm text-accent-light hover:text-ink transition-colors card-hover"
                   >
                     {reviews >= 1000 ? `${(reviews / 1000).toFixed(1)}K` : reviews} reviews →
                   </a>
@@ -162,7 +162,7 @@ export default async function CarrierPage({
               href={carrier.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-accent text-white rounded-lg text-sm hover:bg-accent-dark transition-colors"
+              className="px-4 py-2 bg-accent text-white btn-press rounded-lg text-sm hover:bg-accent-dark transition-colors card-hover"
             >
               {t(loc, "official_website")}
             </a>

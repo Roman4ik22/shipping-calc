@@ -167,7 +167,7 @@ export default async function PlatformsPage({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-ink transition-colors">
+        <Link href={`/${locale}`} className="hover:text-ink transition-colors card-hover">
           {t(loc, "home")}
         </Link>
         <span>/</span>

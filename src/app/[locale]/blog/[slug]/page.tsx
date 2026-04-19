@@ -308,14 +308,14 @@ export default async function BlogPostPage({
           <nav className="flex items-center gap-2 text-sm text-body mb-6">
             <Link
               href={`/${locale}`}
-              className="hover:text-ink transition-colors"
+              className="hover:text-ink transition-colors card-hover"
             >
               {t(loc, "home")}
             </Link>
             <span>/</span>
             <Link
               href={`/${locale}/blog`}
-              className="hover:text-ink transition-colors"
+              className="hover:text-ink transition-colors card-hover"
             >
               {t(loc, "blog")}
             </Link>
@@ -395,7 +395,7 @@ export default async function BlogPostPage({
                   className="group bg-white rounded-xl p-5 hover:border-accent-light/30 transition-all duration-200"
                   style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}
                 >
-                  <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors">
+                  <h3 className="text-base font-semibold text-ink mb-2 group-hover:text-accent-light transition-colors card-hover">
                     {loc === "ru" ? related.title_ru : related.title_en}
                   </h3>
                   <p className="text-sm text-body line-clamp-2 mb-3">
@@ -441,7 +441,7 @@ export default async function BlogPostPage({
                       className="group bg-white rounded-xl p-5 hover:border-accent-light/30 transition-all duration-200"
                       style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}
                     >
-                      <p className="text-base font-semibold text-ink group-hover:text-accent-light transition-colors">
+                      <p className="text-base font-semibold text-ink group-hover:text-accent-light transition-colors card-hover">
                         {oName} → {dName}
                       </p>
                       <p className="text-sm text-body mt-1">
