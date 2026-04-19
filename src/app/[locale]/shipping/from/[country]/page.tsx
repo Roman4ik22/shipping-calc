@@ -81,26 +81,43 @@ export default async function FromCountryPage({
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">
-          {t(loc, "ship_from", { country: name })}
-        </span>
-      </nav>
+    <div>
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-line" style={{
+        backgroundImage: `
+          radial-gradient(900px 400px at 70% -10%, rgba(26,115,232,.08), transparent 60%),
+          radial-gradient(600px 300px at -5% 50%, rgba(232,92,58,.05), transparent 60%),
+          linear-gradient(var(--line-2) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line-2) 1px, transparent 1px)`,
+        backgroundSize: 'auto, auto, 48px 48px, 48px 48px',
+        maskImage: 'linear-gradient(180deg, #000 60%, transparent 100%)'
+      }}>
+        <div aria-hidden className="hero-shape-a absolute hidden md:block" style={{top:'20%', right:'8%', width:60, height:60, borderRadius:14, background:'linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)', transform:'rotate(-8deg)', boxShadow:'0 14px 30px -8px rgba(242,201,76,.4)', opacity:0.7}} />
+        <div aria-hidden className="hero-shape-b absolute hidden md:block" style={{bottom:'25%', right:'18%', width:40, height:40, borderRadius:10, background:'var(--accent)', transform:'rotate(12deg)', opacity:0.6, boxShadow:'0 10px 20px -6px rgba(232,92,58,.4)'}} />
 
-      <h1 className="text-3xl font-bold text-white mb-2">
-        {countryFlag(country.code)} {t(loc, "ship_from", { country: name })}
-      </h1>
-      <p className="text-gray-400 mb-8">
-        {t(loc, "meta_country_from_desc", { country: name })}
-      </p>
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <nav className="text-sm text-body mb-6">
+            <Link href={`/${locale}`} className="hover:text-accent-light">
+              {t(loc, "home")}
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-ink">
+              {t(loc, "ship_from", { country: name })}
+            </span>
+          </nav>
 
+          <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-2">
+            {countryFlag(country.code)} {t(loc, "ship_from", { country: name })}
+          </h1>
+          <p className="text-body max-w-2xl">
+            {t(loc, "meta_country_from_desc", { country: name })}
+          </p>
+        </div>
+      </section>
+
+    <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <section className="mb-10">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {t(loc, "popular_destinations")}
         </h2>
         {/* Top 3 featured + rest as compact links */}
@@ -110,8 +127,8 @@ export default async function FromCountryPage({
             .slice(0, 3)
             .map((dest) => (
               <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
-                className="bg-surface border border-white/10 rounded-lg p-4 hover:border-accent/50 transition-all">
-                <p className="font-medium text-white">{countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}</p>
+                className="bg-white rounded-lg p-4 hover:border-accent/50 transition-all" style={{border:'1px solid var(--line)', boxShadow:'var(--shadow-sm)'}}>
+                <p className="font-medium text-ink">{countryFlag(country.code)} {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}</p>
               </Link>
             ))}
         </div>
@@ -121,7 +138,7 @@ export default async function FromCountryPage({
             .slice(3, 12)
             .map((dest) => (
               <Link key={dest.code} href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`} prefetch={false}
-                className="bg-card hover:bg-card-hover rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors">
+                className="bg-white hover:bg-[#F8F5EF] rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors">
                 {name} → {getCountryName(dest, loc)} {countryFlag(dest.code)}
               </Link>
             ))}
@@ -150,7 +167,7 @@ export default async function FromCountryPage({
                     key={dest.code}
                     href={`/${locale}/shipping/${makeCorridorSlug(country, dest, loc)}`}
                     prefetch={false}
-                    className="text-sm text-accent-light hover:text-white py-1"
+                    className="text-sm text-accent-light hover:text-ink py-1"
                   >
                     {getCountryName(dest, loc)}
                   </Link>
@@ -197,6 +214,7 @@ export default async function FromCountryPage({
           }),
         }}
       />
+    </div>
     </div>
   );
 }

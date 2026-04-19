@@ -44,28 +44,28 @@ export default function InsuranceComparison({
   const value = parseFloat(itemValue) || 0;
 
   return (
-    <div className="bg-surface border border-white/10 rounded-xl p-6">
-      <h3 className="text-lg font-bold text-white mb-4">{labels.title}</h3>
+    <div className="bg-surface border border-line rounded-xl p-6">
+      <h3 className="text-lg font-bold text-ink mb-4">{labels.title}</h3>
 
       <div className="flex gap-3 mb-4">
         <div className="relative flex-1 max-w-xs">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-body">$</span>
           <input
             type="number"
             value={itemValue}
             onChange={(e) => setItemValue(e.target.value)}
             placeholder="0"
             min="0"
-            className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-white/10 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:border-accent/50"
+            className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:border-accent/50"
           />
         </div>
-        <span className="text-gray-400 self-center text-sm">{labels.item_value}</span>
+        <span className="text-body self-center text-sm">{labels.item_value}</span>
       </div>
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-left text-gray-400 border-b border-white/10">
+            <tr className="text-left text-body border-b border-line">
               <th className="pb-2 pr-4">{labels.carrier}</th>
               <th className="pb-2 pr-4">{labels.included}</th>
               <th className="pb-2 pr-4">{labels.premium}</th>
@@ -83,23 +83,23 @@ export default function InsuranceComparison({
                 : 0;
 
               return (
-                <tr key={ins.carrier} className="border-b border-white/5">
+                <tr key={ins.carrier} className="border-b border-line">
                   <td className="py-2.5 pr-4 font-medium text-gray-200">{ins.carrier}</td>
                   <td className="py-2.5 pr-4">
-                    <span className={ins.included ? "text-green-400" : "text-gray-500"}>
+                    <span className={ins.included ? "text-green-400" : "text-muted"}>
                       {ins.included ? `${labels.yes} ($${ins.maxCoverage})` : labels.no}
                     </span>
                   </td>
-                  <td className="py-2.5 pr-4 text-gray-300">
+                  <td className="py-2.5 pr-4 text-body">
                     {ins.premiumPercent > 0 ? `${ins.premiumPercent}%` : "—"}
-                    {premium > 0 && <span className="text-gray-500 ml-1">(${premium.toFixed(2)})</span>}
+                    {premium > 0 && <span className="text-muted ml-1">(${premium.toFixed(2)})</span>}
                   </td>
                   {value > 0 && (
-                    <td className="py-2.5 pr-4 text-white font-medium">
+                    <td className="py-2.5 pr-4 text-ink font-medium">
                       {payout > 0 ? `$${Math.min(value, payout).toFixed(0)}` : "—"}
                     </td>
                   )}
-                  <td className="py-2.5 text-gray-500 text-xs">{ins.note}</td>
+                  <td className="py-2.5 text-muted text-xs">{ins.note}</td>
                 </tr>
               );
             })}

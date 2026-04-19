@@ -43,7 +43,7 @@ export default function FavoriteRoutes({ locale }: { locale: string }) {
 
   if (favorites.length === 0) {
     return (
-      <div className="bg-surface border border-white/10 rounded-lg p-6 text-center">
+      <div className="bg-surface border border-line rounded-lg p-6 text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -54,11 +54,11 @@ export default function FavoriteRoutes({ locale }: { locale: string }) {
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="mx-auto mb-3 text-gray-500"
+          className="mx-auto mb-3 text-muted"
         >
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
         </svg>
-        <p className="text-gray-400 text-sm">
+        <p className="text-body text-sm">
           {locale === "ru"
             ? "Нет сохранённых маршрутов. Нажмите на сердечко рядом с маршрутом, чтобы сохранить его."
             : "No saved routes yet. Click the heart icon on a route to save it here."}
@@ -69,25 +69,25 @@ export default function FavoriteRoutes({ locale }: { locale: string }) {
 
   return (
     <div className="space-y-2">
-      <h3 className="text-sm font-medium text-gray-400 mb-3">
+      <h3 className="text-sm font-medium text-body mb-3">
         {locale === "ru" ? "Избранные маршруты" : "Saved Routes"} ({favorites.length})
       </h3>
       {favorites.map((fav) => (
         <div
           key={fav.corridorSlug}
-          className="flex items-center justify-between bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-white/20 transition-colors"
+          className="flex items-center justify-between bg-surface border border-line rounded-lg px-4 py-3 hover:border-white/20 transition-colors"
         >
           <a
             href={`/${fav.locale}/shipping/${fav.corridorSlug}`}
             className="flex-1 text-gray-100 hover:text-accent-light transition-colors"
           >
             <span className="font-medium">{fav.originName}</span>
-            <span className="text-gray-500 mx-2">&rarr;</span>
+            <span className="text-muted mx-2">&rarr;</span>
             <span className="font-medium">{fav.destName}</span>
           </a>
           <button
             onClick={() => removeFavorite(fav.corridorSlug)}
-            className="ml-3 p-1 text-gray-500 hover:text-red-400 transition-colors"
+            className="ml-3 p-1 text-muted hover:text-red-400 transition-colors"
             aria-label={locale === "ru" ? "Удалить" : "Remove"}
             title={locale === "ru" ? "Удалить из избранного" : "Remove from favorites"}
           >

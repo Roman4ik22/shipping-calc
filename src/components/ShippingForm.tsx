@@ -56,7 +56,7 @@ export default function ShippingForm({
         type="button"
         onClick={handleSwap}
         disabled={!origin && !dest}
-        className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 text-gray-300 hover:text-white disabled:opacity-20 transition-colors"
+        className="hidden md:flex items-center justify-center w-10 h-10 mb-0.5 text-body hover:text-ink disabled:opacity-20 transition-colors"
         aria-label={labels.swap}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -70,7 +70,7 @@ export default function ShippingForm({
         type="button"
         onClick={handleSwap}
         disabled={!origin && !dest}
-        className="md:hidden flex items-center justify-center w-full py-3 text-gray-500 hover:opacity-70 disabled:opacity-20 text-sm transition-opacity"
+        className="md:hidden flex items-center justify-center w-full py-3 text-muted hover:opacity-70 disabled:opacity-20 text-sm transition-opacity"
         aria-label={labels.swap}
       >
         {labels.swap}
@@ -85,7 +85,7 @@ export default function ShippingForm({
       <button
         onClick={handleSubmit}
         disabled={!origin || !dest || origin === dest}
-        className="px-10 py-4 bg-accent text-white text-base font-medium rounded-full hover:bg-accent-dark disabled:bg-[#1a2a3a] disabled:text-gray-400 disabled:cursor-not-allowed transition-colors md:col-span-1"
+        className="px-10 py-4 bg-accent text-white text-base font-medium rounded-full hover:bg-[#1558B8] disabled:bg-[#1a2a3a] disabled:text-body disabled:cursor-not-allowed transition-colors md:col-span-1"
       >
         {labels.submit}
       </button>
