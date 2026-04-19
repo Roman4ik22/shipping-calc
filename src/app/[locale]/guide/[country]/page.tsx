@@ -125,13 +125,13 @@ export default async function GuidePage({
           <div className="flex flex-wrap gap-3">
             <Link
               href={`/${locale}/shipping/to/${country.slug_en}`}
-              className="px-4 py-2 bg-blue-600 text-ink rounded-lg text-sm hover:bg-blue-700"
+              className="px-4 py-2 bg-[var(--blue)] text-white rounded-lg text-sm hover:brightness-110"
             >
               {t(loc, "ship_to", { country: name })}
             </Link>
             <Link
               href={`/${locale}/shipping/from/${country.slug_en}`}
-              className="px-4 py-2 bg-surface border border-gray-300 rounded-lg text-sm hover:border-accent/50"
+              className="px-4 py-2 bg-white border border-[var(--line)] rounded-lg text-sm hover:border-accent/50"
             >
               {t(loc, "ship_from", { country: name })}
             </Link>
