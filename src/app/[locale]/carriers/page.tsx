@@ -152,81 +152,113 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
 
       {/* Carrier groups */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-8 py-12">
-        {groups.map((group, gi) => (
+        {groups.map((group) => {
+          const color = group.key === 'international' ? 'var(--blue)' : group.key === 'regional' ? 'var(--accent)' : 'var(--warm)';
+          const featured = group.list.slice(0, group.key === 'international' ? 4 : 6);
+          const rest = group.list.slice(group.key === 'international' ? 4 : 6);
+
+          return (
           <section key={group.key} className="mb-16 fade-in">
             <div className="flex items-center gap-3 mb-6">
-              <span style={{
-                width: 10, height: 10, borderRadius: 999,
-                background: group.key === 'international' ? 'var(--blue)' : group.key === 'regional' ? 'var(--accent)' : 'var(--warm)'
-              }} />
+              <span style={{ width: 10, height: 10, borderRadius: 999, background: color }} />
               <h2 style={{ fontSize: 24, fontWeight: 800, margin: 0, letterSpacing: '-.01em' }}>
                 {group.key.charAt(0).toUpperCase() + group.key.slice(1)} carriers
               </h2>
               <span style={{ fontSize: 14, color: 'var(--muted)', fontWeight: 500 }}>{group.list.length}</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 stagger-children">
-              {group.list.map((c, ci) => {
+            {/* Featured — large cards */}
+            <div className={`grid gap-4 mb-4 stagger-children ${group.key === 'international' ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+              {featured.map((c) => {
                 const brand = getBrand(c.id);
                 const desc = getCarrierDescription(c, loc);
-                const faviconUrl = brand.website
-                  ? `https://www.google.com/s2/favicons?domain=${brand.website}&sz=64`
-                  : null;
-
                 return (
                   <Link key={c.id} href={`/${locale}/carriers/${c.id}`} prefetch={false}
-                    className="card-hover group"
+                    className="card-hover"
                     style={{
-                      display: 'flex', gap: 14, alignItems: 'flex-start', padding: '18px 20px',
-                      background: '#fff', borderRadius: 14, border: '1px solid var(--line)',
-                      textDecoration: 'none', color: 'inherit',
-                      transition: 'all .25s ease-out'
+                      display: 'flex', flexDirection: 'column', gap: 14, padding: '24px',
+                      background: '#fff', borderRadius: 16, border: '1px solid var(--line)',
+                      textDecoration: 'none', color: 'inherit', transition: 'all .25s ease-out'
                     }}>
-                    {/* Logo — real favicon or colored square */}
-                    <div style={{
-                      width: 44, height: 44, borderRadius: 10, flexShrink: 0,
-                      background: brand.bg, color: brand.fg,
-                      display: 'grid', placeItems: 'center',
-                      boxShadow: '0 2px 8px -2px rgba(0,0,0,.1)',
-                      overflow: 'hidden', position: 'relative'
-                    }}>
-                      {faviconUrl ? (
-                        <img src={faviconUrl} alt="" width={28} height={28} style={{ borderRadius: 4 }} loading="lazy" />
-                      ) : (
-                        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.02em' }}>{brand.letters}</span>
-                      )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                      <div style={{
+                        width: 48, height: 48, borderRadius: 12, flexShrink: 0,
+                        background: brand.bg, color: brand.fg,
+                        display: 'grid', placeItems: 'center',
+                        boxShadow: '0 4px 12px -4px rgba(0,0,0,.15)',
+                      }}>
+                        <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.02em' }}>{brand.letters}</span>
+                      </div>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 17 }}>{c.name}</div>
+                        <span style={{
+                          fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 999,
+                          background: color === 'var(--blue)' ? 'var(--blue-50)' : color === 'var(--accent)' ? 'var(--accent-50)' : 'var(--warm-50)',
+                          color: color
+                        }}>{c.type}</span>
+                      </div>
                     </div>
-
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 2 }}>{c.name}</div>
-                      <p style={{ margin: 0, fontSize: 12, color: 'var(--muted)', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const, overflow: 'hidden' }}>
-                        {desc}
-                      </p>
-                      {c.services && c.services.length > 0 && (
-                        <div style={{ display: 'flex', gap: 4, marginTop: 6, flexWrap: 'wrap' }}>
-                          {c.services.slice(0, 2).map((s: { name: string; speed_days_min: number; speed_days_max: number }) => (
-                            <span key={s.name} style={{
-                              fontSize: 10, padding: '1px 6px', borderRadius: 4,
-                              background: 'var(--bg)', color: 'var(--muted)', border: '1px solid var(--line-2)'
-                            }}>
-                              {s.speed_days_min}-{s.speed_days_max}d · {s.name.length > 18 ? s.name.slice(0, 18) + '…' : s.name}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                    <p style={{ margin: 0, fontSize: 14, color: 'var(--body)', lineHeight: 1.5 }}>{desc}</p>
+                    {c.services && c.services.length > 0 && (
+                      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                        {c.services.slice(0, 3).map((s: { name: string; speed_days_min: number; speed_days_max: number }) => (
+                          <span key={s.name} style={{
+                            fontSize: 11, padding: '3px 8px', borderRadius: 6,
+                            background: 'var(--bg)', color: 'var(--body)', border: '1px solid var(--line-2)'
+                          }}>
+                            {s.speed_days_min}-{s.speed_days_max}d · {s.name}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, fontWeight: 600, color: 'var(--blue)', marginTop: 'auto' }}>
+                      View profile
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </div>
-
-                    {/* Arrow */}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="14" height="14"
-                      style={{ color: 'var(--line)', flexShrink: 0, marginTop: 4, transition: 'color .2s' }}
-                      className="group-hover:stroke-[var(--blue)]"
-                    ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                   </Link>
                 );
               })}
             </div>
+
+            {/* Rest — compact grid */}
+            {rest.length > 0 && (
+              <>
+                <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 600, marginBottom: 10, marginTop: 16 }}>
+                  + {rest.length} more {group.key} carriers
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+                  {rest.map((c) => {
+                    const brand = getBrand(c.id);
+                    return (
+                      <Link key={c.id} href={`/${locale}/carriers/${c.id}`} prefetch={false}
+                        className="card-hover"
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: 10, padding: '12px 14px',
+                          background: '#fff', borderRadius: 10, border: '1px solid var(--line)',
+                          textDecoration: 'none', color: 'inherit', transition: 'all .2s',
+                          fontSize: 13
+                        }}>
+                        <div style={{
+                          width: 28, height: 28, borderRadius: 6, flexShrink: 0,
+                          background: brand.bg, color: brand.fg,
+                          display: 'grid', placeItems: 'center',
+                          fontSize: 8, fontWeight: 800, letterSpacing: '.02em'
+                        }}>{brand.letters}</div>
+                        <span style={{ fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const }}>{c.name}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+
+            {/* Divider between groups */}
+            {group.key !== 'postal' && (
+              <div style={{ height: 1, background: 'var(--line)', margin: '40px 0 0' }} />
+            )}
           </section>
-        ))}
+          );
+        })}
 
         {/* Bottom CTA */}
         <div className="fade-in" style={{
