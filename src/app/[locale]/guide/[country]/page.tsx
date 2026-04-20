@@ -92,7 +92,7 @@ export default async function GuidePage({
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
@@ -131,7 +131,7 @@ export default async function GuidePage({
         <h2 className="text-2xl font-bold text-white mb-3">
           {t(loc, "overview")}
         </h2>
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-body leading-relaxed">
           {t(loc, "guide_overview", {
             country: name,
             region: country.region,
@@ -152,25 +152,25 @@ export default async function GuidePage({
           <div className="bg-surface border border-white/10 rounded-xl p-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
               <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-gray-400 mb-1">{t(loc, "de_minimis")}</p>
+                <p className="text-sm text-body mb-1">{t(loc, "de_minimis")}</p>
                 <p className="text-2xl font-bold text-white">
                   ${customs.de_minimis_usd}
                 </p>
-                <p className="text-xs text-gray-400 mt-1">
+                <p className="text-xs text-body mt-1">
                   {customs.de_minimis_usd > 0
                     ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
                     : t(loc, "duty_from_zero")}
                 </p>
               </div>
               <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-gray-400 mb-1">{t(loc, "vat_rate")}</p>
+                <p className="text-sm text-body mb-1">{t(loc, "vat_rate")}</p>
                 <p className="text-2xl font-bold text-white">{customs.vat_rate}%</p>
-                <p className="text-xs text-gray-400 mt-1">{customs.currency}</p>
+                <p className="text-xs text-body mt-1">{customs.currency}</p>
               </div>
               <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-gray-400 mb-1">{t(loc, "avg_duty")}</p>
+                <p className="text-sm text-body mb-1">{t(loc, "avg_duty")}</p>
                 <p className="text-2xl font-bold text-white">{customs.avg_duty_rate}%</p>
-                <p className="text-xs text-gray-400 mt-1">
+                <p className="text-xs text-body mt-1">
                   {t(loc, "average")}
                 </p>
               </div>
@@ -223,13 +223,13 @@ export default async function GuidePage({
             {t(loc, "duty_tax_estimate")}
           </h2>
           <div className="bg-surface border border-white/10 rounded-xl p-6">
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-body mb-4">
               {t(loc, "duty_estimate_intro", { country: name })}
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-left text-gray-400 border-b border-white/10">
+                  <tr className="text-left text-body border-b border-white/10">
                     <th className="pb-2 pr-4">{t(loc, "goods_value")}</th>
                     <th className="pb-2 pr-4">{t(loc, "duty")}</th>
                     <th className="pb-2 pr-4">{t(loc, "vat_tax")}</th>
@@ -257,7 +257,7 @@ export default async function GuidePage({
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-3">
+            <p className="text-xs text-body mt-3">
               {t(loc, "duty_estimate_note")}
             </p>
           </div>
@@ -282,7 +282,7 @@ export default async function GuidePage({
               <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-accent-light rounded-full flex items-center justify-center text-sm font-medium">
                 {i + 1}
               </span>
-              <p className="text-gray-300 text-sm">{tip}</p>
+              <p className="text-body text-sm">{tip}</p>
             </div>
           ))}
         </div>
@@ -299,7 +299,7 @@ export default async function GuidePage({
               <h3 className="font-semibold text-red-700 mb-2 text-sm">
                 {t(loc, "prohibited")}
               </h3>
-              <ul className="space-y-1 text-sm text-gray-300">
+              <ul className="space-y-1 text-sm text-body">
                 {[
                   t(loc, "prohibited_1"),
                   t(loc, "prohibited_2"),
@@ -318,7 +318,7 @@ export default async function GuidePage({
               <h3 className="font-semibold text-amber-700 mb-2 text-sm">
                 {t(loc, "restricted")}
               </h3>
-              <ul className="space-y-1 text-sm text-gray-300">
+              <ul className="space-y-1 text-sm text-body">
                 {[
                   t(loc, "restricted_1"),
                   t(loc, "restricted_2"),
@@ -361,7 +361,7 @@ export default async function GuidePage({
           </Link>
           {hasCustoms && (
             <Link href={`/${locale}/customs/${country.slug_en}`}
-              className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors px-2">
+              className="flex items-center gap-3 text-sm text-body hover:text-ink transition-colors px-2">
               {t(loc, "customs_link", { country: name })} →
             </Link>
           )}
@@ -381,7 +381,7 @@ export default async function GuidePage({
                   key={from.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
                   prefetch={false}
-                  className="bg-surface hover:bg-card rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="bg-surface hover:bg-line rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors"
                 >
                   {countryFlag(from.code)} {getCountryName(from, loc)} → {name}
                 </Link>
@@ -398,7 +398,7 @@ export default async function GuidePage({
                   key={to.code}
                   href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
                   prefetch={false}
-                  className="block text-sm text-gray-400 hover:text-white transition-colors py-1"
+                  className="block text-sm text-body hover:text-ink transition-colors py-1"
                 >
                   {name} → {getCountryName(to, loc)} {countryFlag(to.code)}
                 </Link>
@@ -441,7 +441,7 @@ export default async function GuidePage({
                   <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light">
                     {faq.q}
                   </summary>
-                  <p className="px-4 pb-4 text-gray-400 text-sm">{faq.a}</p>
+                  <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
                 </details>
               ))}
             </div>

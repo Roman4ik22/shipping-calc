@@ -129,7 +129,7 @@ const tagColors: Record<string, string> = {
   data: "bg-green-900/50 text-green-400",
   seo: "bg-blue-900/50 text-blue-400",
   design: "bg-purple-900/50 text-purple-400",
-  technical: "bg-gray-700/50 text-gray-400",
+  technical: "bg-gray-700/50 text-body",
   feature: "bg-amber-900/50 text-amber-400",
   i18n: "bg-teal-900/50 text-teal-400",
   launch: "bg-red-900/50 text-red-400",
@@ -213,7 +213,7 @@ export default async function UpdatesPage({
       />
 
       {/* Breadcrumb */}
-      <nav className="text-sm text-gray-400 mb-6">
+      <nav className="text-sm text-body mb-6">
         <Link href={`/${locale}`} className="hover:text-accent-light">
           {t(loc, "home")}
         </Link>
@@ -225,7 +225,7 @@ export default async function UpdatesPage({
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
         {t(loc, "updates_title")}
       </h1>
-      <p className="text-gray-400 text-lg mb-10">
+      <p className="text-body text-lg mb-10">
         {t(loc, "updates_subtitle")}
       </p>
 
@@ -258,14 +258,14 @@ export default async function UpdatesPage({
               <h2 className="text-white font-semibold text-base mb-1">
                 {loc === "ru" ? entry.title_ru : entry.title_en}
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              <p className="text-body text-sm leading-relaxed mb-3">
                 {loc === "ru" ? entry.desc_ru : entry.desc_en}
               </p>
               <div className="flex flex-wrap gap-2">
                 {entry.tags.map((tag) => (
                   <span
                     key={tag}
-                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${tagColors[tag] || "bg-gray-700/50 text-gray-400"}`}
+                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${tagColors[tag] || "bg-gray-700/50 text-body"}`}
                   >
                     {tag}
                   </span>

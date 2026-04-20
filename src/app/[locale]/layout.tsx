@@ -213,8 +213,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   </NavLink>
                   <NavLink
                     href={`/${locale}`}
-                    className="px-4 py-2 bg-ink text-white text-sm font-semibold rounded-full hover:bg-ink/90 transition-colors"
-                    activeClassName="px-4 py-2 bg-ink text-white text-sm font-semibold rounded-full opacity-70"
+                    className="px-4 py-2 bg-[#1A73E8] text-white text-sm font-semibold rounded-full hover:bg-[#1558B8] transition-colors shadow-[0_4px_10px_rgba(26,115,232,.28)]"
+                    activeClassName="px-4 py-2 bg-[#1A73E8] text-white text-sm font-semibold rounded-full opacity-80 shadow-[0_4px_10px_rgba(26,115,232,.28)]"
                   >
                     {t(loc, "compare_rates")}
                   </NavLink>

@@ -52,7 +52,7 @@ export default async function GuidesPage({
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         {t(loc, "guides_heading")}
       </h1>
-      <p className="text-gray-400 mb-8 max-w-3xl">
+      <p className="text-body mb-8 max-w-3xl">
         {t(loc, "guides_subtitle")}
       </p>
 
@@ -81,10 +81,10 @@ export default async function GuidesPage({
               key={c.code}
               href={`/${locale}/guide/${c.slug_en}`}
               prefetch={false}
-              className="flex items-center gap-2 bg-card hover:bg-card-hover rounded-lg px-3 py-2 transition-colors text-sm"
+              className="flex items-center gap-2 bg-card hover:bg-line rounded-lg px-3 py-2 transition-colors text-sm"
             >
               <span className="text-lg">{countryFlag(c.code)}</span>
-              <span className="text-gray-300">{getCountryName(c, loc)}</span>
+              <span className="text-body">{getCountryName(c, loc)}</span>
             </Link>
           ))}
         </div>
@@ -114,7 +114,7 @@ export default async function GuidesPage({
                     key={c.code}
                     href={`/${locale}/guide/${c.slug_en}`}
                     prefetch={false}
-                    className="text-sm text-gray-400 hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
+                    className="text-sm text-body hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
                   >
                     <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
                   </Link>
