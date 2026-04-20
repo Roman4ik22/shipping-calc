@@ -50,31 +50,33 @@ export default async function HomePage({
 
   return (
     <div>
-      {/* Hero */}
-      <section className="bg-bg py-24 sm:py-32 relative">
-        <div className="absolute inset-0 overflow-hidden">
-          <img src="/img/routes-map.svg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-        </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-ink text-center">
-            {t(loc, "compare_shipping_rates")}
+      {/* V2 Hero */}
+      <section style={{ padding: "96px 32px 72px", position: "relative", overflow: "hidden" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(1000px 500px at 50% -10%, rgba(26,115,232,.10), transparent 60%)" }} />
+        <img src="/img/routes-map.svg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.35 }} />
+        <div style={{ position: "relative", maxWidth: 1040, margin: "0 auto", textAlign: "center" }}>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(44px,6vw,80px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "compare_shipping_rates").split(" ").slice(0, -2).join(" ")}{" "}
+            <span style={{ color: "var(--blue)" }}>
+              {t(loc, "compare_shipping_rates").split(" ").slice(-2).join(" ")}
+            </span>
           </h1>
-          <p className="text-xl text-body text-center max-w-2xl mx-auto mt-6">
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 640, margin: "0 auto 28px", lineHeight: 1.55 }}>
             {t(loc, "hero_subtitle", { count: "134" })}
           </p>
 
-          <p className="text-center mt-8 text-sm text-body tracking-wide">
-            <span className="font-mono text-ink">213</span> {t(loc, "all_countries")}
-            <span className="mx-3 text-muted">|</span>
-            <span className="font-mono text-ink">134</span> {t(loc, "carriers_page")}
-            <span className="mx-3 text-muted">|</span>
-            <span className="font-mono text-ink">45K+</span> {t(loc, "routes")}
-          </p>
-          <p className="text-center mt-3 text-xs text-muted">
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 16, fontSize: 14, color: "var(--body)", fontWeight: 500, marginBottom: 6, flexWrap: "wrap", justifyContent: "center" }}>
+            <span><span style={{ fontFamily: "var(--font-mono, monospace)", color: "var(--ink)", fontWeight: 700 }}>213</span> {t(loc, "all_countries")}</span>
+            <span style={{ color: "var(--muted)" }}>|</span>
+            <span><span style={{ fontFamily: "var(--font-mono, monospace)", color: "var(--ink)", fontWeight: 700 }}>134</span> {t(loc, "carriers_page")}</span>
+            <span style={{ color: "var(--muted)" }}>|</span>
+            <span><span style={{ fontFamily: "var(--font-mono, monospace)", color: "var(--ink)", fontWeight: 700 }}>45K+</span> {t(loc, "routes")}</span>
+          </div>
+          <p style={{ fontSize: 12, color: "var(--muted)", margin: "6px 0 0" }}>
             {t(loc, "open_carrier_data")}
           </p>
 
-          <div className="max-w-4xl mx-auto mt-14 bg-white border border-line rounded-3xl p-8 pb-20 overflow-visible relative shadow-lg">
+          <div style={{ maxWidth: 880, margin: "48px auto 0", background: "#fff", border: "1px solid var(--line)", borderRadius: 24, padding: "32px 32px 72px", boxShadow: "0 10px 40px rgba(11, 18, 32, 0.06)", position: "relative", overflow: "visible" }}>
             <ShippingForm
               countries={countries.map((c) => ({
                 code: c.code,
@@ -94,7 +96,7 @@ export default async function HomePage({
               }}
             />
           </div>
-          <p className="text-center text-xs text-muted mt-4">
+          <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 16 }}>
             {t(loc, "rates_updated")}
           </p>
         </div>

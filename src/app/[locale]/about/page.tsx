@@ -36,27 +36,27 @@ export default async function AboutPage({
   const loc = locale as Locale;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-ink">
-          {t(loc, "about_breadcrumb")}
-        </span>
-      </nav>
-
-      <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
-        <div className="flex-1">
-          <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-4">
+    <>
+      {/* V2 Hero */}
+      <section style={{ padding: "72px 32px 56px", borderBottom: "1px solid var(--line)", position: "relative", overflow: "hidden" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 25% -10%, rgba(26,115,232,.10), transparent 60%)" }} />
+        <img src="/img/data-network.svg" alt="" aria-hidden="true" style={{ position: "absolute", right: -40, top: 20, width: 380, opacity: 0.55, pointerEvents: "none" }} className="hidden md:block" />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "about_breadcrumb")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)", maxWidth: 780 }}>
             {t(loc, "about_title")}
           </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 620, margin: 0, lineHeight: 1.55 }}>
+            {t(loc, "about_mission_p1")}
+          </p>
         </div>
-        <img src="/img/data-network.svg" alt="" aria-hidden="true" className="w-48 md:w-64 opacity-50 shrink-0 hidden md:block" />
-      </div>
+      </section>
 
-      <div className="prose max-w-none">
+      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "56px 32px 96px" }} className="prose max-w-none">
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-ink mb-3">{t(loc, "about_mission")}</h2>
           <p className="text-body leading-relaxed mb-4">
@@ -248,6 +248,6 @@ export default async function AboutPage({
           }),
         }}
       />
-    </div>
+    </>
   );
 }
