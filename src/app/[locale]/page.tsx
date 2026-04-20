@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { countries, getPopularCountries, getCountryName, makeCorridorSlug, getCorridorData } from "@/lib/data";
-import { t, locales } from "@/lib/i18n";
+import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
@@ -71,18 +71,18 @@ export default async function HomePage({
             <div style={{ paddingTop: 32 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "#fff", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: 999, background: "#0F8A48", boxShadow: "0 0 0 4px rgba(15,138,72,.18)" }} />
-                {t(loc, "hero_pill") || `${countries.length}+ countries · 134+ carriers · live rates`}
+                {tf(loc, "hero_pill", `${countries.length}+ countries · 134+ carriers · live rates`)}
               </div>
               <h1 style={{ margin: "20px 0 22px", fontSize: "clamp(40px,5.4vw,68px)", lineHeight: 1.0, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
-                {t(loc, "hero_h1_prefix") || "Compare"}{" "}
+                {tf(loc, "hero_h1_prefix", "Compare")}{" "}
                 <span style={{ color: "var(--blue)", position: "relative", display: "inline-block" }}>
-                  {t(loc, "hero_h1_blue") || "134+ carriers"}
+                  {tf(loc, "hero_h1_blue", "134+ carriers")}
                   <svg aria-hidden viewBox="0 0 340 20" style={{ position: "absolute", left: 0, bottom: -10, width: "100%", height: 14 }}>
                     <path d="M2 12 Q 80 2, 170 10 T 338 8" stroke="var(--warm)" strokeWidth="5" fill="none" strokeLinecap="round" opacity=".85" />
                   </svg>
                 </span>
                 <br />
-                {t(loc, "hero_h1_suffix") || "in 5 seconds."}
+                {tf(loc, "hero_h1_suffix", "in 5 seconds.")}
               </h1>
               <p style={{ fontSize: 19, color: "var(--body)", lineHeight: 1.5, maxWidth: 520, margin: "0 0 28px" }}>
                 {t(loc, "hero_subtitle", { count: "134" })}
@@ -95,7 +95,7 @@ export default async function HomePage({
                   textDecoration: "none",
                   boxShadow: "0 10px 20px -8px rgba(26,115,232,.6), inset 0 1px 0 rgba(255,255,255,.2)",
                 }}>
-                  {t(loc, "get_free_quote") || "Get a free quote"}
+                  {tf(loc, "get_free_quote", "Get a free quote")}
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </a>
                 <Link href={`/${locale}/carriers`} style={{
@@ -103,15 +103,15 @@ export default async function HomePage({
                   fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", boxShadow: "var(--shadow-sm)",
                   textDecoration: "none",
                 }}>
-                  {t(loc, "see_all_carriers") || "See all 134 carriers"} →
+                  {tf(loc, "see_all_carriers", "See all 134 carriers")} →
                 </Link>
               </div>
 
               <div style={{ marginTop: 28, display: "flex", gap: 28, flexWrap: "wrap", fontSize: 13, color: "var(--muted)" }}>
                 {[
-                  t(loc, "check_no_signup") || "No signup",
-                  t(loc, "check_published_tariffs") || "Published carrier tariffs",
-                  t(loc, "check_live_rates") || "Live rates, not averages",
+                  tf(loc, "check_no_signup", "No signup"),
+                  tf(loc, "check_published_tariffs", "Published carrier tariffs"),
+                  tf(loc, "check_live_rates", "Live rates, not averages"),
                 ].map((label, i) => (
                   <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#0F8A48" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
@@ -123,7 +123,7 @@ export default async function HomePage({
               {/* Carrier brand strip */}
               <div style={{ marginTop: 56, paddingTop: 28, borderTop: "1px solid var(--line)" }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 14 }}>
-                  {t(loc, "trusted_carriers") || "Rates from 134+ global & regional carriers"}
+                  {tf(loc, "trusted_carriers", "Rates from 134+ global & regional carriers")}
                 </div>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   {[
@@ -170,8 +170,8 @@ export default async function HomePage({
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
                     </div>
                     <div>
-                      <div style={{ fontWeight: 700, fontSize: 14 }}>{t(loc, "shipping_calculator") || "Shipping calculator"}</div>
-                      <div style={{ fontSize: 12, color: "var(--muted)" }}>{t(loc, "live_rates_updated_weekly") || "Live rates · updated weekly"}</div>
+                      <div style={{ fontWeight: 700, fontSize: 14 }}>{tf(loc, "shipping_calculator", "Shipping calculator")}</div>
+                      <div style={{ fontSize: 12, color: "var(--muted)" }}>{tf(loc, "live_rates_updated_weekly", "Live rates · updated weekly")}</div>
                     </div>
                   </div>
                   <span style={{ padding: "4px 10px", fontSize: 11, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase", background: "rgba(15,138,72,.12)", color: "#0F8A48", borderRadius: 999 }}>LIVE</span>
@@ -220,7 +220,7 @@ export default async function HomePage({
                 </div>
                 <div>
                   <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-.01em", lineHeight: 1, color: "var(--ink)" }}>{countries.length}</div>
-                  <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2 }}>{t(loc, "countries_served") || "countries served"}</div>
+                  <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2 }}>{tf(loc, "countries_served", "countries served")}</div>
                 </div>
               </div>
             </div>
@@ -233,13 +233,13 @@ export default async function HomePage({
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 36, maxWidth: 720 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>
-              {t(loc, "live_rates_eyebrow") || "Live rates"}
+              {tf(loc, "live_rates_eyebrow", "Live rates")}
             </div>
             <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>
-              {t(loc, "live_rates_title") || "Real carrier tariffs for the top corridors."}
+              {tf(loc, "live_rates_title", "Real carrier tariffs for the top corridors.")}
             </h2>
             <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>
-              {t(loc, "live_rates_desc") || "No signup, no tricks. Published carrier tariffs, updated weekly."}
+              {tf(loc, "live_rates_desc", "No signup, no tricks. Published carrier tariffs, updated weekly.")}
             </p>
           </div>
 
@@ -284,18 +284,18 @@ export default async function HomePage({
                   <div style={{ width: 1, height: 22, background: "var(--line)" }} />
                   <div style={{ fontSize: 13, color: "var(--muted)" }}>Package · <b style={{ color: "var(--ink)" }}>2.0 kg</b></div>
                   <Link href={`/${locale}/shipping/united-states-to-united-kingdom`} style={{ marginLeft: "auto", fontSize: 13, fontWeight: 600, color: "var(--blue)", textDecoration: "none" }}>
-                    {t(loc, "see_full_comparison") || "See full comparison"} →
+                    {tf(loc, "see_full_comparison", "See full comparison")} →
                   </Link>
                 </div>
 
                 {/* Table */}
                 <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
                   <div className="row-grid" style={{ display: "grid", gridTemplateColumns: "2.4fr 1.4fr 1fr 1.2fr 1fr", padding: "14px 20px", fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".06em", background: "var(--bg)", borderBottom: "1px solid var(--line)" }}>
-                    <div>{t(loc, "carrier") || "Carrier"}</div>
-                    <div>{t(loc, "service") || "Service"}</div>
-                    <div>{t(loc, "transit") || "Transit"}</div>
-                    <div>{t(loc, "tracking") || "Tracking"}</div>
-                    <div style={{ textAlign: "right" }}>{t(loc, "rate") || "Rate"}</div>
+                    <div>{tf(loc, "carrier", "Carrier")}</div>
+                    <div>{tf(loc, "service", "Service")}</div>
+                    <div>{tf(loc, "transit", "Transit")}</div>
+                    <div>{tf(loc, "tracking", "Tracking")}</div>
+                    <div style={{ textAlign: "right" }}>{tf(loc, "rate", "Rate")}</div>
                   </div>
                   {sampleCarriers.map((c, i) => {
                     const rate2kg = c.rates.find(r => r.weight_kg === 2)?.price_usd ?? null;
@@ -312,9 +312,9 @@ export default async function HomePage({
                           <div style={{ minWidth: 0 }}>
                             <div style={{ fontWeight: 700, fontSize: 15, color: "var(--ink)", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                               {carrierName}
-                              {isCheapest && <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase", padding: "3px 7px", borderRadius: 4, background: "var(--accent-50)", color: "var(--accent)" }}>{t(loc, "cheapest") || "Cheapest"}</span>}
+                              {isCheapest && <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase", padding: "3px 7px", borderRadius: 4, background: "var(--accent-50)", color: "var(--accent)" }}>{tf(loc, "cheapest", "Cheapest")}</span>}
                             </div>
-                            <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 2 }}>{t(loc, "published_tariff") || "Published tariff"}</div>
+                            <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 2 }}>{tf(loc, "published_tariff", "Published tariff")}</div>
                           </div>
                         </div>
                         <div style={{ fontSize: 14, color: "var(--body)" }}>{c.service.name || "Standard"}</div>
@@ -324,13 +324,13 @@ export default async function HomePage({
                         </div>
                         <div style={{ fontSize: 13, color: "var(--body)", display: "flex", alignItems: "center", gap: 6 }}>
                           <span style={{ width: 6, height: 6, borderRadius: 999, background: hasTracking ? "var(--good)" : "var(--warm)" }} />
-                          {hasTracking ? (t(loc, "tracked") || "Tracked") : (t(loc, "scan_based") || "Scan-based")}
+                          {hasTracking ? (tf(loc, "tracked", "Tracked")) : (tf(loc, "scan_based", "Scan-based"))}
                         </div>
                         <div style={{ textAlign: "right" }}>
                           <div style={{ fontSize: 19, fontWeight: 800, letterSpacing: "-.01em", color: "var(--ink)", fontVariantNumeric: "tabular-nums" }}>
                             {rate2kg ? `$${rate2kg.toFixed(2)}` : "—"}
                           </div>
-                          <div style={{ fontSize: 11, color: "var(--muted)" }}>{t(loc, "for_2kg") || "for 2 kg"}</div>
+                          <div style={{ fontSize: 11, color: "var(--muted)" }}>{tf(loc, "for_2kg", "for 2 kg")}</div>
                         </div>
                       </div>
                     );
@@ -339,12 +339,12 @@ export default async function HomePage({
 
                 <div style={{ marginTop: 14, fontSize: 13, color: "var(--muted)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
                   <span>
-                    {t(loc, "showing_carriers") || "Showing"} {sampleCarriers.length} {t(loc, "of") || "of"} {data?.carriers.length ?? 0} {t(loc, "carriers_for_route") || "carriers for this route"} ·{" "}
-                    <Link href={`/${locale}/carriers`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{t(loc, "see_all_134") || "See all 134 →"}</Link>
+                    {tf(loc, "showing_carriers", "Showing")} {sampleCarriers.length} {tf(loc, "of", "of")} {data?.carriers.length ?? 0} {tf(loc, "carriers_for_route", "carriers for this route")} ·{" "}
+                    <Link href={`/${locale}/carriers`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{tf(loc, "see_all_134", "See all 134 →")}</Link>
                   </span>
                   <span>
-                    {t(loc, "rates_from_tariffs") || "Rates from published carrier tariffs"} ·{" "}
-                    <Link href={`/${locale}/data-methodology`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{t(loc, "data_methodology") || "Methodology"}</Link>
+                    {tf(loc, "rates_from_tariffs", "Rates from published carrier tariffs")} ·{" "}
+                    <Link href={`/${locale}/data-methodology`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{tf(loc, "data_methodology", "Methodology")}</Link>
                   </span>
                 </div>
               </>
@@ -357,12 +357,12 @@ export default async function HomePage({
       <section style={{ padding: "72px 32px", background: "#fff", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 36, maxWidth: 720 }}>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{t(loc, "tools_eyebrow") || "Tools"}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{tf(loc, "tools_eyebrow", "Tools")}</div>
             <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>
-              {t(loc, "tools_homepage_title") || "More than a rate comparator."}
+              {tf(loc, "tools_homepage_title", "More than a rate comparator.")}
             </h2>
             <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>
-              {t(loc, "tools_homepage_desc") || "Three focused tools for the rest of your shipping workflow."}
+              {tf(loc, "tools_homepage_desc", "Three focused tools for the rest of your shipping workflow.")}
             </p>
           </div>
 
@@ -373,11 +373,11 @@ export default async function HomePage({
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
                 </div>
-                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{t(loc, "rate_comparison_tag") || "Rate comparison"}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{tf(loc, "rate_comparison_tag", "Rate comparison")}</span>
               </div>
               <div>
-                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{t(loc, "carriers_title") || "Compare 134 carriers"}</h3>
-                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{t(loc, "carriers_card_desc") || "Full carrier directory. Global express, national posts, regional couriers — all with rates and reliability."}</p>
+                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "carriers_title", "Compare 134 carriers")}</h3>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "carriers_card_desc", "Full carrier directory. Global express, national posts, regional couriers — all with rates and reliability.")}</p>
               </div>
               <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
                 {[
@@ -392,7 +392,7 @@ export default async function HomePage({
                 ))}
               </div>
               <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)", display: "inline-flex", alignItems: "center", gap: 6 }}>
-                {t(loc, "browse_carriers") || "Browse all carriers"} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                {tf(loc, "browse_carriers", "Browse all carriers")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
 
@@ -402,11 +402,11 @@ export default async function HomePage({
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--accent-50)", color: "var(--accent)", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v7c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5l8-3z" /><path d="M9 12l2 2 4-4" /></svg>
                 </div>
-                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{t(loc, "customs_tag") || "Customs calculator"}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{tf(loc, "customs_tag", "Customs calculator")}</span>
               </div>
               <div>
-                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{t(loc, "customs_home_title") || "Duty & tax, before you ship"}</h3>
-                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{t(loc, "customs_home_desc") || "HS-code lookup across 213 countries, VAT/duty and broker fees broken down."}</p>
+                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "customs_home_title", "Duty & tax, before you ship")}</h3>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "customs_home_desc", "HS-code lookup across 213 countries, VAT/duty and broker fees broken down.")}</p>
               </div>
               <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
                 <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 4 }}>Electronics · HS 8517.13 · US → Germany · $1,200</div>
@@ -430,7 +430,7 @@ export default async function HomePage({
                 </div>
               </div>
               <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)", display: "inline-flex", alignItems: "center", gap: 6 }}>
-                {t(loc, "calculate_duties") || "Calculate duties"} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                {tf(loc, "calculate_duties", "Calculate duties")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
 
@@ -440,11 +440,11 @@ export default async function HomePage({
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--warm-50)", color: "#A37A00", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
                 </div>
-                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{t(loc, "delivery_tag") || "Delivery estimator"}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{tf(loc, "delivery_tag", "Delivery estimator")}</span>
               </div>
               <div>
-                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{t(loc, "delivery_home_title") || "When will it actually arrive?"}</h3>
-                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{t(loc, "delivery_home_desc") || "Express, standard, economy transit times based on carrier transit data."}</p>
+                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "delivery_home_title", "When will it actually arrive?")}</h3>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "delivery_home_desc", "Express, standard, economy transit times based on carrier transit data.")}</p>
               </div>
               <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
                 <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 10 }}>DHL Express · NYC → London</div>
@@ -465,11 +465,11 @@ export default async function HomePage({
                   ))}
                 </div>
                 <div style={{ marginTop: 12, padding: "8px 10px", background: "var(--blue-50)", borderRadius: 8, fontSize: 12, color: "var(--blue-700, #1558B8)", fontWeight: 600 }}>
-                  {t(loc, "avg_transit") || "Most likely delivery · Wed"}
+                  {tf(loc, "avg_transit", "Most likely delivery · Wed")}
                 </div>
               </div>
               <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)", display: "inline-flex", alignItems: "center", gap: 6 }}>
-                {t(loc, "estimate_delivery") || "Estimate delivery"} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                {tf(loc, "estimate_delivery", "Estimate delivery")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
           </div>
@@ -480,10 +480,10 @@ export default async function HomePage({
       <section style={{ padding: "48px 32px", background: "var(--ink, #0F172A)", color: "#fff" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48 }} className="stats-grid">
           {[
-            { v: "134+", l: t(loc, "stat_carriers_label") || "Carriers compared", s: t(loc, "stat_carriers_sub") || "Global + regional" },
-            { v: `${countries.length}`, l: t(loc, "stat_countries_label") || "Countries covered", s: t(loc, "stat_countries_sub") || "Every UN-recognized territory" },
-            { v: "45K+", l: t(loc, "stat_routes_label") || "Shipping corridors", s: t(loc, "stat_routes_sub") || "Live rates cached + on-demand", accent: true },
-            { v: "12", l: t(loc, "stat_langs_label") || "Languages", s: t(loc, "stat_langs_sub") || "Updated weekly · free forever" },
+            { v: "134+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
+            { v: `${countries.length}`, l: tf(loc, "stat_countries_label", "Countries covered"), s: tf(loc, "stat_countries_sub", "Every UN-recognized territory") },
+            { v: "45K+", l: tf(loc, "stat_routes_label", "Shipping corridors"), s: tf(loc, "stat_routes_sub", "Live rates cached + on-demand"), accent: true },
+            { v: "12", l: tf(loc, "stat_langs_label", "Languages"), s: tf(loc, "stat_langs_sub", "Updated weekly · free forever") },
           ].map((it, i) => (
             <div key={i} style={{ paddingLeft: i > 0 ? 28 : 0, borderLeft: i > 0 ? "1px solid rgba(255,255,255,.12)" : "none" }}>
               <div style={{ fontSize: "clamp(36px,4vw,56px)", fontWeight: 800, letterSpacing: "-.03em", lineHeight: 1, color: it.accent ? "var(--warm)" : "#fff", fontVariantNumeric: "tabular-nums" }}>{it.v}</div>
@@ -498,22 +498,22 @@ export default async function HomePage({
       <section style={{ padding: "80px 32px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 36, maxWidth: 720 }}>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{t(loc, "how_eyebrow") || "How it works"}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{tf(loc, "how_eyebrow", "How it works")}</div>
             <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>
-              {t(loc, "how_title") || "Four steps. Under two minutes."}
+              {tf(loc, "how_title", "Four steps. Under two minutes.")}
             </h2>
             <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>
-              {t(loc, "how_desc") || "Search, compare, pick, ship. No signup between you and a cheaper rate."}
+              {tf(loc, "how_desc", "Search, compare, pick, ship. No signup between you and a cheaper rate.")}
             </p>
           </div>
           <div style={{ position: "relative" }}>
             <div aria-hidden className="steps-line" style={{ position: "absolute", top: 26, left: "6%", right: "6%", height: 2, background: "repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px)" }} />
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, position: "relative" }} className="steps-grid">
               {[
-                { n: 1, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>, t: t(loc, "step1_title") || "Tell us where", d: t(loc, "step1_desc") || "From, to, weight. Three fields, no sign-up." },
-                { n: 2, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>, t: t(loc, "step2_title") || "We compare every carrier", d: t(loc, "step2_desc") || "134 tariffs across 213 countries, ranked in seconds." },
-                { n: 3, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41L13 21a2 2 0 01-2.83 0l-7-7A2 2 0 012.59 13V4a2 2 0 012-2h9a2 2 0 011.41.59l7 7a2 2 0 010 2.83z" /><circle cx="7" cy="7" r="1.2" /></svg>, t: t(loc, "step3_title") || "Pick your rate", d: t(loc, "step3_desc") || "Sort by cheapest, fastest, best-rated. Transit and reliability are visible." },
-                { n: 4, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>, t: t(loc, "step4_title") || "Go direct to the carrier", d: t(loc, "step4_desc") || "We don't upsell or book for you — you go straight to the carrier's website with the full price." },
+                { n: 1, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>, t: tf(loc, "step1_title", "Tell us where"), d: tf(loc, "step1_desc", "From, to, weight. Three fields, no sign-up.") },
+                { n: 2, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>, t: tf(loc, "step2_title", "We compare every carrier"), d: tf(loc, "step2_desc", "134 tariffs across 213 countries, ranked in seconds.") },
+                { n: 3, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41L13 21a2 2 0 01-2.83 0l-7-7A2 2 0 012.59 13V4a2 2 0 012-2h9a2 2 0 011.41.59l7 7a2 2 0 010 2.83z" /><circle cx="7" cy="7" r="1.2" /></svg>, t: tf(loc, "step3_title", "Pick your rate"), d: tf(loc, "step3_desc", "Sort by cheapest, fastest, best-rated. Transit and reliability are visible.") },
+                { n: 4, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>, t: tf(loc, "step4_title", "Go direct to the carrier"), d: tf(loc, "step4_desc", "We don't upsell or book for you — you go straight to the carrier's website with the full price.") },
               ].map((s) => (
                 <div key={s.n} style={{ textAlign: "left" }}>
                   <div style={{ width: 52, height: 52, borderRadius: 14, background: "#fff", border: "1px solid var(--line)", display: "grid", placeItems: "center", color: "var(--blue)", boxShadow: "var(--shadow-sm)", position: "relative" }}>
@@ -533,11 +533,11 @@ export default async function HomePage({
       <section style={{ padding: "80px 32px", borderTop: "1px solid var(--line)" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 36, maxWidth: 720 }}>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{t(loc, "why_eyebrow") || "Why RateShips"}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{tf(loc, "why_eyebrow", "Why RateShips")}</div>
             <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>
-              {t(loc, "why_title") || "The old way vs. RateShips."}
+              {tf(loc, "why_title", "The old way vs. RateShips.")}
             </h2>
-            <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>{t(loc, "why_desc") || "Side by side. No hand-waving."}</p>
+            <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>{tf(loc, "why_desc", "Side by side. No hand-waving.")}</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="compare-grid">
             <div style={{ background: "#fff", borderRadius: 20, border: "1px solid var(--line)", padding: 28 }}>
@@ -546,16 +546,16 @@ export default async function HomePage({
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12" /></svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".06em" }}>{t(loc, "before") || "Before"}</div>
-                  <div style={{ fontWeight: 700, fontSize: 18, color: "var(--ink)" }}>{t(loc, "the_old_way") || "The old way"}</div>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".06em" }}>{tf(loc, "before", "Before")}</div>
+                  <div style={{ fontWeight: 700, fontSize: 18, color: "var(--ink)" }}>{tf(loc, "the_old_way", "The old way")}</div>
                 </div>
               </div>
               {[
-                t(loc, "old_way_1") || "5–8 carrier websites, each with its own interface",
-                t(loc, "old_way_2") || "Tariffs hidden behind quote forms or account logins",
-                t(loc, "old_way_3") || "No view of customs duty or total landed cost",
-                t(loc, "old_way_4") || "Only the biggest names are visible — you miss cheaper options",
-                t(loc, "old_way_5") || "No easy way to see which routes a regional carrier even covers",
+                tf(loc, "old_way_1", "5–8 carrier websites, each with its own interface"),
+                tf(loc, "old_way_2", "Tariffs hidden behind quote forms or account logins"),
+                tf(loc, "old_way_3", "No view of customs duty or total landed cost"),
+                tf(loc, "old_way_4", "Only the biggest names are visible — you miss cheaper options"),
+                tf(loc, "old_way_5", "No easy way to see which routes a regional carrier even covers"),
               ].map((r, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, padding: "12px 0", borderTop: i > 0 ? "1px solid var(--line-2)" : "none", fontSize: 14, color: "#6A6157" }}>
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#B8ADA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flex: "0 0 16px", marginTop: 3 }}><path d="M18 6L6 18M6 6l12 12" /></svg>
@@ -570,16 +570,16 @@ export default async function HomePage({
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".06em" }}>{t(loc, "after") || "After"}</div>
-                  <div style={{ fontWeight: 700, fontSize: 18, color: "var(--ink)" }}>{t(loc, "with_rateships") || "With RateShips"}</div>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".06em" }}>{tf(loc, "after", "After")}</div>
+                  <div style={{ fontWeight: 700, fontSize: 18, color: "var(--ink)" }}>{tf(loc, "with_rateships", "With RateShips")}</div>
                 </div>
               </div>
               {[
-                t(loc, "new_way_1") || "One search. 134 carriers ranked instantly by price and speed.",
-                t(loc, "new_way_2") || "All tariffs published openly — no signup, no email wall.",
-                t(loc, "new_way_3") || "Customs duty + VAT + broker fees calculated before you ship.",
-                t(loc, "new_way_4") || "Regional postal services surfaced alongside global express.",
-                t(loc, "new_way_5") || "213 countries mapped. Click any flag, see every route.",
+                tf(loc, "new_way_1", "One search. 134 carriers ranked instantly by price and speed."),
+                tf(loc, "new_way_2", "All tariffs published openly — no signup, no email wall."),
+                tf(loc, "new_way_3", "Customs duty + VAT + broker fees calculated before you ship."),
+                tf(loc, "new_way_4", "Regional postal services surfaced alongside global express."),
+                tf(loc, "new_way_5", "213 countries mapped. Click any flag, see every route."),
               ].map((r, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, padding: "12px 0", borderTop: i > 0 ? "1px solid var(--blue-100, #D2E3FC)" : "none", fontSize: 14, color: "var(--ink-2)" }}>
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--blue)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flex: "0 0 16px", marginTop: 3 }}><path d="M20 6L9 17l-5-5" /></svg>
@@ -596,7 +596,7 @@ export default async function HomePage({
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
             <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 10 }}>{t(loc, "popular_corridors_eyebrow") || "Popular corridors"}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 10 }}>{tf(loc, "popular_corridors_eyebrow", "Popular corridors")}</div>
               <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>{t(loc, "popular_destinations")}</h2>
             </div>
             <Link href={`/${locale}/guide`} style={{ fontSize: 14, fontWeight: 600, color: "var(--blue)", textDecoration: "none" }}>{t(loc, "all_countries_link")} →</Link>
@@ -624,13 +624,13 @@ export default async function HomePage({
                   </div>
                   <div style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{getCountryName(from, loc)} → {getCountryName(to, loc)}</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginTop: 10 }}>
-                    <span style={{ fontSize: 11, color: "var(--muted)" }}>{t(loc, "from_price") || "From"}</span>
+                    <span style={{ fontSize: 11, color: "var(--muted)" }}>{tf(loc, "from_price", "From")}</span>
                     <span style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)", fontVariantNumeric: "tabular-nums" }}>
                       {cheapest && cheapest < 999 ? `$${cheapest.toFixed(2)}` : "—"}
                     </span>
                   </div>
                   <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid var(--line-2)", display: "flex", justifyContent: "space-between", fontSize: 12, color: "var(--muted)" }}>
-                    <span>{fastest ? `${fastest}+ ${t(loc, "days_short") || "days"}` : "—"}</span>
+                    <span>{fastest ? `${fastest}+ ${tf(loc, "days_short", "days")}` : "—"}</span>
                     {topCarrier && <span style={{ fontWeight: 600, color: "var(--ink-2)" }}>{topCarrier}</span>}
                   </div>
                 </Link>
@@ -732,22 +732,22 @@ export default async function HomePage({
         <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px", borderRadius: 999, background: "var(--blue-50)", color: "var(--blue)", fontSize: 12, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase" }}>
             <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" /></svg>
-            {t(loc, "cta_eyebrow") || "Free · no signup · weekly updates"}
+            {tf(loc, "cta_eyebrow", "Free · no signup · weekly updates")}
           </div>
           <h2 style={{ margin: "20px 0 18px", fontSize: "clamp(36px,5vw,60px)", lineHeight: 1.04, letterSpacing: "-.025em", fontWeight: 800, color: "var(--ink)" }}>
-            {t(loc, "cta_title_pre") || "Your next shipment"}<br />
-            {t(loc, "cta_title_mid") || "could be"} <span style={{ color: "var(--blue)" }}>{t(loc, "cta_title_blue") || "cheaper."}</span>
+            {tf(loc, "cta_title_pre", "Your next shipment")}<br />
+            {tf(loc, "cta_title_mid", "could be")} <span style={{ color: "var(--blue)" }}>{tf(loc, "cta_title_blue", "cheaper.")}</span>
           </h2>
           <p style={{ fontSize: 18, color: "var(--body)", margin: "0 auto 28px", maxWidth: 580 }}>
-            {t(loc, "cta_desc") || "One search shows you every carrier's published rate. If a regional service is cheaper than DHL on your lane, you'll see it."}
+            {tf(loc, "cta_desc", "One search shows you every carrier's published rate. If a regional service is cheaper than DHL on your lane, you'll see it.")}
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="#calc" style={{ padding: "14px 24px", borderRadius: 12, background: "var(--ink)", color: "#fff", fontWeight: 700, fontSize: 15, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-              {t(loc, "cta_primary") || "Run a free quote"}
+              {tf(loc, "cta_primary", "Run a free quote")}
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <Link href={`/${locale}/carriers`} style={{ padding: "14px 24px", borderRadius: 12, background: "#fff", color: "var(--ink)", fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", textDecoration: "none" }}>
-              {t(loc, "cta_secondary") || "Browse all carriers"}
+              {tf(loc, "cta_secondary", "Browse all carriers")}
             </Link>
           </div>
         </div>

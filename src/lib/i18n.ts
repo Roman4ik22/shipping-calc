@@ -6870,3 +6870,13 @@ export function t(locale: Locale, key: string, params?: Record<string, string | 
   }
   return text;
 }
+
+export function tf(locale: Locale, key: string, fallback: string, params?: Record<string, string | number>): string {
+  let text = dictionaries[locale]?.[key] ?? dictionaries.en[key] ?? fallback;
+  if (params) {
+    for (const [k, v] of Object.entries(params)) {
+      text = text.replace(`{${k}}`, String(v));
+    }
+  }
+  return text;
+}

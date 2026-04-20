@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { t } from "@/lib/i18n";
+import { t, tf } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 
@@ -71,7 +71,7 @@ export default async function ToolsIndexPage({
       href: `/${locale}/tools/duty-calculator`,
       title: t(loc, "duty_calc_name"),
       description: t(loc, "duty_calc_desc"),
-      cta: t(loc, "calculate") || "Calculate duties",
+      cta: tf(loc, "calculate", "Calculate duties"),
     },
     {
       icon: <IconClock />,
@@ -80,7 +80,7 @@ export default async function ToolsIndexPage({
       href: `/${locale}/tools/delivery-estimator`,
       title: t(loc, "delivery_est_name"),
       description: t(loc, "delivery_est_desc"),
-      cta: t(loc, "estimate_delivery") || "Estimate delivery",
+      cta: tf(loc, "estimate_delivery", "Estimate delivery"),
     },
     {
       icon: <IconSearch />,
@@ -89,7 +89,7 @@ export default async function ToolsIndexPage({
       href: `/${locale}`,
       title: t(loc, "compare_shipping_rates"),
       description: t(loc, "hero_subtitle", { count: "134" }),
-      cta: t(loc, "compare_rates") || "Compare rates",
+      cta: tf(loc, "compare_rates", "Compare rates"),
     },
   ];
 
@@ -162,9 +162,9 @@ export default async function ToolsIndexPage({
 
           <div style={{ marginTop: 40, padding: "24px 28px", background: "var(--bg)", borderRadius: 16, border: "1px solid var(--line)", textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: 15, color: "var(--body)" }}>
-              {t(loc, "tools_footer_note") || "All tools are free and don't require signup. Data sourced from published carrier tariffs and customs authority databases."}{" "}
+              {tf(loc, "tools_footer_note", "All tools are free and don't require signup. Data sourced from published carrier tariffs and customs authority databases.")}{" "}
               <Link href={`/${locale}/data-methodology`} style={{ color: "var(--blue)", fontWeight: 600 }}>
-                {t(loc, "data_methodology") || "Read our methodology"} →
+                {tf(loc, "data_methodology", "Read our methodology")} →
               </Link>
             </p>
           </div>
