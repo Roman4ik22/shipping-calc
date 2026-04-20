@@ -1,4 +1,4 @@
-const CACHE_NAME = "rateships-v2-warm";
+const CACHE_NAME = "rateships-v3-hero";
 const PRECACHE_URLS = ["/en", "/ru", "/favicon.svg"];
 
 self.addEventListener("install", (event) => {
