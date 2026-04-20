@@ -66,7 +66,7 @@ export default async function HomePage({
         <img src="/img/routes-map.svg" alt="" aria-hidden="true" style={{ position: "absolute", top: "8%", right: "-5%", width: "70%", height: "80%", opacity: 0.18, pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1320, margin: "0 auto", padding: "56px 32px 80px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.15fr .95fr", gap: 48, alignItems: "flex-start" }} className="hero-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 56, alignItems: "flex-start" }} className="hero-grid">
             {/* LEFT: copy */}
             <div style={{ paddingTop: 32 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "#fff", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
@@ -145,26 +145,40 @@ export default async function HomePage({
             </div>
 
             {/* RIGHT: form + floating decorative elements */}
-            <div style={{ position: "relative" }}>
-              {/* Top-right rotated container tile */}
+            <div style={{ position: "relative", minWidth: 0 }}>
+              {/* Top-right rotated container tile — pushed further out, behind calc */}
               <div aria-hidden style={{
-                position: "absolute", top: -20, right: -24, width: 220, height: 150,
-                borderRadius: 16, overflow: "hidden", transform: "rotate(4deg)",
-                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 2,
+                position: "absolute", top: -40, right: -60, width: 180, height: 124,
+                borderRadius: 16, overflow: "hidden", transform: "rotate(5deg)",
+                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
                 background: "linear-gradient(135deg, #1A73E8 0%, #2F88FF 50%, #0F3C8A 100%)",
                 display: "grid", placeItems: "center", color: "rgba(255,255,255,.75)",
+                pointerEvents: "none",
               }} className="hero-float">
-                <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>
+                <svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>
               </div>
 
-              {/* Form card */}
+              {/* Bottom-left rotated circular parcel tile — smaller, further out, behind calc */}
+              <div aria-hidden style={{
+                position: "absolute", bottom: -50, left: -70, width: 140, height: 140,
+                borderRadius: "50%", overflow: "hidden", transform: "rotate(-6deg)",
+                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
+                background: "linear-gradient(135deg, var(--warm-50) 0%, #FBE7B8 100%)",
+                display: "grid", placeItems: "center", color: "#A37A00",
+                pointerEvents: "none",
+              }} className="hero-float hero-float-parcel">
+                <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z" /><path d="M3 8v8l9 5 9-5V8" /><path d="M12 13v8" /></svg>
+              </div>
+
+              {/* Form card — raised above decorations, overflow visible so country dropdown isn't clipped */}
               <div id="calc" style={{
-                position: "relative", zIndex: 1, marginTop: 40,
+                position: "relative", zIndex: 2, marginTop: 40,
                 background: "#fff", border: "1px solid var(--line)", borderRadius: 20,
-                padding: "22px 22px 60px",
+                padding: "28px 28px 80px",
                 boxShadow: "var(--shadow-lg)",
+                overflow: "visible",
               }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div style={{ width: 30, height: 30, borderRadius: 8, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center" }}>
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
@@ -197,23 +211,13 @@ export default async function HomePage({
                 />
               </div>
 
-              {/* Bottom-left rotated circular parcel tile */}
-              <div aria-hidden style={{
-                position: "absolute", bottom: -30, left: -40, width: 180, height: 180,
-                borderRadius: "50%", overflow: "hidden", transform: "rotate(-6deg)",
-                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 2,
-                background: "linear-gradient(135deg, var(--warm-50) 0%, #FBE7B8 100%)",
-                display: "grid", placeItems: "center", color: "#A37A00",
-              }} className="hero-float hero-float-parcel">
-                <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z" /><path d="M3 8v8l9 5 9-5V8" /><path d="M12 13v8" /></svg>
-              </div>
-
-              {/* Floating stats badge bottom-right */}
+              {/* Floating stats badge bottom-right — below calc, won't overlap inputs */}
               <div style={{
-                position: "absolute", bottom: 40, right: -30, zIndex: 3,
+                position: "absolute", bottom: -30, right: -20, zIndex: 3,
                 background: "#fff", borderRadius: 14, border: "1px solid var(--line)",
                 padding: "12px 16px", boxShadow: "var(--shadow-lg)", transform: "rotate(3deg)",
                 display: "flex", alignItems: "center", gap: 10,
+                pointerEvents: "none",
               }} className="hero-float">
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--accent-50)", color: "var(--accent)", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" /></svg>

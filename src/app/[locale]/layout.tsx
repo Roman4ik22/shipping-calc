@@ -198,6 +198,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     {t(loc, "guides")}
                   </NavLink>
                   <NavLink
+                    href={`/${locale}/tools/duty-calculator`}
+                    className="text-sm font-medium text-body hover:text-ink transition-colors"
+                    activeClassName="text-sm font-medium text-ink transition-colors"
+                  >
+                    {loc === "ru" ? "Таможня" : "Customs"}
+                  </NavLink>
+                  <NavLink
                     href={`/${locale}/about`}
                     className="text-sm font-medium text-body hover:text-ink transition-colors"
                     activeClassName="text-sm font-medium text-ink transition-colors"
@@ -226,6 +233,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     home: t(loc, "home"),
                     carriers: t(loc, "carriers_page"),
                     guides: t(loc, "guides"),
+                    customs: loc === "ru" ? "Таможня" : "Customs",
                     about: t(loc, "about"),
                     blog: t(loc, "blog"),
                     platforms: t(loc, "platforms"),

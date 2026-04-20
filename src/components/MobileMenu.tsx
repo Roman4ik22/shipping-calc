@@ -8,7 +8,7 @@ export default function MobileMenu({
   labels,
 }: {
   locale: string;
-  labels: { home: string; carriers: string; guides: string; about?: string; blog?: string; platforms?: string };
+  labels: { home: string; carriers: string; guides: string; customs?: string; about?: string; blog?: string; platforms?: string };
 }) {
   const [open, setOpen] = useState(false);
 
@@ -78,6 +78,14 @@ export default function MobileMenu({
               onClick={() => setOpen(false)}
             >
               {labels.guides}
+            </NavLink>
+            <NavLink
+              href={`/${locale}/tools/duty-calculator`}
+              className="text-body hover:text-accent-light py-2 transition-colors"
+              activeClassName="text-ink py-2"
+              onClick={() => setOpen(false)}
+            >
+              {labels.customs || "Customs"}
             </NavLink>
             <NavLink
               href={`/${locale}/about`}
