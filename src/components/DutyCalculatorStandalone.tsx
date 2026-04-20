@@ -72,7 +72,7 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
         <select
           value={selectedCountry}
           onChange={(e) => setSelectedCountry(e.target.value)}
-          className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+          className="w-full sm:w-80 px-4 py-2.5 bg-white border border-line rounded-lg text-ink focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
         >
           {sortedCountries.map((c) => (
             <option key={c.code} value={c.code}>
@@ -159,18 +159,18 @@ export default function DutyCalculatorStandalone({ locale }: Props) {
               {dutyRates
                 ? dutyRates.map((r) => (
                     <tr key={r.hs} className="border-b border-line">
-                      <td className="text-gray-200 py-3 pr-4">{r.category}</td>
+                      <td className="text-ink py-3 pr-4">{r.category}</td>
                       <td className="text-body py-3 pr-4 font-mono text-xs">HS {r.hs}</td>
-                      <td className="text-right text-gray-200 py-3">{r.rate}</td>
+                      <td className="text-right text-ink py-3">{r.rate}</td>
                     </tr>
                   ))
                 : dutyCategories.map((cat) => (
                     <tr key={cat.hs} className="border-b border-line">
-                      <td className="text-gray-200 py-3 pr-4">
+                      <td className="text-ink py-3 pr-4">
                         {isRu ? cat.category_ru : cat.category_en}
                       </td>
                       <td className="text-body py-3 pr-4 font-mono text-xs">{cat.hs}</td>
-                      <td className="text-right text-gray-200 py-3">{customs.avg_duty_rate}%</td>
+                      <td className="text-right text-ink py-3">{customs.avg_duty_rate}%</td>
                     </tr>
                   ))}
             </tbody>
