@@ -383,17 +383,25 @@ export default async function HomePage({
                 <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "carriers_title", "Compare 134 carriers")}</h3>
                 <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "carriers_card_desc", "Full carrier directory. Global express, national posts, regional couriers — all with rates and reliability.")}</p>
               </div>
-              <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
+              <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "flex", flexWrap: "wrap", gap: 8, alignContent: "flex-start", overflow: "hidden", maxWidth: "100%" }}>
                 {[
-                  { bg: "#FFCC00", fg: "#D40511", t: "DHL" },
-                  { bg: "#4D148C", fg: "#FF6600", t: "FDX" },
-                  { bg: "#351C15", fg: "#FFB500", t: "UPS" },
-                  { bg: "#000", fg: "#fff", t: "SF" },
-                  { bg: "#E32219", fg: "#fff", t: "ARX" },
-                  { bg: "#0F3C8A", fg: "#FFD400", t: "EMS" },
+                  { bg: "#FFCC00", fg: "#D40511", label: "DHL", icon: "dhl" },
+                  { bg: "#4D148C", fg: "#FF6600", label: "FedEx", icon: "fedex" },
+                  { bg: "#351C15", fg: "#FFB500", label: "UPS", icon: "ups" },
                 ].map((b) => (
-                  <div key={b.t} style={{ aspectRatio: "1 / 1", borderRadius: 8, background: b.bg, color: b.fg, display: "grid", placeItems: "center", fontSize: 11, fontWeight: 800, letterSpacing: ".02em" }}>{b.t}</div>
+                  <div key={b.label} style={{ padding: "8px 12px", borderRadius: 8, background: b.bg, display: "inline-flex", alignItems: "center", gap: 6, height: 32 }}>
+                    <img src={`https://cdn.simpleicons.org/${b.icon}/${b.fg.replace("#", "")}`} alt={b.label} width={14} height={14} style={{ filter: "brightness(0) invert(1) opacity(.95)", display: "block" }} />
+                    <span style={{ color: b.fg, fontSize: 11, fontWeight: 800, letterSpacing: ".04em", lineHeight: 1 }}>{b.label}</span>
+                  </div>
                 ))}
+                {[
+                  { bg: "#000000", fg: "#fff", label: "SF" },
+                  { bg: "#E32219", fg: "#fff", label: "Aramex" },
+                  { bg: "#0F3C8A", fg: "#FFD400", label: "EMS" },
+                ].map((b) => (
+                  <div key={b.label} style={{ padding: "8px 12px", borderRadius: 8, background: b.bg, color: b.fg, fontSize: 11, fontWeight: 800, letterSpacing: ".04em", lineHeight: 1, height: 32, display: "inline-flex", alignItems: "center" }}>{b.label}</div>
+                ))}
+                <div style={{ padding: "8px 12px", borderRadius: 8, background: "var(--bg)", color: "var(--muted)", fontSize: 11, fontWeight: 700, border: "1px dashed var(--line)", lineHeight: 1, height: 32, display: "inline-flex", alignItems: "center" }}>+128 more</div>
               </div>
               <span style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)", display: "inline-flex", alignItems: "center", gap: 6 }}>
                 {tf(loc, "browse_carriers", "Browse all carriers")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
