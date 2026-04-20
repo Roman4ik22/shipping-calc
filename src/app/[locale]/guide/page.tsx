@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { countries, getCountryName, getPopularCountries } from "@/lib/data";
-import { t, locales } from "@/lib/i18n";
+import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
@@ -64,7 +64,7 @@ export default async function GuidesPage({
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 30% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
         <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
           <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
-            {t(loc, "guides_heading")} <span style={{ color: "var(--blue)" }}>{countries.length} {t(loc, "countries_label") || "countries"}.</span>
+            {t(loc, "guides_heading")} <span style={{ color: "var(--blue)" }}>{countries.length} {tf(loc, "countries_label", "countries")}.</span>
           </h1>
           <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 620, margin: 0 }}>
             {t(loc, "guides_subtitle")}
@@ -120,7 +120,7 @@ export default async function GuidesPage({
                   <span style={{ fontSize: 24 }}>{CONTINENT_FLAG[continent] || "🌐"}</span>
                   <h2 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>{continent}</h2>
                   <span style={{ fontSize: 13, color: "var(--muted)", fontWeight: 500 }}>
-                    {list.length} {t(loc, "countries_label") || "countries"}
+                    {list.length} {tf(loc, "countries_label", "countries")}
                   </span>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10 }} className="tools-grid">
