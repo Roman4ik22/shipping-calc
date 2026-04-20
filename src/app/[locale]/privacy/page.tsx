@@ -35,8 +35,17 @@ export default async function PrivacyPage({
   const { locale } = await params;
   const loc = locale as Locale;
 
+  const sections = [
+    { title: t(loc, "privacy_s1_title"), body: t(loc, "privacy_s1_body") },
+    { title: t(loc, "privacy_s2_title"), body: t(loc, "privacy_s2_body") },
+    { title: t(loc, "privacy_s3_title"), body: t(loc, "privacy_s3_body") },
+    { title: t(loc, "privacy_s4_title"), body: t(loc, "privacy_s4_body") },
+    { title: t(loc, "privacy_s5_title"), body: t(loc, "privacy_s5_body") },
+    { title: t(loc, "privacy_s6_title"), body: t(loc, "privacy_s6_body") },
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -52,77 +61,48 @@ export default async function PrivacyPage({
         }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">
-          {t(loc, "privacy_title")}
-        </span>
-      </nav>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "privacy_title")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "privacy_title")}
+          </h1>
+        </div>
+      </section>
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-        {t(loc, "privacy_title")}
-      </h1>
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 820, margin: "0 auto" }}>
+          <div style={{ display: "grid", gap: 20 }}>
+            {sections.map((s, i) => (
+              <section key={i} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 28 }}>
+                <h2 style={{ margin: "0 0 12px", fontSize: 22, fontWeight: 800, letterSpacing: "-.01em", color: "var(--ink)" }}>
+                  {s.title}
+                </h2>
+                <p style={{ margin: 0, color: "var(--body)", lineHeight: 1.65, fontSize: 15 }}>{s.body}</p>
+              </section>
+            ))}
 
-      <div className="space-y-6 text-gray-300 leading-relaxed">
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s1_title")}
-          </h2>
-          <p>{t(loc, "privacy_s1_body")}</p>
-        </section>
+            <section style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 28 }}>
+              <h2 style={{ margin: "0 0 12px", fontSize: 22, fontWeight: 800, letterSpacing: "-.01em", color: "var(--ink)" }}>
+                {t(loc, "privacy_s7_title")}
+              </h2>
+              <p style={{ margin: 0, color: "var(--body)", lineHeight: 1.65, fontSize: 15 }}>
+                {t(loc, "privacy_s7_body")}
+                <span style={{ fontWeight: 600, color: "var(--ink)" }}>privacy@rateships.com</span>
+              </p>
+            </section>
+          </div>
 
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s2_title")}
-          </h2>
-          <p>{t(loc, "privacy_s2_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s3_title")}
-          </h2>
-          <p>{t(loc, "privacy_s3_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s4_title")}
-          </h2>
-          <p>{t(loc, "privacy_s4_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s5_title")}
-          </h2>
-          <p>{t(loc, "privacy_s5_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s6_title")}
-          </h2>
-          <p>{t(loc, "privacy_s6_body")}</p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-white mb-3">
-            {t(loc, "privacy_s7_title")}
-          </h2>
-          <p>
-            {t(loc, "privacy_s7_body")}
-            <span className="font-medium text-white">privacy@rateships.com</span>
+          <p style={{ marginTop: 28, paddingTop: 20, borderTop: "1px solid var(--line)", fontSize: 13, color: "var(--muted)" }}>
+            {t(loc, "last_updated_march")}
           </p>
-        </section>
-
-        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {t(loc, "last_updated_march")}
-        </p>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }

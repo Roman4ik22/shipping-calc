@@ -129,6 +129,31 @@ const CUSTOMS_SOURCES: CustomsSource[] = [
   { country: "Philippines", authority: "Bureau of Customs", url: "https://customs.gov.ph/", tradeAgreement: "RCEP, ASEAN" },
 ];
 
+const thStyle: React.CSSProperties = {
+  textAlign: "left",
+  padding: "12px",
+  fontSize: 12,
+  fontWeight: 700,
+  color: "var(--muted)",
+  textTransform: "uppercase",
+  letterSpacing: ".05em",
+};
+
+const tdStyle: React.CSSProperties = {
+  padding: "12px",
+  fontSize: 14,
+  color: "var(--body)",
+  borderTop: "1px solid var(--line)",
+};
+
+const h2Style: React.CSSProperties = {
+  margin: "0 0 16px",
+  fontSize: 28,
+  fontWeight: 800,
+  letterSpacing: "-.02em",
+  color: "var(--ink)",
+};
+
 export default async function SourcesPage({
   params,
 }: {
@@ -138,7 +163,7 @@ export default async function SourcesPage({
   const loc = locale as Locale;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -163,238 +188,205 @@ export default async function SourcesPage({
         }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">
-          {t(loc, "sources_breadcrumb")}
-        </span>
-      </nav>
-
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {t(loc, "sources_h1")}
-      </h1>
-      <p className="text-gray-400 mb-8 text-lg">
-        {t(loc, "sources_intro")}
-      </p>
-
-      <div className="space-y-12 text-gray-300 leading-relaxed">
-        {/* Carrier Rate Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "sources_carrier_title")}
-          </h2>
-          <p className="mb-4 text-sm text-gray-400">
-            {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "sources_breadcrumb")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "sources_h1")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 720, margin: 0 }}>
+            {t(loc, "sources_intro")}
           </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_carrier_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_url_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_verified_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_status_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CARRIER_SOURCES.map((c) => (
-                  <tr key={c.name} className="border-t border-white/5">
-                    <td className="p-3 text-white font-medium whitespace-nowrap">
-                      {c.name}
-                    </td>
-                    <td className="p-3">
-                      <a
-                        href={c.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
-                      >
-                        {c.url
-                          .replace("https://www.", "")
-                          .replace("https://", "")
-                          .replace("http://", "")}
-                      </a>
-                    </td>
-                    <td className="p-3 text-gray-400 whitespace-nowrap text-xs">
-                      {c.lastVerified}
-                    </td>
-                    <td className="p-3">
-                      <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-medium ${
-                          c.status === "Verified"
-                            ? "text-green-400"
-                            : "text-yellow-400"
-                        }`}
-                      >
-                        <span
-                          className={`w-2 h-2 rounded-full ${
-                            c.status === "Verified"
-                              ? "bg-green-500"
-                              : "bg-yellow-500"
-                          }`}
-                        />
-                        {c.status === "Verified"
-                          ? t(loc, "sources_verified")
-                          : t(loc, "sources_estimated")}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Customs & Trade Data Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "sources_customs_title")}
-          </h2>
-          <p className="mb-4 text-sm text-gray-400">
-            {loc === "ru"
-              ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
-              : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_country_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_authority_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_url_col2")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "sources_trade_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CUSTOMS_SOURCES.map((c) => (
-                  <tr key={c.country} className="border-t border-white/5">
-                    <td className="p-3 text-white font-medium whitespace-nowrap">
-                      {c.country}
-                    </td>
-                    <td className="p-3 text-gray-400 text-xs">{c.authority}</td>
-                    <td className="p-3">
-                      <a
-                        href={c.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
-                      >
-                        {c.url
-                          .replace("https://www.", "")
-                          .replace("https://", "")
-                          .replace("http://", "")}
-                      </a>
-                    </td>
-                    <td className="p-3 text-gray-500 text-xs whitespace-nowrap">
-                      {c.tradeAgreement}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Exchange Rate Source */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "sources_exchange_title")}
-          </h2>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="flex-1">
-                <p className="text-white font-semibold">
-                  {t(loc, "sources_ecb")}
-                </p>
-                <a
-                  href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
-                >
-                  ecb.europa.eu/stats/exchange/eurofxref
-                </a>
-              </div>
-              <div className="text-sm text-gray-400">
-                <p>
-                  {t(loc, "sources_update_freq")}{" "}
-                  <span className="text-white">
-                    {t(loc, "sources_daily")}
-                  </span>
-                </p>
-                <p>
-                  {t(loc, "sources_currencies")}{" "}
-                  <span className="text-white">
-                    {t(loc, "sources_currencies_val")}
-                  </span>
-                </p>
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gap: 48 }}>
+          {/* Carrier Rate Sources */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "sources_carrier_title")}</h2>
+            <p style={{ margin: "0 0 16px", fontSize: 14, color: "var(--muted)" }}>
+              {`${CARRIER_SOURCES.length} `}{loc === "ru" ? "перевозчиков с прямыми ссылками на официальные страницы тарифов." : "carriers with direct links to official rate pages."}
+            </p>
+            <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead style={{ background: "var(--bg)" }}>
+                    <tr>
+                      <th style={thStyle}>{t(loc, "sources_carrier_col")}</th>
+                      <th style={thStyle}>{t(loc, "sources_url_col")}</th>
+                      <th style={thStyle}>{t(loc, "sources_verified_col")}</th>
+                      <th style={thStyle}>{t(loc, "sources_status_col")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {CARRIER_SOURCES.map((c) => (
+                      <tr key={c.name}>
+                        <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 600, whiteSpace: "nowrap" }}>
+                          {c.name}
+                        </td>
+                        <td style={tdStyle}>
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none", fontSize: 13, wordBreak: "break-all" }}
+                          >
+                            {c.url.replace("https://www.", "").replace("https://", "").replace("http://", "")}
+                          </a>
+                        </td>
+                        <td style={{ ...tdStyle, color: "var(--muted)", fontSize: 13, whiteSpace: "nowrap" }}>
+                          {c.lastVerified}
+                        </td>
+                        <td style={tdStyle}>
+                          <span style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: 6,
+                            fontSize: 13,
+                            fontWeight: 600,
+                            color: c.status === "Verified" ? "#059669" : "#b45309",
+                          }}>
+                            <span style={{
+                              width: 8,
+                              height: 8,
+                              borderRadius: 99,
+                              background: c.status === "Verified" ? "#10b981" : "#f59e0b",
+                            }} />
+                            {c.status === "Verified" ? t(loc, "sources_verified") : t(loc, "sources_estimated")}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Review Data Sources */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "sources_reviews_title")}
-          </h2>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="flex-1">
-                <p className="text-white font-semibold">Trustpilot</p>
-                <a
-                  href="https://www.trustpilot.com"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-accent-light hover:underline text-sm"
-                >
-                  trustpilot.com
-                </a>
-              </div>
-              <div className="text-sm text-gray-400">
-                <p>{t(loc, "sources_reviews_desc")}</p>
+          {/* Customs & Trade Data Sources */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "sources_customs_title")}</h2>
+            <p style={{ margin: "0 0 16px", fontSize: 14, color: "var(--muted)" }}>
+              {loc === "ru"
+                ? `Таможенные данные для ${CUSTOMS_SOURCES.length} стран, включая ставки пошлин, НДС, пороги de minimis и торговые соглашения.`
+                : `Customs data for ${CUSTOMS_SOURCES.length} countries, including duty rates, VAT, de minimis thresholds, and trade agreements.`}
+            </p>
+            <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead style={{ background: "var(--bg)" }}>
+                    <tr>
+                      <th style={thStyle}>{t(loc, "sources_country_col")}</th>
+                      <th style={thStyle}>{t(loc, "sources_authority_col")}</th>
+                      <th style={thStyle}>{t(loc, "sources_url_col2")}</th>
+                      <th style={thStyle}>{t(loc, "sources_trade_col")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {CUSTOMS_SOURCES.map((c) => (
+                      <tr key={c.country}>
+                        <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 600, whiteSpace: "nowrap" }}>
+                          {c.country}
+                        </td>
+                        <td style={{ ...tdStyle, color: "var(--muted)", fontSize: 13 }}>{c.authority}</td>
+                        <td style={tdStyle}>
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none", fontSize: 13, wordBreak: "break-all" }}
+                          >
+                            {c.url.replace("https://www.", "").replace("https://", "").replace("http://", "")}
+                          </a>
+                        </td>
+                        <td style={{ ...tdStyle, color: "var(--muted)", fontSize: 13, whiteSpace: "nowrap" }}>
+                          {c.tradeAgreement}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Methodology Link */}
-        <section className="bg-surface border border-white/10 rounded-lg p-6">
-          <p className="text-gray-400">
-            {t(loc, "sources_methodology_pre")}
-            <Link
-              href={`/${locale}/data-methodology`}
-              className="text-accent-light hover:underline"
-            >
-              {t(loc, "sources_methodology_link")}
-            </Link>
-            .
+          {/* Exchange Rate Source */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "sources_exchange_title")}</h2>
+            <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 24 }}>
+              <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
+                <div style={{ flex: 1, minWidth: 280 }}>
+                  <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                    {t(loc, "sources_ecb")}
+                  </p>
+                  <a
+                    href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none", fontSize: 14 }}
+                  >
+                    ecb.europa.eu/stats/exchange/eurofxref
+                  </a>
+                </div>
+                <div style={{ fontSize: 14, color: "var(--body)" }}>
+                  <p style={{ margin: 0 }}>
+                    {t(loc, "sources_update_freq")}{" "}
+                    <span style={{ color: "var(--ink)", fontWeight: 600 }}>{t(loc, "sources_daily")}</span>
+                  </p>
+                  <p style={{ margin: "4px 0 0" }}>
+                    {t(loc, "sources_currencies")}{" "}
+                    <span style={{ color: "var(--ink)", fontWeight: 600 }}>{t(loc, "sources_currencies_val")}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Review Data Sources */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "sources_reviews_title")}</h2>
+            <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 24 }}>
+              <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
+                <div style={{ flex: 1, minWidth: 280 }}>
+                  <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>Trustpilot</p>
+                  <a
+                    href="https://www.trustpilot.com"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none", fontSize: 14 }}
+                  >
+                    trustpilot.com
+                  </a>
+                </div>
+                <div style={{ fontSize: 14, color: "var(--body)" }}>
+                  <p style={{ margin: 0 }}>{t(loc, "sources_reviews_desc")}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Methodology Link */}
+          <section style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 24 }}>
+            <p style={{ margin: 0, color: "var(--body)", fontSize: 15, lineHeight: 1.65 }}>
+              {t(loc, "sources_methodology_pre")}
+              <Link href={`/${locale}/data-methodology`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>
+                {t(loc, "sources_methodology_link")}
+              </Link>
+              .
+            </p>
+          </section>
+
+          <p style={{ marginTop: 0, paddingTop: 20, borderTop: "1px solid var(--line)", fontSize: 13, color: "var(--muted)" }}>
+            {t(loc, "last_updated_march")}
           </p>
-        </section>
-
-        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {t(loc, "last_updated_march")}
-        </p>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -4,7 +4,6 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import Link from "next/link";
-import ExpandableGrid from "@/components/ExpandableGrid";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -30,6 +29,16 @@ export async function generateMetadata({
   };
 }
 
+const CONTINENT_FLAG: Record<string, string> = {
+  "Europe": "🇪🇺",
+  "Asia": "🌏",
+  "Africa": "🌍",
+  "North America": "🇺🇸",
+  "South America": "🇧🇷",
+  "Oceania": "🇦🇺",
+  "Antarctica": "❄️",
+};
+
 export default async function GuidesPage({
   params,
 }: {
@@ -39,7 +48,6 @@ export default async function GuidesPage({
   const loc = locale as Locale;
   const popular = getPopularCountries();
 
-  // Group countries by continent
   const continents = new Map<string, typeof countries>();
   for (const c of countries) {
     const list = continents.get(c.continent) || [];
@@ -47,84 +55,107 @@ export default async function GuidesPage({
     continents.set(c.continent, list);
   }
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {t(loc, "guides_heading")}
-      </h1>
-      <p className="text-body mb-8 max-w-3xl">
-        {t(loc, "guides_subtitle")}
-      </p>
+  const sortedContinents = [...continents.entries()].sort(([a], [b]) => a.localeCompare(b));
 
-      {/* Popular guides — mixed layout: 3 featured + rest compact */}
-      <section className="mb-12">
-        <h2 className="text-xl font-bold text-white mb-4">
-          {t(loc, "popular_guides")}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
-          {popular.slice(0, 3).map((c) => (
-            <Link
-              key={c.code}
-              href={`/${locale}/guide/${c.slug_en}`}
-              prefetch={false}
-              className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all"
-            >
-              <span className="text-3xl">{countryFlag(c.code)}</span>
-              <p className="font-medium text-white mt-2">{getCountryName(c, loc)}</p>
-              <p className="text-xs text-gray-500">{c.continent}</p>
-            </Link>
-          ))}
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {popular.slice(3, 12).map((c) => (
-            <Link
-              key={c.code}
-              href={`/${locale}/guide/${c.slug_en}`}
-              prefetch={false}
-              className="flex items-center gap-2 bg-card hover:bg-line rounded-lg px-3 py-2 transition-colors text-sm"
-            >
-              <span className="text-lg">{countryFlag(c.code)}</span>
-              <span className="text-body">{getCountryName(c, loc)}</span>
-            </Link>
-          ))}
+  return (
+    <>
+      {/* V2 Hero */}
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 30% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "guides_heading")} <span style={{ color: "var(--blue)" }}>{countries.length} {t(loc, "countries_label") || "countries"}.</span>
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 620, margin: 0 }}>
+            {t(loc, "guides_subtitle")}
+          </p>
         </div>
       </section>
 
-      {/* All countries by continent */}
-      {[...continents.entries()]
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([continent, list]) => {
-          const sorted = list.sort((a, b) =>
-            getCountryName(a, loc).localeCompare(getCountryName(b, loc))
-          );
-          return (
-            <section key={continent} className="mb-8">
-              <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span className="inline-block w-8 h-0.5 bg-accent/40 rounded-full" />
-                {continent}
-              </h2>
-              <ExpandableGrid
-                visibleCount={12}
-                showMoreLabel={t(loc, "show_all")}
-                showLessLabel={t(loc, "show_less")}
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2"
+      {/* Popular featured cards */}
+      <section style={{ padding: "48px 32px 24px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 16 }}>
+            {t(loc, "popular_guides")}
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }} className="tools-grid">
+            {popular.slice(0, 8).map((c) => (
+              <Link
+                key={c.code}
+                href={`/${locale}/guide/${c.slug_en}`}
+                prefetch={false}
+                style={{
+                  background: "#fff",
+                  border: "1px solid var(--line)",
+                  borderRadius: 16,
+                  padding: "20px 22px",
+                  textDecoration: "none",
+                  color: "var(--ink)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  transition: "all .2s",
+                }}
+                className="team-card"
               >
-                {sorted.map((c) => (
-                  <Link
-                    key={c.code}
-                    href={`/${locale}/guide/${c.slug_en}`}
-                    prefetch={false}
-                    className="text-sm text-body hover:text-accent-light hover:translate-x-1 transition-all duration-150 py-1"
-                  >
-                    <span className="text-2xl mr-1">{countryFlag(c.code)}</span> {getCountryName(c, loc)}
-                  </Link>
-                ))}
-              </ExpandableGrid>
-            </section>
-          );
-        })}
+                <span style={{ fontSize: 32 }}>{countryFlag(c.code)}</span>
+                <span style={{ fontWeight: 700, fontSize: 16, letterSpacing: "-.01em" }}>{getCountryName(c, loc)}</span>
+                <span style={{ fontSize: 12, color: "var(--muted)" }}>{c.continent}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* BreadcrumbList JSON-LD */}
+      {/* By continent */}
+      <section style={{ padding: "40px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          {sortedContinents.map(([continent, list]) => {
+            const sorted = list.sort((a, b) =>
+              getCountryName(a, loc).localeCompare(getCountryName(b, loc))
+            );
+            return (
+              <div key={continent} style={{ marginBottom: 48 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
+                  <span style={{ fontSize: 24 }}>{CONTINENT_FLAG[continent] || "🌐"}</span>
+                  <h2 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>{continent}</h2>
+                  <span style={{ fontSize: 13, color: "var(--muted)", fontWeight: 500 }}>
+                    {list.length} {t(loc, "countries_label") || "countries"}
+                  </span>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10 }} className="tools-grid">
+                  {sorted.map((c) => (
+                    <Link
+                      key={c.code}
+                      href={`/${locale}/guide/${c.slug_en}`}
+                      prefetch={false}
+                      style={{
+                        padding: "14px 16px",
+                        background: "#fff",
+                        border: "1px solid var(--line)",
+                        borderRadius: 12,
+                        fontSize: 14,
+                        fontWeight: 600,
+                        color: "var(--ink)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        textDecoration: "none",
+                        transition: "all .2s",
+                      }}
+                      className="team-card"
+                    >
+                      <span style={{ fontSize: 18 }}>{countryFlag(c.code)}</span>
+                      <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{getCountryName(c, loc)}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -132,17 +163,8 @@ export default async function GuidesPage({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: t(loc, "home"),
-                item: `${"https://rateships.com"}/${locale}`,
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: t(loc, "guides_heading"),
-              },
+              { "@type": "ListItem", position: 1, name: t(loc, "home"), item: `https://rateships.com/${locale}` },
+              { "@type": "ListItem", position: 2, name: t(loc, "guides_heading") },
             ],
           }),
         }}
@@ -162,6 +184,6 @@ export default async function GuidesPage({
           }),
         }}
       />
-    </div>
+    </>
   );
 }

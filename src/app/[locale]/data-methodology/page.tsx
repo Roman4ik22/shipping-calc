@@ -74,6 +74,52 @@ const RECENT_UPDATES = [
   { date: "November 2025", description: "Updated Switzerland customs procedures and de minimis threshold" },
 ];
 
+const thStyle: React.CSSProperties = {
+  textAlign: "left",
+  padding: "12px",
+  fontSize: 12,
+  fontWeight: 700,
+  color: "var(--muted)",
+  textTransform: "uppercase",
+  letterSpacing: ".05em",
+};
+
+const tdStyle: React.CSSProperties = {
+  padding: "12px",
+  fontSize: 14,
+  color: "var(--body)",
+  borderTop: "1px solid var(--line)",
+};
+
+const h2Style: React.CSSProperties = {
+  margin: "0 0 16px",
+  fontSize: 28,
+  fontWeight: 800,
+  letterSpacing: "-.02em",
+  color: "var(--ink)",
+};
+
+const h3Style: React.CSSProperties = {
+  margin: "24px 0 12px",
+  fontSize: 17,
+  fontWeight: 700,
+  color: "var(--ink)",
+};
+
+const cardStyle: React.CSSProperties = {
+  background: "#fff",
+  border: "1px solid var(--line)",
+  borderRadius: 16,
+  padding: 24,
+};
+
+const bodyStyle: React.CSSProperties = {
+  color: "var(--body)",
+  lineHeight: 1.65,
+  fontSize: 15,
+  margin: "0 0 12px",
+};
+
 export default async function DataMethodologyPage({
   params,
 }: {
@@ -83,7 +129,7 @@ export default async function DataMethodologyPage({
   const loc = locale as Locale;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       {/* BreadcrumbList + WebPage JSON-LD */}
       <script
         type="application/ld+json"
@@ -123,398 +169,300 @@ export default async function DataMethodologyPage({
         }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">
-          {t(loc, "data_method_breadcrumb")}
-        </span>
-      </nav>
-
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {t(loc, "data_method_h1")}
-      </h1>
-      <p className="text-gray-400 mb-8 text-lg">
-        {t(loc, "data_method_intro")}
-      </p>
-
-      <div className="space-y-10 text-gray-300 leading-relaxed">
-        {/* Section 1: Carrier Rate Data */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s1_title")}
-          </h2>
-          <p className="mb-4">
-            {t(loc, "data_method_s1_body")}
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "data_method_breadcrumb")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "data_method_h1")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 720, margin: 0 }}>
+            {t(loc, "data_method_intro")}
           </p>
+        </div>
+      </section>
 
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {t(loc, "data_method_top10")}
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_carrier_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_source_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {TOP_CARRIERS.map((c) => (
-                  <tr key={c.name} className="border-t border-white/5">
-                    <td className="p-3 text-white font-medium">{c.name}</td>
-                    <td className="p-3">
-                      <a
-                        href={c.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline break-all text-xs"
-                      >
-                        {c.url.replace("https://www.", "").replace("https://", "")}
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm text-gray-500 mt-2">
-            {t(loc, "data_method_full_list_pre")}
-            <Link
-              href={`/${locale}/sources`}
-              className="text-accent-light hover:underline"
-            >
-              {t(loc, "data_method_full_list_link")}
-            </Link>
-            {t(loc, "data_method_full_list_post")}
-          </p>
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gap: 40 }}>
+          {/* Section 1: Carrier Rate Data */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s1_title")}</h2>
+            <p style={bodyStyle}>{t(loc, "data_method_s1_body")}</p>
 
-          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
-            {t(loc, "data_method_currency_title")}
-          </h3>
-          <p>
-            {t(loc, "data_method_currency_body")}
-          </p>
-
-          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
-            {t(loc, "data_method_gri_title")}
-          </h3>
-          <p className="mb-3">
-            {t(loc, "data_method_gri_body")}
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_carrier_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_increase_col")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_effective_col")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {GRI_2026.map((g) => (
-                  <tr key={g.carrier} className="border-t border-white/5">
-                    <td className="p-3 text-white">{g.carrier}</td>
-                    <td className="p-3 text-accent-light font-medium">
-                      +{g.increase}
-                    </td>
-                    <td className="p-3 text-gray-400">{g.effective}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <h3 className="text-lg font-semibold text-white mt-6 mb-3">
-            {t(loc, "data_method_verified_title")}
-          </h3>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-block w-3 h-3 rounded-full bg-green-500" />
-                  <span className="text-white font-semibold">
-                    {t(loc, "data_method_verified_label")}
-                  </span>
-                </div>
-                <p className="text-sm text-gray-400">
-                  {t(loc, "data_method_verified_desc")}
-                </p>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-block w-3 h-3 rounded-full bg-yellow-500" />
-                  <span className="text-white font-semibold">
-                    {t(loc, "data_method_estimated_label")}
-                  </span>
-                </div>
-                <p className="text-sm text-gray-400">
-                  {t(loc, "data_method_estimated_desc")}
-                </p>
+            <h3 style={h3Style}>{t(loc, "data_method_top10")}</h3>
+            <div style={{ ...cardStyle, padding: 0, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead style={{ background: "var(--bg)" }}>
+                    <tr>
+                      <th style={thStyle}>{t(loc, "data_method_carrier_col")}</th>
+                      <th style={thStyle}>{t(loc, "data_method_source_col")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {TOP_CARRIERS.map((c) => (
+                      <tr key={c.name}>
+                        <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 600 }}>{c.name}</td>
+                        <td style={tdStyle}>
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none", fontSize: 13, wordBreak: "break-all" }}
+                          >
+                            {c.url.replace("https://www.", "").replace("https://", "")}
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Section 2: Customs Data */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s2_title")}
-          </h2>
-          <p className="mb-4">
-            {t(loc, "data_method_s2_body")}
-          </p>
-
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {t(loc, "data_method_what_track")}
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div className="bg-surface border border-white/10 rounded-lg p-4">
-              <p className="text-white font-semibold mb-1">
-                {t(loc, "data_method_deminimis_title")}
-              </p>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_deminimis_desc")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-4">
-              <p className="text-white font-semibold mb-1">
-                {t(loc, "data_method_duty_title")}
-              </p>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_duty_desc")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-4">
-              <p className="text-white font-semibold mb-1">
-                {t(loc, "data_method_vat_title")}
-              </p>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_vat_desc")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-4">
-              <p className="text-white font-semibold mb-1">
-                {t(loc, "data_method_prohibited_title")}
-              </p>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_prohibited_desc")}
-              </p>
-            </div>
-          </div>
-
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {t(loc, "data_method_customs_sources")}
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border border-white/10 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-white/5">
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_source_name")}
-                  </th>
-                  <th className="text-left p-3 text-gray-400 font-medium">
-                    {t(loc, "data_method_source_purpose")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {CUSTOMS_SOURCES.map((s) => (
-                  <tr key={s.name} className="border-t border-white/5">
-                    <td className="p-3">
-                      <a
-                        href={s.url}
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        className="text-accent-light hover:underline"
-                      >
-                        {s.name}
-                      </a>
-                    </td>
-                    <td className="p-3 text-gray-400">{s.purpose}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Section 3: Update Frequency */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s3_title")}
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
-                {t(loc, "data_method_weekly")}
-              </p>
-              <p className="text-xs text-gray-400 mt-1">
-                {t(loc, "data_method_weekly_desc")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
-                {t(loc, "data_method_monthly")}
-              </p>
-              <p className="text-xs text-gray-400 mt-1">
-                {t(loc, "data_method_monthly_desc")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-2xl font-bold text-accent-light">
-                {t(loc, "data_method_daily")}
-              </p>
-              <p className="text-xs text-gray-400 mt-1">
-                {t(loc, "data_method_daily_desc")}
-              </p>
-            </div>
-          </div>
-
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {t(loc, "data_method_recent_updates")}
-          </h3>
-          <div className="space-y-2">
-            {RECENT_UPDATES.map((u, i) => (
-              <div
-                key={i}
-                className="flex gap-4 items-start border-l-2 border-accent-light/30 pl-4 py-1"
-              >
-                <span className="text-sm text-accent-light font-medium whitespace-nowrap min-w-[100px]">
-                  {u.date}
-                </span>
-                <span className="text-sm text-gray-400">{u.description}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-surface border border-white/10 rounded-lg p-5 mt-6">
-            <p className="text-white font-semibold mb-1">
-              {t(loc, "data_method_last_audit_title")}
-            </p>
-            <p className="text-sm text-gray-400">
-              {t(loc, "data_method_last_audit_body")}
-            </p>
-          </div>
-        </section>
-
-        {/* Section 4: Coverage */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s4_title")}
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">143</p>
-              <p className="text-sm text-gray-400 mt-1">
-                {t(loc, "data_method_carriers_label")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">213</p>
-              <p className="text-sm text-gray-400 mt-1">
-                {t(loc, "data_method_countries_label")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">80+</p>
-              <p className="text-sm text-gray-400 mt-1">
-                {t(loc, "data_method_verified_count")}
-              </p>
-            </div>
-            <div className="bg-surface border border-white/10 rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-accent-light">40+</p>
-              <p className="text-sm text-gray-400 mt-1">
-                {t(loc, "data_method_customs_count")}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Accuracy Commitment */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s5_title")}
-          </h2>
-
-          <div className="space-y-4">
-            <div className="bg-surface border border-green-500/20 rounded-lg p-5">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="inline-block w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-white font-semibold">
-                  {t(loc, "data_method_verified_accuracy")}
-                </span>
-              </div>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_verified_acc_desc")}
-              </p>
-            </div>
-
-            <div className="bg-surface border border-yellow-500/20 rounded-lg p-5">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="inline-block w-3 h-3 rounded-full bg-yellow-500" />
-                <span className="text-white font-semibold">
-                  {t(loc, "data_method_estimated_accuracy")}
-                </span>
-              </div>
-              <p className="text-sm text-gray-400">
-                {t(loc, "data_method_estimated_acc_desc")}
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-surface border border-white/10 rounded-lg p-5 mt-6">
-            <h3 className="text-white font-semibold mb-2">
-              {t(loc, "data_method_disclaimer_title")}
-            </h3>
-            <ul className="list-disc list-inside text-sm text-gray-400 space-y-2">
-              <li>{t(loc, "data_method_disclaimer_1")}</li>
-              <li>{t(loc, "data_method_disclaimer_2")}</li>
-              <li>{t(loc, "data_method_disclaimer_3")}</li>
-              <li>{t(loc, "data_method_disclaimer_4")}</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Section 6: Report Inaccuracies */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "data_method_s6_title")}
-          </h2>
-          <p className="mb-4">
-            {t(loc, "data_method_s6_body")}
-          </p>
-          <div className="bg-surface border border-white/10 rounded-lg p-5">
-            <p className="text-gray-400 text-sm">
-              {t(loc, "data_method_s6_contact_pre")}
-              <Link
-                href={`/${locale}/about`}
-                className="text-accent-light hover:underline"
-              >
-                {t(loc, "data_method_s6_contact_link")}
+            <p style={{ fontSize: 13, color: "var(--muted)", marginTop: 12 }}>
+              {t(loc, "data_method_full_list_pre")}
+              <Link href={`/${locale}/sources`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>
+                {t(loc, "data_method_full_list_link")}
               </Link>
-              {t(loc, "data_method_s6_contact_post")}
+              {t(loc, "data_method_full_list_post")}
             </p>
-          </div>
-        </section>
 
-        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {t(loc, "last_updated_march")}
-        </p>
-      </div>
-    </div>
+            <h3 style={h3Style}>{t(loc, "data_method_currency_title")}</h3>
+            <p style={bodyStyle}>{t(loc, "data_method_currency_body")}</p>
+
+            <h3 style={h3Style}>{t(loc, "data_method_gri_title")}</h3>
+            <p style={bodyStyle}>{t(loc, "data_method_gri_body")}</p>
+            <div style={{ ...cardStyle, padding: 0, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead style={{ background: "var(--bg)" }}>
+                    <tr>
+                      <th style={thStyle}>{t(loc, "data_method_carrier_col")}</th>
+                      <th style={thStyle}>{t(loc, "data_method_increase_col")}</th>
+                      <th style={thStyle}>{t(loc, "data_method_effective_col")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {GRI_2026.map((g) => (
+                      <tr key={g.carrier}>
+                        <td style={{ ...tdStyle, color: "var(--ink)", fontWeight: 600 }}>{g.carrier}</td>
+                        <td style={{ ...tdStyle, color: "var(--blue)", fontWeight: 700 }}>+{g.increase}</td>
+                        <td style={{ ...tdStyle, color: "var(--muted)" }}>{g.effective}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <h3 style={h3Style}>{t(loc, "data_method_verified_title")}</h3>
+            <div style={cardStyle}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                    <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: 99, background: "#10b981" }} />
+                    <span style={{ color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                      {t(loc, "data_method_verified_label")}
+                    </span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                    {t(loc, "data_method_verified_desc")}
+                  </p>
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                    <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: 99, background: "#f59e0b" }} />
+                    <span style={{ color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                      {t(loc, "data_method_estimated_label")}
+                    </span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                    {t(loc, "data_method_estimated_desc")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 2: Customs Data */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s2_title")}</h2>
+            <p style={bodyStyle}>{t(loc, "data_method_s2_body")}</p>
+
+            <h3 style={h3Style}>{t(loc, "data_method_what_track")}</h3>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginBottom: 24 }}>
+              {[
+                { title: t(loc, "data_method_deminimis_title"), desc: t(loc, "data_method_deminimis_desc") },
+                { title: t(loc, "data_method_duty_title"), desc: t(loc, "data_method_duty_desc") },
+                { title: t(loc, "data_method_vat_title"), desc: t(loc, "data_method_vat_desc") },
+                { title: t(loc, "data_method_prohibited_title"), desc: t(loc, "data_method_prohibited_desc") },
+              ].map((item) => (
+                <div key={item.title} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 12, padding: 18 }}>
+                  <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>{item.title}</p>
+                  <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={h3Style}>{t(loc, "data_method_customs_sources")}</h3>
+            <div style={{ ...cardStyle, padding: 0, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead style={{ background: "var(--bg)" }}>
+                    <tr>
+                      <th style={thStyle}>{t(loc, "data_method_source_name")}</th>
+                      <th style={thStyle}>{t(loc, "data_method_source_purpose")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {CUSTOMS_SOURCES.map((s) => (
+                      <tr key={s.name}>
+                        <td style={tdStyle}>
+                          <a
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}
+                          >
+                            {s.name}
+                          </a>
+                        </td>
+                        <td style={{ ...tdStyle, color: "var(--muted)" }}>{s.purpose}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 3: Update Frequency */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s3_title")}</h2>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 24 }}>
+              {[
+                { val: t(loc, "data_method_weekly"), desc: t(loc, "data_method_weekly_desc") },
+                { val: t(loc, "data_method_monthly"), desc: t(loc, "data_method_monthly_desc") },
+                { val: t(loc, "data_method_daily"), desc: t(loc, "data_method_daily_desc") },
+              ].map((item, i) => (
+                <div key={i} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 24, textAlign: "center" }}>
+                  <p style={{ margin: 0, fontSize: 22, fontWeight: 800, color: "var(--blue)", letterSpacing: "-.02em" }}>{item.val}</p>
+                  <p style={{ margin: "6px 0 0", fontSize: 13, color: "var(--muted)" }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={h3Style}>{t(loc, "data_method_recent_updates")}</h3>
+            <div style={{ display: "grid", gap: 8 }}>
+              {RECENT_UPDATES.map((u, i) => (
+                <div
+                  key={i}
+                  style={{ display: "flex", gap: 16, alignItems: "flex-start", borderLeft: "2px solid var(--blue-50)", paddingLeft: 16, paddingTop: 4, paddingBottom: 4 }}
+                >
+                  <span style={{ fontSize: 14, color: "var(--blue)", fontWeight: 700, whiteSpace: "nowrap", minWidth: 110 }}>
+                    {u.date}
+                  </span>
+                  <span style={{ fontSize: 14, color: "var(--body)" }}>{u.description}</span>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ ...cardStyle, marginTop: 24 }}>
+              <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                {t(loc, "data_method_last_audit_title")}
+              </p>
+              <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                {t(loc, "data_method_last_audit_body")}
+              </p>
+            </div>
+          </section>
+
+          {/* Section 4: Coverage */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s4_title")}</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16 }}>
+              {[
+                { val: "143", label: t(loc, "data_method_carriers_label") },
+                { val: "213", label: t(loc, "data_method_countries_label") },
+                { val: "80+", label: t(loc, "data_method_verified_count") },
+                { val: "40+", label: t(loc, "data_method_customs_count") },
+              ].map((s) => (
+                <div key={s.val} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 24, textAlign: "center" }}>
+                  <p style={{ margin: 0, fontSize: 32, fontWeight: 800, color: "var(--blue)", letterSpacing: "-.03em" }}>{s.val}</p>
+                  <p style={{ margin: "6px 0 0", fontSize: 14, color: "var(--muted)" }}>{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 5: Accuracy Commitment */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s5_title")}</h2>
+
+            <div style={{ display: "grid", gap: 16 }}>
+              <div style={{ background: "#fff", border: "1px solid rgba(16,185,129,.3)", borderRadius: 16, padding: 24 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: 99, background: "#10b981" }} />
+                  <span style={{ color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                    {t(loc, "data_method_verified_accuracy")}
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                  {t(loc, "data_method_verified_acc_desc")}
+                </p>
+              </div>
+
+              <div style={{ background: "#fff", border: "1px solid rgba(245,158,11,.3)", borderRadius: 16, padding: 24 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: 99, background: "#f59e0b" }} />
+                  <span style={{ color: "var(--ink)", fontWeight: 700, fontSize: 15 }}>
+                    {t(loc, "data_method_estimated_accuracy")}
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                  {t(loc, "data_method_estimated_acc_desc")}
+                </p>
+              </div>
+            </div>
+
+            <div style={{ ...cardStyle, marginTop: 16 }}>
+              <h3 style={{ margin: "0 0 10px", color: "var(--ink)", fontWeight: 700, fontSize: 16 }}>
+                {t(loc, "data_method_disclaimer_title")}
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: 20, fontSize: 14, color: "var(--body)", lineHeight: 1.65, display: "grid", gap: 6 }}>
+                <li>{t(loc, "data_method_disclaimer_1")}</li>
+                <li>{t(loc, "data_method_disclaimer_2")}</li>
+                <li>{t(loc, "data_method_disclaimer_3")}</li>
+                <li>{t(loc, "data_method_disclaimer_4")}</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Section 6: Report Inaccuracies */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "data_method_s6_title")}</h2>
+            <p style={bodyStyle}>{t(loc, "data_method_s6_body")}</p>
+            <div style={cardStyle}>
+              <p style={{ margin: 0, color: "var(--body)", fontSize: 14, lineHeight: 1.65 }}>
+                {t(loc, "data_method_s6_contact_pre")}
+                <Link href={`/${locale}/about`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>
+                  {t(loc, "data_method_s6_contact_link")}
+                </Link>
+                {t(loc, "data_method_s6_contact_post")}
+              </p>
+            </div>
+          </section>
+
+          <p style={{ marginTop: 16, paddingTop: 20, borderTop: "1px solid var(--line)", fontSize: 13, color: "var(--muted)" }}>
+            {t(loc, "last_updated_march")}
+          </p>
+        </div>
+      </section>
+    </>
   );
 }

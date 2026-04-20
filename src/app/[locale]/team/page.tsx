@@ -115,7 +115,7 @@ export default async function TeamPage({
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       {/* Organization + BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
@@ -167,126 +167,101 @@ export default async function TeamPage({
         }}
       />
 
-      <nav className="text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">
-          {t(loc, "team_breadcrumb")}
-        </span>
-      </nav>
-
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-        {t(loc, "team_h1")}
-      </h1>
-
-      <div className="space-y-8 text-gray-300 leading-relaxed">
-        {/* Mission Statement */}
-        <section className="bg-surface border border-white/10 rounded-lg p-6">
-          <p className="text-lg">
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "team_breadcrumb")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "team_h1")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 720, margin: 0 }}>
             {t(loc, "team_mission")}
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Our Data Team */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-6">
+      <section style={{ padding: "64px 32px 48px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 16 }}>
             {t(loc, "team_our_team")}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {teams.map((team) => (
-              <div
-                key={team.title}
-                className="bg-surface border border-white/10 rounded-lg p-6"
-              >
-                <div className="mb-4">{team.icon}</div>
-                <h3 className="text-white font-semibold text-lg mb-2">
-                  {team.title}
-                </h3>
-                <p className="text-sm text-gray-400">{team.description}</p>
+              <div key={team.title} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 20, padding: 28, transition: "all .2s" }} className="team-card">
+                <div style={{ width: 56, height: 56, borderRadius: 14, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center", marginBottom: 16 }}>
+                  {team.icon}
+                </div>
+                <h3 style={{ margin: "0 0 6px", fontSize: 18, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{team.title}</h3>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>{team.description}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* What We Do */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+      <section style={{ padding: "24px 32px 48px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <h2 style={{ margin: "0 0 24px", fontSize: 28, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>
             {t(loc, "team_what_we_do")}
           </h2>
-          <div className="space-y-4">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }} className="stats-grid">
             {[
               { step: "1", title: t(loc, "team_step_collect"), desc: t(loc, "team_step_collect_desc") },
               { step: "2", title: t(loc, "team_step_verify"), desc: t(loc, "team_step_verify_desc") },
               { step: "3", title: t(loc, "team_step_normalize"), desc: t(loc, "team_step_normalize_desc") },
               { step: "4", title: t(loc, "team_step_publish"), desc: t(loc, "team_step_publish_desc") },
             ].map((item) => (
-              <div key={item.step} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light font-bold">
+              <div key={item.step} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 22 }}>
+                <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center", fontWeight: 800, fontSize: 16, marginBottom: 14 }}>
                   {item.step}
                 </div>
-                <div>
-                  <p className="text-white font-semibold">{item.title}</p>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
-                </div>
+                <p style={{ margin: "0 0 4px", fontWeight: 700, color: "var(--ink)", fontSize: 15 }}>{item.title}</p>
+                <p style={{ margin: 0, fontSize: 13, color: "var(--body)", lineHeight: 1.5 }}>{item.desc}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Our Commitment */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-4">
+      <section style={{ padding: "24px 32px 48px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <h2 style={{ margin: "0 0 20px", fontSize: 28, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>
             {t(loc, "team_commitment_title")}
           </h2>
-          <div className="bg-surface border border-white/10 rounded-lg p-6 space-y-3">
-            <p className="text-gray-300">
-              {t(loc, "team_commitment_body")}
-            </p>
-            <p className="text-gray-300">
+          <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 20, padding: 28 }}>
+            <p style={{ margin: "0 0 14px", color: "var(--body)", fontSize: 15, lineHeight: 1.65 }}>{t(loc, "team_commitment_body")}</p>
+            <p style={{ margin: 0, color: "var(--body)", fontSize: 15, lineHeight: 1.65 }}>
               {t(loc, "team_commitment_contact_pre")}
-              <Link
-                href={`/${locale}/about`}
-                className="text-accent-light hover:underline"
-              >
+              <Link href={`/${locale}/about`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>
                 {t(loc, "team_commitment_contact_link")}
               </Link>
               {t(loc, "team_commitment_contact_post")}
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Related Pages */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link
-            href={`/${locale}/data-methodology`}
-            className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
-          >
-            <p className="text-white font-semibold mb-1">
-              {t(loc, "team_data_methodology")}
-            </p>
-            <p className="text-sm text-gray-400">
-              {t(loc, "team_data_methodology_desc")}
-            </p>
-          </Link>
-          <Link
-            href={`/${locale}/sources`}
-            className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent-light/30 transition-colors"
-          >
-            <p className="text-white font-semibold mb-1">
-              {t(loc, "team_data_sources")}
-            </p>
-            <p className="text-sm text-gray-400">
-              {t(loc, "team_data_sources_desc")}
-            </p>
-          </Link>
-        </section>
-
-        <p className="text-sm text-gray-500 pt-4 border-t border-white/10">
-          {t(loc, "last_updated_march")}
-        </p>
-      </div>
-    </div>
+      <section style={{ padding: "24px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <Link href={`/${locale}/data-methodology`} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 22, textDecoration: "none", transition: "all .2s" }} className="team-card">
+              <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 16 }}>{t(loc, "team_data_methodology")}</p>
+              <p style={{ margin: 0, fontSize: 13, color: "var(--body)" }}>{t(loc, "team_data_methodology_desc")}</p>
+            </Link>
+            <Link href={`/${locale}/sources`} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 22, textDecoration: "none", transition: "all .2s" }} className="team-card">
+              <p style={{ margin: "0 0 4px", color: "var(--ink)", fontWeight: 700, fontSize: 16 }}>{t(loc, "team_data_sources")}</p>
+              <p style={{ margin: 0, fontSize: 13, color: "var(--body)" }}>{t(loc, "team_data_sources_desc")}</p>
+            </Link>
+          </div>
+          <p style={{ marginTop: 28, paddingTop: 20, borderTop: "1px solid var(--line)", fontSize: 13, color: "var(--muted)" }}>
+            {t(loc, "last_updated_march")}
+          </p>
+        </div>
+      </section>
+    </>
   );
 }

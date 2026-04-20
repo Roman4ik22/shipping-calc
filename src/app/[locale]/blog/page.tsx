@@ -23,9 +23,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/blog`,
       languages: {
-        ...Object.fromEntries(
-          locales.map((l) => [l, `/${l}/blog`])
-        ),
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}/blog`])),
         "x-default": "/en/blog",
       },
     },
@@ -36,6 +34,16 @@ export async function generateMetadata({
       type: "website",
     },
   };
+}
+
+function tagColor(tag: string): { bg: string; color: string } {
+  const guideish = ["guide", "beginners", "small-business", "cost-saving"];
+  const customsish = ["customs", "eu", "returns"];
+  const ecomish = ["ecommerce", "shopify"];
+  if (guideish.includes(tag)) return { bg: "var(--blue-50)", color: "var(--blue)" };
+  if (customsish.includes(tag)) return { bg: "var(--accent-50)", color: "var(--accent)" };
+  if (ecomish.includes(tag)) return { bg: "var(--warm-50)", color: "#A37A00" };
+  return { bg: "var(--line-2)", color: "var(--muted)" };
 }
 
 export default async function BlogPage({
@@ -50,8 +58,7 @@ export default async function BlogPage({
   );
 
   return (
-    <div className="min-h-screen bg-dark-900">
-      {/* BreadcrumbList JSON-LD */}
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -66,89 +73,76 @@ export default async function BlogPage({
         }}
       />
 
-      {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <nav className="flex items-center gap-2 text-sm text-gray-400">
-          <Link
-            href={`/${locale}`}
-            className="hover:text-white transition-colors"
-          >
-            {t(loc, "home")}
-          </Link>
-          <span>/</span>
-          <span className="text-white">{t(loc, "blog")}</span>
-        </nav>
-      </div>
+      {/* V2 Hero */}
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 70% -10%, rgba(232,92,58,.06), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "blog_title")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 620, margin: 0 }}>
+            {t(loc, "blog_description")}
+          </p>
+        </div>
+      </section>
 
-      {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-          {t(loc, "blog_title")}
-        </h1>
-        <p className="text-lg text-gray-400 max-w-2xl">
-          {t(loc, "blog_description")}
-        </p>
-      </div>
-
-      {/* Posts Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedPosts.map((post, index) => {
-            const tagColors = [
-              "bg-blue-500/10 text-blue-300 border-blue-500/20",
-              "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
-              "bg-amber-500/10 text-amber-300 border-amber-500/20",
-              "bg-purple-500/10 text-purple-300 border-purple-500/20",
-            ];
-            return (
+      {/* Posts grid V2 */}
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="two-col">
+            {sortedPosts.map((post) => (
               <Link
                 key={post.id}
                 href={`/${locale}/blog/${post.id}`}
-                className={`group bg-surface rounded-xl border border-white/10 p-6 hover:border-accent-light/30 hover:translate-y-[-2px] transition-all duration-200 ${
-                  index === 0 ? "md:col-span-2 lg:col-span-2" : ""
-                }`}
+                style={{
+                  background: "#fff",
+                  border: "1px solid var(--line)",
+                  borderRadius: 20,
+                  padding: 28,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 14,
+                  textDecoration: "none",
+                  color: "inherit",
+                  transition: "all .2s",
+                }}
+                className="team-card"
               >
-                <div className="flex items-center gap-3 mb-3">
+                <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                  {post.tags.slice(0, 3).map((tag) => {
+                    const tc = tagColor(tag);
+                    return (
+                      <span key={tag} style={{ fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 999, background: tc.bg, color: tc.color }}>
+                        {tag}
+                      </span>
+                    );
+                  })}
                   <time
-                    className={`font-medium tabular-nums ${index === 0 ? "text-sm text-accent-light" : "text-xs text-gray-500"}`}
                     dateTime={post.date}
+                    style={{ fontSize: 12, color: "var(--muted)", marginLeft: "auto" }}
                   >
-                    {new Date(post.date).toLocaleDateString(
-                      loc === "ru" ? "ru-RU" : "en-US",
-                      { year: "numeric", month: "long", day: "numeric" }
-                    )}
+                    {new Date(post.date).toLocaleDateString(loc === "ru" ? "ru-RU" : "en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                   </time>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {post.tags.slice(0, 3).map((tag, tagIdx) => (
-                    <span
-                      key={tag}
-                      className={`text-xs px-2 py-1 rounded-full border ${tagColors[tagIdx % tagColors.length]}`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h2 className={`font-semibold text-white mb-2 group-hover:text-accent-light transition-colors ${
-                  index === 0 ? "text-xl" : "text-lg"
-                }`}>
+                <h3 style={{ margin: 0, fontSize: 20, fontWeight: 700, letterSpacing: "-.01em", lineHeight: 1.25, color: "var(--ink)" }}>
                   {loc === "ru" ? post.title_ru : post.title_en}
-                </h2>
-                <p className={`text-sm text-gray-400 mb-4 ${index === 0 ? "line-clamp-4" : "line-clamp-3"}`}>
+                </h3>
+                <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
                   {loc === "ru" ? post.excerpt_ru : post.excerpt_en}
                 </p>
-                <div className="flex items-center justify-end">
-                  <span className="text-sm text-accent-light group-hover:text-white transition-colors">
-                    {t(loc, "read_more")} &rarr;
-                  </span>
-                </div>
+                <span style={{ fontSize: 14, fontWeight: 600, color: "var(--blue)", marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6 }}>
+                  {t(loc, "read_more")} →
+                </span>
               </Link>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* CollectionPage JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -164,6 +158,6 @@ export default async function BlogPage({
           }),
         }}
       />
-    </div>
+    </>
   );
 }

@@ -204,7 +204,7 @@ export default async function UpdatesPage({
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -212,69 +212,61 @@ export default async function UpdatesPage({
         }}
       />
 
-      {/* Breadcrumb */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">{t(loc, "updates")}</span>
-      </nav>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(232,92,58,.06), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{t(loc, "updates")}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "updates_title")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 720, margin: 0 }}>
+            {t(loc, "updates_subtitle")}
+          </p>
+        </div>
+      </section>
 
-      {/* Header */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-        {t(loc, "updates_title")}
-      </h1>
-      <p className="text-body text-lg mb-10">
-        {t(loc, "updates_subtitle")}
-      </p>
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {updates.map((entry, i) => (
+              <article key={i} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: "22px 26px", display: "flex", flexDirection: "row", gap: 20, alignItems: "flex-start" }}>
+                <div style={{ width: 110, flexShrink: 0 }}>
+                  <time dateTime={entry.date} style={{ fontSize: 13, fontWeight: 600, color: "var(--muted)", fontVariantNumeric: "tabular-nums" }}>
+                    {new Date(entry.date + "T00:00:00").toLocaleDateString(locale, {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </time>
+                </div>
 
-      {/* Entries */}
-      <div className="space-y-4">
-        {updates.map((entry, i) => (
-          <article
-            key={i}
-            className="bg-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row gap-4"
-          >
-            {/* Date */}
-            <div className="sm:w-32 shrink-0">
-              <time
-                dateTime={entry.date}
-                className="text-sm font-medium text-gray-500"
-              >
-                {new Date(entry.date + "T00:00:00").toLocaleDateString(
-                  locale,
-                  {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  }
-                )}
-              </time>
-            </div>
-
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <h2 className="text-white font-semibold text-base mb-1">
-                {loc === "ru" ? entry.title_ru : entry.title_en}
-              </h2>
-              <p className="text-body text-sm leading-relaxed mb-3">
-                {loc === "ru" ? entry.desc_ru : entry.desc_en}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {entry.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${tagColors[tag] || "bg-gray-700/50 text-body"}`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h2 style={{ margin: "0 0 6px", fontSize: 16, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>
+                    {loc === "ru" ? entry.title_ru : entry.title_en}
+                  </h2>
+                  <p style={{ margin: "0 0 12px", fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                    {loc === "ru" ? entry.desc_ru : entry.desc_en}
+                  </p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {entry.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${tagColors[tag] || "bg-line text-body"}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

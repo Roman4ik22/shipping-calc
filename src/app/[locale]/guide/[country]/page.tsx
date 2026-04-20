@@ -61,6 +61,21 @@ export async function generateMetadata({
   };
 }
 
+const h2Style: React.CSSProperties = {
+  margin: "0 0 16px",
+  fontSize: 28,
+  fontWeight: 800,
+  letterSpacing: "-.02em",
+  color: "var(--ink)",
+};
+
+const cardStyle: React.CSSProperties = {
+  background: "#fff",
+  border: "1px solid var(--line)",
+  borderRadius: 16,
+  padding: 24,
+};
+
 export default async function GuidePage({
   params,
 }: {
@@ -90,393 +105,478 @@ export default async function GuidePage({
   const postalCarriers = carriers.filter((c) => c.type === "postal");
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumbs */}
-      <nav className="text-sm text-body mb-6">
-        <Link href={`/${locale}`} className="hover:text-accent-light">
-          {t(loc, "home")}
-        </Link>
-        <span className="mx-2">/</span>
-        <Link href={`/${locale}/guide`} className="hover:text-accent-light">
-          {t(loc, "guides")}
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-white">{name}</span>
-      </nav>
+    <>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 40% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
+            <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <Link href={`/${locale}/guide`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "guides")}</Link>
+            <span style={{ margin: "0 8px" }}>/</span>
+            <span style={{ color: "var(--ink)" }}>{name}</span>
+          </nav>
+          <h1 style={{ margin: "0 0 20px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {countryFlag(country.code)}{" "}
+            {t(loc, "guide_title", { country: name })}
+          </h1>
 
-      {/* Title */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-        {countryFlag(country.code)}{" "}
-        {t(loc, "guide_title", { country: name })}
-      </h1>
-
-      {/* Quick links */}
-      <div className="flex flex-wrap gap-3 mb-8">
-        <Link
-          href={`/${locale}/shipping/to/${country.slug_en}`}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
-        >
-          {t(loc, "ship_to", { country: name })}
-        </Link>
-        <Link
-          href={`/${locale}/shipping/from/${country.slug_en}`}
-          className="px-4 py-2 bg-surface border border-gray-300 rounded-lg text-sm hover:border-accent/50"
-        >
-          {t(loc, "ship_from", { country: name })}
-        </Link>
-      </div>
-
-      {/* Overview */}
-      <section className="prose max-w-none mb-10">
-        <h2 className="text-2xl font-bold text-white mb-3">
-          {t(loc, "overview")}
-        </h2>
-        <p className="text-body leading-relaxed">
-          {t(loc, "guide_overview", {
-            country: name,
-            region: country.region,
-            continent: country.continent,
-            carrier_count: String(carrierCount),
-            international_count: String(internationalCarriers.length),
-            postal_count: String(postalCarriers.length),
-          })}
-        </p>
+          {/* Quick links */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+            <Link
+              href={`/${locale}/shipping/to/${country.slug_en}`}
+              style={{
+                padding: "10px 18px",
+                background: "var(--ink)",
+                color: "#fff",
+                borderRadius: 10,
+                fontSize: 14,
+                fontWeight: 600,
+                textDecoration: "none",
+              }}
+            >
+              {t(loc, "ship_to", { country: name })}
+            </Link>
+            <Link
+              href={`/${locale}/shipping/from/${country.slug_en}`}
+              style={{
+                padding: "10px 18px",
+                background: "#fff",
+                color: "var(--ink)",
+                border: "1px solid var(--line)",
+                borderRadius: 10,
+                fontSize: 14,
+                fontWeight: 600,
+                textDecoration: "none",
+              }}
+            >
+              {t(loc, "ship_from", { country: name })}
+            </Link>
+          </div>
+        </div>
       </section>
 
-      {/* Customs */}
-      {hasCustoms && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "customs_info")}
-          </h2>
-          <div className="bg-surface border border-white/10 rounded-xl p-6">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-4">
-              <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-body mb-1">{t(loc, "de_minimis")}</p>
-                <p className="text-2xl font-bold text-white">
-                  ${customs.de_minimis_usd}
-                </p>
-                <p className="text-xs text-body mt-1">
-                  {customs.de_minimis_usd > 0
-                    ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
-                    : t(loc, "duty_from_zero")}
-                </p>
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gap: 48 }}>
+          {/* Overview */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "overview")}</h2>
+            <p style={{ color: "var(--body)", lineHeight: 1.65, fontSize: 16, margin: 0 }}>
+              {t(loc, "guide_overview", {
+                country: name,
+                region: country.region,
+                continent: country.continent,
+                carrier_count: String(carrierCount),
+                international_count: String(internationalCarriers.length),
+                postal_count: String(postalCarriers.length),
+              })}
+            </p>
+          </section>
+
+          {/* Customs */}
+          {hasCustoms && (
+            <section>
+              <h2 style={h2Style}>{t(loc, "customs_info")}</h2>
+              <div style={cardStyle}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 16 }}>
+                  <div style={{ textAlign: "center", padding: 20, background: "var(--bg)", borderRadius: 12, border: "1px solid var(--line)" }}>
+                    <p style={{ margin: "0 0 4px", fontSize: 13, color: "var(--muted)" }}>{t(loc, "de_minimis")}</p>
+                    <p style={{ margin: 0, fontSize: 26, fontWeight: 800, color: "var(--ink)", letterSpacing: "-.02em" }}>
+                      ${customs.de_minimis_usd}
+                    </p>
+                    <p style={{ margin: "4px 0 0", fontSize: 12, color: "var(--muted)" }}>
+                      {customs.de_minimis_usd > 0
+                        ? t(loc, "duty_free_below", { threshold: String(customs.de_minimis_usd) })
+                        : t(loc, "duty_from_zero")}
+                    </p>
+                  </div>
+                  <div style={{ textAlign: "center", padding: 20, background: "var(--bg)", borderRadius: 12, border: "1px solid var(--line)" }}>
+                    <p style={{ margin: "0 0 4px", fontSize: 13, color: "var(--muted)" }}>{t(loc, "vat_rate")}</p>
+                    <p style={{ margin: 0, fontSize: 26, fontWeight: 800, color: "var(--ink)", letterSpacing: "-.02em" }}>{customs.vat_rate}%</p>
+                    <p style={{ margin: "4px 0 0", fontSize: 12, color: "var(--muted)" }}>{customs.currency}</p>
+                  </div>
+                  <div style={{ textAlign: "center", padding: 20, background: "var(--bg)", borderRadius: 12, border: "1px solid var(--line)" }}>
+                    <p style={{ margin: "0 0 4px", fontSize: 13, color: "var(--muted)" }}>{t(loc, "avg_duty")}</p>
+                    <p style={{ margin: 0, fontSize: 26, fontWeight: 800, color: "var(--ink)", letterSpacing: "-.02em" }}>{customs.avg_duty_rate}%</p>
+                    <p style={{ margin: "4px 0 0", fontSize: 12, color: "var(--muted)" }}>{t(loc, "average")}</p>
+                  </div>
+                </div>
+                {getCustomsNotes(customs, loc) && (
+                  <div style={{ background: "var(--blue-50)", border: "1px solid rgba(26,115,232,.3)", borderRadius: 12, padding: 16 }}>
+                    <p style={{ margin: 0, fontSize: 14, color: "var(--ink)", lineHeight: 1.55 }}>
+                      <span style={{ fontWeight: 700 }}>{t(loc, "customs_note")}:</span>{" "}
+                      {getCustomsNotes(customs, loc)}
+                    </p>
+                  </div>
+                )}
               </div>
-              <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-body mb-1">{t(loc, "vat_rate")}</p>
-                <p className="text-2xl font-bold text-white">{customs.vat_rate}%</p>
-                <p className="text-xs text-body mt-1">{customs.currency}</p>
-              </div>
-              <div className="text-center p-4 bg-surface-light rounded-lg">
-                <p className="text-sm text-body mb-1">{t(loc, "avg_duty")}</p>
-                <p className="text-2xl font-bold text-white">{customs.avg_duty_rate}%</p>
-                <p className="text-xs text-body mt-1">
-                  {t(loc, "average")}
-                </p>
+            </section>
+          )}
+
+          {/* Required Documents */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "required_documents")}</h2>
+            <div style={cardStyle}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12 }}>
+                {[
+                  { doc: t(loc, "doc_invoice"), desc: t(loc, "doc_invoice_desc") },
+                  { doc: t(loc, "doc_packing"), desc: t(loc, "doc_packing_desc") },
+                  { doc: t(loc, "doc_customs"), desc: t(loc, "doc_customs_desc") },
+                  { doc: t(loc, "doc_awb"), desc: t(loc, "doc_awb_desc") },
+                  { doc: t(loc, "doc_origin"), desc: t(loc, "doc_origin_desc") },
+                  { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: 12, background: "var(--bg)", borderRadius: 10, border: "1px solid var(--line)" }}>
+                    <span style={{
+                      flexShrink: 0,
+                      width: 32,
+                      height: 32,
+                      background: "var(--blue-50)",
+                      color: "var(--blue)",
+                      borderRadius: 10,
+                      display: "grid",
+                      placeItems: "center",
+                      fontSize: 13,
+                      fontWeight: 700,
+                    }}>
+                      {i + 1}
+                    </span>
+                    <div>
+                      <p style={{ margin: "0 0 2px", fontWeight: 600, color: "var(--ink)", fontSize: 14 }}>{item.doc}</p>
+                      <p style={{ margin: 0, fontSize: 13, color: "var(--muted)", lineHeight: 1.5 }}>{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            {getCustomsNotes(customs, loc) && (
-              <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-4">
-                <p className="text-sm text-accent-light">
-                  <span className="font-medium">{t(loc, "customs_note")}:</span>{" "}
-                  {getCustomsNotes(customs, loc)}
+          </section>
+
+          {/* Import Duty Estimator */}
+          {hasCustoms && (
+            <section>
+              <h2 style={h2Style}>{t(loc, "duty_tax_estimate")}</h2>
+              <div style={cardStyle}>
+                <p style={{ margin: "0 0 16px", fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                  {t(loc, "duty_estimate_intro", { country: name })}
+                </p>
+                <div style={{ overflowX: "auto" }}>
+                  <table style={{ width: "100%", fontSize: 14, borderCollapse: "collapse" }}>
+                    <thead>
+                      <tr style={{ textAlign: "left", color: "var(--muted)", borderBottom: "1px solid var(--line)" }}>
+                        <th style={{ padding: "8px 16px 8px 0", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em" }}>{t(loc, "goods_value")}</th>
+                        <th style={{ padding: "8px 16px 8px 0", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em" }}>{t(loc, "duty")}</th>
+                        <th style={{ padding: "8px 16px 8px 0", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em" }}>{t(loc, "vat_tax")}</th>
+                        <th style={{ padding: "8px 0", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em" }}>{t(loc, "total_charges")}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[50, 100, 200, 500, 1000].map((value) => {
+                        const dutiableValue = Math.max(0, value - customs.de_minimis_usd);
+                        const duty = dutiableValue * customs.avg_duty_rate / 100;
+                        const vatBase = value + duty;
+                        const vat = customs.de_minimis_usd > 0 && value <= customs.de_minimis_usd ? 0 : vatBase * customs.vat_rate / 100;
+                        const total = duty + vat;
+                        return (
+                          <tr key={value} style={{ borderBottom: "1px solid var(--line)" }}>
+                            <td style={{ padding: "10px 16px 10px 0", fontWeight: 600, color: "var(--ink)" }}>${value}</td>
+                            <td style={{ padding: "10px 16px 10px 0", color: "var(--body)" }}>${duty.toFixed(0)}</td>
+                            <td style={{ padding: "10px 16px 10px 0", color: "var(--body)" }}>${vat.toFixed(0)}</td>
+                            <td style={{ padding: "10px 0", fontWeight: 700, color: "var(--ink)" }}>
+                              {total > 0 ? `$${total.toFixed(0)}` : t(loc, "free")}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                <p style={{ margin: "12px 0 0", fontSize: 12, color: "var(--muted)" }}>
+                  {t(loc, "duty_estimate_note")}
                 </p>
               </div>
-            )}
-          </div>
-        </section>
-      )}
+            </section>
+          )}
 
-      {/* Required Documents */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
-          {t(loc, "required_documents")}
-        </h2>
-        <div className="bg-surface border border-white/10 rounded-xl p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { doc: t(loc, "doc_invoice"), desc: t(loc, "doc_invoice_desc") },
-              { doc: t(loc, "doc_packing"), desc: t(loc, "doc_packing_desc") },
-              { doc: t(loc, "doc_customs"), desc: t(loc, "doc_customs_desc") },
-              { doc: t(loc, "doc_awb"), desc: t(loc, "doc_awb_desc") },
-              { doc: t(loc, "doc_origin"), desc: t(loc, "doc_origin_desc") },
-              { doc: t(loc, "doc_license"), desc: t(loc, "doc_license_desc") },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-3 items-start p-3 bg-surface-light rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-100 text-accent-light rounded-lg flex items-center justify-center text-xs font-bold">
-                  {i + 1}
-                </span>
+          {/* Tips */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "shipping_tips")}</h2>
+            <div style={{ display: "grid", gap: 12 }}>
+              {[
+                t(loc, "tip_1"),
+                t(loc, "tip_2"),
+                t(loc, "tip_3", { threshold: String(customs.de_minimis_usd), country: name }),
+                t(loc, "tip_4"),
+                t(loc, "tip_5"),
+                t(loc, "tip_6"),
+              ].map((tip, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                  <span style={{
+                    flexShrink: 0,
+                    width: 26,
+                    height: 26,
+                    background: "var(--blue-50)",
+                    color: "var(--blue)",
+                    borderRadius: 99,
+                    display: "grid",
+                    placeItems: "center",
+                    fontSize: 13,
+                    fontWeight: 700,
+                  }}>
+                    {i + 1}
+                  </span>
+                  <p style={{ margin: 0, color: "var(--body)", fontSize: 15, lineHeight: 1.6 }}>{tip}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Prohibited & Restricted Items */}
+          <section>
+            <h2 style={h2Style}>{t(loc, "prohibited_items")}</h2>
+            <div style={cardStyle}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
                 <div>
-                  <p className="font-medium text-white text-sm">{item.doc}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
+                  <h3 style={{ margin: "0 0 10px", color: "#b91c1c", fontWeight: 700, fontSize: 14 }}>
+                    {t(loc, "prohibited")}
+                  </h3>
+                  <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: 6 }}>
+                    {[
+                      t(loc, "prohibited_1"),
+                      t(loc, "prohibited_2"),
+                      t(loc, "prohibited_3"),
+                      t(loc, "prohibited_4"),
+                      t(loc, "prohibited_5"),
+                    ].map((item, i) => (
+                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                        <span style={{ color: "#ef4444", flexShrink: 0 }}>X</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 style={{ margin: "0 0 10px", color: "#b45309", fontWeight: 700, fontSize: 14 }}>
+                    {t(loc, "restricted")}
+                  </h3>
+                  <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: 6 }}>
+                    {[
+                      t(loc, "restricted_1"),
+                      t(loc, "restricted_2"),
+                      t(loc, "restricted_3"),
+                      t(loc, "restricted_4"),
+                      t(loc, "restricted_5"),
+                    ].map((item, i) => (
+                      <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
+                        <span style={{ color: "#f59e0b", flexShrink: 0 }}>!</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Import Duty Estimator */}
-      {hasCustoms && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {t(loc, "duty_tax_estimate")}
-          </h2>
-          <div className="bg-surface border border-white/10 rounded-xl p-6">
-            <p className="text-sm text-body mb-4">
-              {t(loc, "duty_estimate_intro", { country: name })}
-            </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-body border-b border-white/10">
-                    <th className="pb-2 pr-4">{t(loc, "goods_value")}</th>
-                    <th className="pb-2 pr-4">{t(loc, "duty")}</th>
-                    <th className="pb-2 pr-4">{t(loc, "vat_tax")}</th>
-                    <th className="pb-2">{t(loc, "total_charges")}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[50, 100, 200, 500, 1000].map((value) => {
-                    const dutiableValue = Math.max(0, value - customs.de_minimis_usd);
-                    const duty = dutiableValue * customs.avg_duty_rate / 100;
-                    const vatBase = value + duty;
-                    const vat = customs.de_minimis_usd > 0 && value <= customs.de_minimis_usd ? 0 : vatBase * customs.vat_rate / 100;
-                    const total = duty + vat;
-                    return (
-                      <tr key={value} className="border-b border-white/5">
-                        <td className="py-2 pr-4 font-medium">${value}</td>
-                        <td className="py-2 pr-4">${duty.toFixed(0)}</td>
-                        <td className="py-2 pr-4">${vat.toFixed(0)}</td>
-                        <td className="py-2 font-bold text-white">
-                          {total > 0 ? `$${total.toFixed(0)}` : t(loc, "free")}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
             </div>
-            <p className="text-xs text-body mt-3">
-              {t(loc, "duty_estimate_note")}
-            </p>
-          </div>
-        </section>
-      )}
-
-      {/* Tips */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
-          {t(loc, "shipping_tips")}
-        </h2>
-        <div className="space-y-3">
-          {[
-            t(loc, "tip_1"),
-            t(loc, "tip_2"),
-            t(loc, "tip_3", { threshold: String(customs.de_minimis_usd), country: name }),
-            t(loc, "tip_4"),
-            t(loc, "tip_5"),
-            t(loc, "tip_6"),
-          ].map((tip, i) => (
-            <div key={i} className="flex gap-3 items-start">
-              <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-accent-light rounded-full flex items-center justify-center text-sm font-medium">
-                {i + 1}
-              </span>
-              <p className="text-body text-sm">{tip}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Prohibited & Restricted Items */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-white mb-4">
-          {t(loc, "prohibited_items")}
-        </h2>
-        <div className="bg-surface border border-white/10 rounded-xl p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <h3 className="font-semibold text-red-700 mb-2 text-sm">
-                {t(loc, "prohibited")}
-              </h3>
-              <ul className="space-y-1 text-sm text-body">
-                {[
-                  t(loc, "prohibited_1"),
-                  t(loc, "prohibited_2"),
-                  t(loc, "prohibited_3"),
-                  t(loc, "prohibited_4"),
-                  t(loc, "prohibited_5"),
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-red-500 flex-shrink-0">✕</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-amber-700 mb-2 text-sm">
-                {t(loc, "restricted")}
-              </h3>
-              <ul className="space-y-1 text-sm text-body">
-                {[
-                  t(loc, "restricted_1"),
-                  t(loc, "restricted_2"),
-                  t(loc, "restricted_3"),
-                  t(loc, "restricted_4"),
-                  t(loc, "restricted_5"),
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-amber-500 flex-shrink-0">!</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Useful tools — horizontal list, not 3 identical cards */}
-      <section className="mb-10">
-        <h2 className="text-xl font-bold text-white mb-4">
-          {t(loc, "useful_tools")}
-        </h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href={`/${locale}/tools/duty-calculator`}
-            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
-            <span className="text-sm text-gray-600">/</span>
-            <div>
-              <p className="font-medium text-white text-sm">{t(loc, "duty_calculator_link")}</p>
-              <p className="text-xs text-gray-500">{t(loc, "duties_for", { country: name })}</p>
-            </div>
-          </Link>
-          <Link href={`/${locale}/tools/delivery-estimator`}
-            className="flex items-center gap-3 bg-surface border border-white/10 rounded-lg px-4 py-3 hover:border-accent/30 transition-colors flex-1">
-            <span className="text-sm text-gray-600">/</span>
-            <div>
-              <p className="font-medium text-white text-sm">{t(loc, "delivery_estimator_link")}</p>
-              <p className="text-xs text-gray-500">{t(loc, "delivery_date")}</p>
-            </div>
-          </Link>
-          {hasCustoms && (
-            <Link href={`/${locale}/customs/${country.slug_en}`}
-              className="flex items-center gap-3 text-sm text-body hover:text-ink transition-colors px-2">
-              {t(loc, "customs_link", { country: name })} →
-            </Link>
-          )}
-        </div>
-      </section>
-
-      {/* Popular routes — combined, asymmetric layout */}
-      <section className="mb-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          <div className="md:col-span-3">
-            <h2 className="text-xl font-bold text-white mb-4">
-              {t(loc, "popular_routes_to", { country: name })}
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {popular.slice(0, 10).map((from) => (
-                <Link
-                  key={from.code}
-                  href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
-                  prefetch={false}
-                  className="bg-surface hover:bg-line rounded-lg px-3 py-2 text-sm text-body hover:text-ink transition-colors"
-                >
-                  {countryFlag(from.code)} {getCountryName(from, loc)} → {name}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="md:col-span-2">
-            <h2 className="text-lg font-bold text-white mb-4">
-              {t(loc, "popular_routes_from", { country: name })}
-            </h2>
-            <div className="space-y-1">
-              {popular.slice(0, 6).map((to) => (
-                <Link
-                  key={to.code}
-                  href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
-                  prefetch={false}
-                  className="block text-sm text-body hover:text-ink transition-colors py-1"
-                >
-                  {name} → {getCountryName(to, loc)} {countryFlag(to.code)}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Guide FAQ */}
-      {(() => {
-        const faqs = [
-          {
-            q: t(loc, "guide_faq_cost_q", { country: name }),
-            a: t(loc, "guide_faq_cost_a", { country: name }),
-          },
-          {
-            q: t(loc, "guide_faq_threshold_q", { country: name }),
-            a: t(loc, "guide_faq_threshold_a", {
-              country: name,
-              threshold: String(customs.de_minimis_usd),
-              duty: String(customs.avg_duty_rate),
-              vat: String(customs.vat_rate),
-            }),
-          },
-          {
-            q: t(loc, "guide_faq_carriers_q", { country: name }),
-            a: t(loc, "guide_faq_carriers_a", { country: name, count: String(carrierCount) }),
-          },
-        ];
-
-        return (
-          <section className="mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              {t(loc, "faq_title")}
-            </h2>
-            <div className="space-y-3">
-              {faqs.map((faq, i) => (
-                <details key={i} className="bg-surface border border-white/10 rounded-lg">
-                  <summary className="p-4 font-medium text-white cursor-pointer hover:text-accent-light">
-                    {faq.q}
-                  </summary>
-                  <p className="px-4 pb-4 text-body text-sm">{faq.a}</p>
-                </details>
-              ))}
-            </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  mainEntity: faqs.map((faq) => ({
-                    "@type": "Question",
-                    name: faq.q,
-                    acceptedAnswer: { "@type": "Answer", text: faq.a },
-                  })),
-                }),
-              }}
-            />
           </section>
-        );
-      })()}
 
-      {/* Compare rates CTA */}
-      <section className="mb-10 bg-card rounded-3xl p-8 text-center">
-        <h2 className="text-xl font-bold text-white mb-2">
-          {t(loc, "compare_shipping_to", { country: name })}
-        </h2>
-        <p className="text-sm text-gray-500 mb-5">
-          {t(loc, "carriers_realtime")}
-        </p>
-        <Link
-          href={`/${locale}`}
-          className="inline-block px-8 py-3 bg-accent text-white text-sm font-medium rounded-full hover:bg-accent-dark transition-colors"
-        >
-          {t(loc, "compare_rates_cta")}
-        </Link>
+          {/* Useful tools */}
+          <section>
+            <h2 style={{ ...h2Style, fontSize: 24 }}>{t(loc, "useful_tools")}</h2>
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+              <Link
+                href={`/${locale}/tools/duty-calculator`}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  background: "#fff",
+                  border: "1px solid var(--line)",
+                  borderRadius: 12,
+                  padding: "14px 18px",
+                  flex: 1,
+                  minWidth: 240,
+                  textDecoration: "none",
+                  transition: "all .2s",
+                }}
+              >
+                <span style={{ fontSize: 14, color: "var(--muted)" }}>/</span>
+                <div>
+                  <p style={{ margin: 0, fontWeight: 600, color: "var(--ink)", fontSize: 14 }}>{t(loc, "duty_calculator_link")}</p>
+                  <p style={{ margin: 0, fontSize: 13, color: "var(--muted)" }}>{t(loc, "duties_for", { country: name })}</p>
+                </div>
+              </Link>
+              <Link
+                href={`/${locale}/tools/delivery-estimator`}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  background: "#fff",
+                  border: "1px solid var(--line)",
+                  borderRadius: 12,
+                  padding: "14px 18px",
+                  flex: 1,
+                  minWidth: 240,
+                  textDecoration: "none",
+                  transition: "all .2s",
+                }}
+              >
+                <span style={{ fontSize: 14, color: "var(--muted)" }}>/</span>
+                <div>
+                  <p style={{ margin: 0, fontWeight: 600, color: "var(--ink)", fontSize: 14 }}>{t(loc, "delivery_estimator_link")}</p>
+                  <p style={{ margin: 0, fontSize: 13, color: "var(--muted)" }}>{t(loc, "delivery_date")}</p>
+                </div>
+              </Link>
+              {hasCustoms && (
+                <Link
+                  href={`/${locale}/customs/${country.slug_en}`}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: 14,
+                    color: "var(--blue)",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    padding: "0 8px",
+                  }}
+                >
+                  {t(loc, "customs_link", { country: name })} →
+                </Link>
+              )}
+            </div>
+          </section>
+
+          {/* Popular routes */}
+          <section>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 40 }}>
+              <div>
+                <h2 style={{ ...h2Style, fontSize: 24 }}>
+                  {t(loc, "popular_routes_to", { country: name })}
+                </h2>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {popular.slice(0, 10).map((from) => (
+                    <Link
+                      key={from.code}
+                      href={`/${locale}/shipping/${makeCorridorSlug(from, country, loc)}`}
+                      prefetch={false}
+                      style={{
+                        background: "#fff",
+                        border: "1px solid var(--line)",
+                        borderRadius: 10,
+                        padding: "8px 12px",
+                        fontSize: 13,
+                        color: "var(--body)",
+                        textDecoration: "none",
+                        transition: "all .2s",
+                      }}
+                    >
+                      {countryFlag(from.code)} {getCountryName(from, loc)} → {name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h2 style={{ ...h2Style, fontSize: 20 }}>
+                  {t(loc, "popular_routes_from", { country: name })}
+                </h2>
+                <div style={{ display: "grid", gap: 4 }}>
+                  {popular.slice(0, 6).map((to) => (
+                    <Link
+                      key={to.code}
+                      href={`/${locale}/shipping/${makeCorridorSlug(country, to, loc)}`}
+                      prefetch={false}
+                      style={{
+                        display: "block",
+                        fontSize: 14,
+                        color: "var(--body)",
+                        textDecoration: "none",
+                        padding: "4px 0",
+                      }}
+                    >
+                      {name} → {getCountryName(to, loc)} {countryFlag(to.code)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Guide FAQ */}
+          {(() => {
+            const faqs = [
+              {
+                q: t(loc, "guide_faq_cost_q", { country: name }),
+                a: t(loc, "guide_faq_cost_a", { country: name }),
+              },
+              {
+                q: t(loc, "guide_faq_threshold_q", { country: name }),
+                a: t(loc, "guide_faq_threshold_a", {
+                  country: name,
+                  threshold: String(customs.de_minimis_usd),
+                  duty: String(customs.avg_duty_rate),
+                  vat: String(customs.vat_rate),
+                }),
+              },
+              {
+                q: t(loc, "guide_faq_carriers_q", { country: name }),
+                a: t(loc, "guide_faq_carriers_a", { country: name, count: String(carrierCount) }),
+              },
+            ];
+
+            return (
+              <section>
+                <h2 style={h2Style}>{t(loc, "faq_title")}</h2>
+                <div style={{ display: "grid", gap: 12 }}>
+                  {faqs.map((faq, i) => (
+                    <details key={i} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 12 }}>
+                      <summary style={{ padding: 16, fontWeight: 600, color: "var(--ink)", cursor: "pointer", fontSize: 15 }}>
+                        {faq.q}
+                      </summary>
+                      <p style={{ margin: 0, padding: "0 16px 16px", color: "var(--body)", fontSize: 14, lineHeight: 1.6 }}>{faq.a}</p>
+                    </details>
+                  ))}
+                </div>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: faqs.map((faq) => ({
+                        "@type": "Question",
+                        name: faq.q,
+                        acceptedAnswer: { "@type": "Answer", text: faq.a },
+                      })),
+                    }),
+                  }}
+                />
+              </section>
+            );
+          })()}
+
+          {/* Compare rates CTA */}
+          <section style={{ background: "var(--ink)", borderRadius: 20, padding: "40px 32px", textAlign: "center" }}>
+            <h2 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800, color: "#fff", letterSpacing: "-.02em" }}>
+              {t(loc, "compare_shipping_to", { country: name })}
+            </h2>
+            <p style={{ margin: "0 0 20px", fontSize: 14, color: "rgba(255,255,255,.7)" }}>
+              {t(loc, "carriers_realtime")}
+            </p>
+            <Link
+              href={`/${locale}`}
+              style={{
+                display: "inline-block",
+                padding: "12px 28px",
+                background: "#fff",
+                color: "var(--ink)",
+                fontSize: 14,
+                fontWeight: 700,
+                borderRadius: 99,
+                textDecoration: "none",
+              }}
+            >
+              {t(loc, "compare_rates_cta")}
+            </Link>
+          </section>
+        </div>
       </section>
 
       {/* JSON-LD */}
@@ -535,6 +635,6 @@ export default async function GuidePage({
           }),
         }}
       />
-    </div>
+    </>
   );
 }

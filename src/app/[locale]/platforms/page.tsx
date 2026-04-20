@@ -32,30 +32,30 @@ type FilterTab = "all" | "global" | "regional";
 
 function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
   return (
-    <div className="bg-surface border border-white/10 rounded-lg p-5 hover:border-accent/50 transition-all flex flex-col">
+    <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, padding: 22, display: "flex", flexDirection: "column", transition: "all .2s" }} className="team-card">
       <div className="flex items-start justify-between mb-3">
         <div>
-          <h3 className="font-semibold text-white text-lg leading-tight">
+          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, letterSpacing: "-.01em", color: "var(--ink)", lineHeight: 1.2 }}>
             {platform.company}
           </h3>
-          <p className="text-sm text-gray-400 mt-0.5">{platform.countryHQ}</p>
+          <p style={{ margin: "4px 0 0", fontSize: 13, color: "var(--muted)" }}>{platform.countryHQ}</p>
         </div>
-        <span className="shrink-0 ml-2 px-2 py-0.5 text-xs font-medium rounded bg-white/5 text-gray-300 border border-white/10">
+        <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 999, background: "var(--line-2)", color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".05em" }}>
           {platform.category}
         </span>
       </div>
 
-      <p className="text-sm text-gray-300 mb-3">{platform.type}</p>
+      <p style={{ fontSize: 14, color: "var(--body)", marginBottom: 12 }}>{platform.type}</p>
 
-      <div className="space-y-1.5 text-sm text-gray-400 mb-4 flex-1">
+      <div className="space-y-1.5 mb-4 flex-1" style={{ fontSize: 13, color: "var(--muted)" }}>
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--muted)" }}>
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span>{platform.coverage}</span>
         </div>
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "var(--muted)" }}>
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
           <span>{platform.carriers}</span>
@@ -64,17 +64,17 @@ function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
 
       <div className="flex flex-wrap gap-1.5 mb-4">
         {platform.hasApi && (
-          <span className="px-2 py-0.5 text-xs font-medium rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 999, background: "var(--blue-50)", color: "var(--blue)" }}>
             API
           </span>
         )}
         {platform.whiteLabel && (
-          <span className="px-2 py-0.5 text-xs font-medium rounded bg-green-500/10 text-green-400 border border-green-500/20">
+          <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 999, background: "#E8F8EF", color: "#0F8A48" }}>
             White-Label
           </span>
         )}
         {platform.region !== "Global" && (
-          <span className="px-2 py-0.5 text-xs font-medium rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">
+          <span style={{ fontSize: 11, fontWeight: 700, padding: "3px 10px", borderRadius: 999, background: "var(--warm-50)", color: "#A37A00" }}>
             {platform.region}
           </span>
         )}
@@ -84,7 +84,7 @@ function PlatformCard({ platform }: { platform: (typeof platforms)[0] }) {
         href={`https://${platform.website}`}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex items-center gap-1.5 text-sm text-accent-light hover:text-accent transition-colors mt-auto"
+        style={{ fontSize: 14, fontWeight: 600, color: "var(--blue)", display: "inline-flex", alignItems: "center", gap: 6, marginTop: "auto", textDecoration: "none" }}
       >
         {platform.website}
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,8 @@ function FilterTabs({ locale }: { locale: string }) {
         <a
           key={tab.key}
           href={tab.href}
-          className="px-4 py-2 text-sm font-medium rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-accent/50 bg-surface transition-all"
+          style={{ padding: "8px 16px", fontSize: 14, fontWeight: 600, borderRadius: 999, border: "1px solid var(--line)", color: "var(--body)", background: "#fff", textDecoration: "none", transition: "all .2s" }}
+          className="team-card"
         >
           {tab.label}
         </a>
@@ -164,64 +165,59 @@ export default async function PlatformsPage({
   const BASE_URL = "https://rateships.com";
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-        <Link href={`/${locale}`} className="hover:text-white transition-colors">
-          {t(loc, "home")}
-        </Link>
-        <span>/</span>
-        <span className="text-white">{t(loc, "platforms")}</span>
-      </nav>
-
-      {/* Hero */}
-      <section className="mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-          {t(loc, "platforms_title")}
-        </h1>
-        <p className="text-lg text-gray-400 max-w-3xl">
-          {t(loc, "platforms_description")}
-        </p>
-        <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
-          <span>{platforms.length} platforms</span>
-          <span>{platforms.filter((p) => p.category === "Global").length} global</span>
-          <span>{platforms.filter((p) => p.category === "Regional").length} regional</span>
+    <>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 60% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
+          <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
+            {t(loc, "platforms_title")}
+          </h1>
+          <p style={{ fontSize: 19, color: "var(--body)", maxWidth: 720, margin: 0 }}>
+            {t(loc, "platforms_description")}
+          </p>
+          <div style={{ marginTop: 16, display: "flex", gap: 18, fontSize: 14, color: "var(--muted)", fontWeight: 500 }}>
+            <span><span style={{ color: "var(--ink)", fontWeight: 700 }}>{platforms.length}</span> platforms</span>
+            <span>|</span>
+            <span><span style={{ color: "var(--ink)", fontWeight: 700 }}>{platforms.filter((p) => p.category === "Global").length}</span> global</span>
+            <span>|</span>
+            <span><span style={{ color: "var(--ink)", fontWeight: 700 }}>{platforms.filter((p) => p.category === "Regional").length}</span> regional</span>
+          </div>
         </div>
       </section>
 
-      {/* Filter Tabs */}
-      <FilterTabs locale={locale} />
+      <section style={{ padding: "48px 32px 96px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <FilterTabs locale={locale} />
 
-      {/* Global Platforms */}
-      {globalPlatforms.length > 0 && (
-        <section className="mb-12">
-          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Global Platforms ({globalPlatforms.length})
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {globalPlatforms.map((p) => (
-              <PlatformCard key={p.id} platform={p} />
+          {globalPlatforms.length > 0 && (
+            <section style={{ marginBottom: 48 }}>
+              <h2 style={{ margin: "0 0 20px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>
+                Global platforms <span style={{ color: "var(--muted)", fontWeight: 500 }}>({globalPlatforms.length})</span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {globalPlatforms.map((p) => (
+                  <PlatformCard key={p.id} platform={p} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {regionOrder
+            .filter((region) => regionalByRegion[region]?.length)
+            .map((region) => (
+              <section key={region} style={{ marginBottom: 48 }}>
+                <h2 style={{ margin: "0 0 20px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>
+                  {region} <span style={{ color: "var(--muted)", fontWeight: 500 }}>({regionalByRegion[region].length})</span>
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {regionalByRegion[region].map((p) => (
+                    <PlatformCard key={p.id} platform={p} />
+                  ))}
+                </div>
+              </section>
             ))}
-          </div>
-        </section>
-      )}
-
-      {/* Regional Providers by region */}
-      {regionOrder
-        .filter((region) => regionalByRegion[region]?.length)
-        .map((region) => (
-          <section key={region} className="mb-12">
-            <h2 className="text-xl font-bold text-white mb-4">{region} ({regionalByRegion[region].length})</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {regionalByRegion[region].map((p) => (
-                <PlatformCard key={p.id} platform={p} />
-              ))}
-            </div>
-          </section>
-        ))}
+        </div>
+      </section>
 
       {/* JSON-LD ItemList */}
       <script
@@ -280,6 +276,6 @@ export default async function PlatformsPage({
           }),
         }}
       />
-    </div>
+    </>
   );
 }
