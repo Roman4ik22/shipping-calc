@@ -152,6 +152,7 @@ export async function generateMetadata({
   return {
     title: t(loc, "updates_title"),
     description: t(loc, "updates_description"),
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `/${locale}/updates`,
       languages: {
