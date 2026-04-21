@@ -11,20 +11,20 @@ export async function GET() {
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f1117;
-      color: #e5e7eb;
+      background: #FAF7F2;
+      color: #0F172A;
       line-height: 1.6;
       padding: 2rem;
     }
     .container { max-width: 800px; margin: 0 auto; }
     h1 {
       font-size: 2rem;
-      color: #f9fafb;
+      color: #0F172A;
       margin-bottom: 0.5rem;
     }
     h2 {
       font-size: 1.25rem;
-      color: #f9fafb;
+      color: #0F172A;
       margin-top: 2rem;
       margin-bottom: 0.75rem;
       padding-bottom: 0.5rem;
@@ -32,7 +32,7 @@ export async function GET() {
     }
     h3 {
       font-size: 1rem;
-      color: #d1d5db;
+      color: #3F4A5C;
       margin-top: 1.25rem;
       margin-bottom: 0.5rem;
     }
@@ -41,8 +41,8 @@ export async function GET() {
       margin-bottom: 2rem;
     }
     .endpoint-box {
-      background: #1a1d2e;
-      border: 1px solid rgba(255,255,255,0.1);
+      background: #FFFFFF;
+      border: 1px solid #E6E1DA;
       border-radius: 8px;
       padding: 1rem 1.25rem;
       margin: 1rem 0;
@@ -77,7 +77,7 @@ export async function GET() {
     }
     td { font-size: 0.9rem; }
     code {
-      background: #1a1d2e;
+      background: #FFFFFF;
       padding: 2px 6px;
       border-radius: 4px;
       font-family: 'SF Mono', 'Fira Code', monospace;
@@ -85,8 +85,8 @@ export async function GET() {
       color: #a78bfa;
     }
     pre {
-      background: #1a1d2e;
-      border: 1px solid rgba(255,255,255,0.1);
+      background: #FFFFFF;
+      border: 1px solid #E6E1DA;
       border-radius: 8px;
       padding: 1.25rem;
       overflow-x: auto;
