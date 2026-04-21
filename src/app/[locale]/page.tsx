@@ -16,7 +16,7 @@ export async function generateMetadata({
   const loc = locale as Locale;
   return {
     title: t(loc, "compare_shipping_rates"),
-    description: t(loc, "hero_subtitle", { count: "134" }),
+    description: t(loc, "hero_subtitle", { count: "145" }),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -26,7 +26,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: t(loc, "compare_shipping_rates"),
-      description: t(loc, "hero_subtitle", { count: "134" }),
+      description: t(loc, "hero_subtitle", { count: "145" }),
       type: "website",
     },
   };
@@ -71,12 +71,12 @@ export default async function HomePage({
             <div style={{ paddingTop: 32 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "#fff", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: 999, background: "#0F8A48", boxShadow: "0 0 0 4px rgba(15,138,72,.18)" }} />
-                {tf(loc, "hero_pill", `${countries.length}+ countries · 134+ carriers · live rates`)}
+                {tf(loc, "hero_pill", `${countries.length}+ countries · 145+ carriers · live rates`)}
               </div>
               <h1 style={{ margin: "20px 0 22px", fontSize: "clamp(40px,5.4vw,68px)", lineHeight: 1.0, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
                 {tf(loc, "hero_h1_prefix", "Compare")}{" "}
                 <span style={{ color: "var(--blue)", position: "relative", display: "inline-block" }}>
-                  {tf(loc, "hero_h1_blue", "134+ carriers")}
+                  {tf(loc, "hero_h1_blue", "145+ carriers")}
                   <svg aria-hidden viewBox="0 0 340 20" style={{ position: "absolute", left: 0, bottom: -10, width: "100%", height: 14 }}>
                     <path d="M2 12 Q 80 2, 170 10 T 338 8" stroke="var(--warm)" strokeWidth="5" fill="none" strokeLinecap="round" opacity=".85" />
                   </svg>
@@ -85,7 +85,7 @@ export default async function HomePage({
                 {tf(loc, "hero_h1_suffix", "in 5 seconds.")}
               </h1>
               <p style={{ fontSize: 19, color: "var(--body)", lineHeight: 1.5, maxWidth: 520, margin: "0 0 28px" }}>
-                {t(loc, "hero_subtitle", { count: "134" })}
+                {t(loc, "hero_subtitle", { count: "145" })}
               </p>
 
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -103,7 +103,7 @@ export default async function HomePage({
                   fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", boxShadow: "var(--shadow-sm)",
                   textDecoration: "none",
                 }}>
-                  {tf(loc, "see_all_carriers", "See all 134 carriers")} →
+                  {tf(loc, "see_all_carriers", "See all 145+ carriers")} →
                 </Link>
               </div>
 
@@ -123,7 +123,7 @@ export default async function HomePage({
               {/* Carrier brand strip */}
               <div style={{ marginTop: 56, paddingTop: 28, borderTop: "1px solid var(--line)" }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 14 }}>
-                  {tf(loc, "trusted_carriers", "Rates from 134+ global & regional carriers")}
+                  {tf(loc, "trusted_carriers", "Rates from 145+ global & regional carriers")}
                 </div>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   {[
@@ -344,7 +344,7 @@ export default async function HomePage({
                 <div style={{ marginTop: 14, fontSize: 13, color: "var(--muted)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
                   <span>
                     {tf(loc, "showing_carriers", "Showing")} {sampleCarriers.length} {tf(loc, "of", "of")} {data?.carriers.length ?? 0} {tf(loc, "carriers_for_route", "carriers for this route")} ·{" "}
-                    <Link href={`/${locale}/carriers`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{tf(loc, "see_all_134", "See all 134 →")}</Link>
+                    <Link href={`/${locale}/carriers`} style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>{tf(loc, "see_all_145", "See all 145 →")}</Link>
                   </span>
                   <span>
                     {tf(loc, "rates_from_tariffs", "Rates from published carrier tariffs")} ·{" "}
@@ -380,7 +380,7 @@ export default async function HomePage({
                 <span style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>{tf(loc, "rate_comparison_tag", "Rate comparison")}</span>
               </div>
               <div>
-                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "carriers_title", "Compare 134 carriers")}</h3>
+                <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "carriers_title", "Compare 145+ carriers")}</h3>
                 <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "carriers_card_desc", "Full carrier directory. Global express, national posts, regional couriers — all with rates and reliability.")}</p>
               </div>
               <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "flex", flexWrap: "wrap", gap: 8, alignContent: "flex-start", overflow: "hidden", maxWidth: "100%" }}>
@@ -492,7 +492,7 @@ export default async function HomePage({
       <section style={{ padding: "48px 32px", background: "var(--ink, #0F172A)", color: "#fff" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48 }} className="stats-grid">
           {[
-            { v: "134+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
+            { v: "145+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
             { v: `${countries.length}`, l: tf(loc, "stat_countries_label", "Countries covered"), s: tf(loc, "stat_countries_sub", "Every UN-recognized territory") },
             { v: "45K+", l: tf(loc, "stat_routes_label", "Shipping corridors"), s: tf(loc, "stat_routes_sub", "Live rates cached + on-demand"), accent: true },
             { v: "12", l: tf(loc, "stat_langs_label", "Languages"), s: tf(loc, "stat_langs_sub", "Updated weekly · free forever") },
@@ -523,7 +523,7 @@ export default async function HomePage({
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, position: "relative" }} className="steps-grid">
               {[
                 { n: 1, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>, t: tf(loc, "step1_title", "Tell us where"), d: tf(loc, "step1_desc", "From, to, weight. Three fields, no sign-up.") },
-                { n: 2, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>, t: tf(loc, "step2_title", "We compare every carrier"), d: tf(loc, "step2_desc", "134 tariffs across 213 countries, ranked in seconds.") },
+                { n: 2, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>, t: tf(loc, "step2_title", "We compare every carrier"), d: tf(loc, "step2_desc", "145 tariffs across 213 countries, ranked in seconds.") },
                 { n: 3, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41L13 21a2 2 0 01-2.83 0l-7-7A2 2 0 012.59 13V4a2 2 0 012-2h9a2 2 0 011.41.59l7 7a2 2 0 010 2.83z" /><circle cx="7" cy="7" r="1.2" /></svg>, t: tf(loc, "step3_title", "Pick your rate"), d: tf(loc, "step3_desc", "Sort by cheapest, fastest, best-rated. Transit and reliability are visible.") },
                 { n: 4, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>, t: tf(loc, "step4_title", "Go direct to the carrier"), d: tf(loc, "step4_desc", "We don't upsell or book for you — you go straight to the carrier's website with the full price.") },
               ].map((s) => (
@@ -587,7 +587,7 @@ export default async function HomePage({
                 </div>
               </div>
               {[
-                tf(loc, "new_way_1", "One search. 134 carriers ranked instantly by price and speed."),
+                tf(loc, "new_way_1", "One search. 145+ carriers ranked instantly by price and speed."),
                 tf(loc, "new_way_2", "All tariffs published openly — no signup, no email wall."),
                 tf(loc, "new_way_3", "Customs duty + VAT + broker fees calculated before you ship."),
                 tf(loc, "new_way_4", "Regional postal services surfaced alongside global express."),

@@ -3606,5 +3606,385 @@
         "tracking": true
       }
     ]
+  },
+  {
+    "id": "j-t-express",
+    "name": "J&T Express (SEA)",
+    "type": "regional",
+    "logo": "/logos/j-t-express.svg",
+    "website": "https://www.jtexpress.com/",
+    "tracking_url": "https://www.jtexpress.com/trajectoryQuery?billCodes={tracking_number}",
+    "description_en": "Rapidly expanding Southeast Asian express delivery company, originally from Indonesia. Now operates in 13+ countries. Major competitor to Flash Express and Kerry in SEA markets.",
+    "description_ru": "Быстрорастущая компания экспресс-доставки из Юго-Восточной Азии, основана в Индонезии. Работает в 13+ странах. Основной конкурент Flash Express и Kerry на рынках ЮВА.",
+    "services": [
+      {
+        "id": "j-t-express-express",
+        "name": "Express",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "j-t-express-economy",
+        "name": "Economy",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "j-t-express-same-day",
+        "name": "Same Day",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "wishpost",
+    "name": "WishPost",
+    "type": "regional",
+    "logo": "/logos/wishpost.svg",
+    "website": "https://merchant.wish.com/",
+    "tracking_url": "https://www.wish.com/order/tracking/{tracking_number}",
+    "description_en": "Proprietary shipping platform of the Wish e-commerce marketplace. Manages logistics from China to global buyers with consolidation and last-mile partnerships. Primarily for Wish sellers.",
+    "description_ru": "Собственная логистическая платформа маркетплейса Wish. Управляет доставкой из Китая глобальным покупателям с консолидацией и партнёрствами по последней миле.",
+    "services": [
+      {
+        "id": "wishpost-wishpost-standard",
+        "name": "WishPost Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "wishpost-wishpost-advanced",
+        "name": "WishPost Advanced",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "wishpost-epc",
+        "name": "EPC (E-commerce Parcel Consolidation)",
+        "speed_days_min": 7,
+        "speed_days_max": 14,
+        "max_weight_kg": 5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "joom-logistics",
+    "name": "Joom Logistics",
+    "type": "regional",
+    "logo": "/logos/joom-logistics.svg",
+    "website": "https://www.joom.com/",
+    "tracking_url": "https://www.joom.com/en/tracking/{tracking_number}",
+    "description_en": "In-house logistics arm of Joom marketplace (Latvia/China). Specializes in China-to-CIS/Europe small parcel delivery with competitive rates. Integrated customs clearance.",
+    "description_ru": "Собственная логистика маркетплейса Joom (Латвия/Китай). Специализируется на доставке мелких посылок из Китая в СНГ и Европу с конкурентными тарифами.",
+    "services": [
+      {
+        "id": "joom-logistics-joom-standard",
+        "name": "Joom Standard",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "joom-logistics-joom-express",
+        "name": "Joom Express",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 5,
+        "tracking": true
+      },
+      {
+        "id": "joom-logistics-joom-direct",
+        "name": "Joom Direct",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 5,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "cainiao-network",
+    "name": "Cainiao Network",
+    "type": "regional",
+    "logo": "/logos/cainiao-network.svg",
+    "website": "https://global.cainiao.com/",
+    "tracking_url": "https://global.cainiao.com/detail.htm?mailNoList={tracking_number}",
+    "description_en": "Alibaba Group's logistics platform coordinating delivery for AliExpress, Taobao, and Tmall. Manages a global smart logistics network connecting Chinese sellers to worldwide buyers.",
+    "description_ru": "Логистическая платформа Alibaba Group, координирующая доставку для AliExpress, Taobao и Tmall. Управляет глобальной сетью умной логистики.",
+    "services": [
+      {
+        "id": "cainiao-network-aliexpress-standard-shipping",
+        "name": "AliExpress Standard Shipping",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cainiao-network-cainiao-super-economy",
+        "name": "Cainiao Super Economy",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "cainiao-network-cainiao-expedited",
+        "name": "Cainiao Expedited",
+        "speed_days_min": 7,
+        "speed_days_max": 15,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "jumia-logistics",
+    "name": "Jumia Logistics",
+    "type": "regional",
+    "logo": "/logos/jumia-logistics.svg",
+    "website": "https://services.jumia.com/",
+    "tracking_url": "https://packagetracker-services.jumia.com/?tracking={tracking_number}",
+    "description_en": "Africa's leading e-commerce fulfillment and express delivery service. Integrated logistics network across 12 African countries. Jumia Global allows international sellers to reach African markets.",
+    "description_ru": "Ведущая служба фулфилмента и экспресс-доставки для электронной коммерции в Африке. Интегрированная логистическая сеть в 12 странах Африки.",
+    "services": [
+      {
+        "id": "jumia-logistics-jumia-express",
+        "name": "Jumia Express (next-day)",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "jumia-logistics-standard-shipping",
+        "name": "Standard Shipping",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      },
+      {
+        "id": "jumia-logistics-jumia-global",
+        "name": "Jumia Global (cross-border)",
+        "speed_days_min": 1,
+        "speed_days_max": 3,
+        "max_weight_kg": 50,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "env-a-com",
+    "name": "Envía.com",
+    "type": "regional",
+    "logo": "/logos/env-a-com.svg",
+    "website": "https://www.envia.com/",
+    "tracking_url": "https://rastreo.envia.com/{tracking_number}",
+    "description_en": "Latin American shipping aggregator platform connecting merchants to 200+ carriers across 15+ countries. Compares rates from multiple carriers including Estafeta, DHL, Fedex, and local options.",
+    "description_ru": "Латиноамериканская платформа-агрегатор доставки, соединяющая продавцов с 200+ перевозчиками в 15+ странах. Сравнивает тарифы множества перевозчиков.",
+    "services": [
+      {
+        "id": "env-a-com-multi-carrier-aggregator",
+        "name": "Multi-carrier aggregator",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "env-a-com-express",
+        "name": "Express",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "env-a-com-standard",
+        "name": "Standard",
+        "speed_days_min": 5,
+        "speed_days_max": 15,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "spring-gds",
+    "name": "Spring GDS",
+    "type": "regional",
+    "logo": "/logos/spring-gds.svg",
+    "website": "https://www.spring-gds.com/",
+    "tracking_url": "https://www.spring-gds.com/track-and-trace/?barcode={tracking_number}",
+    "description_en": "International parcel delivery company operating since 2001. Uses 230+ local postal services for last-mile delivery. Popular with e-commerce for affordable cross-border shipping up to 20kg. Full end-to-end tracking on Tracked Delivery service.",
+    "description_ru": "Международная служба доставки посылок, работающая с 2001 года. Использует 230+ местных почтовых служб для доставки последней мили. Популярна для трансграничной электронной коммерции до 20 кг.",
+    "services": [
+      {
+        "id": "spring-gds-tracked-delivery",
+        "name": "Tracked Delivery",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "spring-gds-untracked-delivery",
+        "name": "Untracked Delivery",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 20,
+        "tracking": true
+      },
+      {
+        "id": "spring-gds-registered",
+        "name": "Registered",
+        "speed_days_min": 3,
+        "speed_days_max": 7,
+        "max_weight_kg": 20,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "packlink",
+    "name": "Packlink",
+    "type": "regional",
+    "logo": "/logos/packlink.svg",
+    "website": "https://www.packlink.com/",
+    "tracking_url": "https://www.packlink.com/en/tracking/?reference={tracking_number}",
+    "description_en": "European shipping comparison platform and aggregator (acquired by Auctane/Stamps.com). Compares rates from DHL, UPS, GLS, Hermes, and other carriers. Integrated with eBay, Amazon, Shopify.",
+    "description_ru": "Европейская платформа сравнения и агрегации тарифов доставки (приобретена Auctane). Сравнивает тарифы DHL, UPS, GLS, Hermes и других. Интегрирована с eBay, Amazon, Shopify.",
+    "services": [
+      {
+        "id": "packlink-multi-carrier-comparison-aggregator",
+        "name": "Multi-carrier comparison/aggregator",
+        "speed_days_min": 1,
+        "speed_days_max": 10,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "packlink-express",
+        "name": "Express",
+        "speed_days_min": 1,
+        "speed_days_max": 10,
+        "max_weight_kg": 70,
+        "tracking": true
+      },
+      {
+        "id": "packlink-economy",
+        "name": "Economy",
+        "speed_days_min": 1,
+        "speed_days_max": 10,
+        "max_weight_kg": 70,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "sendle",
+    "name": "Sendle",
+    "type": "regional",
+    "logo": "/logos/sendle.svg",
+    "website": "https://www.sendle.com/",
+    "tracking_url": "https://track.sendle.com/tracking/{tracking_number}",
+    "description_en": "WARNING: Sendle halted all Australian parcel pickups and deliveries in January 2026 after financial troubles following its US merger with ACI Logistix and FirstMile. Status uncertain.",
+    "description_ru": "ВНИМАНИЕ: Sendle прекратила все операции по приёму и доставке посылок в Австралии в январе 2026 года после финансовых проблем, связанных с слиянием с ACI Logistix и FirstMile.",
+    "services": [
+      {
+        "id": "sendle-suspended-standard-express-same-day-were-previously-offered",
+        "name": "SUSPENDED - Standard, Express, Same Day were previously offered",
+        "speed_days_min": 2026,
+        "speed_days_max": 2028,
+        "max_weight_kg": 25,
+        "tracking": true
+      }
+    ]
+  },
+  {
+    "id": "zonos",
+    "name": "Zonos",
+    "type": "regional",
+    "logo": "/logos/zonos.svg",
+    "website": "https://zonos.com/",
+    "tracking_url": "N/A (platform, not carrier)",
+    "description_en": "Cross-border trade operating system. Not a carrier but a compliance and duty/tax calculation platform. Powers duty calculations, tariff classifications, and customs compliance for e-commerce globally.",
+    "description_ru": "Операционная система трансграничной торговли. Не перевозчик, а платформа расчёта пошлин, тарифов и таможенного соответствия для глобальной электронной коммерции.",
+    "services": [
+      {
+        "id": "zonos-landed-cost-calculations",
+        "name": "Landed Cost calculations",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": null,
+        "tracking": false
+      },
+      {
+        "id": "zonos-duty-tax-engine",
+        "name": "Duty & Tax engine",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": null,
+        "tracking": false
+      },
+      {
+        "id": "zonos-hs-code-classification",
+        "name": "HS Code classification",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": null,
+        "tracking": false
+      }
+    ]
+  },
+  {
+    "id": "ipostal1",
+    "name": "iPostal1",
+    "type": "regional",
+    "logo": "/logos/ipostal1.svg",
+    "website": "https://ipostal1.com/",
+    "tracking_url": "N/A (virtual mailbox service)",
+    "description_en": "Virtual mailbox and package forwarding service with 3,000+ real street addresses in USA and Canada. Receives packages, scans mail, and forwards internationally. Not a carrier per se.",
+    "description_ru": "Виртуальный почтовый ящик и сервис пересылки посылок с 3 000+ реальных адресов в США и Канаде. Принимает посылки, сканирует почту и пересылает по всему миру.",
+    "services": [
+      {
+        "id": "ipostal1-virtual-mailbox",
+        "name": "Virtual Mailbox",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "ipostal1-package-forwarding",
+        "name": "Package forwarding",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      },
+      {
+        "id": "ipostal1-mail-scanning",
+        "name": "Mail scanning",
+        "speed_days_min": 3,
+        "speed_days_max": 14,
+        "max_weight_kg": 30,
+        "tracking": true
+      }
+    ]
   }
 ]

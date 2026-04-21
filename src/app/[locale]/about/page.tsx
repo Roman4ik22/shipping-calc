@@ -121,7 +121,7 @@ export default async function AboutPage({
                 [tf(loc, "stat_langs_short", "Languages"), "12"],
                 [tf(loc, "stat_countries_short", "Countries"), "213"],
                 [tf(loc, "stat_routes_short", "Routes"), "45,000+"],
-                [tf(loc, "stat_carriers_short", "Carriers"), "134+"],
+                [tf(loc, "stat_carriers_short", "Carriers"), "145+"],
               ].map(([k, v]) => (
                 <div key={k}>
                   <div style={{ fontSize: 22, fontWeight: 800, color: "var(--ink)", letterSpacing: "-.02em", fontVariantNumeric: "tabular-nums" }}>{v}</div>
@@ -158,9 +158,9 @@ export default async function AboutPage({
               </p>
               <p style={{ fontSize: 17, color: "var(--body)", lineHeight: 1.7 }}>
                 {loc === "ru" ? (
-                  <>Тогда мы сделали инструмент, который проверяет все сразу. Собрали опубликованные тарифы от <b style={{ color: "var(--ink)" }}>134 перевозчиков в 213 странах</b>, добавили калькулятор таможенной пошлины и сделали его бесплатным.</>
+                  <>Тогда мы сделали инструмент, который проверяет все сразу. Собрали опубликованные тарифы от <b style={{ color: "var(--ink)" }}>145+ перевозчиков в 213 странах</b>, добавили калькулятор таможенной пошлины и сделали его бесплатным.</>
                 ) : (
-                  <>So we built a tool that checks all of them at once. We aggregated published tariffs from <b style={{ color: "var(--ink)" }}>134 carriers across 213 countries</b>, added a customs duty calculator, and made it free.</>
+                  <>So we built a tool that checks all of them at once. We aggregated published tariffs from <b style={{ color: "var(--ink)" }}>145+ carriers across 213 countries</b>, added a customs duty calculator, and made it free.</>
                 )}
               </p>
               <div style={{ marginTop: 32, display: "flex", alignItems: "center", gap: 14 }}>
@@ -299,7 +299,7 @@ export default async function AboutPage({
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 40, maxWidth: 720 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{tf(loc, "timeline_eyebrow", "Timeline")}</div>
-            <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>{tf(loc, "timeline_title", "From idea to 134 carriers in 3 months.")}</h2>
+            <h2 style={{ margin: 0, fontSize: "clamp(28px,3.2vw,40px)", fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: "var(--ink)" }}>{tf(loc, "timeline_title", "From idea to 145+ carriers in 3 months.")}</h2>
           </div>
           <div style={{ overflowX: "auto", paddingBottom: 24 }}>
             <div style={{ display: "flex", gap: 0, padding: "48px 0 32px", minWidth: "max-content", position: "relative" }}>
@@ -307,7 +307,7 @@ export default async function AboutPage({
               {[
                 { y: "Jan '26", t: tf(loc, "tl_jan_t", "The idea"), d: tf(loc, "tl_jan_d", "Spent an afternoon comparing 10 carrier websites for one parcel. Decided there had to be a better way."), badge: null },
                 { y: "Feb '26", t: tf(loc, "tl_feb_t", "First prototype"), d: tf(loc, "tl_feb_d", "Built a working rate aggregator across 40 carriers and 50 countries. Tested with real shipments from Hungary."), badge: null },
-                { y: "Mar '26", t: tf(loc, "tl_mar_t", "Public launch"), d: tf(loc, "tl_mar_d", "RateShips goes live with 134 carriers across 213 countries. Customs duty calculator and delivery estimator included from day one."), badge: "Launch" },
+                { y: "Mar '26", t: tf(loc, "tl_mar_t", "Public launch"), d: tf(loc, "tl_mar_d", "RateShips goes live with 145+ carriers across 213 countries. Customs duty calculator and delivery estimator included from day one."), badge: "Launch" },
                 { y: "Apr '26", t: tf(loc, "tl_apr_t", "12 languages"), d: tf(loc, "tl_apr_d", "Added full translation for Russian, Spanish, German, French, Portuguese, Chinese, Japanese, Korean, Arabic, Turkish, and Italian."), badge: null },
                 { y: "Q2 '26", t: tf(loc, "tl_q2_t", "45,000+ routes"), d: tf(loc, "tl_q2_d", "Expanded corridor coverage with weekly rate updates. Every major trade lane gets at least 3 carrier options."), badge: null },
                 { y: "Q3 '26", t: tf(loc, "tl_q3_t", "Tools & guides"), d: tf(loc, "tl_q3_d", "Country-specific shipping guides for 195+ destinations. HS-code lookup integrated into customs calculator."), badge: "Planned" },
@@ -354,7 +354,7 @@ export default async function AboutPage({
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }} className="stats-grid">
             {[
               { v: "2026", l: tf(loc, "founded", "Founded"), s: "Hungary", accent: false },
-              { v: "134+", l: tf(loc, "stat_carriers_label", "Carriers"), s: tf(loc, "carriers_published_tariffs", "published tariffs"), accent: false },
+              { v: "145+", l: tf(loc, "stat_carriers_label", "Carriers"), s: tf(loc, "carriers_published_tariffs", "published tariffs"), accent: false },
               { v: "213", l: tf(loc, "stat_countries_label", "Countries"), s: tf(loc, "every_territory", "every territory"), accent: false },
               { v: "12", l: tf(loc, "stat_langs_label", "Languages"), s: tf(loc, "updated_weekly", "updated weekly"), accent: true },
             ].map((it, i) => (

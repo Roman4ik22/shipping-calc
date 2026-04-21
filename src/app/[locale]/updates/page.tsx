@@ -115,12 +115,12 @@ const updates = [
   },
   {
     date: "2026-03-20",
-    title_en: "Launch: 134 carriers, 213 countries, 12 languages",
-    title_ru: "Запуск: 134 перевозчика, 213 стран, 12 языков",
+    title_en: "Launch: 145+ carriers, 213 countries, 12 languages",
+    title_ru: "Запуск: 145+ перевозчика, 213 стран, 12 языков",
     desc_en:
-      "RateShips launched with rate comparison across 134 carriers, customs data for 213 countries, and full localization in 12 languages.",
+      "RateShips launched with rate comparison across 145+ carriers, customs data for 213 countries, and full localization in 12 languages.",
     desc_ru:
-      "RateShips запущен: сравнение тарифов 134 перевозчиков, таможенные данные 213 стран, 12 языков.",
+      "RateShips запущен: сравнение тарифов 145+ перевозчиков, таможенные данные 213 стран, 12 языков.",
     tags: ["launch"],
   },
 ];

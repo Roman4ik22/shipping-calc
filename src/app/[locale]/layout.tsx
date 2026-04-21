@@ -345,7 +345,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
             <div className="mt-10 pt-6 border-t border-white/10 text-xs text-center text-white/40">
-              &copy; {new Date().getFullYear()} Global Supply KFT · 134 carriers · 213 countries · Updated weekly
+              &copy; {new Date().getFullYear()} Global Supply KFT · 145+ carriers · 213 countries · Updated weekly
             </div>
           </div>
         </footer>

@@ -88,7 +88,7 @@ export default async function ToolsIndexPage({
       bg: "var(--blue-50)",
       href: `/${locale}`,
       title: t(loc, "compare_shipping_rates"),
-      description: t(loc, "hero_subtitle", { count: "134" }),
+      description: t(loc, "hero_subtitle", { count: "145" }),
       cta: tf(loc, "compare_rates", "Compare rates"),
     },
   ];

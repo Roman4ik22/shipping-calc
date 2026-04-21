@@ -23,7 +23,7 @@ export default async function Image({ params }: { params: { locale: string } }) 
           RateShips
         </div>
         <div style={{ fontSize: 36, color: "#9ca3af", textAlign: "center", maxWidth: 800 }}>
-          {isRu ? "Сравните тарифы от 134+ перевозчиков" : "Compare rates from 134+ carriers worldwide"}
+          {isRu ? "Сравните тарифы от 145+ перевозчиков" : "Compare rates from 145+ carriers worldwide"}
         </div>
         <div style={{ display: "flex", gap: 40, marginTop: 40, color: "#6b7280", fontSize: 24 }}>
           <span>213 Countries</span>
