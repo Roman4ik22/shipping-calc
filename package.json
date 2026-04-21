@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "translate": "node scripts/translate-content.mjs",
+    "translate:updates": "node scripts/translate-content.mjs updates",
+    "translate:carriers": "node scripts/translate-content.mjs carriers",
+    "translate:blog": "node scripts/translate-content.mjs blog",
+    "translate:customs": "node scripts/translate-content.mjs customs"
   },
   "dependencies": {
     "@easypost/api": "^8.8.0",

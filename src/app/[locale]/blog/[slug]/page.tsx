@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { locales, t } from "@/lib/i18n";
+import { locales, localeNames, t, pickLocalized } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/data/blog-posts";
 import { countries, makeCorridorSlug, getCountryName } from "@/lib/data";
@@ -124,8 +124,8 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
-  const title = loc === "ru" ? post.title_ru : post.title_en;
-  const description = loc === "ru" ? post.excerpt_ru : post.excerpt_en;
+  const title = pickLocalized(post as unknown as Record<string, unknown>, "title", loc);
+  const description = pickLocalized(post as unknown as Record<string, unknown>, "excerpt", loc);
 
   return {
     title,
@@ -240,15 +240,18 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const title = loc === "ru" ? post.title_ru : post.title_en;
-  const content = loc === "ru" ? post.content_ru : post.content_en;
+  const postRec = post as unknown as Record<string, unknown>;
+  const title = pickLocalized(postRec, "title", loc);
+  const content = pickLocalized(postRec, "content", loc);
+  const excerpt = pickLocalized(postRec, "excerpt", loc);
+  const contentIsTranslated = typeof postRec[`content_${loc}`] === "string" && (postRec[`content_${loc}`] as string).length > 0;
   const relatedPosts = getRelatedPosts(slug, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
-    description: loc === "ru" ? post.excerpt_ru : post.excerpt_en,
+    description: excerpt,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -342,25 +345,10 @@ export default async function BlogPostPage({
           )}
         </time>
 
-        {/* Language notice for non-EN/RU locales */}
-        {locale !== "en" && locale !== "ru" && (
+        {/* Language notice shown when content is not yet translated into current locale */}
+        {!contentIsTranslated && loc !== "en" && (
           <p className="text-sm text-gray-500 mb-6 italic">
-            This article is available in English. Content in{" "}
-            {
-              ({
-                es: "Español",
-                de: "Deutsch",
-                fr: "Français",
-                pt: "Português",
-                zh: "中文",
-                ja: "日本語",
-                ko: "한국어",
-                ar: "العربية",
-                tr: "Türkçe",
-                it: "Italiano",
-              } as Record<string, string>)[locale] ?? locale
-            }{" "}
-            coming soon.
+            {t(loc, "blog_translation_coming", { lang: localeNames[loc] })}
           </p>
         )}
 
@@ -383,10 +371,10 @@ export default async function BlogPostPage({
                   className="group bg-surface rounded-xl border border-white/10 p-5 hover:border-accent-light/30 transition-all duration-200"
                 >
                   <h3 className="text-base font-semibold text-white mb-2 group-hover:text-accent-light transition-colors">
-                    {loc === "ru" ? related.title_ru : related.title_en}
+                    {pickLocalized(related as unknown as Record<string, unknown>, "title", loc)}
                   </h3>
                   <p className="text-sm text-gray-400 line-clamp-2 mb-3">
-                    {loc === "ru" ? related.excerpt_ru : related.excerpt_en}
+                    {pickLocalized(related as unknown as Record<string, unknown>, "excerpt", loc)}
                   </p>
                   <time
                     className="text-xs text-gray-500"

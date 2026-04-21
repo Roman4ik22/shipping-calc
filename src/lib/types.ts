@@ -36,6 +36,16 @@ export interface Carrier {
   tracking_url: string;
   description_en: string;
   description_ru: string;
+  description_es?: string;
+  description_de?: string;
+  description_fr?: string;
+  description_pt?: string;
+  description_zh?: string;
+  description_ja?: string;
+  description_ko?: string;
+  description_ar?: string;
+  description_tr?: string;
+  description_it?: string;
   services: CarrierService[];
 }
 

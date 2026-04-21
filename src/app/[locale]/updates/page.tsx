@@ -1,9 +1,15 @@
 import { Metadata } from "next";
-import { t, locales } from "@/lib/i18n";
+import { t, locales, pickLocalized } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 
-const updates = [
+type UpdateEntry = {
+  date: string;
+  tags: string[];
+  [key: string]: unknown;
+};
+
+const updates: UpdateEntry[] = [
   {
     date: "2026-04-07",
     title_en: "Humanized all content",
@@ -247,10 +253,10 @@ export default async function UpdatesPage({
 
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <h2 style={{ margin: "0 0 6px", fontSize: 16, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>
-                    {loc === "ru" ? entry.title_ru : entry.title_en}
+                    {pickLocalized(entry, "title", loc)}
                   </h2>
                   <p style={{ margin: "0 0 12px", fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>
-                    {loc === "ru" ? entry.desc_ru : entry.desc_en}
+                    {pickLocalized(entry, "desc", loc)}
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {entry.tags.map((tag) => (

@@ -539,5 +539,8 @@ export function getCountryName(country: Country, locale: Locale): string {
 }
 
 export function getCarrierDescription(carrier: Carrier, locale: Locale): string {
-  return locale === "ru" ? carrier.description_ru : carrier.description_en;
+  const key = `description_${locale}` as keyof Carrier;
+  const value = carrier[key];
+  if (typeof value === "string" && value.length > 0) return value;
+  return carrier.description_en;
 }

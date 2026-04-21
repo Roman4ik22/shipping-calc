@@ -2,10 +2,19 @@ export interface BlogPost {
   id: string;
   title_en: string;
   title_ru: string;
+  title_es?: string; title_de?: string; title_fr?: string; title_pt?: string;
+  title_zh?: string; title_ja?: string; title_ko?: string; title_ar?: string;
+  title_tr?: string; title_it?: string;
   excerpt_en: string;
   excerpt_ru: string;
+  excerpt_es?: string; excerpt_de?: string; excerpt_fr?: string; excerpt_pt?: string;
+  excerpt_zh?: string; excerpt_ja?: string; excerpt_ko?: string; excerpt_ar?: string;
+  excerpt_tr?: string; excerpt_it?: string;
   content_en: string;
   content_ru: string;
+  content_es?: string; content_de?: string; content_fr?: string; content_pt?: string;
+  content_zh?: string; content_ja?: string; content_ko?: string; content_ar?: string;
+  content_tr?: string; content_it?: string;
   date: string;
   tags: string[];
 }

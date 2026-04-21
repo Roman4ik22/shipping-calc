@@ -34,15 +34,12 @@ export async function generateMetadata({
   const review = getCarrierReview(carrier.id);
   const serviceCount = carrier.services.length;
   const ratingStr = review ? ` ★ ${review.trustpilot.rating.toFixed(1)}` : "";
-  const titleSuffix = loc === "ru" ? "Тарифы и отзывы [2026]"
-    : loc === "de" ? "Tarife & Bewertungen [2026]"
-    : loc === "es" ? "Tarifas y opiniones [2026]"
-    : loc === "fr" ? "Tarifs et avis [2026]"
-    : "Rates & Reviews [2026]";
+  const titleSuffix = t(loc, "carrier_meta_suffix");
+  const ogDesc = t(loc, "carrier_meta_og_desc", { desc, count: serviceCount });
 
   return {
     title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
-    description: `${desc} Compare ${serviceCount} services, delivery times and prices.`,
+    description: ogDesc,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
       languages: {
@@ -52,7 +49,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
-      description: `${desc} Compare ${serviceCount} services, delivery times and prices.`,
+      description: ogDesc,
       type: "website",
     },
   };
@@ -150,7 +147,7 @@ export default async function CarrierPage({
                     rel="noopener noreferrer"
                     className="text-sm text-accent-light hover:text-ink transition-colors card-hover"
                   >
-                    {reviews >= 1000 ? `${(reviews / 1000).toFixed(1)}K` : reviews} reviews →
+                    {t(loc, "trustpilot_reviews", { count: reviews >= 1000 ? `${(reviews / 1000).toFixed(1)}K` : reviews })}
                   </a>
                 </div>
               </div>

@@ -85,9 +85,10 @@ export async function generateMetadata({
 }
 
 function getLocalizedField(deep: DeepCustomsData, field: string, locale: string): string {
-  const ruKey = `${field}_ru` as keyof DeepCustomsData;
+  const localeKey = `${field}_${locale}` as keyof DeepCustomsData;
+  const localeValue = deep[localeKey];
+  if (typeof localeValue === "string" && localeValue.length > 0) return localeValue;
   const enKey = `${field}_en` as keyof DeepCustomsData;
-  if (locale === "ru" && deep[ruKey]) return deep[ruKey] as string;
   return (deep[enKey] as string) || "";
 }
 
@@ -310,7 +311,7 @@ export default async function CustomsCountryPage({
                   {deep.duty_rates.map((rate, i) => (
                     <tr key={i} className="border-b border-line">
                       <td className="py-3 pr-4 text-ink font-medium">
-                        {loc === "ru" ? rate.category_ru : rate.category_en}
+                        {(rate as unknown as Record<string, string>)[`category_${loc}`] || rate.category_en}
                       </td>
                       <td className="py-3 pr-4 text-accent-light font-semibold">{rate.rate}</td>
                       <td className="py-3 text-body">{rate.hs_chapter}</td>
@@ -345,7 +346,7 @@ export default async function CustomsCountryPage({
               result_title: t(loc, "duty_calc_result"),
             }}
             dutyRates={deep?.duty_rates.map((r) => ({
-              category: loc === "ru" ? r.category_ru : r.category_en,
+              category: (r as unknown as Record<string, string>)[`category_${loc}`] || r.category_en,
               rate: r.rate,
               hs: r.hs_chapter.replace("HS ", ""),
             }))}

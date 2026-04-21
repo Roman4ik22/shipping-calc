@@ -1,16 +1,36 @@
 export interface DeepCustomsData {
   code: string;
-  duty_rates: { category_en: string; category_ru: string; rate: string; hs_chapter: string }[];
+  duty_rates: {
+    category_en: string;
+    category_ru: string;
+    category_es?: string; category_de?: string; category_fr?: string; category_pt?: string;
+    category_zh?: string; category_ja?: string; category_ko?: string; category_ar?: string;
+    category_tr?: string; category_it?: string;
+    rate: string;
+    hs_chapter: string;
+  }[];
   de_minimis_usd: number;
   clearance_process_en: string;
   clearance_process_ru: string;
+  clearance_process_es?: string; clearance_process_de?: string; clearance_process_fr?: string; clearance_process_pt?: string;
+  clearance_process_zh?: string; clearance_process_ja?: string; clearance_process_ko?: string; clearance_process_ar?: string;
+  clearance_process_tr?: string; clearance_process_it?: string;
   clearance_time_days: string;
   certificate_of_origin_en: string;
   certificate_of_origin_ru: string;
+  certificate_of_origin_es?: string; certificate_of_origin_de?: string; certificate_of_origin_fr?: string; certificate_of_origin_pt?: string;
+  certificate_of_origin_zh?: string; certificate_of_origin_ja?: string; certificate_of_origin_ko?: string; certificate_of_origin_ar?: string;
+  certificate_of_origin_tr?: string; certificate_of_origin_it?: string;
   import_license_info_en: string;
   import_license_info_ru: string;
+  import_license_info_es?: string; import_license_info_de?: string; import_license_info_fr?: string; import_license_info_pt?: string;
+  import_license_info_zh?: string; import_license_info_ja?: string; import_license_info_ko?: string; import_license_info_ar?: string;
+  import_license_info_tr?: string; import_license_info_it?: string;
   customs_reality_en: string;
   customs_reality_ru: string;
+  customs_reality_es?: string; customs_reality_de?: string; customs_reality_fr?: string; customs_reality_pt?: string;
+  customs_reality_zh?: string; customs_reality_ja?: string; customs_reality_ko?: string; customs_reality_ar?: string;
+  customs_reality_tr?: string; customs_reality_it?: string;
   vat_rate: string;
   vat_applies_to: string;
   customs_tariff_url: string;

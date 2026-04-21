@@ -124,14 +124,14 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-8 pt-16 pb-14">
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 999, background: '#fff', border: '1px solid var(--line)', fontSize: 12, fontWeight: 600, marginBottom: 20, boxShadow: 'var(--shadow-sm)' }}>
             <span style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--good)', boxShadow: '0 0 0 3px rgba(17,138,84,.15)' }} className="pulse-dot" />
-            {carriers.length} carriers tracked · Updated weekly
+            {t(loc, "carriers_tracked_weekly", { count: carriers.length })}
           </div>
           <h1 style={{ margin: '0 0 18px', fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1.02, letterSpacing: '-.03em', fontWeight: 800, color: 'var(--ink)' }}>
-            Compare <span style={{ color: 'var(--blue)' }}>every carrier</span>,<br />
-            one search.
+            {t(loc, "carriers_hero_compare")} <span style={{ color: 'var(--blue)' }}>{t(loc, "carriers_hero_every_carrier")}</span>,<br />
+            {t(loc, "carriers_hero_one_search")}
           </h1>
           <p style={{ fontSize: 19, color: 'var(--body)', lineHeight: 1.55, maxWidth: 560 }}>
-            From DHL and FedEx to regional couriers and postal services — browse all {carriers.length} carriers we compare across 213 countries.
+            {t(loc, "carriers_hero_subtitle", { count: carriers.length })}
           </p>
 
           {/* Quick stats */}
@@ -143,7 +143,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                   background: g.key === 'international' ? 'var(--blue)' : g.key === 'regional' ? 'var(--accent)' : 'var(--warm)'
                 }} />
                 <span style={{ fontWeight: 700, color: 'var(--ink)' }}>{g.list.length}</span>
-                <span style={{ color: 'var(--muted)' }}>{g.key}</span>
+                <span style={{ color: 'var(--muted)' }}>{t(loc, `carrier_type_${g.key}`)}</span>
               </div>
             ))}
           </div>
@@ -162,7 +162,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
             <div className="flex items-center gap-3 mb-6">
               <span style={{ width: 10, height: 10, borderRadius: 999, background: color }} />
               <h2 style={{ fontSize: 24, fontWeight: 800, margin: 0, letterSpacing: '-.01em' }}>
-                {group.key.charAt(0).toUpperCase() + group.key.slice(1)} carriers
+                {t(loc, `carrier_group_${group.key}`)}
               </h2>
               <span style={{ fontSize: 14, color: 'var(--muted)', fontWeight: 500 }}>{group.list.length}</span>
             </div>
@@ -212,7 +212,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                       </div>
                     )}
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, fontWeight: 600, color: 'var(--blue)', marginTop: 'auto' }}>
-                      View profile
+                      {t(loc, "view_profile")}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </div>
                   </Link>
@@ -224,7 +224,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
             {rest.length > 0 && (
               <>
                 <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 600, marginBottom: 10, marginTop: 16 }}>
-                  + {rest.length} more {group.key} carriers
+                  {t(loc, "more_carriers_of_type", { count: rest.length, type: t(loc, `carrier_type_${group.key}`).toLowerCase() })}
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
                   {rest.map((c) => {
@@ -266,9 +266,9 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20
         }}>
           <div>
-            <h3 style={{ margin: '0 0 6px', fontSize: 22, fontWeight: 700 }}>Ready to compare?</h3>
+            <h3 style={{ margin: '0 0 6px', fontSize: 22, fontWeight: 700 }}>{t(loc, "ready_to_compare")}</h3>
             <p style={{ margin: 0, fontSize: 15, color: 'rgba(255,255,255,.65)' }}>
-              Enter your route and see which of these {carriers.length} carriers offers the best rate.
+              {t(loc, "ready_to_compare_sub", { count: carriers.length })}
             </p>
           </div>
           <Link href={`/${locale}`} className="btn-press" style={{
@@ -276,7 +276,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
             fontWeight: 700, fontSize: 15, display: 'inline-flex', alignItems: 'center', gap: 8,
             textDecoration: 'none'
           }}>
-            Compare rates
+            {t(loc, "carriers_cta_compare")}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </Link>
         </div>
@@ -289,8 +289,8 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="14" height="14" style={{ color: 'var(--blue)', flexShrink: 0 }}>
             <path d="M12 2l8 3v7c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5l8-3z"/><path d="M9 12l2 2 4-4"/>
           </svg>
-          Rates from published carrier tariffs, updated weekly. Independent comparison — zero carrier commissions.
-          <Link href={`/${locale}/data-methodology`} style={{ color: 'var(--blue)', fontWeight: 600, marginLeft: 'auto', whiteSpace: 'nowrap' }}>Methodology →</Link>
+          {t(loc, "carriers_data_note")}
+          <Link href={`/${locale}/data-methodology`} style={{ color: 'var(--blue)', fontWeight: 600, marginLeft: 'auto', whiteSpace: 'nowrap' }}>{t(loc, "carriers_methodology_link")}</Link>
         </div>
       </div>
     </div>
