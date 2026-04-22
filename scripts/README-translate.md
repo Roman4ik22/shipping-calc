@@ -21,6 +21,7 @@ npm run translate
 Or one target at a time (recommended for the first pass, since customs is large):
 
 ```bash
+npm run translate:ui        # UI dictionary — fixes ~1850 placeholder English strings across 10 locales. Run this FIRST.
 npm run translate:updates   # smallest, ~30s
 npm run translate:carriers  # ~5 min
 npm run translate:blog      # ~15-30 min, long-form markdown
@@ -33,6 +34,7 @@ Translations are scoped by **smart locale routing** — each entity is only tran
 
 | Target    | File                                    | Relevant locales                                     | What gets filled                                        |
 |-----------|-----------------------------------------|------------------------------------------------------|---------------------------------------------------------|
+| ui        | `src/lib/i18n.ts`                       | all 10 non-EN/RU locales                             | Any UI key whose value equals the English value (i.e. untranslated placeholder) |
 | updates   | `src/app/[locale]/updates/page.tsx`     | all 12 (global changelog)                            | `title_*` and `desc_*` for all entries                  |
 | carriers  | `src/data/carriers.json`                | Global carriers (DHL/FedEx/UPS/etc): all 12. Country-specific carriers: origin country's langs + en only | `description_*`              |
 | blog      | `src/data/blog-posts.ts`                | Region-tagged posts: that region's langs + en. Generic posts: all 12 | `title_*`, `excerpt_*`, `content_*`  |
@@ -54,12 +56,13 @@ TRANSLATE_CONCURRENCY=8 npm run translate                  # default 4
 
 ## Rough cost estimate (Sonnet 4.6, with smart locale routing)
 
+- ui: ~$1-2 (~1850 short UI strings)
 - updates: ~$0.10 (all 12 locales)
 - carriers: ~$0.30-0.60 (global carriers all 12; country-specific 1-2 locales)
 - blog: ~$3-6 (region posts 1-2 locales; generic posts all 12)
 - customs: ~$3-5 (each country 1-2 locales)
 
-**Total ~$7-12** — vs. ~$25-50 if we translated everything into all 10 non-EN/RU locales. Use Haiku (`claude-haiku-4-5-20251001`) for ~5× cheaper if quality is acceptable.
+**Total ~$8-14** — vs. ~$25-50 if we translated everything into all 10 non-EN/RU locales. Use Haiku (`claude-haiku-4-5-20251001`) for ~5× cheaper if quality is acceptable.
 
 ## After running
 

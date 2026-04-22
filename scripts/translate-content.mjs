@@ -638,12 +638,142 @@ async function translateCustoms() {
   console.log(`Wrote ${file}`);
 }
 
+// ---- TARGET: ui (i18n.ts dictionary) ----
+async function translateUI() {
+  const file = path.join(ROOT, "src/lib/i18n.ts");
+  let src = fs.readFileSync(file, "utf8");
+
+  // Find each locale dict block: `  <xx>: {` ... matching `  },`
+  const localeBlocks = {};
+  const blockStart = /^\s{2}([a-z]{2}):\s*\{$/gm;
+  let m;
+  while ((m = blockStart.exec(src))) {
+    const lang = m[1];
+    let i = m.index + m[0].length;
+    let depth = 1;
+    while (i < src.length && depth > 0) {
+      const ch = src[i];
+      if (ch === "{") depth++;
+      else if (ch === "}") depth--;
+      if (depth === 0) break;
+      i++;
+    }
+    localeBlocks[lang] = {
+      start: m.index + m[0].length,
+      end: i, // closing `}` position
+      body: src.slice(m.index + m[0].length, i),
+    };
+  }
+
+  if (!localeBlocks.en) throw new Error("Could not find en locale dict in i18n.ts");
+
+  // Parse key-value pairs from a dict body. Values may use "..." or `...`.
+  const parseEntries = (body) => {
+    const entries = {};
+    const re = /^\s+([a-z_0-9]+):\s*("((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`),?\s*$/gm;
+    let mm;
+    while ((mm = re.exec(body))) {
+      const key = mm[1];
+      const val = mm[3] ?? mm[4] ?? "";
+      const unescaped = val
+        .replace(/\\"/g, '"')
+        .replace(/\\`/g, "`")
+        .replace(/\\\\/g, "\\")
+        .replace(/\\n/g, "\n");
+      entries[key] = { raw: mm[0], value: unescaped };
+    }
+    return entries;
+  };
+
+  const enEntries = parseEntries(localeBlocks.en.body);
+
+  // Keys that are legit identical in all languages (brand name, URL, symbol).
+  // Skip anything matching these.
+  const SKIP_VALUE_RE = /^(RateShips|[\d.,$%→←↑↓]+|N\/A)$/;
+
+  const work = [];
+  for (const lang of LOCALES) {
+    const block = localeBlocks[lang];
+    if (!block) {
+      console.warn(`  no ${lang} block found, skipping`);
+      continue;
+    }
+    const entries = parseEntries(block.body);
+    for (const [key, enData] of Object.entries(enEntries)) {
+      const enVal = enData.value;
+      if (!enVal || enVal.length <= 2) continue;
+      if (SKIP_VALUE_RE.test(enVal)) continue;
+      const localeEntry = entries[key];
+      // Missing entirely OR identical to English → needs translation
+      if (!localeEntry || localeEntry.value === enVal) {
+        work.push({ lang, key, english: enVal, existing: localeEntry });
+      }
+    }
+  }
+
+  console.log(`\n=== UI: ${work.length} UI strings to translate across ${LOCALES.length} locales ===`);
+  if (work.length === 0) return;
+
+  // Translate (group by locale automatically in translateInBatches)
+  await translateInBatches(
+    work,
+    (x) => x.english,
+    (x) => `UI string for key "${x.key}" on shipping rate comparison website`,
+    (x, translated) => {
+      x.translated = translated;
+    },
+    15, // bigger batches — short UI strings
+  );
+
+  // Now splice translations back into each locale block.
+  // Process locales from bottom to top so indices don't shift.
+  const localesToUpdate = [...LOCALES].reverse();
+  for (const lang of localesToUpdate) {
+    const block = localeBlocks[lang];
+    if (!block) continue;
+    const langWork = work.filter((w) => w.lang === lang && w.translated);
+    if (langWork.length === 0) continue;
+
+    let body = src.slice(block.start, block.end);
+
+    // For each translated entry, either replace the existing line or insert before closing brace.
+    const escapeValue = (val) => {
+      if (val.includes("\n") || val.includes("\\")) {
+        return "`" + val.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\${/g, "\\${") + "`";
+      }
+      return JSON.stringify(val);
+    };
+
+    const insertions = [];
+    for (const w of langWork) {
+      const newLine = `    ${w.key}: ${escapeValue(w.translated)},`;
+      if (w.existing) {
+        // Replace in place
+        body = body.replace(w.existing.raw, newLine);
+      } else {
+        insertions.push(newLine);
+      }
+    }
+
+    if (insertions.length > 0) {
+      // Insert before the last non-empty line (keep closing stays outside)
+      body = body.replace(/(\s*)$/, "\n" + insertions.join("\n") + "$1");
+    }
+
+    src = src.slice(0, block.start) + body + src.slice(block.end);
+  }
+
+  fs.writeFileSync(file, src);
+  console.log(`Wrote ${file}`);
+}
+
 // ---- MAIN ----
 async function main() {
   console.log(`Using model: ${MODEL}`);
   console.log(`Target: ${TARGET}\n`);
 
   try {
+    if (TARGET === "all" || TARGET === "ui") await translateUI();
     if (TARGET === "all" || TARGET === "updates") await translateUpdates();
     if (TARGET === "all" || TARGET === "carriers") await translateCarriers();
     if (TARGET === "all" || TARGET === "blog") await translateBlog();
