@@ -41,7 +41,17 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa líder mundial en mensajería urgente internacional. Opera en más de 220 países.",
+    "description_de": "Weltweit führendes Unternehmen für internationale Expresszustellung. Tätig in über 220 Ländern.",
+    "description_fr": "Leader mondial de la livraison express internationale. Présent dans plus de 220 pays.",
+    "description_pt": "Empresa líder mundial em entregas expresso internacionais. Opera em mais de 220 países.",
+    "description_zh": "全球领先的国际快递公司，业务覆盖 220 多个国家和地区。",
+    "description_ja": "世界をリードする国際エクスプレス配送会社です。220カ国以上で事業を展開しています。",
+    "description_ko": "세계 최고의 국제 특송 기업입니다. 220개국 이상에서 운영합니다.",
+    "description_ar": "الشركة الرائدة عالميًا في خدمات التوصيل السريع الدولي. تعمل في أكثر من 220 دولة.",
+    "description_tr": "Dünyanın önde gelen uluslararası ekspres teslimat şirketi. 220+ ülkede faaliyet gösterir.",
+    "description_it": "Azienda leader mondiale nelle spedizioni espresse internazionali. Opera in oltre 220 paesi."
   },
   {
     "id": "fedex",
@@ -85,7 +95,17 @@
         "max_weight_kg": 68,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicios globales de mensajería. Una de las mayores empresas de transporte urgente del mundo.",
+    "description_de": "Globale Kurier- und Zustelldienste. Eines der größten Express-Transportunternehmen der Welt.",
+    "description_fr": "Services de messagerie internationale. L'une des plus grandes entreprises de transport express au monde.",
+    "description_pt": "Serviços globais de entrega por correio expresso. Uma das maiores empresas de transporte expresso do mundo.",
+    "description_zh": "全球性快递服务商，是全球规模最大的快递运输公司之一。",
+    "description_ja": "グローバルに展開する宅配サービスです。世界最大級のエクスプレス輸送会社のひとつです。",
+    "description_ko": "글로벌 특송 배송 서비스입니다. 세계 최대 규모의 특송 운송 기업 중 하나입니다.",
+    "description_ar": "خدمات توصيل بريدي عالمية. واحدة من أكبر شركات النقل السريع في العالم.",
+    "description_tr": "Küresel kurye teslimat hizmetleri. Dünyanın en büyük ekspres taşımacılık şirketlerinden biri.",
+    "description_it": "Servizi globali di consegna corriere. Una delle più grandi aziende di trasporto espresso al mondo."
   },
   {
     "id": "ups",
@@ -137,7 +157,17 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "United Parcel Service: una de las mayores empresas de entrega de paquetes del mundo.",
+    "description_de": "United Parcel Service — einer der weltweit größten Paketzusteller.",
+    "description_fr": "United Parcel Service — l'une des plus grandes entreprises de livraison de colis au monde.",
+    "description_pt": "United Parcel Service — uma das maiores empresas de entrega de encomendas do mundo.",
+    "description_zh": "United Parcel Service，全球规模最大的包裹递送公司之一。",
+    "description_ja": "United Parcel Service — 世界最大級の小包配送会社のひとつです。",
+    "description_ko": "United Parcel Service — 세계 최대 규모의 소포 배송 기업 중 하나입니다.",
+    "description_ar": "United Parcel Service — إحدى أكبر شركات توصيل الطرود في العالم.",
+    "description_tr": "United Parcel Service — dünyanın en büyük paket teslimat şirketlerinden biri.",
+    "description_it": "United Parcel Service — una delle più grandi aziende di consegna pacchi al mondo."
   },
   {
     "id": "ems",
@@ -157,7 +187,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "Express Mail Service（国际特快专递）——由各国邮政运营商提供的高端邮政服务，覆盖 180 多个国家和地区。"
   },
   {
     "id": "usps",
@@ -249,7 +280,8 @@
         "max_weight_kg": 31.5,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Nationaler Postdienst Deutschlands. Bietet günstigen internationalen Paketversand."
   },
   {
     "id": "japan-post",
@@ -293,7 +325,8 @@
         "max_weight_kg": 30,
         "tracking": false
       }
-    ]
+    ],
+    "description_ja": "日本の国営郵便サービスで、世界各国への配送オプションを提供しています。"
   },
   {
     "id": "china-post",
@@ -329,7 +362,8 @@
         "max_weight_kg": 2,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "中国的国家邮政服务，提供经济实惠的国际寄递服务。"
   },
   {
     "id": "sf-express",
@@ -357,7 +391,17 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "La mayor empresa privada de mensajería urgente de China, con una sólida red en Asia.",
+    "description_de": "Chinas größtes privates Express-Unternehmen mit starkem Netzwerk in Asien.",
+    "description_fr": "Plus grande entreprise privée de livraison express de Chine, avec un solide réseau en Asie.",
+    "description_pt": "Maior empresa privada de entregas expresso da China, com uma forte rede asiática.",
+    "description_zh": "中国最大的民营快递公司，在亚洲拥有强大的配送网络。",
+    "description_ja": "中国最大の民間エクスプレス配送会社で、強力なアジアネットワークを有しています。",
+    "description_ko": "아시아 네트워크가 강력한 중국 최대의 민영 특송 기업입니다.",
+    "description_ar": "أكبر شركة توصيل سريع خاصة في الصين، بشبكة قوية في آسيا.",
+    "description_tr": "Çin'in en büyük özel ekspres teslimat şirketi; güçlü Asya ağına sahiptir.",
+    "description_it": "La più grande azienda privata di spedizioni espresse cinese, con una solida rete in Asia."
   },
   {
     "id": "aramex",
@@ -393,7 +437,17 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa de logística líder en Oriente Medio y África con alcance global.",
+    "description_de": "Führendes Logistikunternehmen im Nahen Osten und in Afrika mit globaler Reichweite.",
+    "description_fr": "Leader de la logistique au Moyen-Orient et en Afrique, avec une couverture mondiale.",
+    "description_pt": "Empresa de logística líder no Médio Oriente e em África, com alcance global.",
+    "description_zh": "中东和非洲领先的物流公司，业务遍及全球。",
+    "description_ja": "中東およびアフリカにおける有力な物流会社で、世界規模のネットワークを展開しています。",
+    "description_ko": "중동 및 아프리카 지역의 선도 물류 기업으로, 글로벌 네트워크를 보유하고 있습니다.",
+    "description_ar": "شركة لوجستية رائدة في الشرق الأوسط وأفريقيا بانتشار عالمي.",
+    "description_tr": "Orta Doğu ve Afrika'nın önde gelen lojistik şirketi; küresel erişime sahiptir.",
+    "description_it": "Azienda logistica leader in Medio Oriente e Africa, con una presenza globale."
   },
   {
     "id": "pochta-rossii",
@@ -557,7 +611,8 @@
         "max_weight_kg": 31.5,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Zweitgrößtes Paketzustellnetz Europas mit Abdeckung in über 230 Ländern."
   },
   {
     "id": "tnt",
@@ -585,7 +640,17 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicio internacional de mensajería, ahora parte de FedEx. Sólida red europea.",
+    "description_de": "Internationaler Kurierdienst, inzwischen Teil von FedEx. Starkes europäisches Netzwerk.",
+    "description_fr": "Service de messagerie international, désormais intégré à FedEx. Solide réseau européen.",
+    "description_pt": "Serviço internacional de correio expresso, agora parte da FedEx. Forte rede europeia.",
+    "description_zh": "国际快递服务商，现已并入 FedEx，在欧洲拥有强大的网络。",
+    "description_ja": "国際宅配サービスで、現在はFedExの一部です。強力な欧州ネットワークを有しています。",
+    "description_ko": "국제 특송 서비스로, 현재 FedEx의 일원입니다. 유럽 네트워크가 강력합니다.",
+    "description_ar": "خدمة نقل بريدي دولية، باتت جزءًا من FedEx. شبكة أوروبية قوية.",
+    "description_tr": "Uluslararası kurye hizmeti; artık FedEx bünyesinde. Güçlü Avrupa ağına sahiptir.",
+    "description_it": "Servizio corriere internazionale, ora parte di FedEx. Rete europea capillare."
   },
   {
     "id": "j-and-t",
@@ -681,7 +746,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicio postal nacional de España con conexiones con América Latina."
   },
   {
     "id": "correios-brazil",
@@ -709,7 +775,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_pt": "Serviço postal nacional do Brasil, com entregas para todos os países."
   },
   {
     "id": "singpost",
@@ -837,7 +904,8 @@
         "max_weight_kg": 20,
         "tracking": true
       }
-    ]
+    ],
+    "description_ko": "대한민국의 국가 우편 서비스로, EMS와 K-Packet 서비스를 제공합니다."
   },
   {
     "id": "postnord",
@@ -885,7 +953,17 @@
         "max_weight_kg": 5,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Brazo logístico de Alibaba Group que gestiona las entregas de AliExpress y del comercio electrónico global.",
+    "description_de": "Logistikarm der Alibaba Group für AliExpress und globale E-Commerce-Zustellungen.",
+    "description_fr": "Filiale logistique du groupe Alibaba qui gère les livraisons d'AliExpress et du e-commerce mondial.",
+    "description_pt": "Braço logístico do Grupo Alibaba, responsável pelas entregas do AliExpress e pelo comércio electrónico global.",
+    "description_zh": "阿里巴巴集团旗下的物流业务，负责 AliExpress 及全球电商订单的配送。",
+    "description_ja": "Alibaba Groupの物流部門で、AliExpressおよびグローバルEコマースの配送を担っています。",
+    "description_ko": "Alibaba 그룹의 물류 부문으로, AliExpress 및 글로벌 이커머스 배송을 담당합니다.",
+    "description_ar": "الذراع اللوجستية لمجموعة Alibaba، تتولى شحنات AliExpress والتجارة الإلكترونية العالمية.",
+    "description_tr": "Alibaba Group'un lojistik kolu; AliExpress ve küresel e-ticaret teslimatlarını yönetir.",
+    "description_it": "Divisione logistica del Gruppo Alibaba, che gestisce le consegne di AliExpress e dell'e-commerce globale."
   },
   {
     "id": "yanwen",
@@ -913,7 +991,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa china de logística transfronteriza especializada en paquetería pequeña en todo el mundo.",
+    "description_de": "Chinesisches grenzüberschreitendes Logistikunternehmen, spezialisiert auf kleine Sendungen weltweit.",
+    "description_fr": "Entreprise chinoise de logistique transfrontalière spécialisée dans les petits colis à destination du monde entier.",
+    "description_pt": "Empresa chinesa de logística transfronteiriça, especializada em pequenas encomendas para todo o mundo.",
+    "description_zh": "中国跨境物流公司，专注于面向全球的小包递送服务。",
+    "description_ja": "中国のクロスボーダー物流会社で、世界各国への小型小包を専門としています。",
+    "description_ko": "전 세계 소형 소포 배송에 특화된 중국의 국경 간 물류 기업입니다.",
+    "description_ar": "شركة لوجستية صينية للشحن العابر للحدود، متخصصة في الطرود الصغيرة حول العالم.",
+    "description_tr": "Dünya genelinde küçük paketlerde uzmanlaşmış Çinli sınır ötesi lojistik şirketi.",
+    "description_it": "Azienda cinese di logistica transfrontaliera specializzata in piccoli pacchi in tutto il mondo."
   },
   {
     "id": "flash-express",
@@ -993,7 +1081,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Entreprise de livraison express et de logistique basée à Singapour et desservant l'Asie-Pacifique. Forte orientation B2B avec des services express internationaux de porte à porte."
   },
   {
     "id": "jne-express",
@@ -1217,7 +1306,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Proveedor n.º 1 de logística para comercio electrónico transfronterizo de China, fundado en 2004 en Shenzhen. Da servicio a más de 20.000 comerciantes. Se integra con AliExpress, eBay, Amazon y Wish. Ofrece almacenes de fulfillment en US, UK, UE y Australia.",
+    "description_de": "Chinas führender Logistikanbieter für grenzüberschreitenden E-Commerce, gegründet 2004 in Shenzhen. Bedient über 20.000 Händler. Integriert mit AliExpress, eBay, Amazon und Wish. Bietet Fulfillment-Lager in US, UK, EU und Australien.",
+    "description_fr": "Premier prestataire logistique chinois du e-commerce transfrontalier, fondé en 2004 à Shenzhen. Au service de plus de 20 000 marchands. Intégré à AliExpress, eBay, Amazon et Wish. Propose des entrepôts de fulfillment aux US, GB, UE et en Australie.",
+    "description_pt": "Principal fornecedor chinês de logística para comércio electrónico transfronteiriço, fundado em 2004 em Shenzhen. Serve mais de 20.000 comerciantes. Integra-se com AliExpress, eBay, Amazon e Wish. Disponibiliza armazéns de fulfillment nos EUA, Reino Unido, UE e Austrália.",
+    "description_zh": "中国第一的跨境电商物流服务商，2004 年创立于深圳，服务 20,000 多家商户。已接入 AliExpress、eBay、Amazon、Wish。在美国、英国、欧洲、澳大利亚设有海外仓。",
+    "description_ja": "中国No.1のクロスボーダーEコマース物流プロバイダーで、2004年に深圳で設立されました。20,000社以上のマーチャントにサービスを提供しています。AliExpress、eBay、Amazon、Wishと統合されています。US、UK、EU、オーストラリアにフルフィルメント倉庫を展開しています。",
+    "description_ko": "중국 1위 국경 간 이커머스 물류 업체로, 2004년 선전에서 설립되었습니다. 20,000개 이상의 판매자를 지원하며, AliExpress, eBay, Amazon, Wish와 연동됩니다. 미국, 영국, EU, 호주에 풀필먼트 창고를 운영합니다.",
+    "description_ar": "مزود اللوجستيات رقم 1 في الصين للتجارة الإلكترونية العابرة للحدود، تأسس عام 2004 في Shenzhen. يخدم أكثر من 20,000 تاجر. يتكامل مع AliExpress وeBay وAmazon وWish. يوفر مستودعات تلبية الطلبات في US وUK وEU وAustralia.",
+    "description_tr": "Çin'in 1 numaralı sınır ötesi e-ticaret lojistik sağlayıcısı; 2004'te Shenzhen'de kuruldu. 20,000+ satıcıya hizmet verir. AliExpress, eBay, Amazon ve Wish ile entegredir. US, UK, EU ve Avustralya'da fulfillment depoları sunar.",
+    "description_it": "Primo fornitore di logistica per l'e-commerce transfrontaliero in Cina, fondato nel 2004 a Shenzhen. Serve oltre 20.000 commercianti. Si integra con AliExpress, eBay, Amazon e Wish. Offre magazzini di fulfillment in US, UK, EU e Australia."
   },
   {
     "id": "cne-express-china-navigation-express",
@@ -1253,7 +1352,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "中国跨境电商物流公司，专注于小包递送，深受 AliExpress 卖家青睐。提供针对特定国家的专线服务以优化路由。"
   },
   {
     "id": "sunyou-sunyou-post",
@@ -1289,7 +1389,8 @@
         "max_weight_kg": 20,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "SunYou 于 2008 年创立于深圳，是 AliExpress 的主要物流承运商。以低单价电商订单的高性价比标准配送见长，经济型渠道的轨迹信息可能较为有限。"
   },
   {
     "id": "equick-china",
@@ -1325,7 +1426,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "中国物流公司，提供快递、空运、海运及仓储服务。专注于为国内及国际配送提供快速、高性价比的解决方案。"
   },
   {
     "id": "zto-international",
@@ -1345,7 +1447,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "ZTO Express 成立于 2002 年，是中国规模最大的快递公司之一（港股上市），覆盖中国 90% 的地区，并在亚洲、美国和澳大利亚持续拓展国际业务。"
   },
   {
     "id": "best-inc-international",
@@ -1365,7 +1468,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "在纽约上市的中国物流公司，集快递、货运、供应链及跨境服务于一体，在中国及东南亚拥有强大的业务布局。"
   },
   {
     "id": "sto-express-shentong-express",
@@ -1385,7 +1489,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "中国主要的民营快递公司之一，是阿里巴巴 Cainiao 物流网络的组成部分，国际跨境电商配送能力持续提升。"
   },
   {
     "id": "yto-express-yuantong-express",
@@ -1405,7 +1510,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "中国主要的快递公司，隶属于阿里巴巴物流生态体系。拥有自有航空货运机队，国际网络持续拓展，覆盖亚洲、欧洲和美洲。"
   },
   {
     "id": "boxberry",
@@ -1765,7 +1871,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "شركة توصيل في الشرق الأوسط تعتمد على تحديد المواقع بنظام GPS لعمليات الاستلام والتسليم، حلًا لمشكلة غياب العناوين الرسمية في المنطقة. تعمل في دول الخليج ومنطقة الشرق الأوسط وشمال أفريقيا (MENA)."
   },
   {
     "id": "naqel-express",
@@ -1785,7 +1892,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "مزود حلول سلاسل الإمداد اللوجستية الرائد في المملكة العربية السعودية، تأسس عام 1993 (باسم Hala Express سابقًا). أكبر شبكة تشغيلية في المملكة بأكثر من 4,900 نقطة تسليم في 14 دولة من MENA."
   },
   {
     "id": "smsa-express",
@@ -1805,7 +1913,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "مزود خدمات النقل السريع واللوجستيات في المملكة العربية السعودية بخبرة تزيد على 20 عامًا وأكثر من 200 مركز بيع بالتجزئة في أنحاء المملكة. قوي في توصيل الميل الأخير للتجارة الإلكترونية."
   },
   {
     "id": "skynet-worldwide-express",
@@ -1825,7 +1934,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "شبكة توصيل سريع عالمية ذات حضور قوي في الشرق الأوسط وأفريقيا. تعمل في 209 دول بنموذج الامتياز التجاري. مراكز في Dubai Cargo Village وJebel Ali Free Zone."
   },
   {
     "id": "the-courier-guy",
@@ -1893,7 +2003,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "شركة توصيل سريعة النمو في الشرق الأوسط وشمال أفريقيا بدعم صيني. متخصصة في توصيل الميل الأخير للتجارة الإلكترونية مع دعم الدفع عند الاستلام (COD). تتوسع في أمريكا اللاتينية."
   },
   {
     "id": "99minutos",
@@ -1913,7 +2024,8 @@
         "max_weight_kg": 25,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa de logística para comercio electrónico respaldada por Y Combinator, especializada en entregas rápidas en América Latina. Entrega en el mismo día y al día siguiente con seguimiento en directo y plugins para plataformas de comercio electrónico."
   },
   {
     "id": "andreani",
@@ -1941,7 +2053,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Principal proveedor de servicios de logística y mensajería de Argentina. Servicios integrales que incluyen envíos nacionales e internacionales, transporte de carga, almacenamiento y despacho aduanero."
   },
   {
     "id": "chilexpress",
@@ -1969,7 +2082,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa líder de mensajería y entregas de Chile, fundada en 1982. Más de 1.100 sucursales y 75 centros de operaciones en las 16 regiones chilenas. Servicio internacional a través de la filial CXP con oficinas en Miami."
   },
   {
     "id": "servientrega",
@@ -1997,7 +2111,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Mayor empresa de mensajería y logística de Colombia. Fuerte presencia en la región andina (Colombia, Ecuador, Perú, Panamá, Venezuela) con oficinas en US y España. Especialista en C2C y B2C."
   },
   {
     "id": "olva-courier",
@@ -2025,7 +2140,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Importante empresa peruana de mensajería que ofrece entregas nacionales y servicio internacional limitado. Amplia cobertura en todo Perú, incluida el área metropolitana de Lima y las provincias."
   },
   {
     "id": "estafeta",
@@ -2045,7 +2161,8 @@
         "max_weight_kg": 68,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Importante empresa mexicana de envíos y logística. Entrega aérea Global Express en 1-3 días a US/Canadá y 2-5 días en todo el mundo. Servicio Crossborder Merkalink para importar compras de US a México."
   },
   {
     "id": "evri-formerly-hermes",
@@ -2105,7 +2222,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Grand réseau européen de livraison en points relais, avec plus de 36 000 Points Relais dans 16 pays. Spécialisé dans la livraison de colis à prix abordable en points de retrait. Plus de 12 000 points rien qu'en France."
   },
   {
     "id": "colissimo-la-poste",
@@ -2125,7 +2243,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Service postal de colis français opéré par La Poste. Livraison suivie à tarif abordable en France, en Europe et à l'international vers 235 pays. Plusieurs options de livraison : à domicile, en points relais ou en bureau de poste."
   },
   {
     "id": "gls-general-logistics-systems",
@@ -2145,7 +2264,8 @@
         "max_weight_kg": 40,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Drittgrößter Kurierdienst Deutschlands, im Besitz der Royal Mail Group. Über 5.500 Abholpunkte in Deutschland, ca. 8 % Marktanteil im Inland. Seit 2019 zu 100 % klimaneutrale Zustellung. Paneuropäisches Netzwerk."
   },
   {
     "id": "postnl",
@@ -2185,7 +2305,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Service postal et colis national de Belgique. Livraison domestique le lendemain, expéditions européennes et mondiales. Options de livraison à domicile ou de retrait en bureau de poste / point colis."
   },
   {
     "id": "austrian-post-sterreichische-post",
@@ -2205,7 +2326,8 @@
         "max_weight_kg": 31.5,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Nationaler Post- und Paketdienst Österreichs. Bietet ein breites Spektrum von Economy bis EMS Express. Starkes Netzwerk für Zustellungen in Mitteleuropa."
   },
   {
     "id": "swiss-post",
@@ -2225,7 +2347,9 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Nationaler Postdienst der Schweiz. Zuverlässig und pünktlich. Miteigentümer von Asendia (zusammen mit La Poste) für die internationale E-Commerce-Zustellung.",
+    "description_fr": "Service postal national de Suisse. Fiable et ponctuel. Copropriétaire d'Asendia (avec La Poste) pour la livraison e-commerce internationale."
   },
   {
     "id": "la-poste-france",
@@ -2245,7 +2369,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Service postal national français. Colissimo pour les colis, Chronopost pour l'express. Copropriétaire d'Asendia (avec Swiss Post) et maison mère de DPD Group. Couverture internationale étendue."
   },
   {
     "id": "dpd-group-eu",
@@ -2265,7 +2390,8 @@
         "max_weight_kg": 31.5,
         "tracking": true
       }
-    ]
+    ],
+    "description_de": "Großes europäisches Paketnetzwerk (Teil von GeoPost/La Poste). 31 Länder, über 70.000 Paketshops. Der Predict-Service bietet Zustellzeitfenster von einer Stunde. Starker Fokus auf B2C-E-Commerce."
   },
   {
     "id": "yamato-transport-kuroneko-yamato",
@@ -2285,7 +2411,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ja": "日本No.1の宅配会社で、市場シェアは41%です。Kuroneko(クロネコ)ブランドで知られています。羽田クロノゲートのターミナルにより、アジアへの翌日配送が可能です。24カ国で事業を展開しています。"
   },
   {
     "id": "sagawa-express",
@@ -2305,7 +2432,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ja": "Yamato Transportに次ぐ日本第2位の宅配会社です。一般的にYamatoよりも安価です。B2Bおよび法人向け物流に強みがあります。SG Holdingsグループの一員です。"
   },
   {
     "id": "japan-post-yu-pack-ems",
@@ -2333,7 +2461,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ja": "日本の国営郵便サービスです。EMSは国際配送のプレミアムオプションです。Yu-Packは国内小包向けです。国際配送にはEMS、Airmail、SAL、Surfaceなど複数のスピード・料金帯があります。"
   },
   {
     "id": "cj-logistics-cj-korea-express",
@@ -2353,7 +2482,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ko": "대한민국 최대 물류 기업(CJ 그룹 계열사)입니다. 항공, 해상, 육상을 아우르는 종합 국제 포워딩 서비스를 제공합니다. 통관이 포함된 이커머스 물류 솔루션을 제공합니다."
   },
   {
     "id": "hanjin-express",
@@ -2373,7 +2503,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ko": "대한민국의 대표 택배 기업 중 하나입니다. 주로 국내 시장에 집중하고 있으며, 파트너십을 통해 국제 역량을 확장하고 있습니다."
   },
   {
     "id": "lotte-global-logistics",
@@ -2393,7 +2524,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ko": "대한민국 최대 대기업 중 하나인 롯데 그룹의 계열사입니다. 택배, 화물, 창고 보관을 포함한 종합 물류 서비스를 제공합니다. 국제 사업 확장을 지속하고 있습니다."
   },
   {
     "id": "couriersplease",
@@ -2509,7 +2641,17 @@
         "max_weight_kg": 2,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicio conjunto de China Post y los servicios postales de destino (originalmente USPS). Envío asequible con seguimiento para paquetes ligeros de comercio electrónico desde China. Seguimiento de extremo a extremo hasta la puerta.",
+    "description_de": "Gemeinschaftsservice von China Post und Postdienstleistern im Zielland (ursprünglich USPS). Günstiger, getrackter Versand für leichte E-Commerce-Sendungen aus China. Durchgängiges Tracking bis vor die Haustür.",
+    "description_fr": "Service conjoint entre China Post et les services postaux de destination (initialement USPS). Expédition suivie à tarif abordable pour les petits colis e-commerce en provenance de Chine. Suivi de bout en bout jusqu'au destinataire.",
+    "description_pt": "Serviço conjunto da China Post e dos serviços postais de destino (originalmente USPS). Envio rastreado e acessível para encomendas leves de comércio electrónico provenientes da China. Rastreamento completo até à porta do destinatário.",
+    "description_zh": "China Post 与目的国邮政（最初为 USPS）联合推出的服务。为来自中国的轻量电商小包提供实惠且可追踪的配送，全程门到门轨迹跟踪。",
+    "description_ja": "China Postと仕向国の郵便サービス(当初はUSPS)による共同サービスです。中国発の軽量Eコマース小包向けの、手頃な価格で追跡可能な配送サービスです。玄関先までのエンドツーエンド追跡を提供します。",
+    "description_ko": "China Post와 도착지 우편 서비스(최초에는 USPS)의 공동 서비스입니다. 중국발 경량 이커머스 소포를 위한 합리적인 가격의 추적 가능 배송입니다. 문 앞까지 엔드투엔드 추적을 제공합니다.",
+    "description_ar": "خدمة مشتركة بين China Post وخدمات البريد في بلد الوجهة (USPS في الأصل). شحن بأسعار مناسبة وبتتبع لطرود التجارة الإلكترونية خفيفة الوزن من الصين. تتبع شامل حتى عتبة الباب.",
+    "description_tr": "China Post ile varış ülkesi posta hizmetlerinin (başlangıçta USPS) ortak hizmeti. Çin'den hafif e-ticaret paketleri için uygun fiyatlı, takip edilebilir gönderim. Kapıya kadar uçtan uca takip.",
+    "description_it": "Servizio congiunto di China Post e dei servizi postali di destinazione (originariamente USPS). Spedizioni tracciate a prezzi accessibili per piccoli pacchi e-commerce dalla Cina. Tracciamento end-to-end fino alla porta di casa."
   },
   {
     "id": "passport-shipping-passport-global",
@@ -2537,7 +2679,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Plataforma de envíos transfronterizos para comercio electrónico con red propia de transportistas que entrega en más de 190 países. Ofrece páginas de seguimiento con marca, cálculo de aranceles e impuestos landed y servicios de Seller of Record.",
+    "description_de": "Plattform für grenzüberschreitenden E-Commerce-Versand mit eigenem Carrier-Netzwerk, das in über 190 Länder liefert. Bietet gebrandete Tracking-Seiten, Berechnung der Landed-Duty/Tax und Seller-of-Record-Services.",
+    "description_fr": "Plateforme d'expédition e-commerce transfrontalière disposant de son propre réseau de transporteurs, desservant plus de 190 pays. Propose des pages de suivi personnalisées, le calcul des droits et taxes à destination, ainsi que des services Seller of Record.",
+    "description_pt": "Plataforma de envio para comércio electrónico transfronteiriço com rede de transportadoras própria, entregando em mais de 190 países. Oferece páginas de rastreamento personalizadas, cálculos de taxas/impostos landed e serviços de Seller of Record.",
+    "description_zh": "跨境电商物流平台，拥有自有承运网络，可递送至 190 多个国家和地区。提供品牌化轨迹页面、落地税费（Landed Duty/Tax）核算及 Seller of Record 服务。",
+    "description_ja": "クロスボーダーEコマース配送プラットフォームで、自社キャリアネットワークにより190カ国以上へ配送します。ブランド化された追跡ページ、着地価格での関税・税金計算、Seller of Recordサービスを提供しています。",
+    "description_ko": "자체 운송사 네트워크를 보유한 국경 간 이커머스 배송 플랫폼으로, 190개국 이상에 배송합니다. 브랜드 추적 페이지, 랜디드 관세/세금 계산, Seller of Record 서비스를 제공합니다.",
+    "description_ar": "منصة شحن للتجارة الإلكترونية العابرة للحدود بشبكة ناقلين داخلية تصل إلى أكثر من 190 دولة. توفر صفحات تتبع بعلامة تجارية، واحتساب الرسوم والضرائب حتى التسليم (landed duty/tax)، وخدمات البائع المسجَّل (Seller of Record).",
+    "description_tr": "190+ ülkeye teslimat yapan, kendi taşıyıcı ağına sahip sınır ötesi e-ticaret gönderim platformu. Markalı takip sayfaları, tam maliyetli gümrük/vergi hesaplamaları ve Seller of Record hizmetleri sunar.",
+    "description_it": "Piattaforma di spedizioni e-commerce transfrontaliere con una rete di corrieri proprietaria che consegna in oltre 190 paesi. Offre pagine di tracciamento brandizzate, calcolo di dazi e tasse landed e servizi di Seller of Record."
   },
   {
     "id": "pitney-bowes",
@@ -2565,7 +2717,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Pionero de la logística transfronteriza para comercio electrónico. Ayuda a miles de minoristas a crecer internacionalmente con entrega en más de 220 países. Despacho aduanero y cumplimiento integrados.",
+    "description_de": "Pionier der grenzüberschreitenden E-Commerce-Logistik. Unterstützt tausende Händler beim internationalen Wachstum mit Zustellung in über 220 Länder. Integrierte Zollabfertigung und Compliance.",
+    "description_fr": "Pionnier de la logistique e-commerce transfrontalière. Accompagne des milliers de détaillants dans leur développement international avec une livraison dans plus de 220 pays. Dédouanement et conformité intégrés.",
+    "description_pt": "Pioneira da logística de comércio electrónico transfronteiriço. Ajuda milhares de retalhistas a crescer internacionalmente, com entregas a mais de 220 países. Desalfandegamento e conformidade integrados.",
+    "description_zh": "跨境电商物流的开拓者。助力数千家零售商拓展海外市场，可递送至 220 多个国家和地区，并提供一体化清关与合规服务。",
+    "description_ja": "クロスボーダーEコマース物流の先駆者です。数千の小売業者の国際展開を支援し、220カ国以上への配送を実現しています。通関手続きおよびコンプライアンスが統合されています。",
+    "description_ko": "국경 간 이커머스 물류의 선구자입니다. 수천 개 소매업체가 220개국 이상으로 배송하며 국제적으로 성장하도록 지원합니다. 통합 통관 및 컴플라이언스를 제공합니다.",
+    "description_ar": "شركة رائدة في لوجستيات التجارة الإلكترونية العابرة للحدود. تساعد آلاف تجار التجزئة على النمو دوليًا بالتسليم إلى أكثر من 220 دولة. تخليص جمركي وامتثال متكامل.",
+    "description_tr": "Sınır ötesi e-ticaret lojistiğinin öncüsü. Binlerce perakendecinin 220+ ülkeye teslimat ile uluslararası büyümesine yardımcı olur. Entegre gümrükleme ve uyumluluk.",
+    "description_it": "Pioniere della logistica e-commerce transfrontaliera. Supporta la crescita internazionale di migliaia di retailer con consegne in oltre 220 paesi. Sdoganamento e compliance integrati."
   },
   {
     "id": "asendia",
@@ -2585,7 +2747,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Alianza entre La Poste (Francia) y Swiss Post. Mayor servicio de consolidación de correo internacional para USPS. La línea de productos e-PAQ ofrece opciones de entrega escalonadas en todo el mundo con seguimiento completo.",
+    "description_de": "Allianz zwischen La Poste (Frankreich) und Swiss Post. Größter internationaler Mail-Konsolidierungsservice für USPS. Die Produktlinie e-PAQ bietet gestaffelte Zustelloptionen weltweit mit vollständigem Tracking.",
+    "description_fr": "Alliance entre La Poste (France) et Swiss Post. Premier service de consolidation de courrier international pour USPS. La gamme e-PAQ propose plusieurs niveaux de livraison dans le monde entier avec suivi complet.",
+    "description_pt": "Aliança entre La Poste (França) e Swiss Post. Maior serviço internacional de consolidação de correio para a USPS. A linha de produtos e-PAQ oferece opções de entrega por escalões em todo o mundo, com rastreamento completo.",
+    "description_zh": "由 La Poste（法国邮政）与 Swiss Post 共同成立的合资公司，是 USPS 最大的国际邮件集运服务商。e-PAQ 产品线提供覆盖全球的分层配送选项，并支持全程轨迹跟踪。",
+    "description_ja": "La Poste(フランス)とSwiss Postの提携によるサービスです。USPS向けとして最大の国際郵便コンソリデーションサービスです。e-PAQ製品ラインは、全追跡対応で世界各国への段階的な配送オプションを提供しています。",
+    "description_ko": "La Poste(프랑스)와 Swiss Post의 합작사입니다. USPS용 최대 규모의 국제 우편 통합 서비스입니다. e-PAQ 제품군은 전 세계적으로 완전 추적이 가능한 단계별 배송 옵션을 제공합니다.",
+    "description_ar": "تحالف بين La Poste (فرنسا) وSwiss Post. أكبر خدمة تجميع بريد دولي لصالح USPS. تقدم باقة e-PAQ خيارات تسليم متدرجة حول العالم مع تتبع كامل.",
+    "description_tr": "La Poste (Fransa) ile Swiss Post arasındaki ortaklık. USPS için en büyük uluslararası posta konsolidasyon hizmeti. e-PAQ ürün serisi, dünya genelinde tam takipli, kademeli teslimat seçenekleri sunar.",
+    "description_it": "Alleanza tra La Poste (Francia) e Swiss Post. Il più grande servizio di consolidamento postale internazionale per USPS. La linea di prodotti e-PAQ offre opzioni di consegna differenziate in tutto il mondo con tracciamento completo."
   },
   {
     "id": "postnl-international",
@@ -2605,7 +2777,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "División internacional de PostNL, el servicio postal de los Países Bajos. Servicio asequible de paquetería internacional con seguimiento. Popular entre los comerciantes de comercio electrónico europeos para envíos a todo el mundo.",
+    "description_de": "Internationaler Geschäftsbereich von PostNL, dem niederländischen Postdienst. Günstiger, getrackter internationaler Paketdienst. Beliebt bei europäischen E-Commerce-Händlern für den weltweiten Versand.",
+    "description_fr": "Branche internationale de PostNL, le service postal des Pays-Bas. Service de colis internationaux suivi à tarif abordable. Plébiscité par les marchands e-commerce européens pour les expéditions mondiales.",
+    "description_pt": "Braço internacional da PostNL, o serviço postal dos Países Baixos. Serviço internacional de encomendas rastreadas a preço acessível. Popular entre comerciantes europeus de comércio electrónico para envios mundiais.",
+    "description_zh": "荷兰邮政 PostNL 的国际业务板块，提供经济实惠的国际可追踪小包服务，深受欧洲电商卖家欢迎，可面向全球配送。",
+    "description_ja": "オランダの郵便サービスPostNLの国際部門です。手頃な価格で追跡可能な国際小包サービスです。欧州のEコマースマーチャントの世界配送に広く利用されています。",
+    "description_ko": "네덜란드 우편 서비스 PostNL의 국제 사업부입니다. 합리적인 가격의 추적 가능 국제 소포 서비스입니다. 유럽 이커머스 판매자들이 전 세계 배송에 널리 이용합니다.",
+    "description_ar": "الذراع الدولية لـPostNL، هيئة البريد في هولندا. خدمة شحن طرود دولية بتتبع وبأسعار مناسبة. شائعة لدى تجار التجارة الإلكترونية في أوروبا للشحن حول العالم.",
+    "description_tr": "Hollanda posta hizmeti PostNL'in uluslararası kolu. Uygun fiyatlı, takip edilebilir uluslararası paket hizmeti. Dünya genelinde gönderim için Avrupalı e-ticaret satıcıları arasında popüler.",
+    "description_it": "Divisione internazionale di PostNL, il servizio postale dei Paesi Bassi. Servizio di pacchi internazionali tracciati a prezzi accessibili. Apprezzato dai merchant e-commerce europei per le spedizioni in tutto il mondo."
   },
   {
     "id": "globalpost-by-auctane",
@@ -2633,7 +2815,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicio de envíos internacionales de Auctane (matriz de Stamps.com/ShipStation). Ofrece tarifas de envío internacional con descuento aprovechando los descuentos postales por volumen. Se integra con las principales plataformas de comercio electrónico.",
+    "description_de": "Internationaler Versanddienst von Auctane (Muttergesellschaft von Stamps.com/ShipStation). Bietet vergünstigte internationale Versandtarife durch Nutzung von Mengenrabatten bei Postdienstleistern. Integriert mit den wichtigsten E-Commerce-Plattformen.",
+    "description_fr": "Service d'expédition internationale proposé par Auctane (maison mère de Stamps.com/ShipStation). Offre des tarifs internationaux remisés grâce aux remises postales volumiques. Intégré aux principales plateformes e-commerce.",
+    "description_pt": "Serviço de envio internacional da Auctane (empresa-mãe da Stamps.com/ShipStation). Oferece tarifas internacionais reduzidas, aproveitando descontos postais de grande volume. Integra-se com as principais plataformas de comércio electrónico.",
+    "description_zh": "由 Auctane（Stamps.com/ShipStation 母公司）运营的国际寄递服务，借助批量邮政折扣提供优惠的国际运费，已接入主流电商平台。",
+    "description_ja": "Auctane(Stamps.com/ShipStationの親会社)による国際配送サービスです。大口郵便割引を活用した割安な国際配送料金を提供します。主要なEコマースプラットフォームと統合されています。",
+    "description_ko": "Auctane(Stamps.com/ShipStation의 모회사)의 국제 배송 서비스입니다. 대량 우편 할인을 활용한 할인된 국제 배송 요금을 제공합니다. 주요 이커머스 플랫폼과 연동됩니다.",
+    "description_ar": "خدمة شحن دولية من Auctane (الشركة الأم لـStamps.com/ShipStation). تقدم أسعار شحن دولية مخفَّضة بالاستفادة من خصومات البريد بالجملة. تتكامل مع كبرى منصات التجارة الإلكترونية.",
+    "description_tr": "Auctane (Stamps.com/ShipStation'ın ana şirketi) tarafından sunulan uluslararası gönderim hizmeti. Toplu posta indirimlerinden yararlanarak indirimli uluslararası gönderim tarifeleri sunar. Başlıca e-ticaret platformlarıyla entegredir.",
+    "description_it": "Servizio di spedizioni internazionali di Auctane (società madre di Stamps.com/ShipStation). Offre tariffe internazionali scontate sfruttando gli sconti postali sui volumi. Si integra con le principali piattaforme e-commerce."
   },
   {
     "id": "landmark-global",
@@ -2661,7 +2853,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Filial de bpost (Correos de Bélgica). Especializada en la entrega transfronteriza para comercio electrónico en más de 220 países. Soluciones de despacho aduanero, gestión de devoluciones y DDP.",
+    "description_de": "Tochtergesellschaft von bpost (Belgische Post). Spezialisiert auf grenzüberschreitende E-Commerce-Zustellung in über 220 Länder. Zollabfertigung, Retourenmanagement und DDP-Lösungen.",
+    "description_fr": "Filiale de bpost (la Poste belge). Spécialisée dans la livraison e-commerce transfrontalière vers plus de 220 pays. Dédouanement, gestion des retours et solutions DDP.",
+    "description_pt": "Subsidiária dos bpost (correios belgas). Especializada em entregas de comércio electrónico transfronteiriço para mais de 220 países. Desalfandegamento, gestão de devoluções e soluções DDP.",
+    "description_zh": "bpost（比利时邮政）旗下子公司，专注于跨境电商配送，可递送至 220 多个国家和地区，并提供清关、退件管理及 DDP 解决方案。",
+    "description_ja": "bpost(ベルギー郵便)の子会社です。220カ国以上へのクロスボーダーEコマース配送を専門としています。通関、返品管理、DDPソリューションを提供します。",
+    "description_ko": "bpost(벨기에 우편)의 자회사입니다. 220개국 이상으로의 국경 간 이커머스 배송에 특화되어 있습니다. 통관, 반품 관리, DDP 솔루션을 제공합니다.",
+    "description_ar": "شركة تابعة لـbpost (البريد البلجيكي). متخصصة في توصيل التجارة الإلكترونية العابر للحدود إلى أكثر من 220 دولة. تخليص جمركي وإدارة مرتجعات وحلول DDP.",
+    "description_tr": "bpost'un (Belçika Postası) iştiraki. 220+ ülkeye sınır ötesi e-ticaret teslimatında uzmanlaşmıştır. Gümrükleme, iade yönetimi ve DDP çözümleri.",
+    "description_it": "Controllata di bpost (Poste belghe). Specializzata nelle consegne e-commerce transfrontaliere in oltre 220 paesi. Sdoganamento, gestione dei resi e soluzioni DDP."
   },
   {
     "id": "aramex-africa",
@@ -2817,7 +3019,8 @@
         "max_weight_kg": 2,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "هيئة البريد الرسمية في دولة الإمارات العربية المتحدة. تقدم خدمات البريد المحلي والدولي وتوصيل الطرود والشحن السريع."
   },
   {
     "id": "saudi-post",
@@ -2845,7 +3048,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "هيئة البريد الوطنية في المملكة العربية السعودية (Saudi Post / SPL). تقدم خدمات البريد والطرود واللوجستيات داخل المملكة وخارجها."
   },
   {
     "id": "aramex-shop-and-ship",
@@ -2873,7 +3077,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_ar": "خدمة التسوق والشحن العابرة للحدود من Aramex. احصل على عنوان افتراضي في US أو UK أو دول أخرى واشحن إلى الشرق الأوسط وأفريقيا وآسيا."
   },
   {
     "id": "deprisa",
@@ -2901,7 +3106,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa colombiana de mensajería y logística. Parte del grupo Avianca. Cubre Colombia con conexiones con América Latina y destinos internacionales."
   },
   {
     "id": "cruz-del-sur",
@@ -2929,7 +3135,8 @@
         "max_weight_kg": 50,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa peruana de logística y carga. Una de las mayores empresas de transporte de Perú, con servicios de entrega de paquetes a nivel nacional y regional."
   },
   {
     "id": "omniva",
@@ -3101,7 +3308,8 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Servicio urgente de paquetería de España. Filial del Grupo Correos. Entregas rápidas nacionales e internacionales en Europa y América Latina."
   },
   {
     "id": "pos-indonesia",
@@ -3341,7 +3549,8 @@
         "max_weight_kg": 2,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "香港的邮政服务，是重要的国际邮件枢纽，面向全球提供快速可靠的寄递服务，也是亚太地区寄递的关键门户。"
   },
   {
     "id": "taiwan-post",
@@ -3377,7 +3586,8 @@
         "max_weight_kg": 2,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "Chunghwa Post（中华邮政），台湾地区的邮政服务机构，提供全面的岛内及国际信函、包裹和快递服务。"
   },
   {
     "id": "fiji-post",
@@ -3677,7 +3887,8 @@
         "max_weight_kg": 5,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "Wish 电商平台旗下的专属物流平台，通过集运及末端配送合作，为中国至全球买家的订单提供物流管理，主要服务于 Wish 卖家。"
   },
   {
     "id": "joom-logistics",
@@ -3713,7 +3924,8 @@
         "max_weight_kg": 5,
         "tracking": true
       }
-    ]
+    ],
+    "description_zh": "Joom 平台（拉脱维亚/中国）自有物流业务，专注于中国至独联体和欧洲的小包配送，费率具竞争力，并集成清关服务。"
   },
   {
     "id": "cainiao-network",
@@ -3749,7 +3961,17 @@
         "max_weight_kg": 30,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Plataforma logística de Alibaba Group que coordina la entrega para AliExpress, Taobao y Tmall. Gestiona una red global de logística inteligente que conecta a los vendedores chinos con compradores de todo el mundo.",
+    "description_de": "Logistikplattform der Alibaba Group, die Zustellungen für AliExpress, Taobao und Tmall koordiniert. Betreibt ein globales, intelligentes Logistiknetzwerk, das chinesische Händler mit Käufern weltweit verbindet.",
+    "description_fr": "Plateforme logistique du groupe Alibaba qui coordonne les livraisons d'AliExpress, Taobao et Tmall. Gère un réseau logistique intelligent mondial reliant les vendeurs chinois aux acheteurs du monde entier.",
+    "description_pt": "Plataforma logística do Grupo Alibaba, que coordena as entregas do AliExpress, Taobao e Tmall. Gere uma rede global de logística inteligente que liga vendedores chineses a compradores em todo o mundo.",
+    "description_zh": "阿里巴巴集团旗下物流平台，统筹 AliExpress、淘宝和天猫的配送业务。运营覆盖全球的智能物流网络，连接中国卖家与全球买家。",
+    "description_ja": "Alibaba Groupの物流プラットフォームで、AliExpress、Taobao、Tmallの配送を調整しています。中国の販売者と世界中の購入者を結ぶグローバルなスマート物流ネットワークを運営しています。",
+    "description_ko": "AliExpress, Taobao, Tmall의 배송을 조율하는 Alibaba 그룹의 물류 플랫폼입니다. 중국 판매자와 전 세계 구매자를 연결하는 글로벌 스마트 물류 네트워크를 운영합니다.",
+    "description_ar": "منصة مجموعة Alibaba اللوجستية التي تنسق عمليات التوصيل لـAliExpress وTaobao وTmall. تدير شبكة لوجستية ذكية عالمية تربط البائعين الصينيين بالمشترين حول العالم.",
+    "description_tr": "Alibaba Group'un lojistik platformu; AliExpress, Taobao ve Tmall için teslimatı koordine eder. Çinli satıcıları dünya genelindeki alıcılara bağlayan küresel akıllı lojistik ağını yönetir.",
+    "description_it": "Piattaforma logistica del Gruppo Alibaba che coordina le consegne di AliExpress, Taobao e Tmall. Gestisce una rete logistica intelligente globale che collega i venditori cinesi agli acquirenti di tutto il mondo."
   },
   {
     "id": "jumia-logistics",
@@ -3821,7 +4043,8 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_fr": "Plateforme latino-américaine d'agrégation d'expéditions reliant les marchands à plus de 200 transporteurs dans plus de 15 pays. Compare les tarifs de plusieurs transporteurs, dont Estafeta, DHL, Fedex et des acteurs locaux."
   },
   {
     "id": "spring-gds",
@@ -3857,7 +4080,17 @@
         "max_weight_kg": 20,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Empresa internacional de paquetería que opera desde 2001. Utiliza más de 230 servicios postales locales para la entrega de última milla. Popular en el comercio electrónico por envíos transfronterizos asequibles de hasta 20 kg. Seguimiento completo de extremo a extremo en el servicio Tracked Delivery.",
+    "description_de": "Internationales Paketzustellunternehmen, tätig seit 2001. Nutzt über 230 lokale Postdienstleister für die letzte Meile. Beliebt im E-Commerce für günstigen grenzüberschreitenden Versand bis 20 kg. Vollständiges End-to-End-Tracking beim Tracked-Delivery-Service.",
+    "description_fr": "Entreprise de livraison de colis internationaux en activité depuis 2001. Fait appel à plus de 230 services postaux locaux pour la livraison du dernier kilomètre. Plébiscitée par le e-commerce pour des envois transfrontaliers abordables jusqu'à 20 kg. Suivi de bout en bout complet avec le service Tracked Delivery.",
+    "description_pt": "Empresa de entregas internacionais de encomendas, em actividade desde 2001. Utiliza mais de 230 serviços postais locais para a entrega de última milha. Popular no comércio electrónico pelas tarifas acessíveis de envio transfronteiriço até 20 kg. Rastreamento completo no serviço Tracked Delivery.",
+    "description_zh": "国际包裹配送公司，自 2001 年起开展业务。借助 230 多家本地邮政提供末端派送。因其高性价比的跨境寄递（最高可达 20kg）而深受电商青睐，其 Tracked Delivery 服务提供全程轨迹跟踪。",
+    "description_ja": "2001年から事業を展開する国際小包配送会社です。ラストマイル配送に230社以上の現地郵便サービスを活用しています。20kgまでの手頃なクロスボーダー配送としてEコマースで広く利用されています。Tracked Deliveryサービスでは完全なエンドツーエンド追跡を提供します。",
+    "description_ko": "2001년부터 운영 중인 국제 소포 배송 기업입니다. 라스트마일 배송을 위해 230개 이상의 현지 우편 서비스를 활용합니다. 최대 20kg까지 합리적인 가격의 국경 간 배송으로 이커머스에서 널리 이용됩니다. Tracked Delivery 서비스에서는 완전 엔드투엔드 추적을 제공합니다.",
+    "description_ar": "شركة توصيل طرود دولية تعمل منذ عام 2001. تستخدم أكثر من 230 خدمة بريد محلية لتوصيل الميل الأخير. شائعة لدى التجارة الإلكترونية لشحنها العابر للحدود بأسعار مناسبة لأوزان تصل إلى 20 كغ. تتبع كامل من طرف إلى طرف في خدمة Tracked Delivery.",
+    "description_tr": "2001'den beri faaliyet gösteren uluslararası paket teslimat şirketi. Son kilometre teslimat için 230+ yerel posta hizmetini kullanır. 20kg'a kadar uygun fiyatlı sınır ötesi gönderim için e-ticarette popülerdir. Tracked Delivery hizmetinde tam uçtan uca takip.",
+    "description_it": "Azienda internazionale di consegna pacchi operativa dal 2001. Utilizza oltre 230 servizi postali locali per la consegna dell'ultimo miglio. Apprezzata dall'e-commerce per le spedizioni transfrontaliere a prezzi accessibili fino a 20 kg. Tracciamento end-to-end completo sul servizio Tracked Delivery."
   },
   {
     "id": "packlink",
@@ -3893,7 +4126,17 @@
         "max_weight_kg": 70,
         "tracking": true
       }
-    ]
+    ],
+    "description_es": "Plataforma europea de comparación y agregación de envíos (adquirida por Auctane/Stamps.com). Compara tarifas de DHL, UPS, GLS, Hermes y otros transportistas. Integrada con eBay, Amazon y Shopify.",
+    "description_de": "Europäische Versandvergleichsplattform und Aggregator (übernommen von Auctane/Stamps.com). Vergleicht Tarife von DHL, UPS, GLS, Hermes und weiteren Carriern. Integriert mit eBay, Amazon und Shopify.",
+    "description_fr": "Plateforme et agrégateur européen de comparaison d'expéditions (racheté par Auctane/Stamps.com). Compare les tarifs de DHL, UPS, GLS, Hermes et d'autres transporteurs. Intégré à eBay, Amazon et Shopify.",
+    "description_pt": "Plataforma europeia de comparação e agregação de envios (adquirida pela Auctane/Stamps.com). Compara tarifas da DHL, UPS, GLS, Hermes e de outras transportadoras. Integra-se com eBay, Amazon e Shopify.",
+    "description_zh": "欧洲运费比价平台及聚合商（已被 Auctane/Stamps.com 收购），可比较 DHL、UPS、GLS、Hermes 等承运商的费率，已接入 eBay、Amazon、Shopify。",
+    "description_ja": "欧州の配送比較プラットフォーム兼アグリゲーター(Auctane/Stamps.comが買収)です。DHL、UPS、GLS、Hermesなど各キャリアの料金を比較します。eBay、Amazon、Shopifyと統合されています。",
+    "description_ko": "유럽 배송 비교 플랫폼이자 어그리게이터(Auctane/Stamps.com이 인수)입니다. DHL, UPS, GLS, Hermes 등 여러 운송사의 요금을 비교합니다. eBay, Amazon, Shopify와 연동됩니다.",
+    "description_ar": "منصة أوروبية لمقارنة أسعار الشحن وتجميعها (استحوذت عليها Auctane/Stamps.com). تقارن الأسعار بين DHL وUPS وGLS وHermes وناقلين آخرين. تتكامل مع eBay وAmazon وShopify.",
+    "description_tr": "Avrupa merkezli gönderim karşılaştırma platformu ve toplayıcısı (Auctane/Stamps.com tarafından satın alındı). DHL, UPS, GLS, Hermes ve diğer taşıyıcıların tarifelerini karşılaştırır. eBay, Amazon ve Shopify ile entegredir.",
+    "description_it": "Piattaforma europea di confronto e aggregazione di spedizioni (acquisita da Auctane/Stamps.com). Confronta le tariffe di DHL, UPS, GLS, Hermes e altri corrieri. Integrata con eBay, Amazon e Shopify."
   },
   {
     "id": "sendle",
@@ -3949,7 +4192,17 @@
         "max_weight_kg": null,
         "tracking": false
       }
-    ]
+    ],
+    "description_es": "Sistema operativo para el comercio transfronterizo. No es un transportista, sino una plataforma de cumplimiento y cálculo de aranceles e impuestos. Impulsa el cálculo de aranceles, la clasificación arancelaria y el cumplimiento aduanero para el comercio electrónico a nivel global.",
+    "description_de": "Betriebssystem für grenzüberschreitenden Handel. Kein Carrier, sondern eine Plattform für Compliance sowie Zoll- und Steuerberechnung. Ermöglicht Zollberechnungen, Tarifklassifizierungen und Zoll-Compliance für den weltweiten E-Commerce.",
+    "description_fr": "Système d'exploitation pour le commerce transfrontalier. Pas un transporteur, mais une plateforme de conformité et de calcul des droits et taxes. Prend en charge les calculs de droits, les classifications tarifaires et la conformité douanière pour le e-commerce à l'échelle mondiale.",
+    "description_pt": "Sistema operativo para comércio transfronteiriço. Não é uma transportadora, mas sim uma plataforma de conformidade e cálculo de taxas/impostos. Suporta cálculos alfandegários, classificações pautais e conformidade aduaneira para o comércio electrónico global.",
+    "description_zh": "跨境贸易操作系统。并非承运商，而是一套合规与税费核算平台，为全球电商提供关税核算、税则归类及清关合规支持。",
+    "description_ja": "クロスボーダー取引のオペレーティングシステムです。キャリアではなく、コンプライアンスおよび関税・税金計算のプラットフォームです。世界中のEコマース向けに関税計算、関税分類、通関コンプライアンスを支えています。",
+    "description_ko": "국경 간 무역 운영 시스템입니다. 운송사가 아닌 컴플라이언스 및 관세/세금 계산 플랫폼입니다. 전 세계 이커머스를 위한 관세 계산, 관세 분류, 통관 컴플라이언스를 지원합니다.",
+    "description_ar": "نظام تشغيل للتجارة العابرة للحدود. ليست شركة نقل، بل منصة امتثال واحتساب للرسوم والضرائب. تدعم حسابات الرسوم الجمركية وتصنيفات التعريفات والامتثال الجمركي للتجارة الإلكترونية عالميًا.",
+    "description_tr": "Sınır ötesi ticaret işletim sistemi. Bir taşıyıcı değil; uyumluluk ve gümrük vergisi/vergi hesaplama platformudur. Küresel e-ticaret için gümrük vergisi hesaplamaları, tarife sınıflandırmaları ve gümrük uyumluluğu sağlar.",
+    "description_it": "Sistema operativo per il commercio transfrontaliero. Non è un corriere, bensì una piattaforma di compliance e calcolo di dazi e tasse. Alimenta il calcolo dei dazi, le classificazioni tariffarie e la compliance doganale per l'e-commerce a livello globale."
   },
   {
     "id": "ipostal1",
