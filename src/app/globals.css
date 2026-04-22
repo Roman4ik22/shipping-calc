@@ -133,6 +133,16 @@
 .stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
 .stagger-children.is-visible > *:nth-child(n+7) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
 
+/* Accessibility + no-JS safety: never hide content if animations can't run. */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* Card hover lift */
 .card-hover {
   transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
