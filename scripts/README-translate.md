@@ -29,12 +29,14 @@ npm run translate:customs   # ~30-60 min, 193 countries
 
 ## What it touches
 
-| Target    | File                                    | What gets filled                                        |
-|-----------|-----------------------------------------|---------------------------------------------------------|
-| updates   | `src/app/[locale]/updates/page.tsx`     | `title_*` and `desc_*` for all entries                  |
-| carriers  | `src/data/carriers.json`                | `description_*` for all carriers                        |
-| blog      | `src/data/blog-posts.ts`                | `title_*`, `excerpt_*`, `content_*` for each post       |
-| customs   | `src/data/customs-deep.ts`              | `clearance_process_*`, `certificate_of_origin_*`, `import_license_info_*`, `customs_reality_*`, and `category_*` in each `duty_rates` entry |
+Translations are scoped by **smart locale routing** — each entity is only translated into locales where it's actually relevant, matching the page routing rules in `src/lib/*-locales.ts`. No point translating Nova Poshta into Japanese.
+
+| Target    | File                                    | Relevant locales                                     | What gets filled                                        |
+|-----------|-----------------------------------------|------------------------------------------------------|---------------------------------------------------------|
+| updates   | `src/app/[locale]/updates/page.tsx`     | all 12 (global changelog)                            | `title_*` and `desc_*` for all entries                  |
+| carriers  | `src/data/carriers.json`                | Global carriers (DHL/FedEx/UPS/etc): all 12. Country-specific carriers: origin country's langs + en only | `description_*`              |
+| blog      | `src/data/blog-posts.ts`                | Region-tagged posts: that region's langs + en. Generic posts: all 12 | `title_*`, `excerpt_*`, `content_*`  |
+| customs   | `src/data/customs-deep.ts`              | country's own langs + en only                        | `clearance_process_*`, `certificate_of_origin_*`, `import_license_info_*`, `customs_reality_*`, `category_*` per duty_rate |
 
 ## Safety
 
@@ -50,14 +52,14 @@ TRANSLATE_MODEL=claude-haiku-4-5-20251001 npm run translate  # cheaper, faster
 TRANSLATE_CONCURRENCY=8 npm run translate                  # default 4
 ```
 
-## Rough cost estimate (Sonnet 4.6)
+## Rough cost estimate (Sonnet 4.6, with smart locale routing)
 
-- updates: ~$0.10
-- carriers: ~$1-2
-- blog: ~$10-20
-- customs: ~$15-30
+- updates: ~$0.10 (all 12 locales)
+- carriers: ~$0.30-0.60 (global carriers all 12; country-specific 1-2 locales)
+- blog: ~$3-6 (region posts 1-2 locales; generic posts all 12)
+- customs: ~$3-5 (each country 1-2 locales)
 
-**Total ~$25-50** for a complete translation run across 10 non-EN/RU locales. Use Haiku (`claude-haiku-4-5-20251001`) for ~5× cheaper if quality is acceptable.
+**Total ~$7-12** — vs. ~$25-50 if we translated everything into all 10 non-EN/RU locales. Use Haiku (`claude-haiku-4-5-20251001`) for ~5× cheaper if quality is acceptable.
 
 ## After running
 

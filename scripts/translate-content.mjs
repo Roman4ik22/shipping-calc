@@ -20,6 +20,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
 const LOCALES = ["es", "de", "fr", "pt", "zh", "ja", "ko", "ar", "tr", "it"];
+const ALL_LOCALES = ["en", "ru", ...LOCALES];
 
 const LOCALE_NAMES = {
   es: "Spanish (Spain)",
@@ -33,6 +34,136 @@ const LOCALE_NAMES = {
   tr: "Turkish",
   it: "Italian",
 };
+
+// --- Smart locale routing (mirrors src/lib/carrier-locales.ts + blog-locales.ts + country-locale.ts) ---
+
+const GLOBAL_CARRIERS = new Set([
+  "dhl-express", "fedex", "ups", "tnt",
+  "aramex", "sf-express", "cainiao", "cainiao-network", "4px-express",
+  "yanwen", "asendia", "landmark-global", "globalpost-by-auctane",
+  "pitney-bowes", "passport-shipping-passport-global",
+  "postnl-international", "epacket-china-post-usps", "spring-gds",
+  "zonos", "packlink",
+]);
+
+const CARRIER_COUNTRY = {
+  "usps": "US", "pitney-bowes": "US", "ipostal1": "US",
+  "royal-mail": "GB", "evri-formerly-hermes": "GB",
+  "deutsche-post": "DE", "dpd": "DE", "gls-general-logistics-systems": "DE", "dpd-group-eu": "DE",
+  "la-poste-france": "FR", "colissimo-la-poste": "FR", "mondial-relay": "FR", "dpex-worldwide": "FR", "env-a-com": "FR",
+  "postnl": "NL", "bpost": "BE", "swiss-post": "CH", "austrian-post-sterreichische-post": "AT",
+  "inpost": "PL", "poczta-polska": "PL",
+  "correos": "ES", "correos-express": "ES",
+  "correios-brazil": "BR", "postnord": "SE",
+  "ceska-posta": "CZ", "magyar-posta": "HU", "omniva": "EE",
+  "pochta-rossii": "RU", "cdek": "RU", "cdek-regional": "RU", "boxberry": "RU",
+  "dpd-russia": "RU", "pony-express": "RU", "spsr-express": "RU",
+  "hermes-russia": "RU", "pickpoint": "RU", "5post": "RU", "sberlogistika": "RU",
+  "nova-poshta": "UA", "meest": "UA",
+  "japan-post": "JP", "japan-post-yu-pack-ems": "JP",
+  "yamato-transport-kuroneko-yamato": "JP", "sagawa-express": "JP",
+  "korea-post": "KR", "cj-logistics-cj-korea-express": "KR",
+  "hanjin-express": "KR", "lotte-global-logistics": "KR",
+  "china-post": "CN", "sf-express": "CN", "ems": "CN",
+  "sto-express-shentong-express": "CN", "yto-express-yuantong-express": "CN",
+  "zto-international": "CN", "best-inc-international": "CN",
+  "cne-express-china-navigation-express": "CN", "sunyou-sunyou-post": "CN",
+  "equick-china": "CN", "wishpost": "CN", "joom-logistics": "CN",
+  "hongkong-post": "HK", "taiwan-post": "TW",
+  "india-post": "IN", "delhivery": "IN", "blue-dart-dhl-group": "IN",
+  "dtdc-express": "IN", "dtdc": "IN", "ecom-express": "IN",
+  "xpressbees": "IN", "shadowfax": "IN",
+  "thailand-post": "TH", "kerry-express-thailand": "TH", "kerry-express-kex": "TH",
+  "kerry-express": "TH", "flash-express": "TH", "best-express-thailand-sea": "TH",
+  "j-and-t": "ID", "j-and-t-express": "ID", "j-t-express": "ID",
+  "jne-express": "ID", "tiki-titipan-kilat": "ID", "sicepat-ekspres": "ID", "pos-indonesia": "ID",
+  "ninja-van": "SG", "singpost": "SG",
+  "lbc-express": "PH", "2go-express": "PH", "xend-business-solutions": "PH", "philpost": "PH",
+  "pos-malaysia": "MY", "pos-laju": "MY", "vietnam-post": "VN",
+  "bangladesh-post": "BD", "sri-lanka-post": "LK", "pakistan-post": "PK",
+  "australia-post": "AU", "aramex-australia-formerly-fastway": "AU",
+  "couriersplease": "AU", "startrack": "AU", "sendle": "AU",
+  "nz-post": "NZ", "fiji-post": "FJ", "canada-post": "CA",
+  "emirates-post": "AE", "saudi-post": "SA", "smsa-express": "SA",
+  "naqel-express": "SA", "fetchr": "AE", "imile": "AE",
+  "skynet-worldwide-express": "AE", "aramex-shop-and-ship": "AE",
+  "aramex-africa": "ZA", "dhl-africa-ecommerce": "ZA",
+  "the-courier-guy": "ZA", "pargo": "ZA", "sa-post": "ZA",
+  "jumia-logistics": "NG", "nipost": "NG", "posta-kenya": "KE",
+  "andreani": "AR", "chilexpress": "CL", "cruz-del-sur": "CL",
+  "servientrega": "CO", "deprisa": "CO", "olva-courier": "PE",
+  "99minutos": "MX", "estafeta": "MX",
+};
+
+const COUNTRY_LANGS = {
+  US: ["en"], GB: ["en"], AU: ["en"], CA: ["en"], NZ: ["en"], IE: ["en"],
+  SG: ["en"], HK: ["en", "zh"], IN: ["en"], PH: ["en"], MY: ["en"], PK: ["en"],
+  KE: ["en"], NG: ["en"], ZA: ["en"],
+  RU: ["ru"], BY: ["ru"], KZ: ["ru"], UA: ["ru"],
+  ES: ["es"], MX: ["es"], AR: ["es"], CO: ["es"], CL: ["es"], PE: ["es"],
+  EC: ["es"], VE: ["es"], UY: ["es"], BO: ["es"],
+  DE: ["de"], AT: ["de"], CH: ["de", "fr"],
+  FR: ["fr"], BE: ["fr"], LU: ["fr"],
+  BR: ["pt"], PT: ["pt"],
+  CN: ["zh"], TW: ["zh"],
+  JP: ["ja"], KR: ["ko"],
+  AE: ["ar", "en"], SA: ["ar"], EG: ["ar"],
+  TR: ["tr"], IT: ["it"],
+  NL: ["en"], PL: ["en"], CZ: ["en"], HU: ["en"], SE: ["en"], EE: ["en"],
+  FJ: ["en"], VN: ["en"], TH: ["en"], ID: ["en"], BD: ["en"], LK: ["en"],
+};
+
+function getCarrierLocales(carrierId, carrierType) {
+  if (GLOBAL_CARRIERS.has(carrierId)) return ALL_LOCALES.slice();
+  if (carrierType === "international") return ALL_LOCALES.slice();
+  const country = CARRIER_COUNTRY[carrierId];
+  if (!country) return ["en"];
+  const origin = COUNTRY_LANGS[country] || ["en"];
+  return Array.from(new Set([...origin, "en"]));
+}
+
+const TAG_LOCALES = {
+  china: ["zh", "en"], japan: ["ja", "en"], korea: ["ko", "en"],
+  russia: ["ru", "en"], usa: ["en"], uk: ["en"],
+  europe: ["en", "de", "fr", "it", "es", "pt"],
+  eu: ["en", "de", "fr", "it", "es", "pt"],
+  turkey: ["tr", "en"], australia: ["en"],
+  "middle-east": ["ar", "en"], brazil: ["pt", "en"],
+};
+const GENERIC_TAGS = new Set([
+  "tips", "cost-saving", "beginners", "guide", "tracking",
+  "ecommerce", "business", "small-business", "comparison",
+  "carriers", "volumetric-weight", "apps", "shopify", "amazon",
+  "fba", "etsy", "returns", "fragile", "packaging",
+  "electronics", "batteries", "food", "clothing", "textiles",
+  "duties", "customs", "tariffs", "regulations", "restrictions",
+  "sanctions", "reform", "anime",
+]);
+
+function getBlogLocales(tags) {
+  const regionLocales = new Set();
+  let hasGeneric = false;
+  let matchedRegion = false;
+  for (const tag of tags) {
+    if (TAG_LOCALES[tag]) {
+      matchedRegion = true;
+      for (const loc of TAG_LOCALES[tag]) regionLocales.add(loc);
+    }
+    if (GENERIC_TAGS.has(tag)) hasGeneric = true;
+  }
+  if (matchedRegion) {
+    regionLocales.add("en");
+    return [...regionLocales];
+  }
+  if (hasGeneric) return ALL_LOCALES.slice();
+  return ALL_LOCALES.slice();
+}
+
+// For customs pages — country's own language + en.
+function getCustomsLocales(countryCode) {
+  const origin = COUNTRY_LANGS[countryCode] || ["en"];
+  return Array.from(new Set([...origin, "en"]));
+}
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -247,7 +378,9 @@ async function translateCarriers() {
   const work = [];
   for (const carrier of data) {
     if (!carrier.description_en) continue;
-    for (const locale of LOCALES) {
+    const relevantLocales = getCarrierLocales(carrier.id, carrier.type)
+      .filter((l) => LOCALES.includes(l)); // en+ru are not translated here
+    for (const locale of relevantLocales) {
       const key = `description_${locale}`;
       if (!carrier[key] || carrier[key].length === 0) {
         work.push({ carrier, locale, english: carrier.description_en });
@@ -309,12 +442,21 @@ async function translateBlog() {
 
   const hasField = (block, name, locale) => new RegExp(`${name}_${locale}\\s*:`).test(block);
 
+  // Extract tags array from block
+  const getTags = (block) => {
+    const m = block.match(/tags\s*:\s*\[([^\]]*)\]/);
+    if (!m) return [];
+    return [...m[1].matchAll(/"([^"]+)"/g)].map((mm) => mm[1]);
+  };
+
   const work = [];
   for (const post of posts) {
+    const tags = getTags(post.block);
+    const relevantLocales = getBlogLocales(tags).filter((l) => LOCALES.includes(l));
     for (const field of FIELDS) {
       const english = getField(post.block, field);
       if (!english) continue;
-      for (const locale of LOCALES) {
+      for (const locale of relevantLocales) {
         if (!hasField(post.block, field, locale)) {
           work.push({ post, field, locale, english });
         }
@@ -406,10 +548,13 @@ async function translateCustoms() {
 
   const work = [];
   for (const country of countries) {
+    const relevantLocales = getCustomsLocales(country.code).filter((l) => LOCALES.includes(l));
+    if (relevantLocales.length === 0) continue;
+
     for (const field of TEXT_FIELDS) {
       const english = getField(country.block, field);
       if (!english) continue;
-      for (const locale of LOCALES) {
+      for (const locale of relevantLocales) {
         if (!hasField(country.block, field, locale)) {
           work.push({ country, field, locale, english });
         }
@@ -421,7 +566,7 @@ async function translateCustoms() {
     for (const dm of dutyMatches) {
       const categoryEn = dm[2] ?? dm[3];
       const rateBlock = dm[0];
-      for (const locale of LOCALES) {
+      for (const locale of relevantLocales) {
         if (!new RegExp(`category_${locale}\\s*:`).test(rateBlock)) {
           work.push({
             country,

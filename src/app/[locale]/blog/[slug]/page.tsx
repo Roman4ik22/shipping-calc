@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { locales, localeNames, t, pickLocalized } from "@/lib/i18n";
+import { localeNames, t, pickLocalized } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/data/blog-posts";
 import { countries, makeCorridorSlug, getCountryName } from "@/lib/data";
+import { getBlogLocales, isBlogLocaleValid } from "@/lib/blog-locales";
 
 /** Map blog post tags to relevant shipping corridors (origin code, dest code). */
 function getRelatedCorridors(tags: string[]): { from: string; to: string }[] {
@@ -102,8 +103,8 @@ function getRelatedCorridors(tags: string[]): { from: string; to: string }[] {
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
-  for (const locale of locales) {
-    for (const post of blogPosts) {
+  for (const post of blogPosts) {
+    for (const locale of getBlogLocales(post.tags)) {
       params.push({ locale, slug: post.id });
     }
   }
@@ -133,7 +134,7 @@ export async function generateMetadata({
     alternates: {
       languages: {
         ...Object.fromEntries(
-          locales.map((l) => [l, `/${l}/blog/${slug}`])
+          getBlogLocales(post.tags).map((l) => [l, `/${l}/blog/${slug}`])
         ),
         "x-default": `/en/blog/${slug}`,
       },
@@ -237,6 +238,9 @@ export default async function BlogPostPage({
   const BASE_URL = "https://rateships.com";
 
   if (!post) {
+    notFound();
+  }
+  if (!isBlogLocaleValid(post.tags, loc)) {
     notFound();
   }
 

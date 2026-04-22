@@ -6,6 +6,8 @@
 import { countries, carriers, makeCorridorSlug } from "@/lib/data";
 import { locales } from "@/lib/i18n";
 import { getCorridorLocales } from "@/lib/country-locale";
+import { getCarrierLocales } from "@/lib/carrier-locales";
+import { getBlogLocales } from "@/lib/blog-locales";
 import { blogPosts } from "@/data/blog-posts";
 import type { Country, Locale } from "@/lib/types";
 
@@ -136,9 +138,9 @@ export function getAllPagesByPriority(): PagePriority[] {
     });
   }
 
-  // --- Blog posts ---
+  // --- Blog posts (only relevant locales per post based on tags) ---
   for (const locale of locales) {
-    // Blog index
+    // Blog index on all locales
     pages.push({
       url: `${BASE_URL}/${locale}/blog`,
       locale,
@@ -146,18 +148,21 @@ export function getAllPagesByPriority(): PagePriority[] {
       priority: 0.4,
       estimated_monthly_searches: estimateSearches(0.4),
     });
-    for (const post of blogPosts) {
+  }
+  for (const post of blogPosts) {
+    const postLocales = getBlogLocales(post.tags);
+    for (const locale of postLocales) {
       pages.push({
         url: `${BASE_URL}/${locale}/blog/${post.id}`,
         locale,
         type: "blog",
-        priority: 0.4,
-        estimated_monthly_searches: estimateSearches(0.4),
+        priority: locale === "en" ? 0.45 : 0.35,
+        estimated_monthly_searches: estimateSearches(locale === "en" ? 0.45 : 0.35),
       });
     }
   }
 
-  // --- Carrier pages (top-10 all locales, rest en only) ---
+  // --- Carrier pages (only relevant locales per carrier) ---
   for (const locale of locales) {
     // Carrier index on all locales
     pages.push({
@@ -167,16 +172,19 @@ export function getAllPagesByPriority(): PagePriority[] {
       priority: locale === "en" ? 0.35 : 0.1,
       estimated_monthly_searches: estimateSearches(locale === "en" ? 0.35 : 0.1),
     });
-    for (const carrier of carriers) {
-      const isTop10Carrier = TOP_10_CARRIERS.includes(carrier.id);
-      // Top-10 carriers: all locales. Others: en only
-      if (!isTop10Carrier && locale !== "en") continue;
+  }
+  for (const carrier of carriers) {
+    const carrierLocales = getCarrierLocales(carrier.id, carrier.type);
+    const isTop10Carrier = TOP_10_CARRIERS.includes(carrier.id);
+    for (const locale of carrierLocales) {
       const priority =
         locale === "en" && isTop10Carrier
           ? 0.35
           : isTop10Carrier
             ? 0.15
-            : 0.1;
+            : locale === "en"
+              ? 0.12
+              : 0.1;
       pages.push({
         url: `${BASE_URL}/${locale}/carriers/${carrier.id}`,
         locale,

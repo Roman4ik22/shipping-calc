@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import { carriers, getCarrierById, getCarrierDescription, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
 import { getCarrierReview } from "@/lib/reviews";
-import { t, locales } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
+import { getCarrierLocales, isCarrierLocaleValid } from "@/lib/carrier-locales";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
@@ -12,9 +13,10 @@ export const dynamicParams = true;
 export function generateStaticParams() {
   const params: { locale: string; carrier: string }[] = [];
   const topIds = new Set(["dhl-express","fedex","ups","ems","usps","royal-mail","japan-post","dpd","aramex","sf-express"]);
-  for (const locale of locales) {
-    for (const c of carriers) {
-      if (topIds.has(c.id)) params.push({ locale, carrier: c.id });
+  for (const c of carriers) {
+    if (!topIds.has(c.id)) continue;
+    for (const locale of getCarrierLocales(c.id, c.type)) {
+      params.push({ locale, carrier: c.id });
     }
   }
   return params;
@@ -43,7 +45,9 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
       languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `/${l}/carriers/${carrierId}`])),
+        ...Object.fromEntries(
+          getCarrierLocales(carrierId, carrier.type).map((l) => [l, `/${l}/carriers/${carrierId}`])
+        ),
         "x-default": `/en/carriers/${carrierId}`,
       },
     },
@@ -65,6 +69,9 @@ export default async function CarrierPage({
   const carrier = getCarrierById(carrierId);
 
   if (!carrier) {
+    notFound();
+  }
+  if (!isCarrierLocaleValid(carrierId, loc, carrier.type)) {
     notFound();
   }
 
