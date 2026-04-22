@@ -128,6 +128,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.destatis.de/EN/Themes/Economy/Foreign-Trade/_node.html',
     certificate_of_origin_url: 'https://www.ihk.de/en/international/certificates-of-origin',
     import_regulations_url: 'https://www.zoll.de/EN/Private-individuals/Postal-consignments-internet-orders/postal-consignments-internet-orders_node.html',
+    clearance_process_de: "Der deutsche Zoll folgt dem Zollkodex der Union (UZK). Zollanmeldungen erfolgen elektronisch über das ATLAS-System. Seit Juli 2021 unterliegen alle Einfuhren der Einfuhrumsatzsteuer über IOSS oder an der Grenze. Zollbefreiung für Waren unter 150 €.",
+    certificate_of_origin_de: "Präferenznachweise (EUR.1, EUR-MED, Formblatt A) für Freihandelsabkommenspartner. Nichtpräferenzielle Ursprungszeugnisse werden von der IHK (Industrie- und Handelskammer) ausgestellt. REX-System für registrierte Ausführer.",
+    import_license_info_de: "Einfuhrlizenzen sind erforderlich für landwirtschaftliche Erzeugnisse im Rahmen von EU-Kontingenten, Textilien aus bestimmten Ländern, Militärgüter, Dual-Use-Güter und bestimmte Chemikalien. Die meisten Konsumgüter werden unter einer allgemeinen Genehmigung eingeführt.",
+    customs_reality_de: "Der deutsche Zoll arbeitet effizient und gut organisiert. Die elektronische Abwicklung über ATLAS ist schnell. Bei Paketen von Deutsche Post/DHL kann eine Online-Zollanmeldung über die Zoll-App erforderlich sein. Rechnen Sie mit 1–2 Tagen für Postsendungen und taggleicher Abfertigung bei Expresssendungen.",
   },
 
   FR: {
@@ -158,6 +162,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://lekiosque.finances.gouv.fr/',
     certificate_of_origin_url: 'https://www.cci.fr/international/formalites-internationales',
     import_regulations_url: 'https://www.douane.gouv.fr/particuliers/vous-achetez-en-ligne',
+    clearance_process_fr: "Les Douanes françaises appliquent le Code des douanes de l'Union européenne. Système de déclaration électronique DELTA. IOSS pour la TVA sur les importations de faible valeur. La Poste assure le dédouanement des envois postaux et peut facturer des frais de traitement.",
+    certificate_of_origin_fr: "Certificats préférentiels de l'UE (EUR.1, EUR-MED) pour les partenaires d'accords de libre-échange. Certificats non préférentiels délivrés par CCI France (Chambres de Commerce et d'Industrie). Système REX pour les exportateurs enregistrés.",
+    import_license_info_fr: "Licences conformes aux normes de l'UE : requises pour les quotas agricoles, les textiles, les biens à double usage, les armes et certains biens culturels. Exigences françaises supplémentaires pour les importations de vins et spiritueux.",
+    customs_reality_fr: "Les douanes françaises sont généralement efficaces pour les envois express. Les colis de La Poste peuvent subir des délais de 2 à 5 jours pour le traitement douanier. Des frais de traitement d'environ 8 € sont facturés par La Poste pour les colis soumis aux droits de douane. Les mises à jour du suivi Colissimo peuvent être lentes.",
   },
 
   CN: {
@@ -578,6 +586,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://datacomex.comercio.es/',
     certificate_of_origin_url: 'https://www.camara.es/comercio-exterior/certificados-de-origen',
     import_regulations_url: 'https://www.agenciatributaria.es/AEAT.internet/en_gb/Inicio/Aduanas.shtml',
+    clearance_process_es: "La Agencia Tributaria (AEAT) gestiona la aduana española conforme al Código Aduanero de la UE. Declaraciones electrónicas a través del sistema DELT@. IOSS para importaciones B2C de escaso valor. Correos se encarga de los trámites aduaneros postales y aplica una tasa de gestión a los paquetes sujetos a aranceles.",
+    certificate_of_origin_es: "Las Cámaras de Comercio españolas emiten los certificados. Certificados preferenciales de la UE (EUR.1, EUR-MED) para los socios de acuerdos de libre comercio. Las Islas Canarias, Ceuta y Melilla disponen de regímenes aduaneros independientes.",
+    import_license_info_es: "Sistema de licencias conforme al estándar de la UE. Requisitos adicionales españoles para productos alimentarios (agencia sanitaria AESAN) y productos agrícolas. Las Islas Canarias (zona fiscal del IGIC) se rigen por normas de importación distintas.",
+    customs_reality_es: "La aduana española es razonablemente eficiente. Correos aplica una tasa de gestión de unos 3-5 € por el trámite aduanero. Los courier exprés despachan en 1-2 días. Las Islas Canarias disponen de un sistema fiscal propio (IGIC del 7 % en lugar del IVA del 21 %), lo que abarata las importaciones en este territorio. Madrid-Barajas es el principal nodo aduanero.",
   },
 
   NL: {
@@ -668,6 +680,9 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.inegi.org.mx/programas/exporta/',
     certificate_of_origin_url: 'https://www.gob.mx/se/acciones-y-programas/comercio-exterior-tratados-y-acuerdos',
     import_regulations_url: 'https://www.sat.gob.mx/aduanas',
+    certificate_of_origin_es: "Certificado T-MEC para tipos preferenciales con EE. UU. y Canadá. Se acepta la autocertificación conforme al T-MEC. Para otros acuerdos de libre comercio se requieren formularios específicos. México cuenta con acuerdos de libre comercio con la UE, Japón y numerosos países latinoamericanos.",
+    import_license_info_es: "Se exigen permisos de importación para productos agrícolas, farmacéuticos, químicos, vehículos usados y armas de fuego. COFEPRIS regula los productos alimentarios y sanitarios. La certificación NOM de normas de seguridad del producto es obligatoria para muchos bienes de consumo.",
+    customs_reality_es: "En proceso de mejora gracias a la digitalización aduanera. El SAT gestiona los despachos. Puede resultar lento en los envíos postales, con plazos de 2-4 semanas. Los courier exprés despachan en 1-2 días.",
   },
 
   PL: {
@@ -758,6 +773,14 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.ezv.admin.ch/ezv/en/home/topics/swiss-foreign-trade-statistics.html',
     certificate_of_origin_url: 'https://www.s-ge.com/en/certificate-origin',
     import_regulations_url: 'https://www.bazg.admin.ch/bazg/en/home/information-individuals/travel-and-purchases--border-crossings/importation-into-switzerland.html',
+    clearance_process_de: "Das Bundesamt für Zoll und Grenzsicherheit (BAZG) nutzt das elektronische Anmeldesystem e-dec. Die Schweiz erhebt bei vielen Waren gewichtsbasierte Zölle (nicht ad valorem). Als EFTA-Mitglied verfügt sie über ein umfangreiches Freihandelsabkommensnetz.",
+    certificate_of_origin_de: "EUR.1 für den EFTA-EU-Handel. Formblatt A für das Allgemeine Präferenzsystem (APS). Die Schweiz unterhält bilaterale Abkommen mit der EU zur gegenseitigen Anerkennung. Ursprungszeugnisse werden von den kantonalen Handelskammern ausgestellt.",
+    import_license_info_de: "Einfuhrbewilligungen sind erforderlich für landwirtschaftliche Erzeugnisse (Kontingentsystem), Waffen und Arzneimittel. Swissmedic ist zuständig für Medizinprodukte. Das BLV überwacht die Lebensmittelsicherheit. Nach dem Cassis-de-Dijon-Prinzip dürfen in der EU rechtmäßig in Verkehr gebrachte Waren mit einigen Ausnahmen auch in der Schweiz verkauft werden.",
+    customs_reality_de: "Äußerst effizient. Aufgrund der niedrigen Freigrenze werden die meisten Sendungen besteuert. Die Schweizerische Post übernimmt die postalische Zollabfertigung automatisch.",
+    clearance_process_fr: "L'Office fédéral de la douane et de la sécurité des frontières (OFDF) utilise le système de déclaration électronique e-dec. La Suisse applique des droits de douane au poids pour de nombreuses marchandises (et non ad valorem). Membre de l'AELE avec un vaste réseau d'accords de libre-échange.",
+    certificate_of_origin_fr: "EUR.1 pour le commerce AELE-UE. Formule A pour le SGP. La Suisse dispose d'accords bilatéraux avec l'UE pour la reconnaissance mutuelle. Certificats délivrés par les chambres de commerce cantonales.",
+    import_license_info_fr: "Permis d'importation pour les produits agricoles (système de quotas), les armes et les produits pharmaceutiques. Swissmedic pour les dispositifs médicaux. OSAV pour la sécurité alimentaire. Le principe Cassis de Dijon permet la vente en Suisse de marchandises légales dans l'UE, avec quelques exceptions.",
+    customs_reality_fr: "Extrêmement efficace. Le seuil de minimis bas signifie que la plupart des articles sont taxés. La Poste suisse assure automatiquement le dédouanement postal.",
   },
 
   SA: {
@@ -1118,6 +1141,9 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-2-40',
     certificate_of_origin_url: 'https://www.cac.com.ar/',
     import_regulations_url: 'https://www.argentina.gob.ar/comercio-exterior',
+    clearance_process_es: "La AFIP (Administración Federal de Ingresos Públicos) gestiona la aduana a través del sistema electrónico MALVINA. Se aplica el Arancel Externo Común del MERCOSUR. Se exige autorización previa del SIMI (Sistema Integral de Monitoreo de Importaciones) para numerosas mercancías. Es obligatorio disponer de CUIT (identificación fiscal).",
+    certificate_of_origin_es: "Certificado del MERCOSUR para el comercio regional. Formulario A para el SGP. La Cámara de Comercio Argentina emite los certificados. Existen certificados preferenciales para los acuerdos bilaterales con Chile y Bolivia.",
+    import_license_info_es: "Autorización previa del SIMI para mercancías controladas. ANMAT para alimentos, medicamentos y cosméticos. INTI para normas técnicas. Licencias no automáticas para numerosos bienes de consumo. Los frecuentes cambios normativos dificultan el cumplimiento.",
   },
 
   CL: {
@@ -1148,6 +1174,9 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.subrei.gob.cl/estudios-y-documentos/estadisticas-de-comercio-exterior',
     certificate_of_origin_url: 'https://www.ccs.cl/',
     import_regulations_url: 'https://www.aduana.cl/',
+    clearance_process_es: "El Servicio Nacional de Aduanas utiliza el sistema electrónico SISCOMEX. Chile aplica un arancel único del 6 % a la mayoría de las mercancías, lo que constituye una de las estructuras arancelarias más sencillas del mundo. Su extensa red de acuerdos de libre comercio (UE, EE. UU., China, etc.) reduce la mayoría de los aranceles al 0 %.",
+    certificate_of_origin_es: "La extensa red de acuerdos de libre comercio hace imprescindibles los certificados. Se admite la autocertificación en el CPTPP y la Alianza del Pacífico. EUR.1 para el acuerdo de libre comercio UE-Chile. Los certificados los emite la Cámara de Comercio de Santiago.",
+    import_license_info_es: "SAG (Servicio Agrícola y Ganadero) para productos alimentarios y de origen animal. ISP para productos farmacéuticos. SEC para equipos eléctricos. En general, política comercial abierta con mínimas restricciones a la importación.",
   },
 
   CO: {
@@ -1178,6 +1207,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.dane.gov.co/index.php/estadisticas-por-tema/comercio-internacional',
     certificate_of_origin_url: 'https://www.ccb.org.co/',
     import_regulations_url: 'https://www.dian.gov.co/aduanas/',
+    clearance_process_es: "La DIAN (Dirección de Impuestos y Aduanas Nacionales) gestiona la aduana a través de la plataforma electrónica MUISCA. Arancel común de la CAN (Comunidad Andina) para Bolivia, Ecuador y Perú. Acuerdos de libre comercio con EE. UU., la UE y los socios de la Alianza del Pacífico.",
+    certificate_of_origin_es: "Certificado de la CAN para el comercio con la Comunidad Andina. Certificado de la Alianza del Pacífico. EUR.1 para el acuerdo de libre comercio UE-Colombia. Los certificados los emiten las cámaras de comercio locales.",
+    import_license_info_es: "Registro ante el INVIMA para alimentos, medicamentos, cosméticos y productos sanitarios. ICA para productos agrícolas. Registro de importación a través de la VUCE (Ventanilla Única de Comercio Exterior). Algunas mercancías requieren licencia previa de importación del Ministerio de Comercio.",
+    customs_reality_es: "Modernización constante. La plataforma MUISCA está mejorando la eficiencia. Generoso de minimis de 200 $. Los courier exprés tardan 2-4 días. El correo postal, 5-15 días. El puerto de Buenaventura puede sufrir congestiones. Las zonas francas ofrecen ventajas para las empresas.",
   },
 
   NZ: {
@@ -1442,6 +1475,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.statistik.at/en/statistics/international-trade',
     certificate_of_origin_url: 'https://www.wko.at/aussenwirtschaft/ursprungszeugnisse',
     import_regulations_url: 'https://www.bmf.gv.at/themen/zoll/post-internet/post-sendungen-aus-drittlaendern.html',
+    clearance_process_de: "Das elektronische Zollportal e-zoll dient der Anmeldung und Zahlung. Für Ausfuhren wird das AES (Automatisiertes Export System) genutzt. Am Flughafen Wien-Schwechat gilt das Zwei-Kanal-System (rot/grün). Es kommt der Zollkodex der Union zur Anwendung. Seit Juli 2021 ist die 22-€-Mehrwertsteuergrenze abgeschafft; IOSS für die MwSt. ab 0 €, Zollbefreiung weiterhin bei 150 €. Die Österreichische Post erhebt eine Bearbeitungsgebühr von ca. 5 € auf zollpflichtige Pakete.",
+    certificate_of_origin_de: "Ausgestellt von der WKO (Wirtschaftskammer Österreich). EUR.1-Warenverkehrsbescheinigung für präferenzielle Handelspartner. EUR-MED für die Pan-Euro-Mediterrane Zone. REX-System für registrierte Ausführer ab einer Jahresschwelle von 6.000 €.",
+    import_license_info_de: "EU-konforme Lizenzierung: erforderlich für landwirtschaftliche Kontingente, Dual-Use-Güter (kontrolliert durch das BMAW), Waffen und bestimmte Chemikalien. Österreich-spezifisch: strenge veterinärrechtliche Kontrollen durch die AGES (Agentur für Gesundheit und Ernährungssicherheit) für Nahrungsergänzungsmittel und tierische Erzeugnisse. CE-Kennzeichnung ist für die entsprechenden Kategorien verpflichtend.",
+    customs_reality_de: "Der österreichische Zoll arbeitet hocheffizient. Als Teil des EU-Binnenmarkts fallen auf Waren mit EU-Ursprung keine Zölle an. Drittlandsendungen werden am Flughafen Wien-Schwechat, einem wichtigen Eingangstor für Frachtsendungen aus Asien und dem Nahen Osten, zügig abgefertigt. Expresskuriere werden in der Regel taggleich verzollt. Pakete der Österreichischen Post benötigen 1–2 Tage.",
   },
 AW: {
     code: "AW",
@@ -1616,6 +1653,10 @@ BB: {
     trade_statistics_url: 'https://www.nbb.be/en/statistics/external-trade',
     certificate_of_origin_url: 'https://www.vbo-feb.be/en/business-issues/international-trade/certificates-of-origin/',
     import_regulations_url: 'https://finances.belgium.be/en/customs',
+    clearance_process_fr: "Les douanes belges utilisent le système électronique PLDA (Paperless Douane en Accijnzen) et le NCTS pour les déclarations de transit. Elles appliquent le Code des douanes de l'Union européenne. Anvers, deuxième plus grand port d'Europe, est un hub mondial majeur pour le fret. L'aéroport de Bruxelles est un centre de tri clé pour le e-commerce. Depuis juillet 2021, IOSS pour la TVA dès 0 €. Bpost assure le dédouanement postal avec des frais de traitement.",
+    certificate_of_origin_fr: "Délivrés par les Chambres de Commerce belges (FEB/VBO). Certificat de circulation EUR.1 pour les partenaires commerciaux préférentiels. EUR-MED pour la zone Pan-Euro-Med. Système REX pour les exportateurs enregistrés. La Belgique délivre un volume élevé de certificats en raison du trafic du port d'Anvers.",
+    import_license_info_fr: "Licences conformes aux normes de l'UE. Exigences belges supplémentaires pour les diamants (Antwerp Diamond Office obligatoire pour toutes les importations de diamants bruts), les armes, les biens culturels et les minerais de conflit. L'AFSCA (Agence fédérale pour la sécurité de la chaîne alimentaire) contrôle les importations alimentaires.",
+    customs_reality_fr: "Douanes de l'UE très efficaces. Le port d'Anvers traite des volumes massifs de fret avec un délai d'exécution rapide, l'un des plus fréquentés au monde. Les envois express sont dédouanés le jour même. Les colis postaux Bpost prennent généralement 1 à 2 jours. Bien intégré au système de transit NCTS de l'UE. L'aéroport de Bruxelles est un hub majeur du e-commerce pour le tri des colis.",
   },
   BF: {
     code: "BF",
@@ -2109,6 +2150,10 @@ BS: {
     trade_statistics_url: "https://www.ins.ci/",
     certificate_of_origin_url: "https://www.cci.ci/",
     import_regulations_url: "https://www.douanes.ci/",
+    clearance_process_fr: "La Direction Générale des Douanes gère le dédouanement. Le TEC de la CEDEAO s'applique avec 5 tranches : 0 % (biens sociaux essentiels), 5 % (produits de première nécessité/matières premières), 10 % (intrants/produits semi-finis), 20 % (biens de consommation finale), 35 % (biens spécifiques pour le développement économique). Système électronique SYDONIA pour les déclarations. Le port d'Abidjan est le plus grand d'Afrique de l'Ouest. Commissionnaire en douane requis. L'inspection avant expédition (Fiche de Renseignements à l'Importation) est obligatoire pour les importations supérieures à 500 000 XOF.",
+    certificate_of_origin_fr: "Certificat CEDEAO pour le commerce préférentiel régional. La Chambre de Commerce et d'Industrie de Côte d'Ivoire (CCI-CI) délivre les certificats. L'APE UE-CI offre un accès préférentiel aux marchandises de l'UE. Certificat AGOA pour l'accès préférentiel aux États-Unis.",
+    import_license_info_fr: "Fiche de Renseignements à l'Importation (FRI) requise pour toutes les importations supérieures à 500 000 XOF. Biens contrôlés : produits pharmaceutiques, produits chimiques, armes. Certificats de conformité CODINORM pour certains produits. Contrôles stricts sur les importations de vêtements usagés.",
+    customs_reality_fr: "Le port d'Abidjan est le plus fréquenté d'Afrique de l'Ouest, relativement efficace mais des congestions se produisent. Amélioration avec le système du Guichet Unique. Documentation en français requise. Le TEC de la CEDEAO à 5 tranches (0/5/10/20/35 %) offre une structure tarifaire claire. La corruption diminue mais reste présente. Les transporteurs express (DHL, FedEx) fonctionnent de manière fiable. Les exportations de cacao/café dominent l'économie, l'infrastructure d'importation bénéficie d'une logistique d'exportation solide.",
   },
   CM: {
     code: "CM",
@@ -2138,6 +2183,10 @@ BS: {
     trade_statistics_url: "https://www.ins-cameroun.cm/",
     certificate_of_origin_url: "https://www.ccima.cm/",
     import_regulations_url: "https://www.douanescustoms-cm.net/",
+    clearance_process_fr: "La Direction Générale des Douanes gère le dédouanement. Tarif extérieur commun de la CEMAC avec 4 tranches : 5 % (produits de première nécessité), 10 % (matières premières/biens d'équipement), 20 % (biens intermédiaires), 30 % (biens de consommation). Système ASYCUDA++ pour les déclarations électroniques. Douala est le port principal, desservant les pays enclavés voisins (Tchad, RCA). Commissionnaire en douane obligatoire. Documentation bilingue (français/anglais) acceptée.",
+    certificate_of_origin_fr: "Certificat CEMAC pour le commerce régional. La Chambre de Commerce, d'Industrie, des Mines et de l'Artisanat du Cameroun (CCIMA) délivre les certificats. L'APE UE-Cameroun offre un accès préférentiel aux marchandises de l'UE.",
+    import_license_info_fr: "Attestation de Vérification à l'Importation (AVI) requise pour les marchandises supérieures à 2 millions XAF. Certificats de conformité ANOR (agence nationale de normalisation) pour les produits réglementés. Les produits pharmaceutiques nécessitent une autorisation du ministère de la Santé. Inspection avant expédition par SGS obligatoire.",
+    customs_reality_fr: "Le port de Douala est le principal point d'entrée pour l'Afrique centrale, ainsi qu'un hub de transit pour le Tchad et la RCA. Congestion et retards fréquents. Le tarif CEMAC à 4 tranches (5/10/20/30 %) s'applique. L'inspection avant expédition SGS est requise. La corruption est largement signalée, les paiements informels sont courants au port de Douala. La crise anglophone dans les régions du Nord-Ouest/Sud-Ouest affecte certaines logistiques. Les transporteurs express (DHL, FedEx) sont disponibles à Douala et Yaoundé mais coûteux.",
   },
 CR: {
     code: "CR",
@@ -2458,6 +2507,10 @@ DO: {
     trade_statistics_url: "https://www.ons.dz/",
     certificate_of_origin_url: "https://www.caci.dz/",
     import_regulations_url: "https://www.douane.gov.dz/",
+    clearance_process_fr: "Direction Générale des Douanes (douane.gov.dz). Système SIGAD pour les déclarations électroniques. Le port d'Alger est le principal point d'entrée. Domiciliation bancaire requise pour toutes les importations supérieures à 100 000 DZD. Commissionnaire en douane requis pour les importations commerciales. Oran et Annaba sont les ports secondaires. Documentation acceptée en arabe et en français.",
+    certificate_of_origin_fr: "La Chambre Algérienne de Commerce et d'Industrie (CACI) délivre les certificats. L'Accord d'Association UE-Algérie offre des tarifs préférentiels pour les marchandises de l'UE. Certificats de l'Union du Maghreb Arabe et de la GZALE pour le commerce régional.",
+    import_license_info_fr: "Très protectionniste. Interdictions d'importation sur de nombreuses marchandises. Pas de seuil de minimis, toutes les importations sont taxées. Licence d'importation requise pour de nombreux produits. Domiciliation bancaire obligatoire. Règle de propriété algérienne 51/49 % pour les importateurs. Interdiction des biens usagés, vêtements usagés. Les véhicules sont soumis à un droit de 15 %. Importations pharmaceutiques uniquement via l'UFAS ou les pharmacies autorisées.",
+    customs_reality_fr: "Très protectionniste. Interdictions d'importation sur de nombreuses marchandises. Pas de seuil de minimis, toutes les importations sont taxées. Peut être très lent. Licence d'importation requise pour de nombreux produits. La domiciliation bancaire et les licences complexes ajoutent des semaines. La congestion portuaire à Alger est courante. Transporteurs express disponibles mais traitement douanier lent. Documentation en arabe/français requise.",
   },
   EC: {
     code: "EC",
@@ -2487,6 +2540,10 @@ DO: {
     trade_statistics_url: "https://www.bce.fin.ec/",
     certificate_of_origin_url: "https://www.produccion.gob.ec/",
     import_regulations_url: "https://www.aduana.gob.ec/",
+    clearance_process_es: "SENAE (aduana.gob.ec). Sistema aduanero electrónico ECUAPASS. Arancel común de la CAN (Comunidad Andina) para algunas mercancías. IVA del 12 % sobre las importaciones. Franquicia de 400 $ por envío libre de aranceles para importaciones personales (programa 4x4).",
+    certificate_of_origin_es: "Certificado de la CAN para los miembros de la Comunidad Andina (Colombia, Perú, Bolivia). Certificado del acuerdo de libre comercio UE-Comunidad Andina. Los certificados los emiten el MIPRO o la Cámara de Comercio.",
+    import_license_info_es: "Obligatorias para armas de fuego, productos farmacéuticos, agroquímicos, vehículos usados y ciertos productos alimentarios. Se exigen las normas de calidad del INEN (NTE) para numerosos bienes de consumo. Permisos de importación de AGROCALIDAD para productos agrícolas.",
+    customs_reality_es: "Utiliza el dólar estadounidense como moneda (sin riesgo de tipo de cambio). Franquicia de minimis de 400 $ en el marco del programa 4x4 (hasta 4 paquetes al año, cada uno por debajo de 4 kg y de 400 $). Los aranceles pueden ser elevados (hasta el 30 %) en ropa y artículos de lujo. El sistema ECUAPASS funciona, aunque resulta burocrático. El despacho por courier tarda 2-3 días. El correo postal, 2-4 semanas. Recargo del FODINFA (fondo para el desarrollo de la infancia) del 0,5 % sobre el CIF. Periódicamente se han impuesto aranceles de salvaguardia sobre diversas mercancías. Las normas técnicas del INEN pueden bloquear las importaciones que no las cumplan.",
   },
   EE: {
     code: "EE",
@@ -3969,6 +4026,10 @@ JM: {
     trade_statistics_url: "https://statistiques.public.lu/en/themes/external-trade.html",
     certificate_of_origin_url: "https://www.cc.lu/",
     import_regulations_url: "https://douanes.public.lu/",
+    clearance_process_fr: "Douanes du Luxembourg (douanes.public.lu). Le Code des douanes de l'Union européenne s'applique. Déclarations électroniques via le portail douanier luxembourgeois. Pays enclavé, les marchandises entrent via les pays voisins (Belgique, Allemagne, France). L'aéroport de Luxembourg-Findel (hub de Cargolux) traite un volume important de fret aérien. IOSS pour la TVA sur les envois de faible valeur.",
+    certificate_of_origin_fr: "Délivrés par la Chambre de Commerce du Luxembourg. EUR.1 pour les partenaires d'accords de libre-échange de l'UE. Système REX pour les exportateurs enregistrés.",
+    import_license_info_fr: "Licences conformes aux normes de l'UE. Requises pour les quotas agricoles, les biens à double usage et les armes. Faible volume d'importations directes, la plupart des marchandises entrent par les douanes du Benelux ou allemandes.",
+    customs_reality_fr: "Douanes de l'UE très efficaces. Le Luxembourg a la TVA la PLUS BASSE de l'UE à 17 %, ce qui le rend attractif pour les importations. Cargolux (basée à l'aéroport de Findel) est l'une des plus grandes compagnies de fret aérien d'Europe. Petit pays = traitement rapide, retards minimes. La plupart des colis sont dédouanés en 1 jour.",
   },
   LV: {
     code: "LV",
@@ -4056,6 +4117,10 @@ JM: {
     trade_statistics_url: "https://www.oc.gov.ma/",
     certificate_of_origin_url: "https://www.ccis.ma/",
     import_regulations_url: "https://www.douane.gov.ma/",
+    clearance_process_fr: "Administration des Douanes (douane.gov.ma). Système électronique BADR (Base Automatisée des Douanes en Réseau). Casablanca-Tanger sont les ports principaux, Tanger Med étant l'un des plus grands d'Afrique. Commissionnaire en douane requis pour les importations commerciales. Documentation en français/arabe.",
+    certificate_of_origin_fr: "La Chambre de Commerce, d'Industrie et de Services délivre les certificats. L'Accord d'Association UE-Maroc offre des tarifs préférentiels pour les marchandises de l'UE. Accords de libre-échange avec les États-Unis, la Turquie et de nombreux États arabes. Règles de cumul d'origine pan-euro-méditerranéennes.",
+    import_license_info_fr: "La plupart des marchandises peuvent être importées librement. Licence d'importation requise pour les biens contrôlés (armes, certains produits chimiques, certains produits agricoles sous quotas). Certificats de conformité IMANOR pour certains produits. Les produits pharmaceutiques nécessitent une autorisation du ministère de la Santé. Les importations de sucre sont soumises à un droit de 47 %.",
+    customs_reality_fr: "Relativement efficace pour l'Afrique. Le système BADR fonctionne bien. Les marchandises de l'UE bénéficient de tarifs préférentiels dans le cadre de l'Accord d'Association. Peut être lent pour la poste, 1 à 2 semaines. L'express est dédouané en 2 à 3 jours. Le port de Tanger Med est le plus grand port à conteneurs d'Afrique. Seuil de minimis de 1 250 MAD (~125 $). Corruption inférieure à la moyenne régionale.",
   },
   MC: {
     code: "MC",
@@ -4840,6 +4905,10 @@ PA: {
     trade_statistics_url: "https://www.inei.gob.pe/",
     certificate_of_origin_url: "https://www.mincetur.gob.pe/",
     import_regulations_url: "https://www.sunat.gob.pe/",
+    clearance_process_es: "SUNAT (sunat.gob.pe). Sistema electrónico SIGAD. El puerto del Callao (Lima) es la principal vía de entrada. Muy eficiente. País miembro de la CAN. Acuerdos de libre comercio con EE. UU. (PTPA), la UE, China y muchos otros. IGV del 18 % sobre las importaciones. Política comercial muy liberal, con un arancel medio de solo el 2,2 %.",
+    certificate_of_origin_es: "Certificado PTPA para el comercio con EE. UU. Certificado de la CAN para la Comunidad Andina. Certificados de acuerdos de libre comercio con la UE, China, Japón, Corea del Sur y muchos otros. Los emite el MINCETUR o la Cámara de Comercio.",
+    import_license_info_es: "Obligatoria para armas de fuego, productos farmacéuticos, agroquímicos, explosivos y algunos productos alimentarios. DIGESA se encarga de la seguridad alimentaria. DIGEMID, de los productos farmacéuticos. SENASA, de la certificación agrícola.",
+    customs_reality_es: "Una de las aduanas más eficientes de Latinoamérica. Aranceles bajos (máx. 11 %). El puerto del Callao está bien organizado. Los despachos exprés se realizan en 1-2 días. La extensa red de acuerdos de libre comercio (EE. UU., UE, China, etc.) permite que muchas mercancías entren sin aranceles. El IGV del 18 % es la principal carga económica. De minimis de 200 $ para importaciones personales. DHL, FedEx y UPS están bien implantadas. El correo postal a través de SERPOST tarda 2-3 semanas. Baja corrupción en comparación con la región.",
   },
   PF: {
     code: "PF",
@@ -5449,6 +5518,10 @@ PY: {
     trade_statistics_url: "https://www.ansd.sn/",
     certificate_of_origin_url: "https://www.cciad.sn/",
     import_regulations_url: "https://www.douanes.sn/",
+    clearance_process_fr: "La Direction Générale des Douanes du Sénégal gère le dédouanement. Le TEC de la CEDEAO s'applique avec 5 tranches : 0 %, 5 %, 10 %, 20 %, 35 %. Système douanier électronique GAINDE pour les déclarations. Le port de Dakar est le principal point d'entrée et un hub majeur d'Afrique de l'Ouest. Commissionnaire en douane obligatoire pour les importations commerciales. Documentation en français requise.",
+    certificate_of_origin_fr: "Certificat CEDEAO pour le commerce préférentiel régional. La Chambre de Commerce, d'Industrie et d'Agriculture de Dakar (CCIAD) délivre les certificats. L'APE UE-Afrique de l'Ouest offre un accès préférentiel aux marchandises de l'UE.",
+    import_license_info_fr: "Déclaration d'importation (DPI) requise pour la plupart des importations. Biens contrôlés : produits pharmaceutiques, produits chimiques, armes. Certificats de conformité pour certains produits. Certificats phytosanitaires pour les produits agricoles. Inspection avant expédition pour certaines catégories.",
+    customs_reality_fr: "Le port de Dakar est un hub majeur d'Afrique de l'Ouest, relativement bien organisé. Le système électronique GAINDE améliore l'efficacité. TEC de la CEDEAO à 5 tranches (0/5/10/20/35 %). Documentation en français essentielle. Les transporteurs express (DHL, FedEx) opèrent de manière fiable à Dakar. Les colis de La Poste du Sénégal prennent 2 à 3 semaines. Le nouvel Aéroport International Blaise Diagne améliore la capacité de fret aérien. La corruption diminue sous l'effet des efforts de réforme. Le Sénégal est l'une des économies ouest-africaines les plus stables et favorables au commerce.",
   },
   SO: {
     code: "SO",
@@ -5826,6 +5899,10 @@ SV: {
     trade_statistics_url: "https://www.ins.tn/",
     certificate_of_origin_url: "https://www.ccitunis.org.tn/",
     import_regulations_url: "https://www.douane.gov.tn/",
+    clearance_process_fr: "La Direction Générale des Douanes tunisiennes gère le dédouanement. Système de guichet unique électronique TTN (Tunisia TradeNet) pour les déclarations. L'Accord d'Association UE-Tunisie offre des tarifs préférentiels sur les marchandises d'origine UE (la plupart des produits industriels à 0 %). Quatre tranches tarifaires pour les marchandises hors UE. Commissionnaire en douane obligatoire pour les importations commerciales. La Goulette, Radès et Sfax sont les ports principaux.",
+    certificate_of_origin_fr: "Délivrés par la Chambre de Commerce et d'Industrie de Tunis (CCIT). Certificat de circulation EUR.1 pour les tarifs préférentiels de l'Accord d'Association UE. Règles de cumul pan-euro-méditerranéennes. Certificats GZALE pour le commerce régional arabe. Certificats de l'Accord d'Agadir pour le Maroc, l'Égypte et la Jordanie.",
+    import_license_info_fr: "La plupart des biens industriels sont importés librement. Licence d'importation requise pour : les produits agricoles sous quotas, les produits pharmaceutiques (ministère de la Santé), les armes, les biens usagés. Certificats de contrôle technique (certificat de conformité) pour les biens de consommation. Contrôles stricts sur les véhicules d'occasion.",
+    customs_reality_fr: "Efficace pour l'Afrique du Nord. L'Accord d'Association UE offre des tarifs préférentiels sur les marchandises de l'UE, la plupart des produits industriels entrent en franchise de droits. Le système électronique TTN (Tunisia TradeNet) fonctionne bien. Le port de Radès, près de Tunis, traite la majeure partie du trafic de conteneurs. Les transporteurs express (DHL, FedEx) dédouanent en 2 à 3 jours. Les colis de La Poste tunisienne prennent 1 à 2 semaines. Documentation en français et en arabe. Corruption inférieure à la moyenne régionale. La modernisation douanière est en cours avec le soutien de l'UE.",
   },
   TO: {
     code: "TO",
