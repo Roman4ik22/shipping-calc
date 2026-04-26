@@ -4,8 +4,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
-import { notFound } from "next/navigation";
-import { redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import ExpandableGrid from "@/components/ExpandableGrid";
 
@@ -67,7 +66,7 @@ export default async function FromCountryPage({
 
   const validLocales = getCorridorLocales(country.code, country.code);
   if (!validLocales.includes(loc)) {
-    redirect(`/en/shipping/from/${country.slug_en}`);
+    permanentRedirect(`/en/shipping/from/${country.slug_en}`);
   }
 
   const name = getCountryName(country, loc);

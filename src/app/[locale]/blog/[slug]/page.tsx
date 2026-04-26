@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { localeNames, t, pickLocalized } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
@@ -240,8 +240,10 @@ export default async function BlogPostPage({
   if (!post) {
     notFound();
   }
+  // Smart routing: irrelevant locales 301 to the canonical /en/ version so
+  // already-indexed URLs consolidate instead of returning hard 404s.
   if (!isBlogLocaleValid(post.tags, loc)) {
-    notFound();
+    permanentRedirect(`/en/blog/${slug}`);
   }
 
   const postRec = post as unknown as Record<string, unknown>;

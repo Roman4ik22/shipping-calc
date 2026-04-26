@@ -5,7 +5,7 @@ import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCarrierLocales, isCarrierLocaleValid } from "@/lib/carrier-locales";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -71,8 +71,11 @@ export default async function CarrierPage({
   if (!carrier) {
     notFound();
   }
+  // If this locale isn't relevant for the carrier (smart routing), 301 to the
+  // canonical /en/ version so Google consolidates index/link equity rather
+  // than dropping the URL.
   if (!isCarrierLocaleValid(carrierId, loc, carrier.type)) {
-    notFound();
+    permanentRedirect(`/en/carriers/${carrierId}`);
   }
 
   return (

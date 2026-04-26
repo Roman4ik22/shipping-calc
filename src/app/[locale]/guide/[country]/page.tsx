@@ -12,8 +12,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
-import { notFound } from "next/navigation";
-import { redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -91,7 +90,7 @@ export default async function GuidePage({
 
   const validLocales = getCorridorLocales(country.code, country.code);
   if (!validLocales.includes(loc)) {
-    redirect(`/en/guide/${country.slug_en}`);
+    permanentRedirect(`/en/guide/${country.slug_en}`);
   }
 
   const name = getCountryName(country, loc);

@@ -14,7 +14,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
 import DutyCalculator from "@/components/DutyCalculator";
 import Link from "next/link";
-import { redirect, notFound } from "next/navigation";
+import { permanentRedirect, notFound } from "next/navigation";
 
 const BASE_URL = "https://rateships.com";
 
@@ -105,10 +105,11 @@ export default async function CustomsCountryPage({
     notFound();
   }
 
-  // Smart locale: redirect if locale is not relevant for this country
+  // Smart locale: 301 to /en/ if this locale isn't relevant for the country
+  // so Google consolidates already-indexed URLs into the canonical version.
   const validLocales = getCorridorLocales(country.code, country.code);
   if (!validLocales.includes(loc)) {
-    redirect(`/en/customs/${slug}`);
+    permanentRedirect(`/en/customs/${slug}`);
   }
 
   const name = getCountryName(country, loc);

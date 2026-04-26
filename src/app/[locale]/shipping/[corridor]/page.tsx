@@ -24,7 +24,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorContent } from "@/data/corridor-content";
 import { generateCorridorInfo } from "@/lib/corridor-generator";
 import Link from "next/link";
-import { redirect, notFound } from "next/navigation";
+import { permanentRedirect, notFound } from "next/navigation";
 import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
@@ -134,10 +134,11 @@ export default async function CorridorPage({
 
   const { origin, destination } = parsed;
 
-  // Redirect to English if locale is not relevant for this corridor
+  // 301 permanent redirect to English if locale is not relevant for this corridor
+  // (consolidates indexed URLs to canonical version instead of breaking them).
   if (!isCorridorLocaleValid(origin.code, destination.code, loc)) {
     const enSlug = makeCorridorSlug(origin, destination, "en");
-    redirect(`/en/shipping/${enSlug}`);
+    permanentRedirect(`/en/shipping/${enSlug}`);
   }
 
   const corridorData = getCorridorData(origin.code, destination.code);
