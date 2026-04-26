@@ -236,7 +236,7 @@ export default async function DutyCalculatorPage({
             </div>
 
             <div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }} className="tools-grid">
                 {COUNTRY_SAMPLE.map((c) => {
                   const tone = TONE_MAP[c.tone];
                   return (

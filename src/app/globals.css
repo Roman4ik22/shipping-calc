@@ -21,6 +21,26 @@
     font-feature-settings: "cv11","ss01","ss03";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Prevent stray wide elements (decorative svgs, unwrapped pre/code, oversized hero floats)
+       from forcing horizontal scroll on small screens. */
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Make every image / svg / video shrink with its container by default. */
+  img, svg, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Long URLs and unbroken strings (carrier IDs, tracking numbers) shouldn't
+     blow out a flex/grid cell on narrow viewports. */
+  p, li, td, dd, dt {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }
 
@@ -216,25 +236,109 @@ main {
   to { opacity: 1; }
 }
 
-/* V2 hero responsive */
-@media (max-width: 960px) {
+/* === Responsive layout — mobile + tablet === */
+
+/* Tablet: collapse asymmetric two-column layouts to a more even split. */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .routes-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .compare-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile: stack everything to a single column, hide decorative floats. */
+@media (max-width: 760px) {
   .hero-grid {
     grid-template-columns: 1fr !important;
-    gap: 32px !important;
+    gap: 28px !important;
   }
   .hero-float {
     display: none !important;
   }
-  .two-col, .tools-grid, .routes-grid, .stats-grid, .footer-cols, .newsletter-grid {
+  .two-col,
+  .tools-grid,
+  .routes-grid,
+  .stats-grid,
+  .steps-grid,
+  .compare-grid,
+  .footer-cols,
+  .newsletter-grid {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
-}
-@media (max-width: 560px) {
+
+  /* Rates comparison table on homepage: collapse 5-column grid to a card layout. */
+  .row-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 6px 12px !important;
+    padding: 14px 16px !important;
+  }
+  /* The header row would be confusing as cards — hide it on mobile. */
+  .row-grid:first-child {
+    display: none !important;
+  }
+  /* In each row, the carrier cell spans full width above the rest. */
+  .row-grid > *:nth-child(1) {
+    grid-column: 1 / -1 !important;
+  }
+  /* Rate (last cell) should align right-bottom on its own line */
+  .row-grid > *:last-child {
+    grid-column: 1 / -1 !important;
+    text-align: left !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    padding-top: 6px !important;
+    border-top: 1px solid var(--line-2);
+    margin-top: 6px !important;
+  }
+
+  /* Reduce big section padding so content has more horizontal room. */
   section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
   }
 }
+
+/* Small phones */
+@media (max-width: 420px) {
+  section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+  /* Tighten generous letter-spacing on huge headlines. */
+  h1 {
+    letter-spacing: -.02em !important;
+  }
+  /* Buttons and pills should not overflow the viewport. */
+  .btn-press {
+    max-width: 100%;
+  }
+}
+
+/* Tables that overflow on mobile (carrier services, customs duty rates) → horizontal scroll. */
+@media (max-width: 760px) {
+  .table-scroll,
+  .scroll-x {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 
 /* V2 card hover */
 .team-card {
