@@ -198,11 +198,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     {t(loc, "guides")}
                   </NavLink>
                   <NavLink
-                    href={`/${locale}/tools/duty-calculator`}
+                    href={`/${locale}/customs`}
                     className="text-sm font-medium text-body hover:text-ink transition-colors"
                     activeClassName="text-sm font-medium text-ink transition-colors"
                   >
-                    {loc === "ru" ? "Таможня" : "Customs"}
+                    {t(loc, "customs_info")}
                   </NavLink>
                   <NavLink
                     href={`/${locale}/about`}
@@ -268,7 +268,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <NavLink href={`/${locale}/about`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "about")}</NavLink>
                   <NavLink href={`/${locale}/blog`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "blog")}</NavLink>
                   <NavLink href={`/${locale}/platforms`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "platforms")}</NavLink>
-                  <Link href={`/${locale}/customs/united-states`} className="text-white/55 hover:text-white transition-colors">{t(loc, "customs_info")}</Link>
+                  <NavLink href={`/${locale}/customs`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "customs_info")}</NavLink>
+                  <NavLink href={`/${locale}/tools/duty-calculator`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "duty_calc_title")}</NavLink>
+                  <NavLink href={`/${locale}/tools/delivery-estimator`} className="text-white/55 hover:text-white transition-colors" activeClassName="text-white">{t(loc, "delivery_estimator")}</NavLink>
                 </div>
               </div>
               <div>

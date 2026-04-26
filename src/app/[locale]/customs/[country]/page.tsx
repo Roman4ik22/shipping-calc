@@ -55,18 +55,58 @@ export async function generateMetadata({
 
   const deMinimisText = customs.de_minimis_usd > 0
     ? `$${customs.de_minimis_usd} de minimis`
-    : "no de minimis exemption";
+    : "no de minimis";
 
   const countryEn = getCountryName(country, "en");
-  const titleLocalized = loc === "ru"
-    ? `Пошлины и таможня ${name} [2026] — НДС ${customs.vat_rate}%, de minimis $${customs.de_minimis_usd}`
-    : loc === "de"
-    ? `Zoll & Einfuhrregeln ${countryEn} [2026] — ${customs.vat_rate}% MwSt, de minimis $${customs.de_minimis_usd}`
-    : `${countryEn} Import Duties & Customs [2026] — ${customs.vat_rate}% VAT, $${customs.de_minimis_usd} Threshold`;
+  const year = new Date().getFullYear();
+
+  // Title patterns chosen to match real search intent (verified via GSC):
+  //   "X customs", "shipping to X", "postage to X", "X import duty / vat / tax"
+  // Keeping country name FIRST captures "{country} customs" branded queries.
+  const titleLocalized =
+    loc === "ru"
+      ? `Доставка в ${name} ${year}: таможня, пошлины, НДС ${customs.vat_rate}% и сроки`
+      : loc === "de"
+        ? `Versand nach ${name} ${year}: Zoll, ${customs.vat_rate}% MwSt & Einfuhrregeln`
+        : loc === "es"
+          ? `Envíos a ${name} ${year}: aduana, aranceles, IVA ${customs.vat_rate}%`
+          : loc === "fr"
+            ? `Expédition vers ${name} ${year} : douane, droits, TVA ${customs.vat_rate}%`
+            : loc === "pt"
+              ? `Envios para ${name} ${year}: alfândega, direitos, IVA ${customs.vat_rate}%`
+              : loc === "it"
+                ? `Spedizioni in ${name} ${year}: dogana, dazi, IVA ${customs.vat_rate}%`
+                : loc === "tr"
+                  ? `${name}'a kargo ${year}: gümrük, vergiler, %${customs.vat_rate} KDV`
+                  : loc === "ar"
+                    ? `الشحن إلى ${name} ${year}: الجمارك، الرسوم، ضريبة القيمة المضافة ${customs.vat_rate}%`
+                    : loc === "zh"
+                      ? `寄往${name} ${year}：清关、关税、${customs.vat_rate}% 增值税`
+                      : loc === "ja"
+                        ? `${name}への配送 ${year}：通関、関税、消費税${customs.vat_rate}%`
+                        : loc === "ko"
+                          ? `${name} 배송 ${year}: 통관, 관세, 부가세 ${customs.vat_rate}%`
+                          : `Shipping to ${countryEn} ${year}: Customs Duty, VAT ${customs.vat_rate}% & Import Guide`;
+
+  // Description: front-load benefits, hit key-numbers, end with action.
+  const descLocalized =
+    loc === "ru"
+      ? `Как отправить посылку в ${name}: ${deMinimisText}, НДС ${customs.vat_rate}%, ставки пошлин по категориям, сроки таможни, запрещённые товары. Бесплатный калькулятор пошлин.`
+      : loc === "de"
+        ? `Pakete nach ${name} senden: ${deMinimisText}, ${customs.vat_rate}% MwSt, Zollsätze nach Kategorie, Abfertigungszeiten, verbotene Waren. Kostenloser Zollrechner.`
+        : `How to send parcels to ${countryEn}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by product category, customs clearance times, prohibited items. Free duty calculator inside.`;
+
+  // OG title — slightly different to render well on social previews
+  const ogTitle =
+    loc === "ru"
+      ? `Доставка и таможня ${name} ${year}`
+      : loc === "de"
+        ? `Versand & Zoll ${name} ${year}`
+        : `Shipping & Customs Guide for ${countryEn} (${year})`;
 
   return {
     title: titleLocalized,
-    description: `Complete guide to importing goods into ${countryEn}: ${deMinimisText}, ${customs.vat_rate}% VAT, duty rates by category, required documents, clearance process, and prohibited items.`,
+    description: descLocalized,
     alternates: {
       canonical: `/${locale}/customs/${slug}`,
       languages: {
@@ -77,8 +117,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `Import Duties & Customs Rules for ${getCountryName(country, "en")} [2026]`,
-      description: `${getCountryName(country, "en")} customs: ${deMinimisText}, ${customs.vat_rate}% VAT, avg duty ${customs.avg_duty_rate}%.`,
+      title: ogTitle,
+      description: descLocalized,
       type: "article",
     },
   };

@@ -13,7 +13,7 @@ import { google } from "googleapis";
 import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 
-const SITE_URL = "https://rateships.com";
+const SITE_URL = "https://rateships.com/";
 const CREDENTIALS_PATH = path.join(__dirname, "gsc-credentials.json");
 
 async function getAuth() {

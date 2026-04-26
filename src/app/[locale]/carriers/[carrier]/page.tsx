@@ -36,12 +36,51 @@ export async function generateMetadata({
   const review = getCarrierReview(carrier.id);
   const serviceCount = carrier.services.length;
   const ratingStr = review ? ` ★ ${review.trustpilot.rating.toFixed(1)}` : "";
-  const titleSuffix = t(loc, "carrier_meta_suffix");
-  const ogDesc = t(loc, "carrier_meta_og_desc", { desc, count: serviceCount });
+  const year = new Date().getFullYear();
+
+  // Title pattern matches real search intents (verified via GSC):
+  //   "{carrier} tracking" / "{carrier} rates" / "{carrier} delivery time"
+  // Putting brand FIRST captures branded queries (highest CTR potential).
+  const titleSuffix =
+    loc === "ru"
+      ? `отслеживание, тарифы и сроки (${year})`
+      : loc === "de"
+        ? `Sendungsverfolgung, Tarife & Lieferzeiten (${year})`
+        : loc === "es"
+          ? `seguimiento, tarifas y plazos (${year})`
+          : loc === "fr"
+            ? `suivi, tarifs et délais (${year})`
+            : loc === "pt"
+              ? `rastreio, tarifas e prazos (${year})`
+              : loc === "it"
+                ? `tracking, tariffe e tempi (${year})`
+                : loc === "tr"
+                  ? `takip, tarifeler ve teslimat (${year})`
+                  : loc === "ar"
+                    ? `التتبع، الأسعار وأوقات التسليم (${year})`
+                    : loc === "zh"
+                      ? `物流跟踪、运费与时效（${year}）`
+                      : loc === "ja"
+                        ? `追跡、料金、配達日数（${year}）`
+                        : loc === "ko"
+                          ? `배송조회, 요금 및 배송기간 (${year})`
+                          : `tracking, rates & delivery times (${year})`;
+
+  const title = `${carrier.name} ${titleSuffix}${ratingStr}`;
+
+  // Description: combine carrier description + key facts in benefit terms
+  const descSuffix =
+    loc === "ru"
+      ? `Сравните ${serviceCount} услуг, сроки доставки и реальные цены.`
+      : loc === "de"
+        ? `Vergleichen Sie ${serviceCount} Services, Lieferzeiten und echte Preise.`
+        : `Compare ${serviceCount} services, delivery times, and live rates.`;
+
+  const description = `${desc} ${descSuffix}`;
 
   return {
-    title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
-    description: ogDesc,
+    title,
+    description,
     alternates: {
       canonical: `/${locale}/carriers/${carrierId}`,
       languages: {
@@ -52,8 +91,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `${carrier.name}${ratingStr} — ${titleSuffix}`,
-      description: ogDesc,
+      title,
+      description,
       type: "website",
     },
   };

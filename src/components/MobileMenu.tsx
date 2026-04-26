@@ -80,7 +80,7 @@ export default function MobileMenu({
               {labels.guides}
             </NavLink>
             <NavLink
-              href={`/${locale}/tools/duty-calculator`}
+              href={`/${locale}/customs`}
               className="text-body hover:text-accent-light py-2 transition-colors"
               activeClassName="text-ink py-2"
               onClick={() => setOpen(false)}
