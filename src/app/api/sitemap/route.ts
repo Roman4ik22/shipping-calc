@@ -7,7 +7,9 @@ import type { Locale } from "@/lib/types";
 
 const BASE_URL = "https://rateships.com";
 
-const LASTMOD = "2026-04-04";
+// Always reflect "today" so Google recrawls when content/metadata changes.
+// (Hardcoded LASTMOD goes stale and Google treats sitemap as cold.)
+const LASTMOD = new Date().toISOString().split("T")[0];
 
 // Static pages that must ALWAYS be in sitemap regardless of gradual rollout
 const STATIC_PAGE_PATHS = [
