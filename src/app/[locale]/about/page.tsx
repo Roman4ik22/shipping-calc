@@ -92,7 +92,7 @@ export default async function AboutPage({
           <div style={{ position: "absolute", top: "22%", right: "30%", width: 44, height: 44, borderRadius: 10, background: "#fff", border: "2px solid var(--blue)", transform: "rotate(-4deg)", boxShadow: "var(--shadow-md)" }} className="hero-float" />
         </div>
 
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 1240, margin: "0 auto", padding: "96px 32px 112px" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 1240, margin: "0 auto", padding: "clamp(40px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,9vw,112px)" }}>
           <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
             <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>
             <span style={{ margin: "0 8px" }}>/</span>
@@ -369,7 +369,7 @@ export default async function AboutPage({
       </section>
 
       {/* === FINAL CTA + LEGAL ENTITY (preserved real data) === */}
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "80px 32px 96px" }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "clamp(40px,7vw,80px) clamp(16px,4vw,32px) clamp(48px,8vw,96px)" }}>
         {/* Legal entity */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-ink mb-4">

@@ -214,7 +214,7 @@ export default async function DutyCalculatorPage({
                     <div style={{ fontSize: 12, color: "var(--muted)" }}>{tf(loc, "sample_profile", "Sample country profile · weekly update")}</div>
                   </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }} className="tools-grid">
                   {[
                     [tf(loc, "duty_range", "Duty range"), "0–17%", tf(loc, "ad_valorem", "Ad valorem")],
                     [tf(loc, "vat_gst", "VAT / GST"), "19%", tf(loc, "on_dutiable_base", "On dutiable base")],
@@ -270,8 +270,8 @@ export default async function DutyCalculatorPage({
               {tf(loc, "comparison_title", "Built for commerce. Not for filling out a textbook exercise.")}
             </h2>
           </div>
-          <div style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", overflow: "hidden", boxShadow: "var(--shadow-md)" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", background: "var(--ink)", color: "#fff" }}>
+          <div style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", overflow: "hidden", boxShadow: "var(--shadow-md)" }} className="compare-table">
+            <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", background: "var(--ink)", color: "#fff" }} className="compare-row compare-header">
               <div style={{ padding: "22px 24px", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em", color: "rgba(255,255,255,.5)" }}>{tf(loc, "capability", "Capability")}</div>
               <div style={{ padding: "22px 20px", textAlign: "center", fontSize: 14, fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
                 <div style={{ width: 20, height: 20, borderRadius: 6, background: "linear-gradient(135deg, var(--blue), #2F88FF)", display: "grid", placeItems: "center" }}>
@@ -299,7 +299,7 @@ export default async function DutyCalculatorPage({
                 return <span style={{ fontSize: 13, fontWeight: 700, color: isPrimary ? "var(--ink)" : "var(--muted)" }}>{v}</span>;
               };
               return rows.map(([label, a, b, c], i) => (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", alignItems: "center", borderTop: i === 0 ? "none" : "1px solid var(--line-2)", background: i % 2 ? "transparent" : "var(--bg)" }}>
+                <div key={i} style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", alignItems: "center", borderTop: i === 0 ? "none" : "1px solid var(--line-2)", background: i % 2 ? "transparent" : "var(--bg)" }} className="compare-row">
                   <div style={{ padding: "16px 24px", fontSize: 14, fontWeight: 600, color: "var(--ink)" }}>{label}</div>
                   <div style={{ padding: "16px 20px", textAlign: "center", background: "rgba(26,115,232,.03)", display: "flex", justifyContent: "center" }}>{renderCell(a, true)}</div>
                   <div style={{ padding: "16px 20px", textAlign: "center", display: "flex", justifyContent: "center" }}>{renderCell(b, false)}</div>
