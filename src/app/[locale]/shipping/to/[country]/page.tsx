@@ -105,7 +105,7 @@ export default async function ToCountryPage({
           </nav>
 
           <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-2">
-            {countryFlag(country.code)} {t(loc, "ship_to", { country: name })}
+            {countryFlag(country.code)} {t(loc, "country_to_h1", { country: name })}
           </h1>
           <p className="text-body max-w-2xl">
             {t(loc, "meta_country_to_desc", { country: name })}

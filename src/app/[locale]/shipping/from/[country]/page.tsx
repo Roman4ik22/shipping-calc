@@ -106,7 +106,7 @@ export default async function FromCountryPage({
           </nav>
 
           <h1 className="text-3xl sm:text-4xl font-bold text-ink mb-2">
-            {countryFlag(country.code)} {t(loc, "ship_from", { country: name })}
+            {countryFlag(country.code)} {t(loc, "country_from_h1", { country: name })}
           </h1>
           <p className="text-body max-w-2xl">
             {t(loc, "meta_country_from_desc", { country: name })}
