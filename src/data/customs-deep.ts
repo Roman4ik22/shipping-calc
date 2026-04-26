@@ -196,6 +196,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'http://english.customs.gov.cn/Statics/Statistics',
     certificate_of_origin_url: 'https://www.ccpit.org/en/',
     import_regulations_url: 'http://english.customs.gov.cn/',
+    clearance_process_zh: "中国海关（GACC）使用单一窗口系统进行电子申报。个人进口物品价值低于¥1000的，可使用简化的邮政清关方式。跨境电商有独立的监管体制，适用综合税率。",
+    certificate_of_origin_zh: "原产地证由中国国际贸易促进委员会（CCPIT）签发。可根据RCEP、东盟-中国自贸协定及其他协定签发优惠原产地证。电子原产地证的接受度日益提高。",
+    import_license_info_zh: "对受监控商品（钢铁、部分电子产品）实行自动进口许可。受限制商品（旧机电设备、废料、消耗臭氧层物质）须办理非自动进口许可。多种电子产品和汽车零部件强制要求CCC认证标志。",
+    customs_reality_zh: "通关情况可能难以预料。价值超过¥1000的个人邮包可能需要本人到海关现场办理。商业货物须委托具备资质的报关行办理。跨境电商平台（天猫国际、京东全球购）通关流程更为简化，多数商品适用9.1%的较低综合税率。",
   },
 
   JP: {
@@ -226,6 +230,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.customs.go.jp/toukei/info/index_e.htm',
     certificate_of_origin_url: 'https://www.jcci.or.jp/international/certificates-of-origin/',
     import_regulations_url: 'https://www.customs.go.jp/english/summary/import.htm',
+    clearance_process_ja: "日本の税関では、電子処理にNACCS（輸出入・港湾関連情報処理システム）を使用しています。個人輸入は日本郵便を通じた簡易郵便通関で処理されます。商業貨物にはAMS/AFRの申告が必要です。",
+    certificate_of_origin_ja: "日本商工会議所（JCCI）が原産地証明を発行します。RCEP、CPTPP、日EU・EPAに基づく特恵原産地証明も発行されます。新しい協定では自己証明制度も認められています。",
+    import_license_info_ja: "特定の農産物（米、小麦、乳製品）、水産物、および危険物には輸入割当および輸入許可が必要です。医薬品の輸入にはPMDAの承認が必要です。食品の輸入には食品衛生法に基づく届出が必要です。",
+    customs_reality_ja: "日本の通関は非常に効率的で高度に自動化されています。エクスプレス便は数時間以内に通関を完了します。日本郵便の小包は1〜2日で通関を通過します。免税基準額は¥10,000と比較的低く設定されています。食品および医薬品に対する厳格な規制により、これらのカテゴリでは遅延が発生する場合があります。",
   },
 
   KR: {
@@ -256,6 +264,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://unipass.customs.go.kr/ets/index_en.do',
     certificate_of_origin_url: 'http://english.korcham.net/nCham/Service/CertificateOfOrigin/appl.asp',
     import_regulations_url: 'https://www.customs.go.kr/english/main.do',
+    clearance_process_ko: "한국 관세청(KCS)은 UNI-PASS 전자 시스템을 사용합니다. $150 미만의 개인용 수입품은 관세가 면제됩니다. 자가 사용 수입품은 신고해야 합니다. 특송 화물은 간이 전자 신고를 통해 처리됩니다.",
+    certificate_of_origin_ko: "대한상공회의소(KCCI)에서 원산지 증명서를 발급합니다. 한미 FTA, RCEP, 한-EU FTA, CPTPP에 따른 특혜 원산지 증명서가 발급됩니다. FTA-PASS 시스템을 통해 전자 원산지 증명서가 발급됩니다.",
+    import_license_info_ko: "특정 농산물, 의약품, 의료기기, 총기류, 유해 화학물질에 대해서는 수입 추천서/허가가 필요합니다. 다수의 가전제품 및 소비재는 KC 마크 인증이 요구됩니다.",
+    customs_reality_ko: "한국 통관은 UNI-PASS 시스템 덕분에 현대적이고 효율적입니다. 특송 화물은 신속하게 통관되며, 종종 당일 처리됩니다. 미국발 개인 수입품은 한미 FTA 관세 인하 혜택을 받습니다. 건강 보조 식품 및 화장품은 KC 인증이 요구되어 지연이 발생할 수 있습니다.",
   },
 
   AU: {
@@ -406,6 +418,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://fcsc.gov.ae/',
     certificate_of_origin_url: 'https://www.dubaichamber.com/en/services/certificates-of-origin/',
     import_regulations_url: 'https://www.customs.ae/en/importexport',
+    clearance_process_ar: "تشرف الهيئة الاتحادية للجمارك (FCA) على القطاع، إلا أن لكل إمارة هيئة جمارك خاصة بها. تستخدم جمارك دبي نظام مرسال 2. تُطبَّق التعرفة الجمركية الموحدة لمجلس التعاون الخليجي (GCC) بنسبة 5% على معظم السلع. وتخضع المناطق الحرة لأنظمة استيراد منفصلة.",
+    certificate_of_origin_ar: "تصدر غرف التجارة الإماراتية شهادات المنشأ. تُعفى السلع ذات المنشأ الخليجي من الرسوم الجمركية داخل دول مجلس التعاون. وتُشترط الشهادات للحصول على المعاملة التفضيلية بموجب اتفاقيات التجارة الحرة لمجلس التعاون مع سنغافورة ودول الإفتا (EFTA).",
+    import_license_info_ar: "يُشترط الحصول على رخصة تجارية للواردات التجارية. وتشمل المواد المقيَّدة الكحوليات (تصريح خاص)، ومنتجات لحم الخنزير، والمستحضرات الصيدلانية، والأسلحة. كما تُطلب شهادة هيئة الإمارات للمواصفات والمقاييس (ESMA) لبعض المنتجات الاستهلاكية.",
+    customs_reality_ar: "تتميز الجمارك الإماراتية بالسرعة والمرونة وملاءمتها لبيئة الأعمال. وتُعدّ دبي وأبوظبي من أهم مراكز إعادة التصدير. وتجعل الرسوم الموحدة بنسبة 5% عمليات الاحتساب يسيرة. وتتيح المناطق الحرة (جافزا JAFZA، ودافزا DAFZA) الاستيراد المعفى من الرسوم لأغراض إعادة التصدير. وتُطبَّق ضريبة القيمة المضافة بنسبة 5% منذ عام 2018. وتُخلَّص الشحنات السريعة في غضون ساعات.",
   },
 
   SG: {
@@ -526,6 +542,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://comexstat.mdic.gov.br/en/home',
     certificate_of_origin_url: 'https://www.gov.br/siscomex/pt-br/informacoes/certificado-de-origem',
     import_regulations_url: 'https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior',
+    clearance_process_pt: "A Receita Federal (Federal Revenue) gere a alfândega através do sistema electrónico Siscomex. As importações pessoais de valor inferior a $50 provenientes de particulares estão isentas de direitos. O programa Remessa Conforme permite que as plataformas de comércio electrónico efectuem o desalfandegamento prévio com ICMS reduzido. As importações comerciais exigem CPF/CNPJ e despachante aduaneiro licenciado.",
+    certificate_of_origin_pt: "As federações comerciais locais e as Câmaras de Comércio emitem os certificados. Certificados preferenciais ao abrigo do Mercosul, Mercosul-UE (pendente) e dos acordos ACE com parceiros latino-americanos. Formulário A para o SPG.",
+    import_license_info_pt: "Licença de importação (LI) exigida para muitos produtos através do Siscomex. Aprovação da ANVISA para produtos de saúde, cosméticos e alimentos. Certificação do INMETRO para produtos regulados. Licenciamento automático e não automático consoante a categoria do produto.",
+    customs_reality_pt: "Notoriamente lenta e dispendiosa. Os direitos de importação estão entre os mais elevados do mundo. As alfândegas podem reter encomendas durante 30 a 60 dias. A carga fiscal total (direitos + IPI + ICMS + PIS/COFINS) pode atingir 80-100% do valor do produto. O programa Remessa Conforme (2023) melhorou a situação para as compras em marketplaces, reduzindo o imposto para 17% de ICMS em artigos de valor inferior a $50.",
   },
 
   IT: {
@@ -556,6 +576,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.coeweb.istat.it/',
     certificate_of_origin_url: 'https://www.unioncamere.gov.it/',
     import_regulations_url: 'https://www.adm.gov.it/portale/dogane/operatore',
+    clearance_process_it: "L'Agenzia delle Dogane e dei Monopoli (ADM) gestisce le dogane italiane in conformità con il Codice Doganale dell'UE. Sistema di dichiarazione elettronica AIDA. IOSS dell'UE per l'IVA all'importazione di beni di basso valore. Poste Italiane gestisce lo sdoganamento postale con un diritto di gestione.",
+    certificate_of_origin_it: "Le Camere di Commercio italiane rilasciano i certificati. Certificati preferenziali UE (EUR.1, EUR-MED) per i partner degli accordi di libero scambio. Sistema REX per gli esportatori registrati.",
+    import_license_info_it: "Licenze di importazione secondo gli standard UE. Requisiti italiani aggiuntivi per i prodotti alimentari (certificati sanitari), vini e superalcolici e beni culturali. Marcatura CE obbligatoria per le categorie di prodotti applicabili.",
+    customs_reality_it: "Le dogane italiane possono essere più lente rispetto a quelle dei Paesi del Nord Europa. I pacchi di Poste Italiane possono restare fermi in dogana per 3-7 giorni. I corrieri espressi sono più rapidi (1-2 giorni). Poste applica un diritto di gestione di circa €5-8 per le pratiche doganali. Gli hub di Milano e Roma sono i più trafficati.",
   },
 
   ES: {
@@ -650,6 +674,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://ticaret.gov.tr/istatistikler/dis-ticaret-istatistikleri',
     certificate_of_origin_url: 'https://www.tobb.org.tr/ticaretodalari/sayfalar/tescil-islemleri.php',
     import_regulations_url: 'https://ticaret.gov.tr/gumruk-islemleri',
+    clearance_process_tr: "Türk Gümrüğü, BİLGE elektronik beyanname sistemini kullanır. Türkiye, sanayi ürünleri için AB ile Gümrük Birliği'ne sahiptir (sıfır gümrük vergisi). €22 altındaki kişisel ithalatlar gümrük vergisinden muaftı, ancak bu eşik sıkça gözden geçirilmektedir. Posta gümrüklemesini PTT yürütür.",
+    certificate_of_origin_tr: "Menşe şahadetnamelerini TOBB (Türkiye Odalar ve Borsalar Birliği) düzenler. AB Gümrük Birliği kapsamındaki eşyalar için A.TR dolaşım belgesi kullanılır. STA ortakları için EUR.1 belgesi düzenlenir. Belgeler, AB Gümrük Birliği avantajlarından yararlanmak için kritik öneme sahiptir.",
+    import_license_info_tr: "Kota kapsamındaki tarım ürünleri, silahlar, ilaçlar ve kimyasallar için ithalat lisansı gereklidir. Birçok tüketici ürününe ek mali yükümlülükler uygulanır. Gıda güvenliği için TSE sertifikasyonu gereklidir. AB Gümrük Birliği uyumu çerçevesinde CE işareti kabul edilmektedir.",
+    customs_reality_tr: "Türk gümrüğü dijitalleşme ile iyileşmiş olsa da hâlâ öngörülemez olabilir. PTT posta gümrüklemesi 1-3 hafta sürebilir. AB Gümrük Birliği, AB ülkelerinden gelen sanayi ürünlerinde gümrük vergilerini ortadan kaldırarak bu ithalatları daha ucuz hale getirir. Tarım ürünleri ithalatı yüksek gümrük vergileri ve kotalarla karşılaşır. Ekspres kuryeler 2-5 günde işlem yapar.",
   },
 
   MX: {
@@ -683,6 +711,7 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     certificate_of_origin_es: "Certificado T-MEC para tipos preferenciales con EE. UU. y Canadá. Se acepta la autocertificación conforme al T-MEC. Para otros acuerdos de libre comercio se requieren formularios específicos. México cuenta con acuerdos de libre comercio con la UE, Japón y numerosos países latinoamericanos.",
     import_license_info_es: "Se exigen permisos de importación para productos agrícolas, farmacéuticos, químicos, vehículos usados y armas de fuego. COFEPRIS regula los productos alimentarios y sanitarios. La certificación NOM de normas de seguridad del producto es obligatoria para muchos bienes de consumo.",
     customs_reality_es: "En proceso de mejora gracias a la digitalización aduanera. El SAT gestiona los despachos. Puede resultar lento en los envíos postales, con plazos de 2-4 semanas. Los courier exprés despachan en 1-2 días.",
+    clearance_process_es: "El SAT de México (Servicio de Administración Tributaria) gestiona la aduana a través de la VUCEM (Ventanilla Única de Comercio Exterior). Las importaciones requieren un pedimento (declaración aduanera) presentado por un agente aduanal autorizado. Las tarifas preferenciales del T-MEC se aplican a las mercancías originarias de EE. UU. o Canadá.",
   },
 
   PL: {
@@ -811,6 +840,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.stats.gov.sa/en/325',
     certificate_of_origin_url: 'https://www.saudichambers.sa/en',
     import_regulations_url: 'https://www.zatca.gov.sa/en/customs/Pages/default.aspx',
+    clearance_process_ar: "تتولى الجمارك السعودية (هيئة الزكاة والضريبة والجمارك ZATCA) إدارة الواردات عبر منصة النافذة الموحدة فسح (FASAH). ويُشترط التسجيل في نظام مطابقة المنتجات سابر (SABER) للسلع الخاضعة للتنظيم. ويُطبَّق قانون الجمارك الموحد لدول مجلس التعاون الخليجي.",
+    certificate_of_origin_ar: "تُشترط شهادة المنشأ لمعظم الواردات، ويجب تصديقها من السفارة السعودية في بلد المنشأ. وتُعتمد شهادة المنشأ الخليجية الموحدة للتجارة البينية بين دول مجلس التعاون. وتصدر الغرفة التجارية السعودية شهادات المنشأ للصادرات.",
+    import_license_info_ar: "يُشترط الحصول على رخصة استيراد من وزارة التجارة. ويُطلب الحصول على شهادتي سابر/سليم (SABER/SALEEM) لمطابقة المنتجات. ويُلزم الحصول على موافقة الهيئة العامة للغذاء والدواء (SFDA) للأغذية والأدوية. ويُحظر حظراً صارماً استيراد الكحوليات ومنتجات لحم الخنزير والمواد الدينية المخالفة لأحكام الإسلام.",
+    customs_reality_ar: "تشهد الجمارك السعودية تطوراً سريعاً في إطار إصلاحات رؤية 2030. ويُعتمد نظام سابر (SABER) لمطابقة المنتجات. ويُحظر حظراً صارماً استيراد الكحوليات ولحم الخنزير والمواد الدينية المخالفة.",
   },
 
   EG: {
@@ -841,6 +874,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: 'https://www.capmas.gov.eg/',
     certificate_of_origin_url: 'https://www.fei.org.eg/',
     import_regulations_url: 'https://www.customs.gov.eg/',
+    clearance_process_ar: "تستخدم مصلحة الجمارك المصرية منظومة النافذة الواحدة نافذة (Nafeza) لتيسير التجارة. ويُشترط لجميع الواردات التسجيل في منظومة المعلومات المسبقة عن الشحنات (ACI) قبل الشحن. كما يُلزم تعيين مخلِّص جمركي لإتمام الواردات التجارية.",
+    certificate_of_origin_ar: "تُشترط شهادة المنشأ لجميع الواردات، ويجب تصديقها من القنصلية المصرية في بلد المنشأ. ويُستخدم سند الكوميسا (COMESA) للتجارة الإقليمية، وسند منطقة التجارة الحرة العربية الكبرى (GAFTA) للتجارة العربية البينية.",
+    import_license_info_ar: "يُشترط الحصول على بطاقة تسجيل المستوردين من الهيئة العامة للرقابة على الصادرات والواردات (GOEIC). كما تُطلب موافقة الجهاز القومي لتنظيم الاتصالات (NTRA) لمعدات الاتصالات. ويُلزم الالتزام بمواصفات الهيئة المصرية للمواصفات والجودة (EOS). وتستوجب سلع كثيرة شهادات فحص الجودة.",
+    customs_reality_ar: "تتسم الإجراءات بالطابع البيروقراطي. ولا يوجد حد أدنى معفى من الرسوم، إذ تخضع جميع الواردات للضرائب. وقد تكون موانئ نهر النيل بطيئة الإجراءات. ويُستحسن الاستعانة بمخلِّص جمركي مسجَّل.",
   },
 
   IL: {
@@ -1144,6 +1181,7 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     clearance_process_es: "La AFIP (Administración Federal de Ingresos Públicos) gestiona la aduana a través del sistema electrónico MALVINA. Se aplica el Arancel Externo Común del MERCOSUR. Se exige autorización previa del SIMI (Sistema Integral de Monitoreo de Importaciones) para numerosas mercancías. Es obligatorio disponer de CUIT (identificación fiscal).",
     certificate_of_origin_es: "Certificado del MERCOSUR para el comercio regional. Formulario A para el SGP. La Cámara de Comercio Argentina emite los certificados. Existen certificados preferenciales para los acuerdos bilaterales con Chile y Bolivia.",
     import_license_info_es: "Autorización previa del SIMI para mercancías controladas. ANMAT para alimentos, medicamentos y cosméticos. INTI para normas técnicas. Licencias no automáticas para numerosos bienes de consumo. Los frecuentes cambios normativos dificultan el cumplimiento.",
+    customs_reality_es: "Una de las normativas de importación más estrictas del mundo. De minimis de $50. Impuesto de la AFIP sobre las compras. Pueden retener los paquetes entre 30 y 90 días.",
   },
 
   CL: {
@@ -1177,6 +1215,7 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     clearance_process_es: "El Servicio Nacional de Aduanas utiliza el sistema electrónico SISCOMEX. Chile aplica un arancel único del 6 % a la mayoría de las mercancías, lo que constituye una de las estructuras arancelarias más sencillas del mundo. Su extensa red de acuerdos de libre comercio (UE, EE. UU., China, etc.) reduce la mayoría de los aranceles al 0 %.",
     certificate_of_origin_es: "La extensa red de acuerdos de libre comercio hace imprescindibles los certificados. Se admite la autocertificación en el CPTPP y la Alianza del Pacífico. EUR.1 para el acuerdo de libre comercio UE-Chile. Los certificados los emite la Cámara de Comercio de Santiago.",
     import_license_info_es: "SAG (Servicio Agrícola y Ganadero) para productos alimentarios y de origen animal. ISP para productos farmacéuticos. SEC para equipos eléctricos. En general, política comercial abierta con mínimas restricciones a la importación.",
+    customs_reality_es: "Uno de los sistemas aduaneros más eficientes de Latinoamérica. Un arancel plano del 6 % simplifica los cálculos. Su amplia red de TLC hace que la mayoría de las mercancías procedentes de socios principales entren libres de aranceles. Los servicios de mensajería urgente despachan en 1-3 días. Los envíos postales, en 3-7 días.",
   },
 
   CO: {
@@ -1446,6 +1485,10 @@ export const deepCustomsData: Record<string, DeepCustomsData> = {
     trade_statistics_url: "https://www.ine.gov.ao/",
     certificate_of_origin_url: "https://www.ccia.ao/",
     import_regulations_url: "https://www.alfandegas.gv.ao/",
+    clearance_process_pt: "O Serviço Nacional das Alfândegas (SNA) gere a alfândega. Sistema electrónico ASYCUDA para declarações. Despachante aduaneiro obrigatório para importações comerciais. Inspecção pré-embarque por agências autorizadas é obrigatória. Licença de Importação exigida para a maioria das mercadorias. Documentação em português obrigatória. Luanda é o principal porto.",
+    certificate_of_origin_pt: "Certificado SADC para o comércio preferencial regional. A Câmara de Comércio e Indústria de Angola (CCIA) emite certificados não preferenciais. A legalização consular é frequentemente exigida para expedições comerciais.",
+    import_license_info_pt: "Licença de importação exigida para a maioria das mercadorias comerciais através do Ministério do Comércio. Inspecção pré-embarque obrigatória. Controlos rigorosos sobre bens usados e veículos. As importações farmacêuticas exigem autorização da DNME. As importações da indústria petrolífera beneficiam de tratamento preferencial.",
+    customs_reality_pt: "Pode ser muito lenta. Documentação em português obrigatória. Congestionamento frequente no porto de Luanda, um dos portos mais caros de África. São frequentemente reportados pagamentos informais. Os correios expresso (DHL, FedEx) proporcionam um desalfandegamento mais rápido, mas os custos são extremamente elevados. Prever atrasos de 2 a 6 semanas para artigos postais. Economia dependente do petróleo; as importações não petrolíferas podem enfrentar problemas de escassez de divisas. As importações alimentares estão fortemente protegidas (até 50% de direitos sobre alimentos processados).",
   },
   AT: {
     code: 'AT',
@@ -1744,6 +1787,10 @@ BB: {
     trade_statistics_url: "https://www.data.gov.bh/",
     certificate_of_origin_url: "https://www.bcci.bh/",
     import_regulations_url: "https://www.bahraincustoms.gov.bh/",
+    clearance_process_ar: "تتولى شؤون الجمارك في البحرين إدارة الواردات وفق التعرفة الجمركية الموحدة لدول مجلس التعاون الخليجي، بنسبة موحدة قدرها 5% على معظم السلع، و0% على المواد الغذائية الأساسية، و100% على التبغ والكحوليات. وتُقدَّم الإقرارات الجمركية إلكترونياً عبر النافذة الوطنية الموحدة. ويُعدّ ميناء خليفة بن سلمان المنفذ الرئيسي للواردات.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرفة تجارة وصناعة البحرين. وتدخل السلع ذات المنشأ الخليجي معفاةً من الرسوم داخل دول مجلس التعاون. وقد تستلزم الشهادات تصديقاً لدى بعض الشركاء التجاريين.",
+    import_license_info_ar: "يُشترط السجل التجاري للاستيراد. وتشمل المواد المقيَّدة: الكحوليات (مرخصة للفنادق والبعثات الدبلوماسية)، ومنتجات لحم الخنزير (المنافذ المرخصة)، والمستحضرات الصيدلانية (بموافقة الهيئة الوطنية لتنظيم المهن والخدمات الصحية NHRA)، والأسلحة. وقد تُشترط علامات المطابقة الصادرة عن إدارة المواصفات والمقاييس (BSMD).",
+    customs_reality_ar: "نظام جمركي صغير وفعّال. وتجعل التعرفة الموحدة الخليجية بنسبة 5% الاحتساب يسيراً. وتتميز البحرين بانفتاح نسبي مقارنة بدول الخليج، إذ تتوفر الكحوليات بموجب تراخيص. وتُخلَّص الشحنات السريعة بسرعة، غالباً في اليوم نفسه. وقد تتباطأ المعالجة قليلاً خلال المناسبات الدينية (عيد الفطر وعيد الأضحى ورمضان).",
   },
   BI: {
     code: "BI",
@@ -2390,6 +2437,10 @@ CW: {
     trade_statistics_url: "https://www.insd.dj/",
     certificate_of_origin_url: "",
     import_regulations_url: "https://www.douane.gov.dj/",
+    clearance_process_ar: "تتولى المديرية العامة للجمارك والرسوم غير المباشرة (Direction des Douanes et Droits Indirects) إدارة الجمارك. ويُستخدم نظام أسيكودا وورلد (ASYCUDA World) للإقرارات الإلكترونية. ويُعدّ ميناء جيبوتي مركزاً لوجستياً إقليمياً رئيسياً (وهو المنفذ البحري الرئيسي لإثيوبيا). وتوفر منطقة التجارة الحرة (DIFTZ) تعريفات جمركية مخفضة. وتُشترط الوثائق باللغة الفرنسية.",
+    certificate_of_origin_ar: "يُعتمد سند الكوميسا (COMESA) للتجارة الإقليمية. وتصدر غرفة تجارة جيبوتي (Chambre de Commerce de Djibouti) شهادات المنشأ. وتُتاح كذلك شهادات التعاون الإقليمي للهيئة الحكومية الدولية المعنية بالتنمية (IGAD).",
+    import_license_info_ar: "تُستخرج رخصة الاستيراد من وزارة التجارة. وتُحظر الأسلحة والمخدرات. وتستلزم المستحضرات الصيدلانية تصريحاً من وزارة الصحة. وتخضع واردات القات للتنظيم. وتسري إجراءات منفصلة على سلع المنطقة الحرة.",
+    customs_reality_ar: "ميناء عبور رئيسي لإثيوبيا وشرق أفريقيا. والبنية التحتية للموانئ حديثة (محطة حاويات دوراليه). والجمارك فعّالة نسبياً مقارنة بدول المنطقة. ويُفضَّل تقديم الوثائق باللغتين الفرنسية والعربية. وتعمل شركات النقل السريع بكفاءة. وتُيسِّر المنطقة الحرة تجارة العبور.",
   },
   DK: {
     code: 'DK',
@@ -3240,6 +3291,10 @@ GT: {
     trade_statistics_url: 'https://www.censtatd.gov.hk/en/',
     certificate_of_origin_url: 'https://www.chamber.org.hk/en/services/certificates-of-origin.aspx',
     import_regulations_url: 'https://www.customs.gov.hk/en/',
+    clearance_process_zh: "香港为自由港，几乎所有商品均零关税。仅有4类应课税商品：酒类（100%消费税）、烟草（100%消费税）、碳氢油及甲醇。电子贸易申报通过Tradelink系统（TDEC系统）提交。当日清关为常规标准。香港海关负责合规监管。不设增值税或商品及服务税制度。",
+    certificate_of_origin_zh: "由香港总商会（HKGCC）、香港工业总会或厂商联合会签发。亦可由工业贸易署（TID）签发。CEPA原产地证书可享受进入中国大陆的优惠待遇。",
+    import_license_info_zh: "仅以下商品需办理进口许可证：储备商品（大米、冷藏/冷冻肉类）、药品和抗生素、农药、电信设备、战略物品、放射性物质。绝大多数消费品可完全自由进口，无需许可证。",
+    customs_reality_zh: "全球清关最便捷的地区。99.9%的商品零关税。无销售税、无增值税、无商品及服务税。数小时内完成清关，快件通常当日放行。仅4类商品须缴纳消费税（酒类、烟草、碳氢油、甲醇）。是进口商的理想之地，也是全球顶级物流枢纽之一，拥有世界一流的港口和机场基础设施。",
   },
 HN: {
     code: "HN",
@@ -3414,6 +3469,10 @@ HN: {
     trade_statistics_url: "",
     certificate_of_origin_url: "",
     import_regulations_url: "https://www.customs.gov.iq/",
+    clearance_process_ar: "تتولى الهيئة العامة للجمارك العراقية إدارة الواردات. ويتعافى النظام الجمركي تدريجياً بعد عقود من النزاعات، مع إعفاءات استيراد لأغراض إعادة الإعمار في فئات عديدة. وتتراوح التعرفة بين 0% و30% غير أن إنفاذها متفاوت. ويُعدّ ميناء أم قصر (قرب البصرة) المنفذ البحري الرئيسي. ويتولى مطار بغداد الدولي ومطار أربيل الدولي مناولة الشحن الجوي. ويوجد لإقليم كردستان (KRI) إدارة جمركية مستقلة، تتسم عموماً بكفاءة أعلى في المعالجة.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن اتحاد الصناعات العراقي أو الغرفة التجارية. وغالباً ما تستلزم الوثائق التصديق من السفارة العراقية. وتتاح شهادات تفضيلية بموجب اتفاقية الجامعة العربية ومنطقة التجارة الحرة العربية الكبرى (GAFTA). ويقبل إقليم كردستان وثائق منفصلة.",
+    import_license_info_ar: "يُشترط الحصول على رخصة استيراد لمعظم السلع التجارية. ويُحظر استيراد: الكحوليات (باستثناء إقليم كردستان)، ولحم الخنزير، والسلع ذات المنشأ الإسرائيلي. وكثيراً ما تحظى الواردات المتصلة بإعادة الإعمار بإعفاءات جمركية. وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة. وتخضع الأسلحة لرقابة صارمة.",
+    customs_reality_ar: "في طور التعافي بعد عقود من النزاعات. تتراوح التعرفة بين 0% و30%، غير أن واردات إعادة الإعمار كثيراً ما تُعفى من الرسوم. ويتمتع إقليم كردستان (أربيل والسليمانية) بجمارك أكثر كفاءة بكثير من جمارك وسط العراق وجنوبه، ويُعدّ منفذ الدخول المفضل لكثير من المستوردين. ويعاني ميناء أم قصر من الازدحام والبيروقراطية. وتُسجَّل حالات فساد في الموانئ الاتحادية. وتتوفر شركات النقل السريع (DHL وFedEx) في بغداد وأربيل والبصرة. وتتفاوت متطلبات التوثيق بين الجمارك الاتحادية وجمارك إقليم كردستان.",
   },
   IR: {
     code: "IR",
@@ -3532,6 +3591,10 @@ JM: {
     trade_statistics_url: 'https://www.dos.gov.jo/',
     certificate_of_origin_url: 'https://www.ammanchamber.org.jo/',
     import_regulations_url: 'https://www.customs.gov.jo/',
+    clearance_process_ar: "تستخدم دائرة الجمارك الأردنية نظام أسيكودا وورلد (ASYCUDA World) للإقرارات الإلكترونية. والأردن عضو في منظمة التجارة العالمية منذ عام 2000، ولديه اتفاقيات تجارة حرة متعددة (مع الولايات المتحدة والاتحاد الأوروبي والإفتا EFTA ومنطقة التجارة الحرة العربية الكبرى GAFTA). وتتيح المنطقة الاقتصادية الخاصة بالعقبة (ASEZA) الاستيراد المعفى من الرسوم للاستهلاك داخل المنطقة. ويُعدّ مطار الملكة علياء الدولي وميناء العقبة المنفذين الرئيسيين. والتعرفة الجمركية معتدلة وتتراجع وفق التزامات منظمة التجارة العالمية.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرفة تجارة عمان أو غرفة صناعة الأردن. وتُستخدم شهادات منطقة التجارة الحرة العربية الكبرى (GAFTA) للتجارة العربية، وشهادات اتفاقية التجارة الحرة الأردنية الأمريكية للنفاذ المعفى من الرسوم إلى السوق الأمريكية. ويوفر اتفاق الشراكة الأردني الأوروبي معاملةً تفضيلية.",
+    import_license_info_ar: "يُشترط الحصول على رخصة استيراد للشحنات التجارية. وتشمل المواد المقيَّدة: الكحوليات (متاحة لدى موزعين مرخصين فحسب)، والأسلحة، وبعض المواد الكيميائية، والمركبات المستعملة. وتستلزم المستحضرات الصيدلانية موافقة المؤسسة العامة للغذاء والدواء (JFDA). ويُشترط شهادة الذبح الحلال لواردات اللحوم.",
+    customs_reality_ar: "كفاءة نسبية مقارنةً بدول المنطقة. ويعمل نظام أسيكودا (ASYCUDA) بصورة جيدة. وتوفر منطقة العقبة الحرة مزايا كبيرة للإعفاء الجمركي. وتعمل شركات النقل السريع بانتظام. وتتيح اتفاقية التجارة الحرة الأردنية الأمريكية النفاذ المعفى من الرسوم للسلع المؤهلة. والبيروقراطية معتدلة وفي تحسن مستمر. والكحوليات قانونية ومتاحة، خلافاً لكثير من الدول المجاورة.",
   },
   KG: {
     code: "KG",
@@ -3735,6 +3798,10 @@ JM: {
     trade_statistics_url: 'https://www.csb.gov.kw/',
     certificate_of_origin_url: 'https://www.kuwaitchamber.org.kw/',
     import_regulations_url: 'https://www.customs.gov.kw/',
+    clearance_process_ar: "تتولى الإدارة العامة للجمارك الكويتية إدارة الواردات وفق التعرفة الجمركية الموحدة لدول مجلس التعاون الخليجي (CET). وتُطبَّق نسبة موحدة بسيطة قدرها 5% على معظم السلع، و0% على المواد الغذائية الأساسية، و100% على التبغ. ويُعتمد نظام الإقرارات الجمركية الإلكتروني (KACS). ويُعدّ ميناءا الشويخ والشعيبة منفذي الواردات الرئيسيين. ويتولى مطار الكويت الدولي مناولة الشحن الجوي. ولا يوجد نظام ضريبة قيمة مضافة حتى عام 2026.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرفة تجارة وصناعة الكويت. وتدخل السلع ذات المنشأ الخليجي معفاةً من الرسوم. وقد تستلزم الوثائق التصديق (التوثيق) من السفارة الكويتية في بلد المنشأ.",
+    import_license_info_ar: "تُحظر الكحوليات حظراً تاماً (الكويت دولة جافة، وتُفرض عقوبات جنائية صارمة). وتُحظر منتجات لحم الخنزير. وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة. وتُحظر السلع ذات المنشأ الإسرائيلي. وتُشترط شهادات المطابقة الصادرة عن مخطط مطابقة الكويت (KUCAS) للعديد من السلع الاستهلاكية (الألعاب والإلكترونيات ومواد البناء).",
+    customs_reality_ar: "جمارك خليجية كفؤة بتعرفة موحدة بسيطة بنسبة 5% على معظم السلع. والكويت دولة جافة تماماً، إذ تُحظر الكحوليات حظراً صارماً وتُفرض على مخالفي ذلك عقوبات جنائية صارمة تشمل السجن. ولا توجد ضريبة قيمة مضافة حتى عام 2026 (وهي إحدى آخر دول مجلس التعاون الخليجي التي لم تطبقها بعد). وتعمل شركات النقل السريع بكفاءة. ويجب أن تكون الوثائق مكتملة، وكثيراً ما تُشترط الترجمة العربية. وقد تتباطأ المعالجة خلال المناسبات الدينية (رمضان والعيدين).",
   },
   KY: {
     code: "KY",
@@ -3823,6 +3890,10 @@ JM: {
     trade_statistics_url: "https://www.cas.gov.lb/",
     certificate_of_origin_url: "https://www.ccib.org.lb/",
     import_regulations_url: "https://www.customs.gov.lb/",
+    clearance_process_ar: "تتولى المديرية العامة للجمارك اللبنانية إدارة الواردات. ويُعتمد نظام نجم (NAJM) الإلكتروني للإقرارات الجمركية (عند توفر الكهرباء). والتعرفة الجمركية منخفضة تاريخياً (0-5% على معظم السلع الصناعية)، إذ كان الاقتصاد اللبناني يميل إلى التجارة الحرة. وقد أُعيد بناء ميناء بيروت جزئياً بعد انفجار 2020 المدمر. ويُستخدم ميناء طرابلس بصورة متزايدة كبديل. ويتولى مطار رفيق الحريري الدولي مناولة الشحن الجوي.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرف التجارة والصناعة والزراعة اللبنانية (CCIA). وتُستخدم شهادات منطقة التجارة الحرة العربية الكبرى (GAFTA) التفضيلية للتجارة العربية. ويوفر اتفاق الشراكة الأوروبي اللبناني نفاذاً تفضيلياً للسلع الاتحاد الأوروبي.",
+    import_license_info_ar: "تُشترط أذونات الاستيراد لبعض الفئات. وتشمل المواد المقيَّدة: الأسلحة، وبعض المواد الكيميائية، وبعض المنتجات الزراعية (تعرفات حماية تصل إلى 70%). وتُحظر السلع ذات المنشأ الإسرائيلي. وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة العامة. وتُفرض على المركبات رسوم بنسبة 50%.",
+    customs_reality_ar: "أزمة اقتصادية منذ عام 2019. انهيار العملة (فقدت الليرة اللبنانية أكثر من 98% من قيمتها). وأدى انفجار مرفأ بيروت عام 2020 إلى تدمير طاقة استيعابية كبيرة، وأصبح ميناء طرابلس بديلاً مهماً. وتشهد المعالجة الجمركية تذبذباً بفعل عدم الاستقرار السياسي ونقص الكوادر وانقطاع الكهرباء. ويُعدّ التسعير بالدولار ضرورياً. والتعرفة منخفضة تاريخياً (0-5% للسلع الصناعية)، غير أنها تبلغ 50% على المركبات و70% على بعض المواد الغذائية. وعلى الرغم من الأزمة، لا تزال شركتا DHL وFedEx تعملان. والكحوليات قانونية ومتاحة على نطاق واسع، إذ يمتلك لبنان صناعة نبيذ عريقة.",
   },
   LC: {
     code: "LC",
@@ -4088,6 +4159,10 @@ JM: {
     trade_statistics_url: "",
     certificate_of_origin_url: "",
     import_regulations_url: "",
+    clearance_process_ar: "تتولى مصلحة الجمارك الليبية إدارة الجمارك من الناحية الرسمية. وثمة حكومتان متنافستان، إحداهما حكومة الوحدة الوطنية في طرابلس (GNU) والأخرى مرتبطة بالجيش الوطني الليبي (LNA) في الشرق، وتديران إدارتين جمركيتين منفصلتين. وتُشترط الوثائق باللغة العربية. وتراخيص الاستيراد معقدة بسبب تنافس السلطات. ويُشترط اعتماد مصرفي من المصرف المركزي، غير أن الحصول عليه عسير للغاية.",
+    certificate_of_origin_ar: "تصدر الغرفة التجارية الليبية شهادات المنشأ. وقد تُطبَّق شهادات منطقة التجارة الحرة العربية الكبرى (GAFTA) واتحاد المغرب العربي. ويُشترط في العادة التصديق القنصلي. ويعتمد قبول كل سلطة لشهادات معينة على ميناء الدخول.",
+    import_license_info_ar: "تُستخرج رخصة الاستيراد من وزارة الاقتصاد. وتُحظر الكحوليات ولحم الخنزير حظراً صارماً (وفقاً لأحكام الشريعة الإسلامية). ويسري حظر الأمم المتحدة على الأسلحة. ويُشترط اعتماد مصرفي من المصرف المركزي لكثير من الواردات. والوصول إلى العملات الأجنبية مقيَّد بشدة، وتتباين أسعار السوق الموازية تبايناً ملحوظاً.",
+    customs_reality_ar: "متضررة من النزاعات. حكومتان متنافستان لكلٍّ منهما إدارة جمركية مستقلة. والجمارك متوقفة عملياً في بعض المناطق. ويعمل ميناء طرابلس مع وجود مخاطر أمنية. وميناء مصراتة يعمل بكفاءة أكبر. وتقع بنغازي تحت سيطرة الجيش الوطني الليبي. وعلَّقت معظم شركات النقل الدولي عملياتها أو قلَّصتها بصورة حادة. ويجعل نقص العملات الأجنبية الواردات الرسمية بالغة الصعوبة. والتعرفة المعلنة تتراوح بين 0% و40% غير أن إنفاذها ضعيف ومتذبذب. ولا يعمل أي نظام لضريبة القيمة المضافة.",
   },
   MA: {
     code: "MA",
@@ -4469,6 +4544,10 @@ JM: {
     trade_statistics_url: "https://www.ons.mr/",
     certificate_of_origin_url: "",
     import_regulations_url: "https://www.douanes.gov.mr/",
+    clearance_process_ar: "تتولى المديرية العامة للجمارك (Direction Generale des Douanes) إدارة الجمارك. ويُستخدم نظام أسيكودا (ASYCUDA) للإقرارات. ويُعدّ ميناء نواكشوط (ميناء الصداقة Port de l'Amitie) وميناء نواذيبو منفذي الدخول الرئيسيين. وتُقبل الوثائق باللغتين العربية والفرنسية. ويُلزم تعيين مخلِّص جمركي لإتمام الواردات التجارية. وموريتانيا ليست عضواً في التعرفة الموحدة للإيكواس (ECOWAS CET)، وتطبق جدول تعرفة خاص بها.",
+    certificate_of_origin_ar: "تصدر غرفة التجارة والصناعة والزراعة الموريتانية (Chambre de Commerce, d'Industrie et d'Agriculture de Mauritanie) شهادات المنشأ. وتُعتمد شهادة منطقة التجارة الحرة العربية (GAFTA) للتجارة العربية، وشهادات منطقة التجارة الحرة القارية الأفريقية (AU/AfCFTA) للتجارة القارية.",
+    import_license_info_ar: "تُستخرج رخصة الاستيراد من وزارة التجارة. وتُحظر الكحوليات حظراً صارماً (وفقاً لأحكام الشريعة الإسلامية). وتُحظر منتجات لحم الخنزير. وتُحظر الأسلحة. وتستلزم المستحضرات الصيدلانية تصريحاً من وزارة الصحة. ولقطاعَي الصيد والتعدين أحكام استيراد خاصة.",
+    customs_reality_ar: "دولة صحراوية ذات بنية تحتية محدودة. والقدرة الاستيعابية لميناء نواكشوط في تحسن لكنها لا تزال محدودة. وتُحظر الكحوليات ولحم الخنزير حظراً صارماً. وتُشترط الوثائق باللغتين العربية والفرنسية. ويُسهم تعدين خام الحديد (الشركة الوطنية للصناعة والمناجم SNIM في نواذيبو) في تدفقات استيراد ضخمة. وخدمات النقل السريع محدودة. والبنية التحتية للطرق ضعيفة خارج المدن الرئيسية.",
   },
   MT: {
     code: "MT",
@@ -4614,6 +4693,10 @@ JM: {
     trade_statistics_url: "https://www.ine.gov.mz/",
     certificate_of_origin_url: "https://www.cta.org.mz/",
     import_regulations_url: "https://www.at.gov.mz/",
+    clearance_process_pt: "A Autoridade Tributária de Moçambique (AT) gere a alfândega. Sistema electrónico ASYCUDA World para declarações. Membro da SADC com tarifas preferenciais. Despachante aduaneiro obrigatório para importações comerciais. Documentação em português obrigatória. Maputo e Beira são os principais portos. O porto de Nacala está a crescer como alternativa a norte.",
+    certificate_of_origin_pt: "Certificado SADC para o comércio preferencial regional. A Câmara de Comércio de Moçambique (CTA) emite certificados. O APE UE-SADC proporciona acesso preferencial às mercadorias da UE.",
+    import_license_info_pt: "Licença de importação do Ministério do Comércio para mercadorias controladas. Inspecção pré-embarque para algumas categorias. Armas de fogo e produtos químicos perigosos rigorosamente controlados. Os produtos farmacêuticos necessitam de aprovação do ministério da saúde. Os veículos usados estão sujeitos a restrições de idade.",
+    customs_reality_pt: "Em melhoria, mas ainda desafiante. O porto de Maputo é relativamente eficiente e serve também como trânsito para os países vizinhos sem litoral (Zimbabué, Zâmbia, Maláui). O porto da Beira serve a região central. O porto de Nacala está a crescer com os investimentos em GNL. Documentação em português obrigatória. O sistema ASYCUDA ajuda. Correios expresso (DHL, FedEx) disponíveis em Maputo e Beira. Serviço postal lento, 2 a 4 semanas. A insurgência em Cabo Delgado (província do norte) afecta a logística nessa região. A corrupção está presente, mas em melhoria.",
   },
   NA: {
     code: "NA",
@@ -4847,6 +4930,10 @@ NI: {
     trade_statistics_url: "https://www.ncsi.gov.om/",
     certificate_of_origin_url: "https://www.chamberoman.com/",
     import_regulations_url: "https://www.customs.gov.om/",
+    clearance_process_ar: "تتولى الإدارة العامة للجمارك التابعة لشرطة عُمان السلطانية إدارة الواردات وفق التعرفة الجمركية الموحدة لدول مجلس التعاون الخليجي. وتُطبَّق نسبة قياسية قدرها 5% على معظم السلع، و0% على المواد الغذائية الأساسية، و100% على التبغ والكحوليات. ويُعتمد نظام بيان (Bayan) الإلكتروني للإقرارات الجمركية. ويُعدّ ميناءا مسقط وصحار من الموانئ الكبرى، فيما يُعدّ ميناء صلالة مركزاً رئيسياً لإعادة شحن الحاويات. وتوفر اتفاقية التجارة الحرة العُمانية الأمريكية معاملةً تفضيلية. وتُطبَّق ضريبة القيمة المضافة بنسبة 5% منذ أبريل 2021.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرفة تجارة وصناعة عُمان. وتُعفى السلع ذات المنشأ الخليجي من الرسوم. وتُستخدم شهادات اتفاقية التجارة الحرة العُمانية الأمريكية للنفاذ التفضيلي إلى السوق الأمريكية. وقد تستلزم الوثائق التصديق.",
+    import_license_info_ar: "يُشترط السجل التجاري. وتشمل المواد المقيَّدة: الكحوليات (مرخصة للفنادق والبعثات الدبلوماسية)، ومنتجات لحم الخنزير (المنافذ المرخصة)، والأسلحة. وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة. وتُشترط المتطلبات الحلال لواردات الأغذية.",
+    customs_reality_ar: "نظام جمركي خليجي كفؤ. وتُيسِّر التعرفة الموحدة بنسبة 5% الإجراءات. وميناءا مسقط وصحار مجهزان تجهيزاً جيداً، فيما يُعدّ ميناء صلالة مركزاً رئيسياً لإعادة شحن الحاويات يضاهي دبي. وتُطبَّق ضريبة القيمة المضافة بنسبة 5% منذ عام 2021. وتوفر اتفاقية التجارة الحرة العُمانية الأمريكية (إحدى الاتفاقيات النادرة في الخليج) مزايا تجارية. وتعمل شركات النقل السريع بكفاءة. وتشهد البلاد تحديثاً مع نظام بيان (Bayan) الإلكتروني. وتوفر مناطق صحار وصلالة الحرة مزايا الاستيراد المعفى من الرسوم لشركات إعادة التصدير.",
   },
 PA: {
     code: "PA",
@@ -5054,6 +5141,10 @@ PA: {
     trade_statistics_url: "https://www.pcbs.gov.ps/",
     certificate_of_origin_url: "",
     import_regulations_url: "",
+    clearance_process_ar: "تعمل الجمارك الفلسطينية بموجب بروتوكول باريس (الاتفاق الاقتصادي مع إسرائيل لعام 1994). وتطبِّق السلطة الفلسطينية المعدلات الجمركية الإسرائيلية ذاتها على معظم السلع. وتدخل جميع السلع عبر معابر يسيطر عليها الجانب الإسرائيلي. وتمر واردات الضفة الغربية عبر الموانئ الإسرائيلية (حيفا/أسدود)، فيما تخضع واردات قطاع غزة لقيود مشددة عبر معبر كرم أبو سالم/رفح. وتُطبَّق ضريبة القيمة المضافة بنسبة 16%.",
+    certificate_of_origin_ar: "تصدر شهادات المنشأ عن غرف التجارة الفلسطينية. وينظِّم بروتوكول باريس العلاقات التجارية مع إسرائيل. ويوفر اتفاق الشراكة مع الاتحاد الأوروبي نفاذاً تفضيلياً للصادرات الفلسطينية.",
+    import_license_info_ar: "تصدر السلطة الفلسطينية تصاريح الاستيراد، غير أن إسرائيل تتحكم فعلياً في المعابر الحدودية. وتخضع السلع ذات الاستخدام المزدوج لقيود إسرائيلية عسكرية مشددة. وتُحظر سلع كثيرة على قطاع غزة. وتتمتع الضفة الغربية بمرونة أكبر من غزة في الواردات.",
+    customs_reality_ar: "إجراءات بالغة التعقيد بسبب السيطرة الإسرائيلية على جميع المعابر. الضفة الغربية: تعبر السلع عبر الموانئ الإسرائيلية مع تأخيرات كبيرة وتكاليف إضافية في نقاط التفتيش. غزة: حصار صارم يقيِّد جل الواردات، مع أوقات انتظار طويلة وتفتيش مشدد، وفي فترات النزاع تتوقف جميع الواردات تماماً. ولا يوجد شحن دولي مباشر إلى الأراضي الفلسطينية. وتمر جميع شركات النقل السريع عبر إسرائيل. ويعني بروتوكول باريس أن المعدلات الجمركية الفلسطينية مرآة للمعدلات الإسرائيلية، غير أن السلطة الفلسطينية لا تسيطر على المعابر. وأوقات التخليص غير قابلة للتنبؤ تماماً، وقد تتراوح بين أيام وأشهر.",
   },
   PT: {
     code: 'PT',
@@ -5083,6 +5174,10 @@ PA: {
     trade_statistics_url: 'https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_tema&tema_cod=1311',
     certificate_of_origin_url: 'https://www.ccip.pt/en/',
     import_regulations_url: 'https://www.at.gov.pt/',
+    clearance_process_pt: "A Alfândega Portuguesa (AT, Autoridade Tributária e Aduaneira) segue o Código Aduaneiro da União Europeia. Sistema de declaração electrónica SDS (Sistema de Desalfandegamento Simplificado). Os portos de Lisboa e Sines (Sines é um hub atlântico de águas profundas em crescimento) e o aeroporto de Lisboa são os principais pontos de entrada. Os CTT (Correios de Portugal) tratam do desalfandegamento postal cobrando uma taxa de processamento. IOSS para o IVA a partir de €0.",
+    certificate_of_origin_pt: "Emitido pela Câmara de Comércio e Indústria Portuguesa (CCIP) e pela AICEP Portugal Global. Certificado de circulação EUR.1 para parceiros de ALC da UE. Sistema REX para exportadores registados. Facilitação comercial especial com os países de língua portuguesa (CPLP, Angola, Brasil, Moçambique, etc.).",
+    import_license_info_pt: "Licenciamento conforme a norma da UE. Exigido para quotas agrícolas, bens de dupla utilização e armas. Aprovação do INFARMED para medicamentos e dispositivos médicos. A ASAE (Autoridade de Segurança Alimentar e Económica) controla a segurança alimentar. A importação de vinho tem requisitos regulamentares específicos.",
+    customs_reality_pt: "Alfândega da UE, geralmente eficiente. As encomendas postais dos CTT podem demorar 2 a 5 dias para o desalfandegamento e os CTT cobram uma taxa de processamento para encomendas sujeitas a direitos aduaneiros. Os correios expresso são mais rápidos (1 a 2 dias). A Madeira e os Açores têm o estatuto especial de regiões ultraperiféricas da UE com taxas de IVA reduzidas. O porto de Sines está a crescer como principal porta atlântica para a carga asiática.",
   },
   PW: {
     code: "PW",
@@ -5170,6 +5265,10 @@ PY: {
     trade_statistics_url: 'https://www.psa.gov.qa/',
     certificate_of_origin_url: 'https://www.qatarchamber.com/',
     import_regulations_url: 'https://www.customs.gov.qa/',
+    clearance_process_ar: "تعمل الهيئة العامة للجمارك في قطر وفق التعرفة الجمركية الموحدة لدول مجلس التعاون الخليجي. وتُطبَّق نسبة قياسية قدرها 5% على معظم السلع، و0% على المواد الغذائية الأساسية، و100% على التبغ، و100% على الكحوليات. ويُعتمد نظام النجوم (Al Nojoom) الإلكتروني للإقرارات الجمركية. ويُعدّ ميناء حمد (مرفق حديث افتُتح عام 2017) ومطار حمد الدولي منفذي الدخول الرئيسيين. وتوفر مناطق قطر الحرة (QFZ) أنظمة استيراد معفاة من الرسوم مع تملك أجنبي بنسبة 100%. ولا توجد ضريبة قيمة مضافة.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن غرفة تجارة وصناعة قطر. وتدخل السلع ذات المنشأ الخليجي معفاةً من الرسوم. وقد تستلزم الوثائق التصديق من السفارة القطرية. وبإمكان منشآت مناطق قطر الحرة (QFZ) إصدار شهادات وفق قواعد المنطقة الحرة.",
+    import_license_info_ar: "يُشترط السجل التجاري لممارسة نشاط الاستيراد. وتقتصر الكحوليات على الفنادق المرخصة وشركة قطر للتوزيع (QDC، تتطلب تصريحاً). ويقتصر لحم الخنزير على المنافذ المرخصة. وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة العامة. وتُشترط شهادة الذبح الحلال للأغذية. وتخضع المواد الدينية والإعلامية لمراجعة المحتوى.",
+    customs_reality_ar: "جمارك حديثة وفعّالة، طُوِّرت تطويراً كبيراً لاستضافة كأس العالم لكرة القدم 2022 (FIFA). ولا توجد ضريبة قيمة مضافة حتى عام 2026. وتعرفة موحدة بسيطة بنسبة 5% وفقاً للنظام الخليجي. وميناء حمد منشأة متطورة وفق أحدث المعايير. وتعمل شركات النقل السريع بكفاءة عالية. وتتيح مناطق قطر الحرة التملك الأجنبي بنسبة 100% والاستيراد المعفى من الرسوم. والبلاد ثرية وذات بنية تحتية متميزة. وأوقات التخليص سريعة، تتراوح عادةً بين يوم ويومين.",
   },
   RE: {
     code: "RE",
@@ -5373,6 +5472,10 @@ PY: {
     trade_statistics_url: "https://www.cbs.gov.sd/",
     certificate_of_origin_url: "",
     import_regulations_url: "https://customs.gov.sd/",
+    clearance_process_ar: "تتولى هيئة الجمارك السودانية إدارة الواردات. ويعمل نظام أسيكودا (ASYCUDA) جزئياً. وتعمل الحكومة الانتقالية بعد الثورة على تحسين الانفتاح التجاري منذ عام 2019. ورُفعت العقوبات الأمريكية جزئياً عام 2020 (شُطب السودان من قائمة الدول الراعية للإرهاب). ويُعدّ بورتسودان على البحر الأحمر منفذ الدخول الرئيسي. وتُشترط الوثائق باللغة العربية. ويُلزم تعيين مخلِّص جمركي.",
+    certificate_of_origin_ar: "تصدر شهادة المنشأ عن الغرفة التجارية السودانية. وتُستخدم شهادات الكوميسا (COMESA) للتجارة الإقليمية التفضيلية. وشهادات منطقة التجارة الحرة العربية الكبرى (GAFTA) للتجارة العربية. وكثيراً ما تستلزم الوثائق التصديق من السفارة السودانية.",
+    import_license_info_ar: "يُشترط الحصول على رخصة استيراد من وزارة التجارة لمعظم السلع التجارية. وتُحظر الكحوليات حظراً تاماً (وفقاً لأحكام الشريعة الإسلامية). وتُحظر منتجات لحم الخنزير. وتخضع الأسلحة لرقابة صارمة. وتستلزم المستحضرات الصيدلانية موافقة الوزارة الاتحادية للصحة. ويُشترط الفحص قبل الشحن لبعض الفئات.",
+    customs_reality_ar: "أوضاع متحسنة بعد الثورة، غير أنها لا تزال صعبة. ورُفعت العقوبات الأمريكية جزئياً، مما أتاح المزيد من التجارة الدولية. ويُعدّ بورتسودان منفذ الدخول الرئيسي، ويتعرض للازدحام بصورة متكررة. وتشهد إجراءات البريد بطئاً شديداً، تمتد إلى أسابيع من الانتظار. وتتوفر شركات النقل السريع (DHL) لكنها مكلفة ومحدودة. وأدى النزاع المسلح منذ أبريل 2023 إلى اضطراب حاد في الخدمات اللوجستية في إقليم الخرطوم. ويزيد عدم استقرار العملة من حالة عدم اليقين.",
   },
   SI: {
     code: "SI",
@@ -5696,6 +5799,10 @@ SV: {
     trade_statistics_url: "",
     certificate_of_origin_url: "",
     import_regulations_url: "",
+    clearance_process_ar: "تتولى المديرية العامة للجمارك والمكوس السورية إدارة الواردات في مناطق سيطرة حكومة الأسد من الناحية الرسمية. وقد تأثرت الإدارة الجمركية بشدة جراء الحرب الأهلية منذ عام 2011. وتقع مناطق متعددة تحت سيطرات مختلفة (الحكومة، وقوات سوريا الديمقراطية SDF/الكردية، وهيئة تحرير الشام HTS/المعارضة). وتستخدم مناطق الحكومة جمارك دمشق. ويُعدّ ميناء اللاذقية الميناء الحكومي الرئيسي العامل. وتقيِّد العقوبات الأمريكية والأوروبية الشاملة معظم التجارة. وقد تُفضي التحولات السياسية بعد عام 2024 إلى تغيير الأوضاع.",
+    certificate_of_origin_ar: "تعمل غرف التجارة السورية في مناطق سيطرة الحكومة. والاتفاقيات التجارية العاملة محدودة للغاية. وعضوية منطقة التجارة الحرة العربية الكبرى (GAFTA) معلَّقة. وتقيد العقوبات معظم التجارة الدولية تقييداً صارماً.",
+    import_license_info_ar: "تُشترط رسمياً تراخيص استيراد شاملة. وتُحظر سلع كثيرة أو تخضع لقيود بسبب اقتصاد الحرب. وتقيِّد ضوابط النقد الأجنبي الواردات تقييداً شديداً. وتحظر العقوبات الأمريكية والأوروبية تصدير سلع كثيرة إلى سوريا من الدول الغربية. وتختلف القواعد بين مناطق السيطرة المتعددة.",
+    customs_reality_ar: "البلاد منكوبة بالحرب منذ عام 2011. والجمارك متوقفة في مناطق كثيرة. وتقيد العقوبات الأمريكية والأوروبية الشاملة معظم التجارة التجارية. ولا تخدم شركات الشحن الكبرى (DHL وFedEx وUPS) سوريا. وخيارات الشحن محدودة جداً، وتمر بصورة رئيسية عبر وسطاء في لبنان أو تركيا أو دبي، وكثيراً ما تكون قانونيتها رمادية. والنظام المصرفي معطَّل إلى حد بعيد فيما يخص التحويلات الدولية. وانهارت الليرة السورية. وثمة مخاطر مصادرة الشحنات على يد فصائل متعددة. وتخلق التحولات السياسية بعد عام 2024 حالة من عدم اليقين. ولا يُنصح بالشحن التجاري إلى سوريا، ويجب التحقق من أحدث وضع للعقوبات قبل أي تعامل تجاري.",
   },
   SZ: {
     code: "SZ",
@@ -6280,6 +6387,10 @@ VE: {
     trade_statistics_url: "",
     certificate_of_origin_url: "",
     import_regulations_url: "",
+    clearance_process_ar: "تتولى مصلحة الجمارك اليمنية إدارة الواردات في المناطق الخاضعة لسيطرة الحكومة. وقد قسَّمت الحرب منذ عام 2014 البلاد إلى شمال يسيطر عليه الحوثيون (صنعاء والحديدة) وجنوب تحت سلطة الحكومة المعترف بها دولياً (عدن). وتُطبَّق ضريبة المبيعات العامة (GST) بنسبة 5% على الواردات. ويعمل ميناء عدن جزئياً تحت سلطة الحكومة المعترف بها. ويخضع ميناء الحديدة (المنفذ الرئيسي لاستيراد الأغذية) لرقابة الأمم المتحدة. وتسري أنظمة جمركية مختلفة في مناطق السيطرة المختلفة.",
+    certificate_of_origin_ar: "تعمل غرف التجارة اليمنية (وتختلف بين عدن وصنعاء). وعضوية منطقة التجارة الحرة العربية الكبرى (GAFTA) للتجارة العربية. والاتفاقيات التجارية الدولية العاملة محدودة جداً.",
+    import_license_info_ar: "تُحظر الكحوليات (وفقاً لأحكام الشريعة الإسلامية). وتخضع الأسلحة لقيود مشددة (رسمياً). وتستلزم المستحضرات الصيدلانية موافقة وزارة الصحة. ومعظم الواردات مساعدات إنسانية ومواد غذائية أساسية. وتختلف الاشتراطات بين مناطق الحوثيين ومناطق الحكومة.",
+    customs_reality_ar: "منطقة حرب منذ عام 2014. البلاد منقسمة بين شمال يسيطر عليه الحوثيون وجنوب تحت سلطة الحكومة المعترف بها. ويعمل ميناء عدن جزئياً مع وجود أضرار. ويستقبل ميناء الحديدة (على البحر الأحمر) معظم واردات الأغذية تحت رقابة الأمم المتحدة/اتفاق ستوكهولم. ومطار صنعاء مغلق أمام الرحلات التجارية. ولا تخدم شركات الشحن الكبرى اليمن. ولشركة DHL خدمة محدودة جداً عبر عدن/جيبوتي. ولا يوجد نظام بريدي عامل. وفرض التحالف بقيادة السعودية (حتى هدنة 2023) قيوداً على الواردات. والريال اليمني في انهيار حر. وتشهد البلاد أسوأ أزمة إنسانية في العالم، إذ تتمحور معظم الواردات حول المعونات. وتؤثر اضطرابات الشحن في البحر الأحمر الناجمة عن هجمات الحوثيين على السفن التجارية على جميع الشحنات المتجهة إلى اليمن.",
   },
   ZM: {
     code: "ZM",

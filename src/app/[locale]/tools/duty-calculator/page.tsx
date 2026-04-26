@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { t, tf } from "@/lib/i18n";
+import { countries, getCountryName } from "@/lib/data";
 import type { Locale } from "@/lib/types";
 import Link from "next/link";
 import DutyCalculatorStandalone from "@/components/DutyCalculatorStandalone";
@@ -210,7 +211,9 @@ export default async function DutyCalculatorPage({
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                   <span style={{ fontSize: 28 }}>🇩🇪</span>
                   <div>
-                    <div style={{ fontSize: 17, fontWeight: 800, letterSpacing: "-.01em", color: "var(--ink)" }}>Germany</div>
+                    <div style={{ fontSize: 17, fontWeight: 800, letterSpacing: "-.01em", color: "var(--ink)" }}>
+                      {(() => { const c = countries.find((x) => x.code === "DE"); return c ? getCountryName(c, loc) : "Germany"; })()}
+                    </div>
                     <div style={{ fontSize: 12, color: "var(--muted)" }}>{tf(loc, "sample_profile", "Sample country profile · weekly update")}</div>
                   </div>
                 </div>

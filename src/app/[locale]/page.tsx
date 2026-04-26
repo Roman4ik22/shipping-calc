@@ -188,7 +188,7 @@ export default async function HomePage({
                       <div style={{ fontSize: 12, color: "var(--muted)" }}>{tf(loc, "live_rates_updated_weekly", "Live rates · updated weekly")}</div>
                     </div>
                   </div>
-                  <span style={{ padding: "4px 10px", fontSize: 11, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase", background: "rgba(15,138,72,.12)", color: "#0F8A48", borderRadius: 999 }}>LIVE</span>
+                  <span style={{ padding: "4px 10px", fontSize: 11, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase", background: "rgba(15,138,72,.12)", color: "#0F8A48", borderRadius: 999 }}>{tf(loc, "live_pill", "LIVE")}</span>
                 </div>
 
                 <ShippingForm
@@ -271,10 +271,16 @@ export default async function HomePage({
             return (
               <>
                 {/* Route bar */}
+                {(() => {
+                  const usCountry = countries.find((c) => c.code === "US");
+                  const gbCountry = countries.find((c) => c.code === "GB");
+                  const usName = usCountry ? getCountryName(usCountry, loc) : "United States";
+                  const gbName = gbCountry ? getCountryName(gbCountry, loc) : "United Kingdom";
+                  return (
                 <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 18px", background: "#fff", border: "1px solid var(--line)", borderRadius: 16, boxShadow: "var(--shadow-sm)", marginBottom: 14, flexWrap: "wrap" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <span style={{ fontSize: 20 }}>{countryFlag("US")}</span>
-                    <span style={{ fontWeight: 700, color: "var(--ink)" }}>United States</span>
+                    <span style={{ fontWeight: 700, color: "var(--ink)" }}>{usName}</span>
                   </div>
                   <div style={{ flex: "0 0 60px", height: 1, background: "var(--line)", position: "relative" }}>
                     <svg viewBox="0 0 24 24" width="14" height="14" style={{ position: "absolute", left: "50%", top: -7, transform: "translateX(-50%) rotate(90deg)", color: "var(--blue)" }} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -283,14 +289,16 @@ export default async function HomePage({
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <span style={{ fontSize: 20 }}>{countryFlag("GB")}</span>
-                    <span style={{ fontWeight: 700, color: "var(--ink)" }}>United Kingdom</span>
+                    <span style={{ fontWeight: 700, color: "var(--ink)" }}>{gbName}</span>
                   </div>
                   <div style={{ width: 1, height: 22, background: "var(--line)" }} />
-                  <div style={{ fontSize: 13, color: "var(--muted)" }}>Package · <b style={{ color: "var(--ink)" }}>2.0 kg</b></div>
+                  <div style={{ fontSize: 13, color: "var(--muted)" }}>{tf(loc, "weight", "Package")} · <b style={{ color: "var(--ink)" }}>2.0 kg</b></div>
                   <Link href={`/${locale}/shipping/united-states-to-united-kingdom`} style={{ marginLeft: "auto", fontSize: 13, fontWeight: 600, color: "var(--blue)", textDecoration: "none" }}>
                     {tf(loc, "see_full_comparison", "See full comparison")} →
                   </Link>
                 </div>
+                  );
+                })()}
 
                 {/* Table */}
                 <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
