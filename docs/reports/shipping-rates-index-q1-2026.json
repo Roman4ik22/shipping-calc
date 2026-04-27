@@ -1,0 +1,202 @@
+[
+  {
+    "corridor": "CN→US",
+    "carriers_offering": 14,
+    "cheapest_carrier": "zto-international",
+    "cheapest_price_usd_per_1kg": 8.74,
+    "average_price_usd": 21.02,
+    "median_price_usd": 16.51,
+    "max_price_usd": 45.9,
+    "spread_pct": 425.2
+  },
+  {
+    "corridor": "CN→GB",
+    "carriers_offering": 14,
+    "cheapest_carrier": "zto-international",
+    "cheapest_price_usd_per_1kg": 8.74,
+    "average_price_usd": 18.82,
+    "median_price_usd": 16.39,
+    "max_price_usd": 45.9,
+    "spread_pct": 425.2
+  },
+  {
+    "corridor": "CN→DE",
+    "carriers_offering": 14,
+    "cheapest_carrier": "zto-international",
+    "cheapest_price_usd_per_1kg": 8.74,
+    "average_price_usd": 18.82,
+    "median_price_usd": 16.39,
+    "max_price_usd": 45.9,
+    "spread_pct": 425.2
+  },
+  {
+    "corridor": "CN→FR",
+    "carriers_offering": 14,
+    "cheapest_carrier": "zto-international",
+    "cheapest_price_usd_per_1kg": 8.74,
+    "average_price_usd": 18.82,
+    "median_price_usd": 16.39,
+    "max_price_usd": 45.9,
+    "spread_pct": 425.2
+  },
+  {
+    "corridor": "CN→BR",
+    "carriers_offering": 14,
+    "cheapest_carrier": "zto-international",
+    "cheapest_price_usd_per_1kg": 8.74,
+    "average_price_usd": 22.01,
+    "median_price_usd": 16.51,
+    "max_price_usd": 45.9,
+    "spread_pct": 425.2
+  },
+  {
+    "corridor": "US→GB",
+    "carriers_offering": 9,
+    "cheapest_carrier": "landmark-global",
+    "cheapest_price_usd_per_1kg": 9.84,
+    "average_price_usd": 22.51,
+    "median_price_usd": 15.66,
+    "max_price_usd": 41.7,
+    "spread_pct": 323.8
+  },
+  {
+    "corridor": "US→DE",
+    "carriers_offering": 9,
+    "cheapest_carrier": "landmark-global",
+    "cheapest_price_usd_per_1kg": 5.46,
+    "average_price_usd": 22.03,
+    "median_price_usd": 15.66,
+    "max_price_usd": 41.7,
+    "spread_pct": 663.7
+  },
+  {
+    "corridor": "US→FR",
+    "carriers_offering": 9,
+    "cheapest_carrier": "landmark-global",
+    "cheapest_price_usd_per_1kg": 5.46,
+    "average_price_usd": 22.03,
+    "median_price_usd": 15.66,
+    "max_price_usd": 41.7,
+    "spread_pct": 663.7
+  },
+  {
+    "corridor": "US→JP",
+    "carriers_offering": 9,
+    "cheapest_carrier": "asendia",
+    "cheapest_price_usd_per_1kg": 20.76,
+    "average_price_usd": 30.55,
+    "median_price_usd": 25.86,
+    "max_price_usd": 46.91,
+    "spread_pct": 126.0
+  },
+  {
+    "corridor": "US→AU",
+    "carriers_offering": 9,
+    "cheapest_carrier": "asendia",
+    "cheapest_price_usd_per_1kg": 20.76,
+    "average_price_usd": 29.93,
+    "median_price_usd": 23.29,
+    "max_price_usd": 46.91,
+    "spread_pct": 126.0
+  },
+  {
+    "corridor": "US→CA",
+    "carriers_offering": 8,
+    "cheapest_carrier": "asendia",
+    "cheapest_price_usd_per_1kg": 5.46,
+    "average_price_usd": 15.47,
+    "median_price_usd": 8.35,
+    "max_price_usd": 31.34,
+    "spread_pct": 474.0
+  },
+  {
+    "corridor": "US→MX",
+    "carriers_offering": 8,
+    "cheapest_carrier": "pitney-bowes",
+    "cheapest_price_usd_per_1kg": 9.29,
+    "average_price_usd": 19.69,
+    "median_price_usd": 18.5,
+    "max_price_usd": 31.34,
+    "spread_pct": 237.4
+  },
+  {
+    "corridor": "DE→FR",
+    "carriers_offering": 6,
+    "cheapest_carrier": "evri-formerly-hermes",
+    "cheapest_price_usd_per_1kg": 11.59,
+    "average_price_usd": 16.77,
+    "median_price_usd": 14.2,
+    "max_price_usd": 31.52,
+    "spread_pct": 172.0
+  },
+  {
+    "corridor": "DE→IT",
+    "carriers_offering": 6,
+    "cheapest_carrier": "dpd-group-eu",
+    "cheapest_price_usd_per_1kg": 14.2,
+    "average_price_usd": 20.25,
+    "median_price_usd": 17.16,
+    "max_price_usd": 39.39,
+    "spread_pct": 177.4
+  },
+  {
+    "corridor": "KR→US",
+    "carriers_offering": 4,
+    "cheapest_carrier": "hanjin-express",
+    "cheapest_price_usd_per_1kg": 23.68,
+    "average_price_usd": 26.64,
+    "median_price_usd": 24.81,
+    "max_price_usd": 33.26,
+    "spread_pct": 40.5
+  },
+  {
+    "corridor": "DE→US",
+    "carriers_offering": 4,
+    "cheapest_carrier": "deutsche-post",
+    "cheapest_price_usd_per_1kg": 27.72,
+    "average_price_usd": 46.31,
+    "median_price_usd": 38.24,
+    "max_price_usd": 81.03,
+    "spread_pct": 192.3
+  },
+  {
+    "corridor": "JP→US",
+    "carriers_offering": 4,
+    "cheapest_carrier": "sagawa-express",
+    "cheapest_price_usd_per_1kg": 23.68,
+    "average_price_usd": 25.14,
+    "median_price_usd": 25.14,
+    "max_price_usd": 26.61,
+    "spread_pct": 12.4
+  },
+  {
+    "corridor": "FR→ES",
+    "carriers_offering": 3,
+    "cheapest_carrier": "colissimo-la-poste",
+    "cheapest_price_usd_per_1kg": 5.55,
+    "average_price_usd": 16.83,
+    "median_price_usd": 5.55,
+    "max_price_usd": 39.39,
+    "spread_pct": 609.7
+  },
+  {
+    "corridor": "ES→DE",
+    "carriers_offering": 2,
+    "cheapest_carrier": "correos",
+    "cheapest_price_usd_per_1kg": 17.48,
+    "average_price_usd": 20.1,
+    "median_price_usd": 20.1,
+    "max_price_usd": 22.72,
+    "spread_pct": 30.0
+  },
+  {
+    "corridor": "GB→US",
+    "carriers_offering": 2,
+    "cheapest_carrier": "royal-mail",
+    "cheapest_price_usd_per_1kg": 22.5,
+    "average_price_usd": 29.28,
+    "median_price_usd": 29.28,
+    "max_price_usd": 36.06,
+    "spread_pct": 60.3
+  }
+]
