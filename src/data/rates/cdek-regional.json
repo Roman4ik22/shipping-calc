@@ -1,7 +1,7 @@
 {
   "carrier_id": "cdek-regional",
-  "effective_date": "2026-04-13",
-  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13]",
+  "effective_date": "2026-04-27",
+  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
   "zones": [
     {
       "zone": 1,
@@ -53,57 +53,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.46,
-          7.65,
-          15.3
+          5.62,
+          7.88,
+          15.76
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.65,
-          10.93,
-          24.04
+          7.88,
+          11.26,
+          24.76
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          9.84,
-          16.39,
-          36.06
+          10.14,
+          16.88,
+          37.14
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.3,
-          29.5,
-          65.56
+          15.76,
+          30.39,
+          67.53
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          24.04,
-          53.54,
-          107.09
+          24.76,
+          55.15,
+          110.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          41.52,
-          92.89,
-          191.23
+          42.77,
+          95.68,
+          196.97
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          56.83,
-          131.13,
-          273.19
+          58.53,
+          135.06,
+          281.39
         ]
       }
     ],
@@ -111,57 +111,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.28,
-          5.46,
-          10.93
+          3.38,
+          5.62,
+          11.26
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.37,
-          7.65,
-          17.48
+          4.5,
+          7.88,
+          18
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.56,
-          12.02,
-          26.22
+          6.76,
+          12.38,
+          27.01
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.84,
-          21.86,
-          48.08
+          10.14,
+          22.52,
+          49.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.39,
-          39.34,
-          78.67
+          16.88,
+          40.52,
+          81.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.41,
-          68.85,
-          142.06
+          29.26,
+          70.92,
+          146.32
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          39.34,
-          96.16,
-          202.16
+          40.52,
+          99.04,
+          208.22
         ]
       }
     ]

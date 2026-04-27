@@ -1,7 +1,7 @@
 {
   "carrier_id": "australia-post",
-  "effective_date": "2026-04-13",
-  "note": "Real Australia Post International Standard/Express rates from auspost.com.au, July 2025. AUD converted to USD at 0.65. Zone 1=NZ/Pacific, Zone 4=Europe/NA (US/UK). Source: auspost.com.au/sending/parcels/international. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13]",
+  "effective_date": "2026-04-27",
+  "note": "Real Australia Post International Standard/Express rates from auspost.com.au, July 2025. AUD converted to USD at 0.65. Zone 1=NZ/Pacific, Zone 4=Europe/NA (US/UK). Source: auspost.com.au/sending/parcels/international. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
   "zones": [
     {
       "zone": 1,
@@ -86,61 +86,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.31,
-          12.47,
-          16.62,
-          20.79,
-          24.95
+          8.6,
+          12.91,
+          17.2,
+          21.52,
+          25.82
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.08,
-          16.62,
-          22.17,
-          27.72,
-          33.26
+          11.47,
+          17.2,
+          22.95,
+          28.69,
+          34.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.08,
-          24.12,
-          32.15,
-          40.19,
-          48.23
+          16.64,
+          24.96,
+          33.28,
+          41.6,
+          49.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.72,
-          41.58,
-          55.43,
-          69.29,
-          83.16
+          28.69,
+          43.04,
+          57.37,
+          71.72,
+          86.07
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          46.56,
-          69.85,
-          93.13,
-          116.42,
-          139.69
+          48.19,
+          72.29,
+          96.39,
+          120.49,
+          144.58
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          79.83,
-          119.74,
-          159.66,
-          199.57,
-          239.48
+          82.62,
+          123.93,
+          165.25,
+          206.55,
+          247.86
         ]
       },
       {
@@ -158,61 +158,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.31,
-          12.47,
-          16.62,
-          20.79,
-          24.95
+          8.6,
+          12.91,
+          17.2,
+          21.52,
+          25.82
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.08,
-          16.62,
-          22.17,
-          27.72,
-          33.26
+          11.47,
+          17.2,
+          22.95,
+          28.69,
+          34.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.08,
-          24.12,
-          32.15,
-          40.19,
-          48.23
+          16.64,
+          24.96,
+          33.28,
+          41.6,
+          49.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.72,
-          41.58,
-          55.43,
-          69.29,
-          83.16
+          28.69,
+          43.04,
+          57.37,
+          71.72,
+          86.07
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          46.56,
-          69.85,
-          93.13,
-          116.42,
-          139.69
+          48.19,
+          72.29,
+          96.39,
+          120.49,
+          144.58
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          79.83,
-          119.74,
-          159.66,
-          199.57,
-          239.48
+          82.62,
+          123.93,
+          165.25,
+          206.55,
+          247.86
         ]
       },
       {
@@ -230,61 +230,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.31,
-          12.47,
-          16.62,
-          20.79,
-          24.95
+          8.6,
+          12.91,
+          17.2,
+          21.52,
+          25.82
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.08,
-          16.62,
-          22.17,
-          27.72,
-          33.26
+          11.47,
+          17.2,
+          22.95,
+          28.69,
+          34.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.08,
-          24.12,
-          32.15,
-          40.19,
-          48.23
+          16.64,
+          24.96,
+          33.28,
+          41.6,
+          49.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.72,
-          41.58,
-          55.43,
-          69.29,
-          83.16
+          28.69,
+          43.04,
+          57.37,
+          71.72,
+          86.07
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          46.56,
-          69.85,
-          93.13,
-          116.42,
-          139.69
+          48.19,
+          72.29,
+          96.39,
+          120.49,
+          144.58
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          79.83,
-          119.74,
-          159.66,
-          199.57,
-          239.48
+          82.62,
+          123.93,
+          165.25,
+          206.55,
+          247.86
         ]
       },
       {
