@@ -751,7 +751,7 @@ export default async function CustomsCountryPage({
               name: "RateShips",
               url: BASE_URL,
             },
-            dateModified: "2026-04-01",
+            dateModified: new Date().toISOString().split("T")[0],
           }),
         }}
       />

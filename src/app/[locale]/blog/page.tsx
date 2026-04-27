@@ -154,7 +154,7 @@ export default async function BlogPage({
             url: `https://rateships.com/${locale}/blog`,
             inLanguage: locale,
             isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
-            dateModified: "2026-04-03",
+            dateModified: new Date().toISOString().split("T")[0],
           }),
         }}
       />

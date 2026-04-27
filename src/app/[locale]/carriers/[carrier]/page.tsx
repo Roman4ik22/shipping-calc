@@ -340,7 +340,36 @@ export default async function CarrierPage({
             url: `https://rateships.com/${locale}/carriers/${carrierId}`,
             inLanguage: locale,
             isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
-            dateModified: "2026-04-03",
+            dateModified: new Date().toISOString().split("T")[0],
+            mainEntity: {
+              "@type": "Organization",
+              name: carrier.name,
+              url: carrier.website,
+              description: getCarrierDescription(carrier, loc),
+              ...(getCarrierReview(carrierId) ? {
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: getCarrierReview(carrierId)!.trustpilot.rating,
+                  reviewCount: getCarrierReview(carrierId)!.trustpilot.reviews,
+                  bestRating: 5,
+                  worstRating: 1,
+                  itemReviewed: { "@type": "Organization", name: carrier.name },
+                },
+              } : {}),
+              makesOffer: carrier.services.slice(0, 10).map((s) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: s.name,
+                  serviceType: "Parcel Shipping",
+                  provider: { "@type": "Organization", name: carrier.name },
+                  areaServed: "Worldwide",
+                  ...(s.speed_days_min ? {
+                    description: `${s.speed_days_min}–${s.speed_days_max} ${t(loc, "days")}, ${t(loc, "max_weight")} ${s.max_weight_kg}${t(loc, "kg")}`,
+                  } : {}),
+                },
+              })),
+            },
           }),
         }}
       />

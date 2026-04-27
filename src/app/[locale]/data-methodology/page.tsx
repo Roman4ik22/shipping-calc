@@ -158,7 +158,7 @@ export default async function DataMethodologyPage({
               name: t(loc, "data_method_name"),
               description: t(loc, "data_method_wp_desc"),
               url: `https://rateships.com/${locale}/data-methodology`,
-              dateModified: "2026-03-28",
+              dateModified: new Date().toISOString().split("T")[0],
               publisher: {
                 "@type": "Organization",
                 name: "RateShips",

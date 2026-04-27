@@ -180,7 +180,7 @@ export default async function GuidesPage({
             url: `https://rateships.com/${locale}/guide`,
             inLanguage: locale,
             isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
-            dateModified: "2026-04-03",
+            dateModified: new Date().toISOString().split("T")[0],
           }),
         }}
       />

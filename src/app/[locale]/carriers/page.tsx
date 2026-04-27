@@ -293,6 +293,45 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
           <Link href={`/${locale}/data-methodology`} style={{ color: 'var(--blue)', fontWeight: 600, marginLeft: 'auto', whiteSpace: 'nowrap' }}>{t(loc, "carriers_methodology_link")}</Link>
         </div>
       </div>
+
+      {/* JSON-LD: BreadcrumbList + CollectionPage + ItemList of all carriers */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: t(loc, "home"), item: `https://rateships.com/${locale}` },
+              { "@type": "ListItem", position: 2, name: t(loc, "carriers_page") },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: t(loc, "carriers_page"),
+            description: t(loc, "carriers_hero_subtitle", { count: carriers.length }),
+            url: `https://rateships.com/${locale}/carriers`,
+            inLanguage: locale,
+            isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: carriers.length,
+              itemListElement: carriers.slice(0, 50).map((c, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `https://rateships.com/${locale}/carriers/${c.id}`,
+                name: c.name,
+              })),
+            },
+          }),
+        }}
+      />
     </div>
   );
 }

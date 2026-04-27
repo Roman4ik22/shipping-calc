@@ -207,7 +207,7 @@ export default async function ToCountryPage({
             url: `https://rateships.com/${locale}/shipping/to/${slug}`,
             inLanguage: locale,
             isPartOf: { "@type": "WebSite", name: "RateShips", url: "https://rateships.com" },
-            dateModified: "2026-04-03",
+            dateModified: new Date().toISOString().split("T")[0],
           }),
         }}
       />
