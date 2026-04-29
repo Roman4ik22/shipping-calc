@@ -277,6 +277,10 @@ export default function RateTable({
     select_weight: string;
     kg: string;
     no_rates: string;
+    no_rates_hint?: string;
+    pick_another_country?: string;
+    browse_carriers_btn?: string;
+    reset_filter?: string;
     disclaimer: string;
     or_enter_weight: string;
     hide_dimensions: string;
@@ -359,8 +363,36 @@ export default function RateTable({
 
   if (corridorRates.length === 0) {
     return (
-      <div className="text-center py-12 text-muted">
-        <p className="text-lg">{labels.no_rates}</p>
+      <div className="text-center py-16 px-6">
+        <div className="mx-auto w-20 h-20 rounded-2xl bg-warm-50 flex items-center justify-center mb-5">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+            className="text-warm" aria-hidden="true">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+            <line x1="12" y1="22.08" x2="12" y2="12" />
+          </svg>
+        </div>
+        <p className="text-xl font-semibold text-ink mb-2">{labels.no_rates}</p>
+        {labels.no_rates_hint && (
+          <p className="text-sm text-muted max-w-md mx-auto mb-6">
+            {labels.no_rates_hint}
+          </p>
+        )}
+        <div className="flex flex-wrap gap-3 justify-center">
+          <a
+            href={`/${locale}`}
+            className="px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full hover:opacity-90 btn-press transition"
+          >
+            {labels.pick_another_country ?? "← Pick another country"}
+          </a>
+          <a
+            href={`/${locale}/carriers`}
+            className="px-5 py-2.5 bg-white border border-line text-ink text-sm font-semibold rounded-full hover:bg-card-hover btn-press transition"
+          >
+            {labels.browse_carriers_btn ?? "Browse carriers"}
+          </a>
+        </div>
       </div>
     );
   }
@@ -774,8 +806,21 @@ export default function RateTable({
       </div>
 
       {ratesAtWeight.length === 0 && (
-        <div className="text-center py-8 text-muted">
-          <p>{labels.no_filter_results}</p>
+        <div className="text-center py-12 px-6 bg-warm-50 rounded-2xl border border-warm/30">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+            className="text-warm mx-auto mb-3" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            <line x1="8" y1="11" x2="14" y2="11" />
+          </svg>
+          <p className="text-base font-semibold text-ink mb-3">{labels.no_filter_results}</p>
+          <button
+            onClick={() => setFilterType("all")}
+            className="px-4 py-2 bg-white border border-line text-ink text-sm font-semibold rounded-full hover:bg-bg-alt btn-press transition"
+          >
+            {labels.reset_filter ?? labels.all}
+          </button>
         </div>
       )}
 
