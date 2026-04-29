@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { carriers, getCarrierById, getCarrierDescription, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
 import { getCarrierReview } from "@/lib/reviews";
+import { CountUp, HeroH1 } from "@/components/HeroMotion";
 import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
@@ -182,7 +183,9 @@ export default async function CarrierPage({
                 <div className="flex items-center gap-4 flex-wrap">
                   <div className="flex items-center gap-2">
                     <span className="text-sm text-body">Trustpilot</span>
-                    <span className={`text-lg font-bold ${ratingColor}`}>★ {rating.toFixed(1)}</span>
+                    <span className={`text-lg font-bold ${ratingColor}`}>
+                      ★ <CountUp to={rating} decimals={1} duration={1.2} />
+                    </span>
                     <span className="text-sm text-muted">/ 5.0</span>
                   </div>
                   <div className="flex-1 min-w-[120px] max-w-[200px]">

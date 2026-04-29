@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useRef, type ReactNode, type CSSProperties } from "react";
+import { motion, useScroll, useTransform, useReducedMotion, useInView, animate } from "framer-motion";
+import { useRef, useEffect, useState, type ReactNode, type CSSProperties } from "react";
 
 /**
  * Stagger fade-in for the homepage H1.
@@ -364,5 +364,62 @@ export function GlowCTA({
       />
       <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
     </motion.div>
+  );
+}
+
+/**
+ * Animated number counter. Counts from 0 → `to` when the element scrolls into
+ * view. Use for hero stats, ratings, big numbers. Respects locale formatting
+ * (commas/dots) via the optional `format` callback.
+ */
+export function CountUp({
+  to,
+  duration = 1.4,
+  decimals = 0,
+  prefix = "",
+  suffix = "",
+  format,
+  className,
+  style,
+}: {
+  to: number;
+  duration?: number;
+  decimals?: number;
+  prefix?: string;
+  suffix?: string;
+  /** Custom formatter that receives the current numeric value. Overrides decimals. */
+  format?: (n: number) => string;
+  className?: string;
+  style?: CSSProperties;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const reduce = useReducedMotion();
+  const [display, setDisplay] = useState(reduce ? to : 0);
+
+  useEffect(() => {
+    if (!inView) return;
+    if (reduce) {
+      setDisplay(to);
+      return;
+    }
+    const controls = animate(0, to, {
+      duration,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (v) => setDisplay(v),
+    });
+    return () => controls.stop();
+  }, [inView, to, duration, reduce]);
+
+  const text = format
+    ? format(display)
+    : decimals === 0
+      ? Math.round(display).toLocaleString()
+      : display.toFixed(decimals);
+
+  return (
+    <span ref={ref} className={className} style={style}>
+      {prefix}{text}{suffix}
+    </span>
   );
 }

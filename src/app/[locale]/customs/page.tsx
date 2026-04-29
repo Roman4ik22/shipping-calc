@@ -4,6 +4,7 @@ import { getCustomsInfo } from "@/lib/customs";
 import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
+import { TiltCard, StaggerGrid, StaggerItem } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -157,40 +158,48 @@ export default async function CustomsHubPage({
           <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 16 }}>
             {tf(loc, "customs_popular_eyebrow", "Most searched destinations")}
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }} className="tools-grid">
+          <StaggerGrid
+            style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}
+            className="tools-grid"
+            staggerDelay={0.05}
+          >
             {popular.slice(0, 8).map((c) => {
               const customs = getCustomsInfo(c.code);
               return (
-                <Link
-                  key={c.code}
-                  href={`/${locale}/customs/${c.slug_en}`}
-                  prefetch={false}
-                  style={{
-                    background: "#fff",
-                    border: "1px solid var(--line)",
-                    borderRadius: 16,
-                    padding: "20px 22px",
-                    textDecoration: "none",
-                    color: "var(--ink)",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 6,
-                    transition: "all .2s",
-                  }}
-                  className="team-card"
-                >
-                  <span style={{ fontSize: 28 }}>{countryFlag(c.code)}</span>
-                  <span style={{ fontWeight: 700, fontSize: 16, letterSpacing: "-.01em", marginTop: 4 }}>{getCountryName(c, loc)}</span>
-                  <div style={{ display: "flex", gap: 10, fontSize: 12, color: "var(--muted)", flexWrap: "wrap", marginTop: 4 }}>
-                    <span><b style={{ color: "var(--ink)" }}>{customs.vat_rate}%</b> {tf(loc, "vat_short", "VAT")}</span>
-                    {customs.de_minimis_usd > 0 && (
-                      <span>${customs.de_minimis_usd} {tf(loc, "de_minimis_short", "de minimis")}</span>
-                    )}
-                  </div>
-                </Link>
+                <StaggerItem key={c.code}>
+                  <TiltCard maxTilt={5}>
+                    <Link
+                      href={`/${locale}/customs/${c.slug_en}`}
+                      prefetch={false}
+                      style={{
+                        background: "#fff",
+                        border: "1px solid var(--line)",
+                        borderRadius: 16,
+                        padding: "20px 22px",
+                        textDecoration: "none",
+                        color: "var(--ink)",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 6,
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      className="team-card"
+                    >
+                      <span style={{ fontSize: 28 }}>{countryFlag(c.code)}</span>
+                      <span style={{ fontWeight: 700, fontSize: 16, letterSpacing: "-.01em", marginTop: 4 }}>{getCountryName(c, loc)}</span>
+                      <div style={{ display: "flex", gap: 10, fontSize: 12, color: "var(--muted)", flexWrap: "wrap", marginTop: 4 }}>
+                        <span><b style={{ color: "var(--ink)" }}>{customs.vat_rate}%</b> {tf(loc, "vat_short", "VAT")}</span>
+                        {customs.de_minimis_usd > 0 && (
+                          <span>${customs.de_minimis_usd} {tf(loc, "de_minimis_short", "de minimis")}</span>
+                        )}
+                      </div>
+                    </Link>
+                  </TiltCard>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 

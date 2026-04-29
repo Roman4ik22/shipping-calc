@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import NewsletterForm from "@/components/NewsletterForm";
-import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA } from "@/components/HeroMotion";
+import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA, CountUp } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -519,17 +519,22 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* === STATS BAR (dark) — real numbers only === */}
+      {/* === STATS BAR (dark) — real numbers only, count-up on scroll-in === */}
       <section style={{ padding: "48px 32px", background: "var(--ink, #0F172A)", color: "#fff" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48 }} className="stats-grid">
           {[
-            { v: "145+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
-            { v: `${countries.length}`, l: tf(loc, "stat_countries_label", "Countries covered"), s: tf(loc, "stat_countries_sub", "Every UN-recognized territory") },
-            { v: "45K+", l: tf(loc, "stat_routes_label", "Shipping corridors"), s: tf(loc, "stat_routes_sub", "Live rates cached + on-demand"), accent: true },
-            { v: "12", l: tf(loc, "stat_langs_label", "Languages"), s: tf(loc, "stat_langs_sub", "Updated weekly · free forever") },
+            { num: 145, suffix: "+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
+            { num: countries.length, suffix: "", l: tf(loc, "stat_countries_label", "Countries covered"), s: tf(loc, "stat_countries_sub", "Every UN-recognized territory") },
+            { num: 45, suffix: "K+", l: tf(loc, "stat_routes_label", "Shipping corridors"), s: tf(loc, "stat_routes_sub", "Live rates cached + on-demand"), accent: true },
+            { num: 12, suffix: "", l: tf(loc, "stat_langs_label", "Languages"), s: tf(loc, "stat_langs_sub", "Updated weekly · free forever") },
           ].map((it, i) => (
             <div key={i} style={{ paddingLeft: i > 0 ? 28 : 0, borderLeft: i > 0 ? "1px solid rgba(255,255,255,.12)" : "none" }}>
-              <div style={{ fontSize: "clamp(36px,4vw,56px)", fontWeight: 800, letterSpacing: "-.03em", lineHeight: 1, color: it.accent ? "var(--warm)" : "#fff", fontVariantNumeric: "tabular-nums" }}>{it.v}</div>
+              <CountUp
+                to={it.num}
+                suffix={it.suffix}
+                duration={1.6}
+                style={{ display: "block", fontSize: "clamp(36px,4vw,56px)", fontWeight: 800, letterSpacing: "-.03em", lineHeight: 1, color: it.accent ? "var(--warm)" : "#fff", fontVariantNumeric: "tabular-nums" }}
+              />
               <div style={{ marginTop: 10, fontWeight: 600, fontSize: 15 }}>{it.l}</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,.55)", marginTop: 4 }}>{it.s}</div>
             </div>
