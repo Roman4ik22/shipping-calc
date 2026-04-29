@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { carriers, getCarrierById, getCarrierDescription, getPopularCountries, getCountryName, makeCorridorSlug } from "@/lib/data";
 import { getCarrierReview } from "@/lib/reviews";
-import { CountUp, HeroH1 } from "@/components/HeroMotion";
+import { CountUp, HeroH1, StaggerWords } from "@/components/HeroMotion";
 import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
@@ -149,7 +149,7 @@ export default async function CarrierPage({
           <div className="flex items-start gap-4 mb-4">
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-ink">
-                {carrier.name}
+                <StaggerWords text={carrier.name} />
               </h1>
               <span
                 className={`inline-block mt-2 px-3 py-1 text-sm rounded-full ${

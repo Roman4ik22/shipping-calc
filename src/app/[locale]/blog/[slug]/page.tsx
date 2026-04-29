@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { localeNames, t, pickLocalized } from "@/lib/i18n";
+import { StaggerWords } from "@/components/HeroMotion";
 import type { Locale } from "@/lib/types";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/data/blog-posts";
 import { countries, makeCorridorSlug, getCountryName } from "@/lib/data";
@@ -337,7 +338,7 @@ export default async function BlogPostPage({
 
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          {title}
+          <StaggerWords text={title} />
         </h1>
 
         {/* Date */}

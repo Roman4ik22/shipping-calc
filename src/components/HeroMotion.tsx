@@ -368,6 +368,56 @@ export function GlowCTA({
 }
 
 /**
+ * Simple word-by-word stagger reveal for any heading. Useful for short H1s
+ * like a carrier name or a blog post title where the full HeroH1 (with blue
+ * keyword span) is overkill.
+ */
+export function StaggerWords({
+  text,
+  className,
+  style,
+  delay = 0,
+}: {
+  text: string;
+  className?: string;
+  style?: CSSProperties;
+  delay?: number;
+}) {
+  const reduce = useReducedMotion();
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: reduce ? 0 : 0.06, delayChildren: delay },
+    },
+  };
+  const word = {
+    hidden: { opacity: 0, y: reduce ? 0 : 18 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const } },
+  };
+
+  return (
+    <motion.span
+      className={className}
+      style={style}
+      initial="hidden"
+      animate="visible"
+      variants={container}
+    >
+      {text.split(" ").map((w, i, arr) => (
+        <motion.span
+          key={`${text}-${i}`}
+          variants={word}
+          style={{ display: "inline-block", marginRight: i < arr.length - 1 ? "0.25em" : 0 }}
+        >
+          {w}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
+}
+
+/**
  * Animated number counter. Counts from 0 → `to` when the element scrolls into
  * view. Use for hero stats, ratings, big numbers. Respects locale formatting
  * (commas/dots) via the optional `format` callback.

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { StaggerGrid, StaggerItem } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -189,17 +190,19 @@ export default async function TeamPage({
           <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 16 }}>
             {t(loc, "team_our_team")}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 gap-5" staggerDelay={0.07}>
             {teams.map((team) => (
-              <div key={team.title} style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 20, padding: 28, transition: "all .2s" }} className="team-card">
-                <div style={{ width: 56, height: 56, borderRadius: 14, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center", marginBottom: 16 }}>
-                  {team.icon}
+              <StaggerItem key={team.title}>
+                <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 20, padding: 28, transition: "all .2s", height: "100%" }} className="team-card">
+                  <div style={{ width: 56, height: 56, borderRadius: 14, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center", marginBottom: 16 }}>
+                    {team.icon}
+                  </div>
+                  <h3 style={{ margin: "0 0 6px", fontSize: 18, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{team.title}</h3>
+                  <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>{team.description}</p>
                 </div>
-                <h3 style={{ margin: "0 0 6px", fontSize: 18, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{team.title}</h3>
-                <p style={{ margin: 0, fontSize: 14, color: "var(--body)", lineHeight: 1.55 }}>{team.description}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { t, tf } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { StaggerGrid, StaggerItem, TiltCard } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -125,10 +126,11 @@ export default async function ToolsIndexPage({
 
       <section style={{ padding: "48px 32px 96px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24 }}>
+          <StaggerGrid style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24 }} staggerDelay={0.08}>
             {tools.map((tool) => (
+              <StaggerItem key={tool.href}>
+              <TiltCard maxTilt={3}>
               <Link
-                key={tool.href}
                 href={tool.href}
                 style={{
                   display: "grid",
@@ -143,6 +145,7 @@ export default async function ToolsIndexPage({
                   transition: "all .2s",
                   textDecoration: "none",
                   color: "inherit",
+                  width: "100%",
                 }}
                 className="team-card tools-row"
               >
@@ -157,8 +160,10 @@ export default async function ToolsIndexPage({
                   {tool.cta} <IconArrow />
                 </div>
               </Link>
+              </TiltCard>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGrid>
 
           <div style={{ marginTop: 40, padding: "24px 28px", background: "var(--bg)", borderRadius: 16, border: "1px solid var(--line)", textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: 15, color: "var(--body)" }}>

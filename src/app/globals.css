@@ -28,6 +28,14 @@
 
   html {
     overflow-x: hidden;
+    /* Smooth in-page scroll for anchor links (#calc, #faq, etc.).
+       Native — zero JS, zero bundle cost. Honors prefers-reduced-motion. */
+    scroll-behavior: smooth;
+    /* Offset anchor targets from sticky header so they're not hidden under it. */
+    scroll-padding-top: 80px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 
   /* Make every image / svg / video shrink with its container by default. */
