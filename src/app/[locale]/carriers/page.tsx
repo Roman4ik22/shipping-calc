@@ -24,25 +24,30 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const CARRIER_BRANDS: Record<string, { bg: string; fg: string; letters: string; website?: string }> = {
-  "dhl-express": { bg: "#FFCC00", fg: "#D40511", letters: "DHL", website: "dhl.com" },
-  "fedex": { bg: "#4D148C", fg: "#FF6600", letters: "FDX", website: "fedex.com" },
-  "ups": { bg: "#351C15", fg: "#FFB500", letters: "UPS", website: "ups.com" },
+/** Carrier brand metadata. The optional `simpleIcon` slug pulls the official
+ *  monochrome+brand-colored logo from cdn.simpleicons.org (free, CDN-cached).
+ *  When present, we render the real logo on a white tile; when absent, we
+ *  fall back to the colored letter badge. Only confirmed-existing slugs go
+ *  here — adding a 404 slug would render a broken-image icon. */
+const CARRIER_BRANDS: Record<string, { bg: string; fg: string; letters: string; website?: string; simpleIcon?: string }> = {
+  "dhl-express": { bg: "#FFCC00", fg: "#D40511", letters: "DHL", website: "dhl.com", simpleIcon: "dhl" },
+  "fedex": { bg: "#4D148C", fg: "#FF6600", letters: "FDX", website: "fedex.com", simpleIcon: "fedex" },
+  "ups": { bg: "#351C15", fg: "#FFB500", letters: "UPS", website: "ups.com", simpleIcon: "ups" },
   "tnt-fedex": { bg: "#FF6600", fg: "#FFF", letters: "TNT", website: "tnt.com" },
   "ems": { bg: "#0F3C8A", fg: "#FFD400", letters: "EMS" },
   "aramex": { bg: "#E32219", fg: "#FFF", letters: "ARX", website: "aramex.com" },
   "sf-express": { bg: "#000", fg: "#FFF", letters: "SF", website: "sf-express.com" },
-  "usps": { bg: "#333E6B", fg: "#FFF", letters: "USPS", website: "usps.com" },
-  "royal-mail": { bg: "#E2001A", fg: "#FFF", letters: "RM", website: "royalmail.com" },
-  "dpd": { bg: "#DC0032", fg: "#FFF", letters: "DPD", website: "dpd.com" },
+  "usps": { bg: "#333E6B", fg: "#FFF", letters: "USPS", website: "usps.com", simpleIcon: "usps" },
+  "royal-mail": { bg: "#E2001A", fg: "#FFF", letters: "RM", website: "royalmail.com", simpleIcon: "royalmail" },
+  "dpd": { bg: "#DC0032", fg: "#FFF", letters: "DPD", website: "dpd.com", simpleIcon: "dpd" },
   "japan-post": { bg: "#CC0000", fg: "#FFF", letters: "JP", website: "post.japanpost.jp" },
-  "australia-post": { bg: "#E3001B", fg: "#FFF", letters: "AP", website: "auspost.com.au" },
-  "canada-post": { bg: "#E31937", fg: "#FFF", letters: "CA", website: "canadapost.ca" },
+  "australia-post": { bg: "#E3001B", fg: "#FFF", letters: "AP", website: "auspost.com.au", simpleIcon: "australiapost" },
+  "canada-post": { bg: "#E31937", fg: "#FFF", letters: "CA", website: "canadapost.ca", simpleIcon: "canadapost" },
   "china-post": { bg: "#006633", fg: "#FFF", letters: "CP" },
   "india-post": { bg: "#FF0000", fg: "#FFF", letters: "IN", website: "indiapost.gov.in" },
-  "deutsche-post-dhl-paket": { bg: "#FFCC00", fg: "#333", letters: "DP", website: "deutschepost.de" },
+  "deutsche-post-dhl-paket": { bg: "#FFCC00", fg: "#333", letters: "DP", website: "deutschepost.de", simpleIcon: "deutschepost" },
   "gls": { bg: "#FFC600", fg: "#003087", letters: "GLS", website: "gls-group.eu" },
-  "postnl": { bg: "#FF6600", fg: "#FFF", letters: "PNL", website: "postnl.nl" },
+  "postnl": { bg: "#FF6600", fg: "#FFF", letters: "PNL", website: "postnl.nl", simpleIcon: "postnl" },
   "delhivery": { bg: "#2B45D4", fg: "#FFF", letters: "DEL", website: "delhivery.com" },
   "cainiao": { bg: "#FF6A00", fg: "#FFF", letters: "CN", website: "global.cainiao.com" },
   "cdek": { bg: "#00923E", fg: "#FFF", letters: "CDK", website: "cdek.ru" },
@@ -62,6 +67,43 @@ const CARRIER_BRANDS: Record<string, { bg: string; fg: string; letters: string; 
 
 function getBrand(id: string) {
   return CARRIER_BRANDS[id] || { bg: "#6B7280", fg: "#FFF", letters: id.slice(0, 3).toUpperCase() };
+}
+
+/** Render the brand badge: real SVG logo if simple-icons has it, otherwise
+ *  the colored letter tile. The image is loaded lazy + has alt for SEO. */
+function BrandBadge({ brand, name, size }: { brand: ReturnType<typeof getBrand>; name: string; size: "sm" | "md" }) {
+  const dim = size === "md" ? 48 : 28;
+  const radius = size === "md" ? 12 : 6;
+  if (brand.simpleIcon) {
+    return (
+      <div style={{
+        width: dim, height: dim, borderRadius: radius, flexShrink: 0,
+        background: "var(--card)", border: "1px solid var(--line)",
+        display: "grid", placeItems: "center",
+        boxShadow: size === "md" ? "var(--shadow-sm)" : "none",
+      }}>
+        <img
+          src={`https://cdn.simpleicons.org/${brand.simpleIcon}`}
+          alt={`${name} logo`}
+          width={size === "md" ? 28 : 16}
+          height={size === "md" ? 28 : 16}
+          loading="lazy"
+          decoding="async"
+          style={{ objectFit: "contain", display: "block" }}
+        />
+      </div>
+    );
+  }
+  return (
+    <div style={{
+      width: dim, height: dim, borderRadius: radius, flexShrink: 0,
+      background: brand.bg, color: brand.fg,
+      display: "grid", placeItems: "center",
+      boxShadow: size === "md" ? "0 4px 12px -4px rgba(0,0,0,.15)" : "none",
+    }}>
+      <span style={{ fontSize: size === "md" ? 13 : 8, fontWeight: 800, letterSpacing: ".02em" }}>{brand.letters}</span>
+    </div>
+  );
 }
 
 // Decorative shapes unique to carriers page — package boxes
@@ -193,14 +235,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                       height: '100%',
                     }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                      <div style={{
-                        width: 48, height: 48, borderRadius: 12, flexShrink: 0,
-                        background: brand.bg, color: brand.fg,
-                        display: 'grid', placeItems: 'center',
-                        boxShadow: '0 4px 12px -4px rgba(0,0,0,.15)',
-                      }}>
-                        <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.02em' }}>{brand.letters}</span>
-                      </div>
+                      <BrandBadge brand={brand} name={c.name} size="md" />
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         <div style={{ fontWeight: 700, fontSize: 17 }}>{c.name}</div>
                         <CarrierTypePill
@@ -251,12 +286,7 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                           textDecoration: 'none', color: 'inherit', transition: 'all .2s',
                           fontSize: 13
                         }}>
-                        <div style={{
-                          width: 28, height: 28, borderRadius: 6, flexShrink: 0,
-                          background: brand.bg, color: brand.fg,
-                          display: 'grid', placeItems: 'center',
-                          fontSize: 8, fontWeight: 800, letterSpacing: '.02em'
-                        }}>{brand.letters}</div>
+                        <BrandBadge brand={brand} name={c.name} size="sm" />
                         <span style={{ fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const, flex: 1 }}>{c.name}</span>
                         <span style={{
                           display: 'inline-grid', placeItems: 'center',

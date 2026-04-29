@@ -8,6 +8,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA, CountUp } from "@/components/HeroMotion";
 import WorldMap from "@/components/WorldMap";
 import SectionDivider from "@/components/SectionDivider";
+import ParallaxScene from "@/components/ParallaxScene";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -172,20 +173,33 @@ export default async function HomePage({
                 <div style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 14 }}>
                   {tf(loc, "trusted_carriers", "Rates from 145+ global & regional carriers")}
                 </div>
-                <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
                   {[
-                    { name: "DHL", bg: "#FFCC00", fg: "#D40511" },
-                    { name: "FedEx", bg: "#4D148C", fg: "#FF6600" },
-                    { name: "UPS", bg: "#351C15", fg: "#FFB500" },
-                    { name: "EMS", bg: "#0F3C8A", fg: "#FFD400" },
-                    { name: "SF", bg: "#000000", fg: "#FFFFFF" },
-                    { name: "Aramex", bg: "#E32219", fg: "#FFFFFF" },
+                    { name: "DHL", slug: "dhl" },
+                    { name: "FedEx", slug: "fedex" },
+                    { name: "UPS", slug: "ups" },
+                    { name: "USPS", slug: "usps" },
+                    { name: "Royal Mail", slug: "royalmail" },
+                    { name: "DPD", slug: "dpd" },
+                    { name: "PostNL", slug: "postnl" },
                   ].map((b) => (
                     <div key={b.name} style={{
-                      padding: "10px 16px", borderRadius: 10, background: b.bg, color: b.fg,
-                      fontSize: 12, fontWeight: 800, letterSpacing: ".04em",
-                      boxShadow: "inset 0 0 0 1px rgba(0,0,0,.06)",
-                    }}>{b.name}</div>
+                      padding: "10px 14px", borderRadius: 10,
+                      background: "var(--card)", border: "1px solid var(--line)",
+                      display: "inline-flex", alignItems: "center", gap: 8,
+                      boxShadow: "var(--shadow-sm)",
+                    }}>
+                      <img
+                        src={`https://cdn.simpleicons.org/${b.slug}`}
+                        alt={`${b.name} logo`}
+                        width={20}
+                        height={20}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ objectFit: "contain", display: "block" }}
+                      />
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", letterSpacing: ".01em" }}>{b.name}</span>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -586,7 +600,10 @@ export default async function HomePage({
         </div>
       </section>
 
-      <SectionDivider variant="dots" margin={28} />
+      {/* Parallax storytelling scene — sits between dark stats bar and How It Works.
+          Plane in sky, container skyline, foreground truck, all moving at
+          different speeds as user scrolls. Honors prefers-reduced-motion. */}
+      <ParallaxScene />
 
       {/* === HOW IT WORKS === */}
       <section style={{ padding: "80px 32px" }}>
