@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { carriers, getCarrierDescription } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { StaggerGrid, StaggerItem, GlowCTA, MagneticCTA } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -168,17 +169,22 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
             </div>
 
             {/* Featured — large cards */}
-            <div className={`grid gap-4 mb-4 stagger-children ${group.key === 'international' ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+            <StaggerGrid
+              className={`grid gap-4 mb-4 ${group.key === 'international' ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}
+              staggerDelay={0.06}
+            >
               {featured.map((c) => {
                 const brand = getBrand(c.id);
                 const desc = getCarrierDescription(c, loc);
                 return (
-                  <Link key={c.id} href={`/${locale}/carriers/${c.id}`} prefetch={false}
+                  <StaggerItem key={c.id}>
+                  <Link href={`/${locale}/carriers/${c.id}`} prefetch={false}
                     className="card-hover"
                     style={{
                       display: 'flex', flexDirection: 'column', gap: 14, padding: '24px',
                       background: '#fff', borderRadius: 16, border: '1px solid var(--line)',
-                      textDecoration: 'none', color: 'inherit', transition: 'all .25s ease-out'
+                      textDecoration: 'none', color: 'inherit', transition: 'all .25s ease-out',
+                      height: '100%',
                     }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                       <div style={{
@@ -216,9 +222,10 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                     </div>
                   </Link>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerGrid>
 
             {/* Rest — compact grid */}
             {rest.length > 0 && (
@@ -260,26 +267,32 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
           );
         })}
 
-        {/* Bottom CTA */}
-        <div className="fade-in" style={{
-          padding: '32px', background: 'var(--ink)', borderRadius: 20, color: '#fff',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20
-        }}>
+        {/* Bottom CTA — dark block with glow follow + magnetic CTA */}
+        <GlowCTA
+          glowColor="rgba(242,201,76,.35)"
+          style={{
+            padding: '32px', background: 'var(--ink)', borderRadius: 20, color: '#fff',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20,
+            overflow: 'hidden',
+          }}
+        >
           <div>
             <h3 style={{ margin: '0 0 6px', fontSize: 22, fontWeight: 700 }}>{t(loc, "ready_to_compare")}</h3>
             <p style={{ margin: 0, fontSize: 15, color: 'rgba(255,255,255,.65)' }}>
               {t(loc, "ready_to_compare_sub", { count: carriers.length })}
             </p>
           </div>
-          <Link href={`/${locale}`} className="btn-press" style={{
-            padding: '14px 24px', borderRadius: 12, background: 'var(--warm)', color: 'var(--ink)',
-            fontWeight: 700, fontSize: 15, display: 'inline-flex', alignItems: 'center', gap: 8,
-            textDecoration: 'none'
-          }}>
-            {t(loc, "carriers_cta_compare")}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-          </Link>
-        </div>
+          <MagneticCTA>
+            <Link href={`/${locale}`} className="btn-press" style={{
+              padding: '14px 24px', borderRadius: 12, background: 'var(--warm)', color: 'var(--ink)',
+              fontWeight: 700, fontSize: 15, display: 'inline-flex', alignItems: 'center', gap: 8,
+              textDecoration: 'none'
+            }}>
+              {t(loc, "carriers_cta_compare")}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </Link>
+          </MagneticCTA>
+        </GlowCTA>
 
         {/* Data source */}
         <div className="fade-in" style={{

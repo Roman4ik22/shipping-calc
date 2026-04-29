@@ -16,6 +16,8 @@ export function HeroH1({
   suffix,
   underline,
   style,
+  emphColor = "var(--blue)",
+  inlineSuffix = false,
 }: {
   prefix: string;
   blue: string;
@@ -23,6 +25,11 @@ export function HeroH1({
   /** Hand-crafted SVG element rendered under the blue keyword */
   underline?: ReactNode;
   style?: CSSProperties;
+  /** Color of the emphasized middle word. Default: var(--blue). */
+  emphColor?: string;
+  /** When true, suffix follows on the same line (no <br />). Useful for
+   *  one-line headlines like "We built X because Y is broken." */
+  inlineSuffix?: boolean;
 }) {
   const reduce = useReducedMotion();
 
@@ -57,11 +64,11 @@ export function HeroH1({
       variants={container}
     >
       {renderWords(prefix)}{" "}
-      <span style={{ color: "var(--blue)", position: "relative", display: "inline-block" }}>
+      <span style={{ color: emphColor, position: "relative", display: "inline-block" }}>
         {renderWords(blue)}
         {underline}
       </span>
-      <br />
+      {inlineSuffix ? " " : <br />}
       {renderWords(suffix)}
     </motion.h1>
   );
@@ -226,6 +233,136 @@ export function StaggerItem({
       }}
     >
       {children}
+    </motion.div>
+  );
+}
+
+/**
+ * 3D tilt card. On hover, rotates around X/Y axis based on cursor position
+ * within the card. Subtle (max ±8°) — feels premium without being gimmicky.
+ * Falls back to static when prefers-reduced-motion is set.
+ */
+export function TiltCard({
+  children,
+  className,
+  style,
+  maxTilt = 6,
+}: {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  maxTilt?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return <div className={className} style={style}>{children}</div>;
+  }
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{ ...style, transformStyle: "preserve-3d", perspective: 1000, display: "flex" }}
+      whileHover={{ scale: 1.015 }}
+      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+      onPointerMove={(e) => {
+        const el = ref.current;
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        const ry = (px - 0.5) * 2 * maxTilt;
+        const rx = -(py - 0.5) * 2 * maxTilt;
+        el.style.setProperty("--tilt-x", `${rx}deg`);
+        el.style.setProperty("--tilt-y", `${ry}deg`);
+      }}
+      onPointerLeave={() => {
+        const el = ref.current;
+        if (!el) return;
+        el.style.setProperty("--tilt-x", "0deg");
+        el.style.setProperty("--tilt-y", "0deg");
+      }}
+    >
+      <div
+        style={{
+          transform: "rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))",
+          transition: "transform 0.18s cubic-bezier(.22,1,.36,1)",
+          transformStyle: "preserve-3d",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {children}
+      </div>
+    </motion.div>
+  );
+}
+
+/**
+ * Premium dark CTA block — for the homepage "Ready to compare?" final block.
+ * Adds a subtle glow that follows the cursor + scale-up on hover.
+ */
+export function GlowCTA({
+  children,
+  className,
+  style,
+  glowColor = "rgba(232,92,58,.45)",
+}: {
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  glowColor?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return <div className={className} style={style}>{children}</div>;
+  }
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{
+        position: "relative",
+        ...style,
+      }}
+      whileHover={{ scale: 1.005 }}
+      transition={{ type: "spring", stiffness: 250, damping: 20 }}
+      onPointerMove={(e) => {
+        const el = ref.current;
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        el.style.setProperty("--glow-x", `${x}%`);
+        el.style.setProperty("--glow-y", `${y}%`);
+        el.style.setProperty("--glow-opacity", "1");
+      }}
+      onPointerLeave={() => {
+        const el = ref.current;
+        if (!el) return;
+        el.style.setProperty("--glow-opacity", "0");
+      }}
+    >
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          inset: 0,
+          borderRadius: "inherit",
+          pointerEvents: "none",
+          background: `radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), ${glowColor}, transparent 40%)`,
+          opacity: "var(--glow-opacity, 0)",
+          transition: "opacity 0.3s ease-out",
+          zIndex: 0,
+        }}
+      />
+      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
     </motion.div>
   );
 }

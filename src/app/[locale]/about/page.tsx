@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { HeroH1, FloatingShape } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -86,10 +87,31 @@ export default async function AboutPage({
             <path d="M -50 400 Q 400 100, 800 360 T 1500 300" stroke="url(#arcA)" strokeWidth="1.5" fill="none" strokeDasharray="4 6" />
             <path d="M -50 500 Q 500 250, 900 480 T 1500 420" stroke="url(#arcA)" strokeWidth="1" fill="none" strokeDasharray="2 5" opacity=".6" />
           </svg>
-          {/* Floating abstract box shapes */}
-          <div style={{ position: "absolute", top: "30%", right: "8%", width: 80, height: 80, borderRadius: 16, background: "linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)", transform: "rotate(-8deg)", boxShadow: "0 20px 40px -10px rgba(242,201,76,.5)" }} className="hero-float" />
-          <div style={{ position: "absolute", bottom: "18%", right: "22%", width: 56, height: 56, borderRadius: 12, background: "var(--accent)", transform: "rotate(12deg)", opacity: 0.9, boxShadow: "0 14px 30px -8px rgba(232,92,58,.5)" }} className="hero-float" />
-          <div style={{ position: "absolute", top: "22%", right: "30%", width: 44, height: 44, borderRadius: 10, background: "#fff", border: "2px solid var(--blue)", transform: "rotate(-4deg)", boxShadow: "var(--shadow-md)" }} className="hero-float" />
+          {/* Floating abstract box shapes — parallax + slow bob */}
+          <FloatingShape
+            rotateDeg={-8}
+            parallaxRange={70}
+            bobDistance={5}
+            bobDuration={6}
+            style={{ position: "absolute", top: "30%", right: "8%", width: 80, height: 80, borderRadius: 16, background: "linear-gradient(135deg, var(--warm) 0%, #E8B43D 100%)", boxShadow: "0 20px 40px -10px rgba(242,201,76,.5)" }}
+            className="hero-float"
+          />
+          <FloatingShape
+            rotateDeg={12}
+            parallaxRange={-50}
+            bobDistance={6}
+            bobDuration={5}
+            style={{ position: "absolute", bottom: "18%", right: "22%", width: 56, height: 56, borderRadius: 12, background: "var(--accent)", opacity: 0.9, boxShadow: "0 14px 30px -8px rgba(232,92,58,.5)" }}
+            className="hero-float"
+          />
+          <FloatingShape
+            rotateDeg={-4}
+            parallaxRange={40}
+            bobDistance={4}
+            bobDuration={7}
+            style={{ position: "absolute", top: "22%", right: "30%", width: 44, height: 44, borderRadius: 10, background: "#fff", border: "2px solid var(--blue)", boxShadow: "var(--shadow-md)" }}
+            className="hero-float"
+          />
         </div>
 
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1240, margin: "0 auto", padding: "clamp(40px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,9vw,112px)" }}>
@@ -103,16 +125,19 @@ export default async function AboutPage({
               <span style={{ width: 6, height: 6, borderRadius: 999, background: "var(--accent)" }} />
               {tf(loc, "about_pill", "About RateShips · Founded 2026 · Hungary")}
             </div>
-            <h1 style={{ margin: "24px 0 22px", fontSize: "clamp(44px,6vw,76px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
-              {tf(loc, "about_h1_pre", "We built RateShips because shipping pricing is")}{" "}
-              <span style={{ color: "var(--accent)", position: "relative", display: "inline-block" }}>
-                {tf(loc, "about_h1_emph", "broken")}
+            <HeroH1
+              prefix={tf(loc, "about_h1_pre", "We built RateShips because shipping pricing is")}
+              blue={tf(loc, "about_h1_emph", "broken")}
+              suffix="."
+              inlineSuffix
+              emphColor="var(--accent)"
+              style={{ margin: "24px 0 22px", fontSize: "clamp(44px,6vw,76px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}
+              underline={
                 <svg aria-hidden viewBox="0 0 180 20" style={{ position: "absolute", left: 0, bottom: -6, width: "100%", height: 12 }}>
                   <path d="M2 12 Q 50 2, 100 10 T 178 8" stroke="var(--warm)" strokeWidth="5" fill="none" strokeLinecap="round" opacity=".9" />
                 </svg>
-              </span>
-              .
-            </h1>
+              }
+            />
             <p style={{ fontSize: 20, color: "var(--body)", lineHeight: 1.55, maxWidth: 680, margin: 0 }}>
               {tf(loc, "about_hero_lead", "Fuel surcharges that change mid-week. Dim-weight formulas nobody explains. Customs bills that arrive after the package. We're rebuilding that layer — transparently, neutrally, with published data.")}
             </p>

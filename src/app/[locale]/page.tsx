@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import NewsletterForm from "@/components/NewsletterForm";
-import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem } from "@/components/HeroMotion";
+import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -397,7 +397,8 @@ export default async function HomePage({
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="tools-grid">
             {/* Rate comparison card */}
-            <Link href={`/${locale}/carriers`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit" }} className="team-card">
+            <TiltCard maxTilt={5}>
+            <Link href={`/${locale}/carriers`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit", width: "100%", height: "100%" }} className="team-card">
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--blue-50)", color: "var(--blue)", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
@@ -432,9 +433,11 @@ export default async function HomePage({
                 {tf(loc, "browse_carriers", "Browse all carriers")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
+            </TiltCard>
 
             {/* Customs Calculator card */}
-            <Link href={`/${locale}/tools/duty-calculator`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit" }} className="team-card">
+            <TiltCard maxTilt={5}>
+            <Link href={`/${locale}/tools/duty-calculator`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit", width: "100%", height: "100%" }} className="team-card">
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--accent-50)", color: "var(--accent)", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v7c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5l8-3z" /><path d="M9 12l2 2 4-4" /></svg>
@@ -470,9 +473,11 @@ export default async function HomePage({
                 {tf(loc, "calculate_duties", "Calculate duties")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
+            </TiltCard>
 
             {/* Delivery Estimator card */}
-            <Link href={`/${locale}/tools/delivery-estimator`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit" }} className="team-card">
+            <TiltCard maxTilt={5}>
+            <Link href={`/${locale}/tools/delivery-estimator`} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 24, display: "flex", flexDirection: "column", gap: 18, boxShadow: "var(--shadow-sm)", textDecoration: "none", color: "inherit", width: "100%", height: "100%" }} className="team-card">
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--warm-50)", color: "#A37A00", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
@@ -509,6 +514,7 @@ export default async function HomePage({
                 {tf(loc, "estimate_delivery", "Estimate delivery")} <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </span>
             </Link>
+            </TiltCard>
           </div>
         </div>
       </section>
@@ -785,10 +791,12 @@ export default async function HomePage({
             {tf(loc, "cta_desc", "One search shows you every carrier's published rate. If a regional service is cheaper than DHL on your lane, you'll see it.")}
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="#calc" style={{ padding: "14px 24px", borderRadius: 12, background: "var(--ink)", color: "#fff", fontWeight: 700, fontSize: 15, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-              {tf(loc, "cta_primary", "Run a free quote")}
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
+            <MagneticCTA>
+              <a href="#calc" style={{ padding: "14px 24px", borderRadius: 12, background: "var(--ink)", color: "#fff", fontWeight: 700, fontSize: 15, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none", boxShadow: "0 14px 30px -10px rgba(15,23,42,.5)" }}>
+                {tf(loc, "cta_primary", "Run a free quote")}
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+            </MagneticCTA>
             <Link href={`/${locale}/carriers`} style={{ padding: "14px 24px", borderRadius: 12, background: "#fff", color: "var(--ink)", fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", textDecoration: "none" }}>
               {tf(loc, "cta_secondary", "Browse all carriers")}
             </Link>
