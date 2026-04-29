@@ -72,7 +72,7 @@ export default async function HomePage({
             <div style={{ paddingTop: 32 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "#fff", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: 999, background: "#0F8A48", boxShadow: "0 0 0 4px rgba(15,138,72,.18)" }} />
-                {tf(loc, "hero_pill", `${countries.length}+ countries · 145+ carriers · live rates`)}
+                {tf(loc, "hero_pill", `${countries.length}+ countries · 145+ carriers · live rates`, { count: countries.length })}
               </div>
               <HeroH1
                 prefix={tf(loc, "hero_h1_prefix", "Compare")}
