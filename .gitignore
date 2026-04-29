@@ -47,3 +47,6 @@ next-env.d.ts
 scripts/gsc-credentials.json
 gsc-report.json
 ga-report.json
+
+# SEO weekly digest snapshots (local history for delta comparison)
+.seo-snapshots.json

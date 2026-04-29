@@ -12,7 +12,9 @@
     "translate:updates": "node scripts/translate-content.mjs updates",
     "translate:carriers": "node scripts/translate-content.mjs carriers",
     "translate:blog": "node scripts/translate-content.mjs blog",
-    "translate:customs": "node scripts/translate-content.mjs customs"
+    "translate:customs": "node scripts/translate-content.mjs customs",
+    "seo:weekly": "tsx scripts/seo-weekly-digest.ts",
+    "seo:audit": "tsx scripts/seo-audit-deep.ts"
   },
   "dependencies": {
     "@easypost/api": "^8.8.0",
