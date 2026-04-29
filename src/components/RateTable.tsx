@@ -472,15 +472,25 @@ export default function RateTable({
             </label>
             <div className="flex items-center gap-1">
               <input
-                type="number"
+                type="text"
+                inputMode="decimal"
                 value={customWeight}
-                onChange={(e) => { setCustomWeight(e.target.value); setSelectedPreset(null); }}
+                onChange={(e) => {
+                  // Auto-format: accept European comma as decimal separator
+                  // (e.g. "2,5" → "2.5"), strip non-digits/dots, cap at one dot.
+                  const raw = e.target.value.replace(",", ".");
+                  const cleaned = raw.replace(/[^0-9.]/g, "");
+                  const firstDot = cleaned.indexOf(".");
+                  const normalized = firstDot === -1
+                    ? cleaned
+                    : cleaned.slice(0, firstDot + 1) +
+                      cleaned.slice(firstDot + 1).replace(/\./g, "");
+                  setCustomWeight(normalized);
+                  setSelectedPreset(null);
+                }}
                 placeholder="0.0"
-                min="0.1"
-                max="70"
-                step="0.1"
                 aria-label={labels.or_enter_weight}
-                className="w-24 px-4 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-gray-400"
+                className="w-24 px-4 py-3 bg-white border border-line rounded-xl text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 placeholder-muted"
               />
               <span className="text-sm text-body">{labels.kg}</span>
             </div>
@@ -796,6 +806,28 @@ export default function RateTable({
                     {labels.track_package || "Track Package"}
                   </a>
                 )}
+                <button
+                  onClick={() => toggleCompare(rate.id)}
+                  aria-pressed={compareIds.has(rate.id)}
+                  className={`ml-auto px-4 py-2 text-sm font-medium rounded-full transition-colors flex items-center gap-2 ${
+                    compareIds.has(rate.id)
+                      ? "bg-accent-50 text-accent border border-accent/30"
+                      : "text-muted hover:text-ink border border-transparent hover:border-line"
+                  }`}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                    strokeLinejoin="round" aria-hidden="true">
+                    {compareIds.has(rate.id) ? (
+                      <polyline points="20 6 9 17 4 12" />
+                    ) : (
+                      <>
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                      </>
+                    )}
+                  </svg>
+                  {labels.compare}
+                </button>
               </div>
               <div className="sm:hidden mt-2 text-xs text-body">
                 {labels.tracking}: {rate.tracking ? labels.yes : labels.no}
@@ -827,6 +859,73 @@ export default function RateTable({
       <p className="mt-8 text-xs text-muted leading-relaxed">
         {labels.disclaimer}
       </p>
+
+      {/* Sticky compare bar — appears at the bottom of the viewport when the
+          user has selected one or more rates. Slides up via CSS transform.
+          On click "Compare" it scrolls to the comparison table at top. */}
+      {compareIds.size > 0 && !showCompare && (
+        <div
+          className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-4 pointer-events-none"
+          role="region"
+          aria-label="Comparison selection"
+        >
+          <div
+            className="max-w-3xl mx-auto pointer-events-auto bg-ink text-white rounded-2xl shadow-[0_24px_60px_-15px_rgba(15,23,42,.45)] px-5 py-3.5 flex items-center justify-between gap-4 animate-[slideUp_.25s_ease-out_both]"
+            style={{
+              // The slideUp keyframe lives in globals.css scope; fall back to
+              // an inline style so we don't depend on a Tailwind plugin.
+              transform: "translateY(0)",
+            }}
+          >
+            <style>{`
+              @keyframes slideUp {
+                from { transform: translateY(120%); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+              }
+              @media (prefers-reduced-motion: reduce) {
+                [data-compare-bar] { animation: none !important; }
+              }
+            `}</style>
+            <div data-compare-bar className="flex items-center gap-3 min-w-0">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white text-sm font-bold shrink-0">
+                {compareIds.size}
+              </span>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold truncate">
+                  {compareIds.size === 1
+                    ? `1 ${labels.compare.toLowerCase()}`
+                    : `${compareIds.size} ${labels.compare.toLowerCase()}`}
+                </p>
+                <p className="text-xs text-white/60 truncate">
+                  {comparedRates.map((r) => r.carrier_name).join(" · ")}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => setCompareIds(new Set())}
+                className="px-3 py-2 text-xs text-white/70 hover:text-white transition-colors"
+                aria-label={labels.close}
+              >
+                {labels.close}
+              </button>
+              <button
+                onClick={() => {
+                  setShowCompare(true);
+                  // Scroll to the top so the comparison table is in view.
+                  if (typeof window !== "undefined") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+                disabled={compareIds.size < 2}
+                className="px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-full hover:bg-[#1558B8] disabled:bg-white/15 disabled:cursor-not-allowed transition-colors btn-press"
+              >
+                {labels.comparison} →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
