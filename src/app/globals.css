@@ -117,6 +117,78 @@
   --shadow-lg: 0 20px 40px -10px rgba(15,23,42,.12), 0 8px 16px rgba(15,23,42,.05);
 }
 
+/* ============================================
+   DARK THEME
+   ============================================
+   Activated by setting data-theme="dark" on <html>. The ThemeToggle component
+   does this via localStorage (no JS = light mode default). An inline script
+   in layout.tsx <head> applies the saved theme before first paint to avoid
+   FOUC.
+
+   Coverage caveat: this overrides the CSS variables that Tailwind v4 reads
+   (so utilities like `bg-bg`, `text-ink`, `border-line` switch automatically),
+   plus the inline-style :root vars (`var(--ink)`, `var(--blue)` etc.).
+   But hardcoded hex values in JSX (e.g. style={{ background: "#fff" }} or
+   className="bg-[#0F172A]") will NOT switch and remain "stuck" in light
+   colors until they're refactored to use tokens. First-pass dark mode —
+   expect some patches that look stranded against the dark canvas. */
+:root[data-theme="dark"] {
+  /* Tailwind @theme overrides */
+  --color-bg: #0B0F19;
+  --color-bg-alt: #131826;
+  --color-card: #1A2030;
+  --color-card-hover: #232A3A;
+  --color-surface: #1A2030;
+  --color-surface-light: #131826;
+
+  --color-ink: #F1F5F9;
+  --color-ink-2: #E2E8F0;
+  --color-body: #CBD5E1;
+  --color-muted: #94A3B8;
+  --color-line: #2A3447;
+  --color-line-2: #1E293B;
+
+  --color-accent: #4F8CF0;
+  --color-accent-light: #7AAFFF;
+  --color-accent-dark: #3567D9;
+  --color-accent-50: rgba(79,140,240,.15);
+  --color-accent-100: rgba(79,140,240,.25);
+
+  --color-warm: #F0C146;
+  --color-warm-50: rgba(240,193,70,.15);
+  --color-red: #F47558;
+  --color-red-50: rgba(244,117,88,.15);
+  --color-good: #34C588;
+  --color-good-50: rgba(52,197,136,.15);
+
+  /* Inline-style :root overrides — keep names in sync */
+  --blue: #4F8CF0;
+  --blue-700: #3567D9;
+  --blue-50: rgba(79,140,240,.15);
+  --blue-100: rgba(79,140,240,.25);
+  --ink: #F1F5F9;
+  --ink-2: #E2E8F0;
+  --body: #CBD5E1;
+  --muted: #94A3B8;
+  --line: #2A3447;
+  --line-2: #1E293B;
+  --bg: #0B0F19;
+  --card: #1A2030;
+  --accent: #F47558;
+  --accent-50: rgba(244,117,88,.15);
+  --warm: #F0C146;
+  --warm-50: rgba(240,193,70,.15);
+  --good: #34C588;
+  --good-50: rgba(52,197,136,.15);
+
+  /* Shadows: dark mode needs higher contrast (existing shadows used
+     ink-based rgba which is now near-white — invert to pure black). */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.4), 0 2px 6px rgba(0,0,0,.25);
+  --shadow-lg: 0 20px 40px -10px rgba(0,0,0,.6), 0 8px 16px rgba(0,0,0,.35);
+}
+
+
 /* Utility classes for v2 design */
 .tnum { font-variant-numeric: tabular-nums; }
 

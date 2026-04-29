@@ -6,6 +6,7 @@ import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA, CountUp } from "@/components/HeroMotion";
+import WorldMap from "@/components/WorldMap";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -70,7 +71,7 @@ export default async function HomePage({
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 56, alignItems: "flex-start" }} className="hero-grid">
             {/* LEFT: copy */}
             <div style={{ paddingTop: 32 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "#fff", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px 6px 10px", borderRadius: 999, background: "var(--card)", border: "1px solid var(--line)", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", boxShadow: "var(--shadow-sm)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: 999, background: "#0F8A48", boxShadow: "0 0 0 4px rgba(15,138,72,.18)" }} />
                 {tf(loc, "hero_pill", `${countries.length}+ countries · 145+ carriers · live rates`, { count: countries.length })}
               </div>
@@ -102,7 +103,7 @@ export default async function HomePage({
                   </a>
                 </MagneticCTA>
                 <Link href={`/${locale}/carriers`} style={{
-                  padding: "14px 22px", borderRadius: 12, background: "#fff", color: "var(--ink)",
+                  padding: "14px 22px", borderRadius: 12, background: "var(--card)", color: "var(--ink)",
                   fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", boxShadow: "var(--shadow-sm)",
                   textDecoration: "none",
                 }}>
@@ -190,7 +191,7 @@ export default async function HomePage({
               {/* Form card — raised above decorations, overflow visible so country dropdown isn't clipped */}
               <div id="calc" style={{
                 position: "relative", zIndex: 2, marginTop: 40,
-                background: "#fff", border: "1px solid var(--line)", borderRadius: 20,
+                background: "var(--card)", border: "1px solid var(--line)", borderRadius: 20,
                 padding: "28px 28px 80px",
                 boxShadow: "var(--shadow-lg)",
                 overflow: "visible",
@@ -231,7 +232,7 @@ export default async function HomePage({
               {/* Floating stats badge bottom-right — below calc, won't overlap inputs */}
               <div style={{
                 position: "absolute", bottom: -30, right: -20, zIndex: 3,
-                background: "#fff", borderRadius: 14, border: "1px solid var(--line)",
+                background: "var(--card)", borderRadius: 14, border: "1px solid var(--line)",
                 padding: "12px 16px", boxShadow: "var(--shadow-lg)", transform: "rotate(3deg)",
                 display: "flex", alignItems: "center", gap: 10,
                 pointerEvents: "none",
@@ -294,7 +295,7 @@ export default async function HomePage({
                   const usName = usCountry ? getCountryName(usCountry, loc) : "United States";
                   const gbName = gbCountry ? getCountryName(gbCountry, loc) : "United Kingdom";
                   return (
-                <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 18px", background: "#fff", border: "1px solid var(--line)", borderRadius: 16, boxShadow: "var(--shadow-sm)", marginBottom: 14, flexWrap: "wrap" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 18px", background: "var(--card)", border: "1px solid var(--line)", borderRadius: 16, boxShadow: "var(--shadow-sm)", marginBottom: 14, flexWrap: "wrap" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <span style={{ fontSize: 20 }}>{countryFlag("US")}</span>
                     <span style={{ fontWeight: 700, color: "var(--ink)" }}>{usName}</span>
@@ -318,7 +319,7 @@ export default async function HomePage({
                 })()}
 
                 {/* Table */}
-                <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
+                <div style={{ background: "var(--card)", border: "1px solid var(--line)", borderRadius: 16, overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
                   <div className="row-grid" style={{ display: "grid", gridTemplateColumns: "2.4fr 1.4fr 1fr 1.2fr 1fr", padding: "14px 20px", fontSize: 11, fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".06em", background: "var(--bg)", borderBottom: "1px solid var(--line)" }}>
                     <div>{tf(loc, "carrier", "Carrier")}</div>
                     <div>{tf(loc, "service", "Service")}</div>
@@ -383,7 +384,7 @@ export default async function HomePage({
       </section>
 
       {/* === TOOLS (3 cards) === */}
-      <section style={{ padding: "72px 32px", background: "#fff", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+      <section style={{ padding: "72px 32px", background: "var(--card)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div style={{ marginBottom: 36, maxWidth: 720 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 12 }}>{tf(loc, "tools_eyebrow", "Tools")}</div>
@@ -409,7 +410,7 @@ export default async function HomePage({
                 <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "carriers_title", "Compare 145+ carriers")}</h3>
                 <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "carriers_card_desc", "Full carrier directory. Global express, national posts, regional couriers — all with rates and reliability.")}</p>
               </div>
-              <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "flex", flexWrap: "wrap", gap: 8, alignContent: "flex-start", overflow: "hidden", maxWidth: "100%" }}>
+              <div style={{ background: "var(--card)", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1, display: "flex", flexWrap: "wrap", gap: 8, alignContent: "flex-start", overflow: "hidden", maxWidth: "100%" }}>
                 {[
                   { bg: "#FFCC00", fg: "#D40511", label: "DHL", icon: "dhl" },
                   { bg: "#4D148C", fg: "#FF6600", label: "FedEx", icon: "fedex" },
@@ -448,7 +449,7 @@ export default async function HomePage({
                 <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "customs_home_title", "Duty & tax, before you ship")}</h3>
                 <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "customs_home_desc", "HS-code lookup across 213 countries, VAT/duty and broker fees broken down.")}</p>
               </div>
-              <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
+              <div style={{ background: "var(--card)", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
                 <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 4 }}>Electronics · HS 8517.13 · US → Germany · $1,200</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 10 }}>
                   {[
@@ -488,7 +489,7 @@ export default async function HomePage({
                 <h3 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.015em", color: "var(--ink)" }}>{tf(loc, "delivery_home_title", "When will it actually arrive?")}</h3>
                 <p style={{ margin: 0, fontSize: 14, color: "var(--body)" }}>{tf(loc, "delivery_home_desc", "Express, standard, economy transit times based on carrier transit data.")}</p>
               </div>
-              <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
+              <div style={{ background: "var(--card)", borderRadius: 14, border: "1px solid var(--line)", padding: 14, flex: 1 }}>
                 <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 10 }}>DHL Express · NYC → London</div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 90 }}>
                   {[
@@ -520,7 +521,7 @@ export default async function HomePage({
       </section>
 
       {/* === STATS BAR (dark) — real numbers only, count-up on scroll-in === */}
-      <section style={{ padding: "48px 32px", background: "var(--ink, #0F172A)", color: "#fff" }}>
+      <section style={{ padding: "48px 32px", background: "#0F172A", color: "#fff" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48 }} className="stats-grid">
           {[
             { num: 145, suffix: "+", l: tf(loc, "stat_carriers_label", "Carriers compared"), s: tf(loc, "stat_carriers_sub", "Global + regional") },
@@ -564,7 +565,7 @@ export default async function HomePage({
                 { n: 4, icon: <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>, t: tf(loc, "step4_title", "Go direct to the carrier"), d: tf(loc, "step4_desc", "We don't upsell or book for you — you go straight to the carrier's website with the full price.") },
               ].map((s) => (
                 <div key={s.n} style={{ textAlign: "left" }}>
-                  <div style={{ width: 52, height: 52, borderRadius: 14, background: "#fff", border: "1px solid var(--line)", display: "grid", placeItems: "center", color: "var(--blue)", boxShadow: "var(--shadow-sm)", position: "relative" }}>
+                  <div style={{ width: 52, height: 52, borderRadius: 14, background: "var(--card)", border: "1px solid var(--line)", display: "grid", placeItems: "center", color: "var(--blue)", boxShadow: "var(--shadow-sm)", position: "relative" }}>
                     {s.icon}
                     <div style={{ position: "absolute", top: -8, right: -8, width: 22, height: 22, borderRadius: 999, background: "var(--ink)", color: "#fff", fontSize: 11, fontWeight: 700, display: "grid", placeItems: "center" }}>{s.n}</div>
                   </div>
@@ -588,7 +589,7 @@ export default async function HomePage({
             <p style={{ margin: "14px 0 0", fontSize: 17, color: "var(--body)", maxWidth: 620 }}>{tf(loc, "why_desc", "Side by side. No hand-waving.")}</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="compare-grid">
-            <div style={{ background: "#fff", borderRadius: 20, border: "1px solid var(--line)", padding: 28 }}>
+            <div style={{ background: "var(--card)", borderRadius: 20, border: "1px solid var(--line)", padding: 28 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                 <div style={{ width: 34, height: 34, borderRadius: 10, background: "#F3EDE4", color: "#7A6A55", display: "grid", placeItems: "center" }}>
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12" /></svg>
@@ -640,8 +641,14 @@ export default async function HomePage({
       </section>
 
       {/* === POPULAR CORRIDORS (compact, kept from real data) === */}
-      <section style={{ padding: "72px 32px", background: "#fff", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+      <section style={{ padding: "72px 32px", background: "var(--card)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          {/* Animated world map showing all popular corridors as drawn arcs.
+              Sits above the grid so users see the global picture before drilling
+              into specific routes. */}
+          <div style={{ marginBottom: 48 }}>
+            <WorldMap height={420} />
+          </div>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
             <div>
               <div style={{ fontSize: 12, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 10 }}>{tf(loc, "popular_corridors_eyebrow", "Popular corridors")}</div>
@@ -802,7 +809,7 @@ export default async function HomePage({
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
             </MagneticCTA>
-            <Link href={`/${locale}/carriers`} style={{ padding: "14px 24px", borderRadius: 12, background: "#fff", color: "var(--ink)", fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", textDecoration: "none" }}>
+            <Link href={`/${locale}/carriers`} style={{ padding: "14px 24px", borderRadius: 12, background: "var(--card)", color: "var(--ink)", fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", textDecoration: "none" }}>
               {tf(loc, "cta_secondary", "Browse all carriers")}
             </Link>
           </div>

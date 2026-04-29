@@ -17,6 +17,7 @@ import AdSense from "@/components/AdSense";
 import WebVitals from "@/components/WebVitals";
 import ServiceWorker from "@/components/ServiceWorker";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -79,6 +80,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
+        {/* No-FOUC theme bootstrap. Runs before the first paint and applies
+            the saved theme (or prefers-color-scheme) to <html> so dark-mode
+            users don't see an ivory flash on reload. The script is tiny
+            (<400 bytes) and synchronous on purpose — yes that blocks paint,
+            but the alternative is the flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('rs-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
+          }}
+        />
         <link rel="alternate" type="application/rss+xml" title="RateShips Blog" href="/feed.xml" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -226,6 +237,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     {t(loc, "compare_rates")}
                   </NavLink>
                 </nav>
+                <ThemeToggle />
                 <LanguageSwitcher locale={locale} />
                 <MobileMenu
                   locale={locale}
@@ -248,7 +260,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="mt-16 bg-ink text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <footer className="mt-16 bg-[#0F172A] text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="max-w-[1240px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>

@@ -870,7 +870,7 @@ export default function RateTable({
           aria-label="Comparison selection"
         >
           <div
-            className="max-w-3xl mx-auto pointer-events-auto bg-ink text-white rounded-2xl shadow-[0_24px_60px_-15px_rgba(15,23,42,.45)] px-5 py-3.5 flex items-center justify-between gap-4 animate-[slideUp_.25s_ease-out_both]"
+            className="max-w-3xl mx-auto pointer-events-auto bg-[#0F172A] text-white rounded-2xl shadow-[0_24px_60px_-15px_rgba(15,23,42,.45)] px-5 py-3.5 flex items-center justify-between gap-4 animate-[slideUp_.25s_ease-out_both]"
             style={{
               // The slideUp keyframe lives in globals.css scope; fall back to
               // an inline style so we don't depend on a Tailwind plugin.
