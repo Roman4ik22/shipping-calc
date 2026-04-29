@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { HeroH1, FloatingShape } from "@/components/HeroMotion";
+import { AboutIllustration } from "@/components/PageIllustrations";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -104,14 +105,19 @@ export default async function AboutPage({
             style={{ position: "absolute", bottom: "18%", right: "22%", width: 56, height: 56, borderRadius: 12, background: "var(--accent)", opacity: 0.9, boxShadow: "0 14px 30px -8px rgba(232,92,58,.5)" }}
             className="hero-float"
           />
+          {/* Themed illustration replacing one of the abstract floating boxes —
+              gives the hero meaningful visual content (magnifying glass over
+              transparent invoice) instead of pure abstraction. */}
           <FloatingShape
-            rotateDeg={-4}
-            parallaxRange={40}
-            bobDistance={4}
+            rotateDeg={-2}
+            parallaxRange={50}
+            bobDistance={5}
             bobDuration={7}
-            style={{ position: "absolute", top: "22%", right: "30%", width: 44, height: 44, borderRadius: 10, background: "#fff", border: "2px solid var(--blue)", boxShadow: "var(--shadow-md)" }}
+            style={{ position: "absolute", top: "8%", right: "4%", width: 280, pointerEvents: "none" }}
             className="hero-float"
-          />
+          >
+            <AboutIllustration width={280} />
+          </FloatingShape>
         </div>
 
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1240, margin: "0 auto", padding: "clamp(40px,8vw,96px) clamp(16px,4vw,32px) clamp(48px,9vw,112px)" }}>

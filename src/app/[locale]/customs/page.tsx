@@ -5,6 +5,7 @@ import { t, tf, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { TiltCard, StaggerGrid, StaggerItem } from "@/components/HeroMotion";
+import { CustomsIllustration } from "@/components/PageIllustrations";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -104,8 +105,12 @@ export default async function CustomsHubPage({
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative", overflow: "hidden" }}>
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 30% -10%, rgba(26,115,232,.08), transparent 60%)" }} />
+        {/* Themed corner illustration: stamp on document over a globe */}
+        <div aria-hidden className="hidden md:block" style={{ position: "absolute", top: 24, right: 32, opacity: 0.95, pointerEvents: "none" }}>
+          <CustomsIllustration width={280} />
+        </div>
         <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
           <nav style={{ fontSize: 13, color: "var(--muted)", marginBottom: 24 }}>
             <Link href={`/${locale}`} style={{ color: "var(--muted)", textDecoration: "none" }}>{t(loc, "home")}</Link>

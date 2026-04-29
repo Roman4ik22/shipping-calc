@@ -4,6 +4,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { StaggerGrid, StaggerItem, GlowCTA, MagneticCTA } from "@/components/HeroMotion";
 import { CarrierTypePill } from "@/components/CarrierTypeIcon";
+import { CarriersIllustration } from "@/components/PageIllustrations";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -122,6 +123,10 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
           maskImage: 'linear-gradient(180deg, #000 50%, transparent 100%)'
         }} />
         <CarriersDecor />
+        {/* Themed corner illustration — packages stack with paper plane */}
+        <div aria-hidden className="hidden md:block absolute pointer-events-none" style={{ top: 40, right: 32, opacity: 0.95 }}>
+          <CarriersIllustration width={300} />
+        </div>
 
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-8 pt-16 pb-14">
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 999, background: '#fff', border: '1px solid var(--line)', fontSize: 12, fontWeight: 600, marginBottom: 20, boxShadow: 'var(--shadow-sm)' }}>

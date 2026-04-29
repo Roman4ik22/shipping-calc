@@ -3,6 +3,7 @@ import Link from "next/link";
 import { locales, t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { blogPosts } from "@/data/blog-posts";
+import { BlogIllustration } from "@/components/PageIllustrations";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -74,8 +75,12 @@ export default async function BlogPage({
       />
 
       {/* V2 Hero */}
-      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative" }}>
+      <section style={{ padding: "72px 32px 48px", borderBottom: "1px solid var(--line)", position: "relative", overflow: "hidden" }}>
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(800px 400px at 70% -10%, rgba(232,92,58,.06), transparent 60%)" }} />
+        {/* Themed corner illustration: stack of articles with featured card */}
+        <div aria-hidden className="hidden md:block" style={{ position: "absolute", top: 24, right: 32, opacity: 0.95, pointerEvents: "none" }}>
+          <BlogIllustration width={300} />
+        </div>
         <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
           <h1 style={{ margin: "0 0 18px", fontSize: "clamp(40px,5vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
             {t(loc, "blog_title")}
