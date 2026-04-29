@@ -124,44 +124,15 @@
 .hero-shape-b { animation: float-b 5s ease-in-out infinite 1s; }
 .hero-shape-c { animation: float-c 7s ease-in-out infinite 0.5s; }
 
-/* Fade-in on scroll (IntersectionObserver driven via .is-visible) */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.fade-in.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Staggered children fade-in */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.08s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.16s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.24s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-.stagger-children.is-visible > *:nth-child(n+7) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
-
-/* Accessibility + no-JS safety: never hide content if animations can't run. */
-@media (prefers-reduced-motion: reduce) {
-  .fade-in,
-  .stagger-children > * {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-}
+/* No-op: legacy .fade-in / .stagger-children classes are kept on existing JSX
+ * for backwards-compat but they no longer hide content. Animations on the
+ * homepage hero + popular corridors grid are now handled by Framer Motion
+ * (src/components/HeroMotion.tsx) which is SSR-aware and degrades gracefully.
+ *
+ * Why removed: the opacity:0-by-default + JS-adds-is-visible pattern was
+ * fragile — if the JS bundle failed to load (CDN edge issue, ad blocker, old
+ * iOS Safari), content stayed permanently invisible. The visible-by-default
+ * approach is the only safe baseline. */
 
 /* Card hover lift */
 .card-hover {
