@@ -121,7 +121,7 @@ export default function DutyCalculator({
               setSelectedCategory(e.target.value);
               setResult(null);
             }}
-            className="w-full sm:w-80 px-4 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+            className="w-full sm:w-80 px-4 py-2.5 bg-white border border-line rounded-lg text-ink focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
           >
             <option value="">
               {locale === "ru"
@@ -155,7 +155,7 @@ export default function DutyCalculator({
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="0.00"
-              className="w-full pl-7 pr-3 py-2.5 bg-dark-700 border border-line rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
+              className="w-full pl-7 pr-3 py-2.5 bg-white border border-line rounded-lg text-ink placeholder-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30"
             />
           </div>
         </div>
