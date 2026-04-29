@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import ShippingForm from "@/components/ShippingForm";
 import NewsletterForm from "@/components/NewsletterForm";
+import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem } from "@/components/HeroMotion";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -73,31 +74,33 @@ export default async function HomePage({
                 <span style={{ width: 6, height: 6, borderRadius: 999, background: "#0F8A48", boxShadow: "0 0 0 4px rgba(15,138,72,.18)" }} />
                 {tf(loc, "hero_pill", `${countries.length}+ countries · 145+ carriers · live rates`)}
               </div>
-              <h1 style={{ margin: "20px 0 22px", fontSize: "clamp(40px,5.4vw,68px)", lineHeight: 1.0, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}>
-                {tf(loc, "hero_h1_prefix", "Compare")}{" "}
-                <span style={{ color: "var(--blue)", position: "relative", display: "inline-block" }}>
-                  {tf(loc, "hero_h1_blue", "145+ carriers")}
+              <HeroH1
+                prefix={tf(loc, "hero_h1_prefix", "Compare")}
+                blue={tf(loc, "hero_h1_blue", "145+ carriers")}
+                suffix={tf(loc, "hero_h1_suffix", "in 5 seconds.")}
+                style={{ margin: "20px 0 22px", fontSize: "clamp(40px,5.4vw,68px)", lineHeight: 1.0, letterSpacing: "-.03em", fontWeight: 800, color: "var(--ink)" }}
+                underline={
                   <svg aria-hidden viewBox="0 0 340 20" style={{ position: "absolute", left: 0, bottom: -10, width: "100%", height: 14 }}>
                     <path d="M2 12 Q 80 2, 170 10 T 338 8" stroke="var(--warm)" strokeWidth="5" fill="none" strokeLinecap="round" opacity=".85" />
                   </svg>
-                </span>
-                <br />
-                {tf(loc, "hero_h1_suffix", "in 5 seconds.")}
-              </h1>
+                }
+              />
               <p style={{ fontSize: 19, color: "var(--body)", lineHeight: 1.5, maxWidth: 520, margin: "0 0 28px" }}>
                 {t(loc, "hero_subtitle", { count: "145" })}
               </p>
 
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <a href="#calc" style={{
-                  padding: "14px 22px", borderRadius: 12, background: "#1A73E8", color: "#fff",
-                  fontWeight: 600, fontSize: 15, display: "inline-flex", alignItems: "center", gap: 8,
-                  textDecoration: "none",
-                  boxShadow: "0 10px 20px -8px rgba(26,115,232,.6), inset 0 1px 0 rgba(255,255,255,.2)",
-                }}>
-                  {tf(loc, "get_free_quote", "Get a free quote")}
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </a>
+                <MagneticCTA>
+                  <a href="#calc" style={{
+                    padding: "14px 22px", borderRadius: 12, background: "#1A73E8", color: "#fff",
+                    fontWeight: 600, fontSize: 15, display: "inline-flex", alignItems: "center", gap: 8,
+                    textDecoration: "none",
+                    boxShadow: "0 10px 20px -8px rgba(26,115,232,.6), inset 0 1px 0 rgba(255,255,255,.2)",
+                  }}>
+                    {tf(loc, "get_free_quote", "Get a free quote")}
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </a>
+                </MagneticCTA>
                 <Link href={`/${locale}/carriers`} style={{
                   padding: "14px 22px", borderRadius: 12, background: "#fff", color: "var(--ink)",
                   fontWeight: 600, fontSize: 15, border: "1px solid var(--line)", boxShadow: "var(--shadow-sm)",
@@ -147,28 +150,42 @@ export default async function HomePage({
             {/* RIGHT: form + floating decorative elements */}
             <div style={{ position: "relative", minWidth: 0 }}>
               {/* Top-right rotated container tile — pushed further out, behind calc */}
-              <div aria-hidden style={{
-                position: "absolute", top: -40, right: -60, width: 180, height: 124,
-                borderRadius: 16, overflow: "hidden", transform: "rotate(5deg)",
-                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
-                background: "linear-gradient(135deg, #1A73E8 0%, #2F88FF 50%, #0F3C8A 100%)",
-                display: "grid", placeItems: "center", color: "rgba(255,255,255,.75)",
-                pointerEvents: "none",
-              }} className="hero-float">
+              <FloatingShape
+                rotateDeg={5}
+                parallaxRange={80}
+                bobDistance={4}
+                bobDuration={5}
+                style={{
+                  position: "absolute", top: -40, right: -60, width: 180, height: 124,
+                  borderRadius: 16, overflow: "hidden",
+                  boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
+                  background: "linear-gradient(135deg, #1A73E8 0%, #2F88FF 50%, #0F3C8A 100%)",
+                  display: "grid", placeItems: "center", color: "rgba(255,255,255,.75)",
+                  pointerEvents: "none",
+                }}
+                className="hero-float"
+              >
                 <svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20s2 1 4 1 3-1 4-1 2 1 4 1 3-1 4-1 4-1 4-1" /><path d="M4 18L3 12h18l-1 6" /><path d="M12 4v8M8 8h8" /></svg>
-              </div>
+              </FloatingShape>
 
               {/* Bottom-left rotated circular parcel tile — smaller, further out, behind calc */}
-              <div aria-hidden style={{
-                position: "absolute", bottom: -50, left: -70, width: 140, height: 140,
-                borderRadius: "50%", overflow: "hidden", transform: "rotate(-6deg)",
-                boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
-                background: "linear-gradient(135deg, var(--warm-50) 0%, #FBE7B8 100%)",
-                display: "grid", placeItems: "center", color: "#A37A00",
-                pointerEvents: "none",
-              }} className="hero-float hero-float-parcel">
+              <FloatingShape
+                rotateDeg={-6}
+                parallaxRange={-60}
+                bobDistance={5}
+                bobDuration={6}
+                style={{
+                  position: "absolute", bottom: -50, left: -70, width: 140, height: 140,
+                  borderRadius: "50%", overflow: "hidden",
+                  boxShadow: "var(--shadow-lg)", border: "4px solid #fff", zIndex: 0,
+                  background: "linear-gradient(135deg, var(--warm-50) 0%, #FBE7B8 100%)",
+                  display: "grid", placeItems: "center", color: "#A37A00",
+                  pointerEvents: "none",
+                }}
+                className="hero-float hero-float-parcel"
+              >
                 <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z" /><path d="M3 8v8l9 5 9-5V8" /><path d="M12 13v8" /></svg>
-              </div>
+              </FloatingShape>
 
               {/* Form card — raised above decorations, overflow visible so country dropdown isn't clipped */}
               <div id="calc" style={{
@@ -621,7 +638,11 @@ export default async function HomePage({
             </div>
             <Link href={`/${locale}/guide`} style={{ fontSize: 14, fontWeight: 600, color: "var(--blue)", textDecoration: "none" }}>{t(loc, "all_countries_link")} →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }} className="routes-grid">
+          <StaggerGrid
+            style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}
+            className="routes-grid"
+            staggerDelay={0.07}
+          >
             {popularCorridors.slice(0, 8).map(([fromCode, toCode]) => {
               const from = countries.find((c) => c.code === fromCode);
               const to = countries.find((c) => c.code === toCode);
@@ -636,27 +657,29 @@ export default async function HomePage({
                 : null;
               const topCarrier = data?.carriers[0]?.carrier.name ?? null;
               return (
-                <Link key={`${fromCode}-${toCode}`} href={`/${locale}/shipping/${slug}`} prefetch={false} style={{ display: "block", padding: 18, background: "var(--bg)", border: "1px solid var(--line)", borderRadius: 14, textDecoration: "none", color: "inherit", transition: "transform .2s, box-shadow .2s, border-color .2s" }} className="route-card">
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                    <span style={{ fontSize: 18 }}>{countryFlag(fromCode)}</span>
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--muted)" }}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                    <span style={{ fontSize: 18 }}>{countryFlag(toCode)}</span>
-                  </div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{getCountryName(from, loc)} → {getCountryName(to, loc)}</div>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginTop: 10 }}>
-                    <span style={{ fontSize: 11, color: "var(--muted)" }}>{tf(loc, "from_price", "From")}</span>
-                    <span style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)", fontVariantNumeric: "tabular-nums" }}>
-                      {cheapest && cheapest < 999 ? `$${cheapest.toFixed(2)}` : "—"}
-                    </span>
-                  </div>
-                  <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid var(--line-2)", display: "flex", justifyContent: "space-between", fontSize: 12, color: "var(--muted)" }}>
-                    <span>{fastest ? `${fastest}+ ${tf(loc, "days_short", "days")}` : "—"}</span>
-                    {topCarrier && <span style={{ fontWeight: 600, color: "var(--ink-2)" }}>{topCarrier}</span>}
-                  </div>
-                </Link>
+                <StaggerItem key={`${fromCode}-${toCode}`}>
+                  <Link href={`/${locale}/shipping/${slug}`} prefetch={false} style={{ display: "block", padding: 18, background: "var(--bg)", border: "1px solid var(--line)", borderRadius: 14, textDecoration: "none", color: "inherit", transition: "transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s, border-color .25s", height: "100%" }} className="route-card">
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                      <span style={{ fontSize: 18 }}>{countryFlag(fromCode)}</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--muted)" }}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                      <span style={{ fontSize: 18 }}>{countryFlag(toCode)}</span>
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)", letterSpacing: "-.01em" }}>{getCountryName(from, loc)} → {getCountryName(to, loc)}</div>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginTop: 10 }}>
+                      <span style={{ fontSize: 11, color: "var(--muted)" }}>{tf(loc, "from_price", "From")}</span>
+                      <span style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)", fontVariantNumeric: "tabular-nums" }}>
+                        {cheapest && cheapest < 999 ? `$${cheapest.toFixed(2)}` : "—"}
+                      </span>
+                    </div>
+                    <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid var(--line-2)", display: "flex", justifyContent: "space-between", fontSize: 12, color: "var(--muted)" }}>
+                      <span>{fastest ? `${fastest}+ ${tf(loc, "days_short", "days")}` : "—"}</span>
+                      {topCarrier && <span style={{ fontWeight: 600, color: "var(--ink-2)" }}>{topCarrier}</span>}
+                    </div>
+                  </Link>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 
