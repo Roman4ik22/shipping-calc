@@ -3,6 +3,7 @@ import { carriers, getCarrierDescription } from "@/lib/data";
 import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { StaggerGrid, StaggerItem, GlowCTA, MagneticCTA } from "@/components/HeroMotion";
+import { CarrierTypePill } from "@/components/CarrierTypeIcon";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -195,13 +196,13 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                       }}>
                         <span style={{ fontSize: 13, fontWeight: 800, letterSpacing: '.02em' }}>{brand.letters}</span>
                       </div>
-                      <div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         <div style={{ fontWeight: 700, fontSize: 17 }}>{c.name}</div>
-                        <span style={{
-                          fontSize: 10, fontWeight: 600, padding: '2px 8px', borderRadius: 999,
-                          background: color === 'var(--blue)' ? 'var(--blue-50)' : color === 'var(--accent)' ? 'var(--accent-50)' : 'var(--warm-50)',
-                          color: color
-                        }}>{c.type}</span>
+                        <CarrierTypePill
+                          type={c.type}
+                          label={t(loc, `carrier_type_${group.key}`)}
+                          size="xs"
+                        />
                       </div>
                     </div>
                     <p style={{ margin: 0, fontSize: 14, color: 'var(--body)', lineHeight: 1.5 }}>{desc}</p>
@@ -251,7 +252,23 @@ export default async function CarriersPage({ params }: { params: Promise<{ local
                           display: 'grid', placeItems: 'center',
                           fontSize: 8, fontWeight: 800, letterSpacing: '.02em'
                         }}>{brand.letters}</div>
-                        <span style={{ fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const }}>{c.name}</span>
+                        <span style={{ fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const, flex: 1 }}>{c.name}</span>
+                        <span style={{
+                          display: 'inline-grid', placeItems: 'center',
+                          width: 22, height: 22, borderRadius: 999,
+                          background: color === 'var(--blue)' ? 'var(--blue-50)' : color === 'var(--accent)' ? 'var(--accent-50)' : 'var(--warm-50)',
+                          color, flexShrink: 0
+                        }} aria-label={t(loc, `carrier_type_${group.key}`)}>
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            {group.key === 'international' ? (
+                              <><path d="M22 2L11 13" /><path d="M22 2l-7 20-4-9-9-4 20-7z" /></>
+                            ) : group.key === 'regional' ? (
+                              <><path d="M1 3h15v13H1z" /><path d="M16 8h4l3 3v5h-7z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></>
+                            ) : (
+                              <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></>
+                            )}
+                          </svg>
+                        </span>
                       </Link>
                     );
                   })}

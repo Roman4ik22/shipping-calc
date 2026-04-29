@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from "react";
 import type { Locale } from "@/lib/types";
+import { CarrierTypePill } from "./CarrierTypeIcon";
 
 interface Rate {
   weight_kg: number;
@@ -725,9 +726,8 @@ export default function RateTable({
                         {rate.route_score.toFixed(1)} ★
                       </span>
                     )}
-                    <span className="text-xs text-muted">
-                      {rate.carrier_type}
-                    </span>
+                    <CarrierTypePill type={rate.carrier_type} size="xs" />
+
                   </div>
                   <div className="flex items-center gap-2">
                     <p className="text-sm text-body">{rate.service_name}</p>

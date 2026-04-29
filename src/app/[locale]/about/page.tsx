@@ -264,13 +264,24 @@ export default async function AboutPage({
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="tools-grid">
             {[
-              { icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>, tint: "var(--blue)", tintBg: "var(--blue-50)", title: tf(loc, "principle_transparency", "Transparency"), tag: tf(loc, "principle_transparency_tag", "Every fee upfront"), desc: tf(loc, "principle_transparency_desc", "No hidden surcharges. Fuel, remote-area, dim-weight and customs fees shown before you ship, not when the package lands at a border.") },
-              { icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M5 8h14M3 14l3-7 3 7M15 14l3-7 3 7" /></svg>, tint: "var(--accent)", tintBg: "var(--accent-50)", title: tf(loc, "principle_neutrality", "Neutrality"), tag: tf(loc, "principle_neutrality_tag", "No carrier commissions"), desc: tf(loc, "principle_neutrality_desc", "We take zero rebates from DHL, FedEx or anyone else. Ranking on the results page is the honest one — cheapest wins, not highest-kickback.") },
-              { icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" /></svg>, tint: "#A37A00", tintBg: "var(--warm-50)", title: tf(loc, "principle_accuracy", "Accuracy"), tag: tf(loc, "principle_accuracy_tag", "Published tariffs only"), desc: tf(loc, "principle_accuracy_desc", "Rates sourced from carrier tariff documents, updated weekly. Customs data from official authority databases across 213 countries.") },
+              { icon: <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>, tint: "var(--blue)", tintBg: "var(--blue-50)", title: tf(loc, "principle_transparency", "Transparency"), tag: tf(loc, "principle_transparency_tag", "Every fee upfront"), desc: tf(loc, "principle_transparency_desc", "No hidden surcharges. Fuel, remote-area, dim-weight and customs fees shown before you ship, not when the package lands at a border.") },
+              { icon: <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M5 8h14M3 14l3-7 3 7M15 14l3-7 3 7" /></svg>, tint: "var(--accent)", tintBg: "var(--accent-50)", title: tf(loc, "principle_neutrality", "Neutrality"), tag: tf(loc, "principle_neutrality_tag", "No carrier commissions"), desc: tf(loc, "principle_neutrality_desc", "We take zero rebates from DHL, FedEx or anyone else. Ranking on the results page is the honest one — cheapest wins, not highest-kickback.") },
+              { icon: <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" /></svg>, tint: "#A37A00", tintBg: "var(--warm-50)", title: tf(loc, "principle_accuracy", "Accuracy"), tag: tf(loc, "principle_accuracy_tag", "Published tariffs only"), desc: tf(loc, "principle_accuracy_desc", "Rates sourced from carrier tariff documents, updated weekly. Customs data from official authority databases across 213 countries.") },
             ].map((c, i) => (
-              <div key={c.title} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 28, position: "relative", display: "flex", flexDirection: "column", gap: 18 }} className="team-card">
+              <div key={c.title} style={{ background: "var(--bg)", borderRadius: 20, border: "1px solid var(--line)", padding: 32, position: "relative", display: "flex", flexDirection: "column", gap: 20, overflow: "hidden" }} className="team-card">
+                {/* Soft glow blob behind the icon — uses tint color */}
+                <div aria-hidden style={{
+                  position: "absolute", top: -40, right: -40, width: 180, height: 180,
+                  borderRadius: 999, background: c.tint, opacity: 0.07,
+                  filter: "blur(40px)", pointerEvents: "none"
+                }} />
                 <div style={{ position: "absolute", top: 28, right: 28, fontSize: 11, fontWeight: 800, letterSpacing: ".08em", color: "var(--muted)" }}>{String(i + 1).padStart(2, "0")}</div>
-                <div style={{ width: 52, height: 52, borderRadius: 14, background: c.tintBg, color: c.tint, display: "grid", placeItems: "center" }}>{c.icon}</div>
+                <div style={{
+                  width: 72, height: 72, borderRadius: 18, background: c.tintBg, color: c.tint,
+                  display: "grid", placeItems: "center",
+                  boxShadow: `inset 0 0 0 1px ${c.tint}22, 0 8px 24px -10px ${c.tint}33`,
+                  position: "relative", zIndex: 1
+                }}>{c.icon}</div>
                 <div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: c.tint, textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6 }}>{c.tag}</div>
                   <h3 style={{ margin: 0, fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "var(--ink)" }}>{c.title}</h3>

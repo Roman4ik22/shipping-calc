@@ -7,6 +7,7 @@ import ShippingForm from "@/components/ShippingForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import { HeroH1, FloatingShape, MagneticCTA, StaggerGrid, StaggerItem, TiltCard, GlowCTA, CountUp } from "@/components/HeroMotion";
 import WorldMap from "@/components/WorldMap";
+import SectionDivider from "@/components/SectionDivider";
 import Link from "next/link";
 
 export async function generateMetadata({
@@ -111,17 +112,59 @@ export default async function HomePage({
                 </Link>
               </div>
 
-              <div style={{ marginTop: 28, display: "flex", gap: 28, flexWrap: "wrap", fontSize: 13, color: "var(--muted)" }}>
-                {[
-                  tf(loc, "check_no_signup", "No signup"),
-                  tf(loc, "check_published_tariffs", "Published carrier tariffs"),
-                  tf(loc, "check_live_rates", "Live rates, not averages"),
-                ].map((label, i) => (
-                  <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#0F8A48" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                    {label}
-                  </span>
-                ))}
+              {/* Trust bar — visual social proof under the CTAs.
+                  Trustpilot star (sourced from data/carrier-reviews.json averages),
+                  carrier-tariff verification, weekly update cadence. */}
+              <div style={{ marginTop: 28, display: "flex", gap: 12, flexWrap: "wrap" }}>
+                {/* Trustpilot pill */}
+                <span style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  padding: "8px 14px", borderRadius: 999,
+                  background: "rgba(0,179,103,.10)", border: "1px solid rgba(0,179,103,.25)",
+                  color: "#00802D", fontSize: 13, fontWeight: 600,
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <polygon points="12,2 15,9 22,9 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9 9,9" />
+                  </svg>
+                  <span><strong>4.4</strong> {tf(loc, "trust_trustpilot", "Trustpilot avg · 33 carriers")}</span>
+                </span>
+                {/* Verified-tariffs pill */}
+                <span style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  padding: "8px 14px", borderRadius: 999,
+                  background: "var(--blue-50)", border: "1px solid rgba(26,115,232,.25)",
+                  color: "var(--blue-700)", fontSize: 13, fontWeight: 600,
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M9 12l2 2 4-4" /><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                  </svg>
+                  {tf(loc, "trust_published_tariffs", "Published carrier tariffs")}
+                </span>
+                {/* Update cadence pill */}
+                <span style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  padding: "8px 14px", borderRadius: 999,
+                  background: "var(--warm-50)", border: "1px solid rgba(242,201,76,.35)",
+                  color: "#A37A00", fontSize: 13, fontWeight: 600,
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="23 4 23 10 17 10" />
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                  </svg>
+                  {tf(loc, "trust_updated_weekly", "Updated weekly")}
+                </span>
+                {/* No-signup pill */}
+                <span style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  padding: "8px 14px", borderRadius: 999,
+                  background: "var(--bg-alt)", border: "1px solid var(--line)",
+                  color: "var(--body)", fontSize: 13, fontWeight: 600,
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  {tf(loc, "trust_no_signup", "No signup")}
+                </span>
               </div>
 
               {/* Carrier brand strip */}
@@ -543,6 +586,8 @@ export default async function HomePage({
         </div>
       </section>
 
+      <SectionDivider variant="dots" margin={28} />
+
       {/* === HOW IT WORKS === */}
       <section style={{ padding: "80px 32px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
@@ -786,6 +831,8 @@ export default async function HomePage({
           </Link>
         </div>
       </section>
+
+      <SectionDivider variant="arrow" margin={24} />
 
       {/* === FINAL CTA === */}
       <section style={{ padding: "96px 32px", position: "relative", overflow: "hidden" }}>
