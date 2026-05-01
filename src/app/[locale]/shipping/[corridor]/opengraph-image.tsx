@@ -1,12 +1,36 @@
 import { ImageResponse } from "next/og";
 import { parseCorridorSlug, getCorridorData, getCountryName } from "@/lib/data";
 import type { Locale } from "@/lib/types";
-import { t } from "@/lib/i18n";
 
 export const runtime = "edge";
 export const alt = "Shipping rates comparison";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+/**
+ * Tiny inline dictionary for the 3 short labels used here. Importing the full
+ * i18n.ts (~9000 lines, thousands of translations) into the edge runtime
+ * blew the bundle past its limit and produced a 502 on every corridor OG
+ * route. Carriers/customs/blog OGs avoid the import for the same reason.
+ *
+ * If a locale isn't listed, we fall back to English — OG images are scraped
+ * once and cached by social platforms, so the cost of a non-localized
+ * preview for rare locales is acceptable.
+ */
+const LABELS: Record<string, { options: string; from: string; tagline: string }> = {
+  en: { options: "shipping options", from: "from", tagline: "Compare shipping rates" },
+  ru: { options: "вариантов доставки", from: "от", tagline: "Сравните тарифы доставки" },
+  es: { options: "opciones de envío", from: "desde", tagline: "Compara tarifas de envío" },
+  de: { options: "Versandoptionen", from: "ab", tagline: "Versandtarife vergleichen" },
+  fr: { options: "options d'expédition", from: "à partir de", tagline: "Comparez les tarifs d'expédition" },
+  pt: { options: "opções de envio", from: "a partir de", tagline: "Compare tarifas de envio" },
+  zh: { options: "种发货选项", from: "起", tagline: "比较发货费率" },
+  ja: { options: "の配送オプション", from: "から", tagline: "配送料金を比較" },
+  ko: { options: "개의 배송 옵션", from: "부터", tagline: "배송 요금 비교" },
+  ar: { options: "خيارات الشحن", from: "من", tagline: "قارن أسعار الشحن" },
+  tr: { options: "kargo seçeneği", from: "başlangıç", tagline: "Kargo ücretlerini karşılaştır" },
+  it: { options: "opzioni di spedizione", from: "da", tagline: "Confronta le tariffe di spedizione" },
+};
 
 export default async function Image({
   params,
@@ -15,6 +39,7 @@ export default async function Image({
 }) {
   const { locale, corridor } = await params;
   const loc = locale as Locale;
+  const labels = LABELS[locale] ?? LABELS.en;
   const parsed = parseCorridorSlug(corridor, loc);
   if (!parsed) {
     return new ImageResponse(
@@ -105,10 +130,10 @@ export default async function Image({
         >
           {carrierCount > 0 && (
             <span>
-              {carrierCount} {t(loc, "shipping_options")}
+              {carrierCount} {labels.options}
             </span>
           )}
-          {cheapest && <span>{t(loc, "from_price")} ${cheapest}</span>}
+          {cheapest && <span>{labels.from} ${cheapest}</span>}
         </div>
 
         {/* Bottom tagline */}
@@ -119,7 +144,7 @@ export default async function Image({
             color: "#6b7280",
           }}
         >
-          {t(loc, "compare_shipping_rates")} — rateships.com
+          {labels.tagline} — rateships.com
         </div>
       </div>
     ),
