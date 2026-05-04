@@ -1,7 +1,7 @@
 {
   "carrier_id": "pochta-rossii",
-  "effective_date": "2026-04-27",
-  "note": "Pochta Rossii international rates from Russia. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
+  "effective_date": "2026-05-04",
+  "note": "Pochta Rossii international rates from Russia. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04]",
   "zones": [
     {
       "zone": 1,
@@ -114,71 +114,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9,
-          18,
-          31.52,
-          36.02,
-          42.77
+          9.27,
+          18.54,
+          32.47,
+          37.1,
+          44.05
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.5,
-          27.01,
-          39.39,
-          47.28,
-          54.02
+          13.91,
+          27.82,
+          40.57,
+          48.7,
+          55.64
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          20.26,
-          36.02,
-          56.28,
-          65.28,
-          76.53
+          20.87,
+          37.1,
+          57.97,
+          67.24,
+          78.83
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          36.02,
-          61.9,
-          99.04,
-          112.55,
-          132.82
+          37.1,
+          63.76,
+          102.01,
+          115.93,
+          136.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          61.9,
-          106.92,
-          166.57,
-          191.33,
-          225.11
+          63.76,
+          110.13,
+          171.57,
+          197.07,
+          231.86
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          106.92,
-          180.07,
-          298.26,
-          343.28,
-          407.44
+          110.13,
+          185.47,
+          307.21,
+          353.58,
+          419.66
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          151.95,
-          258.87,
-          429.94,
-          495.22,
-          590.89
+          156.51,
+          266.64,
+          442.84,
+          510.08,
+          608.62
         ]
       }
     ],
@@ -186,61 +186,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.62,
-          11.26,
-          15.76,
-          18,
-          22.52
+          5.79,
+          11.6,
+          16.23,
+          18.54,
+          23.2
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.14,
-          18,
-          20.26,
-          24.76,
-          29.26
+          10.44,
+          18.54,
+          20.87,
+          25.5,
+          30.14
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.63,
-          24.76,
-          29.26,
-          33.76,
-          42.77
+          15.07,
+          25.5,
+          30.14,
+          34.77,
+          44.05
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          24.76,
-          42.77,
-          54.02,
-          61.9,
-          76.53
+          25.5,
+          44.05,
+          55.64,
+          63.76,
+          78.83
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          42.77,
-          73.16,
-          92.29,
-          110.3,
-          135.06
+          44.05,
+          75.35,
+          95.06,
+          113.61,
+          139.11
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          73.16,
-          122.68,
-          171.08,
-          202.59,
-          249.87
+          75.35,
+          126.36,
+          176.21,
+          208.67,
+          257.37
         ]
       }
     ]

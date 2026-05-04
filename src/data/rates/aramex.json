@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex",
-  "effective_date": "2026-04-27",
-  "note": "[Updated from Aramex published rate card (AUB PDF) March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
+  "effective_date": "2026-05-04",
+  "note": "[Updated from Aramex published rate card (AUB PDF) March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04]",
   "zones": [
     {
       "zone": 1,
@@ -90,71 +90,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.8,
-          10.8,
-          14.41,
-          11.95,
-          10.8
+          11.12,
+          11.12,
+          14.84,
+          12.31,
+          11.12
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          16.49,
-          16.49,
-          20.11,
-          17.62,
-          16.49
+          16.98,
+          16.98,
+          20.71,
+          18.15,
+          16.98
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          27.88,
-          27.88,
-          31.49,
-          29.02,
-          27.88
+          28.72,
+          28.72,
+          32.43,
+          29.89,
+          28.72
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          62.04,
-          62.04,
-          65.66,
-          63.18,
-          62.04
+          63.9,
+          63.9,
+          67.63,
+          65.08,
+          63.9
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          119.01,
-          119.01,
-          122.62,
-          120.14,
-          119.01
+          122.58,
+          122.58,
+          126.3,
+          123.74,
+          122.58
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          232.9,
-          232.9,
-          236.51,
-          234.05,
-          232.9
+          239.89,
+          239.89,
+          243.61,
+          241.07,
+          239.89
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          346.8,
-          346.8,
-          350.42,
-          347.93,
-          346.8
+          357.2,
+          357.2,
+          360.93,
+          358.37,
+          357.2
         ]
       }
     ]

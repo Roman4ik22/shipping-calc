@@ -1,7 +1,7 @@
 {
   "carrier_id": "india-post",
-  "effective_date": "2026-04-27",
-  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
+  "effective_date": "2026-05-04",
+  "note": "India Post international rates from India. One of the most affordable postal services globally. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04]",
   "zones": [
     {
       "zone": 1,
@@ -95,71 +95,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13.77,
-          20.65,
-          17.2,
-          25.24,
-          28.69
+          14.25,
+          21.37,
+          17.8,
+          26.12,
+          29.69
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          18.36,
-          27.54,
-          26.39,
-          37.87,
-          42.46
+          19,
+          28.5,
+          27.31,
+          39.2,
+          43.95
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          25.24,
-          36.72,
-          37.87,
-          52.79,
-          60.83
+          26.12,
+          38.01,
+          39.2,
+          54.64,
+          62.96
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          43.6,
-          63.11,
-          71.15,
-          103.27,
-          117.04
+          45.13,
+          65.32,
+          73.64,
+          106.88,
+          121.14
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          68.85,
-          103.27,
-          121.63,
-          177.85,
-          207.7
+          71.26,
+          106.88,
+          125.89,
+          184.07,
+          214.97
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          114.75,
-          177.85,
-          206.55,
-          309.83,
-          367.21
+          118.77,
+          184.07,
+          213.78,
+          320.67,
+          380.06
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          158.35,
-          246.71,
-          286.88,
-          430.31,
-          516.38
+          163.89,
+          255.34,
+          296.92,
+          445.37,
+          534.45
         ]
       }
     ],
@@ -167,61 +167,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.89,
-          10.34,
-          12.63,
-          18.36,
-          20.65
+          7.13,
+          10.7,
+          13.07,
+          19,
+          21.37
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.18,
-          13.77,
-          19.52,
-          27.54,
-          30.98
+          9.5,
+          14.25,
+          20.2,
+          28.5,
+          32.06
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13.77,
-          20.65,
-          27.54,
-          39.01,
-          44.74
+          14.25,
+          21.37,
+          28.5,
+          40.38,
+          46.31
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          25.24,
-          36.72,
-          52.79,
-          75.73,
-          86.07
+          26.12,
+          38.01,
+          54.64,
+          78.38,
+          89.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.6,
-          63.11,
-          89.51,
-          130.81,
-          152.63
+          45.13,
+          65.32,
+          92.64,
+          135.39,
+          157.97
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          74.58,
-          112.45,
-          154.92,
-          229.5,
-          269.67
+          77.19,
+          116.39,
+          160.34,
+          237.53,
+          279.11
         ]
       },
       {

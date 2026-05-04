@@ -1,7 +1,7 @@
 {
   "carrier_id": "blue-dart",
-  "effective_date": "2026-04-27",
-  "note": "Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27]",
+  "effective_date": "2026-05-04",
+  "note": "Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04]",
   "zones": [
     {
       "zone": 1,
@@ -67,57 +67,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.79,
-          7.09,
-          10.14
+          5.96,
+          7.3,
+          10.44
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.12,
-          15.76,
-          22.52
+          8.36,
+          16.23,
+          23.2
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.6,
-          35.45,
-          50.65
+          11.95,
+          36.51,
+          52.17
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20.87,
-          66.97,
-          95.68
+          21.5,
+          68.98,
+          98.55
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          34.77,
-          110.3,
-          157.58
+          35.81,
+          113.61,
+          162.31
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          60.29,
-          173.33,
-          247.61
+          62.1,
+          178.53,
+          255.04
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          86.95,
-          236.35,
-          337.65
+          89.56,
+          243.44,
+          347.78
         ]
       }
     ],
@@ -125,57 +125,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.48,
-          5.62,
-          8.11
+          3.58,
+          5.79,
+          8.35
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.79,
-          12.62,
-          18
+          5.96,
+          13,
+          18.54
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.12,
-          28.37,
-          40.52
+          8.36,
+          29.22,
+          41.74
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.07,
-          53.58,
-          76.53
+          15.52,
+          55.19,
+          78.83
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.5,
-          88.24,
-          126.05
+          26.27,
+          90.89,
+          129.83
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          44.05,
-          138.67,
-          198.09
+          45.37,
+          142.83,
+          204.03
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          63.76,
-          189.09,
-          270.13
+          65.67,
+          194.76,
+          278.23
         ]
       }
     ]
