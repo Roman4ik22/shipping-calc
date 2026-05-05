@@ -133,6 +133,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
+      canonical: `/${locale}/blog/${slug}`,
       languages: {
         ...Object.fromEntries(
           getBlogLocales(post.tags).map((l) => [l, `/${l}/blog/${slug}`])
