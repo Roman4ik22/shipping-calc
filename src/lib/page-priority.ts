@@ -150,7 +150,8 @@ export function getAllPagesByPriority(): PagePriority[] {
     });
   }
   for (const post of blogPosts) {
-    const postLocales = getBlogLocales(post.tags);
+    // Pass the full post — getBlogLocales now requires translation existence.
+    const postLocales = getBlogLocales(post);
     for (const locale of postLocales) {
       pages.push({
         url: `${BASE_URL}/${locale}/blog/${post.id}`,

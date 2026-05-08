@@ -1,17 +1,26 @@
 /**
  * Smart locale routing for blog posts.
  *
- * Rule: a blog post should only be localized into languages that match its
- * region/topic tags. A post about shipping from Korea is relevant in Korean
- * and English (maybe Japanese/Chinese for adjacent markets). It is NOT
- * relevant in Arabic or Turkish.
+ * Rule: a blog post is relevant in a locale only when an actual translation
+ * exists (`title_<loc>` and `content_<loc>` fields are populated on the post
+ * object). Region/topic tags can extend the eligibility set, but Google flags
+ * pages as "duplicate without canonical" if /ja/blog/X serves English content
+ * because no Japanese translation exists — so we no longer widen to "all 12"
+ * just because tags are generic.
  *
- * Generic posts (cost-saving tips, calculation guides, comparisons) remain
- * relevant across all 12 locales.
+ * The two-arg overload `getBlogLocales(post)` checks actual translation; the
+ * tag-only overload `getBlogLocales(tags)` is kept for backward-compat callers
+ * that don't have the post object handy (it returns the optimistic set).
  */
 
 import type { Locale } from "./types";
 import { locales } from "./i18n";
+
+/** Minimal shape we need from a blog post to check translation completeness.
+ *  We only require `tags`; per-locale fields (title_en, content_ja, …) are
+ *  accessed via a cast inside the function so we don't force callers to add
+ *  an index signature to their BlogPost interface. */
+type BlogPostLike = { tags: string[] };
 
 /**
  * Tag → locales the post targets. Keys are tags that appear in blog-posts.ts.
@@ -47,16 +56,19 @@ const GENERIC_TAGS = new Set<string>([
 ]);
 
 /**
- * Return the set of locales a blog post should exist in.
+ * Return the set of locales a blog post is RELEVANT in based on its tags.
+ * This is the optimistic / aspirational set — the locales we'd ship the post
+ * to if we had translations for all of them.
+ *
  * Logic:
  *   1. Start with a set built from region-specific tags (e.g. china → zh, en).
- *   2. If ANY generic tag is present, widen to all 12 locales (universal topics).
- *   3. Always include English.
- *   4. If no matching tags at all, fall back to all 12 (safe default).
+ *   2. If a region tag matched, return strictly that set (don't let generic
+ *      tags widen a China-specific post back to all 12).
+ *   3. Otherwise: only English, unless the post object is provided (use the
+ *      `getBlogLocales(post)` overload for the actual translation set).
  */
-export function getBlogLocales(tags: string[]): Locale[] {
+function getRelevantLocalesByTags(tags: string[]): Locale[] {
   const regionLocales = new Set<Locale>();
-  let hasGeneric = false;
   let matchedAnyRegion = false;
 
   for (const tag of tags) {
@@ -64,26 +76,62 @@ export function getBlogLocales(tags: string[]): Locale[] {
       matchedAnyRegion = true;
       for (const loc of TAG_LOCALES[tag]) regionLocales.add(loc);
     }
-    if (GENERIC_TAGS.has(tag)) hasGeneric = true;
   }
 
-  // If there is at least one region tag, respect it strictly — don't let
-  // generic tags widen a China-specific post back to all 12.
   if (matchedAnyRegion) {
     regionLocales.add("en");
     return [...regionLocales];
   }
 
-  // No region tags + at least one generic tag → universal
-  if (hasGeneric) return [...locales];
-
-  // Nothing matched at all → safe default = all 12
-  return [...locales];
+  // No region tag → only English. We no longer widen generic-tag posts to
+  // all 12 locales because that produces /ja/blog/X URLs that serve English
+  // content (no translation) → Google flags as duplicate.
+  return ["en"];
 }
 
 /**
- * Is a given locale valid for this blog post?
+ * Return locales a post is ACTUALLY available in: intersection of
+ *   (locales the post has translations for)
+ * with
+ *   (locales the post is relevant for based on tags).
+ *
+ * This is what generates the canonical/hreflang/sitemap entries. Pages render
+ * for these locales without noindex; everything else gets canonical-to-en +
+ * noindex.
  */
-export function isBlogLocaleValid(tags: string[], locale: Locale): boolean {
-  return getBlogLocales(tags).includes(locale);
+export function getBlogLocales(postOrTags: BlogPostLike | string[]): Locale[] {
+  // Tag-only path (legacy / sitemap-pre-translation expansion). Returns the
+  // tag-based relevance set.
+  if (Array.isArray(postOrTags)) {
+    return getRelevantLocalesByTags(postOrTags);
+  }
+
+  const post = postOrTags;
+  const relevantByTags = new Set(getRelevantLocalesByTags(post.tags));
+
+  // Cast once so we can index per-locale fields (title_<loc>, content_<loc>).
+  const fields = post as unknown as Record<string, unknown>;
+
+  // Find locales where the post has an actual translation (title + content).
+  const translated: Locale[] = [];
+  for (const loc of locales) {
+    const title = fields[`title_${loc}`];
+    const content = fields[`content_${loc}`];
+    const hasTitle = typeof title === "string" && title.length > 0;
+    const hasContent = typeof content === "string" && content.length > 0;
+    if (hasTitle && hasContent && relevantByTags.has(loc)) {
+      translated.push(loc);
+    }
+  }
+  // Always include English (base locale assumption — every post has en).
+  if (!translated.includes("en")) translated.unshift("en");
+  return translated;
+}
+
+/**
+ * Is a given locale valid for this blog post? Pass the post for correct
+ * translation-aware check; pass tags only for the tag-based optimistic check.
+ */
+export function isBlogLocaleValid(postOrTags: BlogPostLike | string[], locale: Locale): boolean {
+  return getBlogLocales(postOrTags).includes(locale);
 }

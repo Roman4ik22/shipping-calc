@@ -105,7 +105,7 @@ function getRelatedCorridors(tags: string[]): { from: string; to: string }[] {
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
   for (const post of blogPosts) {
-    for (const locale of getBlogLocales(post.tags)) {
+    for (const locale of getBlogLocales(post)) {
       params.push({ locale, slug: post.id });
     }
   }
@@ -132,8 +132,8 @@ export async function generateMetadata({
   // Smart locale: if locale isn't relevant for this post's tags, render the
   // page but point canonical to /en + noindex. Avoids GSC "Page with redirect"
   // errors that the 308 approach was producing.
-  const blogLocales = getBlogLocales(post.tags);
-  const isLocaleRelevant = isBlogLocaleValid(post.tags, loc);
+  const blogLocales = getBlogLocales(post);
+  const isLocaleRelevant = isBlogLocaleValid(post, loc);
   const canonicalPath = isLocaleRelevant
     ? `/${locale}/blog/${slug}`
     : `/en/blog/${slug}`;
