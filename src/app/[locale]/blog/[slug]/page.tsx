@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { localeNames, t, pickLocalized } from "@/lib/i18n";
 import { StaggerWords } from "@/components/HeroMotion";
@@ -129,18 +129,28 @@ export async function generateMetadata({
   const title = pickLocalized(post as unknown as Record<string, unknown>, "title", loc);
   const description = pickLocalized(post as unknown as Record<string, unknown>, "excerpt", loc);
 
+  // Smart locale: if locale isn't relevant for this post's tags, render the
+  // page but point canonical to /en + noindex. Avoids GSC "Page with redirect"
+  // errors that the 308 approach was producing.
+  const blogLocales = getBlogLocales(post.tags);
+  const isLocaleRelevant = isBlogLocaleValid(post.tags, loc);
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/blog/${slug}`
+    : `/en/blog/${slug}`;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/blog/${slug}`,
+      canonical: canonicalPath,
       languages: {
         ...Object.fromEntries(
-          getBlogLocales(post.tags).map((l) => [l, `/${l}/blog/${slug}`])
+          blogLocales.map((l) => [l, `/${l}/blog/${slug}`])
         ),
         "x-default": `/en/blog/${slug}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
     openGraph: {
       title,
       description,
@@ -367,11 +377,7 @@ export default async function BlogPostPage({
   if (!post) {
     notFound();
   }
-  // Smart routing: irrelevant locales 301 to the canonical /en/ version so
-  // already-indexed URLs consolidate instead of returning hard 404s.
-  if (!isBlogLocaleValid(post.tags, loc)) {
-    permanentRedirect(`/en/blog/${slug}`);
-  }
+  // No redirect for irrelevant locales — see generateMetadata above.
 
   const postRec = post as unknown as Record<string, unknown>;
   const title = pickLocalized(postRec, "title", loc);

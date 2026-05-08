@@ -6,7 +6,7 @@ import { t } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCarrierLocales, isCarrierLocaleValid } from "@/lib/carrier-locales";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -79,18 +79,28 @@ export async function generateMetadata({
 
   const description = `${desc} ${descSuffix}`;
 
+  // Smart locale: if this locale isn't relevant for the carrier, point canonical
+  // to /en/ and mark as noindex. We render the page (no redirect) so Googlebot
+  // doesn't see "Page with redirect" — Google reads the canonical and consolidates.
+  const carrierLocales = getCarrierLocales(carrierId, carrier.type);
+  const isLocaleRelevant = isCarrierLocaleValid(carrierId, loc, carrier.type);
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/carriers/${carrierId}`
+    : `/en/carriers/${carrierId}`;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/carriers/${carrierId}`,
+      canonical: canonicalPath,
       languages: {
         ...Object.fromEntries(
-          getCarrierLocales(carrierId, carrier.type).map((l) => [l, `/${l}/carriers/${carrierId}`])
+          carrierLocales.map((l) => [l, `/${l}/carriers/${carrierId}`])
         ),
         "x-default": `/en/carriers/${carrierId}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
     openGraph: {
       title,
       description,
@@ -111,12 +121,8 @@ export default async function CarrierPage({
   if (!carrier) {
     notFound();
   }
-  // If this locale isn't relevant for the carrier (smart routing), 301 to the
-  // canonical /en/ version so Google consolidates index/link equity rather
-  // than dropping the URL.
-  if (!isCarrierLocaleValid(carrierId, loc, carrier.type)) {
-    permanentRedirect(`/en/carriers/${carrierId}`);
-  }
+  // No redirect for irrelevant locales — see generateMetadata above. Page
+  // renders normally; Google deindexes the duplicate locale via canonical+noindex.
 
   return (
     <div>

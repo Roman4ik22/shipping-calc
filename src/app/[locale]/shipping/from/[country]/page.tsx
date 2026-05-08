@@ -4,7 +4,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import ExpandableGrid from "@/components/ExpandableGrid";
 
@@ -35,6 +35,13 @@ export async function generateMetadata({
   const country = getCountryBySlug(slug, "en");
   if (!country) return { title: "Not Found" };
 
+  // Smart locale: canonical → /en + noindex when irrelevant locale.
+  const validLocales = getCorridorLocales(country.code, country.code);
+  const isLocaleRelevant = validLocales.includes(loc);
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/shipping/from/${slug}`
+    : `/en/shipping/from/${slug}`;
+
   return {
     title: t(loc, "meta_country_from_title", {
       country: getCountryName(country, loc),
@@ -42,12 +49,13 @@ export async function generateMetadata({
     description:
       t(loc, "meta_country_from_desc", { country: getCountryName(country, loc) }),
     alternates: {
-      canonical: `/${locale}/shipping/from/${slug}`,
+      canonical: canonicalPath,
       languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `/${l}/shipping/from/${slug}`])),
+        ...Object.fromEntries(validLocales.map((l) => [l, `/${l}/shipping/from/${slug}`])),
         "x-default": `/en/shipping/from/${slug}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
   };
 }
 
@@ -63,11 +71,7 @@ export default async function FromCountryPage({
   if (!country) {
     notFound();
   }
-
-  const validLocales = getCorridorLocales(country.code, country.code);
-  if (!validLocales.includes(loc)) {
-    permanentRedirect(`/en/shipping/from/${country.slug_en}`);
-  }
+  // No redirect — see generateMetadata for canonical/noindex pattern.
 
   const name = getCountryName(country, loc);
 

@@ -14,7 +14,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
 import DutyCalculator from "@/components/DutyCalculator";
 import Link from "next/link";
-import { permanentRedirect, notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 
 const BASE_URL = "https://rateships.com";
 
@@ -104,18 +104,31 @@ export async function generateMetadata({
         ? `Versand & Zoll ${name} ${year}`
         : `Shipping & Customs Guide for ${countryEn} (${year})`;
 
+  // Smart locale: if this locale isn't relevant for the country, point canonical
+  // to /en/ and mark as noindex. We render the page (so Googlebot doesn't see
+  // a redirect chain — that was triggering 21k "Page with redirect" issues in
+  // GSC after the previous 308-redirect approach). Google reads the canonical
+  // signal and consolidates ranking on the /en version while deindexing the
+  // duplicate locale variant naturally.
+  const validLocales = getCorridorLocales(country.code, country.code);
+  const isLocaleRelevant = validLocales.includes(loc);
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/customs/${slug}`
+    : `/en/customs/${slug}`;
+
   return {
     title: titleLocalized,
     description: descLocalized,
     alternates: {
-      canonical: `/${locale}/customs/${slug}`,
+      canonical: canonicalPath,
       languages: {
         ...Object.fromEntries(
-          getCorridorLocales(country.code, country.code).map((l) => [l, `/${l}/customs/${slug}`])
+          validLocales.map((l) => [l, `/${l}/customs/${slug}`])
         ),
         "x-default": `/en/customs/${slug}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
     openGraph: {
       title: ogTitle,
       description: descLocalized,
@@ -145,12 +158,9 @@ export default async function CustomsCountryPage({
     notFound();
   }
 
-  // Smart locale: 301 to /en/ if this locale isn't relevant for the country
-  // so Google consolidates already-indexed URLs into the canonical version.
-  const validLocales = getCorridorLocales(country.code, country.code);
-  if (!validLocales.includes(loc)) {
-    permanentRedirect(`/en/customs/${slug}`);
-  }
+  // No redirect for irrelevant locales — see generateMetadata above. The page
+  // still renders with the requested locale's UI chrome; Google handles
+  // consolidation via the canonical/noindex hints in the metadata.
 
   const name = getCountryName(country, loc);
   const customs = getCustomsInfo(country.code);

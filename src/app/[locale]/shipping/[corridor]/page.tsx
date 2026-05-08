@@ -24,7 +24,7 @@ import { countryFlag } from "@/lib/flags";
 import { getCorridorContent } from "@/data/corridor-content";
 import { generateCorridorInfo } from "@/lib/corridor-generator";
 import Link from "next/link";
-import { permanentRedirect, notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import { isCorridorLocaleValid, getCorridorLocales } from "@/lib/country-locale";
 import LocaleSuggestion from "@/components/LocaleSuggestion";
 import DeliveryDateEstimator from "@/components/DeliveryDateEstimator";
@@ -99,18 +99,29 @@ export async function generateMetadata({
     days: fastestDays > 0 ? `${fastestDays}–${slowestDays}` : "5–30",
   };
 
+  // Smart locale: render normally for irrelevant locales but point canonical to
+  // /en/<en-slug> + noindex. Avoids "Page with redirect" — Google deindexes via
+  // canonical signal instead of being told to follow a 308 chain.
+  const validLocales = getCorridorLocales(parsed.origin.code, parsed.destination.code);
+  const isLocaleRelevant = validLocales.includes(loc);
+  const enCorridorSlug = makeCorridorSlug(parsed.origin, parsed.destination, "en");
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/shipping/${corridor}`
+    : `/en/shipping/${enCorridorSlug}`;
+
   return {
     title: t(loc, "meta_corridor_title", metaVars),
     description: t(loc, "meta_corridor_description", metaVars),
     alternates: {
-      canonical: `/${locale}/shipping/${corridor}`,
+      canonical: canonicalPath,
       languages: {
         ...Object.fromEntries(
-          getCorridorLocales(parsed.origin.code, parsed.destination.code).map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
+          validLocales.map((l) => [l, `/${l}/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, l as Locale)}`])
         ),
-        "x-default": `/en/shipping/${makeCorridorSlug(parsed.origin, parsed.destination, "en")}`,
+        "x-default": `/en/shipping/${enCorridorSlug}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
     openGraph: {
       title: t(loc, "meta_corridor_title", metaVars),
       description: t(loc, "meta_corridor_description", metaVars),
@@ -134,12 +145,7 @@ export default async function CorridorPage({
 
   const { origin, destination } = parsed;
 
-  // 301 permanent redirect to English if locale is not relevant for this corridor
-  // (consolidates indexed URLs to canonical version instead of breaking them).
-  if (!isCorridorLocaleValid(origin.code, destination.code, loc)) {
-    const enSlug = makeCorridorSlug(origin, destination, "en");
-    permanentRedirect(`/en/shipping/${enSlug}`);
-  }
+  // No redirect for irrelevant locales — see generateMetadata above.
 
   const corridorData = getCorridorData(origin.code, destination.code);
   const originName = getCountryName(origin, loc);

@@ -12,7 +12,7 @@ import { t, locales } from "@/lib/i18n";
 import type { Locale, Country } from "@/lib/types";
 import { countryFlag } from "@/lib/flags";
 import { getCorridorLocales } from "@/lib/country-locale";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export const dynamicParams = true;
@@ -42,16 +42,25 @@ export async function generateMetadata({
   if (!country) return { title: "Not Found" };
   const name = getCountryName(country, loc);
 
+  // Smart locale: render normally for irrelevant locales but point canonical
+  // to /en/ + noindex. Avoids "Page with redirect" issues in GSC.
+  const validLocales = getCorridorLocales(country.code, country.code);
+  const isLocaleRelevant = validLocales.includes(loc);
+  const canonicalPath = isLocaleRelevant
+    ? `/${locale}/guide/${slug}`
+    : `/en/guide/${slug}`;
+
   return {
     title: t(loc, "guide_title", { country: name }) + " — " + t(loc, "customs_info"),
     description: t(loc, "guide_meta_description", { country: name }),
     alternates: {
-      canonical: `/${locale}/guide/${slug}`,
+      canonical: canonicalPath,
       languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `/${l}/guide/${slug}`])),
+        ...Object.fromEntries(validLocales.map((l) => [l, `/${l}/guide/${slug}`])),
         "x-default": `/en/guide/${slug}`,
       },
     },
+    robots: isLocaleRelevant ? undefined : { index: false, follow: true },
     openGraph: {
       title: t(loc, "guide_title", { country: name }),
       description: t(loc, "guide_meta_description", { country: name }),
@@ -87,11 +96,7 @@ export default async function GuidePage({
   if (!country) {
     notFound();
   }
-
-  const validLocales = getCorridorLocales(country.code, country.code);
-  if (!validLocales.includes(loc)) {
-    permanentRedirect(`/en/guide/${country.slug_en}`);
-  }
+  // No redirect for irrelevant locales — see generateMetadata above.
 
   const name = getCountryName(country, loc);
   const customs = getCustomsInfo(country.code);
