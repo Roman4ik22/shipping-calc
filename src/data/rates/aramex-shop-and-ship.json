@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex-shop-and-ship",
-  "effective_date": "2026-05-04",
-  "note": "Estimated Aramex Shop & Ship rates. Cross-border shopping service delivering from US/UK/EU to Middle East, Africa, Asia. [Updated from Aramex Shop&Ship published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04]",
+  "effective_date": "2026-05-11",
+  "note": "Estimated Aramex Shop & Ship rates. Cross-border shopping service delivering from US/UK/EU to Middle East, Africa, Asia. [Updated from Aramex Shop&Ship published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
   "zones": [
     {
       "zone": 1,
@@ -87,71 +87,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.12,
-          19.71,
-          23.29,
-          28.65,
-          25.08
+          16.6,
+          20.3,
+          23.99,
+          29.51,
+          25.83
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          21.5,
-          26.27,
-          31.04,
-          38.21,
-          33.44
+          22.15,
+          27.06,
+          31.97,
+          39.36,
+          34.44
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          31.17,
-          38.11,
-          45.01,
-          55.4,
-          48.47
+          32.11,
+          39.25,
+          46.36,
+          57.06,
+          49.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          53.74,
-          65.67,
-          77.61,
-          95.52,
-          83.57
+          55.35,
+          67.64,
+          79.94,
+          98.39,
+          86.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          90.28,
-          110.33,
-          130.4,
-          160.48,
-          140.41
+          92.99,
+          113.64,
+          134.31,
+          165.29,
+          144.62
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          154.75,
-          189.13,
-          223.53,
-          275.1,
-          240.73
+          159.39,
+          194.8,
+          230.24,
+          283.35,
+          247.95
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          214.93,
-          262.69,
-          310.44,
-          382.09,
-          334.33
+          221.38,
+          270.57,
+          319.75,
+          393.55,
+          344.36
         ]
       }
     ],
@@ -159,71 +159,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.12,
-          19.71,
-          23.29,
-          28.65,
-          25.08
+          16.6,
+          20.3,
+          23.99,
+          29.51,
+          25.83
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          21.5,
-          26.27,
-          31.04,
-          38.21,
-          33.44
+          22.15,
+          27.06,
+          31.97,
+          39.36,
+          34.44
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          31.17,
-          38.11,
-          45.01,
-          55.4,
-          48.47
+          32.11,
+          39.25,
+          46.36,
+          57.06,
+          49.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          53.74,
-          65.67,
-          77.61,
-          95.52,
-          83.57
+          55.35,
+          67.64,
+          79.94,
+          98.39,
+          86.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          90.28,
-          110.33,
-          130.4,
-          160.48,
-          140.41
+          92.99,
+          113.64,
+          134.31,
+          165.29,
+          144.62
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          154.75,
-          189.13,
-          223.53,
-          275.1,
-          240.73
+          159.39,
+          194.8,
+          230.24,
+          283.35,
+          247.95
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          214.93,
-          262.69,
-          310.44,
-          382.09,
-          334.33
+          221.38,
+          270.57,
+          319.75,
+          393.55,
+          344.36
         ]
       }
     ]
