@@ -1,7 +1,7 @@
 {
   "carrier_id": "j-and-t-express",
-  "effective_date": "2026-05-11",
-  "note": "J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
+  "effective_date": "2026-05-18",
+  "note": "J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
   "zones": [
     {
       "zone": 1,
@@ -59,57 +59,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.82,
-          1.18,
-          10.16
+          0.84,
+          1.22,
+          10.46
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          0.96,
-          1.18,
-          13.75
+          0.99,
+          1.22,
+          14.16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.55,
-          1.67,
-          19.1
+          1.6,
+          1.72,
+          19.67
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.39,
-          3.34,
-          33.44
+          2.46,
+          3.44,
+          34.44
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          2.99,
-          6.09,
-          57.31
+          3.08,
+          6.27,
+          59.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          6.09,
-          11.95,
-          102.69
+          6.27,
+          12.31,
+          105.77
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          9.07,
-          17.91,
-          145.67
+          9.34,
+          18.45,
+          150.04
         ]
       }
     ],
@@ -117,57 +117,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.62,
-          0.96,
-          7.64
+          0.64,
+          0.99,
+          7.87
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          0.72,
-          0.96,
-          10.27
+          0.74,
+          0.99,
+          10.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.18,
-          1.31,
-          14.33
+          1.22,
+          1.35,
+          14.76
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          1.8,
-          2.5,
-          25.08
+          1.85,
+          2.58,
+          25.83
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          2.27,
-          4.53,
-          42.99
+          2.34,
+          4.67,
+          44.28
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          4.53,
-          8.96,
-          77.61
+          4.67,
+          9.23,
+          79.94
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          6.81,
-          13.49,
-          109.86
+          7.01,
+          13.89,
+          113.16
         ]
       }
     ]

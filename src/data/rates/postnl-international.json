@@ -1,7 +1,7 @@
 {
   "carrier_id": "postnl-international",
-  "effective_date": "2026-05-11",
-  "note": "Synced from postnl. Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
+  "effective_date": "2026-05-18",
+  "note": "Synced from postnl. Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
   "zones": [
     {
       "zone": 1,
@@ -80,64 +80,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.62,
-          12.29,
-          19.98,
-          27.66
+          4.78,
+          12.72,
+          20.68,
+          28.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.15,
-          16.39,
-          26.64,
-          36.87
+          6.37,
+          16.96,
+          27.57,
+          38.16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.9,
-          23.76,
-          38.63,
-          53.48
+          9.21,
+          24.59,
+          39.98,
+          55.35
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.37,
-          40.98,
-          66.6,
-          92.2
+          15.91,
+          42.41,
+          68.93,
+          95.43
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.82,
-          68.83,
-          111.88,
-          154.88
+          26.72,
+          71.24,
+          115.8,
+          160.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          44.26,
-          117.98,
-          191.79,
-          265.52
+          45.81,
+          122.11,
+          198.5,
+          274.81
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          61.46,
-          163.86,
-          266.37,
-          368.78
+          63.61,
+          169.6,
+          275.69,
+          381.69
         ]
       }
     ]

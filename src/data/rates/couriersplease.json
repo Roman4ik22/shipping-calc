@@ -1,7 +1,7 @@
 {
   "carrier_id": "couriersplease",
-  "effective_date": "2026-05-11",
-  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
+  "effective_date": "2026-05-18",
+  "note": "Estimated CouriersPlease rates from Australia. Franchise-based courier network primarily for domestic delivery with competitive SME pricing. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
   "zones": [
     {
       "zone": 1,
@@ -69,64 +69,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.48,
-          11.95,
-          19.41,
-          26.88
+          4.61,
+          12.31,
+          19.99,
+          27.69
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.96,
-          15.91,
-          25.87,
-          35.81
+          6.14,
+          16.39,
+          26.65,
+          36.88
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.65,
-          23.08,
-          37.51,
-          51.94
+          8.91,
+          23.77,
+          38.64,
+          53.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          14.94,
-          39.8,
-          64.69,
-          89.56
+          15.39,
+          40.99,
+          66.63,
+          92.25
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.08,
-          66.86,
-          108.67,
-          150.44
+          25.83,
+          68.87,
+          111.93,
+          154.95
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          42.99,
-          114.61,
-          186.3,
-          257.9
+          44.28,
+          118.05,
+          191.89,
+          265.64
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          126.87,
-          338.23,
-          549.86,
-          761.22
+          130.68,
+          348.38,
+          566.36,
+          784.06
         ]
       }
     ]

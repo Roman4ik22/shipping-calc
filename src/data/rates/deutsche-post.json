@@ -1,7 +1,7 @@
 {
   "carrier_id": "deutsche-post",
-  "effective_date": "2026-05-11",
-  "note": "Real DHL Paket International rates from dhl.de, July 2025. EUR converted to USD at 1.09. Zone 2=UK, Zone 4=US. Source: dhl.de/en/privatkunden/pakete-versenden/weltweit-versenden.html. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
+  "effective_date": "2026-05-18",
+  "note": "Real DHL Paket International rates from dhl.de, July 2025. EUR converted to USD at 1.09. Zone 2=UK, Zone 4=US. Source: dhl.de/en/privatkunden/pakete-versenden/weltweit-versenden.html. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
   "zones": [
     {
       "zone": 1,
@@ -103,31 +103,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.21,
-          13.83,
-          18.42,
-          23.05,
-          27.66
+          9.53,
+          14.31,
+          19.06,
+          23.86,
+          28.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.29,
-          18.42,
-          24.58,
-          30.73,
-          36.87
+          12.72,
+          19.06,
+          25.44,
+          31.81,
+          38.16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.82,
-          26.73,
-          35.65,
-          44.57,
-          53.48
+          18.44,
+          27.67,
+          36.9,
+          46.13,
+          55.35
         ]
       },
       {
@@ -175,71 +175,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.21,
-          13.83,
-          18.42,
-          23.05,
-          27.66
+          9.53,
+          14.31,
+          19.06,
+          23.86,
+          28.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.29,
-          18.42,
-          24.58,
-          30.73,
-          36.87
+          12.72,
+          19.06,
+          25.44,
+          31.81,
+          38.16
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.82,
-          26.73,
-          35.65,
-          44.57,
-          53.48
+          18.44,
+          27.67,
+          36.9,
+          46.13,
+          55.35
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.73,
-          46.11,
-          61.46,
-          76.83,
-          92.2
+          31.81,
+          47.72,
+          63.61,
+          79.52,
+          95.43
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          51.63,
-          77.44,
-          103.25,
-          129.07,
-          154.88
+          53.44,
+          80.15,
+          106.86,
+          133.59,
+          160.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          88.5,
-          132.76,
-          177.02,
-          221.26,
-          265.52
+          91.6,
+          137.41,
+          183.22,
+          229,
+          274.81
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          122.93,
-          184.37,
-          245.84,
-          307.31,
-          368.78
+          127.23,
+          190.82,
+          254.44,
+          318.07,
+          381.69
         ]
       }
     ]

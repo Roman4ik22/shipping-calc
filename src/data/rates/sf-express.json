@@ -1,7 +1,7 @@
 {
   "carrier_id": "sf-express",
-  "effective_date": "2026-05-11",
-  "note": "SF Express international rates from China. Economy Express rates based on sf-international.com official calculator (CN→JP, CN→US). Standard rates estimated at ~1.4x economy. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11]",
+  "effective_date": "2026-05-18",
+  "note": "SF Express international rates from China. Economy Express rates based on sf-international.com official calculator (CN→JP, CN→US). Standard rates estimated at ~1.4x economy. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
   "zones": [
     {
       "zone": 1,
@@ -91,71 +91,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          21.01,
-          35.1,
-          46.81,
-          58.5,
-          66.87
+          21.64,
+          36.15,
+          48.21,
+          60.26,
+          68.88
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          24.11,
-          40.12,
-          55.17,
-          70.22,
-          80.25
+          24.83,
+          41.32,
+          56.83,
+          72.33,
+          82.66
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          31.04,
-          51.82,
-          71.88,
-          91.94,
-          105.33
+          31.97,
+          53.37,
+          74.04,
+          94.7,
+          108.49
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          56.12,
-          93.62,
-          125.37,
-          157.14,
-          180.55
+          57.8,
+          96.43,
+          129.13,
+          161.85,
+          185.97
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          88.24,
-          147.11,
-          207.29,
-          265.8,
-          305.92
+          90.89,
+          151.52,
+          213.51,
+          273.77,
+          315.1
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          151.41,
-          252.42,
-          367.77,
-          481.44,
-          553.33
+          155.95,
+          259.99,
+          378.8,
+          495.88,
+          569.93
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          212.29,
-          356.07,
-          518.21,
-          677.04,
-          779
+          218.66,
+          366.75,
+          533.76,
+          697.35,
+          802.37
         ]
       }
     ],
@@ -163,71 +163,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15.05,
-          25.08,
-          33.44,
-          41.79,
-          47.76
+          15.5,
+          25.83,
+          34.44,
+          43.04,
+          49.19
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.19,
-          28.65,
-          39.4,
-          50.16,
-          57.31
+          17.71,
+          29.51,
+          40.58,
+          51.66,
+          59.03
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.21,
-          37.03,
-          51.35,
-          65.67,
-          75.24
+          22.88,
+          38.14,
+          52.89,
+          67.64,
+          77.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          40.12,
-          66.87,
-          89.56,
-          112.23,
-          128.97
+          41.32,
+          68.88,
+          92.25,
+          115.6,
+          132.84
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          63.04,
-          105.07,
-          148.07,
-          189.85,
-          218.5
+          64.93,
+          108.22,
+          152.51,
+          195.55,
+          225.06
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          108.18,
-          180.31,
-          262.69,
-          343.89,
-          395.23
+          111.43,
+          185.72,
+          270.57,
+          354.21,
+          407.09
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          151.64,
-          254.33,
-          370.16,
-          483.59,
-          556.43
+          156.19,
+          261.96,
+          381.26,
+          498.1,
+          573.12
         ]
       }
     ]
