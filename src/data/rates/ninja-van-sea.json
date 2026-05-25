@@ -1,7 +1,7 @@
 {
   "carrier_id": "ninja-van-sea",
-  "effective_date": "2026-05-18",
-  "note": "Real domestic rates: MY RM6.50/kg ($1.40), PH PHP80 for <3kg ($1.40). Zone 1 (Domestic SG) and Zone 2 (Intra-SEA) anchored to real prices. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
+  "effective_date": "2026-05-25",
+  "note": "Real domestic rates: MY RM6.50/kg ($1.40), PH PHP80 for <3kg ($1.40). Zone 1 (Domestic SG) and Zone 2 (Intra-SEA) anchored to real prices. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]",
   "zones": [
     {
       "zone": 1,
@@ -59,57 +59,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.61,
-          13.84,
-          23.05
+          4.75,
+          14.26,
+          23.74
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.14,
-          18.45,
-          30.75
+          6.32,
+          19,
+          31.67
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.91,
-          26.74,
-          44.58
+          9.18,
+          27.54,
+          45.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.39,
-          46.12,
-          76.87
+          15.85,
+          47.5,
+          79.18
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.83,
-          77.5,
-          129.13
+          26.6,
+          79.83,
+          133
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          44.28,
-          132.84,
-          221.38
+          45.61,
+          136.83,
+          228.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          61.5,
-          184.48,
-          307.48
+          63.35,
+          190.01,
+          316.7
         ]
       }
     ],
@@ -117,57 +117,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.61,
-          13.84,
-          23.05
+          4.75,
+          14.26,
+          23.74
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.14,
-          18.45,
-          30.75
+          6.32,
+          19,
+          31.67
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.91,
-          26.74,
-          44.58
+          9.18,
+          27.54,
+          45.92
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.39,
-          46.12,
-          76.87
+          15.85,
+          47.5,
+          79.18
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.83,
-          77.5,
-          129.13
+          26.6,
+          79.83,
+          133
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          44.28,
-          132.84,
-          221.38
+          45.61,
+          136.83,
+          228.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          61.5,
-          184.48,
-          307.48
+          63.35,
+          190.01,
+          316.7
         ]
       }
     ]

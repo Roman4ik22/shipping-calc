@@ -1,7 +1,7 @@
 {
   "carrier_id": "boxberry-regional",
-  "effective_date": "2026-05-18",
-  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]",
+  "effective_date": "2026-05-25",
+  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]",
   "zones": [
     {
       "zone": 1,
@@ -77,57 +77,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.61,
-          22.81,
-          36.1
+          7.84,
+          23.49,
+          37.18
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.14,
-          30.4,
-          48.13
+          10.44,
+          31.31,
+          49.57
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.7,
-          44.09,
-          69.79
+          15.14,
+          45.41,
+          71.88
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          25.36,
-          76.01,
-          120.33
+          26.12,
+          78.29,
+          123.94
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          42.56,
-          127.68,
-          202.18
+          43.84,
+          131.51,
+          208.25
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          72.95,
-          218.89,
-          346.6
+          75.14,
+          225.46,
+          357
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          101.34,
-          304.04,
-          481.37
+          104.38,
+          313.16,
+          495.81
         ]
       }
     ]

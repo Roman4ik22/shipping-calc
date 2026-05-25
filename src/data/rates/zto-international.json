@@ -66,61 +66,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.22,
-          7.39,
-          16.61
+          3.32,
+          7.61,
+          17.11
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.31,
-          9.84,
-          22.15
+          4.44,
+          10.14,
+          22.81
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.25,
-          14.27,
-          32.11
+          6.44,
+          14.7,
+          33.07
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.76,
-          24.62,
-          55.35
+          11.08,
+          25.36,
+          57.01
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.08,
-          41.32,
-          92.99
+          18.62,
+          42.56,
+          95.78
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          31,
-          70.83,
-          159.39
+          31.93,
+          72.95,
+          164.17
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          43.04,
-          98.39,
-          221.38
+          44.33,
+          101.34,
+          228.02
         ]
       }
     ]
   },
-  "effective_date": "2026-05-18",
-  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18]"
+  "effective_date": "2026-05-25",
+  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]"
 }
