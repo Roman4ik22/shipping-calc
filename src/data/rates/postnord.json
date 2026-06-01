@@ -82,53 +82,53 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          11.86,
-          17.77,
-          23.69
+          12.28,
+          18.39,
+          24.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.8,
-          23.69,
-          31.6
+          16.35,
+          24.52,
+          32.71
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.91,
-          34.37,
-          45.83
+          23.71,
+          35.57,
+          47.43
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          39.5,
-          59.27,
-          79
+          40.88,
+          61.34,
+          81.77
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          66.37,
-          99.55,
-          132.74
+          68.69,
+          103.03,
+          137.39
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          113.77,
-          170.67,
-          227.54
+          117.75,
+          176.64,
+          235.5
         ]
       }
     ]
   },
-  "effective_date": "2026-05-25",
-  "note": "PostNord rates from Sweden based on postnord.se pricing (~SEK converted at 0.095 USD/SEK). Tracked parcel service to Scandinavia, Europe, and worldwide. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]"
+  "effective_date": "2026-06-01",
+  "note": "PostNord rates from Sweden based on postnord.se pricing (~SEK converted at 0.095 USD/SEK). Tracked parcel service to Scandinavia, Europe, and worldwide. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]"
 }

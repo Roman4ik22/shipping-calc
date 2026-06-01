@@ -69,41 +69,41 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.75,
-          14.26,
-          23.74
+          4.89,
+          14.69,
+          24.45
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.32,
-          19,
-          31.67
+          6.51,
+          19.57,
+          32.62
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          9.18,
-          27.54,
-          45.92
+          9.46,
+          28.37,
+          47.3
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.85,
-          47.5,
-          79.18
+          16.33,
+          48.93,
+          81.56
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          26.6,
-          79.83,
-          133
+          27.4,
+          82.22,
+          136.99
         ]
       }
     ],
@@ -111,45 +111,45 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.75,
-          14.26,
-          23.74
+          4.89,
+          14.69,
+          24.45
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.32,
-          19,
-          31.67
+          6.51,
+          19.57,
+          32.62
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          9.18,
-          27.54,
-          45.92
+          9.46,
+          28.37,
+          47.3
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.85,
-          47.5,
-          79.18
+          16.33,
+          48.93,
+          81.56
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          26.6,
-          79.83,
-          133
+          27.4,
+          82.22,
+          136.99
         ]
       }
     ]
   },
-  "effective_date": "2026-05-25",
-  "note": "Real rates from cainiao.us. Air Economy CN→US ~$18-20 for 1kg. Standard tier anchored to real CN→US data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]"
+  "effective_date": "2026-06-01",
+  "note": "Real rates from cainiao.us. Air Economy CN→US ~$18-20 for 1kg. Standard tier anchored to real CN→US data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]"
 }

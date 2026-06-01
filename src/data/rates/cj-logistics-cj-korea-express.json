@@ -1,7 +1,7 @@
 {
   "carrier_id": "cj-logistics-cj-korea-express",
-  "effective_date": "2026-05-25",
-  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]",
+  "effective_date": "2026-06-01",
+  "note": "Estimated CJ Logistics international rates from South Korea. Korea's largest logistics company with air, sea, and land freight. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]",
   "zones": [
     {
       "zone": 1,
@@ -75,64 +75,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.75,
-          12.68,
-          20.59,
-          28.52
+          4.89,
+          13.06,
+          21.21,
+          29.38
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.32,
-          16.88,
-          27.45,
-          37.99
+          6.51,
+          17.39,
+          28.27,
+          39.13
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          9.18,
-          24.48,
-          39.8,
-          55.11
+          9.46,
+          25.21,
+          40.99,
+          56.76
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.85,
-          42.22,
-          68.63,
-          95.02
+          16.33,
+          43.49,
+          70.69,
+          97.87
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          26.6,
-          70.94,
-          115.29,
-          159.6
+          27.4,
+          73.07,
+          118.75,
+          164.39
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          45.61,
-          121.59,
-          197.65,
-          273.61
+          46.98,
+          125.24,
+          203.58,
+          281.82
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          63.35,
-          168.87,
-          274.52,
-          380.03
+          65.25,
+          173.94,
+          282.76,
+          391.43
         ]
       }
     ]

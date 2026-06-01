@@ -1,7 +1,7 @@
 {
   "carrier_id": "smsa-express-regional",
-  "effective_date": "2026-05-25",
-  "note": "Synced from smsa-express. [Updated from SMSA Express published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]",
+  "effective_date": "2026-06-01",
+  "note": "Synced from smsa-express. [Updated from SMSA Express published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]",
   "zones": [
     {
       "name": "Zone 0",
@@ -45,100 +45,100 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.22,
-          9.51,
-          20.91,
-          28.52
+          5.38,
+          9.8,
+          21.54,
+          29.38
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.98,
-          12.68,
-          27.87,
-          37.99
+          7.19,
+          13.06,
+          28.71,
+          39.13
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.1,
-          18.38,
-          40.43,
-          55.11
+          10.4,
+          18.93,
+          41.64,
+          56.76
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          12.88,
-          23.43,
-          51.56,
-          70.32
+          13.27,
+          24.13,
+          53.11,
+          72.43
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.41,
-          31.67,
-          69.67,
-          95.02
+          17.93,
+          32.62,
+          71.76,
+          97.87
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.26,
-          53.21,
-          117.05,
-          159.6
+          30.14,
+          54.81,
+          120.56,
+          164.39
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          40.43,
-          73.48,
-          161.64,
-          220.42
+          41.64,
+          75.68,
+          166.49,
+          227.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          50.17,
-          91.2,
-          200.64,
-          273.61
+          51.68,
+          93.94,
+          206.66,
+          281.82
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          69.67,
-          126.68,
-          278.69,
-          380.03
+          71.76,
+          130.48,
+          287.05,
+          391.43
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          296.09,
-          538.37,
-          1184.43,
-          1615.13
+          304.97,
+          554.52,
+          1219.96,
+          1663.58
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          414.55,
-          753.73,
-          1658.2,
-          2261.19
+          426.99,
+          776.34,
+          1707.95,
+          2329.03
         ]
       }
     ]

@@ -73,61 +73,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.8,
-          3.32,
-          5.85
+          0.82,
+          3.42,
+          6.03
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.09,
-          4.44,
-          7.79
+          1.12,
+          4.57,
+          8.02
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.56,
-          6.44,
-          11.3
+          1.61,
+          6.63,
+          11.64
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.69,
-          11.08,
-          19.48
+          2.77,
+          11.41,
+          20.06
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          4.52,
-          18.62,
-          32.72
+          4.66,
+          19.18,
+          33.7
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          7.75,
-          31.93,
-          56.1
+          7.98,
+          32.89,
+          57.78
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          10.77,
-          44.33,
-          77.92
+          11.09,
+          45.66,
+          80.26
         ]
       }
     ]
   },
-  "effective_date": "2026-05-25",
-  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]"
+  "effective_date": "2026-06-01",
+  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]"
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "dtdc",
-  "effective_date": "2026-05-25",
-  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25]",
+  "effective_date": "2026-06-01",
+  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]",
   "zones": [
     {
       "zone": 1,
@@ -53,57 +53,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.61,
-          14.2,
-          17.74
+          2.69,
+          14.63,
+          18.27
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.91,
-          24.33,
-          30.4
+          4.03,
+          25.06,
+          31.31
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.22,
-          40.54,
-          50.67
+          5.38,
+          41.76,
+          52.19
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.14,
-          66.88,
-          83.61
+          9.41,
+          68.89,
+          86.12
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          15.66,
-          121.62,
-          152.01
+          16.13,
+          125.27,
+          156.57
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          26.12,
-          244.24,
-          305.29
+          26.9,
+          251.57,
+          314.45
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          36.53,
-          364.84,
-          456.04
+          37.63,
+          375.79,
+          469.72
         ]
       }
     ],
@@ -111,57 +111,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.3,
-          9.93,
-          12.4
+          1.34,
+          10.23,
+          12.77
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.61,
-          17.03,
-          21.27
+          2.69,
+          17.54,
+          21.91
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          3.91,
-          28.37,
-          35.47
+          4.03,
+          29.22,
+          36.53
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          6.51,
-          46.82,
-          58.53
+          6.71,
+          48.22,
+          60.29
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          10.44,
-          85.14,
-          106.41
+          10.75,
+          87.69,
+          109.6
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          18.27,
-          170.96,
-          213.7
+          18.82,
+          176.09,
+          220.11
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          26.12,
-          255.39,
-          319.23
+          26.9,
+          263.05,
+          328.81
         ]
       }
     ]
