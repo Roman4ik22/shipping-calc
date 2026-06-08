@@ -1,7 +1,7 @@
 {
   "carrier_id": "boxberry-regional",
-  "effective_date": "2026-06-01",
-  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01]",
+  "effective_date": "2026-06-08",
+  "note": "Synced from boxberry. [Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08]",
   "zones": [
     {
       "zone": 1,
@@ -77,57 +77,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.08,
-          24.19,
-          38.3
+          8.32,
+          24.92,
+          39.45
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.75,
-          32.25,
-          51.06
+          11.07,
+          33.22,
+          52.59
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.59,
-          46.77,
-          74.04
+          16.06,
+          48.17,
+          76.26
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.9,
-          80.64,
-          127.66
+          27.71,
+          83.06,
+          131.49
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45.16,
-          135.46,
-          214.5
+          46.51,
+          139.52,
+          220.94
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          77.39,
-          232.22,
-          367.71
+          79.71,
+          239.19,
+          378.74
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          107.51,
-          322.55,
-          510.68
+          110.74,
+          332.23,
+          526
         ]
       }
     ]
