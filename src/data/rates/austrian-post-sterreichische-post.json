@@ -1,7 +1,7 @@
 {
   "carrier_id": "austrian-post-sterreichische-post",
-  "effective_date": "2026-06-08",
-  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08]",
+  "effective_date": "2026-06-15",
+  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15]",
   "zones": [
     {
       "zone": 1,
@@ -89,64 +89,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.3,
-          14.11,
-          22.93,
-          31.74
+          5.49,
+          14.6,
+          23.73,
+          32.85
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.06,
-          18.8,
-          30.56,
-          42.31
+          7.31,
+          19.46,
+          31.63,
+          43.79
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.21,
-          27.26,
-          44.33,
-          61.38
+          10.57,
+          28.21,
+          45.88,
+          63.53
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.65,
-          47.02,
-          76.42,
-          105.81
+          18.27,
+          48.67,
+          79.09,
+          109.51
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.63,
-          78.98,
-          128.38,
-          177.73
+          30.67,
+          81.74,
+          132.87,
+          183.95
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          50.79,
-          135.38,
-          220.08,
-          304.69
+          52.57,
+          140.12,
+          227.78,
+          315.35
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          70.52,
-          188.04,
-          305.67,
-          423.19
+          72.99,
+          194.62,
+          316.37,
+          438
         ]
       }
     ]
