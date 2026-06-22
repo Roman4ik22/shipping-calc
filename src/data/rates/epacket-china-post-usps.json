@@ -1,7 +1,7 @@
 {
   "carrier_id": "epacket-china-post-usps",
-  "effective_date": "2026-06-15",
-  "note": "Real rates from chinapostaltracking.com. CN→US formula 23CNY+85CNY/kg (at ~7.2 CNY/USD). Max weight 2kg. Zone 3 (North America) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15]",
+  "effective_date": "2026-06-22",
+  "note": "Real rates from chinapostaltracking.com. CN→US formula 23CNY+85CNY/kg (at ~7.2 CNY/USD). Max weight 2kg. Zone 3 (North America) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]",
   "zones": [
     {
       "zone": 1,
@@ -88,71 +88,71 @@
       {
         "weight_kg": 0.1,
         "prices_by_zone": [
-          0.65,
-          1.4,
-          2.17,
-          2.95,
-          3.73
+          0.67,
+          1.45,
+          2.25,
+          3.05,
+          3.86
         ]
       },
       {
         "weight_kg": 0.25,
         "prices_by_zone": [
-          1.55,
-          3.49,
-          5.42,
-          7.38,
-          9.3
+          1.6,
+          3.61,
+          5.61,
+          7.64,
+          9.63
         ]
       },
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.49,
-          12.34,
-          19.16,
-          26.01,
-          32.85
+          5.68,
+          12.77,
+          19.83,
+          26.92,
+          34
         ]
       },
       {
         "weight_kg": 0.75,
         "prices_by_zone": [
-          4.66,
-          10.47,
-          16.28,
-          22.11,
-          27.9
+          4.82,
+          10.84,
+          16.85,
+          22.88,
+          28.88
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.31,
-          16.43,
-          25.54,
-          34.66,
-          43.79
+          7.57,
+          17.01,
+          26.43,
+          35.87,
+          45.32
         ]
       },
       {
         "weight_kg": 1.5,
         "prices_by_zone": [
-          9.3,
-          20.95,
-          32.58,
-          44.24,
-          55.84
+          9.63,
+          21.68,
+          33.72,
+          45.79,
+          57.79
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.57,
-          23.81,
-          37.04,
-          50.28,
-          63.53
+          10.94,
+          24.64,
+          38.34,
+          52.04,
+          65.75
         ]
       }
     ]

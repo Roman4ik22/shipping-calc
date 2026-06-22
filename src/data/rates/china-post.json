@@ -1,7 +1,7 @@
 {
   "carrier_id": "china-post",
-  "effective_date": "2026-06-15",
-  "note": "Real China Post Air Mail Large Package rates sourced from chinapostaltracking.com (CNY→USD at 7.25). CN→US, CN→JP, CN→UK verified. Source: chinapostaltracking.com, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15]",
+  "effective_date": "2026-06-22",
+  "note": "Real China Post Air Mail Large Package rates sourced from chinapostaltracking.com (CNY→USD at 7.25). CN→US, CN→JP, CN→UK verified. Source: chinapostaltracking.com, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]",
   "zones": [
     {
       "zone": 1,
@@ -86,64 +86,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13.15,
-          19.7,
-          26.27,
-          32.85
+          13.61,
+          20.39,
+          27.19,
+          34
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.51,
-          26.27,
-          35.03,
-          43.79
+          18.12,
+          27.19,
+          36.26,
+          45.32
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          25.4,
-          38.1,
-          50.81,
-          63.53
+          26.29,
+          39.43,
+          52.59,
+          65.75
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          43.79,
-          65.71,
-          87.59,
-          109.51
+          45.32,
+          68.01,
+          90.66,
+          113.34
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          73.58,
-          110.37,
-          147.18,
-          183.95
+          76.16,
+          114.23,
+          152.33,
+          190.39
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          126.14,
-          189.22,
-          252.27,
-          315.35
+          130.55,
+          195.84,
+          261.1,
+          326.39
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          175.19,
-          262.8,
-          350.4,
-          438
+          181.32,
+          272,
+          362.66,
+          453.33
         ]
       }
     ],
@@ -151,28 +151,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13.15,
-          19.7,
-          26.27,
-          32.85
+          13.61,
+          20.39,
+          27.19,
+          34
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.51,
-          26.27,
-          35.03,
-          43.79
+          18.12,
+          27.19,
+          36.26,
+          45.32
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          25.4,
-          38.1,
-          50.81,
-          63.53
+          26.29,
+          39.43,
+          52.59,
+          65.75
         ]
       },
       {

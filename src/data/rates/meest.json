@@ -74,57 +74,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.19,
-          15.58,
-          25.94
+          5.35,
+          16.05,
+          26.72
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.91,
-          20.76,
-          34.61
+          7.12,
+          21.38,
+          35.65
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.03,
-          30.1,
-          50.18
+          10.33,
+          31,
+          51.69
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.32,
-          51.91,
-          86.53
+          17.84,
+          53.47,
+          89.13
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.07,
-          87.23,
-          145.33
+          29.94,
+          89.85,
+          149.69
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          49.84,
-          149.51,
-          249.17
+          51.34,
+          154,
+          256.65
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          69.23,
-          207.63,
-          346.07
+          71.31,
+          213.86,
+          356.45
         ]
       }
     ],
@@ -132,61 +132,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.19,
-          15.58,
-          25.94
+          5.35,
+          16.05,
+          26.72
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.91,
-          20.76,
-          34.61
+          7.12,
+          21.38,
+          35.65
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.03,
-          30.1,
-          50.18
+          10.33,
+          31,
+          51.69
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.32,
-          51.91,
-          86.53
+          17.84,
+          53.47,
+          89.13
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.07,
-          87.23,
-          145.33
+          29.94,
+          89.85,
+          149.69
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          49.84,
-          149.51,
-          249.17
+          51.34,
+          154,
+          256.65
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          69.23,
-          207.63,
-          346.07
+          71.31,
+          213.86,
+          356.45
         ]
       }
     ]
   },
-  "effective_date": "2026-06-15",
-  "note": "Meest real rates. US→Ukraine air $3.29/lb + $18/box. Source: us.meest.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15]"
+  "effective_date": "2026-06-22",
+  "note": "Meest real rates. US→Ukraine air $3.29/lb + $18/box. Source: us.meest.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]"
 }
