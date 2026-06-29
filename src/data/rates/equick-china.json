@@ -64,57 +64,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.35,
-          16.05,
-          26.72
+          5.51,
+          16.53,
+          27.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.12,
-          21.38,
-          35.65
+          7.33,
+          22.02,
+          36.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.33,
-          31,
-          51.69
+          10.64,
+          31.93,
+          53.24
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.84,
-          53.47,
-          89.13
+          18.38,
+          55.07,
+          91.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.94,
-          89.85,
-          149.69
+          30.84,
+          92.55,
+          154.18
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.34,
-          154,
-          256.65
+          52.88,
+          158.62,
+          264.35
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          71.31,
-          213.86,
-          356.45
+          73.45,
+          220.28,
+          367.14
         ]
       }
     ],
@@ -122,57 +122,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.35,
-          16.05,
-          26.72
+          5.51,
+          16.53,
+          27.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.12,
-          21.38,
-          35.65
+          7.33,
+          22.02,
+          36.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.33,
-          31,
-          51.69
+          10.64,
+          31.93,
+          53.24
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.84,
-          53.47,
-          89.13
+          18.38,
+          55.07,
+          91.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.94,
-          89.85,
-          149.69
+          30.84,
+          92.55,
+          154.18
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.34,
-          154,
-          256.65
+          52.88,
+          158.62,
+          264.35
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          71.31,
-          213.86,
-          356.45
+          73.45,
+          220.28,
+          367.14
         ]
       }
     ],
@@ -180,61 +180,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.35,
-          16.05,
-          26.72
+          5.51,
+          16.53,
+          27.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.12,
-          21.38,
-          35.65
+          7.33,
+          22.02,
+          36.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.33,
-          31,
-          51.69
+          10.64,
+          31.93,
+          53.24
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.84,
-          53.47,
-          89.13
+          18.38,
+          55.07,
+          91.8
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.94,
-          89.85,
-          149.69
+          30.84,
+          92.55,
+          154.18
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.34,
-          154,
-          256.65
+          52.88,
+          158.62,
+          264.35
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          71.31,
-          213.86,
-          356.45
+          73.45,
+          220.28,
+          367.14
         ]
       }
     ]
   },
-  "effective_date": "2026-06-22",
-  "note": "[Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]"
+  "effective_date": "2026-06-29",
+  "note": "[Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]"
 }

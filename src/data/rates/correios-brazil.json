@@ -74,57 +74,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.82,
-          19.25,
-          25.67
+          13.2,
+          19.83,
+          26.44
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.11,
-          25.67,
-          34.22
+          17.62,
+          26.44,
+          35.25
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          24.8,
-          37.21,
-          49.62
+          25.54,
+          38.33,
+          51.11
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          42.76,
-          64.16,
-          85.55
+          44.04,
+          66.08,
+          88.12
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          71.85,
-          107.8,
-          143.71
+          74.01,
+          111.03,
+          148.02
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          123.17,
-          184.78,
-          246.37
+          126.87,
+          190.32,
+          253.76
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          171.09,
-          256.65,
-          342.2
+          176.22,
+          264.35,
+          352.47
         ]
       }
     ],
@@ -132,61 +132,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.82,
-          19.25,
-          25.67
+          13.2,
+          19.83,
+          26.44
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.11,
-          25.67,
-          34.22
+          17.62,
+          26.44,
+          35.25
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          24.8,
-          37.21,
-          49.62
+          25.54,
+          38.33,
+          51.11
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          42.76,
-          64.16,
-          85.55
+          44.04,
+          66.08,
+          88.12
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          71.85,
-          107.8,
-          143.71
+          74.01,
+          111.03,
+          148.02
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          123.17,
-          184.78,
-          246.37
+          126.87,
+          190.32,
+          253.76
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          171.09,
-          256.65,
-          342.2
+          176.22,
+          264.35,
+          352.47
         ]
       }
     ]
   },
-  "effective_date": "2026-06-22",
-  "note": "Correios Brazil international rates based on typical Brazilian postal pricing. SEDEX Mundi (express) and Internacional Premium services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]"
+  "effective_date": "2026-06-29",
+  "note": "Correios Brazil international rates based on typical Brazilian postal pricing. SEDEX Mundi (express) and Internacional Premium services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]"
 }

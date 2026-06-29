@@ -57,68 +57,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.35,
-          14.27,
-          23.19,
-          32.11
+          5.51,
+          14.7,
+          23.89,
+          33.07
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.12,
-          19,
-          30.89,
-          42.76
+          7.33,
+          19.57,
+          31.82,
+          44.04
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.33,
-          27.55,
-          44.79,
-          62.02
+          10.64,
+          28.38,
+          46.13,
+          63.88
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.84,
-          47.51,
-          77.24,
-          106.94
+          18.38,
+          48.94,
+          79.56,
+          110.15
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.94,
-          79.85,
-          129.76,
-          179.63
+          30.84,
+          82.25,
+          133.65,
+          185.02
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.34,
-          136.86,
-          222.46,
-          307.95
+          52.88,
+          140.97,
+          229.13,
+          317.19
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          71.31,
-          190.07,
-          308.98,
-          427.73
+          73.45,
+          195.77,
+          318.25,
+          440.56
         ]
       }
     ]
   },
-  "effective_date": "2026-06-22",
-  "note": "Shadowfax real domestic rates. INR22/0.5kg ($0.27). Source: shadowfax.in [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22]"
+  "effective_date": "2026-06-29",
+  "note": "Shadowfax real domestic rates. INR22/0.5kg ($0.27). Source: shadowfax.in [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]"
 }
