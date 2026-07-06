@@ -1,7 +1,7 @@
 {
   "carrier_id": "j-and-t-express",
-  "effective_date": "2026-06-29",
-  "note": "J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]",
+  "effective_date": "2026-07-06",
+  "note": "J&T Express Southeast Asia rates. Indonesia domestic from official rates (IDR at 15700/USD). Thailand domestic rates (THB at 35.5/USD) used as intra-SEA proxy. Greater Asia estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06]",
   "zones": [
     {
       "zone": 1,
@@ -59,57 +59,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.02,
-          1.46,
-          12.47
+          1.05,
+          1.5,
+          12.84
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.17,
-          1.46,
-          16.9
+          1.21,
+          1.5,
+          17.41
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.91,
-          2.05,
-          23.49
+          1.97,
+          2.11,
+          24.19
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.94,
-          4.11,
-          41.12
+          3.03,
+          4.23,
+          42.35
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          3.68,
-          7.49,
-          70.48
+          3.79,
+          7.71,
+          72.59
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          7.49,
-          14.7,
-          126.3
+          7.71,
+          15.14,
+          130.09
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          11.17,
-          22.02,
-          179.17
+          11.51,
+          22.68,
+          184.55
         ]
       }
     ],
@@ -117,57 +117,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.76,
-          1.17,
-          9.4
+          0.78,
+          1.21,
+          9.68
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          0.87,
-          1.17,
-          12.65
+          0.9,
+          1.21,
+          13.03
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.46,
-          1.61,
-          17.62
+          1.5,
+          1.66,
+          18.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          2.21,
-          3.08,
-          30.84
+          2.28,
+          3.17,
+          31.77
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          2.79,
-          5.57,
-          52.88
+          2.87,
+          5.74,
+          54.47
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          5.57,
-          11.02,
-          95.45
+          5.74,
+          11.35,
+          98.31
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          8.37,
-          16.59,
-          135.12
+          8.62,
+          17.09,
+          139.17
         ]
       }
     ]

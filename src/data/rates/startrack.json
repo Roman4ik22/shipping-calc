@@ -1,7 +1,7 @@
 {
   "carrier_id": "startrack",
-  "effective_date": "2026-06-29",
-  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]",
+  "effective_date": "2026-07-06",
+  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06]",
   "zones": [
     {
       "zone": 1,
@@ -81,91 +81,91 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          13.2,
-          24.26,
-          35.25,
-          41.85,
-          51.39
+          13.6,
+          24.99,
+          36.31,
+          43.11,
+          52.93
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          17.62,
-          32.31,
-          47,
-          55.8,
-          68.54
+          18.15,
+          33.28,
+          48.41,
+          57.47,
+          70.6
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          25.54,
-          46.88,
-          68.13,
-          80.91,
-          99.36
+          26.31,
+          48.29,
+          70.17,
+          83.34,
+          102.34
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          44.04,
-          80.76,
-          117.48,
-          139.49,
-          171.36
+          45.36,
+          83.18,
+          121,
+          143.67,
+          176.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          74.01,
-          135.7,
-          197.37,
-          234.4,
-          287.85
+          76.23,
+          139.77,
+          203.29,
+          241.43,
+          296.49
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          126.87,
-          232.6,
-          338.34,
-          401.8,
-          493.46
+          130.68,
+          239.58,
+          348.49,
+          413.85,
+          508.26
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          176.22,
-          323.08,
-          469.93,
-          558.03,
-          685.37
+          181.51,
+          332.77,
+          484.03,
+          574.77,
+          705.93
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          748.95,
-          1373.08,
-          1997.19,
-          2371.68,
-          2912.8
+          771.42,
+          1414.27,
+          2057.11,
+          2442.83,
+          3000.18
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          1048.53,
-          1922.32,
-          2796.09,
-          3320.33,
-          4077.95
+          1079.99,
+          1979.99,
+          2879.97,
+          3419.94,
+          4200.29
         ]
       }
     ]

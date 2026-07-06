@@ -1,7 +1,7 @@
 {
   "carrier_id": "gls-general-logistics-systems",
-  "effective_date": "2026-06-29",
-  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]",
+  "effective_date": "2026-07-06",
+  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06]",
   "zones": [
     {
       "zone": 1,
@@ -86,71 +86,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.88,
-          13.22,
-          20.52,
-          27.86,
-          35.19
+          6.09,
+          13.68,
+          21.24,
+          28.84,
+          36.42
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.83,
-          17.61,
-          27.36,
-          37.13,
-          46.91
+          8.1,
+          18.23,
+          28.32,
+          38.43,
+          48.55
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.32,
-          25.5,
-          39.68,
-          53.86,
-          68.05
+          11.72,
+          26.39,
+          41.07,
+          55.75,
+          70.43
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          19.57,
-          43.98,
-          68.43,
-          92.85,
-          117.31
+          20.25,
+          45.52,
+          70.83,
+          96.1,
+          121.42
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          32.85,
-          73.87,
-          114.96,
-          156.01,
-          197.05
+          34,
+          76.46,
+          118.98,
+          161.47,
+          203.95
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          56.31,
-          126.67,
-          197.05,
-          267.44,
-          337.81
+          58.28,
+          131.1,
+          203.95,
+          276.8,
+          349.63
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          78.18,
-          175.98,
-          273.7,
-          371.45,
-          469.2
+          80.92,
+          182.14,
+          283.28,
+          384.45,
+          485.62
         ]
       }
     ]

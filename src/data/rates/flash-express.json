@@ -73,61 +73,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          0.93,
-          3.85,
-          6.79
+          0.96,
+          3.97,
+          6.99
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.26,
-          5.15,
-          9.03
+          1.3,
+          5.3,
+          9.3
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          1.81,
-          7.46,
-          13.1
+          1.86,
+          7.68,
+          13.49
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          3.12,
-          12.83,
-          22.58
+          3.21,
+          13.21,
+          23.26
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          5.24,
-          21.59,
-          37.92
+          5.4,
+          22.24,
+          39.06
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          8.98,
-          37.03,
-          65.03
+          9.25,
+          38.14,
+          66.98
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          12.47,
-          51.39,
-          90.33
+          12.84,
+          52.93,
+          93.04
         ]
       }
     ]
   },
-  "effective_date": "2026-06-29",
-  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29]"
+  "effective_date": "2026-07-06",
+  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06]"
 }
