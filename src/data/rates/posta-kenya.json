@@ -1,7 +1,7 @@
 {
   "carrier_id": "posta-kenya",
-  "effective_date": "2026-07-06",
-  "note": "Estimated Posta Kenya rates from Kenya. National postal service with EMS and registered mail. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06]",
+  "effective_date": "2026-07-13",
+  "note": "Estimated Posta Kenya rates from Kenya. National postal service with EMS and registered mail. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13]",
   "zones": [
     {
       "zone": 1,
@@ -79,64 +79,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          14.58,
-          21.84,
-          29.12,
-          36.42
+          15.09,
+          22.6,
+          30.14,
+          37.69
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          19.41,
-          29.12,
-          38.84,
-          48.55
+          20.09,
+          30.14,
+          40.2,
+          50.25
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          28.16,
-          42.24,
-          56.34,
-          70.43
+          29.15,
+          43.72,
+          58.31,
+          72.9
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          48.55,
-          72.85,
-          97.11,
-          121.42
+          50.25,
+          75.4,
+          100.51,
+          125.67
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          81.59,
-          122.37,
-          163.18,
-          203.95
+          84.45,
+          126.65,
+          168.89,
+          211.09
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          139.85,
-          209.78,
-          279.7,
-          349.63
+          144.74,
+          217.12,
+          289.49,
+          361.87
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          194.24,
-          291.37,
-          388.49,
-          485.62
+          201.04,
+          301.57,
+          402.09,
+          502.62
         ]
       }
     ],
@@ -144,28 +144,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          14.58,
-          21.84,
-          29.12,
-          36.42
+          15.09,
+          22.6,
+          30.14,
+          37.69
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          19.41,
-          29.12,
-          38.84,
-          48.55
+          20.09,
+          30.14,
+          40.2,
+          50.25
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          28.16,
-          42.24,
-          56.34,
-          70.43
+          29.15,
+          43.72,
+          58.31,
+          72.9
         ]
       },
       {
