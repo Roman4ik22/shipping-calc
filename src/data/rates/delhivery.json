@@ -58,57 +58,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.94,
-          14.01,
-          25.74
+          3.03,
+          14.43,
+          26.51
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.9,
-          18.69,
-          34.28
+          4.02,
+          19.25,
+          35.31
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.65,
-          27.1,
-          49.74
+          5.82,
+          27.91,
+          51.23
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.73,
-          46.72,
-          85.68
+          10.02,
+          48.12,
+          88.25
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.35,
-          78.52,
-          143.96
+          16.84,
+          80.88,
+          148.28
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.05,
-          134.6,
-          246.77
+          28.89,
+          138.64,
+          254.17
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          38.95,
-          186.96,
-          342.75
+          40.12,
+          192.57,
+          353.03
         ]
       }
     ],
@@ -116,61 +116,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.94,
-          14.01,
-          25.74
+          3.03,
+          14.43,
+          26.51
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.9,
-          18.69,
-          34.28
+          4.02,
+          19.25,
+          35.31
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.65,
-          27.1,
-          49.74
+          5.82,
+          27.91,
+          51.23
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.73,
-          46.72,
-          85.68
+          10.02,
+          48.12,
+          88.25
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.35,
-          78.52,
-          143.96
+          16.84,
+          80.88,
+          148.28
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.05,
-          134.6,
-          246.77
+          28.89,
+          138.64,
+          254.17
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          38.95,
-          186.96,
-          342.75
+          40.12,
+          192.57,
+          353.03
         ]
       }
     ]
   },
-  "effective_date": "2026-07-13",
-  "note": "Synced from delhivery-intl. Synced from delhivery. [Updated from Delhivery published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13]"
+  "effective_date": "2026-07-20",
+  "note": "Synced from delhivery-intl. Synced from delhivery. [Updated from Delhivery published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]"
 }

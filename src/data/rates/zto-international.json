@@ -66,61 +66,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.09,
-          9.36,
-          21.03
+          4.21,
+          9.64,
+          21.66
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.46,
-          12.45,
-          28.05
+          5.62,
+          12.82,
+          28.89
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.91,
-          18.08,
-          40.66
+          8.15,
+          18.62,
+          41.88
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.61,
-          31.19,
-          70.1
+          14.02,
+          32.13,
+          72.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          22.91,
-          52.35,
-          117.79
+          23.6,
+          53.92,
+          121.32
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          39.28,
-          89.71,
-          201.91
+          40.46,
+          92.4,
+          207.97
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          54.52,
-          124.63,
-          280.45
+          56.16,
+          128.37,
+          288.86
         ]
       }
     ]
   },
-  "effective_date": "2026-07-13",
-  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13]"
+  "effective_date": "2026-07-20",
+  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]"
 }

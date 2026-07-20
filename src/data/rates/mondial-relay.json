@@ -60,105 +60,105 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.85,
-          13.14,
-          20.44,
-          27.75,
-          35.08
+          6.03,
+          13.53,
+          21.05,
+          28.58,
+          36.13
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.78,
-          17.54,
-          27.3,
-          37.02,
-          46.72
+          8.01,
+          18.07,
+          28.12,
+          38.13,
+          48.12
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.29,
-          25.41,
-          39.53,
-          53.65,
-          67.77
+          11.63,
+          26.17,
+          40.72,
+          55.26,
+          69.8
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          14.4,
-          32.39,
-          50.44,
-          68.45,
-          86.49
+          14.83,
+          33.36,
+          51.95,
+          70.5,
+          89.08
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          19.5,
-          43.81,
-          68.14,
-          92.5,
-          116.85
+          20.09,
+          45.12,
+          70.18,
+          95.28,
+          120.36
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          32.72,
-          73.61,
-          114.51,
-          155.39,
-          196.29
+          33.7,
+          75.82,
+          117.95,
+          160.05,
+          202.18
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          45.19,
-          101.66,
-          158.16,
-          214.59,
-          271.1
+          46.55,
+          104.71,
+          162.9,
+          221.03,
+          279.23
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          56.1,
-          126.22,
-          196.29,
-          266.4,
-          336.51
+          57.78,
+          130.01,
+          202.18,
+          274.39,
+          346.61
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          165.53,
-          372.45,
-          579.38,
-          786.27,
-          993.22
+          170.5,
+          383.62,
+          596.76,
+          809.86,
+          1023.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          77.92,
-          175.29,
-          272.67,
-          370.04,
-          467.39
+          80.26,
+          180.55,
+          280.85,
+          381.14,
+          481.41
         ]
       }
     ]
   },
-  "effective_date": "2026-07-13",
-  "note": "Mondial Relay real rates. FR→BE/LU=€5.99, FR→ES=€8.99 flat up to 20kg. Source: mondialrelay.fr [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13]"
+  "effective_date": "2026-07-20",
+  "note": "Mondial Relay real rates. FR→BE/LU=€5.99, FR→ES=€8.99 flat up to 20kg. Source: mondialrelay.fr [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]"
 }
