@@ -68,57 +68,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15.62,
-          23.39,
-          31.19
+          16.17,
+          24.21,
+          32.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          20.79,
-          31.19,
-          41.61
+          21.52,
+          32.28,
+          43.07
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          30.17,
-          45.25,
-          60.35
+          31.23,
+          46.83,
+          62.46
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          52.01,
-          78.04,
-          104.03
+          53.83,
+          80.77,
+          107.67
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          87.41,
-          131.08,
-          174.8
+          90.47,
+          135.67,
+          180.92
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          149.81,
-          224.72,
-          299.62
+          155.05,
+          232.59,
+          310.11
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          208.08,
-          312.12,
-          416.16
+          215.36,
+          323.04,
+          430.73
         ]
       }
     ],
@@ -126,53 +126,53 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          15.62,
-          23.39,
-          31.19
+          16.17,
+          24.21,
+          32.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          20.79,
-          31.19,
-          41.61
+          21.52,
+          32.28,
+          43.07
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          30.17,
-          45.25,
-          60.35
+          31.23,
+          46.83,
+          62.46
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          52.01,
-          78.04,
-          104.03
+          53.83,
+          80.77,
+          107.67
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          87.41,
-          131.08,
-          174.8
+          90.47,
+          135.67,
+          180.92
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          149.81,
-          224.72,
-          299.62
+          155.05,
+          232.59,
+          310.11
         ]
       }
     ]
   },
-  "effective_date": "2026-07-20",
-  "note": "Thailand Post EMS rates from Thailand based on typical Thai postal pricing (THB converted at ~35.5 THB/USD). EMS and air parcel services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]"
+  "effective_date": "2026-07-27",
+  "note": "Thailand Post EMS rates from Thailand based on typical Thai postal pricing (THB converted at ~35.5 THB/USD). EMS and air parcel services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]"
 }

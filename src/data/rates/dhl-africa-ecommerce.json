@@ -1,7 +1,7 @@
 {
   "carrier_id": "dhl-africa-ecommerce",
-  "effective_date": "2026-07-20",
-  "note": "Estimated DHL Africa eCommerce rates. Affordable cross-border ecommerce delivery across Africa. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]",
+  "effective_date": "2026-07-27",
+  "note": "Estimated DHL Africa eCommerce rates. Affordable cross-border ecommerce delivery across Africa. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]",
   "zones": [
     {
       "zone": 1,
@@ -83,71 +83,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.2,
-          18.43,
-          28.65,
-          38.87,
-          49.12
+          8.61,
+          19.35,
+          30.08,
+          40.81,
+          51.58
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.93,
-          24.54,
-          38.21,
-          51.86,
-          65.49
+          11.48,
+          25.77,
+          40.12,
+          54.45,
+          68.76
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.82,
-          35.64,
-          55.41,
-          75.16,
-          94.96
+          16.61,
+          37.42,
+          58.18,
+          78.92,
+          99.71
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.3,
-          61.43,
-          95.49,
-          129.64,
-          163.74
+          28.67,
+          64.5,
+          100.26,
+          136.12,
+          171.93
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45.86,
-          103.11,
-          160.46,
-          217.76,
-          275.05
+          48.15,
+          108.27,
+          168.48,
+          228.65,
+          288.8
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          78.56,
-          176.82,
-          275.05,
-          373.26,
-          471.5
+          82.49,
+          185.66,
+          288.8,
+          391.92,
+          495.08
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          109.15,
-          245.6,
-          382.04,
-          518.44,
-          654.84
+          114.61,
+          257.88,
+          401.14,
+          544.36,
+          687.58
         ]
       }
     ],
@@ -155,71 +155,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.2,
-          18.43,
-          28.65,
-          38.87,
-          49.12
+          8.61,
+          19.35,
+          30.08,
+          40.81,
+          51.58
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.93,
-          24.54,
-          38.21,
-          51.86,
-          65.49
+          11.48,
+          25.77,
+          40.12,
+          54.45,
+          68.76
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.82,
-          35.64,
-          55.41,
-          75.16,
-          94.96
+          16.61,
+          37.42,
+          58.18,
+          78.92,
+          99.71
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.3,
-          61.43,
-          95.49,
-          129.64,
-          163.74
+          28.67,
+          64.5,
+          100.26,
+          136.12,
+          171.93
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          45.86,
-          103.11,
-          160.46,
-          217.76,
-          275.05
+          48.15,
+          108.27,
+          168.48,
+          228.65,
+          288.8
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          78.56,
-          176.82,
-          275.05,
-          373.26,
-          471.5
+          82.49,
+          185.66,
+          288.8,
+          391.92,
+          495.08
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          109.15,
-          245.6,
-          382.04,
-          518.44,
-          654.84
+          114.61,
+          257.88,
+          401.14,
+          544.36,
+          687.58
         ]
       }
     ]

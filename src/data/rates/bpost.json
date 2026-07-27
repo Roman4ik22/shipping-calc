@@ -46,95 +46,95 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.52,
-          17.35,
-          28.18,
-          39.01
+          6.75,
+          17.96,
+          29.17,
+          40.38
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.67,
-          23.1,
-          37.58,
-          52.01
+          8.97,
+          23.91,
+          38.9,
+          53.83
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.55,
-          33.5,
-          54.49,
-          75.45
+          12.99,
+          34.67,
+          56.4,
+          78.09
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          16.03,
-          42.76,
-          69.51,
-          96.24
+          16.59,
+          44.26,
+          71.94,
+          99.61
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          21.69,
-          57.79,
-          93.95,
-          130.07
+          22.45,
+          59.81,
+          97.24,
+          134.62
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          36.42,
-          97.07,
-          157.81,
-          218.48
+          37.69,
+          100.47,
+          163.33,
+          226.13
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          50.28,
-          134.06,
-          217.95,
-          301.7
+          52.04,
+          138.75,
+          225.58,
+          312.26
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          62.43,
-          166.42,
-          270.53,
-          374.54
+          64.62,
+          172.24,
+          280,
+          387.65
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          184.25,
-          491.14,
-          798.5,
-          1105.42
+          190.7,
+          508.33,
+          826.45,
+          1144.11
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          86.68,
-          231.15,
-          375.75,
-          520.21
+          89.71,
+          239.24,
+          388.9,
+          538.42
         ]
       }
     ]
   },
-  "effective_date": "2026-07-20",
-  "note": "bpost international rates from Belgium based on typical Belgian postal pricing. Standard parcel service to EU and intercontinental destinations. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]"
+  "effective_date": "2026-07-27",
+  "note": "bpost international rates from Belgium based on typical Belgian postal pricing. Standard parcel service to EU and intercontinental destinations. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]"
 }

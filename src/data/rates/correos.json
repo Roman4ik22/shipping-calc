@@ -1,7 +1,7 @@
 {
   "carrier_id": "correos",
-  "effective_date": "2026-07-20",
-  "note": "Correos (Spain) international rates. Strong connections to Latin America and affordable European delivery. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20]",
+  "effective_date": "2026-07-27",
+  "note": "Correos (Spain) international rates. Strong connections to Latin America and affordable European delivery. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]",
   "zones": [
     {
       "zone": 1,
@@ -93,31 +93,31 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.04,
-          16.06,
-          18.47,
-          32.13,
-          35.31
+          12.4,
+          16.54,
+          19.02,
+          33.09,
+          36.37
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          19.25,
-          25.67,
-          29.52,
-          57.78,
-          64.19
+          19.83,
+          26.44,
+          30.41,
+          59.51,
+          66.12
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          26.51,
-          35.31,
-          40.59,
-          73.82,
-          81.84
+          27.31,
+          36.37,
+          41.81,
+          76.03,
+          84.3
         ]
       },
       {
@@ -165,71 +165,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          12.04,
-          16.06,
-          18.47,
-          32.13,
-          35.31
+          12.4,
+          16.54,
+          19.02,
+          33.09,
+          36.37
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          19.25,
-          25.67,
-          29.52,
-          57.78,
-          64.19
+          19.83,
+          26.44,
+          30.41,
+          59.51,
+          66.12
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          26.51,
-          35.31,
-          40.59,
-          73.82,
-          81.84
+          27.31,
+          36.37,
+          41.81,
+          76.03,
+          84.3
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          39.72,
-          52.94,
-          60.97,
-          118.76,
-          131.6
+          40.91,
+          54.53,
+          62.8,
+          122.32,
+          135.55
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          66.17,
-          88.25,
-          101.51,
-          194.19,
-          214.99
+          68.16,
+          90.9,
+          104.56,
+          200.02,
+          221.44
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          104.71,
-          139.63,
-          160.47,
-          343.42,
-          381.92
+          107.85,
+          143.82,
+          165.28,
+          353.72,
+          393.38
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          144.41,
-          192.57,
-          221.42,
-          491.05,
-          545.6
+          148.74,
+          198.35,
+          228.06,
+          505.78,
+          561.97
         ]
       }
     ]
