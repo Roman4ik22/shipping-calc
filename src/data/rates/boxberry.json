@@ -75,61 +75,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.23,
-          30.65,
-          48.51
+          10.54,
+          31.57,
+          49.97
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.6,
-          40.87,
-          64.68
+          14.01,
+          42.1,
+          66.62
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          19.76,
-          59.26,
-          93.8
+          20.35,
+          61.04,
+          96.61
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          34.08,
-          102.15,
-          161.7
+          35.1,
+          105.21,
+          166.55
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          57.21,
-          171.59,
-          271.72
+          58.93,
+          176.74,
+          279.87
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          98.03,
-          294.18,
-          465.8
+          100.97,
+          303.01,
+          479.77
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          136.19,
-          408.6,
-          646.9
+          140.28,
+          420.86,
+          666.31
         ]
       }
     ]
   },
-  "effective_date": "2026-07-27",
-  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]"
+  "effective_date": "2026-08-03",
+  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]"
 }

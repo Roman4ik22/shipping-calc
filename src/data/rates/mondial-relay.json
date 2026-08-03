@@ -60,105 +60,105 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.21,
-          13.94,
-          21.68,
-          29.44,
-          37.21
+          6.4,
+          14.36,
+          22.33,
+          30.32,
+          38.33
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.25,
-          18.61,
-          28.96,
-          39.27,
-          49.56
+          8.5,
+          19.17,
+          29.83,
+          40.45,
+          51.05
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.98,
-          26.96,
-          41.94,
-          56.92,
-          71.89
+          12.34,
+          27.77,
+          43.2,
+          58.63,
+          74.05
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          15.27,
-          34.36,
-          53.51,
-          72.61,
-          91.75
+          15.73,
+          35.39,
+          55.12,
+          74.79,
+          94.5
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          20.69,
-          46.47,
-          72.29,
-          98.14,
-          123.97
+          21.31,
+          47.86,
+          74.46,
+          101.08,
+          127.69
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          34.71,
-          78.09,
-          121.49,
-          164.85,
-          208.25
+          35.75,
+          80.43,
+          125.13,
+          169.8,
+          214.5
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          47.95,
-          107.85,
-          167.79,
-          227.66,
-          287.61
+          49.39,
+          111.09,
+          172.82,
+          234.49,
+          296.24
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          59.51,
-          133.91,
-          208.25,
-          282.62,
-          357.01
+          61.3,
+          137.93,
+          214.5,
+          291.1,
+          367.72
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          175.62,
-          395.13,
-          614.66,
-          834.16,
-          1053.71
+          180.89,
+          406.98,
+          633.1,
+          859.18,
+          1085.32
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          82.67,
-          185.97,
-          289.28,
-          392.57,
-          495.85
+          85.15,
+          191.55,
+          297.96,
+          404.35,
+          510.73
         ]
       }
     ]
   },
-  "effective_date": "2026-07-27",
-  "note": "Mondial Relay real rates. FR→BE/LU=€5.99, FR→ES=€8.99 flat up to 20kg. Source: mondialrelay.fr [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]"
+  "effective_date": "2026-08-03",
+  "note": "Mondial Relay real rates. FR→BE/LU=€5.99, FR→ES=€8.99 flat up to 20kg. Source: mondialrelay.fr [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]"
 }

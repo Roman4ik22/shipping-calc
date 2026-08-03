@@ -1,7 +1,7 @@
 {
   "carrier_id": "dtdc",
-  "effective_date": "2026-07-27",
-  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]",
+  "effective_date": "2026-08-03",
+  "note": "DTDC India domestic and international rates. One of India's largest courier networks. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
   "zones": [
     {
       "zone": 1,
@@ -53,57 +53,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.41,
-          18.53,
-          23.14
+          3.51,
+          19.09,
+          23.83
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.1,
-          31.74,
-          39.68
+          5.25,
+          32.69,
+          40.87
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.82,
-          52.9,
-          66.12
+          7.02,
+          54.49,
+          68.1
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          11.93,
-          87.28,
-          109.08
+          12.29,
+          89.9,
+          112.35
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          20.42,
-          158.7,
-          198.35
+          21.03,
+          163.46,
+          204.3
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          34.08,
-          318.68,
-          398.34
+          35.1,
+          328.24,
+          410.29
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          47.67,
-          476.04,
-          595.03
+          49.1,
+          490.32,
+          612.88
         ]
       }
     ],
@@ -111,57 +111,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.7,
-          12.99,
-          16.17
+          1.75,
+          13.38,
+          16.66
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.41,
-          22.23,
-          27.77
+          3.51,
+          22.9,
+          28.6
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.1,
-          37.03,
-          46.28
+          5.25,
+          38.14,
+          47.67
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          8.5,
-          61.09,
-          76.38
+          8.76,
+          62.92,
+          78.67
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          13.6,
-          111.08,
-          138.84
+          14.01,
+          114.41,
+          143.01
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          23.83,
-          223.06,
-          278.83
+          24.54,
+          229.75,
+          287.19
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          34.08,
-          333.22,
-          416.52
+          35.1,
+          343.22,
+          429.02
         ]
       }
     ]

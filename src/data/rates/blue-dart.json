@@ -1,7 +1,7 @@
 {
   "carrier_id": "blue-dart",
-  "effective_date": "2026-07-27",
-  "note": "Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]",
+  "effective_date": "2026-08-03",
+  "note": "Blue Dart Express rates. India's premier express delivery service with worldwide coverage via DHL partnership. [Updated from official rate data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
   "zones": [
     {
       "zone": 1,
@@ -67,57 +67,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.5,
-          10.41,
-          14.86
+          8.76,
+          10.72,
+          15.31
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.93,
-          23.14,
-          33.09
+          12.29,
+          23.83,
+          34.08
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.04,
-          52.07,
-          74.37
+          17.55,
+          53.63,
+          76.6
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.65,
-          98.35,
-          140.53
+          31.57,
+          101.3,
+          144.75
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          51.05,
-          161.99,
-          231.42
+          52.58,
+          166.85,
+          238.36
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          88.54,
-          254.56,
-          363.62
+          91.2,
+          262.2,
+          374.53
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          127.69,
-          347.08,
-          495.85
+          131.52,
+          357.49,
+          510.73
         ]
       }
     ],
@@ -125,57 +125,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.1,
-          8.25,
-          11.92
+          5.25,
+          8.5,
+          12.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.5,
-          18.53,
-          26.44
+          8.76,
+          19.09,
+          27.23
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          11.93,
-          41.67,
-          59.51
+          12.29,
+          42.92,
+          61.3
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.13,
-          78.71,
-          112.39
+          22.79,
+          81.07,
+          115.76
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          37.46,
-          129.58,
-          185.09
+          38.58,
+          133.47,
+          190.64
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          64.68,
-          203.64,
-          290.9
+          66.62,
+          209.75,
+          299.63
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          93.63,
-          277.68,
-          396.7
+          96.44,
+          286.01,
+          408.6
         ]
       }
     ]

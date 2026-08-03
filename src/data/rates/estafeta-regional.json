@@ -1,7 +1,7 @@
 {
   "carrier_id": "estafeta-regional",
-  "effective_date": "2026-07-27",
-  "note": "Synced from estafeta. [Updated from Estafeta published tariffs March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27]",
+  "effective_date": "2026-08-03",
+  "note": "Synced from estafeta. [Updated from Estafeta published tariffs March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
   "zones": [
     {
       "name": "Zone 0",
@@ -46,100 +46,100 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          4.34,
-          9.93,
-          34.71,
-          43.4
+          4.47,
+          10.23,
+          35.75,
+          44.7
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.79,
-          13.2,
-          46.28,
-          57.84
+          5.96,
+          13.6,
+          47.67,
+          59.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          8.39,
-          19.18,
-          67.1,
-          83.88
+          8.64,
+          19.76,
+          69.11,
+          86.4
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          10.71,
-          24.45,
-          85.62,
-          107.02
+          11.03,
+          25.18,
+          88.19,
+          110.23
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          14.44,
-          33.09,
-          115.68,
-          144.59
+          14.87,
+          34.08,
+          119.15,
+          148.93
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          24.31,
-          55.54,
-          194.36,
-          242.97
+          25.04,
+          57.21,
+          200.19,
+          250.26
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          33.59,
-          76.68,
-          268.42,
-          335.5
+          34.6,
+          78.98,
+          276.47,
+          345.57
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          41.67,
-          95.17,
-          333.22,
-          416.52
+          42.92,
+          98.03,
+          343.22,
+          429.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          57.84,
-          132.22,
-          462.81,
-          578.49
+          59.58,
+          136.19,
+          476.69,
+          595.84
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          245.85,
-          561.97,
-          1966.9,
-          2458.59
+          253.23,
+          578.83,
+          2025.91,
+          2532.35
         ]
       },
       {
         "weight_kg": 68,
         "prices_by_zone": [
-          334.38,
-          764.26,
-          2674.96,
-          3343.73
+          344.41,
+          787.19,
+          2755.21,
+          3444.04
         ]
       }
     ]
