@@ -1,7 +1,7 @@
 {
   "carrier_id": "swiss-post",
-  "effective_date": "2026-08-03",
-  "note": "Real Swiss Post PostPac International rates sourced from post.ch (CHF→USD at 1.13). Flat rate for all destinations. Source: post.ch, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
+  "effective_date": "2026-08-10",
+  "note": "Real Swiss Post PostPac International rates sourced from post.ch (CHF→USD at 1.13). Flat rate for all destinations. Source: post.ch, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]",
   "zones": [
     {
       "zone": 1,
@@ -92,71 +92,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.99,
-          15.7,
-          24.37,
-          33.09,
-          41.79
+          7.23,
+          16.25,
+          25.22,
+          34.25,
+          43.25
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.28,
-          20.92,
-          32.5,
-          44.1,
-          55.71
+          9.6,
+          21.65,
+          33.64,
+          45.64,
+          57.66
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13.44,
-          30.28,
-          47.13,
-          63.97,
-          80.82
+          13.91,
+          31.34,
+          48.78,
+          66.21,
+          83.65
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          23.24,
-          52.24,
-          81.29,
-          110.27,
-          139.33
+          24.05,
+          54.07,
+          84.14,
+          114.13,
+          144.21
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          39.01,
-          87.75,
-          136.53,
-          185.29,
-          234.04
+          40.38,
+          90.82,
+          141.31,
+          191.78,
+          242.23
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          66.88,
-          150.45,
-          234.04,
-          317.64,
-          401.22
+          69.22,
+          155.72,
+          242.23,
+          328.76,
+          415.26
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          92.85,
-          209.01,
-          325.06,
-          441.17,
-          557.26
+          96.1,
+          216.33,
+          336.44,
+          456.61,
+          576.76
         ]
       }
     ]

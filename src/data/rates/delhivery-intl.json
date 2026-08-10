@@ -1,7 +1,7 @@
 {
   "carrier_id": "delhivery-intl",
-  "effective_date": "2026-08-03",
-  "note": "Synced from delhivery. [Updated from Delhivery published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
+  "effective_date": "2026-08-10",
+  "note": "Synced from delhivery. [Updated from Delhivery published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]",
   "zones": [
     {
       "zone": 1,
@@ -60,57 +60,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.21,
-          15.31,
-          28.13
+          3.31,
+          15.77,
+          28.97
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.26,
-          20.42,
-          37.46
+          4.39,
+          21.03,
+          38.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.17,
-          29.61,
-          54.35
+          6.36,
+          30.5,
+          55.98
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.63,
-          51.05,
-          93.63
+          10.95,
+          52.58,
+          96.44
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          17.87,
-          85.81,
-          157.31
+          18.41,
+          88.38,
+          162.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.65,
-          147.08,
-          269.65
+          31.57,
+          151.49,
+          277.74
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          42.56,
-          204.3,
-          374.53
+          43.84,
+          210.43,
+          385.77
         ]
       }
     ],
@@ -118,57 +118,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.21,
-          15.31,
-          28.13
+          3.31,
+          15.77,
+          28.97
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          4.26,
-          20.42,
-          37.46
+          4.39,
+          21.03,
+          38.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          6.17,
-          29.61,
-          54.35
+          6.36,
+          30.5,
+          55.98
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.63,
-          51.05,
-          93.63
+          10.95,
+          52.58,
+          96.44
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          17.87,
-          85.81,
-          157.31
+          18.41,
+          88.38,
+          162.03
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          30.65,
-          147.08,
-          269.65
+          31.57,
+          151.49,
+          277.74
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          42.56,
-          204.3,
-          374.53
+          43.84,
+          210.43,
+          385.77
         ]
       }
     ]

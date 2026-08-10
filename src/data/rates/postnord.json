@@ -82,53 +82,53 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.74,
-          25.06,
-          33.41
+          17.33,
+          25.94,
+          34.58
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22.27,
-          33.41,
-          44.58
+          23.05,
+          34.58,
+          46.14
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          32.32,
-          48.47,
-          64.65
+          33.45,
+          50.17,
+          66.91
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          55.71,
-          83.6,
-          111.44
+          57.66,
+          86.53,
+          115.34
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          93.64,
-          140.42,
-          187.25
+          96.92,
+          145.33,
+          193.8
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          160.48,
-          240.73,
-          320.96
+          166.1,
+          249.16,
+          332.19
         ]
       }
     ]
   },
-  "effective_date": "2026-08-03",
-  "note": "PostNord rates from Sweden based on postnord.se pricing (~SEK converted at 0.095 USD/SEK). Tracked parcel service to Scandinavia, Europe, and worldwide. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]"
+  "effective_date": "2026-08-10",
+  "note": "PostNord rates from Sweden based on postnord.se pricing (~SEK converted at 0.095 USD/SEK). Tracked parcel service to Scandinavia, Europe, and worldwide. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]"
 }

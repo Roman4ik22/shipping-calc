@@ -90,68 +90,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.4,
-          17.04,
-          27.7,
-          38.33
+          6.59,
+          17.55,
+          28.53,
+          39.48
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.5,
-          22.68,
-          36.87,
-          51.05
+          8.76,
+          23.36,
+          37.98,
+          52.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.34,
-          32.9,
-          53.48,
-          74.05
+          12.71,
+          33.89,
+          55.08,
+          76.27
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          21.31,
-          56.73,
-          92.24,
-          127.69
+          21.95,
+          58.43,
+          95.01,
+          131.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          35.75,
-          95.36,
-          154.93,
-          214.5
+          36.82,
+          98.22,
+          159.58,
+          220.94
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          61.3,
-          163.43,
-          265.62,
-          367.72
+          63.14,
+          168.33,
+          273.59,
+          378.75
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          85.15,
-          226.95,
-          368.94,
-          510.73
+          87.7,
+          233.76,
+          380.01,
+          526.05
         ]
       }
     ]
   },
-  "effective_date": "2026-08-03",
-  "note": "Synced from best-express-thailand-sea. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]"
+  "effective_date": "2026-08-10",
+  "note": "Synced from best-express-thailand-sea. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]"
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "lotte-global-logistics",
-  "effective_date": "2026-08-03",
-  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
+  "effective_date": "2026-08-10",
+  "note": "Estimated Lotte Global Logistics international rates from South Korea. Part of Lotte Group conglomerate with domestic and growing international network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]",
   "zones": [
     {
       "zone": 1,
@@ -84,71 +84,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.4,
-          14.36,
-          22.33,
-          30.32,
-          38.33
+          6.59,
+          14.79,
+          23,
+          31.23,
+          39.48
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          8.5,
-          19.17,
-          29.83,
-          40.45,
-          51.05
+          8.76,
+          19.75,
+          30.72,
+          41.66,
+          52.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          12.34,
-          27.77,
-          43.2,
-          58.63,
-          74.05
+          12.71,
+          28.6,
+          44.5,
+          60.39,
+          76.27
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          21.31,
-          47.86,
-          74.46,
-          101.08,
-          127.69
+          21.95,
+          49.3,
+          76.69,
+          104.11,
+          131.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          35.75,
-          80.43,
-          125.13,
-          169.8,
-          214.5
+          36.82,
+          82.84,
+          128.88,
+          174.89,
+          220.94
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          61.3,
-          137.93,
-          214.5,
-          291.1,
-          367.72
+          63.14,
+          142.07,
+          220.94,
+          299.83,
+          378.75
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          85.15,
-          191.55,
-          297.96,
-          404.35,
-          510.73
+          87.7,
+          197.3,
+          306.9,
+          416.48,
+          526.05
         ]
       }
     ]

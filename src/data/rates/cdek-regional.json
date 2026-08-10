@@ -1,7 +1,7 @@
 {
   "carrier_id": "cdek-regional",
-  "effective_date": "2026-08-03",
-  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03]",
+  "effective_date": "2026-08-10",
+  "note": "CDEK regional rates for Russia, CIS and neighboring countries. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10]",
   "zones": [
     {
       "zone": 1,
@@ -53,57 +53,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.5,
-          11.93,
-          23.83
+          8.76,
+          12.29,
+          24.54
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.93,
-          17.04,
-          37.46
+          12.29,
+          17.55,
+          38.58
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.31,
-          25.52,
-          56.17
+          15.77,
+          26.29,
+          57.86
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          23.83,
-          45.99,
-          102.15
+          24.54,
+          47.37,
+          105.21
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          37.46,
-          83.42,
-          166.85
+          38.58,
+          85.92,
+          171.86
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          64.68,
-          144.75,
-          297.96
+          66.62,
+          149.09,
+          306.9
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          88.54,
-          204.3,
-          425.61
+          91.2,
+          210.43,
+          438.38
         ]
       }
     ],
@@ -111,57 +111,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.1,
-          8.5,
-          17.04
+          5.25,
+          8.76,
+          17.55
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          6.82,
-          11.93,
-          27.23
+          7.02,
+          12.29,
+          28.05
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.23,
-          18.72,
-          40.87
+          10.54,
+          19.28,
+          42.1
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          15.31,
-          34.08,
-          74.91
+          15.77,
+          35.1,
+          77.16
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          25.52,
-          61.3,
-          122.58
+          26.29,
+          63.14,
+          126.26
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          44.27,
-          107.3,
-          221.34
+          45.6,
+          110.52,
+          227.98
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          61.3,
-          149.79,
-          314.95
+          63.14,
+          154.28,
+          324.4
         ]
       }
     ]
