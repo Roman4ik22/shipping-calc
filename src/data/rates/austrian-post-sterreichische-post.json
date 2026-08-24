@@ -1,7 +1,7 @@
 {
   "carrier_id": "austrian-post-sterreichische-post",
-  "effective_date": "2026-08-17",
-  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17]",
+  "effective_date": "2026-08-24",
+  "note": "Austrian Post international rates from Austria based on typical Osterreichische Post pricing. Strong network for Central European deliveries. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24]",
   "zones": [
     {
       "zone": 1,
@@ -89,64 +89,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.48,
-          19.91,
-          32.34,
-          44.76
+          7.74,
+          20.61,
+          33.47,
+          46.33
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.94,
-          26.52,
-          43.13,
-          59.68
+          10.29,
+          27.45,
+          44.64,
+          61.77
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          14.4,
-          38.44,
-          62.52,
-          86.58
+          14.9,
+          39.79,
+          64.71,
+          89.61
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          24.89,
-          66.31,
-          107.81,
-          149.26
+          25.76,
+          68.63,
+          111.58,
+          154.48
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          41.79,
-          111.4,
-          181.09,
-          250.71
+          43.25,
+          115.3,
+          187.43,
+          259.48
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          71.64,
-          190.97,
-          310.44,
-          429.79
+          74.15,
+          197.65,
+          321.31,
+          444.83
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          99.46,
-          265.25,
-          431.18,
-          596.95
+          102.94,
+          274.53,
+          446.27,
+          617.84
         ]
       }
     ]

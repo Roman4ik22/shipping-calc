@@ -1,7 +1,7 @@
 {
   "carrier_id": "startrack",
-  "effective_date": "2026-08-17",
-  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17]",
+  "effective_date": "2026-08-24",
+  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24]",
   "zones": [
     {
       "zone": 1,
@@ -81,91 +81,91 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.24,
-          29.84,
-          43.36,
-          51.47,
-          63.21
+          16.73,
+          30.74,
+          44.66,
+          53.01,
+          65.11
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          21.66,
-          39.74,
-          57.8,
-          68.62,
-          84.3
+          22.31,
+          40.93,
+          59.53,
+          70.68,
+          86.83
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          31.42,
-          57.66,
-          83.79,
-          99.51,
-          122.2
+          32.36,
+          59.39,
+          86.3,
+          102.5,
+          125.87
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          54.16,
-          99.33,
-          144.49,
-          171.55,
-          210.76
+          55.78,
+          102.31,
+          148.82,
+          176.7,
+          217.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          91.03,
-          166.89,
-          242.73,
-          288.27,
-          354.02
+          93.76,
+          171.9,
+          250.01,
+          296.92,
+          364.64
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          156.03,
-          286.07,
-          416.11,
-          494.16,
-          606.9
+          160.71,
+          294.65,
+          428.59,
+          508.98,
+          625.11
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          216.74,
-          397.34,
-          577.96,
-          686.3,
-          842.92
+          223.24,
+          409.26,
+          595.3,
+          706.89,
+          868.21
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          921.12,
-          1688.71,
-          2456.29,
-          2916.86,
-          3582.38
+          948.75,
+          1739.37,
+          2529.98,
+          3004.37,
+          3689.85
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          1289.56,
-          2364.22,
-          3438.83,
-          4083.6,
-          5015.36
+          1328.25,
+          2435.15,
+          3541.99,
+          4206.11,
+          5165.82
         ]
       }
     ]

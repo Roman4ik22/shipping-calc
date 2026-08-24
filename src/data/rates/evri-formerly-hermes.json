@@ -1,7 +1,7 @@
 {
   "carrier_id": "evri-formerly-hermes",
-  "effective_date": "2026-08-17",
-  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17]",
+  "effective_date": "2026-08-24",
+  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24]",
   "zones": [
     {
       "zone": 1,
@@ -100,66 +100,66 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          6.79,
-          14.36,
-          21.96,
-          29.54,
-          37.11,
-          44.7
+          6.99,
+          14.79,
+          22.62,
+          30.43,
+          38.22,
+          46.04
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          9.02,
-          19.17,
-          29.26,
-          39.35,
-          49.48,
-          59.6
+          9.29,
+          19.75,
+          30.14,
+          40.53,
+          50.96,
+          61.39
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          13.09,
-          27.75,
-          42.46,
-          57.1,
-          71.74,
-          86.43
+          13.48,
+          28.58,
+          43.73,
+          58.81,
+          73.89,
+          89.02
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          22.61,
-          47.86,
-          73.15,
-          98.42,
-          123.72,
-          149.03
+          23.29,
+          49.3,
+          75.34,
+          101.37,
+          127.43,
+          153.5
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          37.92,
-          80.41,
-          122.91,
-          165.36,
-          207.84,
-          250.32
+          39.06,
+          82.82,
+          126.6,
+          170.32,
+          214.08,
+          257.83
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          65.03,
-          137.83,
-          210.65,
-          283.51,
-          356.32,
+          66.98,
+          141.96,
+          216.97,
+          292.02,
+          367.01,
           null
         ]
       },
