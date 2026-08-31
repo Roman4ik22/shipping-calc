@@ -1,7 +1,7 @@
 {
   "carrier_id": "startrack",
-  "effective_date": "2026-08-24",
-  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24]",
+  "effective_date": "2026-08-31",
+  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]",
   "zones": [
     {
       "zone": 1,
@@ -81,91 +81,91 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.73,
-          30.74,
-          44.66,
-          53.01,
-          65.11
+          17.23,
+          31.66,
+          46,
+          54.6,
+          67.06
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22.31,
-          40.93,
-          59.53,
-          70.68,
-          86.83
+          22.98,
+          42.16,
+          61.32,
+          72.8,
+          89.43
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          32.36,
-          59.39,
-          86.3,
-          102.5,
-          125.87
+          33.33,
+          61.17,
+          88.89,
+          105.58,
+          129.65
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          55.78,
-          102.31,
-          148.82,
-          176.7,
-          217.08
+          57.45,
+          105.38,
+          153.28,
+          182,
+          223.59
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          93.76,
-          171.9,
-          250.01,
-          296.92,
-          364.64
+          96.57,
+          177.06,
+          257.51,
+          305.83,
+          375.58
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          160.71,
-          294.65,
-          428.59,
-          508.98,
-          625.11
+          165.53,
+          303.49,
+          441.45,
+          524.25,
+          643.86
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          223.24,
-          409.26,
-          595.3,
-          706.89,
-          868.21
+          229.94,
+          421.54,
+          613.16,
+          728.1,
+          894.26
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          948.75,
-          1739.37,
-          2529.98,
-          3004.37,
-          3689.85
+          977.21,
+          1791.55,
+          2605.88,
+          3094.5,
+          3800.55
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          1328.25,
-          2435.15,
-          3541.99,
-          4206.11,
-          5165.82
+          1368.1,
+          2508.2,
+          3648.25,
+          4332.29,
+          5320.79
         ]
       }
     ]

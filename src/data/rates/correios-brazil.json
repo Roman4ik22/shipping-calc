@@ -74,57 +74,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.73,
-          25.11,
-          33.5
+          17.23,
+          25.86,
+          34.51
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22.31,
-          33.5,
-          44.66
+          22.98,
+          34.51,
+          46
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          32.36,
-          48.54,
-          64.76
+          33.33,
+          50,
+          66.7
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          55.78,
-          83.71,
-          111.62
+          57.45,
+          86.22,
+          114.97
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          93.76,
-          140.65,
-          187.5
+          96.57,
+          144.87,
+          193.13
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          160.71,
-          241.1,
-          321.46
+          165.53,
+          248.33,
+          331.1
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          223.24,
-          334.87,
-          446.49
+          229.94,
+          344.92,
+          459.88
         ]
       }
     ],
@@ -132,61 +132,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          16.73,
-          25.11,
-          33.5
+          17.23,
+          25.86,
+          34.51
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          22.31,
-          33.5,
-          44.66
+          22.98,
+          34.51,
+          46
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          32.36,
-          48.54,
-          64.76
+          33.33,
+          50,
+          66.7
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          55.78,
-          83.71,
-          111.62
+          57.45,
+          86.22,
+          114.97
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          93.76,
-          140.65,
-          187.5
+          96.57,
+          144.87,
+          193.13
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          160.71,
-          241.1,
-          321.46
+          165.53,
+          248.33,
+          331.1
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          223.24,
-          334.87,
-          446.49
+          229.94,
+          344.92,
+          459.88
         ]
       }
     ]
   },
-  "effective_date": "2026-08-24",
-  "note": "Correios Brazil international rates based on typical Brazilian postal pricing. SEDEX Mundi (express) and Internacional Premium services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24]"
+  "effective_date": "2026-08-31",
+  "note": "Correios Brazil international rates based on typical Brazilian postal pricing. SEDEX Mundi (express) and Internacional Premium services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]"
 }
