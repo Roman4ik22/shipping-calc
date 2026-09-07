@@ -1,7 +1,7 @@
 {
   "carrier_id": "smsa-express-regional",
-  "effective_date": "2026-08-31",
-  "note": "Synced from smsa-express. [Updated from SMSA Express published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]",
+  "effective_date": "2026-09-07",
+  "note": "Synced from smsa-express. [Updated from SMSA Express published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]",
   "zones": [
     {
       "name": "Zone 0",
@@ -45,100 +45,100 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.9,
-          14.37,
-          31.66,
-          43.14
+          8.14,
+          14.8,
+          32.61,
+          44.43
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.57,
-          19.18,
-          42.16,
-          57.45
+          10.89,
+          19.76,
+          43.42,
+          59.17
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.25,
-          27.81,
-          61.17,
-          83.35
+          15.71,
+          28.64,
+          63.01,
+          85.85
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          19.5,
-          35.42,
-          77.99,
-          106.37
+          20.09,
+          36.48,
+          80.33,
+          109.56
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.32,
-          47.91,
-          105.38,
-          143.72
+          27.11,
+          49.35,
+          108.54,
+          148.03
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          44.27,
-          80.48,
-          177.06,
-          241.43
+          45.6,
+          82.89,
+          182.37,
+          248.67
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          61.17,
-          111.14,
-          244.48,
-          333.42
+          63.01,
+          114.47,
+          251.81,
+          343.42
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          75.88,
-          137.97,
-          303.49,
-          413.86
+          78.16,
+          142.11,
+          312.59,
+          426.28
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          105.38,
-          191.61,
-          421.54,
-          574.82
+          108.54,
+          197.36,
+          434.19,
+          592.06
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          447.86,
-          814.34,
-          1791.55,
-          2443.03
+          461.3,
+          838.77,
+          1845.3,
+          2516.32
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          627.05,
-          1140.08,
-          2508.2,
-          3420.27
+          645.86,
+          1174.28,
+          2583.45,
+          3522.88
         ]
       }
     ]

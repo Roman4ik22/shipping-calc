@@ -1,7 +1,7 @@
 {
   "carrier_id": "nova-poshta-intl",
-  "effective_date": "2026-08-31",
-  "note": "Nova Poshta international rates. Largest private delivery service in Ukraine. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]",
+  "effective_date": "2026-09-07",
+  "note": "Nova Poshta international rates. Largest private delivery service in Ukraine. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]",
   "zones": [
     {
       "zone": 1,
@@ -63,64 +63,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.84,
-          13.43,
-          21.07,
-          30.65
+          3.96,
+          13.83,
+          21.7,
+          31.57
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.74,
-          19.18,
-          30.65,
-          42.16
+          5.91,
+          19.76,
+          31.57,
+          43.42
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.67,
-          19.18,
-          38.35,
-          42.16
+          7.9,
+          19.76,
+          39.5,
+          43.42
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.43,
-          32.61,
-          44.04,
-          70.93
+          13.83,
+          33.59,
+          45.36,
+          73.06
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.07,
-          55.59,
-          61.32,
-          116.88
+          21.7,
+          57.26,
+          63.16,
+          120.39
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          34.51,
-          93.89,
-          116.88,
-          214.57
+          35.55,
+          96.71,
+          120.39,
+          221.01
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          47.91,
-          139.84,
-          187.8,
-          327.62
+          49.35,
+          144.04,
+          193.43,
+          337.45
         ]
       }
     ],
@@ -128,64 +128,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.91,
-          9.57,
-          15.31,
-          22.98
+          1.97,
+          9.86,
+          15.77,
+          23.67
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.84,
-          13.43,
-          22.98,
-          30.65
+          3.96,
+          13.83,
+          23.67,
+          31.57
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.74,
-          13.43,
-          28.73,
-          30.65
+          5.91,
+          13.83,
+          29.59,
+          31.57
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.57,
-          24.9,
-          32.61,
-          51.76
+          9.86,
+          25.65,
+          33.59,
+          53.31
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          15.31,
-          42.16,
-          46,
-          88.14
+          15.77,
+          43.42,
+          47.38,
+          90.78
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          24.9,
-          70.93,
-          88.14,
-          160.96
+          25.65,
+          73.06,
+          90.78,
+          165.79
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          34.51,
-          105.38,
-          139.84,
-          245.27
+          35.55,
+          108.54,
+          144.04,
+          252.63
         ]
       }
     ]

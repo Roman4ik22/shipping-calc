@@ -1,7 +1,7 @@
 {
   "carrier_id": "sri-lanka-post",
-  "effective_date": "2026-08-31",
-  "note": "Estimated Sri Lanka Post rates from Sri Lanka. EMS and registered airmail services. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]",
+  "effective_date": "2026-09-07",
+  "note": "Estimated Sri Lanka Post rates from Sri Lanka. EMS and registered airmail services. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]",
   "zones": [
     {
       "zone": 1,
@@ -71,64 +71,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          19.22,
-          28.76,
-          38.34,
-          47.95
+          19.89,
+          29.77,
+          39.68,
+          49.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          25.56,
-          38.34,
-          51.15,
-          63.93
+          26.45,
+          39.68,
+          52.94,
+          66.17
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          37.08,
-          55.63,
-          74.18,
-          92.75
+          38.38,
+          57.58,
+          76.78,
+          96
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          63.93,
-          95.93,
-          127.88,
-          159.89
+          66.17,
+          99.29,
+          132.36,
+          165.49
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          107.45,
-          161.13,
-          214.87,
-          268.56
+          111.21,
+          166.77,
+          222.39,
+          277.96
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          184.16,
-          276.25,
-          368.3,
-          460.4
+          190.61,
+          285.92,
+          381.19,
+          476.51
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          255.78,
-          383.67,
-          511.57,
-          639.46
+          264.73,
+          397.1,
+          529.47,
+          661.84
         ]
       }
     ],
@@ -136,28 +136,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          19.22,
-          28.76,
-          38.34,
-          47.95
+          19.89,
+          29.77,
+          39.68,
+          49.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          25.56,
-          38.34,
-          51.15,
-          63.93
+          26.45,
+          39.68,
+          52.94,
+          66.17
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          37.08,
-          55.63,
-          74.18,
-          92.75
+          38.38,
+          57.58,
+          76.78,
+          96
         ]
       },
       {

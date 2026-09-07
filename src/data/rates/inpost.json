@@ -50,86 +50,86 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.01,
-          21.33,
-          34.64,
-          47.95
+          8.29,
+          22.08,
+          35.85,
+          49.63
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.65,
-          28.41,
-          46.2,
-          63.93
+          11.02,
+          29.4,
+          47.82,
+          66.17
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.42,
-          41.18,
-          66.97,
-          92.75
+          15.96,
+          42.62,
+          69.31,
+          96
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          19.7,
-          52.57,
-          85.45,
-          118.31
+          20.39,
+          54.41,
+          88.44,
+          122.45
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.66,
-          71.03,
-          115.49,
-          159.89
+          27.59,
+          73.52,
+          119.53,
+          165.49
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          44.76,
-          119.34,
-          193.99,
-          268.56
+          46.33,
+          123.52,
+          200.78,
+          277.96
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          61.81,
-          164.79,
-          267.92,
-          370.87
+          63.97,
+          170.56,
+          277.3,
+          383.85
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          76.75,
-          204.57,
-          332.56,
-          460.4
+          79.44,
+          211.73,
+          344.2,
+          476.51
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          226.49,
-          603.74,
-          981.57,
-          1358.85
+          234.42,
+          624.87,
+          1015.92,
+          1406.41
         ]
       }
     ]
   },
-  "effective_date": "2026-08-31",
-  "note": "InPost real rates. Size A=PLN28.99, B=PLN49.99, C=PLN54.99 (PLN→USD at 0.25). Source: inpost.pl [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]"
+  "effective_date": "2026-09-07",
+  "note": "InPost real rates. Size A=PLN28.99, B=PLN49.99, C=PLN54.99 (PLN→USD at 0.25). Source: inpost.pl [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]"
 }

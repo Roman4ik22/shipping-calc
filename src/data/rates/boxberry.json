@@ -75,61 +75,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          11.88,
-          35.55,
-          56.24
+          12.24,
+          36.62,
+          57.93
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          15.77,
-          47.38,
-          74.98
+          16.24,
+          48.8,
+          77.23
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          22.91,
-          68.7,
-          108.75
+          23.6,
+          70.76,
+          112.01
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          39.5,
-          118.42,
-          187.46
+          40.69,
+          121.97,
+          193.08
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          66.33,
-          198.92,
-          315
+          68.32,
+          204.89,
+          324.45
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          113.64,
-          341.03,
-          539.98
+          117.05,
+          351.26,
+          556.18
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          157.88,
-          473.68,
-          749.94
+          162.62,
+          487.89,
+          772.44
         ]
       }
     ]
   },
-  "effective_date": "2026-08-31",
-  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]"
+  "effective_date": "2026-09-07",
+  "note": "[Updated from Boxberry published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]"
 }

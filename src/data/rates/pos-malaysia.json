@@ -78,64 +78,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.31,
-          9,
-          17.62,
-          26.44
+          2.38,
+          9.27,
+          18.15,
+          27.23
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.06,
-          16.27,
-          28.73,
-          40.83
+          3.15,
+          16.76,
+          29.59,
+          42.05
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.8,
-          26.82,
-          46,
-          65.14
+          4.94,
+          27.62,
+          47.38,
+          67.09
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.57,
-          53.65,
-          88.14,
-          124.54
+          9.86,
+          55.26,
+          90.78,
+          128.28
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          16.27,
-          91.95,
-          149.44,
-          214.57
+          16.76,
+          94.71,
+          153.92,
+          221.01
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.73,
-          162.92,
-          268.28,
-          383.24
+          29.59,
+          167.81,
+          276.33,
+          394.74
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          40.23,
-          229.94,
-          383.24,
-          546.1
+          41.44,
+          236.84,
+          394.74,
+          562.48
         ]
       }
     ],
@@ -143,59 +143,59 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.73,
-          6.71,
-          13.2,
-          19.91
+          1.78,
+          6.91,
+          13.6,
+          20.51
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.31,
-          12.28,
-          21.64,
-          30.65
+          2.38,
+          12.65,
+          22.29,
+          31.57
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          3.64,
-          20.12,
-          34.51,
-          48.86
+          3.75,
+          20.72,
+          35.55,
+          50.33
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          7.27,
-          40.23,
-          66.13,
-          93.89
+          7.49,
+          41.44,
+          68.11,
+          96.71
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          12.28,
-          68.99,
-          112.12,
-          160.96
+          12.65,
+          71.06,
+          115.48,
+          165.79
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          21.64,
-          122.64,
-          201.17,
-          287.42
+          22.29,
+          126.32,
+          207.21,
+          296.04
         ]
       }
     ]
   },
-  "effective_date": "2026-08-31",
-  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31]"
+  "effective_date": "2026-09-07",
+  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]"
 }
