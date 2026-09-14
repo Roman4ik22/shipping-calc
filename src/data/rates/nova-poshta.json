@@ -61,64 +61,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.96,
-          13.83,
-          21.7,
-          31.57
+          4.08,
+          14.24,
+          22.35,
+          32.52
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.91,
-          19.76,
-          31.57,
-          43.42
+          6.09,
+          20.35,
+          32.52,
+          44.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.9,
-          19.76,
-          39.5,
-          43.42
+          8.14,
+          20.35,
+          40.69,
+          44.72
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.83,
-          33.59,
-          45.36,
-          73.06
+          14.24,
+          34.6,
+          46.72,
+          75.25
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          21.7,
-          57.26,
-          63.16,
-          120.39
+          22.35,
+          58.98,
+          65.05,
+          124
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          35.55,
-          96.71,
-          120.39,
-          221.01
+          36.62,
+          99.61,
+          124,
+          227.64
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          49.35,
-          144.04,
-          193.43,
-          337.45
+          50.83,
+          148.36,
+          199.23,
+          347.57
         ]
       }
     ],
@@ -126,68 +126,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.97,
-          9.86,
-          15.77,
-          23.67
+          2.03,
+          10.16,
+          16.24,
+          24.38
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.96,
-          13.83,
-          23.67,
-          31.57
+          4.08,
+          14.24,
+          24.38,
+          32.52
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.91,
-          13.83,
-          29.59,
-          31.57
+          6.09,
+          14.24,
+          30.48,
+          32.52
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.86,
-          25.65,
-          33.59,
-          53.31
+          10.16,
+          26.42,
+          34.6,
+          54.91
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          15.77,
-          43.42,
-          47.38,
-          90.78
+          16.24,
+          44.72,
+          48.8,
+          93.5
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          25.65,
-          73.06,
-          90.78,
-          165.79
+          26.42,
+          75.25,
+          93.5,
+          170.76
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          35.55,
-          108.54,
-          144.04,
-          252.63
+          36.62,
+          111.8,
+          148.36,
+          260.21
         ]
       }
     ]
   },
-  "effective_date": "2026-09-07",
-  "note": "Synced from nova-poshta-intl. Nova Poshta international rates. Largest private delivery service in Ukraine. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]"
+  "effective_date": "2026-09-14",
+  "note": "Synced from nova-poshta-intl. Nova Poshta international rates. Largest private delivery service in Ukraine. [Updated from public calculator data March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14]"
 }

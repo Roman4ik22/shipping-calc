@@ -73,61 +73,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.25,
-          5.18,
-          9.13
+          1.29,
+          5.34,
+          9.4
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          1.7,
-          6.91,
-          12.13
+          1.75,
+          7.12,
+          12.49
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          2.43,
-          10.02,
-          17.6
+          2.5,
+          10.32,
+          18.13
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          4.2,
-          17.24,
-          30.35
+          4.33,
+          17.76,
+          31.26
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          7.05,
-          29.03,
-          50.96
+          7.26,
+          29.9,
+          52.49
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          12.06,
-          49.77,
-          87.4
+          12.42,
+          51.26,
+          90.02
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          16.76,
-          69.07,
-          121.39
+          17.26,
+          71.14,
+          125.03
         ]
       }
     ]
   },
-  "effective_date": "2026-09-07",
-  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]"
+  "effective_date": "2026-09-14",
+  "note": "[Updated from Flash Express Thailand rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14]"
 }

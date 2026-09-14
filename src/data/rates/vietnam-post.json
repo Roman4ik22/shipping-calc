@@ -1,7 +1,7 @@
 {
   "carrier_id": "vietnam-post",
-  "effective_date": "2026-09-07",
-  "note": "Vietnam Post rates from Vietnam based on typical Vietnamese postal pricing. EMS and registered airmail services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07]",
+  "effective_date": "2026-09-14",
+  "note": "Vietnam Post rates from Vietnam based on typical Vietnamese postal pricing. EMS and registered airmail services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14]",
   "zones": [
     {
       "zone": 1,
@@ -75,64 +75,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          19.89,
-          29.77,
-          39.68,
-          49.63
+          20.59,
+          30.81,
+          41.07,
+          51.37
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          26.45,
-          39.68,
-          52.94,
-          66.17
+          27.38,
+          41.07,
+          54.79,
+          68.49
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          38.38,
-          57.58,
-          76.78,
-          96
+          39.72,
+          59.6,
+          79.47,
+          99.36
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          66.17,
-          99.29,
-          132.36,
-          165.49
+          68.49,
+          102.77,
+          136.99,
+          171.28
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          111.21,
-          166.77,
-          222.39,
-          277.96
+          115.1,
+          172.61,
+          230.17,
+          287.69
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          190.61,
-          285.92,
-          381.19,
-          476.51
+          197.28,
+          295.93,
+          394.53,
+          493.19
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          264.73,
-          397.1,
-          529.47,
-          661.84
+          274,
+          411,
+          548,
+          685
         ]
       }
     ],
@@ -140,28 +140,28 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          19.89,
-          29.77,
-          39.68,
-          49.63
+          20.59,
+          30.81,
+          41.07,
+          51.37
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          26.45,
-          39.68,
-          52.94,
-          66.17
+          27.38,
+          41.07,
+          54.79,
+          68.49
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          38.38,
-          57.58,
-          76.78,
-          96
+          39.72,
+          59.6,
+          79.47,
+          99.36
         ]
       },
       {
