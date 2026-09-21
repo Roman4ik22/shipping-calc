@@ -66,61 +66,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.34,
-          12.24,
-          27.44
+          5.5,
+          12.61,
+          28.26
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.12,
-          16.24,
-          36.62
+          7.33,
+          16.73,
+          37.72
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.32,
-          23.6,
-          53.05
+          10.63,
+          24.31,
+          54.64
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          17.76,
-          40.69,
-          91.47
+          18.29,
+          41.91,
+          94.21
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          29.9,
-          68.32,
-          153.7
+          30.8,
+          70.37,
+          158.31
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          51.26,
-          117.05,
-          263.45
+          52.8,
+          120.56,
+          271.35
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          71.14,
-          162.62,
-          365.93
+          73.27,
+          167.5,
+          376.91
         ]
       }
     ]
   },
-  "effective_date": "2026-09-14",
-  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14]"
+  "effective_date": "2026-09-21",
+  "note": "[Updated from ZTO International published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21]"
 }
