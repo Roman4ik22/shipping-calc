@@ -63,68 +63,68 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.87,
-          20.96,
-          34.07,
-          47.13
+          8.11,
+          21.59,
+          35.09,
+          48.54
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.46,
-          27.89,
-          45.35,
-          62.78
+          10.77,
+          28.73,
+          46.71,
+          64.66
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.17,
-          40.47,
-          65.77,
-          91.08
+          15.63,
+          41.68,
+          67.74,
+          93.81
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.21,
-          69.77,
-          113.44,
-          157.04
+          27,
+          71.86,
+          116.84,
+          161.75
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.96,
-          117.3,
-          190.55,
-          263.81
+          45.28,
+          120.82,
+          196.27,
+          271.72
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          75.39,
-          200.99,
-          326.69,
-          452.24
+          77.65,
+          207.02,
+          336.49,
+          465.81
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          222.48,
-          593.09,
-          964.2,
-          1334.82
+          229.15,
+          610.88,
+          993.13,
+          1374.86
         ]
       }
     ]
   },
-  "effective_date": "2026-09-21",
-  "note": "[Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21]"
+  "effective_date": "2026-09-28",
+  "note": "[Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]"
 }

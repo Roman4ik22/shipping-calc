@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex-australia-formerly-fastway",
-  "effective_date": "2026-09-21",
-  "note": "Estimated Aramex Australia (formerly Fastway Couriers) rates. Franchise-based courier network with domestic and international delivery. Part of Aramex global network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21]",
+  "effective_date": "2026-09-28",
+  "note": "Estimated Aramex Australia (formerly Fastway Couriers) rates. Franchise-based courier network with domestic and international delivery. Part of Aramex global network. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]",
   "zones": [
     {
       "zone": 1,
@@ -89,71 +89,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          7.87,
-          17.65,
-          27.46,
-          37.29,
-          47.13
+          8.11,
+          18.18,
+          28.28,
+          38.41,
+          48.54
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          10.46,
-          23.59,
-          36.69,
-          49.76,
-          62.78
+          10.77,
+          24.3,
+          37.79,
+          51.25,
+          64.66
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          15.17,
-          34.15,
-          53.15,
-          72.11,
-          91.08
+          15.63,
+          35.17,
+          54.74,
+          74.27,
+          93.81
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          26.21,
-          58.86,
-          91.57,
-          124.31,
-          157.04
+          27,
+          60.63,
+          94.32,
+          128.04,
+          161.75
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          43.96,
-          98.93,
-          153.88,
-          208.83,
-          263.81
+          45.28,
+          101.9,
+          158.5,
+          215.09,
+          271.72
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          75.39,
-          169.64,
-          263.81,
-          358,
-          452.24
+          77.65,
+          174.73,
+          271.72,
+          368.74,
+          465.81
         ]
       },
       {
         "weight_kg": 25,
         "prices_by_zone": [
-          222.48,
-          500.53,
-          778.63,
-          1056.7,
-          1334.82
+          229.15,
+          515.55,
+          801.99,
+          1088.4,
+          1374.86
         ]
       }
     ]
