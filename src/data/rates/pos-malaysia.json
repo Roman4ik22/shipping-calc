@@ -78,64 +78,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          2.6,
-          10.14,
-          19.83,
-          29.76
+          2.68,
+          10.44,
+          20.42,
+          30.65
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.44,
-          18.31,
-          32.33,
-          45.95
+          3.54,
+          18.86,
+          33.3,
+          47.33
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.4,
-          30.18,
-          51.77,
-          73.31
+          5.56,
+          31.09,
+          53.32,
+          75.51
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          10.77,
-          60.39,
-          99.2,
-          140.17
+          11.09,
+          62.2,
+          102.18,
+          144.38
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          18.31,
-          103.49,
-          168.2,
-          241.5
+          18.86,
+          106.59,
+          173.25,
+          248.75
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          32.33,
-          183.37,
-          301.95,
-          431.34
+          33.3,
+          188.87,
+          311.01,
+          444.28
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          45.28,
-          258.81,
-          431.34,
-          614.63
+          46.64,
+          266.57,
+          444.28,
+          633.07
         ]
       }
     ],
@@ -143,59 +143,59 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          1.94,
-          7.55,
-          14.86,
-          22.41
+          2,
+          7.78,
+          15.31,
+          23.08
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          2.6,
-          13.82,
-          24.36,
-          34.51
+          2.68,
+          14.23,
+          25.09,
+          35.55
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          4.1,
-          22.64,
-          38.85,
-          55
+          4.22,
+          23.32,
+          40.02,
+          56.65
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          8.18,
-          45.28,
-          74.42,
-          105.68
+          8.43,
+          46.64,
+          76.65,
+          108.85
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          13.82,
-          77.65,
-          126.19,
-          181.16
+          14.23,
+          79.98,
+          129.98,
+          186.59
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          24.36,
-          138.03,
-          226.42,
-          323.49
+          25.09,
+          142.17,
+          233.21,
+          333.19
         ]
       }
     ]
   },
-  "effective_date": "2026-09-28",
-  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]"
+  "effective_date": "2026-10-05",
+  "note": "Pos Malaysia rates. Domestic from pos.com.my official rate card (MYR at 4.7 MYR/USD). International Zone 1 (SG) and Zone 3 (US) from official calculator; other zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]"
 }

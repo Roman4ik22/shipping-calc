@@ -1,7 +1,7 @@
 {
   "carrier_id": "gls-general-logistics-systems",
-  "effective_date": "2026-09-28",
-  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]",
+  "effective_date": "2026-10-05",
+  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]",
   "zones": [
     {
       "zone": 1,
@@ -86,71 +86,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.19,
-          20.68,
-          32.09,
-          43.57,
-          55.03
+          9.51,
+          21.4,
+          33.21,
+          45.09,
+          56.96
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.22,
-          27.54,
-          42.81,
-          58.06,
-          73.37
+          12.65,
+          28.5,
+          44.31,
+          60.09,
+          75.94
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.7,
-          39.89,
-          62.07,
-          84.24,
-          106.44
+          18.32,
+          41.29,
+          64.24,
+          87.19,
+          110.17
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.59,
-          68.8,
-          107.04,
-          145.19,
-          183.47
+          31.66,
+          71.21,
+          110.79,
+          150.27,
+          189.89
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          51.37,
-          115.56,
-          179.79,
-          243.99,
-          308.18
+          53.17,
+          119.6,
+          186.08,
+          252.53,
+          318.97
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          88.08,
-          198.11,
-          308.18,
-          418.28,
-          528.32
+          91.16,
+          205.04,
+          318.97,
+          432.92,
+          546.81
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          122.25,
-          275.23,
-          428.06,
-          580.94,
-          733.78
+          126.53,
+          284.86,
+          443.04,
+          601.27,
+          759.46
         ]
       }
     ]

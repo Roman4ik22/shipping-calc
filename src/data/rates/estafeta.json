@@ -44,104 +44,104 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.67,
-          12.99,
-          45.28,
-          56.62
+          5.84,
+          13.38,
+          46.64,
+          58.32
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          7.55,
-          17.23,
-          60.39,
-          75.47
+          7.78,
+          17.75,
+          62.2,
+          77.73
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          10.95,
-          25.04,
-          87.55,
-          109.44
+          11.28,
+          25.79,
+          90.18,
+          112.72
         ]
       },
       {
         "weight_kg": 3,
         "prices_by_zone": [
-          13.96,
-          31.91,
-          111.73,
-          139.64
+          14.38,
+          32.87,
+          115.08,
+          143.83
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          18.84,
-          43.17,
-          150.93,
-          188.65
+          19.41,
+          44.47,
+          155.46,
+          194.31
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          31.72,
-          72.48,
-          253.6,
-          317.01
+          32.67,
+          74.65,
+          261.21,
+          326.52
         ]
       },
       {
         "weight_kg": 15,
         "prices_by_zone": [
-          43.83,
-          100.05,
-          350.2,
-          437.77
+          45.14,
+          103.05,
+          360.71,
+          450.9
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          54.38,
-          124.18,
-          434.78,
-          543.47
+          56.01,
+          127.91,
+          447.82,
+          559.77
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          75.47,
-          172.53,
-          603.87,
-          754.78
+          77.73,
+          177.71,
+          621.99,
+          777.42
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          320.78,
-          733.24,
-          2566.37,
-          3207.91
+          330.4,
+          755.24,
+          2643.36,
+          3304.15
         ]
       },
       {
         "weight_kg": 68,
         "prices_by_zone": [
-          436.29,
-          997.19,
-          3490.23,
-          4362.8
+          449.38,
+          1027.11,
+          3594.94,
+          4493.68
         ]
       }
     ]
   },
-  "effective_date": "2026-09-28",
-  "note": "[Updated from Estafeta published tariffs March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]"
+  "effective_date": "2026-10-05",
+  "note": "[Updated from Estafeta published tariffs March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]"
 }

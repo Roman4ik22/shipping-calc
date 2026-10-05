@@ -1,7 +1,7 @@
 {
   "carrier_id": "la-poste-france",
-  "effective_date": "2026-09-28",
-  "note": "La Poste France international rates based on real Colissimo tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A (EU/UK), Zone C (Americas/Asia). Source: https://tarif-lettre.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28]",
+  "effective_date": "2026-10-05",
+  "note": "La Poste France international rates based on real Colissimo tariffs from tarif-lettre.com (Jan 2026). EUR converted to USD at 1.09. Zone A (EU/UK), Zone C (Americas/Asia). Source: https://tarif-lettre.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]",
   "zones": [
     {
       "zone": 1,
@@ -95,52 +95,52 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.19,
-          24.48,
-          39.74,
-          55.03
+          9.51,
+          25.34,
+          41.13,
+          56.96
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.22,
-          32.6,
-          53.01,
-          73.37
+          12.65,
+          33.74,
+          54.87,
+          75.94
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.7,
-          47.25,
-          76.85,
-          106.44
+          18.32,
+          48.9,
+          79.54,
+          110.17
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.59,
-          81.51,
-          132.52,
-          183.47
+          31.66,
+          84.36,
+          137.16,
+          189.89
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          51.37,
-          136.94,
-          222.61,
-          308.18
+          53.17,
+          141.73,
+          230.4,
+          318.97
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          88.08,
+          91.16,
           null,
           null,
           null
