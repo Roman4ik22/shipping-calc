@@ -54,57 +54,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          3.76,
-          22.91,
-          50.33
+          3.87,
+          23.6,
+          51.84
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          3.76,
-          32.02,
-          64.07
+          3.87,
+          32.98,
+          65.99
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          5.1,
-          45.8,
-          86.93
+          5.25,
+          47.17,
+          89.54
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          9.33,
-          80.06,
-          148.71
+          9.61,
+          82.46,
+          153.17
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          15.56,
-          132.69,
-          251.71
+          16.03,
+          136.67,
+          259.26
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          28.2,
-          233.37,
-          446.15
+          29.05,
+          240.37,
+          459.53
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          40.69,
-          331.76,
-          636.06
+          41.91,
+          341.71,
+          655.14
         ]
       }
     ],
@@ -112,61 +112,61 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          5.56,
-          32.02,
-          64.07
+          5.73,
+          32.98,
+          65.99
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          5.56,
-          41.22,
-          82.38
+          5.73,
+          42.46,
+          84.85
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          7.55,
-          59.49,
-          109.79
+          7.78,
+          61.27,
+          113.08
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          13.98,
-          102.95,
-          187.64
+          14.4,
+          106.04,
+          193.27
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          23.32,
-          171.6,
-          320.34
+          24.02,
+          176.75,
+          329.95
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          42.46,
-          302.04,
-          571.98
+          43.73,
+          311.1,
+          589.14
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          61.16,
-          430.12,
-          812.24
+          62.99,
+          443.02,
+          836.61
         ]
       }
     ]
   },
-  "effective_date": "2026-10-05",
-  "note": "Synced from kerry-express. Kerry Express rates. Domestic Thailand rates from official Kerry Express rate card (THB converted at 35.5 THB/USD). International zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]"
+  "effective_date": "2026-10-12",
+  "note": "Synced from kerry-express. Kerry Express rates. Domestic Thailand rates from official Kerry Express rate card (THB converted at 35.5 THB/USD). International zones estimated. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]"
 }

@@ -1,7 +1,7 @@
 {
   "carrier_id": "gigl",
-  "effective_date": "2026-10-05",
-  "note": "GIG Logistics real rates. US→NG $4.49/lb, export from NG: NGN7500/kg ($4.84). Source: giglogistics.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05]",
+  "effective_date": "2026-10-12",
+  "note": "GIG Logistics real rates. US→NG $4.49/lb, export from NG: NGN7500/kg ($4.84). Source: giglogistics.com [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]",
   "zones": [
     {
       "zone": 1,
@@ -57,64 +57,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.35,
-          22.24,
-          36.14,
-          50
+          8.6,
+          22.91,
+          37.22,
+          51.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.09,
-          29.59,
-          48.11,
-          66.6
+          11.42,
+          30.48,
+          49.55,
+          68.6
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.1,
-          42.93,
-          69.77,
-          96.62
+          16.58,
+          44.22,
+          71.86,
+          99.52
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.81,
-          74.02,
-          120.35,
-          166.6
+          28.64,
+          76.24,
+          123.96,
+          171.6
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          46.64,
-          124.44,
-          202.16,
-          279.87
+          48.04,
+          128.17,
+          208.22,
+          288.27
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          79.98,
-          213.23,
-          346.58,
-          479.78
+          82.38,
+          219.63,
+          356.98,
+          494.17
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          111.09,
-          296.1,
-          481.38,
-          666.36
+          114.42,
+          304.98,
+          495.82,
+          686.35
         ]
       }
     ],
@@ -122,64 +122,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.35,
-          22.24,
-          36.14,
-          50
+          8.6,
+          22.91,
+          37.22,
+          51.5
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.09,
-          29.59,
-          48.11,
-          66.6
+          11.42,
+          30.48,
+          49.55,
+          68.6
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          16.1,
-          42.93,
-          69.77,
-          96.62
+          16.58,
+          44.22,
+          71.86,
+          99.52
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          27.81,
-          74.02,
-          120.35,
-          166.6
+          28.64,
+          76.24,
+          123.96,
+          171.6
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          46.64,
-          124.44,
-          202.16,
-          279.87
+          48.04,
+          128.17,
+          208.22,
+          288.27
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          79.98,
-          213.23,
-          346.58,
-          479.78
+          82.38,
+          219.63,
+          356.98,
+          494.17
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          111.09,
-          296.1,
-          481.38,
-          666.36
+          114.42,
+          304.98,
+          495.82,
+          686.35
         ]
       }
     ]
