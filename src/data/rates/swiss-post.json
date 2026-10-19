@@ -1,7 +1,7 @@
 {
   "carrier_id": "swiss-post",
-  "effective_date": "2026-10-12",
-  "note": "Real Swiss Post PostPac International rates sourced from post.ch (CHF→USD at 1.13). Flat rate for all destinations. Source: post.ch, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]",
+  "effective_date": "2026-10-19",
+  "note": "Real Swiss Post PostPac International rates sourced from post.ch (CHF→USD at 1.13). Flat rate for all destinations. Source: post.ch, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
   "zones": [
     {
       "zone": 1,
@@ -92,71 +92,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.84,
-          22.15,
-          34.37,
-          46.67,
-          58.95
+          10.18,
+          22.93,
+          35.57,
+          48.3,
+          61.01
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.09,
-          29.5,
-          45.86,
-          62.19,
-          78.6
+          13.55,
+          30.53,
+          47.47,
+          64.37,
+          81.35
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.96,
-          42.74,
-          66.49,
-          90.24,
-          114.03
+          19.62,
+          44.24,
+          68.82,
+          93.4,
+          118.02
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.77,
-          73.7,
-          114.67,
-          155.53,
-          196.54
+          33.92,
+          76.28,
+          118.68,
+          160.97,
+          203.42
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          55.03,
-          123.79,
-          192.59,
-          261.37,
-          330.13
+          56.96,
+          128.12,
+          199.33,
+          270.52,
+          341.68
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          94.35,
-          212.22,
-          330.13,
-          448.07,
-          565.95
+          97.65,
+          219.65,
+          341.68,
+          463.75,
+          585.76
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          130.96,
-          294.83,
-          458.55,
-          622.31,
-          786.04
+          135.54,
+          305.15,
+          474.6,
+          644.09,
+          813.55
         ]
       }
     ]

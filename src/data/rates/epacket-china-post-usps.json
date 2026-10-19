@@ -1,7 +1,7 @@
 {
   "carrier_id": "epacket-china-post-usps",
-  "effective_date": "2026-10-12",
-  "note": "Real rates from chinapostaltracking.com. CN→US formula 23CNY+85CNY/kg (at ~7.2 CNY/USD). Max weight 2kg. Zone 3 (North America) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]",
+  "effective_date": "2026-10-19",
+  "note": "Real rates from chinapostaltracking.com. CN→US formula 23CNY+85CNY/kg (at ~7.2 CNY/USD). Max weight 2kg. Zone 3 (North America) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
   "zones": [
     {
       "zone": 1,
@@ -88,71 +88,71 @@
       {
         "weight_kg": 0.1,
         "prices_by_zone": [
-          1.15,
-          2.5,
-          3.89,
-          5.3,
-          6.7
+          1.19,
+          2.59,
+          4.03,
+          5.49,
+          6.93
         ]
       },
       {
         "weight_kg": 0.25,
         "prices_by_zone": [
-          2.77,
-          6.29,
-          9.75,
-          13.27,
-          16.7
+          2.87,
+          6.51,
+          10.09,
+          13.73,
+          17.28
         ]
       },
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.84,
-          22.15,
-          34.37,
-          46.67,
-          58.95
+          10.18,
+          22.93,
+          35.57,
+          48.3,
+          61.01
         ]
       },
       {
         "weight_kg": 0.75,
         "prices_by_zone": [
-          8.34,
-          18.8,
-          29.2,
-          39.67,
-          50.09
+          8.63,
+          19.46,
+          30.22,
+          41.06,
+          51.84
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.09,
-          29.5,
-          45.86,
-          62.19,
-          78.6
+          13.55,
+          30.53,
+          47.47,
+          64.37,
+          81.35
         ]
       },
       {
         "weight_kg": 1.5,
         "prices_by_zone": [
-          16.7,
-          37.6,
-          58.44,
-          79.39,
-          100.19
+          17.28,
+          38.92,
+          60.49,
+          82.17,
+          103.7
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.96,
-          42.74,
-          66.49,
-          90.24,
-          114.03
+          19.62,
+          44.24,
+          68.82,
+          93.4,
+          118.02
         ]
       }
     ]

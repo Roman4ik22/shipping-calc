@@ -68,57 +68,57 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          23.63,
-          35.37,
-          47.13
+          24.46,
+          36.61,
+          48.78
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          31.42,
-          47.13,
-          62.87
+          32.52,
+          48.78,
+          65.07
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          45.58,
-          68.39,
-          91.19
+          47.18,
+          70.78,
+          94.38
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          78.6,
-          117.93,
-          157.2
+          81.35,
+          122.06,
+          162.7
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          132.09,
-          198.07,
-          264.13
+          136.71,
+          205,
+          273.37
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          226.39,
-          339.59,
-          452.73
+          234.31,
+          351.48,
+          468.58
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          314.42,
-          471.64,
-          628.85
+          325.42,
+          488.15,
+          650.86
         ]
       }
     ],
@@ -126,53 +126,53 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          23.63,
-          35.37,
-          47.13
+          24.46,
+          36.61,
+          48.78
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          31.42,
-          47.13,
-          62.87
+          32.52,
+          48.78,
+          65.07
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          45.58,
-          68.39,
-          91.19
+          47.18,
+          70.78,
+          94.38
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          78.6,
-          117.93,
-          157.2
+          81.35,
+          122.06,
+          162.7
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          132.09,
-          198.07,
-          264.13
+          136.71,
+          205,
+          273.37
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          226.39,
-          339.59,
-          452.73
+          234.31,
+          351.48,
+          468.58
         ]
       }
     ]
   },
-  "effective_date": "2026-10-12",
-  "note": "Thailand Post EMS rates from Thailand based on typical Thai postal pricing (THB converted at ~35.5 THB/USD). EMS and air parcel services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]"
+  "effective_date": "2026-10-19",
+  "note": "Thailand Post EMS rates from Thailand based on typical Thai postal pricing (THB converted at ~35.5 THB/USD). EMS and air parcel services. [Rates updated 2026-03-23]. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]"
 }

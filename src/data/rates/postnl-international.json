@@ -1,7 +1,7 @@
 {
   "carrier_id": "postnl-international",
-  "effective_date": "2026-10-12",
-  "note": "Synced from postnl. Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12]",
+  "effective_date": "2026-10-19",
+  "note": "Synced from postnl. Estimated PostNL rates from Netherlands. Includes domestic standard service and international via postnl-international carrier. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
   "zones": [
     {
       "zone": 1,
@@ -80,64 +80,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.84,
-          26.23,
-          42.57,
-          58.95
+          10.18,
+          27.15,
+          44.06,
+          61.01
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.09,
-          34.92,
-          56.79,
-          78.6
+          13.55,
+          36.14,
+          58.78,
+          81.35
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.96,
-          50.61,
-          82.32,
-          114.03
+          19.62,
+          52.38,
+          85.2,
+          118.02
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          32.77,
-          87.31,
-          141.96,
-          196.54
+          33.92,
+          90.37,
+          146.93,
+          203.42
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          55.03,
-          146.69,
-          238.46,
-          330.13
+          56.96,
+          151.82,
+          246.81,
+          341.68
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          94.35,
-          251.47,
-          408.81,
-          565.95
+          97.65,
+          260.27,
+          423.12,
+          585.76
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          130.96,
-          349.27,
-          567.78,
-          786.04
+          135.54,
+          361.49,
+          587.65,
+          813.55
         ]
       }
     ]
