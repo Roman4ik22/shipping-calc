@@ -1,7 +1,7 @@
 {
   "carrier_id": "evri-formerly-hermes",
-  "effective_date": "2026-10-19",
-  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
+  "effective_date": "2026-10-26",
+  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26]",
   "zones": [
     {
       "zone": 1,
@@ -100,66 +100,66 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.86,
-          18.73,
-          28.65,
-          38.55,
-          48.42,
-          58.32
+          9.13,
+          19.29,
+          29.51,
+          39.71,
+          49.87,
+          60.07
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.76,
-          25.03,
-          38.18,
-          51.35,
-          64.55,
-          77.75
+          12.11,
+          25.78,
+          39.33,
+          52.89,
+          66.49,
+          80.08
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.08,
-          36.2,
-          55.39,
-          74.51,
-          93.6,
-          112.77
+          17.59,
+          37.29,
+          57.05,
+          76.75,
+          96.41,
+          116.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          29.5,
-          62.45,
-          95.44,
-          128.41,
-          161.42,
-          194.45
+          30.39,
+          64.32,
+          98.3,
+          132.26,
+          166.26,
+          200.28
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          49.48,
-          104.93,
-          160.36,
-          215.74,
-          271.2,
-          326.62
+          50.96,
+          108.08,
+          165.17,
+          222.21,
+          279.34,
+          336.42
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          84.85,
-          179.84,
-          274.86,
-          369.91,
-          464.91,
+          87.4,
+          185.24,
+          283.11,
+          381.01,
+          478.86,
           null
         ]
       },

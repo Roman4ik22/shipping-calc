@@ -1,7 +1,7 @@
 {
   "carrier_id": "yamato-transport-kuroneko-yamato",
-  "effective_date": "2026-10-19",
-  "note": "Real rates from kuronekoyamato.co.jp. JP→Asia(Z1): 2kg=¥3000($20), 5kg=¥5000($33). JP→US(Z3): 2kg=¥4100($27), 5kg=¥8000($53). JPY→USD at 150. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
+  "effective_date": "2026-10-26",
+  "note": "Real rates from kuronekoyamato.co.jp. JP→Asia(Z1): 2kg=¥3000($20), 5kg=¥5000($33). JP→US(Z3): 2kg=¥4100($27), 5kg=¥8000($53). JPY→USD at 150. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26]",
   "zones": [
     {
       "zone": 1,
@@ -74,64 +74,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          8.86,
-          23.6,
-          38.34,
-          53.05
+          9.13,
+          24.31,
+          39.49,
+          54.64
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          11.76,
-          31.39,
-          51.04,
-          70.66
+          12.11,
+          32.33,
+          52.57,
+          72.78
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.08,
-          45.55,
-          74.02,
-          102.51
+          17.59,
+          46.92,
+          76.24,
+          105.59
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          29.5,
-          78.53,
-          127.68,
-          176.75
+          30.39,
+          80.89,
+          131.51,
+          182.05
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          49.48,
-          132.02,
-          214.47,
-          296.92
+          50.96,
+          135.98,
+          220.9,
+          305.83
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          84.85,
-          226.22,
-          367.69,
-          509
+          87.4,
+          233.01,
+          378.72,
+          524.27
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          117.85,
-          314.13,
-          510.69,
-          706.94
+          121.39,
+          323.55,
+          526.01,
+          728.15
         ]
       }
     ]

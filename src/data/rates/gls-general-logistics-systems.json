@@ -1,7 +1,7 @@
 {
   "carrier_id": "gls-general-logistics-systems",
-  "effective_date": "2026-10-19",
-  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19]",
+  "effective_date": "2026-10-26",
+  "note": "Real GLS rates sourced from gls-pakete.de (EUR→USD at 1.09). DE→FR/AT (Z1) and DE→IT/PL (Z2) verified. XS/S/M size classes mapped to weight. Source: gls-pakete.de, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26]",
   "zones": [
     {
       "zone": 1,
@@ -86,71 +86,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          10.18,
-          22.93,
-          35.57,
-          48.3,
-          61.01
+          10.54,
+          23.73,
+          36.81,
+          49.99,
+          63.15
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          13.55,
-          30.53,
-          47.47,
-          64.37,
-          81.35
+          14.02,
+          31.6,
+          49.13,
+          66.62,
+          84.2
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          19.62,
-          44.24,
-          68.82,
-          93.4,
-          118.02
+          20.31,
+          45.79,
+          71.23,
+          96.67,
+          122.15
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          33.92,
-          76.28,
-          118.68,
-          160.97,
-          203.42
+          35.11,
+          78.95,
+          122.83,
+          166.6,
+          210.54
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          56.96,
-          128.12,
-          199.33,
-          270.52,
-          341.68
+          58.95,
+          132.6,
+          206.31,
+          279.99,
+          353.64
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          97.65,
-          219.65,
-          341.68,
-          463.75,
-          585.76
+          101.07,
+          227.34,
+          353.64,
+          479.98,
+          606.26
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          135.54,
-          305.15,
-          474.6,
-          644.09,
-          813.55
+          140.28,
+          315.83,
+          491.21,
+          666.63,
+          842.02
         ]
       }
     ]
