@@ -1,7 +1,7 @@
 {
   "carrier_id": "sf-express",
-  "effective_date": "2026-10-26",
-  "note": "SF Express international rates from China. Economy Express rates based on sf-international.com official calculator (CN→JP, CN→US). Standard rates estimated at ~1.4x economy. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26]",
+  "effective_date": "2026-11-02",
+  "note": "SF Express international rates from China. Economy Express rates based on sf-international.com official calculator (CN→JP, CN→US). Standard rates estimated at ~1.4x economy. [Updated from official calculator/rate card March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02]",
   "zones": [
     {
       "zone": 1,
@@ -91,71 +91,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          42.71,
-          71.36,
-          95.14,
-          118.94,
-          135.99
+          43.99,
+          73.5,
+          97.99,
+          122.51,
+          140.07
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          48.99,
-          81.58,
-          112.17,
-          142.75,
-          163.12
+          50.46,
+          84.03,
+          115.54,
+          147.03,
+          168.01
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          63.11,
-          105.34,
-          146.14,
-          186.9,
-          214.09
+          65,
+          108.5,
+          150.52,
+          192.51,
+          220.51
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          114.06,
-          190.28,
-          254.84,
-          319.44,
-          367.03
+          117.48,
+          195.99,
+          262.49,
+          329.02,
+          378.04
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          179.36,
-          299.05,
-          421.42,
-          540.29,
-          621.89
+          184.74,
+          308.02,
+          434.06,
+          556.5,
+          640.55
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          307.78,
-          513.1,
-          747.59,
-          978.69,
-          1124.82
+          317.01,
+          528.49,
+          770.02,
+          1008.05,
+          1158.56
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          431.54,
-          723.81,
-          1053.4,
-          1376.28,
-          1583.53
+          444.49,
+          745.52,
+          1085,
+          1417.57,
+          1631.04
         ]
       }
     ],
@@ -163,71 +163,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          30.6,
-          50.96,
-          67.97,
-          84.93,
-          97.1
+          31.52,
+          52.49,
+          70.01,
+          87.48,
+          100.01
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          34.94,
-          58.27,
-          80.08,
-          101.95,
-          116.47
+          35.99,
+          60.02,
+          82.48,
+          105.01,
+          119.96
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          45.17,
-          75.28,
-          104.37,
-          133.48,
-          153
+          46.53,
+          77.54,
+          107.5,
+          137.48,
+          157.59
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          81.58,
-          135.99,
-          182.05,
-          228.11,
-          262.2
+          84.03,
+          140.07,
+          187.51,
+          234.95,
+          270.07
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          128.2,
-          213.57,
-          300.98,
-          385.89,
-          444.16
+          132.05,
+          219.98,
+          310.01,
+          397.47,
+          457.48
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          219.92,
-          366.53,
-          534,
-          699.07,
-          803.46
+          226.52,
+          377.53,
+          550.02,
+          720.04,
+          827.56
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          308.28,
-          517.01,
-          752.45,
-          983.02,
-          1131.1
+          317.53,
+          532.52,
+          775.02,
+          1012.51,
+          1165.03
         ]
       }
     ]

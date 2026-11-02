@@ -1,7 +1,7 @@
 {
   "carrier_id": "sagawa-express",
-  "effective_date": "2026-10-26",
-  "note": "Real rates from sagawa-exp.co.jp. Min 4000JPY (~$27), 80JPY/kg above threshold. JPY→USD at 150. Zone 3 (NA/EU) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26]",
+  "effective_date": "2026-11-02",
+  "note": "Real rates from sagawa-exp.co.jp. Min 4000JPY (~$27), 80JPY/kg above threshold. JPY→USD at 150. Zone 3 (NA/EU) anchored to real data. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02]",
   "zones": [
     {
       "zone": 1,
@@ -73,64 +73,64 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.13,
-          24.31,
-          39.49,
-          54.64
+          9.4,
+          25.04,
+          40.67,
+          56.28
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.11,
-          32.33,
-          52.57,
-          72.78
+          12.47,
+          33.3,
+          54.15,
+          74.96
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          17.59,
-          46.92,
-          76.24,
-          105.59
+          18.12,
+          48.33,
+          78.53,
+          108.76
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          30.39,
-          80.89,
-          131.51,
-          182.05
+          31.3,
+          83.32,
+          135.46,
+          187.51
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          50.96,
-          135.98,
-          220.9,
-          305.83
+          52.49,
+          140.06,
+          227.53,
+          315
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          87.4,
-          233.01,
-          378.72,
-          524.27
+          90.02,
+          240,
+          390.08,
+          540
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          121.39,
-          323.55,
-          526.01,
-          728.15
+          125.03,
+          333.26,
+          541.79,
+          749.99
         ]
       }
     ]
