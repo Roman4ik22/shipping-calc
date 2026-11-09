@@ -1,7 +1,7 @@
 {
   "carrier_id": "evri-formerly-hermes",
-  "effective_date": "2026-11-02",
-  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02]",
+  "effective_date": "2026-11-09",
+  "note": "Real Evri (formerly Hermes) international rates sourced from postoffice.co.uk (GBP→USD at 1.27). UK→DE/FR and UK→US verified. Source: postoffice.co.uk, effective 2026-03-23. [Calibrated from industry benchmarks March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02] [Rates adjusted 2026-11-09]",
   "zones": [
     {
       "zone": 1,
@@ -100,66 +100,66 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          9.4,
-          19.87,
-          30.4,
-          40.9,
-          51.37,
-          61.87
+          9.68,
+          20.47,
+          31.31,
+          42.13,
+          52.91,
+          63.73
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          12.47,
-          26.55,
-          40.51,
-          54.48,
-          68.48,
-          82.48
+          12.84,
+          27.35,
+          41.73,
+          56.11,
+          70.53,
+          84.95
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          18.12,
-          38.41,
-          58.76,
-          79.05,
-          99.3,
-          119.63
+          18.66,
+          39.56,
+          60.52,
+          81.42,
+          102.28,
+          123.22
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          31.3,
-          66.25,
-          101.25,
-          136.23,
-          171.25,
-          206.29
+          32.24,
+          68.24,
+          104.29,
+          140.32,
+          176.39,
+          212.48
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          52.49,
-          111.32,
-          170.13,
-          228.88,
-          287.72,
-          346.51
+          54.06,
+          114.66,
+          175.23,
+          235.75,
+          296.35,
+          356.91
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          90.02,
-          190.8,
-          291.6,
-          392.44,
-          493.23,
+          92.72,
+          196.52,
+          300.35,
+          404.21,
+          508.03,
           null
         ]
       },
