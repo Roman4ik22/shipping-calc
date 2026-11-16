@@ -1,7 +1,7 @@
 {
   "carrier_id": "startrack",
-  "effective_date": "2026-11-09",
-  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02] [Rates adjusted 2026-11-09]",
+  "effective_date": "2026-11-16",
+  "note": "Estimated StarTrack express rates from Australia. Owned by Australia Post, focused on B2B with national road and air network. [Updated from StarTrack/Australia Post rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02] [Rates adjusted 2026-11-09] [Rates adjusted 2026-11-16]",
   "zones": [
     {
       "zone": 1,
@@ -81,91 +81,91 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          23.15,
-          42.55,
-          61.82,
-          73.39,
-          90.1
+          23.84,
+          43.83,
+          63.67,
+          75.59,
+          92.8
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          30.88,
-          56.65,
-          82.4,
-          97.85,
-          120.18
+          31.81,
+          58.35,
+          84.87,
+          100.79,
+          123.79
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          44.79,
-          82.24,
-          119.46,
-          141.88,
-          174.25
+          46.13,
+          84.71,
+          123.04,
+          146.14,
+          179.48
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          77.21,
-          141.6,
-          206.02,
-          244.6,
-          300.5
+          79.53,
+          145.85,
+          212.2,
+          251.94,
+          309.52
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          129.78,
-          237.95,
-          346.1,
-          411.01,
-          504.74
+          133.67,
+          245.09,
+          356.48,
+          423.34,
+          519.88
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          222.48,
-          407.86,
-          593.27,
-          704.55,
-          865.3
+          229.15,
+          420.1,
+          611.07,
+          725.69,
+          891.26
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          309.03,
-          566.52,
-          824.02,
-          978.49,
-          1201.8
+          318.3,
+          583.52,
+          848.74,
+          1007.84,
+          1237.85
         ]
       },
       {
         "weight_kg": 50,
         "prices_by_zone": [
-          1313.31,
-          2407.7,
-          3502.1,
-          4158.76,
-          5107.64
+          1352.71,
+          2479.93,
+          3607.16,
+          4283.52,
+          5260.87
         ]
       },
       {
         "weight_kg": 70,
         "prices_by_zone": [
-          1838.6,
-          3370.81,
-          4902.95,
-          5822.24,
-          7150.69
+          1893.76,
+          3471.93,
+          5050.04,
+          5996.91,
+          7365.21
         ]
       }
     ]

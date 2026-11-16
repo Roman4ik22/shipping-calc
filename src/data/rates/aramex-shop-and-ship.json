@@ -1,7 +1,7 @@
 {
   "carrier_id": "aramex-shop-and-ship",
-  "effective_date": "2026-11-09",
-  "note": "Estimated Aramex Shop & Ship rates. Cross-border shopping service delivering from US/UK/EU to Middle East, Africa, Asia. [Updated from Aramex Shop&Ship published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02] [Rates adjusted 2026-11-09]",
+  "effective_date": "2026-11-16",
+  "note": "Estimated Aramex Shop & Ship rates. Cross-border shopping service delivering from US/UK/EU to Middle East, Africa, Asia. [Updated from Aramex Shop&Ship published rates March 2026] [Rates adjusted 2026-03-30] [Rates adjusted 2026-04-06] [Rates adjusted 2026-04-13] [Rates adjusted 2026-04-27] [Rates adjusted 2026-05-04] [Rates adjusted 2026-05-11] [Rates adjusted 2026-05-18] [Rates adjusted 2026-05-25] [Rates adjusted 2026-06-01] [Rates adjusted 2026-06-08] [Rates adjusted 2026-06-15] [Rates adjusted 2026-06-22] [Rates adjusted 2026-06-29] [Rates adjusted 2026-07-06] [Rates adjusted 2026-07-13] [Rates adjusted 2026-07-20] [Rates adjusted 2026-07-27] [Rates adjusted 2026-08-03] [Rates adjusted 2026-08-10] [Rates adjusted 2026-08-17] [Rates adjusted 2026-08-24] [Rates adjusted 2026-08-31] [Rates adjusted 2026-09-07] [Rates adjusted 2026-09-14] [Rates adjusted 2026-09-21] [Rates adjusted 2026-09-28] [Rates adjusted 2026-10-05] [Rates adjusted 2026-10-12] [Rates adjusted 2026-10-19] [Rates adjusted 2026-10-26] [Rates adjusted 2026-11-02] [Rates adjusted 2026-11-09] [Rates adjusted 2026-11-16]",
   "zones": [
     {
       "zone": 1,
@@ -87,71 +87,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          35.78,
-          43.83,
-          51.76,
-          63.67,
-          55.68
+          36.85,
+          45.14,
+          53.31,
+          65.58,
+          57.35
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          47.78,
-          58.35,
-          68.96,
-          84.87,
-          74.27
+          49.21,
+          60.1,
+          71.03,
+          87.42,
+          76.5
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          69.23,
-          84.71,
-          99.97,
-          123.04,
-          107.7
+          71.31,
+          87.25,
+          102.97,
+          126.73,
+          110.93
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          119.36,
-          145.85,
-          172.4,
-          212.2,
-          185.63
+          122.94,
+          150.23,
+          177.57,
+          218.57,
+          191.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          200.55,
-          245.09,
-          289.65,
-          356.48,
-          311.89
+          206.57,
+          252.44,
+          298.34,
+          367.17,
+          321.25
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          343.74,
-          420.1,
-          496.54,
-          611.07,
-          534.71
+          354.05,
+          432.7,
+          511.44,
+          629.4,
+          550.75
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          477.48,
-          583.52,
-          689.6,
-          848.74,
-          742.69
+          491.8,
+          601.03,
+          710.29,
+          874.2,
+          764.97
         ]
       }
     ],
@@ -159,71 +159,71 @@
       {
         "weight_kg": 0.5,
         "prices_by_zone": [
-          35.78,
-          43.83,
-          51.76,
-          63.67,
-          55.68
+          36.85,
+          45.14,
+          53.31,
+          65.58,
+          57.35
         ]
       },
       {
         "weight_kg": 1,
         "prices_by_zone": [
-          47.78,
-          58.35,
-          68.96,
-          84.87,
-          74.27
+          49.21,
+          60.1,
+          71.03,
+          87.42,
+          76.5
         ]
       },
       {
         "weight_kg": 2,
         "prices_by_zone": [
-          69.23,
-          84.71,
-          99.97,
-          123.04,
-          107.7
+          71.31,
+          87.25,
+          102.97,
+          126.73,
+          110.93
         ]
       },
       {
         "weight_kg": 5,
         "prices_by_zone": [
-          119.36,
-          145.85,
-          172.4,
-          212.2,
-          185.63
+          122.94,
+          150.23,
+          177.57,
+          218.57,
+          191.2
         ]
       },
       {
         "weight_kg": 10,
         "prices_by_zone": [
-          200.55,
-          245.09,
-          289.65,
-          356.48,
-          311.89
+          206.57,
+          252.44,
+          298.34,
+          367.17,
+          321.25
         ]
       },
       {
         "weight_kg": 20,
         "prices_by_zone": [
-          343.74,
-          420.1,
-          496.54,
-          611.07,
-          534.71
+          354.05,
+          432.7,
+          511.44,
+          629.4,
+          550.75
         ]
       },
       {
         "weight_kg": 30,
         "prices_by_zone": [
-          477.48,
-          583.52,
-          689.6,
-          848.74,
-          742.69
+          491.8,
+          601.03,
+          710.29,
+          874.2,
+          764.97
         ]
       }
     ]
